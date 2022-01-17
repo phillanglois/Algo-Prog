@@ -1,0 +1,1322 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>11. Modules utiles : random, matplotlib et time pour des expériences de complexité. &#8212; Algo-Prog 2021</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="12. Fonctions" href="Competences-2021.html" />
+    <link rel="prev" title="10. Trier" href="10-trier.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo2021.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Algo-Prog 2021</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="0-presentation-2021.html">
+   Algorithmique et Programmation en 2021
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="1-fonctions.html">
+   1. Sous-programmes : fonctions et procédures
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2-boucles-avancees.html">
+   2. Boucles, tableaux et fonctions : compléments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3-ES-fichiers.html">
+   3. Les entrées-sorties avec des fichiers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="5-types_composes.html">
+   4. Les types composés
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="6-recursivite.html">
+   5. Récursivité
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="7-fonctions-avancees.html">
+   6. Sous-programme et affectation – aspects avancés
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="8-rechercher.html">
+   7. Rechercher
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="9-ES-avancees.html">
+   9. Les entrées-sorties (E/S) : aspects avancés
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10-trier.html">
+   10. Trier
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   11. Modules utiles :
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     random
+    </span>
+   </code>
+   ,
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     matplotlib
+    </span>
+   </code>
+   et
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     time
+    </span>
+   </code>
+   pour des expériences de complexité.
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Competences-2021.html">
+   12. Fonctions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="aide-memoire.html">
+   21. Sections et interactions ajoutées en séance
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Complements-2021.html">
+   24. Des QCM et autres sites à exploiter
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Basculer la navigation" aria-controls="site-navigation"
+                title="Basculer la navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Téléchargez cette page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/cm/11-modules-utiles.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimer au format PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Dépôt source"><i
+                    class="fab fa-github"></i>dépôt</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcm/11-modules-utiles.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Ouvrez un problème"><i class="fas fa-lightbulb"></i>signaler un problème</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Mode plein écran"
+        title="Mode plein écran"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/cm/11-modules-utiles.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="lancement Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contenu
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#de-l-alea-avec-le-module-random">
+   11.1. De l’aléa avec le module
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     random
+    </span>
+   </code>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#principe-d-un-generateur-pseudo-aleatoire">
+     Principe d’un générateur
+     <strong>
+      pseudo
+     </strong>
+     -aléatoire
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fonctions-utiles">
+     Fonctions utiles
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tracer-avec-matplotlib">
+   11.2. Tracer avec
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     matplotlib
+    </span>
+   </code>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#matplotlib-qu-est-ce-que-ca-fait">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       matplotlib
+      </span>
+     </code>
+     : qu’est ce que ça fait ?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#matplotlib-comment-ca-le-fait">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       matplotlib
+      </span>
+     </code>
+     : comment ça le fait ?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercice">
+     Exercice
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-vous-maintenant">
+     A vous maintenant !
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#le-flocon-de-von-koch">
+       Le flocon de Von Koch
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#star-mesurer-le-temps-d-execution-d-un-programme">
+   11.3. (
+   <span class="math notranslate nohighlight">
+    \(\star\)
+   </span>
+   ) Mesurer le temps d’exécution d’un programme
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pas-si-simple">
+     Pas si simple …
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mesurer-avec-le-module-time">
+     Mesurer avec le module
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       time
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#un-benchmark-en-theta-n-la-somme-iterative">
+     Un
+     <em>
+      benchmark
+     </em>
+     en
+     <span class="math notranslate nohighlight">
+      \(\theta(n)\)
+     </span>
+     : la somme itérative
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#un-premier-exemple">
+     Un premier exemple
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#premiere-mesure-de-complexite">
+   11.4. Première mesure de complexité
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#des-donnees-de-taille-variable">
+     Des données de taille variable
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Modules utiles : random, matplotlib et time  pour des expériences de complexité.</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contenu </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#de-l-alea-avec-le-module-random">
+   11.1. De l’aléa avec le module
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     random
+    </span>
+   </code>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#principe-d-un-generateur-pseudo-aleatoire">
+     Principe d’un générateur
+     <strong>
+      pseudo
+     </strong>
+     -aléatoire
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fonctions-utiles">
+     Fonctions utiles
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tracer-avec-matplotlib">
+   11.2. Tracer avec
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     matplotlib
+    </span>
+   </code>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#matplotlib-qu-est-ce-que-ca-fait">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       matplotlib
+      </span>
+     </code>
+     : qu’est ce que ça fait ?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#matplotlib-comment-ca-le-fait">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       matplotlib
+      </span>
+     </code>
+     : comment ça le fait ?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercice">
+     Exercice
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-vous-maintenant">
+     A vous maintenant !
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#le-flocon-de-von-koch">
+       Le flocon de Von Koch
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#star-mesurer-le-temps-d-execution-d-un-programme">
+   11.3. (
+   <span class="math notranslate nohighlight">
+    \(\star\)
+   </span>
+   ) Mesurer le temps d’exécution d’un programme
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pas-si-simple">
+     Pas si simple …
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mesurer-avec-le-module-time">
+     Mesurer avec le module
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       time
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#un-benchmark-en-theta-n-la-somme-iterative">
+     Un
+     <em>
+      benchmark
+     </em>
+     en
+     <span class="math notranslate nohighlight">
+      \(\theta(n)\)
+     </span>
+     : la somme itérative
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#un-premier-exemple">
+     Un premier exemple
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#premiere-mesure-de-complexite">
+   11.4. Première mesure de complexité
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#des-donnees-de-taille-variable">
+     Des données de taille variable
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="modules-utiles-random-matplotlib-et-time-pour-des-experiences-de-complexite">
+<h1><span class="section-number">11. </span>Modules utiles : <code class="docutils literal notranslate"><span class="pre">random</span></code>, <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> et <code class="docutils literal notranslate"><span class="pre">time</span></code>  pour des expériences de complexité.<a class="headerlink" href="#modules-utiles-random-matplotlib-et-time-pour-des-experiences-de-complexite" title="Permalink to this headline">¶</a></h1>
+<p>v 1.21</p>
+<p>Petites expériences qui nous permettent de découvrir des modules bien utiles :</p>
+<ul class="simple">
+<li><p>d’introduire <strong>de l’aléatoire</strong> avec <code class="docutils literal notranslate"><span class="pre">random</span></code></p>
+<ul>
+<li><p>pour générer des données de test, de débug, …</p></li>
+</ul>
+</li>
+<li><p>d’apprendre à <strong>faire des graphiques</strong> avec <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></p></li>
+<li><p>d’utiliser des fonctions de modules importés du module <code class="docutils literal notranslate"><span class="pre">time</span></code> pour <strong>mesurer des temps d’exécution</strong>,</p>
+<ul>
+<li><p>et ainsi apprécier la validitité et les limites de la notion de complexité algorithmique,</p></li>
+</ul>
+</li>
+</ul>
+<h1>Table of Contents<span class="tocSkip"></span></h1>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Modules-utiles-:-random,-matplotlib-et-time--pour-des-expériences-de-complexité." data-toc-modified-id="Modules-utiles-:-random,-matplotlib-et-time--pour-des-expériences-de-complexité.-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Modules utiles : <code>random</code>, <code>matplotlib</code> et <code>time</code>  pour des expériences de complexité.</a></span><ul class="toc-item"><li><span><a href="#De-l'aléa-avec-le-module-random" data-toc-modified-id="De-l'aléa-avec-le-module-random-1.1"><span class="toc-item-num">1.1&nbsp;&nbsp;</span>De l'aléa avec le module <code>random</code></a></span><ul class="toc-item"><li><span><a href="#Principe-d'un-générateur-pseudo-aléatoire" data-toc-modified-id="Principe-d'un-générateur-pseudo-aléatoire-1.1.1"><span class="toc-item-num">1.1.1&nbsp;&nbsp;</span>Principe d'un générateur <strong>pseudo</strong>-aléatoire</a></span></li><li><span><a href="#Fonctions-utiles" data-toc-modified-id="Fonctions-utiles-1.1.2"><span class="toc-item-num">1.1.2&nbsp;&nbsp;</span>Fonctions utiles</a></span></li></ul></li><li><span><a href="#Tracer-avec-matplotlib" data-toc-modified-id="Tracer-avec-matplotlib-1.2"><span class="toc-item-num">1.2&nbsp;&nbsp;</span>Tracer avec <code>matplotlib</code></a></span><ul class="toc-item"><li><span><a href="#matplotlib-:-qu'est-ce-que-ça-fait-?" data-toc-modified-id="matplotlib-:-qu'est-ce-que-ça-fait-?-1.2.1"><span class="toc-item-num">1.2.1&nbsp;&nbsp;</span><code>matplotlib</code> : qu'est ce que ça fait ?</a></span></li><li><span><a href="#matplotlib-:-comment-ça-le-fait-?" data-toc-modified-id="matplotlib-:-comment-ça-le-fait-?-1.2.2"><span class="toc-item-num">1.2.2&nbsp;&nbsp;</span><code>matplotlib</code> : comment ça le fait ?</a></span></li><li><span><a href="#Exercice" data-toc-modified-id="Exercice-1.2.3"><span class="toc-item-num">1.2.3&nbsp;&nbsp;</span>Exercice</a></span></li><li><span><a href="#A-vous-maintenant-!" data-toc-modified-id="A-vous-maintenant-!-1.2.4"><span class="toc-item-num">1.2.4&nbsp;&nbsp;</span>A vous maintenant !</a></span></li></ul></li><li><span><a href="#($\star$)-Mesurer-le-temps-d'exécution-d'un-programme" data-toc-modified-id="($\star$)-Mesurer-le-temps-d'exécution-d'un-programme-1.3"><span class="toc-item-num">1.3&nbsp;&nbsp;</span>($\star$) Mesurer le temps d'exécution d'un programme</a></span><ul class="toc-item"><li><span><a href="#Pas-si-simple-..." data-toc-modified-id="Pas-si-simple-...-1.3.1"><span class="toc-item-num">1.3.1&nbsp;&nbsp;</span>Pas si simple ...</a></span></li><li><span><a href="#Mesurer-avec-le-module-time" data-toc-modified-id="Mesurer-avec-le-module-time-1.3.2"><span class="toc-item-num">1.3.2&nbsp;&nbsp;</span>Mesurer avec le module <code>time</code></a></span></li><li><span><a href="#Un-benchmark-en--$\theta(n)$-:-la-somme-itérative" data-toc-modified-id="Un-benchmark-en--$\theta(n)$-:-la-somme-itérative-1.3.3"><span class="toc-item-num">1.3.3&nbsp;&nbsp;</span>Un <em>benchmark</em> en  $\theta(n)$ : la somme itérative</a></span></li><li><span><a href="#Un-premier-exemple" data-toc-modified-id="Un-premier-exemple-1.3.4"><span class="toc-item-num">1.3.4&nbsp;&nbsp;</span>Un premier exemple</a></span></li></ul></li><li><span><a href="#Première-mesure-de-complexité" data-toc-modified-id="Première-mesure-de-complexité-1.4"><span class="toc-item-num">1.4&nbsp;&nbsp;</span>Première mesure de complexité</a></span><ul class="toc-item"><li><span><a href="#Des-données-de-taille-variable" data-toc-modified-id="Des-données-de-taille-variable-1.4.1"><span class="toc-item-num">1.4.1&nbsp;&nbsp;</span>Des données de taille variable</a></span></li></ul></li></ul></li></ul></div><div class="section" id="de-l-alea-avec-le-module-random">
+<h2><span class="section-number">11.1. </span>De l’aléa avec le module <code class="docutils literal notranslate"><span class="pre">random</span></code><a class="headerlink" href="#de-l-alea-avec-le-module-random" title="Permalink to this headline">¶</a></h2>
+<p>Commençons par ce module déjà utilisé au semestre 1.</p>
+<p>Les expérimentations demandent souvent <em>mais pas systématiquement</em> de générer des données aléatoires.<br />
+Le module <code class="docutils literal notranslate"><span class="pre">random</span></code> permet ça, ou presque car la génération <strong>déterministe</strong> de valeurs a priori quelconques est un processus <strong>pseudo-aléatoire</strong> .</p>
+<div class="section" id="principe-d-un-generateur-pseudo-aleatoire">
+<h3>Principe d’un générateur <strong>pseudo</strong>-aléatoire<a class="headerlink" href="#principe-d-un-generateur-pseudo-aleatoire" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>une graine : <span class="math notranslate nohighlight">\(u_0\)</span></p></li>
+<li><p>une récurrence déterministe : <span class="math notranslate nohighlight">\(u_n = f(u_{n-1})\)</span> où <span class="math notranslate nohighlight">\(f\)</span> définit de l’<em>aléa</em>.</p></li>
+</ul>
+</div>
+<div class="section" id="fonctions-utiles">
+<h3>Fonctions utiles<a class="headerlink" href="#fonctions-utiles" title="Permalink to this headline">¶</a></h3>
+<p>Après un :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">random.seed()</span></code> : graine du générateur</p>
+<ul>
+<li><p>fixer la graine permet la <em>reproductibilité</em> de la génération pseudo-aléatoire</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Lois discrètes (entières)</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">random.randint(a,</span> <span class="pre">b)</span></code> : uniforme <em>discrète</em> sur [a, b] &lt;– remarquer l’intervalle fermé !</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">random.randrange(a,</span> <span class="pre">b,</span> <span class="pre">pas)</span></code> : uniforme <em>discrète</em> sur [a, a+pas, a+2*pas, …, b[ (intervalle ouvert à droite)</p></li>
+</ul>
+<p><strong>Lois continues</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">random.random()</span></code>  : uniforme sur [0,1]</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">random.uniform(a,</span> <span class="pre">b)</span></code> :  uniforme sur [a,b]</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">random.gauss(moyenne,</span> <span class="pre">ecart_type)</span></code> : Normal(<span class="math notranslate nohighlight">\(\mu\)</span>, <span class="math notranslate nohighlight">\(\sigma\)</span>)</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#help(random)</span>
+
+<span class="n">n</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">t0</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
+<span class="n">t1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
+<span class="n">t2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
+<span class="n">t3</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
+
+<span class="c1"># graine arbitrairement choisie par le système </span>
+<span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">t0</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">t1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
+
+<span class="c1"># on bloque la graine</span>
+<span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">12345</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">t2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
+
+<span class="c1"># on reprend la même graine </span>
+<span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">12345</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">t3</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">t0</span> <span class="o">==</span> <span class="n">t1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">t1</span> <span class="o">==</span> <span class="n">t2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">t2</span> <span class="o">==</span> <span class="n">t3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">t1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">t2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+False
+True
+[0.1490073872624078, 0.5487998101473762, 0.20738850685573673, 0.5001112675636729, 0.5358600071010815, 0.7217759828794802, 0.806035313094671, 0.6494484611723909, 0.5419900682092414, 0.1530207718932065]
+[0.41661987254534116, 0.010169169457068361, 0.8252065092537432, 0.2986398551995928, 0.3684116894884757, 0.19366134904507426, 0.5660081687288613, 0.1616878239293682, 0.12426688428353017, 0.4329362680099159]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="tracer-avec-matplotlib">
+<h2><span class="section-number">11.2. </span>Tracer avec <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code><a class="headerlink" href="#tracer-avec-matplotlib" title="Permalink to this headline">¶</a></h2>
+<p>C’est utile … et pas moche !</p>
+<div class="section" id="matplotlib-qu-est-ce-que-ca-fait">
+<h3><code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> : qu’est ce que ça fait ?<a class="headerlink" href="#matplotlib-qu-est-ce-que-ca-fait" title="Permalink to this headline">¶</a></h3>
+<p>Le module python <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> est un module adapté à tous les types de tracés
+scientifiques : courbes, histogrammes, nuages de points, <span class="math notranslate nohighlight">\(\dots\)</span>
+On verra même qu’il permet d’afficher des images, ds photos, …</p>
+<ul class="simple">
+<li><p>Ses options sont très nombreuses, de même que la documentation en
+ligne ou “livrée avec”.
+<code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> est composé de nombreux sous-modules. Parmi ceux-ci, celui qui nous intéresse est <code class="docutils literal notranslate"><span class="pre">pyplot</span></code>.<br />
+L’instruction suivante est très très classique.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>L’utilisation basique de <code class="docutils literal notranslate"><span class="pre">pyplot</span></code> consiste :</p>
+<ul>
+<li><p>à tracer des courbes <span class="math notranslate nohighlight">\(x-y\)</span></p></li>
+<li><p>à partir de listes de points, d’un fichier de valeurs ou d’une expression,</p></li>
+<li><p>de choisir les bons axes, les bonnes échelles,</p></li>
+<li><p>d’indiquer les noms des courbes et des axes,</p></li>
+<li><p>de visualiser les tracés à l’écran</p></li>
+<li><p>et de les sauvegarder dans des fichiers (pdf ou png).</p></li>
+</ul>
+</li>
+<li><p>En pratique, chaque action <em>modifie l’état de la figure</em> en cours d’élaboration.<br />
+Une action est un appel de fonction <code class="docutils literal notranslate"><span class="pre">plt</span></code>.<br />
+Il peut être utile de tracer plusieurs “sous-figures” au sein d’une
+même figure.</p></li>
+</ul>
+<p>Le module python <code class="docutils literal notranslate"><span class="pre">numpy</span></code> est le compagnon naturel de <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>.</p>
+</div>
+<div class="section" id="matplotlib-comment-ca-le-fait">
+<h3><code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> : comment ça le fait ?<a class="headerlink" href="#matplotlib-comment-ca-le-fait" title="Permalink to this headline">¶</a></h3>
+<p>Une première prise en main est très bien décrite par :</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.labri.fr/perso/nrougier/teaching/matplotlib/">cette présentation</a></p></li>
+<li><p>ou le chapitre 3 du <a class="reference external" href="https://matplotlib.org/contents.html"><em>user guide</em></a> (qui comporte plus de 2500 pages).</p></li>
+</ul>
+<p>On va montrer quelques commandes de base :</p>
+<ul class="simple">
+<li><p>afficher de courbes : <strong><code class="docutils literal notranslate"><span class="pre">plot</span></code></strong>, <code class="docutils literal notranslate"><span class="pre">figure</span></code>, <code class="docutils literal notranslate"><span class="pre">title</span></code>, <code class="docutils literal notranslate"><span class="pre">legend</span></code> ;</p></li>
+<li><p>gérer les axes : <code class="docutils literal notranslate"><span class="pre">xticks</span></code>, <code class="docutils literal notranslate"><span class="pre">xlim</span></code>, <code class="docutils literal notranslate"><span class="pre">loglog</span></code>, <code class="docutils literal notranslate"><span class="pre">semilogx</span></code> ;</p></li>
+<li><p>gérer les affichages : <code class="docutils literal notranslate"><span class="pre">show</span></code>, <code class="docutils literal notranslate"><span class="pre">savefig</span></code>, <code class="docutils literal notranslate"><span class="pre">close</span></code>.</p></li>
+</ul>
+</div>
+<div class="section" id="exercice">
+<h3>Exercice<a class="headerlink" href="#exercice" title="Permalink to this headline">¶</a></h3>
+<p>Obtenir le tracé des principales classes de complexités : <span class="math notranslate nohighlight">\(log_2n\)</span>, <span class="math notranslate nohighlight">\(n\)</span>, <span class="math notranslate nohighlight">\(n\ \log_2(n)\)</span>, <span class="math notranslate nohighlight">\(n^2\)</span>, <span class="math notranslate nohighlight">\(n^3\)</span>, <span class="math notranslate nohighlight">\(2^n\)</span>
+pour les premières puissances de 2 – par exemple de 2 à 128.</p>
+<p>A votre avis, pourquoi des échelles logarithmiques sont adaptées ?</p>
+<p><strong>Rmq.</strong></p>
+<ul class="simple">
+<li><p>La solution intègre en commentaires quelques commandes utiles au traitement hors des notebook, cad. dans un programme python écrit sous l’idle par exemple.</p></li>
+<li><p>ligne 45 : elle suppose l’existence d’un répertoire <code class="docutils literal notranslate"><span class="pre">./tmp</span></code> (à adapter si besoin)</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># complexites.py</span>
+<span class="sd">&quot;&quot;&quot;Trace des principales classes de complexites avec matplotlib&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="c1">#import matplotlib.pyplot as plt</span>
+<span class="kn">from</span> <span class="nn">matplotlib.backends.backend_pdf</span> <span class="kn">import</span> <span class="n">PdfPages</span> <span class="c1"># cf. à la fin du code</span>
+
+<span class="c1"># la figure</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span> <span class="n">dpi</span> <span class="o">=</span> <span class="mi">80</span><span class="p">)</span>  <span class="c1"># size est en pouce...</span>
+
+<span class="c1"># son titre</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Principales fonctions de complexité&quot;</span><span class="p">)</span>
+
+<span class="c1"># ses axes en log2</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">loglog</span><span class="p">(</span><span class="n">basex</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">basey</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># valeurs affichees sur l axe des x</span>
+<span class="n">n</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="o">**</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">8</span><span class="p">)]</span>  <span class="c1"># les premieres puissances de 2  </span>
+
+<span class="n">label_x</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">n</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">label_x</span><span class="p">)</span>
+
+<span class="c1"># valeurs affichees sur l axe des y</span>
+<span class="n">y_val</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">2</span><span class="p">)]</span>
+ 
+<span class="n">label_y</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">y_val</span><span class="p">]</span>
+<span class="c1">#plt.yticks(y_val, label_y)</span>
+
+<span class="c1"># on limite les valeurs de y trop grandes</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">14</span><span class="p">))</span>
+<span class="c1">#</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">32</span><span class="o">/</span><span class="mi">9</span><span class="n">hkmzrf11t38ckpktjnyfsfc0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_11253</span><span class="o">/</span><span class="mf">4274093675.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span> 
+<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="c1"># ses axes en log2</span>
+<span class="ne">---&gt; </span><span class="mi">14</span> <span class="n">plt</span><span class="o">.</span><span class="n">loglog</span><span class="p">(</span><span class="n">basex</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">basey</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span> 
+<span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="c1"># valeurs affichees sur l axe des x</span>
+
+<span class="nn">~/.local/share/virtualenvs/ens-3Ap4QYHt/lib/python3.9/site-packages/matplotlib/pyplot.py</span> in <span class="ni">loglog</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2665</span> <span class="nd">@_copy_docstring_and_deprecators</span><span class="p">(</span><span class="n">Axes</span><span class="o">.</span><span class="n">loglog</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2666</span> <span class="k">def</span> <span class="nf">loglog</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="ne">-&gt; </span><span class="mi">2667</span>     <span class="k">return</span> <span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">loglog</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2668</span> 
+<span class="g g-Whitespace">   </span><span class="mi">2669</span> 
+
+<span class="nn">~/.local/share/virtualenvs/ens-3Ap4QYHt/lib/python3.9/site-packages/matplotlib/axes/_axes.py</span> in <span class="ni">loglog</span><span class="nt">(self, *args, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1763</span>               <span class="k">if</span> <span class="n">k</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;base&#39;</span><span class="p">,</span> <span class="s1">&#39;subs&#39;</span><span class="p">,</span> <span class="s1">&#39;nonpositive&#39;</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1764</span>                        <span class="s1">&#39;basex&#39;</span><span class="p">,</span> <span class="s1">&#39;subsx&#39;</span><span class="p">,</span> <span class="s1">&#39;nonposx&#39;</span><span class="p">]}</span>
+<span class="ne">-&gt; </span><span class="mi">1765</span>         <span class="bp">self</span><span class="o">.</span><span class="n">set_xscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">dx</span><span class="p">)</span>
+<span class="nn">   1766         dy = {k: v for k, v</span> in <span class="ni">kwargs.items</span><span class="nt">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1767</span>               <span class="k">if</span> <span class="n">k</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;base&#39;</span><span class="p">,</span> <span class="s1">&#39;subs&#39;</span><span class="p">,</span> <span class="s1">&#39;nonpositive&#39;</span><span class="p">,</span>
+
+<span class="nn">~/.local/share/virtualenvs/ens-3Ap4QYHt/lib/python3.9/site-packages/matplotlib/axes/_base.py</span> in <span class="ni">set_xscale</span><span class="nt">(self, value, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3775</span>         <span class="n">g</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_shared_x_axes</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">3776</span>         <span class="k">for</span> <span class="n">ax</span> <span class="ow">in</span> <span class="n">g</span><span class="o">.</span><span class="n">get_siblings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="ne">-&gt; </span><span class="mi">3777</span>             <span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">_set_scale</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3778</span>             <span class="n">ax</span><span class="o">.</span><span class="n">_update_transScale</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">3779</span>             <span class="n">ax</span><span class="o">.</span><span class="n">stale</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="nn">~/.local/share/virtualenvs/ens-3Ap4QYHt/lib/python3.9/site-packages/matplotlib/axis.py</span> in <span class="ni">_set_scale</span><span class="nt">(self, value, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">759</span>     <span class="k">def</span> <span class="nf">_set_scale</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">760</span>         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">mscale</span><span class="o">.</span><span class="n">ScaleBase</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">761</span>             <span class="bp">self</span><span class="o">.</span><span class="n">_scale</span> <span class="o">=</span> <span class="n">mscale</span><span class="o">.</span><span class="n">scale_factory</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">762</span>         <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">763</span>             <span class="bp">self</span><span class="o">.</span><span class="n">_scale</span> <span class="o">=</span> <span class="n">value</span>
+
+<span class="nn">~/.local/share/virtualenvs/ens-3Ap4QYHt/lib/python3.9/site-packages/matplotlib/scale.py</span> in <span class="ni">scale_factory</span><span class="nt">(scale, axis, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">595</span>         <span class="n">scale</span> <span class="o">=</span> <span class="n">scale</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">596</span>     <span class="n">scale_cls</span> <span class="o">=</span> <span class="n">_api</span><span class="o">.</span><span class="n">check_getitem</span><span class="p">(</span><span class="n">_scale_mapping</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">scale</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">597</span>     <span class="k">return</span> <span class="n">scale_cls</span><span class="p">(</span><span class="n">axis</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">598</span> 
+<span class="g g-Whitespace">    </span><span class="mi">599</span> 
+
+<span class="ne">TypeError</span>: __init__() got an unexpected keyword argument &#39;basex&#39;
+</pre></div>
+</div>
+<img alt="../_images/11-modules-utiles_17_1.png" src="../_images/11-modules-utiles_17_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># tracer</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="mf">2.0</span><span class="p">,</span> <span class="n">n</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;$2^n$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;$n^3$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;$n^2$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">log2</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;$n\ \log_2(n)$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;$n$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">log2</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;$\log_2(n)$&quot;</span><span class="p">)</span>
+
+<span class="c1"># afficher la légende à cette position</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper left&quot;</span><span class="p">)</span>
+
+<span class="c1"># sortie ecran (inutile sous notebook)</span>
+<span class="c1">#plt.show()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#ou fichier pdf : suppose l&#39;existence d&#39;un repertoire ./tmp</span>
+<span class="n">pp</span> <span class="o">=</span> <span class="n">PdfPages</span><span class="p">(</span><span class="s1">&#39;./tmp/plt-complexites.pdf&#39;</span><span class="p">)</span>
+<span class="n">pp</span><span class="o">.</span><span class="n">savefig</span><span class="p">()</span>
+<span class="n">pp</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/11-modules-utiles_19_0.png" src="../_images/11-modules-utiles_19_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="a-vous-maintenant">
+<h3>A vous maintenant !<a class="headerlink" href="#a-vous-maintenant" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="le-flocon-de-von-koch">
+<h4>Le flocon de Von Koch<a class="headerlink" href="#le-flocon-de-von-koch" title="Permalink to this headline">¶</a></h4>
+<p>Le flocon de Von Koch (1906) est une courbe fractale
+(continue partout et dérivable nulle part) obtenue comme la limite
+de la transformation suivante appliquée récursivement à un segment
+de départ.</p>
+<ul class="simple">
+<li><p>le segment est découpée en 3 parties égales,</p></li>
+<li><p>le segment intermédiaire est remplacé par deux segments formant un triangle équilatéral avec le segment supprimé,</p></li>
+<li><p>et ainsi de suite sur les 4 segments ainsi obtenus.</p></li>
+</ul>
+<p>Voici les cinq premières courbes obtenues à partir d’un segment droit
+ou d’un triangle équilatéral : le flocon de Von Koch.<br />
+On parle aussi de courbe de Von Koch d’ordre <span class="math notranslate nohighlight">\(n\)</span> pour la courbe de la
+<span class="math notranslate nohighlight">\(n\)</span>-ième récursion – les tracés suivants correspondent aux segments
+de Von Koch d’ordres <span class="math notranslate nohighlight">\(0, \cdots, 4\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span> 
+<span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;./fig/cinqsegmentsvk.jpg&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/11-modules-utiles_21_0.jpg" src="../_images/11-modules-utiles_21_0.jpg" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;./fig/cinqflocons.jpg&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/11-modules-utiles_22_0.jpg" src="../_images/11-modules-utiles_22_0.jpg" />
+</div>
+</div>
+<p>** Traçons-le !**</p>
+<p>On va se limiter à celui avec un segment de départ.<br />
+Avec <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>, on choisit de calculer les coordonnées des sommets des
+transformés successifs du segment de départ, puis de les tracer comme
+une courbe.</p>
+<ol class="simple">
+<li><p>Écrire la fonction <code class="docutils literal notranslate"><span class="pre">segvk()</span></code> qui à partir  des
+extrémités d’un segment  <span class="math notranslate nohighlight">\([a, b]\)</span>, par exemple définies par ses
+affixes complexes,  calcule et retourne la liste  (des affixes)
+des points significatifs d’une itération de Von Koch de <span class="math notranslate nohighlight">\([a, b]\)</span>.</p></li>
+<li><p>Écrire la fonction <code class="docutils literal notranslate"><span class="pre">listevk()</span></code> qui applique une itération de Von
+Koch  à une liste de segments.</p></li>
+<li><p>Apliquer ces fonctions pour obtenir le tracé <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> des
+premières itérations du segment <span class="math notranslate nohighlight">\([-1, 1]\)</span>.</p></li>
+</ol>
+<p>Il est agréable d’obtenir ces tracés sous la forme de sous-figures comme présenté ci-dessus.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;./fig/plt-segvk.png&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">520</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/11-modules-utiles_24_0.png" src="../_images/11-modules-utiles_24_0.png" />
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="star-mesurer-le-temps-d-execution-d-un-programme">
+<h2><span class="section-number">11.3. </span>(<span class="math notranslate nohighlight">\(\star\)</span>) Mesurer le temps d’exécution d’un programme<a class="headerlink" href="#star-mesurer-le-temps-d-execution-d-un-programme" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="pas-si-simple">
+<h3>Pas si simple …<a class="headerlink" href="#pas-si-simple" title="Permalink to this headline">¶</a></h3>
+<p>Mesurer le temps d’exécution d’un programme sur une machine actuelle
+est une une tâche beaucoup plus ardue qu’il n’y parait.
+En effet, l’impression que l’<strong>exécution</strong> de votre programme
+<strong>mobilise à elle seule les ressources</strong> de votre ordinateur est une
+<strong>illusion</strong>.</p>
+<p>Le <strong>temps</strong> que vous attendez pour obtenir votre résultat, même si cela
+vous parait instantané, est en fait <strong>partagé</strong> : pendant ce même temps,
+votre ordinateur  effectue certainement de nombreuses autres tâches,
+par exemple liées au système d’exploitation, aux périphériques, à
+d’autres utilisateurs si votre machine gère plusieurs sessions, …</p>
+<p>Par ailleurs, les unités de calculs et l’organisation (des niveaux) de
+la mémoire compliquent très fortement la mesure fiable des temps
+d’exécution et leur analyse.</p>
+<p>En pratique, <strong>plus ce que vous voulez mesurer est court, plus la mesure
+sera incertaine et non reproductible</strong>.</p>
+<p>Pour ce qui nous intéresse,
+l’obtention d’une mesure significative consistera à :</p>
+<ol class="simple">
+<li><p>répéter l’exécution dans une boucle,</p></li>
+<li><p>mesurer le temps d’excution de <strong>cette boucle</strong> et</p></li>
+<li><p>en retenir la moyenne.
+Il n’est pas inutile de répéter ce type de mesures et le cas échéant
+de traiter l’échantillon obtenu.</p></li>
+</ol>
+<p>Les “gros problèmes” sont aussi sujets à remarque.</p>
+<ul class="simple">
+<li><p>Des tailles de données importantes nécessitent un volume important de
+transferts entre la mémoire et les unités de calcul.</p></li>
+<li><p>Ces transferts mémoire sont complexes ;</p></li>
+<li><p>leurs temps est :</p>
+<ul>
+<li><p>d’une part non linéaire par rapport à la taille des données,</p></li>
+<li><p>et d’autre part beaucoup plus important que les temps de calcul souvent associés.</p></li>
+</ul>
+</li>
+</ul>
+<p>A titre indicatif, il y a <strong>un facteur 10 entre ce temps de transfert
+et le temps d’un calcul arithmétique élémentaire</strong>.</p>
+<ul class="simple">
+<li><p>ce qui veut dire qu’il faut 10 fois plus de temps pour lire deux valeurs en mémoire que pour faire leur addition, par exemple.</p></li>
+</ul>
+<p>Ainsi, les mesures peuvent être surprenantes lorsqu’elles deviennent
+“dominées” par ces temps de transfert.<br />
+Le modèle de nos analyses de la complexité des algorithmes ne prend
+pas en compte cet aspect vite technique.</p>
+<p>Pour finir, ceci illustre la différence entre les propriétés d’un
+algorithme et celles de ses mises en oeuvre et, par la même occasion,
+confirme l’intérêt des notations asymptotiques <span class="math notranslate nohighlight">\(\cal{O}\)</span>, <span class="math notranslate nohighlight">\(\theta\)</span>,
+<span class="math notranslate nohighlight">\(\Omega\)</span> dont on a souvent signalé qu’elle masquent pas mal de
+détails.</p>
+</div>
+<div class="section" id="mesurer-avec-le-module-time">
+<h3>Mesurer avec le module <code class="docutils literal notranslate"><span class="pre">time</span></code><a class="headerlink" href="#mesurer-avec-le-module-time" title="Permalink to this headline">¶</a></h3>
+<p>Ce module python fournit beaucoup de fonctions en rapport avec le temps :
+gestions de calendriers, des systèmes horaires, d’horloges …</p>
+<p>Il permet aussi une estimation des temps d’exécution des programmes
+python (et autres).
+La qualité de cette estimation dépend des mises en oeuvre de ce
+module et des machines visées.
+Vous pouvez <strong>être relativement confiant sur vos PC-linux ou mac</strong>.</p>
+<ul class="simple">
+<li><p>La fonction  <code class="docutils literal notranslate"><span class="pre">time()</span></code> est annoncée avec une précision de la
+seconde, sans que ce soit garanti pour toutes les machines.<br />
+<em>Une seconde : c’est beaucoup !</em> C’est en effet suffisamment long pour
+effectuer 2 giga = 2 <span class="math notranslate nohighlight">\(\cdot 10^9\)</span> opérations …<br />
+<code class="docutils literal notranslate"><span class="pre">time()</span></code>  peut donc être utile pour des <strong>mesures grossières</strong> ou des
+exécutions <strong>de très gros volumes</strong>.</p></li>
+</ul>
+<ul class="simple">
+<li><p>La fonction <code class="docutils literal notranslate"><span class="pre">perf_counter()</span></code> est définie depuis python3.3.<br />
+Lorsqu’elle est disponible, elle permet les mesures les plus fines
+possibles adaptées à la mesure des temps d’exécution de programmes
+(sans être pour autant exacte, ni reproductible).<br />
+Elle utilise des fonctions spécifiques aux architectures des machines
+qui exploitent les <strong>compteurs matériels</strong>.</p></li>
+</ul>
+<p>Ces fonctions sont <strong>très simples à utiliser</strong><br />
+On procède en deux appels qui encadrent la portion de code à mesurer.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">t0</span> <span class="pre">=</span> <span class="pre">time.perf_counter()</span></code>: le premier appel initialise une valeur initiale
+<code class="docutils literal notranslate"><span class="pre">t0</span></code>;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">time.perf_counter()</span></code>: le second appel  mesure <code class="docutils literal notranslate"><span class="pre">t</span></code> à l’issue de
+l’exécution de la portion de code</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">-</span> <span class="pre">t0</span></code></strong> est la mesure de ce temps d’exécution (moyennant les
+réserves précédentes).</p></li>
+</ul>
+<p>Ne pas oublier de <em>boucler autour</em> de la portion à analyser et de <em>mesurer à l’extérieur</em> de cette boucle.</p>
+</div>
+<div class="section" id="un-benchmark-en-theta-n-la-somme-iterative">
+<h3>Un <em>benchmark</em> en  <span class="math notranslate nohighlight">\(\theta(n)\)</span> : la somme itérative<a class="headerlink" href="#un-benchmark-en-theta-n-la-somme-iterative" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">sommer()</span></code> : l’algorithme classique par accumulation itérative.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sommer</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">dim_t</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;somme itérative de n valeurs entières stockées dans un tableau</span>
+<span class="sd">    entrées. t : tab d&#39;int de longueur n</span>
+<span class="sd">    retourne. res : int</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">dim_t</span><span class="p">):</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">res</span> <span class="o">+</span> <span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">res</span>
+
+<span class="c1"># les 10 premiers entiers</span>
+<span class="n">tab10</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)]</span>
+
+<span class="c1"># somme itérative</span>
+<span class="n">s1</span> <span class="o">=</span> <span class="n">sommer</span><span class="p">(</span><span class="n">tab10</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab10</span><span class="p">))</span>
+
+<span class="c1"># somme des n premiers entiers</span>
+<span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab10</span><span class="p">)</span>
+<span class="n">s2</span> <span class="o">=</span> <span class="n">n</span> <span class="o">*</span> <span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">//</span><span class="mi">2</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">s1</span><span class="p">,</span> <span class="s1">&#39; = &#39;</span><span class="p">,</span> <span class="n">s2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>45  =  45
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="un-premier-exemple">
+<h3>Un premier exemple<a class="headerlink" href="#un-premier-exemple" title="Permalink to this headline">¶</a></h3>
+<p>où on compare <code class="docutils literal notranslate"><span class="pre">time.time()</span></code> et <code class="docutils literal notranslate"><span class="pre">time.perf_counter()</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># pour afficher les sorties matplotlib dans le notebook</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># formats affichage : fx.format(val)</span>
+<span class="n">fint</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:0=8}</span><span class="s2">&quot;</span> <span class="c1">#entier sur 7 digits complete avec 0 a gauche</span>
+<span class="n">fexp</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:7.3e}</span><span class="s2">&quot;</span><span class="c1">#float en notation e sur 7 digits dont 3 apres le .</span>
+<span class="n">ffl</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:5.1f}</span><span class="s2">&quot;</span> <span class="c1">#float sur 5 digits dont au plus 1 apres le .</span>
+
+<span class="c1"># timings operations en O(n) </span>
+<span class="n">dim</span> <span class="o">=</span> <span class="mi">10000</span>
+<span class="n">dimmax</span> <span class="o">=</span> <span class="n">dim</span>
+
+<span class="c1"># 1. avec des listes python</span>
+<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="n">random</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">dimmax</span><span class="p">)]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="n">random</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">dimmax</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># nb repetititions de chaque mesure</span>
+<span class="n">nbrepet</span> <span class="o">=</span> <span class="mi">20</span>
+
+<span class="c1"># time : timings operations en O(n) </span>
+<span class="c1"># les mesures sont à l&#39;intérieur de la répétition</span>
+<span class="c1"># car on veut évaluer la sensibilité de ces bestiolles</span>
+
+<span class="n">t_time</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># les mesures</span>
+<span class="k">for</span> <span class="n">repet</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nbrepet</span><span class="p">):</span> 
+    <span class="c1"># la mesure</span>
+    <span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">sommer</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">dimmax</span><span class="p">)</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="c1">#</span>
+    <span class="n">t_time</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="n">t0</span><span class="p">)</span>
+
+<span class="c1"># perf_counter</span>
+<span class="n">t_tsc</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># les mesures</span>
+<span class="k">for</span> <span class="n">repet</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nbrepet</span><span class="p">):</span>
+    <span class="c1"># la mesure</span>
+    <span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">sommer</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">dimmax</span><span class="p">)</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
+    <span class="c1">#</span>
+    <span class="n">t_tsc</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="n">t0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># aff mesures    </span>
+<span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nbrepet</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">fexp</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">t_time</span><span class="p">[</span><span class="n">r</span><span class="p">])</span> <span class="p">,</span> <span class="n">fexp</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">t_tsc</span><span class="p">[</span><span class="n">r</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.530e-03 1.715e-03
+1.581e-03 1.717e-03
+1.600e-03 1.473e-03
+1.550e-03 1.324e-03
+1.547e-03 1.850e-03
+1.575e-03 1.582e-03
+4.102e-03 1.298e-03
+4.708e-03 8.595e-04
+3.455e-03 9.444e-04
+2.892e-03 1.116e-03
+1.802e-03 1.697e-03
+4.197e-03 9.228e-04
+3.471e-03 8.422e-04
+3.779e-03 8.718e-04
+2.080e-03 8.982e-04
+1.706e-03 1.329e-03
+1.800e-03 1.039e-03
+2.132e-03 1.109e-03
+1.810e-03 1.102e-03
+1.517e-03 1.640e-03
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### trace</span>
+<span class="c1">#plt.figure()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">semilogy</span><span class="p">(</span><span class="n">basey</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_time</span><span class="p">,</span> <span class="s1">&#39;ro-&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;time&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_tsc</span><span class="p">,</span> <span class="s1">&#39;b+-&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;perf_counter&quot;</span><span class="p">)</span>
+<span class="c1">#</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper right&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;20 mesures répétées&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="c1">#plt.close()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/11-modules-utiles_43_0.png" src="../_images/11-modules-utiles_43_0.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="premiere-mesure-de-complexite">
+<h2><span class="section-number">11.4. </span>Première mesure de complexité<a class="headerlink" href="#premiere-mesure-de-complexite" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="des-donnees-de-taille-variable">
+<h3>Des données de taille variable<a class="headerlink" href="#des-donnees-de-taille-variable" title="Permalink to this headline">¶</a></h3>
+<p>L’analyse de complexité dépend de la taille des entrées : <span class="math notranslate nohighlight">\(n\)</span>.<br />
+Allons-y pour des mesures comme <em>fonction de cette taille</em>.</p>
+<p>On fait ça avec <code class="docutils literal notranslate"><span class="pre">time.time()</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># timings operations en O(n) </span>
+
+<span class="c1"># 1. créer des données</span>
+<span class="n">dim</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="o">**</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">8</span><span class="p">)]</span>
+<span class="n">dimmax</span> <span class="o">=</span> <span class="n">dim</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">dim</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="n">random</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">dimmax</span><span class="p">)]</span>
+
+<span class="c1">### plus tard :  avec des ndarray et boucle sommer</span>
+<span class="c1"># creation de ndarray numpy a partir de liste python (conversion)</span>
+<span class="c1">#aa = np.array(a)</span>
+
+<span class="n">timings_array</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># les mesures</span>
+<span class="n">ratio_array</span> <span class="o">=</span> <span class="p">[]</span>    <span class="c1"># les ratios</span>
+
+<span class="c1"># 2. mesurer</span>
+<span class="n">nbrepet</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">dim</span><span class="p">:</span> <span class="c1"># on parcours les différentes tailles</span>
+    <span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">repet</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nbrepet</span><span class="p">):</span> <span class="c1"># répéter les exécutions</span>
+            <span class="n">sommer</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    
+    <span class="c1"># timing moyen pour chaque dimension</span>
+    <span class="n">tmoy</span> <span class="o">=</span> <span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="n">t0</span><span class="p">)</span><span class="o">/</span><span class="n">nbrepet</span>
+    <span class="n">timings_array</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tmoy</span><span class="p">)</span>
+    <span class="n">ratio_array</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tmoy</span><span class="o">/</span><span class="n">n</span><span class="p">)</span>
+
+<span class="c1"># 3. aff de controle</span>
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">dim</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">fint</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dim</span><span class="p">[</span><span class="n">n</span><span class="p">]),</span> <span class="n">fexp</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">timings_array</span><span class="p">[</span><span class="n">n</span><span class="p">]),</span> <span class="n">fexp</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ratio_array</span><span class="p">[</span><span class="n">n</span><span class="p">]))</span>
+
+<span class="c1"># 4. tracer</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">loglog</span><span class="p">(</span><span class="n">basex</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">basey</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">dim</span><span class="p">,</span> <span class="n">timings_array</span><span class="p">,</span> <span class="s1">&#39;ro-&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;sommer&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;n : nombre de valeurs à sommer&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;temps d&#39;exécution (en sec) ou ratio temps/taille&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">dim</span><span class="p">,</span> <span class="n">ratio_array</span><span class="p">,</span> <span class="s1">&#39;go-&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;sommer / n &quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>00000100 6.080e-06 6.080e-08
+00001000 5.651e-05 5.651e-08
+00010000 5.770e-04 5.770e-08
+00100000 5.867e-03 5.867e-08
+01000000 7.103e-02 7.103e-08
+10000000 7.165e-01 7.165e-08
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x114fef890&gt;
+</pre></div>
+</div>
+<img alt="../_images/11-modules-utiles_45_2.png" src="../_images/11-modules-utiles_45_2.png" />
+</div>
+</div>
+<p><strong>Conclusion</strong></p>
+<ul class="simple">
+<li><p>on observe bien un comportement linéaire, ie. en <span class="math notranslate nohighlight">\(\theta(n)\)</span>.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span> <span class="n">nbconvert</span> <span class="o">--</span><span class="n">to</span> <span class="n">html_embed</span> <span class="o">--</span><span class="n">template</span> <span class="n">toc2</span> <span class="mi">11</span><span class="o">-</span><span class="n">modules</span><span class="o">-</span><span class="n">utiles</span><span class="o">.</span><span class="n">ipynb</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span> <span class="n">nbconvert</span> <span class="mi">11</span><span class="o">-</span><span class="n">modules</span><span class="o">-</span><span class="n">utiles</span><span class="o">.</span><span class="n">ipynb</span> <span class="o">--</span><span class="n">to</span> <span class="n">slides</span> <span class="o">--</span><span class="n">SlidesExporter</span><span class="o">.</span><span class="n">reveal_scroll</span><span class="o">=</span><span class="kc">True</span> <span class="o">--</span><span class="n">SlidesExporter</span><span class="o">.</span><span class="n">reveal_transition</span><span class="o">=</span><span class="n">none</span> <span class="o">--</span><span class="n">SlidesExporter</span><span class="o">.</span><span class="n">reveal_theme</span><span class="o">=</span><span class="n">solarized</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./cm"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="10-trier.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">10. </span>Trier</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Competences-2021.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">12. </span>Fonctions</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      Par Ph. Langlois<br/>
+    
+        &copy; droits d'auteur 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
