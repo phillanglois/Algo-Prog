@@ -1647,7 +1647,9 @@ True
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># appels avec une variable</span>
-<span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;n premières puissances de 2.0 pour n = &quot;</span><span class="p">))</span>
+
+<span class="c1">#n = int(input(&quot;n premières puissances de 2.0 pour n = &quot;))</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2 **&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="s2">&quot;=&quot;</span><span class="p">,</span> <span class="n">puissance</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span>
 
@@ -1655,8 +1657,11 @@ True
 <span class="nb">print</span><span class="p">(</span><span class="n">puissance</span><span class="p">(</span><span class="mf">2.0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
 
 <span class="c1"># appels avec des variables</span>
-<span class="n">p</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;n premières puissances de p pour p = &quot;</span><span class="p">))</span>
-<span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;et n = &quot;</span><span class="p">))</span>
+
+<span class="c1">#p = float(input(&quot;n premières puissances de p pour p = &quot;))</span>
+<span class="c1">#n = int(input(&quot;et n = &quot;))</span>
+<span class="n">p</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">4</span>
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">puissance</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">i</span><span class="p">))</span>
@@ -1664,33 +1669,19 @@ True
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
-<span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">23</span><span class="p">],</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># appels avec une variable</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;n premières puissances de 2.0 pour n = &quot;</span><span class="p">))</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2 **&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="s2">&quot;=&quot;</span><span class="p">,</span> <span class="n">puissance</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span>
-
-<span class="nn">File ~/.local/share/virtualenvs/ens-3Ap4QYHt/lib/python3.9/site-packages/ipykernel/kernelbase.py:1041,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1034</span> <span class="sd">&quot;&quot;&quot;Forward raw_input to frontends</span>
-<span class="g g-Whitespace">   </span><span class="mi">1035</span><span class="sd"> </span>
-<span class="g g-Whitespace">   </span><span class="mi">1036</span><span class="sd"> Raises</span>
-<span class="g g-Whitespace">   </span><span class="mi">1037</span><span class="sd"> ------</span>
-<span class="g g-Whitespace">   </span><span class="mi">1038</span><span class="sd"> StdinNotImplementedError if active frontend doesn&#39;t support stdin.</span>
-<span class="g g-Whitespace">   </span><span class="mi">1039</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1040</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1041</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1042</span>         <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1043</span>     <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1044</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1045</span>     <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1046</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_parent_ident</span><span class="p">[</span><span class="s2">&quot;shell&quot;</span><span class="p">],</span>
-<span class="g g-Whitespace">   </span><span class="mi">1047</span>     <span class="bp">self</span><span class="o">.</span><span class="n">get_parent</span><span class="p">(</span><span class="s2">&quot;shell&quot;</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1048</span>     <span class="n">password</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1049</span> <span class="p">)</span>
-
-<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2 ** 0 = 1.0
+2 ** 1 = 2.0
+2 ** 2 = 4.0
+2 ** 3 = 8.0
+2 ** 4 = 16.0
+2 ** 5 = 32.0
+cas particulier
+1.0
+1.0
+3.0
+9.0
+27.0
+81.0
 </pre></div>
 </div>
 </div>

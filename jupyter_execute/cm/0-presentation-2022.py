@@ -13,12 +13,16 @@
 
 # ## Algo-Prog : version 2022 
 # 
+# 
+# - Les [supports du CM](https://phillanglois.github.io/Algo-Prog/) régulièrement mis à jour.
+# - Les autres ressiources sont sur l'espace moodle de cet enseignement.
+# 
 # ### Version 2022
 # 
 # - nouvelle offre de formation 2021-2025 : algo + prog = 1 UE
 # - 12 séances de CM : 3h/semaine 
 # - 12 séances de TD-TP : 3h/semaine 
-# - chargés de TD : Ph. Langlois (2), Vincent Zucca, Hanane Benmaghnia
+# - chargés de TD : Ph. Langlois (2), Vincent Zucca
 # - Démarrage : CM en semaine 3 (`sd`=s3), TD en s4, vacances en s9, s17-s18
 # 
 
@@ -78,7 +82,7 @@
 # - **Méthodologie** : 
 #     - relire le cours le soir de l'amphi (15-20 min) 
 #     - le reprendre en détail 4-5 jours après en préparant  des exercices de TD ou de TP -- en groupe : ça aide !
-#     - faire une auto-évaluation de ce que _vous_ en avez retenu la veille du cours suivant  
+#     - faire une auto-évaluation de ce que _vous_ en avez retenu la veille du cours suivant : le chapitre compétences est utile. 
 #     - identifier les questions à poser en séance de TD ou en CM
 
 # ### Les TD pour réfléchir et travailler en petit groupe

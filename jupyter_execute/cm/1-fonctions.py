@@ -782,7 +782,9 @@ print(vrai_ou_faux)
 
 
 # appels avec une variable
-n = int(input("n premières puissances de 2.0 pour n = "))
+
+#n = int(input("n premières puissances de 2.0 pour n = "))
+n = 5
 for i in range(n+1):
     print("2 **", i, "=", puissance(2, i))
 
@@ -790,8 +792,11 @@ print("cas particulier")
 print(puissance(2.0, 0))
 
 # appels avec des variables
-p = float(input("n premières puissances de p pour p = "))
-n = int(input("et n = "))
+
+#p = float(input("n premières puissances de p pour p = "))
+#n = int(input("et n = "))
+p = 3
+n = 4
 
 for i in range(n+1):
     print(puissance(p,i))
@@ -1195,10 +1200,3 @@ for (v,d) in ("Carca", "11"), ("Perpi","66"), ("Montpell", "34"), ("Foix", "09")
 # 
 # - Pourquoi `afficher_pref_dept()` n'est pas une fonction excepté pour python ?
 # 
-html généré avec :
-
-jupyter nbconvert --to html_embed --template toc2  1-fonctions.ipynb
-slides générés avec :
-    
-jupyter nbconvert --to slides --SlidesExporter.reveal_scroll=True --SlidesExporter.reveal_transition=none --SlidesExporter.reveal_theme=white  1-fonctions.ipynb
-
