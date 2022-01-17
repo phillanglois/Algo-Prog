@@ -728,7 +728,7 @@ class bool(int)
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;- avec mon_bool(): &quot;</span><span class="p">,</span> <span class="n">mon_bool</span><span class="p">(</span><span class="kc">False</span><span class="p">),</span> <span class="n">mon_bool</span><span class="p">(</span><span class="kc">None</span><span class="p">),</span> <span class="n">mon_bool</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">mon_bool</span><span class="p">())</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;- avec int():&quot;</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="kc">False</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="nb">int</span><span class="p">())</span>
 
-<span class="c1"># le bloc suivant va déclancher une erreur qu&#39;on va rattraper</span>
+<span class="c1"># le bloc suivant va déclencher une erreur qu&#39;on va rattraper</span>
 <span class="k">try</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="kc">None</span><span class="p">))</span>
 <span class="k">except</span><span class="p">:</span>
@@ -1247,11 +1247,12 @@ En pratique, dès que l’opérande de gauche a été évalué (à <code class="
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>Intérêt pratique très très commode !</strong> : éviter le débordement d’un tableau dans un test.</p>
-<div class="highlight-if notranslate"><div class="highlight"><pre><span></span>    ...
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="ow">and</span> <span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="o">...</span>
 </pre></div>
 </div>
 </div>
-<p>Quizz : Permuter les opérandes de la condition précédente est sans conséquence ? (True/False :)</p>
+<p>Quizz : A votre avis, permuter les opérandes de la condition précédente est sans conséquence ? (True/False :)</p>
 </div>
 <div class="section" id="comparaisons">
 <h2><span class="section-number">3.6. </span>Comparaisons<a class="headerlink" href="#comparaisons" title="Permalink to this headline">¶</a></h2>
