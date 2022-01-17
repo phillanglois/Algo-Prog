@@ -1,0 +1,789 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2. Compétences &#8212; Algo-Prog 2022</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="1. Sous-programmes : fonctions et procédures" href="1-fonctions.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo2022.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Algo-Prog 2022</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="0-presentation-2022.html">
+   Algorithmique et Programmation en 2022
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="1-fonctions.html">
+   1. Sous-programmes : fonctions et procédures
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   2. Compétences
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Basculer la navigation" aria-controls="site-navigation"
+                title="Basculer la navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Téléchargez cette page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/cm/competences-2022.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimer au format PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Dépôt source"><i
+                    class="fab fa-github"></i>dépôt</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcm/competences-2022.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Ouvrez un problème"><i class="fas fa-lightbulb"></i>signaler un problème</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Mode plein écran"
+        title="Mode plein écran"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/cm/competences-2022.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="lancement Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contenu
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#savoir-faire-et-pre-requis-technique">
+   2.1. Savoir faire et pré-requis technique
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fonctions">
+   2.2. Fonctions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#avoir-les-idees-claires">
+     Avoir les idées claires
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ce-qu-il-faut-savoir-faire">
+     Ce qu’il faut savoir faire
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#boucles-avancees">
+   2.3. Boucles avancées
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Avoir les idées claires
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Ce qu’il faut savoir faire
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#entrees-sorties-fichiers">
+   2.4. Entrées-Sorties : fichiers
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     Avoir les idées claires
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#savoir-faire">
+     Savoir-faire
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#complexite">
+   2.5. Complexité
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     Avoir les idées claires
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     Savoir-faire
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#types-composes">
+   2.6. Types composés
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id6">
+     Avoir les idées claires
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id7">
+     Savoir-faire
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#recursivite">
+   2.7. Récursivité
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id8">
+     Avoir les idées claires
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id9">
+     Savoir-faire
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#entrees-sorties-aspects-avances">
+   2.8. Entrées-Sorties : aspects avancés
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id10">
+     Avoir les idées claires
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id11">
+     Savoir-faire
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rechercher">
+   2.9. Rechercher
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id12">
+     Avoir les idées claires
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id13">
+     Savoir-faire
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#des-qcm-et-autres-sites-a-exploiter">
+   2.10. Des QCM et autres sites à exploiter
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Compétences</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contenu </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#savoir-faire-et-pre-requis-technique">
+   2.1. Savoir faire et pré-requis technique
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fonctions">
+   2.2. Fonctions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#avoir-les-idees-claires">
+     Avoir les idées claires
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ce-qu-il-faut-savoir-faire">
+     Ce qu’il faut savoir faire
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#boucles-avancees">
+   2.3. Boucles avancées
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Avoir les idées claires
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Ce qu’il faut savoir faire
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#entrees-sorties-fichiers">
+   2.4. Entrées-Sorties : fichiers
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     Avoir les idées claires
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#savoir-faire">
+     Savoir-faire
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#complexite">
+   2.5. Complexité
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     Avoir les idées claires
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     Savoir-faire
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#types-composes">
+   2.6. Types composés
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id6">
+     Avoir les idées claires
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id7">
+     Savoir-faire
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#recursivite">
+   2.7. Récursivité
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id8">
+     Avoir les idées claires
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id9">
+     Savoir-faire
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#entrees-sorties-aspects-avances">
+   2.8. Entrées-Sorties : aspects avancés
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id10">
+     Avoir les idées claires
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id11">
+     Savoir-faire
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rechercher">
+   2.9. Rechercher
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id12">
+     Avoir les idées claires
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id13">
+     Savoir-faire
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#des-qcm-et-autres-sites-a-exploiter">
+   2.10. Des QCM et autres sites à exploiter
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="competences">
+<h1><span class="section-number">2. </span>Compétences<a class="headerlink" href="#competences" title="Permalink to this headline">¶</a></h1>
+<p>version 2022, PhL.</p>
+<p>Les compétences de cet enseignement sont rassemblées dans ce fichier pour vous aider à contrôler votre apprentissage tout au long du semestre.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># -*- coding : utf8 -*-</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="savoir-faire-et-pre-requis-technique">
+<h2><span class="section-number">2.1. </span>Savoir faire et pré-requis technique<a class="headerlink" href="#savoir-faire-et-pre-requis-technique" title="Permalink to this headline">¶</a></h2>
+<p>Dans/avec un notebook jupyter :</p>
+<ul class="simple">
+<li><p>savoir mettre en oeuvre de la programmation simple en python (niveau semestre 1) dans un notebook jupyter</p></li>
+<li><p>savoir documenter cette programmation (énoncés, descriptions, …) avec markdown</p></li>
+</ul>
+</div>
+<div class="section" id="fonctions">
+<h2><span class="section-number">2.2. </span>Fonctions<a class="headerlink" href="#fonctions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="avoir-les-idees-claires">
+<h3>Avoir les idées claires<a class="headerlink" href="#avoir-les-idees-claires" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>reconnaître et utiliser une fonction prédéfinie ou existante</p></li>
+<li><p>reconnaître et distinguer :</p>
+<ul>
+<li><p>définition et paramètres formels <em>vs.</em> appel et paramètres effectifs</p></li>
+<li><p>spécification, en-tête, signature : spécifier pour utiliser, pour vérifier  <em>vs.</em> corps : implémentation du traitement</p></li>
+</ul>
+</li>
+<li><p>comprendre que appel = changement de contexte</p>
+<ul>
+<li><p>trace de l’exécution <em>vs.</em> séquentialité des instructions écrites</p></li>
+<li><p>dynamique vs. statique</p></li>
+</ul>
+</li>
+<li><p>distinguer appelant <em>vs.</em> appelé :</p>
+<ul>
+<li><p>le rôle de l’appel,</p></li>
+<li><p>le rôle du <code class="docutils literal notranslate"><span class="pre">return</span></code></p></li>
+</ul>
+</li>
+<li><p>identifier la portée des variables :</p>
+<ul>
+<li><p>variables locales <em>vs.</em> variables plus globales</p></li>
+</ul>
+</li>
+<li><p>se souvenir que l’effet de bord est indésirable</p></li>
+</ul>
+</div>
+<div class="section" id="ce-qu-il-faut-savoir-faire">
+<h3>Ce qu’il faut savoir faire<a class="headerlink" href="#ce-qu-il-faut-savoir-faire" title="Permalink to this headline">¶</a></h3>
+<p><strong>Cadre</strong> : en/pour python</p>
+<ul class="simple">
+<li><p>utiliser une fonction prédéfinie ou existante</p></li>
+<li><p>définir et écrire la spécification d’une fonction qui réalise un traitement décrit en français, ou qui résoud un problème (simple) décrit en français</p></li>
+<li><p>définir et écrire des appels simples (tests unitaires)</p></li>
+<li><p>définir et écrire l’implémentation d’une fonction associée à une spécification</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="boucles-avancees">
+<h2><span class="section-number">2.3. </span>Boucles avancées<a class="headerlink" href="#boucles-avancees" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>Avoir les idées claires<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Structure de données : représentation d’un tableau multidimensionnel comme une liste de listes</p></li>
+<li><p>Structure de contrôle de type boucles imbriquées indépendantes et dépendantes :</p>
+<ul>
+<li><p>intérêt et exemples simples,</p></li>
+<li><p>dénombrer les itérations de ces constructions.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h3>Ce qu’il faut savoir faire<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p><strong>Cadre</strong> : en/pour python</p>
+<ul class="simple">
+<li><p>Définir et écrire un traitement classique de tableau multidimensionnel  : parcours simple, parcours conditionnel</p></li>
+<li><p>Ecrire une initialisation de tableau multidimensionnel en python (représenté par des listes)</p></li>
+<li><p>Définir et écrire une spécification de fonction avec des paramètres de type tableau</p></li>
+<li><p>Identifier les cas particuliers liés à la structure de tableau : tableau de dimension 0, tableau vide</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="entrees-sorties-fichiers">
+<h2><span class="section-number">2.4. </span>Entrées-Sorties : fichiers<a class="headerlink" href="#entrees-sorties-fichiers" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h3>Avoir les idées claires<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Distinguer fichier logique <em>vs.</em> physique, texte <em>vs.</em> binaire, mode lecture <em>vs.</em> écriture (<em>vs.</em> lecture-écriture)</p></li>
+<li><p>Connaître les étapes de manipulation d’un fichier : association/ouverture/lecture-écriture/fermeture</p></li>
+<li><p>Distinguer valeur (numérique) et sa représentation textuelle</p></li>
+</ul>
+</div>
+<div class="section" id="savoir-faire">
+<h3>Savoir-faire<a class="headerlink" href="#savoir-faire" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Savoir écrire les lectures-écritures simples de fichier texte avec les instructions python adaptées</p></li>
+<li><p>Comprendre et gérer l’effet des caractères spéciaux</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="complexite">
+<h2><span class="section-number">2.5. </span>Complexité<a class="headerlink" href="#complexite" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h3>Avoir les idées claires<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Principes de l’analyse de la complexité en temps : modèle de calcul RAM, paramètres de complexité, meilleur et pire cas</p></li>
+<li><p>Complexité asymptotique : notations de Landau, principales classes de complexité des algorithmes, interprétation pratique de ces classes</p></li>
+<li><p>Complexité, pires et meilleurs cas des algorithmes vus ce semestre</p></li>
+<li><p>Savoir établir la complexité d’algorithmes itératifs simples ou récursifs terminaux.</p></li>
+</ul>
+</div>
+<div class="section" id="id5">
+<h3>Savoir-faire<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Exemples d’algorithme des principales classes de complexité</p></li>
+<li><p>Savoir identifier (sans nécessairement le prouver) la complexité, les meilleur-pire cas d’un algorithme</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="types-composes">
+<h2><span class="section-number">2.6. </span>Types composés<a class="headerlink" href="#types-composes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id6">
+<h3>Avoir les idées claires<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>voir cours</p>
+</div>
+<div class="section" id="id7">
+<h3>Savoir-faire<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p>voir cours</p>
+</div>
+</div>
+<div class="section" id="recursivite">
+<h2><span class="section-number">2.7. </span>Récursivité<a class="headerlink" href="#recursivite" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id8">
+<h3>Avoir les idées claires<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Savoir conduire une approche diviser pour régner et en déduire une solution récursive : application à des exemples calculatoires simples (factorielles, exponentiation entière, exponentiation rapide)</p></li>
+<li><p>Savoir identifier la (ou les) terminaison, la récursions et l’initialisation d’un traitement avec un algorithme récursif : application à des exemples simples (factorielles, exponentiation entière, exponentiation rapide)</p></li>
+<li></li>
+</ul>
+</div>
+<div class="section" id="id9">
+<h3>Savoir-faire<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Savoir écrire sous la forme d’une fonction de même signature les versions itérative et récursive d’un traitement calculatoire simple</p></li>
+<li><p>Construire la pile des appels et son évolution lors d’un traitement récursif</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="entrees-sorties-aspects-avances">
+<h2><span class="section-number">2.8. </span>Entrées-Sorties : aspects avancés<a class="headerlink" href="#entrees-sorties-aspects-avances" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id10">
+<h3>Avoir les idées claires<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Connaitre les principes du formatage des données pour pouvoir retrouver rapidement dans la documentation (de cours ou de référence) les commandes pour effectuer ce traitement.</p></li>
+</ul>
+</div>
+<div class="section" id="id11">
+<h3>Savoir-faire<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Utiliser les formatages de base des types <code class="docutils literal notranslate"><span class="pre">int</span></code> et <code class="docutils literal notranslate"><span class="pre">float</span></code> de python</p></li>
+<li><p>En s’appuyant sur les documents de cours ou de référence, définir et appliquer des formatages évolués et adaptés aux données manipulées avec python</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="rechercher">
+<h2><span class="section-number">2.9. </span>Rechercher<a class="headerlink" href="#rechercher" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id12">
+<h3>Avoir les idées claires<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Connaître les principes des formes itératives et récursives des algorithmes de recherche fondamentaux (recherche séquentielle, recherche dichotomique)</p></li>
+<li><p>Savoir conduire une approche diviser pour régner et en déduire une solution récursive pour le problème de la recherche d’une valeur dans un ensemble ou des problèmes similaires.</p></li>
+<li><p>Savoir identifier la (ou les) terminaison, la récursions et l’initialisation d’une recherche de valeur (ou problème similaire) avec un algorithme récursif</p></li>
+<li></li>
+</ul>
+</div>
+<div class="section" id="id13">
+<h3>Savoir-faire<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Savoir écrire sous la forme d’une fonction de même signature les versions itérative et récursive d’un algorithme de recherche de valeur dans un ensemble</p></li>
+<li><p>Savoir écrire des tests unitaires pertinents pour ces traitements</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="des-qcm-et-autres-sites-a-exploiter">
+<h2><span class="section-number">2.10. </span>Des QCM et autres sites à exploiter<a class="headerlink" href="#des-qcm-et-autres-sites-a-exploiter" title="Permalink to this headline">¶</a></h2>
+<p>Le net est riche de ressources à exploiter.
+En voici quelques-unes sélectionnées et à exploiter en plus de ceux proposés à chaque fin de chapitre.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.bernon.fr/index.php?page=exercice-banque-e3c-th%C3%A8me-a">Site</a> de M. Bernon : QCMs interactifs issus de la banque de données des E3C</p></li>
+<li><p><a class="reference external" href="http://fabrice.sincere.free.fr/qcm/qcm.php?nom=qcm_python_function">Site</a> de Fabrice Sincere (lien sur le qcm sur les fonctions)</p></li>
+<li><p>Fonctions, Objectif 20 : [France IOI]
+(<a class="reference external" href="http://www.france-ioi.org/algo/chapter.php?idChapter=509">http://www.france-ioi.org/algo/chapter.php?idChapter=509</a>)</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./cm"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="1-fonctions.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">1. </span>Sous-programmes : fonctions et procédures</p>
+        </div>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      Par Ph. Langlois<br/>
+    
+        &copy; droits d'auteur 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
