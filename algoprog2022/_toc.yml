@@ -6,6 +6,7 @@ root: cm/0-presentation-2022
 defaults:  # The defaults key will be applied to all chapters and sub-sections
   titlesonly: True
 options:
-  numbered: 3
+  numbered: 2
 chapters:
 - file: cm/1-fonctions
+- file: cm/competences-2022
