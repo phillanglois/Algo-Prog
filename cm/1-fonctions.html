@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>1. Sous-programmes : fonctions et procédures &#8212; Algo-Prog 2022</title>
+    <title>1. Fonctions, procédures, sous-programmes &#8212; Algo-Prog 2022</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -101,7 +101,7 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   1. Sous-programmes : fonctions et procédures
+   1. Fonctions, procédures, sous-programmes
   </a>
  </li>
  <li class="toctree-l1">
@@ -111,7 +111,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="a1-booleens.html">
-   3. Les booléens en python (&gt;3.6)
+   3. Annexe : les booléens en python (&gt;3.6)
   </a>
  </li>
 </ul>
@@ -508,7 +508,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Sous-programmes : fonctions et procédures</h1>
+                <h1>Fonctions, procédures, sous-programmes</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -807,17 +807,25 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="sous-programmes-fonctions-et-procedures">
-<h1><span class="section-number">1. </span>Sous-programmes : fonctions et procédures<a class="headerlink" href="#sous-programmes-fonctions-et-procedures" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="fonctions-procedures-sous-programmes">
+<h1><span class="section-number">1. </span>Fonctions, procédures, sous-programmes<a class="headerlink" href="#fonctions-procedures-sous-programmes" title="Permalink to this headline">¶</a></h1>
 <p>version 2022, PhL.</p>
-<p>Dans ce premier chapitre, nous abordons la notion importante de <strong>sous-programme</strong>, souvent aussi appelée <strong>fonction</strong> – bien que nous verrons que les 2 notions diffèrent.
-Le cadre de ce chapitre est très générique, c’est-à-dire que les différentes notions introduites et le vocabulaire associé sont présents dans la très grande majorité des <em>langages de programmation impérative</em>.
+<p>Dans ce premier chapitre, nous abordons une notion importante qui peut se présenter avec différentes appellations : fonction ou procédure ou <strong>sous-programme</strong>.
+Vous connaissez les fonctions en mathématiques depuis le collège tandis que la notion de sous-programme à une consonance très “programmation”.</p>
+<p>Le cadre de ce chapitre est générique, c’est-à-dire que ces différentes notions et le vocabulaire associé sont présents dans la très grande majorité des <em>langages de programmation impérative</em>.
 Nous utilisons bien sûr la syntaxe python3 en conservant une indépendance maximale par rapport aux spécificités de python afin de mettre en valeur ces notions de la façon la plus générique possible.</p>
-<p>Le chapitre suivant complétera l’apprentissage de la notion de sous-programme avec des aspects plus techniques et leurs traitements en python.</p>
+<p>Un autre chapitre complétera l’apprentissage de la notion de sous-programme avec des aspects plus techniques et leurs traitements en python.</p>
 <div class="section" id="vocabulaire-et-generalites">
 <h2><span class="section-number">1.1. </span>Vocabulaire et généralités<a class="headerlink" href="#vocabulaire-et-generalites" title="Permalink to this headline">¶</a></h2>
-<p>Le terme <strong>sous-programme</strong> est un (sous-)ensemble de lignes de code, souvent paramétrable, que l’on désigne d’un nom pour ré-utiliser “directement” ces lignes de codes à l’aide de ce nom. On <em>appelle</em> ce nom pour exécuter ces lignes de codes. Cet appel contient aussi la valeur des paramètres à traiter par l’exécution.</p>
-<p>De façon imagée, un sous-programme peut-être vue comme une boîte opaque qui “prends des choses” en entrée (les paramètres), effectue des traitements et fourni un “résultat” en sortie – dans le cas d’une fonction.
+<p>De façon imagée, une fonction en mathématiques est un traitement un peu compliqué que l’on décrit de façon synthétique par un symbole ou un nom, souvent réduit à la seule lettre <span class="math notranslate nohighlight">\(f\)</span> – mais que bien sûr, on se souvient des fonctions <span class="math notranslate nohighlight">\(\cos, \sin\)</span>, …</p>
+<p>On peut ainsi appliquer ce traitement facilement à des valeurs arbitraires en notant par exemple <span class="math notranslate nohighlight">\(f(3.2)\)</span> ou <span class="math notranslate nohighlight">\(\cos(\pi/4)\)</span> l’application de ces fonctions et en identifiant ces écritures aux valeurs numériques correspondantes, par exemple <span class="math notranslate nohighlight">\(\sqrt(2)/2\)</span> pour la seconde écriture.</p>
+<p>La notion de sous-programme, qui englobe les notions de fonction et de procédure, reprend cette démarche <em>de notation synthétique et paramétrable d’un traitement compliqué</em> dans le contexte d’un traitement informatique.</p>
+<ul class="simple">
+<li><p>Le terme <strong>sous-programme</strong> est un (sous-)ensemble de lignes de code, souvent paramétrable, que l’on désigne d’un nom pour ré-utiliser “directement” ces lignes de codes à l’aide de ce nom.</p></li>
+<li><p>On <strong>appelle</strong> ce nom pour exécuter ces lignes de codes.</p></li>
+<li><p>Cet appel contient aussi <strong>la valeur des paramètres à traiter</strong> par l’exécution.</p></li>
+</ul>
+<p>De façon imagée encore, un sous-programme peut-être vu comme une boîte opaque qui “prends des choses” en entrée (les paramètres), effectue des traitements qui dépendent de ces paramètres et fourni un “résultat” en sortie – dans le cas d’une fonction.
 La boîte porte le nom du sous-programme.
 Elle est opaque : je peux m’en servir, je connais <strong>ce qu’elle fait</strong>, je n’ai pas besoin de savoir <strong>comment</strong> elle le fait.</p>
 <p>Une analogie facile : je peux me servir d’une voiture sans savoir comment la mécanique ou l’électronique fonctionnent.</p>
@@ -838,6 +846,13 @@ Oui : “afficher” n’est pas “renvoyer”.</p></li>
 </div>
 <div class="section" id="introduction-avec-des-exemples">
 <h2><span class="section-number">1.2. </span>Introduction avec des exemples<a class="headerlink" href="#introduction-avec-des-exemples" title="Permalink to this headline">¶</a></h2>
+<p>Vous avez déjà rencontré <em>et utilisé</em> des fonctions python “sans le savoir” – par exemples la fonction mathématique <code class="docutils literal notranslate"><span class="pre">sqrt()</span></code> et la procédure d’écriture à l’écran <code class="docutils literal notranslate"><span class="pre">print()</span></code>.</p>
+<p>Il est important de distinguer :</p>
+<ul class="simple">
+<li><p>l’utilisation de fonctions “existantes”</p></li>
+<li><p>la définition de nouvelles fonctions</p></li>
+</ul>
+<p>(C’est un peu la poule et l’oeuf car une fonction existante a bien été définie avant d’exister :)</p>
 <div class="section" id="les-fonctions-numeriques-du-college-lycee">
 <h3>Les fonctions numériques du collège-lycée.<a class="headerlink" href="#les-fonctions-numeriques-du-college-lycee" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="ecriture-mathematique-habituelle">
@@ -937,7 +952,7 @@ Bref tout ce qui peut être <em>évalué</em> (<em>ie.</em>, calculé) et qui <e
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;f(x)=2x+1&#39;)
 </pre></div>
 </div>
-<img alt="../_images/1-fonctions_12_1.png" src="../_images/1-fonctions_12_1.png" />
+<img alt="../_images/1-fonctions_14_1.png" src="../_images/1-fonctions_14_1.png" />
 </div>
 </div>
 </div>
@@ -960,24 +975,27 @@ Bref tout ce qui peut être <em>évalué</em> (<em>ie.</em>, calculé) et qui <e
 </li>
 </ul>
 </li>
+</ol>
+<ol class="simple">
 <li><ul class="simple">
 <li><p>La définition a une forme très semblable à l’expression mathématique avec un  (ou des) <strong>paramètre</strong>  ou aussi <strong>paramètre <em>formel</em></strong> <span class="math notranslate nohighlight">\(x\)</span>, et <strong>des parenthèses</strong> : f(x).</p></li>
 <li><p>Elle contient (au moins) un <code class="docutils literal notranslate"><span class="pre">return</span></code> qui correspond à un résultat fourni par la fonction.</p></li>
 <li><p>On dit ainsi que ce résultat est <strong>retourné</strong> par la fonction.</p></li>
 </ul>
 </li>
-<li><ul class="simple">
-<li><p>Les appels, comme en math, correspondent à “remplacer” <code class="docutils literal notranslate"><span class="pre">x</span></code> par une valeur numérique donnée</p></li>
-<li><p>cette valeur d’appel est appelée <strong>argument</strong> ou aussi <strong>paramètre <em>effectif</em></strong> (de l’appel).</p></li>
-</ul>
-</li>
-<li><ul class="simple">
+</ol>
+<ol class="simple">
+<li></li>
+</ol>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- Les appels, comme en math, correspondent à &quot;remplacer&quot; `x` par une valeur numérique donnée
+- cette valeur d&#39;appel est appelée **argument** ou aussi **paramètre _effectif_** (de l&#39;appel).    
+</pre></div>
+</div>
+<ol class="simple">
 <li><p><strong>Important.</strong></p>
-<ul>
+<ul class="simple">
 <li><p>Les <strong>seuls</strong> <code class="docutils literal notranslate"><span class="pre">print</span></code> de ces exemples s’appliquent à des <em>valeurs retournées</em> par la fonction f</p></li>
 <li><p><strong>Aucun <code class="docutils literal notranslate"><span class="pre">print</span></code> dans la définition de f</strong>.</p></li>
-</ul>
-</li>
 </ul>
 </li>
 </ol>
@@ -1028,11 +1046,6 @@ Bref tout ce qui peut être <em>évalué</em> (<em>ie.</em>, calculé) et qui <e
 <li><p>ici, on <em>utilise</em> le nom <code class="docutils literal notranslate"><span class="pre">cos</span></code> de la fonction trigonométrique <em>cosinus</em> pour obtenir la valeur de cette fonction pour l’argument d’entrée fourni.</p></li>
 <li><p>on voit bien que cet appel ne nécessite pas de connaitre <em>comment</em> cette fonction calcule le résultat qu’elle renvoie (ou retourne).  Cette fonction est bien vue comme une boîte opaque (une <em>boîte noire</em>).</p></li>
 </ul>
-<p>Cet exemple permet d’introduire deux notions complémentaires (et différentes) :</p>
-<ul class="simple">
-<li><p><strong>la spécification</strong>  = ce que ça fait : OK = le QUOI</p></li>
-<li><p><strong>une implémentation</strong> = comment ça le fait : ? = le COMMENT</p></li>
-</ul>
 <p><strong>Commentaires</strong></p>
 <ul class="simple">
 <li><p>Ligne 1 : fonction <code class="docutils literal notranslate"><span class="pre">cos</span></code> et valeur <code class="docutils literal notranslate"><span class="pre">pi</span></code> sont disponibles</p></li>
@@ -1045,7 +1058,12 @@ Bref tout ce qui peut être <em>évalué</em> (<em>ie.</em>, calculé) et qui <e
 </div>
 <div class="alert alert-block alert-info">
 <p><strong>A retenir</strong> : la construction <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">module</span> <span class="pre">import</span> <span class="pre">fonction1,</span> <span class="pre">fonction2</span></code> permet d’utiliser les <code class="docutils literal notranslate"><span class="pre">fonctions</span></code> (1, 2, …) définies dans la bibliothèque <code class="docutils literal notranslate"><span class="pre">module</span></code></p>
-</div><p><strong>Digression</strong> pour les curieuses et les curieux : précision numérique ?</p>
+</div><p>Cet exemple permet d’introduire deux notions complémentaires <strong>et différentes</strong> :</p>
+<ul class="simple">
+<li><p><strong>la spécification</strong>  = ce que ça fait : OK = le QUOI</p></li>
+<li><p><strong>une implémentation</strong> = comment ça le fait : ? = le COMMENT</p></li>
+</ul>
+<p><strong>Digression</strong> pour les curieuses et les curieux : précision numérique ?</p>
 <p>On se rassure :</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
