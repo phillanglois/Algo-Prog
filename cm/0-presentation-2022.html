@@ -108,6 +108,11 @@
    2. Compétences
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="a1-booleens.html">
+   3. Les booléens en python (&gt;3.6)
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -165,11 +170,11 @@
         aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
-            href="https://github.com/phillanglois/Algo-Prog"><button type="button" class="btn btn-secondary topbarbtn"
+            href="https://github.com/phillanglois/Algo-Prog/algoprog2022"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Dépôt source"><i
                     class="fab fa-github"></i>dépôt</button></a>
         <a class="issues-button"
-            href="https://github.com/phillanglois/Algo-Prog/issues/new?title=Issue%20on%20page%20%2Fcm/0-presentation-2022.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/phillanglois/Algo-Prog/algoprog2022/issues/new?title=Issue%20on%20page%20%2Fcm/0-presentation-2022.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Ouvrez un problème"><i class="fas fa-lightbulb"></i>signaler un problème</button></a>
         
@@ -190,7 +195,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/phillanglois/Algo-Prog/master?urlpath=tree/algoprog2022/cm/0-presentation-2022.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/phillanglois/Algo-Prog/main?urlpath=tree/algoprog2022/cm/0-presentation-2022.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="lancement Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -279,13 +284,13 @@
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#algorithmique-programme-detaille">
-   Algorithmique : programme détaillé
+  <a class="reference internal nav-link" href="#programme-detaille-aspects-plutot-algorithmique">
+   Programme détaillé : aspects plutôt algorithmique
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#programmation-programme-detaille">
-   Programmation  : programme détaillé
+  <a class="reference internal nav-link" href="#programme-detaille-aspects-plus-programmation">
+   Programme détaillé : aspects plus programmation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -467,13 +472,13 @@
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#algorithmique-programme-detaille">
-   Algorithmique : programme détaillé
+  <a class="reference internal nav-link" href="#programme-detaille-aspects-plutot-algorithmique">
+   Programme détaillé : aspects plutôt algorithmique
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#programmation-programme-detaille">
-   Programmation  : programme détaillé
+  <a class="reference internal nav-link" href="#programme-detaille-aspects-plus-programmation">
+   Programme détaillé : aspects plus programmation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -780,6 +785,7 @@
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">bool</span></code>, <code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">float</span></code>, <code class="docutils literal notranslate"><span class="pre">str</span></code>, <code class="docutils literal notranslate"><span class="pre">list</span></code></p></li>
 <li><p>et les changement de types associés : <code class="docutils literal notranslate"><span class="pre">int()</span></code>, <code class="docutils literal notranslate"><span class="pre">float()</span></code>, …</p></li>
+<li><p>(python) : un rappel sur le “type” <code class="docutils literal notranslate"><span class="pre">bool</span></code>est proposé en <a class="reference internal" href="a1-booleens.html"><span class="doc std std-doc">annexe du cours</span></a>.</p></li>
 </ul>
 </li>
 </ul>
@@ -830,100 +836,105 @@
 </ul>
 </div>
 </div>
-<div class="section" id="algorithmique-programme-detaille">
-<h2>Algorithmique : programme détaillé<a class="headerlink" href="#algorithmique-programme-detaille" title="Permalink to this headline">¶</a></h2>
-<ol class="simple">
-<li><p>utilisation avancée de boucles et de tableaux</p>
+<div class="section" id="programme-detaille-aspects-plutot-algorithmique">
+<h2>Programme détaillé : aspects plutôt algorithmique<a class="headerlink" href="#programme-detaille-aspects-plutot-algorithmique" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
+<li><p>Utilisation avancée de boucles et de tableaux</p>
+<ul>
 <li><p>boucles imbriquées, indépendantes ou non</p></li>
 <li><p>traitements divers avec des tableaux 1D ou plus</p></li>
 <li><p>premières estimations de complexité</p></li>
 </ul>
 </li>
-</ol>
-<ol class="simple">
-<li><p>complexité</p>
+</ul>
 <ul class="simple">
+<li><p>Complexité</p>
+<ul>
 <li><p>combien <em>coûte</em> un algorithme pour résoudre un pb donné ?</p></li>
 <li><p>combien de temps ? combien de place mémoire ?</p></li>
 <li><p>tous les problèmes coûtent pareils ?</p></li>
 <li><p>notions : complexité en temps, pire cas, complexité asymptotique</p></li>
-</ul>
-</li>
-<li><p>exemple d’algos plutôt numériques et leurs complexités</p>
-<ul class="simple">
+<li><p>exemples d’algos plutôt numériques et leurs complexités</p>
+<ul>
 <li><p>différentes évaluations de polynômes</p></li>
 </ul>
 </li>
-</ol>
-<ol class="simple">
-<li><p>récursivité :</p>
+</ul>
+</li>
+</ul>
 <ul class="simple">
+<li><p>Récursivité :</p>
+<ul>
 <li><p><strong>la notion centrale du semestre</strong></p></li>
 <li><p>principes</p></li>
 <li><p>applications</p></li>
 <li><p>notions : itératif vs. récursif, pile/arbre des appels, complexité</p></li>
-<li><p>Remarque : la récursion s’appuie sur la notion de <em>fonction</em> qui est donc étudiée de façon simultanée en Algorithmique et Programmation</p></li>
 </ul>
 </li>
-</ol>
-<ol class="simple">
-<li><p>rechercher</p>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>La récursion s’appuie sur la notion de <em>fonction</em> présentée dans les aspects plutôt programmation.</p>
+</div>
 <ul class="simple">
+<li><p>Rechercher</p>
+<ul>
 <li><p>recherche séquentielle</p></li>
 <li><p>recherche dichotomique</p></li>
 <li><p>notions : les algos, leurs complexités, (les preuves)</p></li>
+<li><p>versions itératives ou récursives de ces algorithmes</p></li>
 </ul>
 </li>
-<li><p>trier</p>
-<ul class="simple">
-<li><p>tris itératif : algos, complexité, (preuve)</p></li>
-<li><p>tris  récursifs : algo, complexité, (preuve)</p></li>
+<li><p>Trier</p>
+<ul>
+<li><p>des algorithmes de tris dits naïfs  : algos, complexité, (preuve)</p></li>
+<li><p>des algorithmes de tris dits rapides : : algos, complexité, (preuve)</p></li>
+<li><p>versions itératives ou récursives de ces algorithmes</p></li>
 </ul>
 </li>
-</ol>
-<ol class="simple">
-<li><p>compléments si assez de temps : prouver la terminaison et la correction d’un algorithme</p>
+</ul>
 <ul class="simple">
+<li><p>Compléments si assez de temps : prouver la terminaison et la correction d’un algorithme</p>
+<ul>
 <li><p>l’algo fournit la/les solution/s en un temps fini</p></li>
 <li><p>l’algo résoud bien le pb</p></li>
 <li><p>notions : invariant de boucle, preuve de terminaison</p></li>
 </ul>
 </li>
-</ol>
+</ul>
 </div>
-<div class="section" id="programmation-programme-detaille">
-<h2>Programmation  : programme détaillé<a class="headerlink" href="#programmation-programme-detaille" title="Permalink to this headline">¶</a></h2>
-<ol class="simple">
-<li><p>types de donnnées scalaires</p>
+<div class="section" id="programme-detaille-aspects-plus-programmation">
+<h2>Programme détaillé : aspects plus programmation<a class="headerlink" href="#programme-detaille-aspects-plus-programmation" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
+<li><p>Types de donnnées scalaires</p>
+<ul>
 <li><p>rappels</p></li>
 <li><p>approfondissement : introspection</p></li>
 </ul>
 </li>
-</ol>
-<ol class="simple">
-<li><p>fonctions</p>
+</ul>
 <ul class="simple">
+<li><p>Fonctions <strong>une notion centrale</strong></p>
+<ul>
+<li><p>fonctions prédéfinies ou existantes</p></li>
 <li><p>en-tête, corps, appel, paramètres formels et effectifs.</p></li>
 <li><p>portée, visibilité, variables locales vs. paramètres</p></li>
 <li><p>mode de passage des paramètres</p></li>
 <li><p>exemples du cours : doubler, permuter</p></li>
 </ul>
 </li>
-</ol>
-<ol class="simple">
-<li><p>tableaux 1D</p>
+</ul>
 <ul class="simple">
+<li><p>Tableaux 1D :</p>
+<ul>
 <li><p>rappel : avec des listes python (<code class="docutils literal notranslate"><span class="pre">lst</span></code>)</p></li>
-<li><p>avec des <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> de <code class="docutils literal notranslate"><span class="pre">numpy</span></code></p></li>
 <li><p>exemples du cours : Lire, stocker, moyenne/min/max d’un tableau (valeurs, indices)</p></li>
+<li><p>applications : les vecteurs, les chaînes de caractères</p></li>
 </ul>
 </li>
-<li><p>tableaux 2D, 3D ; application au traitement d’images</p>
-<ul class="simple">
+<li><p>Tableaux 2D, 3D ; application au traitement d’images</p>
+<ul>
 <li><p>avec des listes (de listes) python</p></li>
-<li><p>avec des <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> de <code class="docutils literal notranslate"><span class="pre">numpy</span></code></p></li>
 <li><p>images et matrices</p></li>
 <li><p>boucles imbriquées</p></li>
 <li><p>exemples du cours :</p>
@@ -934,30 +945,51 @@
 </li>
 </ul>
 </li>
-</ol>
-<ol class="simple">
-<li><p>autres types de données composés</p>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Par manque de temps, les <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> de <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, ne sont pas abordés en séance bien que très utiles en pratique.
+Ces ressources pourront être découvertes de façon autome et utilisées par les étudiants (objectif 20) qui le souhaitent.</p>
+</div>
+<ul>
+<li><p>Autres types de données composés</p>
 <ul class="simple">
 <li><p>listes (<code class="docutils literal notranslate"><span class="pre">lst</span></code>) : fonctions et méthodes</p></li>
 <li><p>n-uplets (<code class="docutils literal notranslate"><span class="pre">tuple</span></code>), ensembles (<code class="docutils literal notranslate"><span class="pre">set</span></code>), dictionnaires (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
 </ul>
 </li>
-<li><p>entrées/sorties et fichiers</p></li>
-<li><p>modules</p>
+<li><p>Entrées/sorties et fichiers</p>
+<ul class="simple">
+<li><p>Très pratique pour tester ses développements :</p></li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Bannir les entrées au clavier !</strong>
+Plus d’<code class="docutils literal notranslate"><span class="pre">input()</span></code> à tours de bras SVP !!!</p>
+</div>
+<ul class="simple">
+<li><p>Chapître traité assez tôt dans le semestre</p></li>
+</ul>
+</li>
+<li><p>Modules</p>
 <ul class="simple">
 <li><p>utilisation de modules existants</p></li>
 <li><p>exemple d’outils :<code class="docutils literal notranslate"><span class="pre">numpy</span></code>, <code class="docutils literal notranslate"><span class="pre">scipy</span></code>, <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>, <code class="docutils literal notranslate"><span class="pre">time</span></code></p></li>
 <li><p>définition de ses modules</p></li>
 </ul>
 </li>
-<li><p>exceptions</p></li>
-</ol>
+<li><p>Exceptions</p>
+<ul class="simple">
+<li><p>En annexe par manque de temps</p></li>
+</ul>
+</li>
+</ul>
 </div>
 <div class="section" id="supports-de-cours">
 <h2>Supports de cours<a class="headerlink" href="#supports-de-cours" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Toutes les ressources sont sur moodle et sont mises à jour <strong>très</strong> régulièrement</p>
+<p>Excepté les supports de cours cette année, toutes les autres ressources sont sur moodle et sont mises à jour <strong>très</strong> régulièrement</p>
 </div>
 <ul class="simple">
 <li><p>CM : notebook python (version pdf, html)</p></li>
@@ -1193,7 +1225,7 @@ ISBN : 2091574651 (Première),  2091575437  (Terminale)</p>
 </div>
 <div class="section" id="conclusion">
 <h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
-<p>Bon travail ce semestre !</p>
+<p>Bon courage et bon travail ce semestre !</p>
 </div>
 <div class="toctree-wrapper compound">
 </div>
