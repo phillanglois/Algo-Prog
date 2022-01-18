@@ -1,10 +1,12 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Modules utiles : `random`, `matplotlib` et `time`  pour des expériences de complexité. 
+# # Modules utiles 
 # 
 # v 1.21
 
+# **`random`, `matplotlib` et `time`**  pour des expériences de complexité, entre autres.
+# 
 # Petites expériences qui nous permettent de découvrir des modules bien utiles :   
 # - d'introduire **de l'aléatoire** avec `random` 
 #     - pour générer des données de test, de débug, ...
@@ -12,9 +14,6 @@
 # - d'utiliser des fonctions de modules importés du module `time` pour **mesurer des temps d'exécution**,  
 #     - et ainsi apprécier la validitité et les limites de la notion de complexité algorithmique, 
 # 
-
-# <h1>Table of Contents<span class="tocSkip"></span></h1>
-# <div class="toc"><ul class="toc-item"><li><span><a href="#Modules-utiles-:-random,-matplotlib-et-time--pour-des-expériences-de-complexité." data-toc-modified-id="Modules-utiles-:-random,-matplotlib-et-time--pour-des-expériences-de-complexité.-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Modules utiles : <code>random</code>, <code>matplotlib</code> et <code>time</code>  pour des expériences de complexité.</a></span><ul class="toc-item"><li><span><a href="#De-l'aléa-avec-le-module-random" data-toc-modified-id="De-l'aléa-avec-le-module-random-1.1"><span class="toc-item-num">1.1&nbsp;&nbsp;</span>De l'aléa avec le module <code>random</code></a></span><ul class="toc-item"><li><span><a href="#Principe-d'un-générateur-pseudo-aléatoire" data-toc-modified-id="Principe-d'un-générateur-pseudo-aléatoire-1.1.1"><span class="toc-item-num">1.1.1&nbsp;&nbsp;</span>Principe d'un générateur <strong>pseudo</strong>-aléatoire</a></span></li><li><span><a href="#Fonctions-utiles" data-toc-modified-id="Fonctions-utiles-1.1.2"><span class="toc-item-num">1.1.2&nbsp;&nbsp;</span>Fonctions utiles</a></span></li></ul></li><li><span><a href="#Tracer-avec-matplotlib" data-toc-modified-id="Tracer-avec-matplotlib-1.2"><span class="toc-item-num">1.2&nbsp;&nbsp;</span>Tracer avec <code>matplotlib</code></a></span><ul class="toc-item"><li><span><a href="#matplotlib-:-qu'est-ce-que-ça-fait-?" data-toc-modified-id="matplotlib-:-qu'est-ce-que-ça-fait-?-1.2.1"><span class="toc-item-num">1.2.1&nbsp;&nbsp;</span><code>matplotlib</code> : qu'est ce que ça fait ?</a></span></li><li><span><a href="#matplotlib-:-comment-ça-le-fait-?" data-toc-modified-id="matplotlib-:-comment-ça-le-fait-?-1.2.2"><span class="toc-item-num">1.2.2&nbsp;&nbsp;</span><code>matplotlib</code> : comment ça le fait ?</a></span></li><li><span><a href="#Exercice" data-toc-modified-id="Exercice-1.2.3"><span class="toc-item-num">1.2.3&nbsp;&nbsp;</span>Exercice</a></span></li><li><span><a href="#A-vous-maintenant-!" data-toc-modified-id="A-vous-maintenant-!-1.2.4"><span class="toc-item-num">1.2.4&nbsp;&nbsp;</span>A vous maintenant !</a></span></li></ul></li><li><span><a href="#($\star$)-Mesurer-le-temps-d'exécution-d'un-programme" data-toc-modified-id="($\star$)-Mesurer-le-temps-d'exécution-d'un-programme-1.3"><span class="toc-item-num">1.3&nbsp;&nbsp;</span>($\star$) Mesurer le temps d'exécution d'un programme</a></span><ul class="toc-item"><li><span><a href="#Pas-si-simple-..." data-toc-modified-id="Pas-si-simple-...-1.3.1"><span class="toc-item-num">1.3.1&nbsp;&nbsp;</span>Pas si simple ...</a></span></li><li><span><a href="#Mesurer-avec-le-module-time" data-toc-modified-id="Mesurer-avec-le-module-time-1.3.2"><span class="toc-item-num">1.3.2&nbsp;&nbsp;</span>Mesurer avec le module <code>time</code></a></span></li><li><span><a href="#Un-benchmark-en--$\theta(n)$-:-la-somme-itérative" data-toc-modified-id="Un-benchmark-en--$\theta(n)$-:-la-somme-itérative-1.3.3"><span class="toc-item-num">1.3.3&nbsp;&nbsp;</span>Un <em>benchmark</em> en  $\theta(n)$ : la somme itérative</a></span></li><li><span><a href="#Un-premier-exemple" data-toc-modified-id="Un-premier-exemple-1.3.4"><span class="toc-item-num">1.3.4&nbsp;&nbsp;</span>Un premier exemple</a></span></li></ul></li><li><span><a href="#Première-mesure-de-complexité" data-toc-modified-id="Première-mesure-de-complexité-1.4"><span class="toc-item-num">1.4&nbsp;&nbsp;</span>Première mesure de complexité</a></span><ul class="toc-item"><li><span><a href="#Des-données-de-taille-variable" data-toc-modified-id="Des-données-de-taille-variable-1.4.1"><span class="toc-item-num">1.4.1&nbsp;&nbsp;</span>Des données de taille variable</a></span></li></ul></li></ul></li></ul></div>
 
 # ## De l'aléa avec le module `random`
 
@@ -121,10 +120,20 @@ import matplotlib.pyplot as plt
 # 
 # Le module python `numpy` est le compagnon naturel de `matplotlib`.   
 
+# In[4]:
+
+
+import numpy as np
+
+
 # ### `matplotlib` : comment ça le fait ?
 # 
-# Une première prise en main est très bien décrite par :  
-# - [cette présentation](http://www.labri.fr/perso/nrougier/teaching/matplotlib/)  
+# Une première prise en main grâce à :
+# - ces synthèses très  bien faites pour niveaux [débutant](https://matplotlib.org/cheatsheets/_images/handout-beginner.png) ou [intermédiaire](https://matplotlib.org/cheatsheets/_images/handout-intermediate.png) et [des compléments](https://matplotlib.org/cheatsheets/_images/handout-tips.png)
+# - ces 2 feuilles de résumé de commandes : [résumé 1](https://matplotlib.org/cheatsheets/_images/cheatsheets-1.png), [résumé 2](https://matplotlib.org/cheatsheets/_images/cheatsheets-2.png)
+# 
+# De façon plus guidée :
+# - [cette présentation](http://www.labri.fr/perso/nrougier/teaching/matplotlib/) 
 # - ou le chapitre 3 du [_user guide_](https://matplotlib.org/contents.html) (qui comporte plus de 2500 pages). 
 #     
 
@@ -134,72 +143,75 @@ import matplotlib.pyplot as plt
 # * gérer les affichages : `show`, `savefig`, `close`.
 
 # ### Exercice  
+# 
 # Obtenir le tracé des principales classes de complexités : $log_2n$, $n$, $n\ \log_2(n)$, $n^2$, $n^3$, $2^n$ 
 # pour les premières puissances de 2 -- par exemple de 2 à 128.   
 # 
 # A votre avis, pourquoi des échelles logarithmiques sont adaptées ?  
-# 
+
 # **Rmq.** 
 # - La solution intègre en commentaires quelques commandes utiles au traitement hors des notebook, cad. dans un programme python écrit sous l'idle par exemple.  
 # - ligne 45 : elle suppose l'existence d'un répertoire `./tmp` (à adapter si besoin)  
 
-# In[4]:
+# ```{tip}
+# Obtenir une figure pertinente est un _vrai travail_ qui s'effectue en plusieurs itérations. 
+# Il est conseillé de "jouer" avec les différentes commandes jusqu'à obtenir le support graphique qui correspond au message que l'on veut faire passer, celui-ci devant être adapté au public visé.
+# ```
+
+# In[5]:
 
 
 # complexites.py
 """Trace des principales classes de complexites avec matplotlib"""
-import numpy as np
-#import matplotlib.pyplot as plt
-from matplotlib.backends.backend_pdf import PdfPages # cf. à la fin du code
 
-# la figure
-plt.figure(figsize=(10,8), dpi = 80)  # size est en pouce...
+# la figure et ces zones de tracé : ici une seule (ax)
+fig, ax = plt.subplots()
 
 # son titre
-plt.title("Principales fonctions de complexité")
+ax.set_title("Principales fonctions de complexité")
 
-# ses axes en log2
-plt.loglog(basex=2, basey=2)
-
-# valeurs affichees sur l axe des x
+# valeurs d'évaluations
 n = [2**i for i in range(1,8)]  # les premieres puissances de 2  
 
+# tracés des évaluations
+ax.plot(n, np.power(2.0, n), label="$2^n$")
+ax.plot(n, np.power(n, 3), label="$n^3$")
+ax.plot(n, np.power(n, 2), label="$n^2$")
+ax.plot(n, n*np.log2(n), label="$n\ \log_2(n)$")
+ax.plot(n, n, label="$n$")
+ax.plot(n, np.log2(n), label="$\log_2(n)$")
+
+# ses axes en log2 : pour bien voir
+#ax.set_xscale("log", base=2)
+#ax.set_yscale("log", base=2)
+
+# valeurs affichees sur l axe des x
 label_x = [str(val) for val in n]
-plt.xticks(n, label_x)
+ax.set_xticks(n, label_x)
 
 # valeurs affichees sur l axe des y
-y_val = [np.power(2, j) for j in range(0, 15, 2)]
- 
-label_y = [str(val) for val in y_val]
-#plt.yticks(y_val, label_y)
+#y_val = [np.power(2, j) for j in range(0, 15, 2)]
+#label_y = [str(val) for val in y_val]
+#ax.set_yticks(y_val, label_y)
 
 # on limite les valeurs de y trop grandes
-plt.ylim(1.0, np.power(2,14))
+ax.set_ylim(1.0, np.power(2,14))
 #
 
-
-# In[ ]:
-
-
-# tracer
-plt.plot(n, np.power(2.0, n), label="$2^n$")
-plt.plot(n, np.power(n, 3), label="$n^3$")
-plt.plot(n, np.power(n, 2), label="$n^2$")
-plt.plot(n, n*np.log2(n), label="$n\ \log_2(n)$")
-plt.plot(n, n, label="$n$")
-plt.plot(n, np.log2(n), label="$\log_2(n)$")
-
 # afficher la légende à cette position
-plt.legend(loc="upper left")
+ax.legend(loc="upper right")
 
 # sortie ecran (inutile sous notebook)
-#plt.show()
+#fig.show()
 
 
-# In[4]:
+# In[6]:
 
 
 #ou fichier pdf : suppose l'existence d'un repertoire ./tmp
+from matplotlib.backends.backend_pdf import PdfPages 
+
+fig = plt.figure(figsize=(10,8), dpi = 80)  # size est en pouce...
 pp = PdfPages('./tmp/plt-complexites.pdf')
 pp.savefig()
 pp.close()
@@ -207,7 +219,7 @@ pp.close()
 
 # ### A vous maintenant !
 # 
-# ##### Le flocon de Von Koch
+# #### Le flocon de Von Koch
 # 
 #  Le flocon de Von Koch (1906) est une courbe fractale
 # (continue partout et dérivable nulle part) obtenue comme la limite
@@ -223,20 +235,20 @@ pp.close()
 # $n$-ième récursion -- les tracés suivants correspondent aux segments
 # de Von Koch d'ordres $0, \cdots, 4$. 
 
-# In[5]:
+# In[7]:
 
 
 from IPython.display import Image 
 Image(filename='./fig/cinqsegmentsvk.jpg')
 
 
-# In[6]:
+# In[8]:
 
 
 Image(filename='./fig/cinqflocons.jpg')
 
 
-# ** Traçons-le !**
+# **Traçons-le !**
 # 
 # On va se limiter à celui avec un segment de départ.  
 # Avec `matplotlib`, on choisit de calculer les coordonnées des sommets des
@@ -257,7 +269,7 @@ Image(filename='./fig/cinqflocons.jpg')
 #   Il est agréable d'obtenir ces tracés sous la forme de sous-figures comme présenté ci-dessus.  
 #   
 
-# In[7]:
+# In[9]:
 
 
 Image(filename='./fig/plt-segvk.png', width=520 )
@@ -361,7 +373,7 @@ Image(filename='./fig/plt-segvk.png', width=520 )
 # 
 # `sommer()` : l'algorithme classique par accumulation itérative.
 
-# In[8]:
+# In[10]:
 
 
 def sommer(t, dim_t):
@@ -391,20 +403,18 @@ print(s1, ' = ', s2)
 # 
 # où on compare `time.time()` et `time.perf_counter()` 
 
-# In[9]:
+# In[11]:
 
 
 # pour afficher les sorties matplotlib dans le notebook
 get_ipython().run_line_magic('matplotlib', 'inline')
 
 
-# In[10]:
+# In[12]:
 
 
 import time
 from random import *
-import numpy as np
-import matplotlib.pyplot as plt
 
 # formats affichage : fx.format(val)
 fint = "{:0=8}" #entier sur 7 digits complete avec 0 a gauche
@@ -420,7 +430,7 @@ a = [random() for i in range(dimmax)]
 b = [random() for i in range(dimmax)]
 
 
-# In[11]:
+# In[13]:
 
 
 # nb repetititions de chaque mesure
@@ -450,7 +460,7 @@ for repet in range(nbrepet):
     t_tsc.append(t-t0)
 
 
-# In[12]:
+# In[14]:
 
 
 # aff mesures    
@@ -458,18 +468,24 @@ for r in range(nbrepet):
     print(fexp.format(t_time[r]) , fexp.format(t_tsc[r]))
 
 
-# In[13]:
+# In[15]:
 
 
 ### trace
-#plt.figure()
-plt.semilogy(basey=10)
-plt.plot(t_time, 'ro-', label="time")
-plt.plot(t_tsc, 'b+-', label="perf_counter")
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+fig, ax = plt.subplots()
+
+ax.set_yscale("log", base=10)
+ax.plot(t_time, 'ro-', label="time")
+ax.plot(t_tsc, 'b+-', label="perf_counter")
 #
-plt.legend(loc='upper right')
-plt.title('20 mesures répétées')
-plt.show()
+ax.legend(loc='upper right')
+ax.set_title('20 mesures répétées')
+
+#fig.show()
 #plt.close()
 
 
@@ -482,7 +498,7 @@ plt.show()
 # 
 # On fait ça avec `time.time()`.  
 
-# In[14]:
+# In[16]:
 
 
 # timings operations en O(n) 
@@ -517,12 +533,17 @@ for n in range(len(dim)):
     print(fint.format(dim[n]), fexp.format(timings_array[n]), fexp.format(ratio_array[n]))
 
 # 4. tracer
-plt.loglog(basex=10, basey=10)
-plt.plot(dim, timings_array, 'ro-', label="sommer")
-plt.xlabel("n : nombre de valeurs à sommer")
-plt.ylabel("temps d'exécution (en sec) ou ratio temps/taille")
-plt.plot(dim, ratio_array, 'go-', label="sommer / n ")
-plt.legend(loc='upper left')
+fig, ax = plt.subplots()
+
+ax.plot(dim, timings_array, 'ro-', label="sommer")
+ax.plot(dim, ratio_array, 'go-', label="sommer / n ")
+
+ax.set_xscale("log", base=10)
+ax.set_yscale("log", base=10)
+
+ax.set_xlabel("n : nombre de valeurs à sommer")
+ax.set_ylabel("temps d'exécution (en sec) ou ratio temps/taille")
+ax.legend(loc='upper left')
 
 
 # **Conclusion**  

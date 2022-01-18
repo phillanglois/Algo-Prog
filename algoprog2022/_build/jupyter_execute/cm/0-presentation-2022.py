@@ -13,12 +13,16 @@
 
 # ## Algo-Prog : version 2022 
 # 
+# 
+# - Les [supports du CM](https://phillanglois.github.io/Algo-Prog/) régulièrement mis à jour.
+# - Les autres ressources sont sur l'espace moodle de cet enseignement.
+# 
 # ### Version 2022
 # 
 # - nouvelle offre de formation 2021-2025 : algo + prog = 1 UE
 # - 12 séances de CM : 3h/semaine 
 # - 12 séances de TD-TP : 3h/semaine 
-# - chargés de TD : Ph. Langlois (2), Vincent Zucca, Hanane Benmaghnia
+# - chargés de TD : Ph. Langlois (2), Vincent Zucca
 # - Démarrage : CM en semaine 3 (`sd`=s3), TD en s4, vacances en s9, s17-s18
 # 
 
@@ -35,7 +39,7 @@
 #     - fin de semestre : TP2 individuel, en temps limité, sur machine UPVD : 3h à `sd`+14
 # - CC2 : écrit mi-parcours, 2h à `sd`+8
 # - CT : écrit de fin de semestre, 2h pendant semaine examen  
-# 
+
 # **Dates _envisagées_** mais susceptibles d'adaptations mineures
 # 
 # - lundi 7 mars 2022 : dead-line rendu du TP1 (pour CC1)
@@ -54,8 +58,7 @@
 #     - un quizz d'aide à la compréhension et la mémorisation de ces compétences
 #     - _l'enseignant_ ... présente et explique des exercices détaillés en CM
 #     - _vous_ ... travaillez sur des exercices de TD et de TP, les contrôles des années précédentes, ...
-# 
-# 
+
 # ### CM
 # 
 # ```{warning}
@@ -73,12 +76,14 @@
 # - **Tout** ce qui est nécessaire à votre compréhension est présenté en cours avec des explications orales adaptées, les répétitions nécessaires des points importants, les mises en garde sur les notions difficiles,  ce qui est essentiel _vs._ ce qui est plus secondaire, les compétences à acquérir : savoir, savoir faire et savoir être, ce qui est attendu pour le contrôle de connaissance, ce qui relève de l'objectif 10 _vs._ de l'objectif 20, ...
 #     - les 2/3 du travail de compréhension/mémorisation reposent sur les CM 
 #     
+
 # - **Morale** : ne manquer aucun CM, être attentif, prendre des notes, poser des questions, **se poser** des questions, demander des pauses pour reprendre une attention maximale  
 #     - les notes de cours fournies sont trompeuses : comme un film sans le son
+
 # - **Méthodologie** : 
 #     - relire le cours le soir de l'amphi (15-20 min) 
 #     - le reprendre en détail 4-5 jours après en préparant  des exercices de TD ou de TP -- en groupe : ça aide !
-#     - faire une auto-évaluation de ce que _vous_ en avez retenu la veille du cours suivant  
+#     - faire une auto-évaluation de ce que _vous_ en avez retenu la veille du cours suivant : le chapitre compétences est utile. 
 #     - identifier les questions à poser en séance de TD ou en CM
 
 # ### Les TD pour réfléchir et travailler en petit groupe
@@ -120,18 +125,20 @@
 # ```
 # 
 # - un environnement python qui fonctionne
+
 # - les [notebook jupyter](https://jupyter.org/try)
 #     - sur votre machine : _la solution à privilégier_
 #     - en ligne : [google colab](https://colab.research.google.com), [cocalc](https://cocalc.com)
 #     - _Débuter avec les notebooks_. De Denis Pinsard et disponible sur moodle
 #     - première séance  de TD
+
 # - [python tutor](http://pythontutor.com) 
 #     - permet de visualiser l'effet des instruactions d'un petit code  
 #     - très utile au début pour comprendre des _effets de programmation_, pas d'algorithmique
 #     - complément de l'idle python
 #     - demo 
+
 # - les quizz en ligne (moodle)
-# 
 
 # ## Savoirs, savoir faire, savoir être
 # 
@@ -145,10 +152,11 @@
 # - Savoir différencier les _types_ de données :  
 #     - type scalaire : booléen, entier, réels, caractères  
 #     - type composés : chaîne de caractères, vecteur, matrice, ...  
-# 
+
 # - Connaître leur _représentation_ dans un langage informatique donné  
 #     - `bool`, `int`, `float`, `str`, `list`  
 #     - et les changement de types associés : `int()`, `float()`, ...  
+#     - (python) : un rappel sur le "type" `bool`est proposé en [annexe du cours](./a1-booleens.ipynb).
 
 # - Bien différencier _valeur_ vs. _variable_ vs. _constante_  
 #     - _évaluation_   
@@ -174,81 +182,104 @@
 #     - _indentation_  
 #     - typage dynamique  
 
-# ## Algorithmique : programme détaillé
+# ## Programme détaillé : aspects plutôt algorithmique
 # 
-# 1. utilisation avancée de boucles et de tableaux
+# - Utilisation avancée de boucles et de tableaux
 #     - boucles imbriquées, indépendantes ou non
 #     - traitements divers avec des tableaux 1D ou plus 
 #     - premières estimations de complexité 
 
-# 2. complexité
+# - Complexité
 #     - combien _coûte_ un algorithme pour résoudre un pb donné ?  
 #     - combien de temps ? combien de place mémoire ?  
 #     - tous les problèmes coûtent pareils ?  
 #     - notions : complexité en temps, pire cas, complexité asymptotique  
-# 5. exemple d'algos plutôt numériques et leurs complexités
-#     - différentes évaluations de polynômes 
+#     - exemples d'algos plutôt numériques et leurs complexités
+#         - différentes évaluations de polynômes 
 
-# 4. récursivité : 
+# - Récursivité : 
 #     - **la notion centrale du semestre**
 #     - principes 
 #     - applications 
 #     - notions : itératif vs. récursif, pile/arbre des appels, complexité
-#     - Remarque : la récursion s'appuie sur la notion de _fonction_ qui est donc étudiée de façon simultanée en Algorithmique et Programmation  
+# 
+# ```{note} 
+# La récursion s'appuie sur la notion de _fonction_ présentée dans les aspects plutôt programmation.
+# ```
 
-# 5. rechercher 
+# - Rechercher 
 #     - recherche séquentielle
 #     - recherche dichotomique 
 #     - notions : les algos, leurs complexités, (les preuves)   
-# 6. trier 
-#     - tris itératif : algos, complexité, (preuve)   
-#     - tris  récursifs : algo, complexité, (preuve)   
+#     - versions itératives ou récursives de ces algorithmes 
+#     
 
-# 7. compléments si assez de temps : prouver la terminaison et la correction d'un algorithme
+# - Trier 
+#     - des algorithmes de tris dits naïfs  : algos, complexité, (preuve)   
+#     - des algorithmes de tris dits rapides : : algos, complexité, (preuve)
+#     - versions itératives ou récursives de ces algorithmes 
+
+# - Compléments si assez de temps : prouver la terminaison et la correction d'un algorithme
 #     - l'algo fournit la/les solution/s en un temps fini
 #     - l'algo résoud bien le pb
 #     - notions : invariant de boucle, preuve de terminaison
 
-# ## Programmation  : programme détaillé
+# ## Programme détaillé : aspects plus programmation 
 # 
-# 1. types de donnnées scalaires
+# - Types de donnnées scalaires
 #     - rappels 
 #     - approfondissement : introspection  
 
-# 2. fonctions 
+# - Fonctions **une notion centrale** 
+#     - fonctions prédéfinies ou existantes
 #     - en-tête, corps, appel, paramètres formels et effectifs. 
 #     - portée, visibilité, variables locales vs. paramètres  
 #     - mode de passage des paramètres
 #     - exemples du cours : doubler, permuter  
 
-# 3. tableaux 1D 
+# - Tableaux 1D :
 #     - rappel : avec des listes python (`lst`)
-#     - avec des `ndarray` de `numpy`
 #     - exemples du cours : Lire, stocker, moyenne/min/max d'un tableau (valeurs, indices)
-# 
-# 4. tableaux 2D, 3D ; application au traitement d'images
+#     - applications : les vecteurs, les chaînes de caractères 
+
+# - Tableaux 2D, 3D ; application au traitement d'images
 #     - avec des listes (de listes) python  
-#     - avec des `ndarray` de `numpy`
 #     - images et matrices  
 #     - boucles imbriquées  
 #     - exemples du cours : 
 #         - traitement d'images : initialisation niveaux de gris, transformations d'images (miroir, contraste, contours, ...) 
 #         - algorithmes sur les matrices : vérification (identité, symétrie), calcul (produit de matrices,...) , génération de formes particulières (transposée, ...)
+#         
 
-# 5. autres types de données composés
+# ```{note}
+# Par manque de temps, les `ndarray` de `numpy`, ne sont pas abordés en séance bien que très utiles en pratique.
+# Ces ressources pourront être découvertes de façon autome et utilisées par les étudiants (objectif 20) qui le souhaitent.
+# ```
+
+# - Autres types de données composés
 #     - listes (`lst`) : fonctions et méthodes
 #     - n-uplets (`tuple`), ensembles (`set`), dictionnaires (`dict`)
-# 6. entrées/sorties et fichiers
-# 7. modules
+
+# - Entrées/sorties et fichiers
+#     - Très pratique pour tester ses développements : 
+#     ```{important}
+#     **Bannir les entrées au clavier !** 
+#     Plus d'`input()` à tours de bras SVP !!!
+#     ```
+#     - Chapître traité assez tôt dans le semestre
+
+# - Modules
 #     - utilisation de modules existants 
 #     - exemple d'outils :`numpy`, `scipy`, `matplotlib`, `time` 
 #     - définition de ses modules
-# 9. exceptions
+# 
+# - Exceptions
+#     - En annexe par manque de temps
 
 # ## Supports de cours
 # 
 # ```{note}
-# Toutes les ressources sont sur moodle et sont mises à jour **très** régulièrement
+# Excepté les supports de cours cette année, toutes les autres ressources sont sur moodle et sont mises à jour **très** régulièrement
 # ```
 # 
 # 
@@ -282,19 +313,21 @@
 # 
 # - l'`IDLE` python 3  
 #     - éditeur, interpréteur, débugger utilisé en TP au semestre 1
+
 # - `jupyter notebook`  
 #     - pour intégrer dans _un unique fichier_ du texte, des maths ($\LaTeX$) et du code python qui s'exécute, les résultats de ces éxecutions (valeurs, courbes, images, ...) et exporter tout ça en `html`ou `pdf` ou en `slide`  
 #     - très utile pour les exercices 
 #     - _utilisé pour les TP de programmation à rendre_
 #     - utilisable dans toutes les matières ou presque    
 #     
+
 # - les gestionnaire de paquets (modules) python pour compléter et mettre à jour son environnement
 #     - `conda`: plus complet si distribution anaconda utilisée (solution recommandée)  
 #     - `pip` : classique   
 #     - Exemple d'utilisation : 
 #         - `conda` : `conda list`, `pip install le_module_que_je_veux` et voilà, c'est fini ! 
 #         - `pip` : pareil `list`, `update`, `install`  
-# 
+
 # - modules indispensables 
 #     - `numpy ` : fournit des _vrais_ tableaux multi-dimentionnels et des tas de fonctions et types numériques pour effectuer du calcul
 #     - `matplotlib`: pour le traitement graphique de données, et en particulier :
@@ -321,7 +354,7 @@
 # 
 # - [Un tutoriel](https://zestedesavoir.com/tutoriels/1448/installer-un-environnement-de-developpement-python-avec-conda/)  
 # - [Un autre](https://www.davidculley.com/installing-python-on-a-mac/) pour mac mais/et en anglais, très complet : le début seul devrait vous suffire.
-# 
+
 # #### Distributions python classiques  
 # 
 # On télécharge, on installe, on travaille !  
@@ -331,8 +364,7 @@
 # - [Thonny](https://thonny.org/) Attention : Thonny installe sa propre version de Python par défaut.   
 # - [Pyzo](http://www.pyzo.org)
 # - [SAGEMATH](http://sagemath.org/)  : bcp plus général qu'un simple environnement python. A conseiller pour ceux qui veulent continuer en ... mathématiques.
-# 
-# 
+
 # #### Environnement de travail en autonomie pour machine étudiant 
 # 
 # - [edupython](https://edupython.tuxfamily.org) issu d'AmiensPython mais **[pour windows](http://edupython.tuxfamily.org/documentation/index.php?title=Installation_et_Configuration)**
@@ -352,10 +384,6 @@
 #     - Autres: pyknon (musique), Nanpy (Arduino), Follium (cartes), scikit-learn (IA)... 
 #  
 #  
-# 
-# 
-# 
-# 
 
 # ### Monsieur ....
 # 
@@ -377,8 +405,8 @@
 #     - E. Le Nagard (Pearson)
 # 
 
-# - L'introduction de la spécialité NSI (Numérique et Science Informatique) a donné l'opportunité de la publication de nombreux ouvrages de niveau Première ou Terminale. Le programme de ces classes étant assez ambitieux, ces ouvrages sont de bonnes premières références, voire de très bonnes pour les étudiant.e.s Objectif 10. 
-# 
+# L'introduction de la spécialité NSI (Numérique et Science Informatique) a donné l'opportunité de la publication de nombreux ouvrages de niveau Première ou Terminale. Le programme de ces classes étant assez ambitieux, ces ouvrages sont de bonnes premières références, voire de très bonnes pour les étudiant.e.s Objectif 10. 
+
 # #### Ellipses
 # 
 # Titre : Spécialité Numérique et sciences informatiques : 30 leçons avec exercices corrigés - Première - Nouveaux programmes
@@ -410,8 +438,7 @@
 # Editeur : Ellipses
 # Collection Competences Attendues
 # ISBN :  2340038154 
-# 
-# 
+
 # #### Hatier
 # 
 # Titre : NSI 1ère générale (spécialité) - Prépabac Cours & entraînement. 
@@ -430,7 +457,7 @@
 # Collection	: Prepabac Entrainement Progress
 # ISBN : 2401064613
 # Version e-book : 8,99€
-# 
+
 # #### Nathan
 # 
 # Titre : Interros des Lycées Numérique Sciences Informatiques - Première, Terminale
@@ -438,9 +465,6 @@
 # Editeur : Nathan
 # Collection: Interros des Lycées
 # ISBN : 2091574651 (Première),  2091575437  (Terminale)
-# 
-# 
-# 
 
 # ### Approfondisssement en algo
 # 
@@ -451,7 +475,7 @@
 # - Des gros, voire très gros, livres
 #     - Cormen _et al._
 #     - Knuth
-# 
+
 # ### Approfondisssement en programmation Python
 # 
 # - poly ou bouquin de Cordeau-Pointal (fr)
@@ -459,8 +483,4 @@
 
 # ## Conclusion
 # 
-# Bon travail ce semestre !  
-support html généré avec :
-```
-jupyter nbconvert --to html_embed --template toc2 0-presentation-2021.ipynb
-```
+# Bon courage et bon travail ce semestre !  

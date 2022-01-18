@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2. Sous-programmes : fonctions et procédures &#8212; Algo-Prog 2022</title>
+    <title>Fonctions, procédures, sous-programmes &#8212; Algo-Prog 2022</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,7 +53,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="1. Algorithmique et Programmation en 2022" href="0-presentation-2022.html" />
+    <link rel="next" title="Boucles, tableaux et fonctions : compléments" href="2-boucles-avancees.html" />
+    <link rel="prev" title="Compétences" href="competences-2022.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -97,15 +98,113 @@
   </a>
  </li>
 </ul>
-<ul class="current nav bd-sidenav">
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Présentation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="0-presentation-2022.html">
-   1. Algorithmique et Programmation en 2022
+   Algorithmique et Programmation en 2022
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="competences-2022.html">
+   Compétences
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Les bases
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   2. Sous-programmes : fonctions et procédures
+   Fonctions, procédures, sous-programmes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2-boucles-avancees.html">
+   Boucles, tableaux et fonctions : compléments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3-ES-fichiers.html">
+   Les entrées-sorties avec des fichiers
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Algorithmique
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="6-recursivite.html">
+   Récursivité
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="8-rechercher.html">
+   Rechercher
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10-trier.html">
+   Trier
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Programmation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="5-types_composes.html">
+   Les types composés
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="7-fonctions-avancees.html">
+   Sous-programme et affectation – aspects avancés
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="9-ES-avancees.html">
+   Les entrées-sorties (E/S) : aspects avancés
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="11-modules-utiles.html">
+   Modules utiles
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Annexes
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="a1-booleens.html">
+   Annexe : les booléens en python (&gt;3.6)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="a2-ndarray.html">
+   Les ‘ndarray’ : de vrais tableaux en python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="a3-exceptions.html">
+   Exceptions
   </a>
  </li>
 </ul>
@@ -165,11 +264,11 @@
         aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
-            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+            href="https://github.com/phillanglois/Algo-Prog/algoprog2022"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Dépôt source"><i
                     class="fab fa-github"></i>dépôt</button></a>
         <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcm/1-fonctions.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/phillanglois/Algo-Prog/algoprog2022/issues/new?title=Issue%20on%20page%20%2Fcm/1-fonctions.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Ouvrez un problème"><i class="fas fa-lightbulb"></i>signaler un problème</button></a>
         
@@ -190,7 +289,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/cm/1-fonctions.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/phillanglois/Algo-Prog/main?urlpath=tree/algoprog2022/cm/1-fonctions.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="lancement Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -213,40 +312,18 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#objectifs">
-   2.1. Objectifs
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ce-qu-il-faut-savoir">
-     2.1.1. Ce qu’il faut savoir
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ce-qu-il-faut-savoir-faire">
-     2.1.2. Ce qu’il faut savoir faire
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#pre-requis-technique">
-     2.1.3. Pré-requis technique
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#vocabulaire-et-generalites">
-   2.2. Vocabulaire et généralités
+   Vocabulaire et généralités
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction-avec-des-exemples">
-   2.3. Introduction avec des exemples
+   Introduction avec des exemples
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#les-fonctions-numeriques-du-college-lycee">
-     2.3.1. Les fonctions numériques du collège-lycée.
+     Les fonctions numériques du collège-lycée.
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
@@ -268,7 +345,7 @@
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#les-fonctions-mathematiques-predefinies">
-     2.3.2. Les fonctions mathématiques prédéfinies
+     Les fonctions mathématiques prédéfinies
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
@@ -285,7 +362,7 @@
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#distinguer-le-quoi-du-comment">
-     2.3.3. Distinguer le
+     Distinguer le
      <em>
       Quoi
      </em>
@@ -297,19 +374,19 @@
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#pourquoi-des-sous-programmes-des-fonctions">
-     2.3.4. Pourquoi des sous-programmes ? (des fonctions ?)
+     Pourquoi des sous-programmes ? (des fonctions ?)
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#les-grands-principes-definition-signature-corps-et-appels-de-fonction">
-   2.4. Les grands principes : définition, signature, corps et appels de fonction
+   Les grands principes : définition, signature, corps et appels de fonction
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#definition-d-une-fonction">
-     2.4.1. Définition d’une fonction
+     Définition d’une fonction
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
@@ -321,12 +398,12 @@
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#la-signature-d-une-fonction">
-     2.4.2. La signature d’une fonction
+     La signature d’une fonction
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#l-appel-d-une-fonction">
-     2.4.3. L’appel d’une fonction
+     L’appel d’une fonction
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
@@ -338,7 +415,7 @@
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#le-corps-et-le-retour-de-valeur">
-     2.4.4. Le corps et le retour de valeur
+     Le corps et le retour de valeur
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
@@ -364,26 +441,26 @@
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#exercice">
-     2.4.5. Exercice
+     Exercice
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#appel-appelant-appele-return-appele-appelant">
-   2.5. Appel : appelant -&gt; appelé ; return : appelé -&gt; appelant
+   Appel : appelant -&gt; appelé ; return : appelé -&gt; appelant
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id1">
-     2.5.1. Exercice
+     Exercice
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#variable-locale-vs-variable-globale-portee-des-variables">
-   2.6. Variable locale
+   Variable locale
    <em>
     vs.
    </em>
@@ -392,29 +469,29 @@
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id2">
-     2.6.1. Exercice
+     Exercice
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#complements">
-   2.7. Compléments
+   Compléments
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#erreur-frequente">
-     2.7.1. Erreur fréquente
+     Erreur fréquente
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#methodologie-d-ecriture-des-fonctions">
-     2.7.2. Méthodologie d’écriture des fonctions
+     Méthodologie d’écriture des fonctions
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#de-l-interet-de-distinguer-fonction-et-procedure">
-     2.7.3. De l’intérêt de distinguer
+     De l’intérêt de distinguer
      <em>
       fonction
      </em>
@@ -426,7 +503,6 @@
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#help-et-docstring">
-     2.7.4.
      <code class="docutils literal notranslate">
       <span class="pre">
        help()
@@ -440,12 +516,12 @@
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#plusieurs-parametres">
-     2.7.5. Plusieurs paramètres
+     Plusieurs paramètres
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#plusieurs-return-rappel">
-     2.7.6. Plusieurs
+     Plusieurs
      <code class="docutils literal notranslate">
       <span class="pre">
        return
@@ -456,61 +532,61 @@
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#fonction-sans-parametre">
-     2.7.7. Fonction sans paramètre
+     Fonction sans paramètre
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#fonction-locale">
-     2.7.8. Fonction locale
+     Fonction locale
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id3">
-     2.7.9. Exercice
+     Exercice
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#synthese">
-   2.8. Synthèse
+   Synthèse
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#retenir">
-     2.8.1. Retenir
+     Retenir
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#ne-pas-confondre">
-     2.8.2. Ne pas confondre
+     Ne pas confondre
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#a-venir">
-     2.8.3. A venir
+     A venir
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercices-en-demonstration">
-   2.9. Exercices en démonstration
+   Exercices en démonstration
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#lister-les-notions-vues-jusqu-ici">
-     2.9.1. Lister les notions vues jusqu’ici
+     Lister les notions vues jusqu’ici
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#differentes-ecritures-de-fonctions-min">
-     2.9.2. Différentes écritures de fonctions min
+     Différentes écritures de fonctions min
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#une-procedure-d-affichage-e-s">
-     2.9.3. Une procédure d’affichage (E/S)
+     Une procédure d’affichage (E/S)
     </a>
    </li>
   </ul>
@@ -525,7 +601,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Sous-programmes : fonctions et procédures</h1>
+                <h1>Fonctions, procédures, sous-programmes</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -536,40 +612,18 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#objectifs">
-   2.1. Objectifs
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ce-qu-il-faut-savoir">
-     2.1.1. Ce qu’il faut savoir
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ce-qu-il-faut-savoir-faire">
-     2.1.2. Ce qu’il faut savoir faire
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#pre-requis-technique">
-     2.1.3. Pré-requis technique
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#vocabulaire-et-generalites">
-   2.2. Vocabulaire et généralités
+   Vocabulaire et généralités
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction-avec-des-exemples">
-   2.3. Introduction avec des exemples
+   Introduction avec des exemples
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#les-fonctions-numeriques-du-college-lycee">
-     2.3.1. Les fonctions numériques du collège-lycée.
+     Les fonctions numériques du collège-lycée.
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
@@ -591,7 +645,7 @@
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#les-fonctions-mathematiques-predefinies">
-     2.3.2. Les fonctions mathématiques prédéfinies
+     Les fonctions mathématiques prédéfinies
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
@@ -608,7 +662,7 @@
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#distinguer-le-quoi-du-comment">
-     2.3.3. Distinguer le
+     Distinguer le
      <em>
       Quoi
      </em>
@@ -620,19 +674,19 @@
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#pourquoi-des-sous-programmes-des-fonctions">
-     2.3.4. Pourquoi des sous-programmes ? (des fonctions ?)
+     Pourquoi des sous-programmes ? (des fonctions ?)
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#les-grands-principes-definition-signature-corps-et-appels-de-fonction">
-   2.4. Les grands principes : définition, signature, corps et appels de fonction
+   Les grands principes : définition, signature, corps et appels de fonction
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#definition-d-une-fonction">
-     2.4.1. Définition d’une fonction
+     Définition d’une fonction
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
@@ -644,12 +698,12 @@
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#la-signature-d-une-fonction">
-     2.4.2. La signature d’une fonction
+     La signature d’une fonction
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#l-appel-d-une-fonction">
-     2.4.3. L’appel d’une fonction
+     L’appel d’une fonction
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
@@ -661,7 +715,7 @@
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#le-corps-et-le-retour-de-valeur">
-     2.4.4. Le corps et le retour de valeur
+     Le corps et le retour de valeur
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
@@ -687,26 +741,26 @@
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#exercice">
-     2.4.5. Exercice
+     Exercice
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#appel-appelant-appele-return-appele-appelant">
-   2.5. Appel : appelant -&gt; appelé ; return : appelé -&gt; appelant
+   Appel : appelant -&gt; appelé ; return : appelé -&gt; appelant
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id1">
-     2.5.1. Exercice
+     Exercice
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#variable-locale-vs-variable-globale-portee-des-variables">
-   2.6. Variable locale
+   Variable locale
    <em>
     vs.
    </em>
@@ -715,29 +769,29 @@
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id2">
-     2.6.1. Exercice
+     Exercice
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#complements">
-   2.7. Compléments
+   Compléments
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#erreur-frequente">
-     2.7.1. Erreur fréquente
+     Erreur fréquente
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#methodologie-d-ecriture-des-fonctions">
-     2.7.2. Méthodologie d’écriture des fonctions
+     Méthodologie d’écriture des fonctions
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#de-l-interet-de-distinguer-fonction-et-procedure">
-     2.7.3. De l’intérêt de distinguer
+     De l’intérêt de distinguer
      <em>
       fonction
      </em>
@@ -749,7 +803,6 @@
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#help-et-docstring">
-     2.7.4.
      <code class="docutils literal notranslate">
       <span class="pre">
        help()
@@ -763,12 +816,12 @@
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#plusieurs-parametres">
-     2.7.5. Plusieurs paramètres
+     Plusieurs paramètres
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#plusieurs-return-rappel">
-     2.7.6. Plusieurs
+     Plusieurs
      <code class="docutils literal notranslate">
       <span class="pre">
        return
@@ -779,61 +832,61 @@
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#fonction-sans-parametre">
-     2.7.7. Fonction sans paramètre
+     Fonction sans paramètre
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#fonction-locale">
-     2.7.8. Fonction locale
+     Fonction locale
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id3">
-     2.7.9. Exercice
+     Exercice
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#synthese">
-   2.8. Synthèse
+   Synthèse
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#retenir">
-     2.8.1. Retenir
+     Retenir
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#ne-pas-confondre">
-     2.8.2. Ne pas confondre
+     Ne pas confondre
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#a-venir">
-     2.8.3. A venir
+     A venir
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercices-en-demonstration">
-   2.9. Exercices en démonstration
+   Exercices en démonstration
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#lister-les-notions-vues-jusqu-ici">
-     2.9.1. Lister les notions vues jusqu’ici
+     Lister les notions vues jusqu’ici
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#differentes-ecritures-de-fonctions-min">
-     2.9.2. Différentes écritures de fonctions min
+     Différentes écritures de fonctions min
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#une-procedure-d-affichage-e-s">
-     2.9.3. Une procédure d’affichage (E/S)
+     Une procédure d’affichage (E/S)
     </a>
    </li>
   </ul>
@@ -847,53 +900,25 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="sous-programmes-fonctions-et-procedures">
-<h1><span class="section-number">2. </span>Sous-programmes : fonctions et procédures<a class="headerlink" href="#sous-programmes-fonctions-et-procedures" title="Permalink to this headline">¶</a></h1>
-<p>version 2021, PhL. (v2)</p>
-<p>Dans ce premier chapitre, nous abordons la notion importante de <strong>sous-programme</strong>, souvent aussi appelée <strong>fonction</strong> – bien que nous verrons que les 2 notions diffèrent.
-Le cadre de ce chapitre est très générique, c’est-à-dire que les différentes notions introduites et le vocabulaire associé sont présents dans la très grande majorité des <em>langages de programmation impérative</em>.
+  <div class="tex2jax_ignore mathjax_ignore section" id="fonctions-procedures-sous-programmes">
+<h1>Fonctions, procédures, sous-programmes<a class="headerlink" href="#fonctions-procedures-sous-programmes" title="Permalink to this headline">¶</a></h1>
+<p>version 2022, PhL.</p>
+<p>Dans ce premier chapitre, nous abordons une notion importante qui peut se présenter avec différentes appellations : fonction ou procédure ou <strong>sous-programme</strong>.
+Vous connaissez les fonctions en mathématiques depuis le collège tandis que la notion de sous-programme à une consonance très “programmation”.</p>
+<p>Le cadre de ce chapitre est générique, c’est-à-dire que ces différentes notions et le vocabulaire associé sont présents dans la très grande majorité des <em>langages de programmation impérative</em>.
 Nous utilisons bien sûr la syntaxe python3 en conservant une indépendance maximale par rapport aux spécificités de python afin de mettre en valeur ces notions de la façon la plus générique possible.</p>
-<p>Le chapitre suivant complétera l’apprentissage de la notion de sous-programme avec des aspects plus techniques et leurs traitements en python.</p>
-<h1>Table des matières<span class="tocSkip"></span></h1>
-<div class="toc"><ul class="toc-item"><li><span><a href="#Objectifs" data-toc-modified-id="Objectifs-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Objectifs</a></span><ul class="toc-item"><li><span><a href="#Ce-qu'il-faut-savoir" data-toc-modified-id="Ce-qu'il-faut-savoir-1.1"><span class="toc-item-num">1.1&nbsp;&nbsp;</span>Ce qu'il faut savoir</a></span></li><li><span><a href="#Ce-qu'il-faut-savoir-faire" data-toc-modified-id="Ce-qu'il-faut-savoir-faire-1.2"><span class="toc-item-num">1.2&nbsp;&nbsp;</span>Ce qu'il faut savoir faire</a></span></li><li><span><a href="#Pré-requis-technique" data-toc-modified-id="Pré-requis-technique-1.3"><span class="toc-item-num">1.3&nbsp;&nbsp;</span>Pré-requis technique</a></span></li></ul></li><li><span><a href="#Vocabulaire-et-généralités" data-toc-modified-id="Vocabulaire-et-généralités-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Vocabulaire et généralités</a></span></li><li><span><a href="#Introduction-avec-des-exemples" data-toc-modified-id="Introduction-avec-des-exemples-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Introduction avec des exemples</a></span><ul class="toc-item"><li><span><a href="#Les-fonctions-numériques-du-collège-lycée." data-toc-modified-id="Les-fonctions-numériques-du-collège-lycée.-3.1"><span class="toc-item-num">3.1&nbsp;&nbsp;</span>Les fonctions numériques du collège-lycée.</a></span><ul class="toc-item"><li><span><a href="#Ecriture-mathématique-habituelle" data-toc-modified-id="Ecriture-mathématique-habituelle-3.1.1"><span class="toc-item-num">3.1.1&nbsp;&nbsp;</span>Ecriture mathématique habituelle</a></span></li><li><span><a href="#En-python" data-toc-modified-id="En-python-3.1.2"><span class="toc-item-num">3.1.2&nbsp;&nbsp;</span>En python</a></span></li><li><span><a href="#Premiers-commentaires-et-vocabulaire-important" data-toc-modified-id="Premiers-commentaires-et-vocabulaire-important-3.1.3"><span class="toc-item-num">3.1.3&nbsp;&nbsp;</span>Premiers commentaires et vocabulaire important</a></span></li></ul></li><li><span><a href="#Les-fonctions-mathématiques-prédéfinies" data-toc-modified-id="Les-fonctions-mathématiques-prédéfinies-3.2"><span class="toc-item-num">3.2&nbsp;&nbsp;</span>Les fonctions mathématiques prédéfinies</a></span><ul class="toc-item"><li><span><a href="#Appel-:-utilisation-de-fonction-prédéfinie-existante" data-toc-modified-id="Appel-:-utilisation-de-fonction-prédéfinie-existante-3.2.1"><span class="toc-item-num">3.2.1&nbsp;&nbsp;</span>Appel : utilisation de fonction prédéfinie existante</a></span></li><li><span><a href="#Vocabulaire-(suite)" data-toc-modified-id="Vocabulaire-(suite)-3.2.2"><span class="toc-item-num">3.2.2&nbsp;&nbsp;</span>Vocabulaire (suite)</a></span></li></ul></li><li><span><a href="#Distinguer-le-Quoi-du-Comment" data-toc-modified-id="Distinguer-le-Quoi-du-Comment-3.3"><span class="toc-item-num">3.3&nbsp;&nbsp;</span>Distinguer le <em>Quoi</em> du <em>Comment</em></a></span></li><li><span><a href="#Pourquoi-des-sous-programmes-?-(des-fonctions-?)" data-toc-modified-id="Pourquoi-des-sous-programmes-?-(des-fonctions-?)-3.4"><span class="toc-item-num">3.4&nbsp;&nbsp;</span>Pourquoi des sous-programmes ? (des fonctions ?)</a></span></li></ul></li><li><span><a href="#Les-grands-principes-:-définition,-signature,-corps-et-appels-de-fonction" data-toc-modified-id="Les-grands-principes-:-définition,-signature,-corps-et-appels-de-fonction-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>Les grands principes : définition, signature, corps et appels de fonction</a></span><ul class="toc-item"><li><span><a href="#Définition-d'une-fonction" data-toc-modified-id="Définition-d'une-fonction-4.1"><span class="toc-item-num">4.1&nbsp;&nbsp;</span>Définition d'une fonction</a></span><ul class="toc-item"><li><span><a href="#Syntaxe(s)-python-de-la-définition-de-fonction" data-toc-modified-id="Syntaxe(s)-python-de-la-définition-de-fonction-4.1.1"><span class="toc-item-num">4.1.1&nbsp;&nbsp;</span>Syntaxe(s) python de la définition de fonction</a></span></li></ul></li><li><span><a href="#La-signature-d'une-fonction" data-toc-modified-id="La-signature-d'une-fonction-4.2"><span class="toc-item-num">4.2&nbsp;&nbsp;</span>La signature d'une fonction</a></span></li><li><span><a href="#L'appel-d'une-fonction" data-toc-modified-id="L'appel-d'une-fonction-4.3"><span class="toc-item-num">4.3&nbsp;&nbsp;</span>L'appel d'une fonction</a></span><ul class="toc-item"><li><span><a href="#Effet-d'un-appel-sur-le-séquencement-des-instructions-exécutées" data-toc-modified-id="Effet-d'un-appel-sur-le-séquencement-des-instructions-exécutées-4.3.1"><span class="toc-item-num">4.3.1&nbsp;&nbsp;</span>Effet d'un appel sur le séquencement des instructions exécutées</a></span></li></ul></li><li><span><a href="#Le-corps-et-le-retour-de-valeur" data-toc-modified-id="Le-corps-et-le-retour-de-valeur-4.4"><span class="toc-item-num">4.4&nbsp;&nbsp;</span>Le corps et le retour de valeur</a></span><ul class="toc-item"><li><span><a href="#return" data-toc-modified-id="return-4.4.1"><span class="toc-item-num">4.4.1&nbsp;&nbsp;</span><code>return</code></a></span></li><li><span><a href="#return-=-terminaison-de-la-fonction" data-toc-modified-id="return-=-terminaison-de-la-fonction-4.4.2"><span class="toc-item-num">4.4.2&nbsp;&nbsp;</span><code>return</code> = terminaison de la fonction</a></span></li></ul></li><li><span><a href="#Exercice" data-toc-modified-id="Exercice-4.5"><span class="toc-item-num">4.5&nbsp;&nbsp;</span>Exercice</a></span></li></ul></li><li><span><a href="#Appel-:-appelant--&gt;-appelé-;-return-:-appelé--&gt;-appelant" data-toc-modified-id="Appel-:-appelant-->-appelé-;-return-:-appelé-->-appelant-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>Appel : appelant -&gt; appelé ; return : appelé -&gt; appelant</a></span><ul class="toc-item"><li><span><a href="#Exercice" data-toc-modified-id="Exercice-5.1"><span class="toc-item-num">5.1&nbsp;&nbsp;</span>Exercice</a></span></li></ul></li><li><span><a href="#Variable-locale-vs.-variable-globale,-portée-des-variables" data-toc-modified-id="Variable-locale-vs.-variable-globale,-portée-des-variables-6"><span class="toc-item-num">6&nbsp;&nbsp;</span>Variable locale <em>vs.</em> variable globale, portée des variables</a></span><ul class="toc-item"><li><span><a href="#Exercice" data-toc-modified-id="Exercice-6.1"><span class="toc-item-num">6.1&nbsp;&nbsp;</span>Exercice</a></span></li></ul></li><li><span><a href="#Compléments" data-toc-modified-id="Compléments-7"><span class="toc-item-num">7&nbsp;&nbsp;</span>Compléments</a></span><ul class="toc-item"><li><span><a href="#Erreur-fréquente" data-toc-modified-id="Erreur-fréquente-7.1"><span class="toc-item-num">7.1&nbsp;&nbsp;</span>Erreur fréquente</a></span></li><li><span><a href="#Méthodologie-d'écriture-des-fonctions" data-toc-modified-id="Méthodologie-d'écriture-des-fonctions-7.2"><span class="toc-item-num">7.2&nbsp;&nbsp;</span>Méthodologie d'écriture des fonctions</a></span></li><li><span><a href="#De-l'intérêt-de-distinguer-fonction-et-procédure" data-toc-modified-id="De-l'intérêt-de-distinguer-fonction-et-procédure-7.3"><span class="toc-item-num">7.3&nbsp;&nbsp;</span>De l'intérêt de distinguer <em>fonction</em> et <em>procédure</em></a></span></li><li><span><a href="#help()-et-docstring" data-toc-modified-id="help()-et-docstring-7.4"><span class="toc-item-num">7.4&nbsp;&nbsp;</span><code>help()</code> et <em>docstring</em></a></span></li><li><span><a href="#Plusieurs-paramètres" data-toc-modified-id="Plusieurs-paramètres-7.5"><span class="toc-item-num">7.5&nbsp;&nbsp;</span>Plusieurs paramètres</a></span></li><li><span><a href="#Plusieurs-return-(rappel)" data-toc-modified-id="Plusieurs-return-(rappel)-7.6"><span class="toc-item-num">7.6&nbsp;&nbsp;</span>Plusieurs <code>return</code> (rappel)</a></span></li><li><span><a href="#Fonction-sans-paramètre" data-toc-modified-id="Fonction-sans-paramètre-7.7"><span class="toc-item-num">7.7&nbsp;&nbsp;</span>Fonction sans paramètre</a></span></li><li><span><a href="#Fonction-locale" data-toc-modified-id="Fonction-locale-7.8"><span class="toc-item-num">7.8&nbsp;&nbsp;</span>Fonction locale</a></span></li><li><span><a href="#Exercice" data-toc-modified-id="Exercice-7.9"><span class="toc-item-num">7.9&nbsp;&nbsp;</span>Exercice</a></span></li></ul></li><li><span><a href="#Synthèse" data-toc-modified-id="Synthèse-8"><span class="toc-item-num">8&nbsp;&nbsp;</span>Synthèse</a></span><ul class="toc-item"><li><span><a href="#Retenir" data-toc-modified-id="Retenir-8.1"><span class="toc-item-num">8.1&nbsp;&nbsp;</span>Retenir</a></span></li><li><span><a href="#Ne-pas-confondre" data-toc-modified-id="Ne-pas-confondre-8.2"><span class="toc-item-num">8.2&nbsp;&nbsp;</span>Ne pas confondre</a></span></li><li><span><a href="#A-venir" data-toc-modified-id="A-venir-8.3"><span class="toc-item-num">8.3&nbsp;&nbsp;</span>A venir</a></span></li></ul></li><li><span><a href="#Exercices-en-démonstration" data-toc-modified-id="Exercices-en-démonstration-9"><span class="toc-item-num">9&nbsp;&nbsp;</span>Exercices en démonstration</a></span><ul class="toc-item"><li><span><a href="#Lister-les-notions-vues-jusqu'ici" data-toc-modified-id="Lister-les-notions-vues-jusqu'ici-9.1"><span class="toc-item-num">9.1&nbsp;&nbsp;</span>Lister les notions vues jusqu'ici</a></span></li><li><span><a href="#Différentes-écritures-de-fonctions-min" data-toc-modified-id="Différentes-écritures-de-fonctions-min-9.2"><span class="toc-item-num">9.2&nbsp;&nbsp;</span>Différentes écritures de fonctions min</a></span></li><li><span><a href="#Une-procédure-d'affichage-(E/S)" data-toc-modified-id="Une-procédure-d'affichage-(E/S)-9.3"><span class="toc-item-num">9.3&nbsp;&nbsp;</span>Une procédure d'affichage (E/S)</a></span></li></ul></li></ul></div><div class="section" id="objectifs">
-<h2><span class="section-number">2.1. </span>Objectifs<a class="headerlink" href="#objectifs" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="ce-qu-il-faut-savoir">
-<h3><span class="section-number">2.1.1. </span>Ce qu’il faut savoir<a class="headerlink" href="#ce-qu-il-faut-savoir" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>définition et paramètres formels vs. appel et paramètres effectifs</p></li>
-<li><p>spécification, en-tête, signature : spécifier pour utiliser, pour vérifier  vs. corps : implémentation du traitement</p></li>
-<li><p>appel = changement de contexte : trace de l’exécution vs. séquentialité des instructions écrites</p>
-<ul>
-<li><p>dynamique vs. statique</p></li>
-</ul>
-</li>
-<li><p>appelant vs. appelé : le rôle de l’appel, le rôle du `retur``</p></li>
-<li><p>portée des variables : variables locales vs. variables plus globales</p></li>
-<li><p>l’effet de bord est indésirable</p></li>
-</ul>
-</div>
-<div class="section" id="ce-qu-il-faut-savoir-faire">
-<h3><span class="section-number">2.1.2. </span>Ce qu’il faut savoir faire<a class="headerlink" href="#ce-qu-il-faut-savoir-faire" title="Permalink to this headline">¶</a></h3>
-<p><strong>Cadre</strong> : en/pour python</p>
-<ul class="simple">
-<li><p>définir et écrire la spécification d’une fonction qui réalise un traitement décrit en français, ou qui résoud un problème (simple) décrit en français</p></li>
-<li><p>définir et écrire des appels simples (tests unitaires)</p></li>
-<li><p>définir et écrire l’implémentation d’une fonction associée à une spécification</p></li>
-</ul>
-</div>
-<div class="section" id="pre-requis-technique">
-<h3><span class="section-number">2.1.3. </span>Pré-requis technique<a class="headerlink" href="#pre-requis-technique" title="Permalink to this headline">¶</a></h3>
-<p>Dans/avec un notebook jupyter :</p>
-<ul class="simple">
-<li><p>savoir mettre en oeuvre de la programmation simple en python (niveau semestre 1) dans un notebook jupyter</p></li>
-<li><p>savoir documenter cette programmation (énoncés, descriptions, …) avec markdown</p></li>
-</ul>
-</div>
-</div>
+<p>Un autre chapitre complétera l’apprentissage de la notion de sous-programme avec des aspects plus techniques et leurs traitements en python.</p>
 <div class="section" id="vocabulaire-et-generalites">
-<h2><span class="section-number">2.2. </span>Vocabulaire et généralités<a class="headerlink" href="#vocabulaire-et-generalites" title="Permalink to this headline">¶</a></h2>
-<p>Le terme <strong>sous-programme</strong> est un (sous-)ensemble de lignes de code, souvent paramétrable, que l’on désigne d’un nom pour ré-utiliser “directement” ces lignes de codes à l’aide de ce nom. On <em>appelle</em> ce nom pour exécuter ces lignes de codes. Cet appel contient aussi la valeur des paramètres à traiter par l’exécution.</p>
-<p>De façon imagée, un sous-programme peut-être vue comme une boîte opaque qui “prends des choses” en entrée (les paramètres), effectue des traitements et fourni un “résultat” en sortie – dans le cas d’une fonction.
+<h2>Vocabulaire et généralités<a class="headerlink" href="#vocabulaire-et-generalites" title="Permalink to this headline">¶</a></h2>
+<p>De façon imagée, une fonction en mathématiques est un traitement un peu compliqué que l’on décrit de façon synthétique par un symbole ou un nom, souvent réduit à la seule lettre <span class="math notranslate nohighlight">\(f\)</span> – mais que bien sûr, on se souvient des fonctions <span class="math notranslate nohighlight">\(\cos, \sin\)</span>, …</p>
+<p>On peut ainsi appliquer ce traitement facilement à des valeurs arbitraires en notant par exemple <span class="math notranslate nohighlight">\(f(3.2)\)</span> ou <span class="math notranslate nohighlight">\(\cos(\pi/4)\)</span> l’application de ces fonctions et en identifiant ces écritures aux valeurs numériques correspondantes, par exemple <span class="math notranslate nohighlight">\(\sqrt(2)/2\)</span> pour la seconde écriture.</p>
+<p>La notion de sous-programme, qui englobe les notions de fonction et de procédure, reprend cette démarche <em>de notation synthétique et paramétrable d’un traitement compliqué</em> dans le contexte d’un traitement informatique.</p>
+<ul class="simple">
+<li><p>Le terme <strong>sous-programme</strong> est un (sous-)ensemble de lignes de code, souvent paramétrable, que l’on désigne d’un nom pour ré-utiliser “directement” ces lignes de codes à l’aide de ce nom.</p></li>
+<li><p>On <strong>appelle</strong> ce nom pour exécuter ces lignes de codes.</p></li>
+<li><p>Cet appel contient aussi <strong>la valeur des paramètres à traiter</strong> par l’exécution.</p></li>
+</ul>
+<p>De façon imagée encore, un sous-programme peut-être vu comme une boîte opaque qui “prends des choses” en entrée (les paramètres), effectue des traitements qui dépendent de ces paramètres et fourni un “résultat” en sortie – dans le cas d’une fonction.
 La boîte porte le nom du sous-programme.
 Elle est opaque : je peux m’en servir, je connais <strong>ce qu’elle fait</strong>, je n’ai pas besoin de savoir <strong>comment</strong> elle le fait.</p>
 <p>Une analogie facile : je peux me servir d’une voiture sans savoir comment la mécanique ou l’électronique fonctionnent.</p>
@@ -913,9 +938,16 @@ Oui : “afficher” n’est pas “renvoyer”.</p></li>
 <p>Donc par la suite, on utilisera surtout le terme <em>fonction</em> mais on ne manquera pas d’indiquer lorsqu’une fonction python est une procédure au sens défini ci-dessus.</p>
 </div>
 <div class="section" id="introduction-avec-des-exemples">
-<h2><span class="section-number">2.3. </span>Introduction avec des exemples<a class="headerlink" href="#introduction-avec-des-exemples" title="Permalink to this headline">¶</a></h2>
+<h2>Introduction avec des exemples<a class="headerlink" href="#introduction-avec-des-exemples" title="Permalink to this headline">¶</a></h2>
+<p>Vous avez déjà rencontré <em>et utilisé</em> des fonctions python “sans le savoir” – par exemples la fonction mathématique <code class="docutils literal notranslate"><span class="pre">sqrt()</span></code> et la procédure d’écriture à l’écran <code class="docutils literal notranslate"><span class="pre">print()</span></code>.</p>
+<p>Il est important de distinguer :</p>
+<ul class="simple">
+<li><p>l’utilisation de fonctions “existantes”</p></li>
+<li><p>la définition de nouvelles fonctions</p></li>
+</ul>
+<p>(C’est un peu la poule et l’oeuf car une fonction existante a bien été définie avant d’exister :)</p>
 <div class="section" id="les-fonctions-numeriques-du-college-lycee">
-<h3><span class="section-number">2.3.1. </span>Les fonctions numériques du collège-lycée.<a class="headerlink" href="#les-fonctions-numeriques-du-college-lycee" title="Permalink to this headline">¶</a></h3>
+<h3>Les fonctions numériques du collège-lycée.<a class="headerlink" href="#les-fonctions-numeriques-du-college-lycee" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="ecriture-mathematique-habituelle">
 <h4>Ecriture mathématique habituelle<a class="headerlink" href="#ecriture-mathematique-habituelle" title="Permalink to this headline">¶</a></h4>
 <p>Un exemple : la fonction affine <span class="math notranslate nohighlight">\(f(x) = 2x + 1\)</span></p>
@@ -1013,7 +1045,7 @@ Bref tout ce qui peut être <em>évalué</em> (<em>ie.</em>, calculé) et qui <e
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;f(x)=2x+1&#39;)
 </pre></div>
 </div>
-<img alt="../_images/1-fonctions_17_1.png" src="../_images/1-fonctions_17_1.png" />
+<img alt="../_images/1-fonctions_14_1.png" src="../_images/1-fonctions_14_1.png" />
 </div>
 </div>
 </div>
@@ -1036,31 +1068,34 @@ Bref tout ce qui peut être <em>évalué</em> (<em>ie.</em>, calculé) et qui <e
 </li>
 </ul>
 </li>
+</ol>
+<ol class="simple">
 <li><ul class="simple">
 <li><p>La définition a une forme très semblable à l’expression mathématique avec un  (ou des) <strong>paramètre</strong>  ou aussi <strong>paramètre <em>formel</em></strong> <span class="math notranslate nohighlight">\(x\)</span>, et <strong>des parenthèses</strong> : f(x).</p></li>
 <li><p>Elle contient (au moins) un <code class="docutils literal notranslate"><span class="pre">return</span></code> qui correspond à un résultat fourni par la fonction.</p></li>
 <li><p>On dit ainsi que ce résultat est <strong>retourné</strong> par la fonction.</p></li>
 </ul>
 </li>
-<li><ul class="simple">
-<li><p>Les appels, comme en math, correspondent à “remplacer” <code class="docutils literal notranslate"><span class="pre">x</span></code> par une valeur numérique donnée</p></li>
-<li><p>cette valeur d’appel est appelée <strong>argument</strong> ou aussi <strong>paramètre <em>effectif</em></strong> (de l’appel).</p></li>
-</ul>
-</li>
-<li><ul class="simple">
+</ol>
+<ol class="simple">
+<li></li>
+</ol>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- Les appels, comme en math, correspondent à &quot;remplacer&quot; `x` par une valeur numérique donnée
+- cette valeur d&#39;appel est appelée **argument** ou aussi **paramètre _effectif_** (de l&#39;appel).    
+</pre></div>
+</div>
+<ol class="simple">
 <li><p><strong>Important.</strong></p>
-<ul>
+<ul class="simple">
 <li><p>Les <strong>seuls</strong> <code class="docutils literal notranslate"><span class="pre">print</span></code> de ces exemples s’appliquent à des <em>valeurs retournées</em> par la fonction f</p></li>
 <li><p><strong>Aucun <code class="docutils literal notranslate"><span class="pre">print</span></code> dans la définition de f</strong>.</p></li>
-</ul>
-</li>
 </ul>
 </li>
 </ol>
 </div>
 </div>
 <div class="section" id="les-fonctions-mathematiques-predefinies">
-<h3><span class="section-number">2.3.2. </span>Les fonctions mathématiques prédéfinies<a class="headerlink" href="#les-fonctions-mathematiques-predefinies" title="Permalink to this headline">¶</a></h3>
+<h3>Les fonctions mathématiques prédéfinies<a class="headerlink" href="#les-fonctions-mathematiques-predefinies" title="Permalink to this headline">¶</a></h3>
 <p>Les fonctions mathématiques connues comme les fonctions trigonométriques, logarithmes, exponentielles, puissances … sont “fournies avec le langage de programmation” mais sous la forme de <em>bibliothèques</em> de fonctions aussi appelées <em>modules</em> en python.</p>
 <div class="section" id="appel-utilisation-de-fonction-predefinie-existante">
 <h4>Appel : utilisation de fonction prédéfinie existante<a class="headerlink" href="#appel-utilisation-de-fonction-predefinie-existante" title="Permalink to this headline">¶</a></h4>
@@ -1104,11 +1139,6 @@ Bref tout ce qui peut être <em>évalué</em> (<em>ie.</em>, calculé) et qui <e
 <li><p>ici, on <em>utilise</em> le nom <code class="docutils literal notranslate"><span class="pre">cos</span></code> de la fonction trigonométrique <em>cosinus</em> pour obtenir la valeur de cette fonction pour l’argument d’entrée fourni.</p></li>
 <li><p>on voit bien que cet appel ne nécessite pas de connaitre <em>comment</em> cette fonction calcule le résultat qu’elle renvoie (ou retourne).  Cette fonction est bien vue comme une boîte opaque (une <em>boîte noire</em>).</p></li>
 </ul>
-<p>Cet exemple permet d’introduire deux notions complémentaires (et différentes) :</p>
-<ul class="simple">
-<li><p><strong>la spécification</strong>  = ce que ça fait : OK = le QUOI</p></li>
-<li><p><strong>une implémentation</strong> = comment ça le fait : ? = le COMMENT</p></li>
-</ul>
 <p><strong>Commentaires</strong></p>
 <ul class="simple">
 <li><p>Ligne 1 : fonction <code class="docutils literal notranslate"><span class="pre">cos</span></code> et valeur <code class="docutils literal notranslate"><span class="pre">pi</span></code> sont disponibles</p></li>
@@ -1121,7 +1151,12 @@ Bref tout ce qui peut être <em>évalué</em> (<em>ie.</em>, calculé) et qui <e
 </div>
 <div class="alert alert-block alert-info">
 <p><strong>A retenir</strong> : la construction <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">module</span> <span class="pre">import</span> <span class="pre">fonction1,</span> <span class="pre">fonction2</span></code> permet d’utiliser les <code class="docutils literal notranslate"><span class="pre">fonctions</span></code> (1, 2, …) définies dans la bibliothèque <code class="docutils literal notranslate"><span class="pre">module</span></code></p>
-</div><p><strong>Digression</strong> pour les curieuses et les curieux : précision numérique ?</p>
+</div><p>Cet exemple permet d’introduire deux notions complémentaires <strong>et différentes</strong> :</p>
+<ul class="simple">
+<li><p><strong>la spécification</strong>  = ce que ça fait : OK = le QUOI</p></li>
+<li><p><strong>une implémentation</strong> = comment ça le fait : ? = le COMMENT</p></li>
+</ul>
+<p><strong>Digression</strong> pour les curieuses et les curieux : précision numérique ?</p>
 <p>On se rassure :</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1158,7 +1193,7 @@ Bref tout ce qui peut être <em>évalué</em> (<em>ie.</em>, calculé) et qui <e
 </div>
 </div>
 <div class="section" id="distinguer-le-quoi-du-comment">
-<h3><span class="section-number">2.3.3. </span>Distinguer le <em>Quoi</em> du <em>Comment</em><a class="headerlink" href="#distinguer-le-quoi-du-comment" title="Permalink to this headline">¶</a></h3>
+<h3>Distinguer le <em>Quoi</em> du <em>Comment</em><a class="headerlink" href="#distinguer-le-quoi-du-comment" title="Permalink to this headline">¶</a></h3>
 <p>Nous savons <em>ce que calculent</em> ces fonctions : le <strong>quoi</strong>.
 Et pourtant la plupart d’entre nous ne savent pas <strong>comment</strong> elles sont calculées.</p>
 <p>Dans l’exemple de la fonction affine, l’expression <span class="math notranslate nohighlight">\(f(x) = 2x + 1\)</span> mélange le <em>quoi</em> et le <em>comment</em>.</p>
@@ -1166,7 +1201,7 @@ Et pourtant la plupart d’entre nous ne savent pas <strong>comment</strong> ell
 <p><strong>Question</strong> : Y-a-t’il d’autres façon de calculer la fonction <span class="math notranslate nohighlight">\(f\)</span> précédente ? Qu’en déduire ?</p>
 </div>
 <div class="section" id="pourquoi-des-sous-programmes-des-fonctions">
-<h3><span class="section-number">2.3.4. </span>Pourquoi des sous-programmes ? (des fonctions ?)<a class="headerlink" href="#pourquoi-des-sous-programmes-des-fonctions" title="Permalink to this headline">¶</a></h3>
+<h3>Pourquoi des sous-programmes ? (des fonctions ?)<a class="headerlink" href="#pourquoi-des-sous-programmes-des-fonctions" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Eviter de ré-écrire, de dupliquer, du code — souvent le code qui correspond au <em>comment</em> du traitement.</p></li>
 <li><p>Simplifier la lecture donc la compréhension : le <em>quoi</em> suffit pour celà.</p></li>
@@ -1181,7 +1216,7 @@ Une fonction permet d’écrire les algorithmes/codes de façon plus <em>modulai
 </div>
 </div>
 <div class="section" id="les-grands-principes-definition-signature-corps-et-appels-de-fonction">
-<h2><span class="section-number">2.4. </span>Les grands principes : définition, signature, corps et appels de fonction<a class="headerlink" href="#les-grands-principes-definition-signature-corps-et-appels-de-fonction" title="Permalink to this headline">¶</a></h2>
+<h2>Les grands principes : définition, signature, corps et appels de fonction<a class="headerlink" href="#les-grands-principes-definition-signature-corps-et-appels-de-fonction" title="Permalink to this headline">¶</a></h2>
 <div class='alert alert-block alert-danger'>
 <p>NE PAS CONFONDRE :  <strong>LA</strong> définition  vs. <strong>LES</strong> appels</p>
 </div>
@@ -1197,7 +1232,7 @@ Une fonction permet d’écrire les algorithmes/codes de façon plus <em>modulai
 <div class="alert alert-success">
 <p>L’appel définit les <em>arguments</em> (ou <em>paramètres effectifs</em>) et <em>réalise le traitement</em> (l’exécution) du corps de la fonction pour ces arguments .</p>
 </div><div class="section" id="definition-d-une-fonction">
-<h3><span class="section-number">2.4.1. </span>Définition d’une fonction<a class="headerlink" href="#definition-d-une-fonction" title="Permalink to this headline">¶</a></h3>
+<h3>Définition d’une fonction<a class="headerlink" href="#definition-d-une-fonction" title="Permalink to this headline">¶</a></h3>
 <p>De façon générale, la définition d’une fonction contient :</p>
 <ul class="simple">
 <li><p>le <em>nom</em> de la fonction</p></li>
@@ -1250,7 +1285,7 @@ Une fonction permet d’écrire les algorithmes/codes de façon plus <em>modulai
 </div>
 </div>
 <div class="section" id="la-signature-d-une-fonction">
-<h3><span class="section-number">2.4.2. </span>La signature d’une fonction<a class="headerlink" href="#la-signature-d-une-fonction" title="Permalink to this headline">¶</a></h3>
+<h3>La signature d’une fonction<a class="headerlink" href="#la-signature-d-une-fonction" title="Permalink to this headline">¶</a></h3>
 <p>La <em>signature</em> d’une fonction permet de connaître le minimum nécessaire et suffisant pour utiliser (appeler) cette fonction, ie. le <em>quoi</em> (que fait la fonction et de quoi a-t-elle besoin pour ça ?)</p>
 <p>On ne garde que le nécessaire de la syntaxe améliorée :</p>
 <div class="cell docutils container">
@@ -1279,7 +1314,7 @@ Selon les langages de programmation, la signature peut-être séparée et compil
 <p>De façon complémentaire, on parle d’analyse <em>dynamique</em> (ou de vérification dynamique) pour les traitements effectués lors de l’exécution du programme.</p>
 </div>
 <div class="section" id="l-appel-d-une-fonction">
-<h3><span class="section-number">2.4.3. </span>L’appel d’une fonction<a class="headerlink" href="#l-appel-d-une-fonction" title="Permalink to this headline">¶</a></h3>
+<h3>L’appel d’une fonction<a class="headerlink" href="#l-appel-d-une-fonction" title="Permalink to this headline">¶</a></h3>
 <p>L’appel de la fonction consiste à exécuter la fonction pour des valeurs fixées des arguments d’entrée.</p>
 <p>Syntaxiquement :</p>
 <ul class="simple">
@@ -1378,7 +1413,7 @@ Selon les langages de programmation, la signature peut-être séparée et compil
 </div>
 </div>
 <div class="section" id="le-corps-et-le-retour-de-valeur">
-<h3><span class="section-number">2.4.4. </span>Le corps et le retour de valeur<a class="headerlink" href="#le-corps-et-le-retour-de-valeur" title="Permalink to this headline">¶</a></h3>
+<h3>Le corps et le retour de valeur<a class="headerlink" href="#le-corps-et-le-retour-de-valeur" title="Permalink to this headline">¶</a></h3>
 <p>Le corps définit le traitement de la fonction.<br />
 Il complète la signature.
 Ce traitement manipule les paramètres formels et des variables locales (à la fonction).<br />
@@ -1518,14 +1553,14 @@ aa(u: float) -&gt; float
 </div>
 </div>
 <div class="section" id="exercice">
-<h3><span class="section-number">2.4.5. </span>Exercice<a class="headerlink" href="#exercice" title="Permalink to this headline">¶</a></h3>
+<h3>Exercice<a class="headerlink" href="#exercice" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Reprendre les fonctions <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">aa</span></code> et <code class="docutils literal notranslate"><span class="pre">aaa</span></code> précédentes et identifier leurs signatures, leurs paramètres formels, leurs types, les corps de ces fonctions. Et dans les appels les <code class="docutils literal notranslate"><span class="pre">return</span></code> exécutés, le séquencement des instructions exécutées dans l’appelant et l’appelé.</p></li>
 </ul>
 </div>
 </div>
 <div class="section" id="appel-appelant-appele-return-appele-appelant">
-<h2><span class="section-number">2.5. </span>Appel : appelant -&gt; appelé ; return : appelé -&gt; appelant<a class="headerlink" href="#appel-appelant-appele-return-appele-appelant" title="Permalink to this headline">¶</a></h2>
+<h2>Appel : appelant -&gt; appelé ; return : appelé -&gt; appelant<a class="headerlink" href="#appel-appelant-appele-return-appele-appelant" title="Permalink to this headline">¶</a></h2>
 <p>Nous illustrons avec <a class="reference external" href="http://pythontutor.com/visualize.html#mode=edit">pythontutor</a> l’exécution d’un appel de fonction.</p>
 <p>Cad. :</p>
 <ul class="simple">
@@ -1542,14 +1577,14 @@ aa(u: float) -&gt; float
 <a class="reference external" href="http://pythontutor.com/visualize.html#code=def%20aa%28u%20%3A%20float%29%20-%3E%20float%3A%0A%20%20%20%20%27%27%27La%20m%C3%AAme%20avec%202%20return%20%27%27%27%0A%20%20%20%20if%20u%20%3E%200%3A%0A%20%20%20%20%20%20%20%20res1%20%3D%20u%0A%20%20%20%20%20%20%20%20return%20res1%0A%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20res2%20%3D%20-u%0A%20%20%20%20%20%20%20%20return%20res2%0A%20%20%20%20%20%20%20%20%0Aun%20%3D%20aa%281.0%29%0Aencore_un%20%3D%20aa%28-1.0%29%0A%0A%23%20Profitons-en%20pour%20montrer%20un%20%60assert%60%20%0Aassert%20un%20%3D%3D%20encore_un&amp;cumulative=false&amp;curInstr=14&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">visualisation pythontutor</a></p></li>
 </ul>
 <div class="section" id="id1">
-<h3><span class="section-number">2.5.1. </span>Exercice<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<h3>Exercice<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Reprendre les fonctions <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">aa</span></code> et <code class="docutils literal notranslate"><span class="pre">aaa</span></code> précédentes et bien identifier le séquencement des instructions exécutées dans l’appelant et l’appelé.</p></li>
 </ul>
 </div>
 </div>
 <div class="section" id="variable-locale-vs-variable-globale-portee-des-variables">
-<h2><span class="section-number">2.6. </span>Variable locale <em>vs.</em> variable globale, portée des variables<a class="headerlink" href="#variable-locale-vs-variable-globale-portee-des-variables" title="Permalink to this headline">¶</a></h2>
+<h2>Variable locale <em>vs.</em> variable globale, portée des variables<a class="headerlink" href="#variable-locale-vs-variable-globale-portee-des-variables" title="Permalink to this headline">¶</a></h2>
 <p>Les notions de variable locale (à une fonction) ou de variable globale sont classiques en programmation.</p>
 <blockquote>
 <div><p><strong>Variable locale</strong> à une fonction : variable définie dans le <em>corps</em> de la fonction pour permettre le traitement réalisé par la fonction.</p>
@@ -1587,16 +1622,16 @@ Une fois définie, sa portée est globale à ce cadre : cette variable est acces
 </div><p>Au delà de certaines spécificités de python qui la rendent assez délicate, l’utilisation de variables globale  est à l’origine de la notion <em>d’effet de bord</em> souvent à l’origine de longues phases de debugging. Nous reviendrons sur cet aspect au chapitre suivant.</p>
 <p>Le besoin d’utiliser des variables globales dans des fonctions internes peut être satisfait en ajoutant ces variables comme paramètres de ces fonctions.</p>
 <div class="section" id="id2">
-<h3><span class="section-number">2.6.1. </span>Exercice<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<h3>Exercice<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Reprendre les fonctions <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">aa</span></code> et <code class="docutils literal notranslate"><span class="pre">aaa</span></code> précédentes et identifier leurs variables locales et leur portée, dans la définition, dans les appels, dans les appelants.</p></li>
 </ul>
 </div>
 </div>
 <div class="section" id="complements">
-<h2><span class="section-number">2.7. </span>Compléments<a class="headerlink" href="#complements" title="Permalink to this headline">¶</a></h2>
+<h2>Compléments<a class="headerlink" href="#complements" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="erreur-frequente">
-<h3><span class="section-number">2.7.1. </span>Erreur fréquente<a class="headerlink" href="#erreur-frequente" title="Permalink to this headline">¶</a></h3>
+<h3>Erreur fréquente<a class="headerlink" href="#erreur-frequente" title="Permalink to this headline">¶</a></h3>
 <div class="alert alert-danger">
 <p>NE PAS CONFONDRE :  <code class="docutils literal notranslate"><span class="pre">return</span></code> <em>vs.</em> <code class="docutils literal notranslate"><span class="pre">print</span></code></p>
 </div>
@@ -1614,7 +1649,7 @@ Une fois définie, sa portée est globale à ce cadre : cette variable est acces
 </ul>
 </div>
 <div class="section" id="methodologie-d-ecriture-des-fonctions">
-<h3><span class="section-number">2.7.2. </span>Méthodologie d’écriture des fonctions<a class="headerlink" href="#methodologie-d-ecriture-des-fonctions" title="Permalink to this headline">¶</a></h3>
+<h3>Méthodologie d’écriture des fonctions<a class="headerlink" href="#methodologie-d-ecriture-des-fonctions" title="Permalink to this headline">¶</a></h3>
 <p>En pratique, vous introduirez des fonctions en respectant <strong>l’ordre d’écriture</strong> suivant :</p>
 <ol class="simple">
 <li><p>écriture de la signature de la fonction</p></li>
@@ -1634,7 +1669,7 @@ Une fois définie, sa portée est globale à ce cadre : cette variable est acces
 <p>Ainsi, il n’est pas possible d’exécuter cet appel avant d’avoir fini l’étape suivante (écriture du corps).</p>
 </div>
 <div class="section" id="de-l-interet-de-distinguer-fonction-et-procedure">
-<h3><span class="section-number">2.7.3. </span>De l’intérêt de distinguer <em>fonction</em> et <em>procédure</em><a class="headerlink" href="#de-l-interet-de-distinguer-fonction-et-procedure" title="Permalink to this headline">¶</a></h3>
+<h3>De l’intérêt de distinguer <em>fonction</em> et <em>procédure</em><a class="headerlink" href="#de-l-interet-de-distinguer-fonction-et-procedure" title="Permalink to this headline">¶</a></h3>
 <div class="alert alert-block alert-warning">
 <p>CONSEIL : Distinguer les fonctions des procédures oblige à se poser la question du besoin de modifier ou non les arguments du sous-programme.</p>
 </div>
@@ -1661,7 +1696,7 @@ Rappellons qu’une fonction python retourne <em>toujours</em> une valeur, même
 <p><strong>Exercice.</strong>  Donner un exemple de fonction python (utilisée depuis le début de l’année) qui est en fait une procédure.</p>
 </div>
 <div class="section" id="help-et-docstring">
-<h3><span class="section-number">2.7.4. </span><code class="docutils literal notranslate"><span class="pre">help()</span></code> et <em>docstring</em><a class="headerlink" href="#help-et-docstring" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">help()</span></code> et <em>docstring</em><a class="headerlink" href="#help-et-docstring" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">help()</span></code> est une fonction python prédéfinie qui affiche l’en-tête (la signature) complet de la fonction passée en paramètre.</p>
 <p>Elle fournit les informations nécessaires à l’utilisation correcte de la fonction, ainsi que des détails sur son objet et son implémentation – si le ces aspects ont été décrits par le programmeur dans le <code class="docutils literal notranslate"><span class="pre">docstring</span></code> : la zone de commentaires entre <code class="docutils literal notranslate"><span class="pre">```</span> <span class="pre">```</span></code> et indentée sous le <code class="docutils literal notranslate"><span class="pre">def</span></code>.</p>
 <p>Cette fonction est similaire à l’option de commande <code class="docutils literal notranslate"><span class="pre">--help</span></code> sous Unix.</p>
@@ -1698,7 +1733,7 @@ f(x: float) -&gt; float
 <p><strong>Exercice</strong>. A quoi reconnait-on que <code class="docutils literal notranslate"><span class="pre">help</span></code> est une fonction ?</p>
 </div>
 <div class="section" id="plusieurs-parametres">
-<h3><span class="section-number">2.7.5. </span>Plusieurs paramètres<a class="headerlink" href="#plusieurs-parametres" title="Permalink to this headline">¶</a></h3>
+<h3>Plusieurs paramètres<a class="headerlink" href="#plusieurs-parametres" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">puissance</span><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">n</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
@@ -1728,7 +1763,9 @@ True
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># appels avec une variable</span>
-<span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;n premières puissances de 2.0 pour n = &quot;</span><span class="p">))</span>
+
+<span class="c1">#n = int(input(&quot;n premières puissances de 2.0 pour n = &quot;))</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2 **&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="s2">&quot;=&quot;</span><span class="p">,</span> <span class="n">puissance</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span>
 
@@ -1736,8 +1773,11 @@ True
 <span class="nb">print</span><span class="p">(</span><span class="n">puissance</span><span class="p">(</span><span class="mf">2.0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
 
 <span class="c1"># appels avec des variables</span>
-<span class="n">p</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;n premières puissances de p pour p = &quot;</span><span class="p">))</span>
-<span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;et n = &quot;</span><span class="p">))</span>
+
+<span class="c1">#p = float(input(&quot;n premières puissances de p pour p = &quot;))</span>
+<span class="c1">#n = int(input(&quot;et n = &quot;))</span>
+<span class="n">p</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">4</span>
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">puissance</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">i</span><span class="p">))</span>
@@ -1745,40 +1785,26 @@ True
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
-<span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">23</span><span class="p">],</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># appels avec une variable</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;n premières puissances de 2.0 pour n = &quot;</span><span class="p">))</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2 **&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="s2">&quot;=&quot;</span><span class="p">,</span> <span class="n">puissance</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span>
-
-<span class="nn">File ~/.local/share/virtualenvs/ens-3Ap4QYHt/lib/python3.9/site-packages/ipykernel/kernelbase.py:1041,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1034</span> <span class="sd">&quot;&quot;&quot;Forward raw_input to frontends</span>
-<span class="g g-Whitespace">   </span><span class="mi">1035</span><span class="sd"> </span>
-<span class="g g-Whitespace">   </span><span class="mi">1036</span><span class="sd"> Raises</span>
-<span class="g g-Whitespace">   </span><span class="mi">1037</span><span class="sd"> ------</span>
-<span class="g g-Whitespace">   </span><span class="mi">1038</span><span class="sd"> StdinNotImplementedError if active frontend doesn&#39;t support stdin.</span>
-<span class="g g-Whitespace">   </span><span class="mi">1039</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1040</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1041</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1042</span>         <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1043</span>     <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1044</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1045</span>     <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1046</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_parent_ident</span><span class="p">[</span><span class="s2">&quot;shell&quot;</span><span class="p">],</span>
-<span class="g g-Whitespace">   </span><span class="mi">1047</span>     <span class="bp">self</span><span class="o">.</span><span class="n">get_parent</span><span class="p">(</span><span class="s2">&quot;shell&quot;</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1048</span>     <span class="n">password</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1049</span> <span class="p">)</span>
-
-<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2 ** 0 = 1.0
+2 ** 1 = 2.0
+2 ** 2 = 4.0
+2 ** 3 = 8.0
+2 ** 4 = 16.0
+2 ** 5 = 32.0
+cas particulier
+1.0
+1.0
+3.0
+9.0
+27.0
+81.0
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="plusieurs-return-rappel">
-<h3><span class="section-number">2.7.6. </span>Plusieurs <code class="docutils literal notranslate"><span class="pre">return</span></code> (rappel)<a class="headerlink" href="#plusieurs-return-rappel" title="Permalink to this headline">¶</a></h3>
+<h3>Plusieurs <code class="docutils literal notranslate"><span class="pre">return</span></code> (rappel)<a class="headerlink" href="#plusieurs-return-rappel" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
 <li><p>Une fonction qui calcule et renvoie (retourne) la valeur absolue d’un entier</p>
 <ul class="simple">
@@ -1839,7 +1865,7 @@ on est dans la boucle
 </ul>
 </div>
 <div class="section" id="fonction-sans-parametre">
-<h3><span class="section-number">2.7.7. </span>Fonction sans paramètre<a class="headerlink" href="#fonction-sans-parametre" title="Permalink to this headline">¶</a></h3>
+<h3>Fonction sans paramètre<a class="headerlink" href="#fonction-sans-parametre" title="Permalink to this headline">¶</a></h3>
 <p>Une fonction peut ne pas avoir de paramètre formel. Et donc être appelée sans argument (sans paramètre effectif).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1877,7 +1903,7 @@ appel tetu 1
 </div>
 </div>
 <div class="section" id="fonction-locale">
-<h3><span class="section-number">2.7.8. </span>Fonction locale<a class="headerlink" href="#fonction-locale" title="Permalink to this headline">¶</a></h3>
+<h3>Fonction locale<a class="headerlink" href="#fonction-locale" title="Permalink to this headline">¶</a></h3>
 <p>A la manière d’une variable locale, une <em>fonction locale</em> (à une fonction) est :</p>
 <ul class="simple">
 <li><p>définie dans le corps d’une fonction,</p></li>
@@ -1959,7 +1985,7 @@ appel tetu 1
 </div>
 </div>
 <div class="section" id="id3">
-<h3><span class="section-number">2.7.9. </span>Exercice<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<h3>Exercice<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Compléter le test unitaire de <code class="docutils literal notranslate"><span class="pre">max3</span></code>.</p></li>
 <li><p>(<span class="math notranslate nohighlight">\(\star\)</span>) Ecrire une version de <code class="docutils literal notranslate"><span class="pre">max3</span></code> sans variable locale, ni fonction locale.</p></li>
@@ -2019,9 +2045,9 @@ appel tetu 1
 </div>
 </div>
 <div class="section" id="synthese">
-<h2><span class="section-number">2.8. </span>Synthèse<a class="headerlink" href="#synthese" title="Permalink to this headline">¶</a></h2>
+<h2>Synthèse<a class="headerlink" href="#synthese" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="retenir">
-<h3><span class="section-number">2.8.1. </span>Retenir<a class="headerlink" href="#retenir" title="Permalink to this headline">¶</a></h3>
+<h3>Retenir<a class="headerlink" href="#retenir" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><strong>Modularité</strong> : fonction pour factoriser le traitement, structurer le déroulement d’un algo, faciliter la compréhension du traitement et la maintenance des codes</p>
 <ul>
@@ -2060,7 +2086,7 @@ appel tetu 1
 </ul>
 </div>
 <div class="section" id="ne-pas-confondre">
-<h3><span class="section-number">2.8.2. </span>Ne pas confondre<a class="headerlink" href="#ne-pas-confondre" title="Permalink to this headline">¶</a></h3>
+<h3>Ne pas confondre<a class="headerlink" href="#ne-pas-confondre" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><ul class="simple">
 <li><p><strong>définition</strong> <em>vs.</em> <strong>appel</strong></p></li>
@@ -2072,7 +2098,7 @@ appel tetu 1
 </div></blockquote>
 </div>
 <div class="section" id="a-venir">
-<h3><span class="section-number">2.8.3. </span>A venir<a class="headerlink" href="#a-venir" title="Permalink to this headline">¶</a></h3>
+<h3>A venir<a class="headerlink" href="#a-venir" title="Permalink to this headline">¶</a></h3>
 <p>Un point important a été passé sous silence dans ce chapitre :</p>
 <ul class="simple">
 <li><p>comment s’effectue le passage de paramètres lors de l’appel ?</p></li>
@@ -2085,9 +2111,9 @@ appel tetu 1
 </div>
 </div>
 <div class="section" id="exercices-en-demonstration">
-<h2><span class="section-number">2.9. </span>Exercices en démonstration<a class="headerlink" href="#exercices-en-demonstration" title="Permalink to this headline">¶</a></h2>
+<h2>Exercices en démonstration<a class="headerlink" href="#exercices-en-demonstration" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="lister-les-notions-vues-jusqu-ici">
-<h3><span class="section-number">2.9.1. </span>Lister les notions vues jusqu’ici<a class="headerlink" href="#lister-les-notions-vues-jusqu-ici" title="Permalink to this headline">¶</a></h3>
+<h3>Lister les notions vues jusqu’ici<a class="headerlink" href="#lister-les-notions-vues-jusqu-ici" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>définition, paramètres formels, sortie</p></li>
 <li><p>appel, paramètres effectifs</p></li>
@@ -2098,7 +2124,7 @@ appel tetu 1
 </ul>
 </div>
 <div class="section" id="differentes-ecritures-de-fonctions-min">
-<h3><span class="section-number">2.9.2. </span>Différentes écritures de fonctions min<a class="headerlink" href="#differentes-ecritures-de-fonctions-min" title="Permalink to this headline">¶</a></h3>
+<h3>Différentes écritures de fonctions min<a class="headerlink" href="#differentes-ecritures-de-fonctions-min" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Ecrire la fonction min(a,b) : signature, appels, puis corps ; test unitaires.</p></li>
 <li><p>Proposer plusieurs écritures du corps : avec un seul return, avec deux, …</p></li>
@@ -2201,7 +2227,7 @@ appel tetu 1
 </div>
 </div>
 <div class="section" id="une-procedure-d-affichage-e-s">
-<h3><span class="section-number">2.9.3. </span>Une procédure d’affichage (E/S)<a class="headerlink" href="#une-procedure-d-affichage-e-s" title="Permalink to this headline">¶</a></h3>
+<h3>Une procédure d’affichage (E/S)<a class="headerlink" href="#une-procedure-d-affichage-e-s" title="Permalink to this headline">¶</a></h3>
 <p>Ecrire une fonction qui réalise efficacement l’affichage suivant :</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Carcassonne</span> <span class="n">est</span> <span class="n">la</span> <span class="n">préfecture</span> <span class="n">du</span> <span class="n">département</span> <span class="mi">11</span>
 <span class="o">------------------------------------------------</span>
@@ -2346,12 +2372,19 @@ Foix est la préfecture du département 09
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="0-presentation-2022.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="competences-2022.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">1. </span>Algorithmique et Programmation en 2022</p>
+            <p class="prev-next-title">Compétences</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="2-boucles-avancees.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Boucles, tableaux et fonctions : compléments</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             

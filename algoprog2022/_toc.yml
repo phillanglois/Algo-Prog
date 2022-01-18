@@ -2,11 +2,35 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: cm/0-presentation-2022
+root: bonjour
 defaults:  # The defaults key will be applied to all chapters and sub-sections
   titlesonly: True
 options:
   numbered: 2
-chapters:
-- file: cm/1-fonctions
-- file: cm/competences-2022
+parts:
+  - caption: Présentation
+    chapters:
+    - file: cm/0-presentation-2022
+    - file: cm/competences-2022
+  - caption: Les bases
+    chapters:
+    - file: cm/1-fonctions
+    - file: cm/2-boucles-avancees
+    - file: cm/3-ES-fichiers
+  - caption: Algorithmique
+    chapters:
+    - file: cm/4-complexite_tmp
+    - file: cm/6-recursivite
+    - file: cm/8-rechercher
+    - file: cm/10-trier
+  - caption: Programmation
+    chapters:
+    - file: cm/5-types_composes
+    - file: cm/7-fonctions-avancees
+    - file: cm/9-ES-avancees
+    - file: cm/11-modules-utiles
+  - caption: Annexes
+    chapters:
+    - file: cm/a1-booleens
+    - file: cm/a2-ndarray
+    - file: cm/a3-exceptions

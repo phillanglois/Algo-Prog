@@ -1,55 +1,37 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Sous-programmes : fonctions et procédures
+# # Fonctions, procédures, sous-programmes
 # 
-# version 2021, PhL. (v2)
+# version 2022, PhL.
 
-# Dans ce premier chapitre, nous abordons la notion importante de __sous-programme__, souvent aussi appelée __fonction__ -- bien que nous verrons que les 2 notions diffèrent. 
-# Le cadre de ce chapitre est très générique, c'est-à-dire que les différentes notions introduites et le vocabulaire associé sont présents dans la très grande majorité des _langages de programmation impérative_. 
+# 
+# Dans ce premier chapitre, nous abordons une notion importante qui peut se présenter avec différentes appellations : fonction ou procédure ou __sous-programme__. 
+# Vous connaissez les fonctions en mathématiques depuis le collège tandis que la notion de sous-programme à une consonance très "programmation". 
+# 
+# Le cadre de ce chapitre est générique, c'est-à-dire que ces différentes notions et le vocabulaire associé sont présents dans la très grande majorité des _langages de programmation impérative_. 
 # Nous utilisons bien sûr la syntaxe python3 en conservant une indépendance maximale par rapport aux spécificités de python afin de mettre en valeur ces notions de la façon la plus générique possible.
 # 
-# Le chapitre suivant complétera l'apprentissage de la notion de sous-programme avec des aspects plus techniques et leurs traitements en python. 
-
-# <h1>Table des matières<span class="tocSkip"></span></h1>
-# <div class="toc"><ul class="toc-item"><li><span><a href="#Objectifs" data-toc-modified-id="Objectifs-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Objectifs</a></span><ul class="toc-item"><li><span><a href="#Ce-qu'il-faut-savoir" data-toc-modified-id="Ce-qu'il-faut-savoir-1.1"><span class="toc-item-num">1.1&nbsp;&nbsp;</span>Ce qu'il faut savoir</a></span></li><li><span><a href="#Ce-qu'il-faut-savoir-faire" data-toc-modified-id="Ce-qu'il-faut-savoir-faire-1.2"><span class="toc-item-num">1.2&nbsp;&nbsp;</span>Ce qu'il faut savoir faire</a></span></li><li><span><a href="#Pré-requis-technique" data-toc-modified-id="Pré-requis-technique-1.3"><span class="toc-item-num">1.3&nbsp;&nbsp;</span>Pré-requis technique</a></span></li></ul></li><li><span><a href="#Vocabulaire-et-généralités" data-toc-modified-id="Vocabulaire-et-généralités-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Vocabulaire et généralités</a></span></li><li><span><a href="#Introduction-avec-des-exemples" data-toc-modified-id="Introduction-avec-des-exemples-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Introduction avec des exemples</a></span><ul class="toc-item"><li><span><a href="#Les-fonctions-numériques-du-collège-lycée." data-toc-modified-id="Les-fonctions-numériques-du-collège-lycée.-3.1"><span class="toc-item-num">3.1&nbsp;&nbsp;</span>Les fonctions numériques du collège-lycée.</a></span><ul class="toc-item"><li><span><a href="#Ecriture-mathématique-habituelle" data-toc-modified-id="Ecriture-mathématique-habituelle-3.1.1"><span class="toc-item-num">3.1.1&nbsp;&nbsp;</span>Ecriture mathématique habituelle</a></span></li><li><span><a href="#En-python" data-toc-modified-id="En-python-3.1.2"><span class="toc-item-num">3.1.2&nbsp;&nbsp;</span>En python</a></span></li><li><span><a href="#Premiers-commentaires-et-vocabulaire-important" data-toc-modified-id="Premiers-commentaires-et-vocabulaire-important-3.1.3"><span class="toc-item-num">3.1.3&nbsp;&nbsp;</span>Premiers commentaires et vocabulaire important</a></span></li></ul></li><li><span><a href="#Les-fonctions-mathématiques-prédéfinies" data-toc-modified-id="Les-fonctions-mathématiques-prédéfinies-3.2"><span class="toc-item-num">3.2&nbsp;&nbsp;</span>Les fonctions mathématiques prédéfinies</a></span><ul class="toc-item"><li><span><a href="#Appel-:-utilisation-de-fonction-prédéfinie-existante" data-toc-modified-id="Appel-:-utilisation-de-fonction-prédéfinie-existante-3.2.1"><span class="toc-item-num">3.2.1&nbsp;&nbsp;</span>Appel : utilisation de fonction prédéfinie existante</a></span></li><li><span><a href="#Vocabulaire-(suite)" data-toc-modified-id="Vocabulaire-(suite)-3.2.2"><span class="toc-item-num">3.2.2&nbsp;&nbsp;</span>Vocabulaire (suite)</a></span></li></ul></li><li><span><a href="#Distinguer-le-Quoi-du-Comment" data-toc-modified-id="Distinguer-le-Quoi-du-Comment-3.3"><span class="toc-item-num">3.3&nbsp;&nbsp;</span>Distinguer le <em>Quoi</em> du <em>Comment</em></a></span></li><li><span><a href="#Pourquoi-des-sous-programmes-?-(des-fonctions-?)" data-toc-modified-id="Pourquoi-des-sous-programmes-?-(des-fonctions-?)-3.4"><span class="toc-item-num">3.4&nbsp;&nbsp;</span>Pourquoi des sous-programmes ? (des fonctions ?)</a></span></li></ul></li><li><span><a href="#Les-grands-principes-:-définition,-signature,-corps-et-appels-de-fonction" data-toc-modified-id="Les-grands-principes-:-définition,-signature,-corps-et-appels-de-fonction-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>Les grands principes : définition, signature, corps et appels de fonction</a></span><ul class="toc-item"><li><span><a href="#Définition-d'une-fonction" data-toc-modified-id="Définition-d'une-fonction-4.1"><span class="toc-item-num">4.1&nbsp;&nbsp;</span>Définition d'une fonction</a></span><ul class="toc-item"><li><span><a href="#Syntaxe(s)-python-de-la-définition-de-fonction" data-toc-modified-id="Syntaxe(s)-python-de-la-définition-de-fonction-4.1.1"><span class="toc-item-num">4.1.1&nbsp;&nbsp;</span>Syntaxe(s) python de la définition de fonction</a></span></li></ul></li><li><span><a href="#La-signature-d'une-fonction" data-toc-modified-id="La-signature-d'une-fonction-4.2"><span class="toc-item-num">4.2&nbsp;&nbsp;</span>La signature d'une fonction</a></span></li><li><span><a href="#L'appel-d'une-fonction" data-toc-modified-id="L'appel-d'une-fonction-4.3"><span class="toc-item-num">4.3&nbsp;&nbsp;</span>L'appel d'une fonction</a></span><ul class="toc-item"><li><span><a href="#Effet-d'un-appel-sur-le-séquencement-des-instructions-exécutées" data-toc-modified-id="Effet-d'un-appel-sur-le-séquencement-des-instructions-exécutées-4.3.1"><span class="toc-item-num">4.3.1&nbsp;&nbsp;</span>Effet d'un appel sur le séquencement des instructions exécutées</a></span></li></ul></li><li><span><a href="#Le-corps-et-le-retour-de-valeur" data-toc-modified-id="Le-corps-et-le-retour-de-valeur-4.4"><span class="toc-item-num">4.4&nbsp;&nbsp;</span>Le corps et le retour de valeur</a></span><ul class="toc-item"><li><span><a href="#return" data-toc-modified-id="return-4.4.1"><span class="toc-item-num">4.4.1&nbsp;&nbsp;</span><code>return</code></a></span></li><li><span><a href="#return-=-terminaison-de-la-fonction" data-toc-modified-id="return-=-terminaison-de-la-fonction-4.4.2"><span class="toc-item-num">4.4.2&nbsp;&nbsp;</span><code>return</code> = terminaison de la fonction</a></span></li></ul></li><li><span><a href="#Exercice" data-toc-modified-id="Exercice-4.5"><span class="toc-item-num">4.5&nbsp;&nbsp;</span>Exercice</a></span></li></ul></li><li><span><a href="#Appel-:-appelant--&gt;-appelé-;-return-:-appelé--&gt;-appelant" data-toc-modified-id="Appel-:-appelant-->-appelé-;-return-:-appelé-->-appelant-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>Appel : appelant -&gt; appelé ; return : appelé -&gt; appelant</a></span><ul class="toc-item"><li><span><a href="#Exercice" data-toc-modified-id="Exercice-5.1"><span class="toc-item-num">5.1&nbsp;&nbsp;</span>Exercice</a></span></li></ul></li><li><span><a href="#Variable-locale-vs.-variable-globale,-portée-des-variables" data-toc-modified-id="Variable-locale-vs.-variable-globale,-portée-des-variables-6"><span class="toc-item-num">6&nbsp;&nbsp;</span>Variable locale <em>vs.</em> variable globale, portée des variables</a></span><ul class="toc-item"><li><span><a href="#Exercice" data-toc-modified-id="Exercice-6.1"><span class="toc-item-num">6.1&nbsp;&nbsp;</span>Exercice</a></span></li></ul></li><li><span><a href="#Compléments" data-toc-modified-id="Compléments-7"><span class="toc-item-num">7&nbsp;&nbsp;</span>Compléments</a></span><ul class="toc-item"><li><span><a href="#Erreur-fréquente" data-toc-modified-id="Erreur-fréquente-7.1"><span class="toc-item-num">7.1&nbsp;&nbsp;</span>Erreur fréquente</a></span></li><li><span><a href="#Méthodologie-d'écriture-des-fonctions" data-toc-modified-id="Méthodologie-d'écriture-des-fonctions-7.2"><span class="toc-item-num">7.2&nbsp;&nbsp;</span>Méthodologie d'écriture des fonctions</a></span></li><li><span><a href="#De-l'intérêt-de-distinguer-fonction-et-procédure" data-toc-modified-id="De-l'intérêt-de-distinguer-fonction-et-procédure-7.3"><span class="toc-item-num">7.3&nbsp;&nbsp;</span>De l'intérêt de distinguer <em>fonction</em> et <em>procédure</em></a></span></li><li><span><a href="#help()-et-docstring" data-toc-modified-id="help()-et-docstring-7.4"><span class="toc-item-num">7.4&nbsp;&nbsp;</span><code>help()</code> et <em>docstring</em></a></span></li><li><span><a href="#Plusieurs-paramètres" data-toc-modified-id="Plusieurs-paramètres-7.5"><span class="toc-item-num">7.5&nbsp;&nbsp;</span>Plusieurs paramètres</a></span></li><li><span><a href="#Plusieurs-return-(rappel)" data-toc-modified-id="Plusieurs-return-(rappel)-7.6"><span class="toc-item-num">7.6&nbsp;&nbsp;</span>Plusieurs <code>return</code> (rappel)</a></span></li><li><span><a href="#Fonction-sans-paramètre" data-toc-modified-id="Fonction-sans-paramètre-7.7"><span class="toc-item-num">7.7&nbsp;&nbsp;</span>Fonction sans paramètre</a></span></li><li><span><a href="#Fonction-locale" data-toc-modified-id="Fonction-locale-7.8"><span class="toc-item-num">7.8&nbsp;&nbsp;</span>Fonction locale</a></span></li><li><span><a href="#Exercice" data-toc-modified-id="Exercice-7.9"><span class="toc-item-num">7.9&nbsp;&nbsp;</span>Exercice</a></span></li></ul></li><li><span><a href="#Synthèse" data-toc-modified-id="Synthèse-8"><span class="toc-item-num">8&nbsp;&nbsp;</span>Synthèse</a></span><ul class="toc-item"><li><span><a href="#Retenir" data-toc-modified-id="Retenir-8.1"><span class="toc-item-num">8.1&nbsp;&nbsp;</span>Retenir</a></span></li><li><span><a href="#Ne-pas-confondre" data-toc-modified-id="Ne-pas-confondre-8.2"><span class="toc-item-num">8.2&nbsp;&nbsp;</span>Ne pas confondre</a></span></li><li><span><a href="#A-venir" data-toc-modified-id="A-venir-8.3"><span class="toc-item-num">8.3&nbsp;&nbsp;</span>A venir</a></span></li></ul></li><li><span><a href="#Exercices-en-démonstration" data-toc-modified-id="Exercices-en-démonstration-9"><span class="toc-item-num">9&nbsp;&nbsp;</span>Exercices en démonstration</a></span><ul class="toc-item"><li><span><a href="#Lister-les-notions-vues-jusqu'ici" data-toc-modified-id="Lister-les-notions-vues-jusqu'ici-9.1"><span class="toc-item-num">9.1&nbsp;&nbsp;</span>Lister les notions vues jusqu'ici</a></span></li><li><span><a href="#Différentes-écritures-de-fonctions-min" data-toc-modified-id="Différentes-écritures-de-fonctions-min-9.2"><span class="toc-item-num">9.2&nbsp;&nbsp;</span>Différentes écritures de fonctions min</a></span></li><li><span><a href="#Une-procédure-d'affichage-(E/S)" data-toc-modified-id="Une-procédure-d'affichage-(E/S)-9.3"><span class="toc-item-num">9.3&nbsp;&nbsp;</span>Une procédure d'affichage (E/S)</a></span></li></ul></li></ul></div>
-
-# ## Objectifs 
-
-# ### Ce qu'il faut savoir
-# 
-# - définition et paramètres formels vs. appel et paramètres effectifs
-# - spécification, en-tête, signature : spécifier pour utiliser, pour vérifier  vs. corps : implémentation du traitement  
-# - appel = changement de contexte : trace de l'exécution vs. séquentialité des instructions écrites 
-#     - dynamique vs. statique  
-# - appelant vs. appelé : le rôle de l'appel, le rôle du `retur``
-# - portée des variables : variables locales vs. variables plus globales  
-# - l'effet de bord est indésirable  
-
-# ### Ce qu'il faut savoir faire 
-# 
-# **Cadre** : en/pour python 
-# 
-# - définir et écrire la spécification d'une fonction qui réalise un traitement décrit en français, ou qui résoud un problème (simple) décrit en français  
-# - définir et écrire des appels simples (tests unitaires) 
-# - définir et écrire l'implémentation d'une fonction associée à une spécification 
-
-# ### Pré-requis technique
-# 
-# Dans/avec un notebook jupyter :
-# - savoir mettre en oeuvre de la programmation simple en python (niveau semestre 1) dans un notebook jupyter 
-# - savoir documenter cette programmation (énoncés, descriptions, ...) avec markdown
+# Un autre chapitre complétera l'apprentissage de la notion de sous-programme avec des aspects plus techniques et leurs traitements en python. 
 
 # ## Vocabulaire et généralités
 # 
-# Le terme **sous-programme** est un (sous-)ensemble de lignes de code, souvent paramétrable, que l'on désigne d'un nom pour ré-utiliser "directement" ces lignes de codes à l'aide de ce nom. On _appelle_ ce nom pour exécuter ces lignes de codes. Cet appel contient aussi la valeur des paramètres à traiter par l'exécution.
+# De façon imagée, une fonction en mathématiques est un traitement un peu compliqué que l'on décrit de façon synthétique par un symbole ou un nom, souvent réduit à la seule lettre $f$ -- mais que bien sûr, on se souvient des fonctions $\cos, \sin$, ... 
 # 
-# De façon imagée, un sous-programme peut-être vue comme une boîte opaque qui "prends des choses" en entrée (les paramètres), effectue des traitements et fourni un "résultat" en sortie -- dans le cas d'une fonction. 
+# On peut ainsi appliquer ce traitement facilement à des valeurs arbitraires en notant par exemple $f(3.2)$ ou $\cos(\pi/4)$ l'application de ces fonctions et en identifiant ces écritures aux valeurs numériques correspondantes, par exemple $\sqrt(2)/2$ pour la seconde écriture. 
+# 
+# La notion de sous-programme, qui englobe les notions de fonction et de procédure, reprend cette démarche _de notation synthétique et paramétrable d'un traitement compliqué_ dans le contexte d'un traitement informatique.
+
+# - Le terme **sous-programme** est un (sous-)ensemble de lignes de code, souvent paramétrable, que l'on désigne d'un nom pour ré-utiliser "directement" ces lignes de codes à l'aide de ce nom. 
+# - On **appelle** ce nom pour exécuter ces lignes de codes. 
+# - Cet appel contient aussi **la valeur des paramètres à traiter** par l'exécution.
+# 
+# De façon imagée encore, un sous-programme peut-être vu comme une boîte opaque qui "prends des choses" en entrée (les paramètres), effectue des traitements qui dépendent de ces paramètres et fourni un "résultat" en sortie -- dans le cas d'une fonction. 
 # La boîte porte le nom du sous-programme.
 # Elle est opaque : je peux m'en servir, je connais **ce qu'elle fait**, je n'ai pas besoin de savoir **comment** elle le fait.
 # 
 # Une analogie facile : je peux me servir d'une voiture sans savoir comment la mécanique ou l'électronique fonctionnent.
-# 
+
 # Une **fonction** est un sous-programme qui **calcule et renvoie** une (ou des) valeur(s).  
 # - exemple : _je_ calcule le double d'une valeur donnée en entrée et _je_ retourne (ou renvoie) ce résultat comme sortie.
 # 
@@ -68,6 +50,15 @@
 # Donc par la suite, on utilisera surtout le terme _fonction_ mais on ne manquera pas d'indiquer lorsqu'une fonction python est une procédure au sens défini ci-dessus.
 
 # ## Introduction avec des exemples
+# 
+# Vous avez déjà rencontré _et utilisé_ des fonctions python "sans le savoir" -- par exemples la fonction mathématique `sqrt()` et la procédure d'écriture à l'écran `print()`.
+# 
+# Il est important de distinguer :
+# 
+# - l'utilisation de fonctions "existantes"
+# - la définition de nouvelles fonctions
+# 
+# (C'est un peu la poule et l'oeuf car une fonction existante a bien été définie avant d'exister :)
 
 # ### Les fonctions numériques du collège-lycée.
 # 
@@ -156,17 +147,21 @@ plt.title("f(x)=2x+1")
 #             - de l'évaluation d'expressions,
 #             - de l'évaluation de (l'appel) de fonction,
 #         - effectuer des tracés, ...
+
 # 2. 
 #     - La définition a une forme très semblable à l'expression mathématique avec un  (ou des) **paramètre**  ou aussi **paramètre _formel_** $x$, et **des parenthèses** : f(x). 
 #     - Elle contient (au moins) un `return` qui correspond à un résultat fourni par la fonction. 
 #     - On dit ainsi que ce résultat est **retourné** par la fonction.   
-# 3.
+
+# 3. 
+# 
 #     - Les appels, comme en math, correspondent à "remplacer" `x` par une valeur numérique donnée
 #     - cette valeur d'appel est appelée **argument** ou aussi **paramètre _effectif_** (de l'appel).    
-# 4. 
-#     - **Important.** 
-#         - Les **seuls** `print` de ces exemples s'appliquent à des _valeurs retournées_ par la fonction f
-#         - **Aucun `print` dans la définition de f**.
+
+# 4. **Important.** 
+# 
+#     - Les **seuls** `print` de ces exemples s'appliquent à des _valeurs retournées_ par la fonction f
+#     - **Aucun `print` dans la définition de f**.
 
 # ### Les fonctions mathématiques prédéfinies
 # 
@@ -199,16 +194,11 @@ print(c)
 #     - ici une variable résultat : `c`, 
 #     - ou aussi un terme d'une expression : `cos(pi/3)**2 + sin(pi/3)**2`
 # * vocabulaire : _argument_ ou _paramètre effectif_
-# 
+
 # **Appeler une fonction :** 
 # 
 # * ici, on _utilise_ le nom `cos` de la fonction trigonométrique _cosinus_ pour obtenir la valeur de cette fonction pour l'argument d'entrée fourni.    
 # * on voit bien que cet appel ne nécessite pas de connaitre _comment_ cette fonction calcule le résultat qu'elle renvoie (ou retourne).  Cette fonction est bien vue comme une boîte opaque (une _boîte noire_).
-# 
-# Cet exemple permet d'introduire deux notions complémentaires (et différentes) :
-# 
-# * **la spécification**  = ce que ça fait : OK = le QUOI 
-# * **une implémentation** = comment ça le fait : ? = le COMMENT  
 
 # **Commentaires**  
 # 
@@ -219,8 +209,7 @@ print(c)
 # * Ligne 2 : _à gauche_ de l'affectation  : valeur-résultat affectée dans la variable `c`
 # 
 # * Ligne 3 : affichage de la valeur _retournée_  
-# 
-# 
+
 # <div class="alert alert-block alert-info">
 #     
 # **A retenir** : Les **parenthèses (...)** : c'est à ça qu'on reconnait une fonction !  
@@ -233,6 +222,11 @@ print(c)
 # **A retenir** : la construction `from module import fonction1, fonction2` permet d'utiliser les `fonctions` (1, 2, ...) définies dans la bibliothèque `module`
 # 
 # </div>
+
+# Cet exemple permet d'introduire deux notions complémentaires **et différentes** :
+# 
+# * **la spécification**  = ce que ça fait : OK = le QUOI 
+# * **une implémentation** = comment ça le fait : ? = le COMMENT  
 
 # **Digression** pour les curieuses et les curieux : précision numérique ? 
 # 
@@ -811,7 +805,9 @@ print(vrai_ou_faux)
 
 
 # appels avec une variable
-n = int(input("n premières puissances de 2.0 pour n = "))
+
+#n = int(input("n premières puissances de 2.0 pour n = "))
+n = 5
 for i in range(n+1):
     print("2 **", i, "=", puissance(2, i))
 
@@ -819,8 +815,11 @@ print("cas particulier")
 print(puissance(2.0, 0))
 
 # appels avec des variables
-p = float(input("n premières puissances de p pour p = "))
-n = int(input("et n = "))
+
+#p = float(input("n premières puissances de p pour p = "))
+#n = int(input("et n = "))
+p = 3
+n = 4
 
 for i in range(n+1):
     print(puissance(p,i))
@@ -1224,10 +1223,3 @@ for (v,d) in ("Carca", "11"), ("Perpi","66"), ("Montpell", "34"), ("Foix", "09")
 # 
 # - Pourquoi `afficher_pref_dept()` n'est pas une fonction excepté pour python ?
 # 
-html généré avec :
-
-jupyter nbconvert --to html_embed --template toc2  1-fonctions.ipynb
-slides générés avec :
-    
-jupyter nbconvert --to slides --SlidesExporter.reveal_scroll=True --SlidesExporter.reveal_transition=none --SlidesExporter.reveal_theme=white  1-fonctions.ipynb
-

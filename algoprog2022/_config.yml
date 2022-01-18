@@ -21,9 +21,9 @@ bibtex_bibfiles:
 
 # Information about where the book exists on the web
 repository:
-  url: https://phillanglois.github.io/Algo-Prog  # Online location of your book
+  url: https://github.com/phillanglois/Algo-Prog/algoprog2022 # Online location of your book
   path_to_book: algoprog2022  # Optional path to your book, relative to the repository root
-  branch: master  # Which branch of the repository should be used when creating links (optional)
+  branch: main  # Which branch of the repository should be used when creating links (optional)
 
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
