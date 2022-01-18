@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3. Annexe : les booléens en python (&gt;3.6) &#8212; Algo-Prog 2022</title>
+    <title>Annexe : les booléens en python (&gt;3.6) &#8212; Algo-Prog 2022</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,7 +53,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="2. Compétences" href="competences-2022.html" />
+    <link rel="next" title="Les ‘ndarray’ : de vrais tableaux en python" href="a2-ndarray.html" />
+    <link rel="prev" title="Modules utiles" href="11-modules-utiles.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -92,25 +93,118 @@
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="../bonjour.html">
+   Bienvenu en Algo-Prog !
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Présentation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
   <a class="reference internal" href="0-presentation-2022.html">
    Algorithmique et Programmation en 2022
   </a>
  </li>
-</ul>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="1-fonctions.html">
-   1. Sous-programmes : fonctions et procédures
-  </a>
- </li>
  <li class="toctree-l1">
   <a class="reference internal" href="competences-2022.html">
-   2. Compétences
+   Compétences
   </a>
  </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Les bases
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="1-fonctions.html">
+   Fonctions, procédures, sous-programmes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2-boucles-avancees.html">
+   Boucles, tableaux et fonctions : compléments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3-ES-fichiers.html">
+   Les entrées-sorties avec des fichiers
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Algorithmique
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="6-recursivite.html">
+   Récursivité
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="8-rechercher.html">
+   Rechercher
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10-trier.html">
+   Trier
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Programmation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="5-types_composes.html">
+   Les types composés
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="7-fonctions-avancees.html">
+   Sous-programme et affectation – aspects avancés
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="9-ES-avancees.html">
+   Les entrées-sorties (E/S) : aspects avancés
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="11-modules-utiles.html">
+   Modules utiles
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Annexes
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   3. Annexe : les booléens en python (&gt;3.6)
+   Annexe : les booléens en python (&gt;3.6)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="a2-ndarray.html">
+   Les ‘ndarray’ : de vrais tableaux en python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="a3-exceptions.html">
+   Exceptions
   </a>
  </li>
 </ul>
@@ -219,27 +313,27 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#synthese-qui-suffit-en-l1">
-   3.1. Synthèse qui suffit en L1
+   Synthèse qui suffit en L1
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#valeurs-booleennes">
-   3.2. Valeurs booléennes
+   Valeurs booléennes
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conversion-en-une-valeur-booleenne">
-   3.3. Conversion en une valeur booléenne
+   Conversion en une valeur booléenne
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#objets-et-booleens">
-   3.4. Objets et booléens
+   Objets et booléens
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#operations-booleennes-and-or-not">
-   3.5. Opérations booléennes —
+   Opérations booléennes —
    <code class="docutils literal notranslate">
     <span class="pre">
      and
@@ -261,7 +355,7 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#comparaisons">
-   3.6. Comparaisons
+   Comparaisons
   </a>
  </li>
 </ul>
@@ -286,27 +380,27 @@
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#synthese-qui-suffit-en-l1">
-   3.1. Synthèse qui suffit en L1
+   Synthèse qui suffit en L1
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#valeurs-booleennes">
-   3.2. Valeurs booléennes
+   Valeurs booléennes
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conversion-en-une-valeur-booleenne">
-   3.3. Conversion en une valeur booléenne
+   Conversion en une valeur booléenne
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#objets-et-booleens">
-   3.4. Objets et booléens
+   Objets et booléens
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#operations-booleennes-and-or-not">
-   3.5. Opérations booléennes —
+   Opérations booléennes —
    <code class="docutils literal notranslate">
     <span class="pre">
      and
@@ -328,7 +422,7 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#comparaisons">
-   3.6. Comparaisons
+   Comparaisons
   </a>
  </li>
 </ul>
@@ -341,7 +435,7 @@
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="annexe-les-booleens-en-python-3-6">
-<h1><span class="section-number">3. </span>Annexe : les booléens en python (&gt;3.6)<a class="headerlink" href="#annexe-les-booleens-en-python-3-6" title="Permalink to this headline">¶</a></h1>
+<h1>Annexe : les booléens en python (&gt;3.6)<a class="headerlink" href="#annexe-les-booleens-en-python-3-6" title="Permalink to this headline">¶</a></h1>
 <p>Une mise au point sur les booléens en python</p>
 <ul class="simple">
 <li><p>synthétique</p></li>
@@ -349,7 +443,7 @@
 <li><p>avec <strong>ce qui est important à retenir</strong> écrit en <strong>gras</strong>.</p></li>
 </ul>
 <div class="section" id="synthese-qui-suffit-en-l1">
-<h2><span class="section-number">3.1. </span>Synthèse qui suffit en L1<a class="headerlink" href="#synthese-qui-suffit-en-l1" title="Permalink to this headline">¶</a></h2>
+<h2>Synthèse qui suffit en L1<a class="headerlink" href="#synthese-qui-suffit-en-l1" title="Permalink to this headline">¶</a></h2>
 <p>Python définit :</p>
 <ul class="simple">
 <li><p>deux valeurs booléennes <code class="docutils literal notranslate"><span class="pre">False</span></code> et <code class="docutils literal notranslate"><span class="pre">True</span></code></p></li>
@@ -365,7 +459,7 @@ sauf :</p>
 <p>où elle retourne <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
 </div>
 <div class="section" id="valeurs-booleennes">
-<h2><span class="section-number">3.2. </span>Valeurs booléennes<a class="headerlink" href="#valeurs-booleennes" title="Permalink to this headline">¶</a></h2>
+<h2>Valeurs booléennes<a class="headerlink" href="#valeurs-booleennes" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>Les <a class="reference external" href="https://docs.python.org/fr/3.7/library/stdtypes.html#truth">valeurs booléennes</a> sont les deux objets constants <strong>False</strong> et <strong>True</strong>.</p>
 </div></blockquote>
@@ -377,7 +471,7 @@ sauf :</p>
 </div></blockquote>
 </div>
 <div class="section" id="conversion-en-une-valeur-booleenne">
-<h2><span class="section-number">3.3. </span>Conversion en une valeur booléenne<a class="headerlink" href="#conversion-en-une-valeur-booleenne" title="Permalink to this headline">¶</a></h2>
+<h2>Conversion en une valeur booléenne<a class="headerlink" href="#conversion-en-une-valeur-booleenne" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>La fonction native <strong><code class="docutils literal notranslate"><span class="pre">bool()</span></code></strong> peut être utilisée pour convertir n’importe quelle valeur en booléen <strong>tant que la valeur peut être interprétée en une valeur de vérité</strong>.</p>
 </div></blockquote>
@@ -405,7 +499,7 @@ Quand cette méthode n’est pas définie, <strong><strong>len</strong>() est ap
 </div></blockquote>
 </div>
 <div class="section" id="objets-et-booleens">
-<h2><span class="section-number">3.4. </span>Objets et booléens<a class="headerlink" href="#objets-et-booleens" title="Permalink to this headline">¶</a></h2>
+<h2>Objets et booléens<a class="headerlink" href="#objets-et-booleens" title="Permalink to this headline">¶</a></h2>
 <p>Tout objet peut être comparé à une valeur booléenne, typiquement dans une condition if ou while ou comme opérande des opérations booléennes ci-dessous.</p>
 <blockquote>
 <div><p>Par défaut, <strong>tout objet est considéré vrai</strong><br />
@@ -1232,7 +1326,7 @@ class str(object)
 <p>Quizz: On regarde bien les dernières lignes des deux dernières catégories et on explique pourquoi on n’est pas surpris.</p>
 </div>
 <div class="section" id="operations-booleennes-and-or-not">
-<h2><span class="section-number">3.5. </span>Opérations booléennes — <code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, <code class="docutils literal notranslate"><span class="pre">not</span></code><a class="headerlink" href="#operations-booleennes-and-or-not" title="Permalink to this headline">¶</a></h2>
+<h2>Opérations booléennes — <code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, <code class="docutils literal notranslate"><span class="pre">not</span></code><a class="headerlink" href="#operations-booleennes-and-or-not" title="Permalink to this headline">¶</a></h2>
 <p>Ce sont les opérations booléennes, classées par priorité ascendante :</p>
 <blockquote>
 <div><p><strong>x or y</strong> : si x est faux, alors y, sinon x<br />
@@ -1255,7 +1349,7 @@ En pratique, dès que l’opérande de gauche a été évalué (à <code class="
 <p>Quizz : A votre avis, permuter les opérandes de la condition précédente est sans conséquence ? (True/False :)</p>
 </div>
 <div class="section" id="comparaisons">
-<h2><span class="section-number">3.6. </span>Comparaisons<a class="headerlink" href="#comparaisons" title="Permalink to this headline">¶</a></h2>
+<h2>Comparaisons<a class="headerlink" href="#comparaisons" title="Permalink to this headline">¶</a></h2>
 <p>Il y a huit opérations de comparaison en Python.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">==</span></code> : égal</p></li>
@@ -1300,12 +1394,19 @@ En pratique, dès que l’opérande de gauche a été évalué (à <code class="
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="competences-2022.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="11-modules-utiles.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">2. </span>Compétences</p>
+            <p class="prev-next-title">Modules utiles</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="a2-ndarray.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Les ‘ndarray’ : de vrais tableaux en python</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             
