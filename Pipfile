@@ -1,0 +1,42 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+numpy = "*"
+notebook = "*"
+autopep8 = "*"
+matplotlib = "*"
+bigfloat = "*"
+pandoc = "*"
+jupyterlab = "*"
+pandas = "*"
+jupyter-book = "*"
+ghp-import = "*"
+nbdime = "*"
+jupyter-contrib-nbextensions = "*"
+hide-code = "*"
+nbgrader = "*"
+nbconvert = {extras = ["webpdf"], version = "*"}
+pyppeteer = "*"
+pytest = "==6.2.4"
+pytest-cov = "*"
+pytest-rerunfailures = "*"
+pytest-xdist = "==2.4.0"
+coverage = "*"
+selenium = "*"
+sphinx-rtd-theme = "*"
+sphinx-autodoc-typehints = "*"
+codecov = "*"
+nbval = "*"
+requests-mock = "*"
+jupyter_nbextensions_configurator = "*"
+Sphinx = "*"
+voila = "*"
+jupytext = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"
