@@ -29,6 +29,7 @@ requests-mock = "*"
 Sphinx = "*"
 voila = "*"
 jupyter = "*"
+nbgrader = "*"
 
 [dev-packages]
 
