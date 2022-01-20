@@ -28,6 +28,7 @@ nbval = "*"
 requests-mock = "*"
 Sphinx = "*"
 voila = "*"
+jupyter = "*"
 
 [dev-packages]
 
