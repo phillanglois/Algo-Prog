@@ -34,3 +34,7 @@ parts:
     - file: cm/a1-booleens
     - file: cm/a2-ndarray
     - file: cm/a3-exceptions
+  - caption: TD
+    chapters:
+    - file: td/prealable-td
+    - file: td/td1
