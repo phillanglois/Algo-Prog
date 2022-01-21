@@ -45,7 +45,7 @@ Fonctions, plutôt numériques et cas scalaire : en-tête, appels,
     qui calcule et retourne la moyenne de 4 valeurs flottantes. On
     supposera que ces 4 valeurs sont entrées au clavier.
 
-(exo:approx)
+(exo:approx)=
 ### Exercice 
 
 On reprend l'algorithme qui teste si une année est bissextile, l'année
@@ -67,7 +67,7 @@ après le traitement (voir exercice 4, feuille TD no 2 du semestre 1).
 2.  Ecrire un programme qui utilise cette fonction pour traiter un
     nombre arbitraire de triangles entrées au clavier par l'utilisateur.
 
-(exo:suites) 
+(exo:suites)= 
 ###Exercice 
 
 On rappelle quelques suites et séries numériques classiques.
@@ -104,7 +104,7 @@ Cet exercice utilise la fonction `randint` du module `random`.
 3.  Faire varier le nombre de tirages et vérifier la qualité de la
     fonction `randint`.
 
-(exo:disques)
+(exo:disques)=
 ### Exercice
 
 (Adapté d'un examen de semestre 1.)
@@ -138,7 +138,7 @@ $r_i < r_e$, comme illustré sur le schéma ci-dessous avec 4 disques.
     question 1 en une version qui utilise les fonctions
     précédentes.
 
-(exo:fact)
+(exo:fact)=
 ### Exercice
 
 La valeur de factorielle (de) $n$, où $n$ est un entier positif, est :
@@ -213,7 +213,7 @@ représentations graphiques qui illustrent les approximations mentionnées.
 Reprendre l'exercice [](exo:disques)en définissant une fonction qui calcule la surface d'un disque découpé.
 
 
-(exo:seconddegre) 
+(exo:seconddegre)= 
 ### Exercice 
 
 Les racines $x_1$ et $x_2$ d'une équation du second degré
@@ -292,5 +292,5 @@ def permuter(a, b : int) -> None:
 1.  Ecrire le corps cette permutation de deux façons différentes : avec
    ou sans variable supplémentaire.
 2.  Les appliquer à deux valeurs arbitraires.
-3.  Que constatez-vous ? Utiliser [pythontutor](pythontutor.com) et expliquer le comportement observé.
+3.  Que constatez-vous ? Utiliser [pythontutor](https://pythontutor.com) et expliquer le comportement observé.
 4.  Proposer une alternative qui effectue le traitement attendu.

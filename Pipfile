@@ -32,6 +32,9 @@ jupyter = "*"
 nbgrader = "*"
 jupyterlab = "*"
 traitlets = "*"
+jupyter-contrib-nbextensions = "*"
+jupyterlab-spellchecker = "*"
+jupyterlab-language-pack-fr-fr = "*"
 
 [dev-packages]
 
