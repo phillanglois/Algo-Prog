@@ -30,6 +30,8 @@ Sphinx = "*"
 voila = "*"
 jupyter = "*"
 nbgrader = "*"
+jupyterlab = "*"
+traitlets = "*"
 
 [dev-packages]
 
