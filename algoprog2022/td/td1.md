@@ -113,7 +113,10 @@ Une machine découpe, dans une plaque carrée de longueur $\ell,$ des
 disques de rayon $r_e$ percés d'un trou circulaire de rayon $r_i$, avec
 $r_i < r_e$, comme illustré sur le schéma ci-dessous avec 4 disques.
 
-![](fig/disques.png)
+```{figure} ./fig/disques.png
+:name: disques
+:height: 100px
+```
 
 **Rappel :** l'aire d'un disque de rayon $r$ est égale à $\pi r^2$, et en Python une valeur pour $\pi$ est disponible dans le module `math`.
 
