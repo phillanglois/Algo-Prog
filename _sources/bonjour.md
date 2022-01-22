@@ -15,19 +15,28 @@ La première séance de CM a eu lieu en semaine 3.
     - CM : lire en entier le chapitre "Fonctions, procédures et sous-programmes"
     - Compétences : Savoir faire et pré-requis technique
     - Quizz 1
-    - TD : installer le notebook jupyter sur sa machine personnelle
+    - TD : installer le notebook jupyter sur sa machine personnelle, à défaut savoir utiliser une solution en ligne
 
 ## Semaine 4 
 
-- [_Motto_](https://www.linguee.fr/anglais-francais/traduction/motto.html) : "Séparer les entrées-sorties des traitements"
-- Avant le TD :
-    - re-faire en entier le sujet d'examen du semestre 1 (en ligne sous moodle)
-    - ($\star$) le travail précédent sera fait sous jupyter notebook 
-- Objectifs séance de TD :
-    - savoir mettre en oeuvre de la programmation simple en python (niveau semestre 1) dans un notebook jupyter
-    - savoir documenter cette programmation (énoncés, descriptions, …) avec markdown
-    - sujet d'examen du semestre 1 sous jupyter notebook 
-    - ($\star$)  résolution avec des fonctions des exercices 5, 6, 7, 8, 9 avec un choix pertinent des paramètres.
-    - questions sur le chapitre "Fonctions, ...
+[_Motto_](https://www.linguee.fr/anglais-francais/traduction/motto.html) : "Séparer les entrées-sorties des traitements"
+
+Objectifs semaine :
+
+- savoir mettre en oeuvre de la programmation simple en python (niveau semestre 1) dans un notebook jupyter
+- savoir documenter cette programmation (énoncés, descriptions, …) avec markdown
+- mettre sous forme de fonctions des traitements simples avec des paramètres scalaires : application au sujet d'examen du semestre 1
+
+Conseils avant TD/CM 
+
+-  reprendre en entier le sujet d'examen du semestre 1 (en ligne sous moodle)
+- ($\star$) faire ce travail sous jupyter notebook 
+- chapitre "Fonctions" 
+
+Objectifs séance de TD 
+
+- sujet d'examen du semestre 1 sous jupyter notebook : résolution avec des fonctions des exercices 2, 3 et 6
+- ($\star$)  résolution avec des fonctions de l'exercice 5 avec un choix pertinent des paramètres (les  exercices 7, 8, 9 seront traités avec des fonctions après le chapitre suivant).
+- ($\star$) exercices feuille TD1
 
 <!-- #endregion -->
