@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fonctions, procédures, sous-programmes &#8212; Algo-Prog 2022</title>
+    <title>Fonctions &#8212; Algo-Prog 2022</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -123,7 +123,7 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Fonctions, procédures, sous-programmes
+   Fonctions
   </a>
  </li>
  <li class="toctree-l1">
@@ -210,6 +210,23 @@
  <li class="toctree-l1">
   <a class="reference internal" href="a3-exceptions.html">
    Exceptions
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  TD
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../td/prealable-td.html">
+   Préalables
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../td/td1.html">
+   Feuille 1
   </a>
  </li>
 </ul>
@@ -301,18 +318,35 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#vocabulaire-et-generalites">
-   Vocabulaire et généralités
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction-avec-des-exemples">
-   Introduction avec des exemples
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#les-fonctions-numeriques-du-college-lycee">
-     Les fonctions numériques du collège-lycée.
+    <a class="reference internal nav-link" href="#generalites-et-vocabulaire-debut">
+     Généralités et vocabulaire (début)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#utiliser-une-fonction-existante">
+     Utiliser une fonction existante
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#appeler-pour-utiliser">
+       Appeler pour utiliser
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#vocabulaire-suite">
+       Vocabulaire (suite)
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definir-une-nouvelle-fonction-et-l-utiliser">
+     Définir une nouvelle fonction et l’utiliser
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
@@ -326,28 +360,16 @@
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#premiers-commentaires-et-vocabulaire-important">
-       Premiers commentaires et vocabulaire important
+      <a class="reference internal nav-link" href="#premiers-commentaires-et-vocabulaire-encore-important">
+       Premiers commentaires et vocabulaire (encore) important
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#les-fonctions-mathematiques-predefinies">
-     Les fonctions mathématiques prédéfinies
+    <a class="reference internal nav-link" href="#pourquoi-des-sous-programmes-des-fonctions">
+     Pourquoi des sous-programmes ? (des fonctions ?)
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#appel-utilisation-de-fonction-predefinie-existante">
-       Appel : utilisation de fonction prédéfinie existante
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#vocabulaire-suite">
-       Vocabulaire (suite)
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#distinguer-le-quoi-du-comment">
@@ -362,8 +384,12 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#pourquoi-des-sous-programmes-des-fonctions">
-     Pourquoi des sous-programmes ? (des fonctions ?)
+    <a class="reference internal nav-link" href="#star-digression-de-fin-de-section">
+     (
+     <span class="math notranslate nohighlight">
+      \(\star\)
+     </span>
+     ) Digression de fin de section
     </a>
    </li>
   </ul>
@@ -394,54 +420,41 @@
     <a class="reference internal nav-link" href="#l-appel-d-une-fonction">
      L’appel d’une fonction
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#effet-d-un-appel-sur-le-sequencement-des-instructions-executees">
-       Effet d’un appel sur le séquencement des instructions exécutées
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#le-corps-et-le-retour-de-valeur">
-     Le corps et le retour de valeur
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#return">
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         return
-        </span>
-       </code>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#return-terminaison-de-la-fonction">
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         return
-        </span>
-       </code>
-       = terminaison de la fonction
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercice">
-     Exercice
+    <a class="reference internal nav-link" href="#le-corps-et-le-retour-de-valeur-avec-return">
+     Le corps et le retour de valeur avec
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       return
+      </span>
+     </code>
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#appel-appelant-appele-return-appele-appelant">
-   Appel : appelant -&gt; appelé ; return : appelé -&gt; appelant
+  <a class="reference internal nav-link" href="#l-appel-de-fonction-rompt-le-sequencement-des-instructions-executees">
+   L’appel de fonction rompt le séquencement des instructions exécutées
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
+    <a class="reference internal nav-link" href="#appel-appelant-appele-return-appele-appelant">
+     Appel = appelant -&gt; appelé ; return = appelé -&gt; appelant
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#return-terminaison-du-traitement-de-l-appel-de-fonction-et-retour-au-cadre-appelant">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       return
+      </span>
+     </code>
+     = terminaison du traitement de l’appel de fonction et retour au cadre appelant
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercice">
      Exercice
     </a>
    </li>
@@ -457,7 +470,7 @@
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
+    <a class="reference internal nav-link" href="#id1">
      Exercice
     </a>
    </li>
@@ -530,7 +543,7 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id3">
+    <a class="reference internal nav-link" href="#id2">
      Exercice
     </a>
    </li>
@@ -590,7 +603,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Fonctions, procédures, sous-programmes</h1>
+                <h1>Fonctions</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -601,18 +614,35 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#vocabulaire-et-generalites">
-   Vocabulaire et généralités
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction-avec-des-exemples">
-   Introduction avec des exemples
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#les-fonctions-numeriques-du-college-lycee">
-     Les fonctions numériques du collège-lycée.
+    <a class="reference internal nav-link" href="#generalites-et-vocabulaire-debut">
+     Généralités et vocabulaire (début)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#utiliser-une-fonction-existante">
+     Utiliser une fonction existante
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#appeler-pour-utiliser">
+       Appeler pour utiliser
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#vocabulaire-suite">
+       Vocabulaire (suite)
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definir-une-nouvelle-fonction-et-l-utiliser">
+     Définir une nouvelle fonction et l’utiliser
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
@@ -626,28 +656,16 @@
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#premiers-commentaires-et-vocabulaire-important">
-       Premiers commentaires et vocabulaire important
+      <a class="reference internal nav-link" href="#premiers-commentaires-et-vocabulaire-encore-important">
+       Premiers commentaires et vocabulaire (encore) important
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#les-fonctions-mathematiques-predefinies">
-     Les fonctions mathématiques prédéfinies
+    <a class="reference internal nav-link" href="#pourquoi-des-sous-programmes-des-fonctions">
+     Pourquoi des sous-programmes ? (des fonctions ?)
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#appel-utilisation-de-fonction-predefinie-existante">
-       Appel : utilisation de fonction prédéfinie existante
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#vocabulaire-suite">
-       Vocabulaire (suite)
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#distinguer-le-quoi-du-comment">
@@ -662,8 +680,12 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#pourquoi-des-sous-programmes-des-fonctions">
-     Pourquoi des sous-programmes ? (des fonctions ?)
+    <a class="reference internal nav-link" href="#star-digression-de-fin-de-section">
+     (
+     <span class="math notranslate nohighlight">
+      \(\star\)
+     </span>
+     ) Digression de fin de section
     </a>
    </li>
   </ul>
@@ -694,54 +716,41 @@
     <a class="reference internal nav-link" href="#l-appel-d-une-fonction">
      L’appel d’une fonction
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#effet-d-un-appel-sur-le-sequencement-des-instructions-executees">
-       Effet d’un appel sur le séquencement des instructions exécutées
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#le-corps-et-le-retour-de-valeur">
-     Le corps et le retour de valeur
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#return">
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         return
-        </span>
-       </code>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#return-terminaison-de-la-fonction">
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         return
-        </span>
-       </code>
-       = terminaison de la fonction
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercice">
-     Exercice
+    <a class="reference internal nav-link" href="#le-corps-et-le-retour-de-valeur-avec-return">
+     Le corps et le retour de valeur avec
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       return
+      </span>
+     </code>
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#appel-appelant-appele-return-appele-appelant">
-   Appel : appelant -&gt; appelé ; return : appelé -&gt; appelant
+  <a class="reference internal nav-link" href="#l-appel-de-fonction-rompt-le-sequencement-des-instructions-executees">
+   L’appel de fonction rompt le séquencement des instructions exécutées
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
+    <a class="reference internal nav-link" href="#appel-appelant-appele-return-appele-appelant">
+     Appel = appelant -&gt; appelé ; return = appelé -&gt; appelant
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#return-terminaison-du-traitement-de-l-appel-de-fonction-et-retour-au-cadre-appelant">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       return
+      </span>
+     </code>
+     = terminaison du traitement de l’appel de fonction et retour au cadre appelant
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercice">
      Exercice
     </a>
    </li>
@@ -757,7 +766,7 @@
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
+    <a class="reference internal nav-link" href="#id1">
      Exercice
     </a>
    </li>
@@ -830,7 +839,7 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id3">
+    <a class="reference internal nav-link" href="#id2">
      Exercice
     </a>
    </li>
@@ -889,18 +898,23 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="fonctions-procedures-sous-programmes">
-<h1>Fonctions, procédures, sous-programmes<a class="headerlink" href="#fonctions-procedures-sous-programmes" title="Permalink to this headline">¶</a></h1>
-<p>version 2022-01-18 16:43:29, PhL.</p>
-<p>Dans ce premier chapitre, nous abordons une notion importante qui peut se présenter avec différentes appellations : fonction ou procédure ou <strong>sous-programme</strong>.
-Vous connaissez les fonctions en mathématiques depuis le collège tandis que la notion de sous-programme à une consonance très “programmation”.</p>
-<p>Le cadre de ce chapitre est générique, c’est-à-dire que ces différentes notions et le vocabulaire associé sont présents dans la très grande majorité des <em>langages de programmation impérative</em>.
-Nous utilisons bien sûr la syntaxe python3 en conservant une indépendance maximale par rapport aux spécificités de python afin de mettre en valeur ces notions de la façon la plus générique possible.</p>
-<p>Un autre chapitre complétera l’apprentissage de la notion de sous-programme avec des aspects plus techniques et leurs traitements en python.</p>
-<div class="section" id="vocabulaire-et-generalites">
-<h2>Vocabulaire et généralités<a class="headerlink" href="#vocabulaire-et-generalites" title="Permalink to this headline">¶</a></h2>
+  <div class="tex2jax_ignore mathjax_ignore section" id="fonctions">
+<h1>Fonctions<a class="headerlink" href="#fonctions" title="Permalink to this headline">¶</a></h1>
+<p>Ven 21 jan 2022 20:03:11 CET. PhL.</p>
+<p>Dans ce premier chapitre, nous abordons une notion importante qui fait l’objet de différentes appellations : fonction, procédure ou <strong>sous-programme</strong>. (Le titre de ce chapitre à longtemps été “Fonctions, procédures, sous-programmes”).
+Vous connaissez les fonctions en mathématiques depuis le collège.
+La notion de sous-programme à une consonance très “programmation”.
+Pourtant elles partagent beaucoup de points communs.</p>
+<p>Ce chapitre est le plus générique possible : les différents aspects et le vocabulaire associés à la notion de fonction existent dans la très grande majorité des <em>langages de programmation impérative</em>.
+Nous nous efforcerons de compléter ces notions génériques avec des spécificités de python importantes pour votre pratique de la programmation.
+Nous utilisons bien sûr la syntaxe python3 – le titre déjà !</p>
+<p>Un chapitre ultérieurs complète cet apprentissage de la notion de fonction avec des aspects plus techniques et leurs traitements en python.</p>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="generalites-et-vocabulaire-debut">
+<h3>Généralités et vocabulaire (début)<a class="headerlink" href="#generalites-et-vocabulaire-debut" title="Permalink to this headline">¶</a></h3>
 <p>De façon imagée, une fonction en mathématiques est un traitement un peu compliqué que l’on décrit de façon synthétique par un symbole ou un nom, souvent réduit à la seule lettre <span class="math notranslate nohighlight">\(f\)</span> – mais que bien sûr, on se souvient des fonctions <span class="math notranslate nohighlight">\(\cos, \sin\)</span>, …</p>
-<p>On peut ainsi appliquer ce traitement facilement à des valeurs arbitraires en notant par exemple <span class="math notranslate nohighlight">\(f(3.2)\)</span> ou <span class="math notranslate nohighlight">\(\cos(\pi/4)\)</span> l’application de ces fonctions et en identifiant ces écritures aux valeurs numériques correspondantes, par exemple <span class="math notranslate nohighlight">\(\sqrt(2)/2\)</span> pour la seconde écriture.</p>
+<p>On peut ainsi appliquer ce traitement facilement à des valeurs arbitraires en notant par exemple <span class="math notranslate nohighlight">\(f(3.2)\)</span> ou <span class="math notranslate nohighlight">\(\cos(\pi/4)\)</span> l’application de ces fonctions et en identifiant ces écritures aux valeurs numériques correspondantes, par exemple <span class="math notranslate nohighlight">\(\sqrt 2/2\)</span> pour la seconde écriture.</p>
 <p>La notion de sous-programme, qui englobe les notions de fonction et de procédure, reprend cette démarche <em>de notation synthétique et paramétrable d’un traitement compliqué</em> dans le contexte d’un traitement informatique.</p>
 <ul class="simple">
 <li><p>Le terme <strong>sous-programme</strong> est un (sous-)ensemble de lignes de code, souvent paramétrable, que l’on désigne d’un nom pour ré-utiliser “directement” ces lignes de codes à l’aide de ce nom.</p></li>
@@ -915,7 +929,7 @@ Elle est opaque : je peux m’en servir, je connais <strong>ce qu’elle fait</s
 <ul class="simple">
 <li><p>exemple : <em>je</em> calcule le double d’une valeur donnée en entrée et <em>je</em> retourne (ou renvoie) ce résultat comme sortie.</p></li>
 </ul>
-<p>Une <strong>procédure</strong> est un sous-programme qui<strong>réalise une action</strong> – sans sans renvoyer quoi que ce soit.</p>
+<p>Une <strong>procédure</strong> est un sous-programme qui <strong>réalise une action</strong> – sans sans renvoyer quoi que ce soit.</p>
 <ul class="simple">
 <li><p>exemple : <em>j</em>’affiche l’heure du moment.
 Oui : “afficher” n’est pas “renvoyer”.</p></li>
@@ -925,21 +939,82 @@ Oui : “afficher” n’est pas “renvoyer”.</p></li>
 <p><strong>Spécificité python</strong> : il n’y a que des fonctions (pas de procédure).</p>
 </div>
 <p>Donc par la suite, on utilisera surtout le terme <em>fonction</em> mais on ne manquera pas d’indiquer lorsqu’une fonction python est une procédure au sens défini ci-dessus.</p>
-</div>
-<div class="section" id="introduction-avec-des-exemples">
-<h2>Introduction avec des exemples<a class="headerlink" href="#introduction-avec-des-exemples" title="Permalink to this headline">¶</a></h2>
 <p>Vous avez déjà rencontré <em>et utilisé</em> des fonctions python “sans le savoir” – par exemples la fonction mathématique <code class="docutils literal notranslate"><span class="pre">sqrt()</span></code> et la procédure d’écriture à l’écran <code class="docutils literal notranslate"><span class="pre">print()</span></code>.</p>
 <p>Il est important de distinguer :</p>
 <ul class="simple">
 <li><p>l’utilisation de fonctions “existantes”</p></li>
 <li><p>la définition de nouvelles fonctions</p></li>
 </ul>
-<p>(C’est un peu la poule et l’oeuf car une fonction existante a bien été définie avant d’exister :)</p>
-<div class="section" id="les-fonctions-numeriques-du-college-lycee">
-<h3>Les fonctions numériques du collège-lycée.<a class="headerlink" href="#les-fonctions-numeriques-du-college-lycee" title="Permalink to this headline">¶</a></h3>
+<p>C’est un peu la poule et l’oeuf car une fonction existante a bien été définie avant d’exister :)</p>
+</div>
+<div class="section" id="utiliser-une-fonction-existante">
+<h3>Utiliser une fonction existante<a class="headerlink" href="#utiliser-une-fonction-existante" title="Permalink to this headline">¶</a></h3>
+<p>Prenons l’exemple <strong>des fonctions mathématiques prédéfinies.</strong></p>
+<p>Les fonctions mathématiques connues comme les fonctions trigonométriques, logarithmes, exponentielles, puissances … sont “fournies avec le langage de programmation” mais sous la forme de <em>bibliothèques</em> de fonctions aussi appelées <em>modules</em> en python.</p>
+<div class="section" id="appeler-pour-utiliser">
+<h4>Appeler pour utiliser<a class="headerlink" href="#appeler-pour-utiliser" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">cos</span><span class="p">,</span> <span class="n">pi</span>
+<span class="c1"># pour utiliser la fonction cos et la valeur pi définis dans le module math</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">cos</span><span class="p">(</span><span class="n">pi</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span>
+<span class="c1"># calcul qui utilise cos et pi, puis affectation du résultat dans la variable c</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="c1"># affichage de la valeur de la variable c</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.5000000000000001
+</pre></div>
+</div>
+</div>
+</div>
+<p>Humm … pas très précis tout ça ! Voir la digression pour les curieuses et les curieux proposée en fin de cette section.</p>
+</div>
+<div class="section" id="vocabulaire-suite">
+<h4>Vocabulaire (suite)<a class="headerlink" href="#vocabulaire-suite" title="Permalink to this headline">¶</a></h4>
+<p>L’appel est caractérisé par :</p>
+<ul class="simple">
+<li><p>le <strong>nom</strong> de la fonction :  ici <code class="docutils literal notranslate"><span class="pre">cos(...)</span></code></p></li>
+<li><p>ses <strong>arguments d’entrée</strong> : ici la valeur <span class="math notranslate nohighlight">\(\pi\)</span>/3</p></li>
+<li><p>une valeur de <strong>retour</strong> (résultat, destination) :</p>
+<ul>
+<li><p>ici une variable résultat : <code class="docutils literal notranslate"><span class="pre">c</span></code>,</p></li>
+<li><p>ou aussi un terme d’une expression : <code class="docutils literal notranslate"><span class="pre">cos(pi/3)**2</span> <span class="pre">+</span> <span class="pre">sin(pi/3)**2</span></code></p></li>
+</ul>
+</li>
+<li><p>vocabulaire : <em>argument</em> ou <em>paramètre effectif</em></p></li>
+</ul>
+<p>Cet exemple contient uniquement un <em>appel de fonction</em> ; aucune définition des fonctions utilisées.</p>
+<ul class="simple">
+<li><p>ici, on <em>utilise</em> le nom <code class="docutils literal notranslate"><span class="pre">cos</span></code> de la fonction trigonométrique <em>cosinus</em> pour obtenir la valeur de cette fonction pour l’argument d’entrée fourni.</p></li>
+<li><p>on voit bien que cet appel ne nécessite pas de connaître <em>comment</em> cette fonction calcule le résultat qu’elle renvoie (ou retourne).  Cette fonction est bien vue comme une boîte opaque (une <em>boîte noire</em>).</p></li>
+</ul>
+<p><strong>Commentaires</strong></p>
+<ul class="simple">
+<li><p>Ligne 1 : fonction <code class="docutils literal notranslate"><span class="pre">cos</span></code> et valeur <code class="docutils literal notranslate"><span class="pre">pi</span></code> sont disponibles</p></li>
+<li><p>Ligne 2 : <em>à droite</em> de l’affectation (=) : <em>appel</em> de la fonction <code class="docutils literal notranslate"><span class="pre">cos(...)</span></code> pour l’<em>argument</em> <code class="docutils literal notranslate"><span class="pre">pi/3</span></code>.</p></li>
+<li><p>Ligne 2 : <em>à gauche</em> de l’affectation  : valeur-résultat affectée dans la variable <code class="docutils literal notranslate"><span class="pre">c</span></code></p></li>
+<li><p>Ligne 3 : affichage de la valeur <em>retournée</em></p></li>
+</ul>
+<div class="alert alert-block alert-info">
+<p><strong>A retenir</strong> : Les <strong>parenthèses (…)</strong> : c’est à ça qu’on reconnait une fonction !</p>
+</div>
+<div class="alert alert-block alert-info">
+<p><strong>A retenir</strong> : la construction
+<code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">module</span> <span class="pre">import</span> <span class="pre">fonction1,</span> <span class="pre">fonction2</span></code>
+permet d’utiliser les fonctions <code class="docutils literal notranslate"><span class="pre">fonction1</span></code> et <code class="docutils literal notranslate"><span class="pre">fonction2</span></code> définies dans la bibliothèque <code class="docutils literal notranslate"><span class="pre">module</span></code></p>
+</div></div>
+</div>
+<div class="section" id="definir-une-nouvelle-fonction-et-l-utiliser">
+<h3>Définir une nouvelle fonction et l’utiliser<a class="headerlink" href="#definir-une-nouvelle-fonction-et-l-utiliser" title="Permalink to this headline">¶</a></h3>
+<p>Donnons maintenant un exemple où <strong>nous</strong> définissons une fonction pour l’utiliser ensuite.</p>
 <div class="section" id="ecriture-mathematique-habituelle">
 <h4>Ecriture mathématique habituelle<a class="headerlink" href="#ecriture-mathematique-habituelle" title="Permalink to this headline">¶</a></h4>
-<p>Un exemple : la fonction affine <span class="math notranslate nohighlight">\(f(x) = 2x + 1\)</span></p>
+<p>Un exemple de fonctions numériques du collège-lycée : la fonction affine <span class="math notranslate nohighlight">\(f(x) = 2x + 1\)</span></p>
 <ul class="simple">
 <li><p>vous savez calculer (de tête) <span class="math notranslate nohighlight">\(f(0)\)</span>, <span class="math notranslate nohighlight">\(f(1)\)</span>, <span class="math notranslate nohighlight">\(f(-1)\)</span>, …</p></li>
 <li><p>vous connaissez sa représentation graphique : une droite de pente 2 et d’ordonnée à l’origine 1.</p></li>
@@ -947,9 +1022,14 @@ Oui : “afficher” n’est pas “renvoyer”.</p></li>
 </div>
 <div class="section" id="en-python">
 <h4>En python<a class="headerlink" href="#en-python" title="Permalink to this headline">¶</a></h4>
-<p>On commence par <em>définir</em> <code class="docutils literal notranslate"><span class="pre">f</span></code> et ses paramètres, ici une seul paramètre <code class="docutils literal notranslate"><span class="pre">x</span></code> de type <code class="docutils literal notranslate"><span class="pre">float</span></code>.
-La fonction <code class="docutils literal notranslate"><span class="pre">f</span></code> <em>retourne</em> une valeur de type <code class="docutils literal notranslate"><span class="pre">float</span></code>.
-La partie indentée par rapport à <code class="docutils literal notranslate"><span class="pre">def</span></code> définit le traitement – on reconnait le calcul de <span class="math notranslate nohighlight">\(f(x)\)</span> – et la valeur retournée par la fonction – ici la valeur de la variable <em>locale à la fonction</em> <code class="docutils literal notranslate"><span class="pre">res</span></code>.</p>
+<ol class="simple">
+<li><p>Définition</p></li>
+</ol>
+<ul class="simple">
+<li><p>On commence par <em>définir</em> <code class="docutils literal notranslate"><span class="pre">f</span></code> et ses paramètres : ici un seul paramètre <code class="docutils literal notranslate"><span class="pre">x</span></code> de type <code class="docutils literal notranslate"><span class="pre">float</span></code>.</p></li>
+<li><p>La fonction <code class="docutils literal notranslate"><span class="pre">f</span></code> <em>retourne</em> une valeur de type <code class="docutils literal notranslate"><span class="pre">float</span></code>.</p></li>
+<li><p>La partie indentée par rapport à <code class="docutils literal notranslate"><span class="pre">def</span></code> définit le traitement – on reconnaît le calcul de <span class="math notranslate nohighlight">\(f(x)\)</span> – - et la valeur retournée par la fonction – ici la valeur de la variable <em>locale à la fonction</em> <code class="docutils literal notranslate"><span class="pre">res</span></code>.</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
@@ -959,6 +1039,9 @@ La partie indentée par rapport à <code class="docutils literal notranslate"><s
 </div>
 </div>
 </div>
+<ol class="simple">
+<li><p>Utilisation : appels</p></li>
+</ol>
 <p>On utilise <code class="docutils literal notranslate"><span class="pre">f</span></code> : on <em>appelle</em> <code class="docutils literal notranslate"><span class="pre">f</span></code> pour différentes valeurs de son paramètre <code class="docutils literal notranslate"><span class="pre">x</span></code>.<br />
 Ces valeurs sont appelées des <em>arguments</em> de l’appel.
 Il peuvent être des valeurs numériques, des variables, des expressions, des appels à des fonctions …
@@ -1034,12 +1117,12 @@ Bref tout ce qui peut être <em>évalué</em> (<em>ie.</em>, calculé) et qui <e
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;f(x)=2x+1&#39;)
 </pre></div>
 </div>
-<img alt="../_images/1-fonctions_14_1.png" src="../_images/1-fonctions_14_1.png" />
+<img alt="../_images/1-fonctions_20_1.png" src="../_images/1-fonctions_20_1.png" />
 </div>
 </div>
 </div>
-<div class="section" id="premiers-commentaires-et-vocabulaire-important">
-<h4>Premiers commentaires et vocabulaire important<a class="headerlink" href="#premiers-commentaires-et-vocabulaire-important" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="premiers-commentaires-et-vocabulaire-encore-important">
+<h4>Premiers commentaires et vocabulaire (encore) important<a class="headerlink" href="#premiers-commentaires-et-vocabulaire-encore-important" title="Permalink to this headline">¶</a></h4>
 <ol class="simple">
 <li><ul class="simple">
 <li><p>On a <strong>défini</strong> (<code class="docutils literal notranslate"><span class="pre">def</span></code>) la fonction <span class="math notranslate nohighlight">\(f\)</span> une fois, au début.</p></li>
@@ -1067,12 +1150,12 @@ Bref tout ce qui peut être <em>évalué</em> (<em>ie.</em>, calculé) et qui <e
 </li>
 </ol>
 <ol class="simple">
-<li></li>
+<li><ul class="simple">
+<li><p>Les appels, comme en math, correspondent à “remplacer” <code class="docutils literal notranslate"><span class="pre">x</span></code> par une valeur numérique donnée</p></li>
+<li><p>cette valeur d’appel est appelée <strong>argument</strong> ou aussi <strong>paramètre <em>effectif</em></strong> (de l’appel).</p></li>
+</ul>
+</li>
 </ol>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- Les appels, comme en math, correspondent à &quot;remplacer&quot; `x` par une valeur numérique donnée
-- cette valeur d&#39;appel est appelée **argument** ou aussi **paramètre _effectif_** (de l&#39;appel).    
-</pre></div>
-</div>
 <ol class="simple">
 <li><p><strong>Important.</strong></p>
 <ul class="simple">
@@ -1083,70 +1166,51 @@ Bref tout ce qui peut être <em>évalué</em> (<em>ie.</em>, calculé) et qui <e
 </ol>
 </div>
 </div>
-<div class="section" id="les-fonctions-mathematiques-predefinies">
-<h3>Les fonctions mathématiques prédéfinies<a class="headerlink" href="#les-fonctions-mathematiques-predefinies" title="Permalink to this headline">¶</a></h3>
-<p>Les fonctions mathématiques connues comme les fonctions trigonométriques, logarithmes, exponentielles, puissances … sont “fournies avec le langage de programmation” mais sous la forme de <em>bibliothèques</em> de fonctions aussi appelées <em>modules</em> en python.</p>
-<div class="section" id="appel-utilisation-de-fonction-predefinie-existante">
-<h4>Appel : utilisation de fonction prédéfinie existante<a class="headerlink" href="#appel-utilisation-de-fonction-predefinie-existante" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="pourquoi-des-sous-programmes-des-fonctions">
+<h3>Pourquoi des sous-programmes ? (des fonctions ?)<a class="headerlink" href="#pourquoi-des-sous-programmes-des-fonctions" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Eviter de ré-écrire, de dupliquer, du code — souvent le code qui correspond au <em>comment</em> du traitement.</p></li>
+<li><p>Simplifier la lecture donc la compréhension : le <em>quoi</em> suffit pour cela.</p></li>
+<li><p>Ré-utiliser l’existant</p></li>
+</ul>
+<p>Les fonctions sont une nouvelle <em>structure</em> en programmation et en algorithmique.
+Une fonction permet d’écrire les algorithmes/codes de façon plus <em>modulaire</em>.</p>
+<ul class="simple">
+<li><p><em>Modularité</em> : découper un traitement compliqué en une suite d’étapes plus simples</p></li>
+<li><p>Ce découpage peut être appliqué <em>récursivement</em> : <em>cad</em> appliqué au sein de chaque étape, et ce de façon répétée, jusqu’à que le traitement de l’étape soit assez simple pour être écrit !</p></li>
+</ul>
+</div>
+<div class="section" id="distinguer-le-quoi-du-comment">
+<h3>Distinguer le <em>Quoi</em> du <em>Comment</em><a class="headerlink" href="#distinguer-le-quoi-du-comment" title="Permalink to this headline">¶</a></h3>
+<p>Ces deux exemples permettent d’introduire deux notions complémentaires <strong>et différentes</strong>.</p>
+<ul class="simple">
+<li><p><strong>La spécification</strong>  = ce que ça fait : OK = le QUOI</p></li>
+<li><p><strong>Une implémentation</strong> = comment ça le fait : ? = le COMMENT</p></li>
+</ul>
+<p>Avec l’exemple des fonctions mathématiques prédéfinies :</p>
+<ul class="simple">
+<li><p>nous savons <em>ce que calculent</em> ces fonctions : le <strong>quoi</strong> ;</p></li>
+<li><p>et pourtant la plupart d’entre nous ne savent pas <strong>comment</strong> elles sont calculées.</p></li>
+</ul>
+<p>Dans l’exemple de la fonction affine, l’expression mathématique <span class="math notranslate nohighlight">\(f(x) = 2x + 1\)</span> mélange le <em>quoi</em> et le <em>comment</em>.  Notre définition de fonction python, elle, explicite les 2 : le quoi et le comment.</p>
+<p><strong>Question</strong> : Quelles sont les 4 notions définies par le paragraphe précédent ?</p>
+<p><strong>Question</strong> : Y-a-t’il d’autres façon de calculer la fonction <span class="math notranslate nohighlight">\(f\)</span> précédente ? Qu’en déduire ?</p>
+</div>
+<div class="section" id="star-digression-de-fin-de-section">
+<h3>(<span class="math notranslate nohighlight">\(\star\)</span>) Digression de fin de section<a class="headerlink" href="#star-digression-de-fin-de-section" title="Permalink to this headline">¶</a></h3>
+<p>Revenons sur le premier exemple pour tenter de se rassurer.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">cos</span><span class="p">,</span> <span class="n">pi</span>
-<span class="c1"># pour utiliser la fonction cos et la valeur pi définis dans le module math</span>
-
-<span class="n">c</span> <span class="o">=</span> <span class="n">cos</span><span class="p">(</span><span class="n">pi</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span>
-<span class="c1"># calcul qui utilise cos et pi, puis affectation du résultat dans la variable c</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
-<span class="c1"># affichage de la valeur de la variable c</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cos</span><span class="p">(</span><span class="n">pi</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.5000000000000001
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.5000000000000001
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="vocabulaire-suite">
-<h4>Vocabulaire (suite)<a class="headerlink" href="#vocabulaire-suite" title="Permalink to this headline">¶</a></h4>
-<p>Cet exemple contient uniquement des <em>appels de fonction</em> ; aucune définition des fonctions utilisées.</p>
-<p>L’appel est caractérisé par :</p>
-<ul class="simple">
-<li><p>le <strong>nom</strong> de la fonction :  ici <code class="docutils literal notranslate"><span class="pre">cos(...)</span></code></p></li>
-<li><p>ses <strong>arguments d’entrée</strong> : ici la valeur <span class="math notranslate nohighlight">\(\pi\)</span>/3</p></li>
-<li><p>une valeur de <strong>retour</strong> (résultat, destination) :</p>
-<ul>
-<li><p>ici une variable résultat : <code class="docutils literal notranslate"><span class="pre">c</span></code>,</p></li>
-<li><p>ou aussi un terme d’une expression : <code class="docutils literal notranslate"><span class="pre">cos(pi/3)**2</span> <span class="pre">+</span> <span class="pre">sin(pi/3)**2</span></code></p></li>
-</ul>
-</li>
-<li><p>vocabulaire : <em>argument</em> ou <em>paramètre effectif</em></p></li>
-</ul>
-<p><strong>Appeler une fonction :</strong></p>
-<ul class="simple">
-<li><p>ici, on <em>utilise</em> le nom <code class="docutils literal notranslate"><span class="pre">cos</span></code> de la fonction trigonométrique <em>cosinus</em> pour obtenir la valeur de cette fonction pour l’argument d’entrée fourni.</p></li>
-<li><p>on voit bien que cet appel ne nécessite pas de connaitre <em>comment</em> cette fonction calcule le résultat qu’elle renvoie (ou retourne).  Cette fonction est bien vue comme une boîte opaque (une <em>boîte noire</em>).</p></li>
-</ul>
-<p><strong>Commentaires</strong></p>
-<ul class="simple">
-<li><p>Ligne 1 : fonction <code class="docutils literal notranslate"><span class="pre">cos</span></code> et valeur <code class="docutils literal notranslate"><span class="pre">pi</span></code> sont disponibles</p></li>
-<li><p>Ligne 2 : <em>à droite</em> de l’affectation (=) : <em>appel</em> de la fonction <code class="docutils literal notranslate"><span class="pre">cos(...)</span></code> pour l’<em>argument</em> <code class="docutils literal notranslate"><span class="pre">pi/3</span></code>.</p></li>
-<li><p>Ligne 2 : <em>à gauche</em> de l’affectation  : valeur-résultat affectée dans la variable <code class="docutils literal notranslate"><span class="pre">c</span></code></p></li>
-<li><p>Ligne 3 : affichage de la valeur <em>retournée</em></p></li>
-</ul>
-<div class="alert alert-block alert-info">
-<p><strong>A retenir</strong> : Les <strong>parenthèses (…)</strong> : c’est à ça qu’on reconnait une fonction !</p>
-</div>
-<div class="alert alert-block alert-info">
-<p><strong>A retenir</strong> : la construction <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">module</span> <span class="pre">import</span> <span class="pre">fonction1,</span> <span class="pre">fonction2</span></code> permet d’utiliser les <code class="docutils literal notranslate"><span class="pre">fonctions</span></code> (1, 2, …) définies dans la bibliothèque <code class="docutils literal notranslate"><span class="pre">module</span></code></p>
-</div><p>Cet exemple permet d’introduire deux notions complémentaires <strong>et différentes</strong> :</p>
-<ul class="simple">
-<li><p><strong>la spécification</strong>  = ce que ça fait : OK = le QUOI</p></li>
-<li><p><strong>une implémentation</strong> = comment ça le fait : ? = le COMMENT</p></li>
-</ul>
-<p><strong>Digression</strong> pour les curieuses et les curieux : précision numérique ?</p>
-<p>On se rassure :</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cos</span><span class="p">(</span><span class="n">pi</span><span class="p">)</span>
@@ -1179,29 +1243,76 @@ Bref tout ce qui peut être <em>évalué</em> (<em>ie.</em>, calculé) et qui <e
 </div>
 </div>
 </div>
+<p>Profitons-en pour indiquer que ce genre d’appels est un premier exemple de <em>test unitaire</em>. On teste la correction du traitement des fonctions <code class="docutils literal notranslate"><span class="pre">cos</span></code> et <code class="docutils literal notranslate"><span class="pre">sin</span></code> en vérifiant une propriété mathématique caractéristique.</p>
+<p><strong>Un premier exemple de test unitaire</strong></p>
+<p>On montre comment effectuer la même vérification avec l’instruction <code class="docutils literal notranslate"><span class="pre">assert</span></code> adaptée à ces tests unitaires.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">cos</span><span class="p">(</span><span class="n">pi</span><span class="o">/</span><span class="mf">3.0</span><span class="p">)</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">sin</span><span class="p">(</span><span class="n">pi</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="k">assert</span> <span class="n">c</span><span class="o">*</span><span class="n">c</span> <span class="o">+</span> <span class="n">s</span><span class="o">*</span><span class="n">s</span> <span class="o">==</span> <span class="mi">1</span>
+</pre></div>
 </div>
 </div>
-<div class="section" id="distinguer-le-quoi-du-comment">
-<h3>Distinguer le <em>Quoi</em> du <em>Comment</em><a class="headerlink" href="#distinguer-le-quoi-du-comment" title="Permalink to this headline">¶</a></h3>
-<p>Nous savons <em>ce que calculent</em> ces fonctions : le <strong>quoi</strong>.
-Et pourtant la plupart d’entre nous ne savent pas <strong>comment</strong> elles sont calculées.</p>
-<p>Dans l’exemple de la fonction affine, l’expression <span class="math notranslate nohighlight">\(f(x) = 2x + 1\)</span> mélange le <em>quoi</em> et le <em>comment</em>.</p>
-<p><strong>Question</strong> : Quelles sont les 4 notions définies par le paragraphe précédent ?</p>
-<p><strong>Question</strong> : Y-a-t’il d’autres façon de calculer la fonction <span class="math notranslate nohighlight">\(f\)</span> précédente ? Qu’en déduire ?</p>
 </div>
-<div class="section" id="pourquoi-des-sous-programmes-des-fonctions">
-<h3>Pourquoi des sous-programmes ? (des fonctions ?)<a class="headerlink" href="#pourquoi-des-sous-programmes-des-fonctions" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>Eviter de ré-écrire, de dupliquer, du code — souvent le code qui correspond au <em>comment</em> du traitement.</p></li>
-<li><p>Simplifier la lecture donc la compréhension : le <em>quoi</em> suffit pour celà.</p></li>
-<li><p>Ré-utiliser l’existant</p></li>
-</ul>
-<p>Les fonctions sont une nouvelle <em>structure</em> en programmation et en algorithmique.
-Une fonction permet d’écrire les algorithmes/codes de façon plus <em>modulaire</em>.</p>
-<ul class="simple">
-<li><p><em>Modularité</em> : découper un traitement compliqué en une suite d’étapes plus simples</p></li>
-<li><p>Ce découpage peut être appliqué <em>récursivement</em> : <em>cad</em> appliqué au sein de chaque étape, et ce de façon répétée, jusqu’à que le traitement de l’étape soit assez simple pour être écrit !</p></li>
-</ul>
+<p>Il ne se passe rien. L’assertion est vraie.
+Morale : “Pas de nouvelle, bonne nouvelle !”</p>
+<p>On peut donc être un peu plus exhaustif.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># des valeurs caractéristiques </span>
+<span class="k">assert</span> <span class="n">cos</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mf">1.0</span>
+<span class="k">assert</span> <span class="n">cos</span><span class="p">(</span><span class="n">pi</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mf">1.0</span>
+<span class="k">assert</span> <span class="n">sin</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mf">0.0</span>
+<span class="k">assert</span> <span class="n">sin</span><span class="p">(</span><span class="n">pi</span><span class="o">/</span><span class="mf">2.</span><span class="p">)</span> <span class="o">==</span> <span class="mf">1.0</span>
+
+<span class="c1"># dont mais certaines difficiles à obtenir</span>
+<span class="c1">#assert cos(pi/2.) == 0.0</span>
+<span class="c1">#assert cos(3. * pi/2.) == 0.0</span>
+<span class="c1">#assert sin(pi) == 0.0</span>
+<span class="c1">#assert sin(3. * pi/2.) == 0.0</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># une propriété qui ne rassure pas comlètement ...</span>
+<span class="kn">import</span> <span class="nn">random</span>
+
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">):</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+    <span class="c1">#assert cos(v)**2 + sin(v)**2 == 1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">cos</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">sin</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.0
+0.9999999999999999
+1.0
+1.0
+1.0
+1.0
+0.9999999999999999
+1.0
+1.0
+1.0
+1.0
+1.0
+1.0
+1.0
+1.0
+1.0
+1.0
+0.9999999999999999
+0.9999999999999999
+1.0
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="les-grands-principes-definition-signature-corps-et-appels-de-fonction">
@@ -1213,7 +1324,7 @@ Une fonction permet d’écrire les algorithmes/codes de façon plus <em>modulai
 <p>La définition d’une fonction est constituée de sa <em>signature</em> et de son <em>corps</em>.</p>
 </div>
 <div class="alert alert-success">
-<p>La signature “ne fait rien”. Elle <em>décrit</em> les paramètres formels_, cad. comment utiliser la fonction (par l’appel) et ce qu’elle fait.</p>
+<p>La signature “ne fait rien”. Elle <em>décrit</em> les paramètres formels, cad. comment utiliser la fonction (par l’appel) et ce qu’elle fait.</p>
 </div>
 <div class="alert alert-success">
 <p>Le corps est <em>le traitement qui sera exécuté par l’appel</em> de la fonction.</p>
@@ -1237,7 +1348,7 @@ Une fonction permet d’écrire les algorithmes/codes de façon plus <em>modulai
 <div class="section" id="syntaxe-s-python-de-la-definition-de-fonction">
 <h4>Syntaxe(s) python de la définition de fonction<a class="headerlink" href="#syntaxe-s-python-de-la-definition-de-fonction" title="Permalink to this headline">¶</a></h4>
 <div class='alert alert-block alert-info'>
-<p>RETENIR : Le mot clé <code class="docutils literal notranslate"><span class="pre">def</span></code>, les <code class="docutils literal notranslate"><span class="pre">()</span></code> et le <code class="docutils literal notranslate"><span class="pre">:</span></code></p>
+<p><strong>RETENIR</strong> : Le mot clé <code class="docutils literal notranslate"><span class="pre">def</span></code>, les <code class="docutils literal notranslate"><span class="pre">()</span></code> et le <code class="docutils literal notranslate"><span class="pre">:</span></code></p>
 </div>    
 <p>Syntaxe Python simple :</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">nom</span><span class="p">(</span><span class="n">liste</span> <span class="n">de</span> <span class="n">paramètres</span> <span class="n">formels</span> <span class="n">séparés</span> <span class="n">par</span> <span class="n">des</span> <span class="n">virgules</span><span class="p">):</span>
@@ -1245,9 +1356,9 @@ Une fonction permet d’écrire les algorithmes/codes de façon plus <em>modulai
     <span class="k">return</span> <span class="s1">&#39;sortie&#39;</span>
 </pre></div>
 </div>
-<p>Soyons plus précis en explicitant le <em>type</em> des arguments d’entrée et de sortie.</p>
+<p>Soyons plus précis <strong>en explicitant le <em>type</em> des arguments d’entrée et de sortie.</strong></p>
 <p><a class="reference external" href="https://fr.wikiversity.org/wiki/Python/Les_types_de_base">https://fr.wikiversity.org/wiki/Python/Les_types_de_base</a></p>
-<p>Syntaxe Python <strong>améliorée</strong> et <strong>A UTILISER SYSTEMATIQUEMENT</strong> :</p>
+<p>Cette syntaxe Python <strong>améliorée</strong> est <strong>A UTILISER SYSTEMATIQUEMENT</strong> :</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">nom</span><span class="p">(</span><span class="s1">&#39;1er paramètre formel&#39;</span><span class="p">:</span> <span class="n">son</span> <span class="nb">type</span><span class="p">,</span> <span class="s1">&#39;2ème paramètre formel&#39;</span><span class="p">:</span> <span class="n">son</span> <span class="nb">type</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">type</span> <span class="n">du</span> <span class="n">retour</span><span class="p">:</span>
     <span class="o">...</span> <span class="c1"># le corps de la fonction : ce qu&#39;elle fait </span>
     <span class="k">return</span> <span class="s1">&#39;sortie&#39;</span>
@@ -1359,70 +1470,29 @@ Selon les langages de programmation, la signature peut-être séparée et compil
 </div>
 </div>
 <p>On a vu en début de présentation que les paramètres effectifs peuvent être plus généralement la valeur d’une variable, d’une expression (évaluée), d’une fonction (appelée).</p>
-<div class="section" id="effet-d-un-appel-sur-le-sequencement-des-instructions-executees">
-<h4>Effet d’un appel sur le séquencement des instructions exécutées<a class="headerlink" href="#effet-d-un-appel-sur-le-sequencement-des-instructions-executees" title="Permalink to this headline">¶</a></h4>
-<p>Distinguer <em>appelant</em> et <em>appelé</em> :</p>
-<ul class="simple">
-<li><p>Le cadre (la zone logique de code) où l’appel est effectué est appelé <em>l’appelant</em>.</p></li>
-<li><p>La définition de la fonction est (le cadre de) <em>l’appelé</em>.</p></li>
-</ul>
-<p><strong>L’appel provoque une rupture de l’exécution séquentielle de l’appelant</strong> : un débranchement de l’appelant vers l’appelé.</p>
-<ul class="simple">
-<li><p>L’appel “passe la main” à l’appelé en même temps qu’il transmet les paramètres effectifs et une information pour que l’appelé puisse, plus tard, revenir dans l’appelant (fournir le résultat, ie. retourner le résultat).</p></li>
-<li><p>L’exécution revient dans la zone de l’appelant une fois achevée l’exécution de l’appelé  – en pratique, après l’exécution d’un <code class="docutils literal notranslate"><span class="pre">return</span></code>.</p></li>
-<li><p>Ce <code class="docutils literal notranslate"><span class="pre">return</span></code> déclanche le retour dans l’appelant à l’instruction de l’appel – car c’est souvent une affectation si l’appelé est une (vraie) fonction – ou à l’instruction suivante – si c’est une procédure qui ne renvoie aucun résultat, cad. un appel sans affectation.</p></li>
-</ul>
-<div class='alert alert-block alert-warning'>
-<p>NE PAS CONFONDRE :  <strong>paramètre formel</strong> <em>vs.</em> <strong>paramètre effectif</strong> (ou argument)</p>
-</div>    
-<div class='alert alert-block alert-danger'>
-<p>CONSIGNE PEDAGOGIQUE : il est interdit d’utiliser l’identifiant de du paramètre formel comme paramètre effectif d’un appel.</p>
-</div><div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="c1"># L&#39;appel suivant est interdit pour la fonction affine f(x) définie précédemment</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-
-<span class="n">y</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># ok</span>
-
-
-<span class="n">val</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="c1"># ok</span>
-</pre></div>
 </div>
-</div>
-</div>
-<div class="alert alert-block alert-info">
-<p><strong>A retenir :</strong> l’appel est situé <em>après</em> la définition</p>
-</div>  
-<ul class="simple">
-<li><p>logique : il faut connaitre la fonction pour l’utiliser !</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">python</span></code> : se souvenir que <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">module</span> <span class="pre">import</span> <span class="pre">f</span></code> permet de connaitre, donc d’utiliser, <code class="docutils literal notranslate"><span class="pre">f</span></code> qui a été définie (par moi ou par une autre) dans la bibliothèque <code class="docutils literal notranslate"><span class="pre">module</span></code></p></li>
-</ul>
-</div>
-</div>
-<div class="section" id="le-corps-et-le-retour-de-valeur">
-<h3>Le corps et le retour de valeur<a class="headerlink" href="#le-corps-et-le-retour-de-valeur" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="le-corps-et-le-retour-de-valeur-avec-return">
+<h3>Le corps et le retour de valeur avec <code class="docutils literal notranslate"><span class="pre">return</span></code><a class="headerlink" href="#le-corps-et-le-retour-de-valeur-avec-return" title="Permalink to this headline">¶</a></h3>
 <p>Le corps définit le traitement de la fonction.<br />
-Il complète la signature.
-Ce traitement manipule les paramètres formels et des variables locales (à la fonction).<br />
+Il complète la signature.<br />
+Ce traitement s’effectue avec les paramètres formels et des variables locales à la fonction.<br />
 A l’issue du traitement, la fonction renvoie (ou retourne) une valeur de sortie.</p>
+<p><strong>En python</strong> :</p>
 <ul class="simple">
-<li><p>Python : le corps est <em>indenté</em> d’un niveau par rapport à celui du <code class="docutils literal notranslate"><span class="pre">def</span></code> (qui finit par un <code class="docutils literal notranslate"><span class="pre">:</span></code>).</p></li>
-</ul>
-<div class="section" id="return">
-<h4><code class="docutils literal notranslate"><span class="pre">return</span></code><a class="headerlink" href="#return" title="Permalink to this headline">¶</a></h4>
-<ul class="simple">
-<li><p>Python : mot-clé <code class="docutils literal notranslate"><span class="pre">return</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">return</span></code> une valeur, une variable, une expression</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">None</span></code> : ne retourne rien … mais le dit !</p>
+<li><p>le corps est <em>indenté</em> d’un niveau par rapport à celui du <code class="docutils literal notranslate"><span class="pre">def</span></code> (qui finit par un <code class="docutils literal notranslate"><span class="pre">:</span></code>).</p></li>
+<li><p>mot-clé <code class="docutils literal notranslate"><span class="pre">return</span></code></p>
 <ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">return</span></code> une valeur, une variable, une expression</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">None</span></code> : ne retourne rien … mais le dit !</p></li>
 <li><p>spécificité python : comme il n’y a que des fonctions en python, une procédure sera écrite comme une fonction qui retourne <code class="docutils literal notranslate"><span class="pre">None</span></code></p></li>
-</ul>
-</li>
-<li><p><strong>Termine l’<em>exécution</em> du corps de la fonction</strong></p></li>
+<li><p>l’exécution d’un <code class="docutils literal notranslate"><span class="pre">return</span></code> <strong>termine l’<em>exécution</em> du corps de la fonction</strong></p>
+<ul>
 <li><p>à la fin de l’écriture du corps, en général …</p></li>
 <li><p>mais pas toujours : le <code class="docutils literal notranslate"><span class="pre">return</span></code> n’est pas nécessairement unique (cf. paragraphe suivant)</p></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1464,14 +1534,76 @@ A l’issue du traitement, la fonction renvoie (ou retourne) une valeur de sorti
 </div>
 </div>
 </div>
+<div class='alert alert-block alert-warning'>
+<p><strong>NE PAS CONFONDRE</strong> :  <strong>paramètre formel</strong> <em>vs.</em> <strong>paramètre effectif</strong> (ou argument)</p>
+</div>    
+<div class='alert alert-block alert-danger'>
+<p><strong>CONSIGNE PEDAGOGIQUE</strong> : il est interdit d’utiliser l’identifiant du paramètre formel comme paramètre effectif d’un appel.</p>
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="c1"># L&#39;appel suivant est interdit pour la fonction affine f(x) définie précédemment</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="n">y</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># ok</span>
+
+
+<span class="n">val</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="c1"># ok</span>
+</pre></div>
 </div>
-<div class="section" id="return-terminaison-de-la-fonction">
-<h4><code class="docutils literal notranslate"><span class="pre">return</span></code> = terminaison de la fonction<a class="headerlink" href="#return-terminaison-de-la-fonction" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+<div class="alert alert-block alert-info">
+<p><strong>A retenir :</strong> l’appel est situé <em>après</em> la définition</p>
+</div>  
+<ul class="simple">
+<li><p>logique : il faut connaître la fonction pour l’utiliser !</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">python</span></code> : se souvenir que <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">module</span> <span class="pre">import</span> <span class="pre">f</span></code> permet de connaître, donc d’utiliser, <code class="docutils literal notranslate"><span class="pre">f</span></code> qui a été définie (par moi ou par un.e autre) dans la bibliothèque <code class="docutils literal notranslate"><span class="pre">module</span></code></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="l-appel-de-fonction-rompt-le-sequencement-des-instructions-executees">
+<h2>L’appel de fonction rompt le séquencement des instructions exécutées<a class="headerlink" href="#l-appel-de-fonction-rompt-le-sequencement-des-instructions-executees" title="Permalink to this headline">¶</a></h2>
+<p>Nous illustrons avec <a class="reference external" href="http://pythontutor.com/visualize.html#mode=edit">pythontutor</a> l’exécution d’un appel de fonction.</p>
+<p>On observe :</p>
+<ul class="simple">
+<li><p>l’appel de fonction provoque une rupture de l’exécution séquentielle, un débranchement de l’appelant vers l’appelé ;</p></li>
+<li><p>le <code class="docutils literal notranslate"><span class="pre">return</span></code> provoque le retour au cadre appelant pour continuer l’exécution séquentielle.</p></li>
+<li><p>Plusieurs <code class="docutils literal notranslate"><span class="pre">return</span></code> ? Oui mais 1 seul exécuté par appel.</p></li>
+</ul>
+<ul class="simple">
+<li><p>Fonction affine :
+<a class="reference external" href="http://pythontutor.com/visualize.html#code=def%20f%28x%20%3A%20float%29%20-%3E%20float%3A%0A%20%20%20%20%27%27%27Une%20fonction%20affine%20d%C3%A9j%C3%A0%20rencontr%C3%A9e%27%27%27%0A%20%20%20%20y%20%3D%202%20*%20x%20%2B%201%0A%20%20%20%20return%20y%0A%20%20%20%20%0Aordonnee_a_l_origine%20%3D%20f%280%29%0A%0Aprint%28ordonnee_a_l_origine%29%0A%0Aprint%28%22n,%20f%28n%29%22%29%0A%23%20plusieurs%20appels%20de%20f%0Afor%20val%20in%20range%283%29%3A%0A%20%20%20%20print%28val,%20f%28val%29%29&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">visualisation pythontutor</a></p></li>
+</ul>
+<div class="section" id="appel-appelant-appele-return-appele-appelant">
+<h3>Appel = appelant -&gt; appelé ; return = appelé -&gt; appelant<a class="headerlink" href="#appel-appelant-appele-return-appele-appelant" title="Permalink to this headline">¶</a></h3>
+<p>Distinguer <em>appelant</em> et <em>appelé</em> :</p>
+<ul class="simple">
+<li><p><em>l’appelant</em> : le cadre (ie. la zone logique de code) où l’appel est effectué</p></li>
+<li><p><em>l’appelé</em> : le traitement de la définition de la fonction avec les paramètres effectifs de l’appel</p></li>
+</ul>
+<p><strong>L’appel provoque une rupture de l’exécution séquentielle de l’appelant</strong> : un débranchement de l’appelant vers l’appelé.</p>
+<ul class="simple">
+<li><p>L’appel “passe la main” à l’appelé en même temps qu’il transmet les paramètres effectifs et une information pour que l’appelé puisse, plus tard, revenir dans l’appelant (fournir le résultat, ie. retourner le résultat).</p></li>
+<li><p>L’exécution revient dans la zone de l’appelant une fois achevée l’exécution de l’appelé  – en pratique, après l’exécution d’un <code class="docutils literal notranslate"><span class="pre">return</span></code>.</p></li>
+<li><p>Ce <code class="docutils literal notranslate"><span class="pre">return</span></code> déclenche le retour dans l’appelant à l’instruction de l’appel – car c’est souvent une affectation si l’appelé est une (vraie) fonction – ou à l’instruction suivante – si c’est une procédure qui ne renvoie aucun résultat, cad. un appel sans affectation.</p></li>
+</ul>
+<div class="alert alert-block alert-info">
+<p><strong>A retenir :</strong>   Appel = appelant -&gt; appelé ; return = appelé -&gt; appelant</p>
+</div> 
+</div>
+<div class="section" id="return-terminaison-du-traitement-de-l-appel-de-fonction-et-retour-au-cadre-appelant">
+<h3><code class="docutils literal notranslate"><span class="pre">return</span></code> = terminaison du traitement de l’appel de fonction et retour au cadre appelant<a class="headerlink" href="#return-terminaison-du-traitement-de-l-appel-de-fonction-et-retour-au-cadre-appelant" title="Permalink to this headline">¶</a></h3>
 <p>L’exécution d’un <code class="docutils literal notranslate"><span class="pre">return</span></code>, quel qu’il soit, <em>termine l’exécution de la fonction</em> et provoque le retour dans le cadre appelant.</p>
 <p>Plusieurs instructions <code class="docutils literal notranslate"><span class="pre">return</span></code> sont possibles dans une même fonction.
-Donc pas uniquement comme dernière instruction du corps de la fonction.
-Le premier <code class="docutils literal notranslate"><span class="pre">return</span></code> exécuté arrête l’exécution : les instructions suivantes du corps de la fonction ne sont pas traitées – comme dans une branche conditionnelle non prise, <em>eg.</em> dans une structure <code class="docutils literal notranslate"><span class="pre">if:</span> <span class="pre">...</span> <span class="pre">elif:</span> <span class="pre">...</span> <span class="pre">else:</span> <span class="pre">...</span></code>.</p>
-<p>Nous verrons que les fonctions récursives sont friandes de <code class="docutils literal notranslate"><span class="pre">return</span></code> très tôt écrit dans le corps.</p>
+Donc pas uniquement comme dernière instruction du corps de la fonction.</p>
+<ul class="simple">
+<li><p>Le premier <code class="docutils literal notranslate"><span class="pre">return</span></code> exécuté arrête l’exécution</p></li>
+<li><p>les instructions suivantes du corps de la fonction ne sont pas traitées – comme dans une branche conditionnelle non prise, <em>eg.</em> dans une structure <code class="docutils literal notranslate"><span class="pre">if:</span> <span class="pre">...</span> <span class="pre">elif:</span> <span class="pre">...</span> <span class="pre">else:</span> <span class="pre">...</span></code>.</p></li>
+</ul>
+<p><a class="reference external" href="http://pythontutor.com/visualize.html#code=def%20aa%28u%20%3A%20float%29%20-%3E%20float%3A%0A%20%20%20%20%27%27%27La%20m%C3%AAme%20avec%202%20return%20%27%27%27%0A%20%20%20%20if%20u%20%3E%200%3A%0A%20%20%20%20%20%20%20%20res1%20%3D%20u%0A%20%20%20%20%20%20%20%20return%20res1%0A%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20res2%20%3D%20-u%0A%20%20%20%20%20%20%20%20return%20res2%0A%20%20%20%20%20%20%20%20%0Aun%20%3D%20aa%281.0%29%0Aencore_un%20%3D%20aa%28-1.0%29%0A%0A%23%20Profitons-en%20pour%20montrer%20un%20%60assert%60%20%0Aassert%20un%20%3D%3D%20encore_un&amp;cumulative=false&amp;curInstr=14&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">visualisation pythontutor</a>
+de plusieurs <code class="docutils literal notranslate"><span class="pre">return</span></code> et 1 seul exécuté par appel.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">a</span><span class="p">(</span><span class="n">u</span> <span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
@@ -1539,34 +1671,10 @@ aa(u: float) -&gt; float
 </div>
 </div>
 </div>
-</div>
+<p>Nous verrons que les fonctions récursives sont friandes de <code class="docutils literal notranslate"><span class="pre">return</span></code> très tôt écrit dans le corps.</p>
 </div>
 <div class="section" id="exercice">
 <h3>Exercice<a class="headerlink" href="#exercice" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>Reprendre les fonctions <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">aa</span></code> et <code class="docutils literal notranslate"><span class="pre">aaa</span></code> précédentes et identifier leurs signatures, leurs paramètres formels, leurs types, les corps de ces fonctions. Et dans les appels les <code class="docutils literal notranslate"><span class="pre">return</span></code> exécutés, le séquencement des instructions exécutées dans l’appelant et l’appelé.</p></li>
-</ul>
-</div>
-</div>
-<div class="section" id="appel-appelant-appele-return-appele-appelant">
-<h2>Appel : appelant -&gt; appelé ; return : appelé -&gt; appelant<a class="headerlink" href="#appel-appelant-appele-return-appele-appelant" title="Permalink to this headline">¶</a></h2>
-<p>Nous illustrons avec <a class="reference external" href="http://pythontutor.com/visualize.html#mode=edit">pythontutor</a> l’exécution d’un appel de fonction.</p>
-<p>Cad. :</p>
-<ul class="simple">
-<li><p>l’appel de fonction provoque une rupture de l’exécution séquentielle, un débranchement de l’appelant vers l’appelé ;</p></li>
-<li><p>le <code class="docutils literal notranslate"><span class="pre">return</span></code> provoque le retour au cadre appelant pour continuer l’exécution séquentielle.</p></li>
-<li><p>Plusieurs <code class="docutils literal notranslate"><span class="pre">return</span></code> ? Oui mais 1 seul exécuté par appel.</p></li>
-</ul>
-<ul class="simple">
-<li><p>Fonction affine :
-<a class="reference external" href="http://pythontutor.com/visualize.html#code=def%20f%28x%20%3A%20float%29%20-%3E%20float%3A%0A%20%20%20%20%27%27%27Une%20fonction%20affine%20d%C3%A9j%C3%A0%20rencontr%C3%A9e%27%27%27%0A%20%20%20%20y%20%3D%202%20*%20x%20%2B%201%0A%20%20%20%20return%20y%0A%20%20%20%20%0Aordonnee_a_l_origine%20%3D%20f%280%29%0A%0Aprint%28ordonnee_a_l_origine%29%0A%0Aprint%28%22n,%20f%28n%29%22%29%0A%23%20plusieurs%20appels%20de%20f%0Afor%20val%20in%20range%283%29%3A%0A%20%20%20%20print%28val,%20f%28val%29%29&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">visualisation pythontutor</a></p></li>
-</ul>
-<ul class="simple">
-<li><p>Plusieurs return, 1 seul exécuté par appel :
-<a class="reference external" href="http://pythontutor.com/visualize.html#code=def%20aa%28u%20%3A%20float%29%20-%3E%20float%3A%0A%20%20%20%20%27%27%27La%20m%C3%AAme%20avec%202%20return%20%27%27%27%0A%20%20%20%20if%20u%20%3E%200%3A%0A%20%20%20%20%20%20%20%20res1%20%3D%20u%0A%20%20%20%20%20%20%20%20return%20res1%0A%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20res2%20%3D%20-u%0A%20%20%20%20%20%20%20%20return%20res2%0A%20%20%20%20%20%20%20%20%0Aun%20%3D%20aa%281.0%29%0Aencore_un%20%3D%20aa%28-1.0%29%0A%0A%23%20Profitons-en%20pour%20montrer%20un%20%60assert%60%20%0Aassert%20un%20%3D%3D%20encore_un&amp;cumulative=false&amp;curInstr=14&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">visualisation pythontutor</a></p></li>
-</ul>
-<div class="section" id="id1">
-<h3>Exercice<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Reprendre les fonctions <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">aa</span></code> et <code class="docutils literal notranslate"><span class="pre">aaa</span></code> précédentes et bien identifier le séquencement des instructions exécutées dans l’appelant et l’appelé.</p></li>
 </ul>
@@ -1578,7 +1686,7 @@ aa(u: float) -&gt; float
 <blockquote>
 <div><p><strong>Variable locale</strong> à une fonction : variable définie dans le <em>corps</em> de la fonction pour permettre le traitement réalisé par la fonction.</p>
 </div></blockquote>
-<p>Par extension, les <strong>paramètres formels de la fonction sont aussi des variables locales</strong>.</p>
+<p>Par extension, les <strong>paramètres formels</strong> de la fonction <strong>sont</strong> aussi <strong>des variables locales</strong>.</p>
 <blockquote>
 <div><p>Une <strong>variable</strong> est dite  <strong>globale</strong> par rapport à une fonction si elle est définie à l’extérieur de la fonction, et plus particulièrement dans l’appelant de la fonction.</p>
 </div></blockquote>
@@ -1610,8 +1718,8 @@ Une fois définie, sa portée est globale à ce cadre : cette variable est acces
 <p><code class="docutils literal notranslate"><span class="pre">ANNEE_EN_COURS</span> <span class="pre">=</span> <span class="pre">2020</span></code></p>
 </div><p>Au delà de certaines spécificités de python qui la rendent assez délicate, l’utilisation de variables globale  est à l’origine de la notion <em>d’effet de bord</em> souvent à l’origine de longues phases de debugging. Nous reviendrons sur cet aspect au chapitre suivant.</p>
 <p>Le besoin d’utiliser des variables globales dans des fonctions internes peut être satisfait en ajoutant ces variables comme paramètres de ces fonctions.</p>
-<div class="section" id="id2">
-<h3>Exercice<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id1">
+<h3>Exercice<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Reprendre les fonctions <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">aa</span></code> et <code class="docutils literal notranslate"><span class="pre">aaa</span></code> précédentes et identifier leurs variables locales et leur portée, dans la définition, dans les appels, dans les appelants.</p></li>
 </ul>
@@ -1624,6 +1732,7 @@ Une fois définie, sa portée est globale à ce cadre : cette variable est acces
 <div class="alert alert-danger">
 <p>NE PAS CONFONDRE :  <code class="docutils literal notranslate"><span class="pre">return</span></code> <em>vs.</em> <code class="docutils literal notranslate"><span class="pre">print</span></code></p>
 </div>
+<p>La relecture de paragraphe sur le rôle du <code class="docutils literal notranslate"><span class="pre">return</span></code> permet de bien se convaincre qu’un <code class="docutils literal notranslate"><span class="pre">return</span></code> fait des choses bien différentes d’un <code class="docutils literal notranslate"><span class="pre">print</span></code>.</p>
 <div class="alert alert-info">
 <p>CONSEIL DÉJÀ SOUVENT RAPPELÉ : séparer les E/S des traitements</p>
 </div>
@@ -1644,7 +1753,7 @@ Une fois définie, sa portée est globale à ce cadre : cette variable est acces
 <li><p>écriture de la signature de la fonction</p></li>
 <li><p>écriture d’appels simples : notion de <em>test unitaire</em></p>
 <ul class="simple">
-<li><p>appels simples = appels sur des valeurs de tests, cad. dont on connait le résultat attendu de la fonction</p></li>
+<li><p>appels simples = appels sur des valeurs de tests, cad. dont on connaît le résultat attendu de la fonction</p></li>
 </ul>
 </li>
 <li><p>écriture du corps</p></li>
@@ -1973,8 +2082,8 @@ appel tetu 1
 </div>
 </div>
 </div>
-<div class="section" id="id3">
-<h3>Exercice<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id2">
+<h3>Exercice<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Compléter le test unitaire de <code class="docutils literal notranslate"><span class="pre">max3</span></code>.</p></li>
 <li><p>(<span class="math notranslate nohighlight">\(\star\)</span>) Ecrire une version de <code class="docutils literal notranslate"><span class="pre">max3</span></code> sans variable locale, ni fonction locale.</p></li>
@@ -2043,7 +2152,7 @@ appel tetu 1
 <li><p>Tests unitaires de fonction, <code class="docutils literal notranslate"><span class="pre">assert</span></code></p></li>
 </ul>
 </li>
-<li><p>Une fonction se reconnait à :</p>
+<li><p>Une fonction se reconnaît à :</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">def</span></code> dans sa définition,</p></li>
 <li><p>ses parenthèses dans les appels.</p></li>
@@ -2208,7 +2317,9 @@ appel tetu 1
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>23
-23
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>23
 23
 </pre></div>
 </div>
@@ -2247,9 +2358,7 @@ appel tetu 1
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Carcassonne est la préfecture du département 11
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>------------------------------------------------
+------------------------------------------------
 Perpignan est la préfecture du département 66
 ------------------------------------------------
 Montpellier est la préfecture du département 34
