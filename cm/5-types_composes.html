@@ -123,7 +123,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="1-fonctions.html">
-   Fonctions, procédures, sous-programmes
+   Fonctions
   </a>
  </li>
  <li class="toctree-l1">
@@ -210,6 +210,23 @@
  <li class="toctree-l1">
   <a class="reference internal" href="a3-exceptions.html">
    Exceptions
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  TD
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../td/prealable-td.html">
+   Préalables
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../td/td1.html">
+   Feuille 1
   </a>
  </li>
 </ul>
@@ -1347,14 +1364,14 @@ Si besoin, l’utilisation de <code class="docutils literal notranslate"><span c
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
 [3, 1, 2] [3, 1, 2]
-140617881703488 140617881703488
+140299668333888 140299668333888
 
 duplication avec copy.copy : 
 False
 [3, 1, 2] [999, 1, 2]
 duplication par affectation de tranche complète : 
 False True
-140617881683200 140617881703488
+140299667991552 140299668333888
 </pre></div>
 </div>
 </div>
@@ -1656,16 +1673,16 @@ changement de cretin :  {&#39;2&#39;: &#39;Jack&#39;, 3: &#39;William&#39;, &#39
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;a&#39;, &#39;e&#39;, &#39;i&#39;, &#39;y&#39;, &#39;u&#39;, &#39;o&#39;} 6
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;a&#39;, &#39;o&#39;, &#39;i&#39;, &#39;u&#39;, &#39;e&#39;, &#39;y&#39;} 6
 True
 False
-aie : {&#39;a&#39;, &#39;i&#39;, &#39;e&#39;}
-voyelles : {&#39;a&#39;, &#39;e&#39;, &#39;i&#39;, &#39;y&#39;, &#39;u&#39;, &#39;o&#39;}
-union : {&#39;a&#39;, &#39;e&#39;, &#39;i&#39;, &#39;y&#39;, &#39;u&#39;, &#39;o&#39;}
-autre union : {&#39;a&#39;, &#39;e&#39;, &#39;i&#39;, &#39;y&#39;, &#39;u&#39;, &#39;o&#39;, &#39;b&#39;, &#39;f&#39;}
-intersection : {&#39;a&#39;, &#39;i&#39;, &#39;e&#39;}
+aie : {&#39;a&#39;, &#39;e&#39;, &#39;i&#39;}
+voyelles : {&#39;a&#39;, &#39;o&#39;, &#39;i&#39;, &#39;u&#39;, &#39;e&#39;, &#39;y&#39;}
+union : {&#39;a&#39;, &#39;o&#39;, &#39;i&#39;, &#39;u&#39;, &#39;e&#39;, &#39;y&#39;}
+autre union : {&#39;a&#39;, &#39;b&#39;, &#39;o&#39;, &#39;i&#39;, &#39;f&#39;, &#39;u&#39;, &#39;e&#39;, &#39;y&#39;}
+intersection : {&#39;a&#39;, &#39;e&#39;, &#39;i&#39;}
 difference :  set() {&#39;b&#39;, &#39;f&#39;}
-difference symétrique:  {&#39;y&#39;, &#39;u&#39;, &#39;o&#39;}
+difference symétrique:  {&#39;o&#39;, &#39;u&#39;, &#39;y&#39;}
 inclusions : True True False False
 </pre></div>
 </div>
@@ -1730,9 +1747,9 @@ bnor! 5
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>abc 140617807265584
-abc 140617807265584
-abcdef 140617881498416
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>abc 140299612716848
+abc 140299612716848
+abcdef 140299668114544
 </pre></div>
 </div>
 </div>
@@ -1833,10 +1850,10 @@ BONJOUR ! True False
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140617881660080
-140617881660080
-140617881625712
-140617881625712
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140299668277936
+140299668277936
+140299668279024
+140299668279024
 </pre></div>
 </div>
 </div>
@@ -2068,9 +2085,7 @@ Ces derniers ayant été représentés en python par le type (composé) <em>list
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;tuple&#39;&gt;
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;list&#39;&gt;
+&lt;class &#39;list&#39;&gt;
 &lt;class &#39;dict&#39;&gt;
 &lt;class &#39;set&#39;&gt;
 &lt;class &#39;str&#39;&gt;
@@ -2243,7 +2258,10 @@ Le module <code class="docutils literal notranslate"><span class="pre">typing</s
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2 2.2
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 2.2
 </pre></div>
 </div>
 </div>

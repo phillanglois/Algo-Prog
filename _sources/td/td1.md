@@ -116,7 +116,7 @@ $r_i < r_e$, comme illustré sur le schéma ci-dessous avec 4 disques.
 
 ```{figure} ./fig/disques.png
 :name: disques
-:height: 100px
+:height: 200px
 ```
 
 **Rappel :** l'aire d'un disque de rayon $r$ est égale à $\pi r^2$, et en Python une valeur pour $\pi$ est disponible dans le module `math`.
