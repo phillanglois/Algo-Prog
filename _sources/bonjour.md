@@ -1,11 +1,23 @@
 <!-- #region -->
 # Bienvenu en Algo-Prog !
 
-Ce support de cours est en évolution tout au long de ce semestre.
+**Ce support est en évolution tout au long de ce semestre.**
 
+Ceci est le premier point d'entrée de l'UE Algo-Prog en complément de l'[espace moodle de cette UE](https://cours.univ-perp.fr/course/view.php?id=925).
+
+:::{important} Rappels des dates importantes
+
+- semaine 10, lundi 7 mars 2022 : dead-line rendu du TP1 (pour CC1)
+- semaine 11, mercredi 16 mars 2022 : écrit mi-parcours (CC2)
+- semaine 19, mardi 10 mai 2022 : TP en temps limité (pour CC1)
+- semaines 20 ou 21, du 16 ou 23 mai 2022 : écrit de fin de semestre (CT)
+:::
+
+:::{note}
 - Les numéros des semaines sont celles du calendrier. 
 La première séance de CM a eu lieu en semaine 3.
 - les items indiqués d'une ($\star$) correspondent aux activités _objectif 20_
+:::
  
 ## Semaine 3 
 
@@ -25,13 +37,14 @@ Objectifs semaine :
 
 - savoir mettre en oeuvre de la programmation simple en python (niveau semestre 1) dans un notebook jupyter
 - savoir documenter cette programmation (énoncés, descriptions, …) avec markdown
-- mettre sous forme de fonctions des traitements simples avec des paramètres scalaires : application au sujet d'examen du semestre 1
+- mettre sous forme de fonctions des traitements simples avec des paramètres scalaires 
+- application de ces 3 aspects au sujet d'examen du semestre 1
 
 Conseils avant TD/CM 
 
 -  reprendre en entier le sujet d'examen du semestre 1 (en ligne sous moodle)
 - ($\star$) faire ce travail sous jupyter notebook 
-- chapitre "Fonctions" 
+- étudier chapitre "Fonctions" 
 
 Objectifs séance de TD 
 
