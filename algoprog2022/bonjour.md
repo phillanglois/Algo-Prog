@@ -31,7 +31,7 @@ La première séance de CM a eu lieu en semaine 3.
 
 ## Semaine 4 
 
-[_Motto_](https://www.linguee.fr/anglais-francais/traduction/motto.html) : "Séparer les entrées-sorties des traitements"
+[**Motto**](https://www.linguee.fr/anglais-francais/traduction/motto.html) : "Séparer les entrées-sorties des traitements"
 
 Objectifs semaine :
 
@@ -50,6 +50,28 @@ Objectifs séance de TD
 
 - sujet d'examen du semestre 1 sous jupyter notebook : résolution avec des fonctions des exercices 2, 3 et 6
 - ($\star$)  résolution avec des fonctions de l'exercice 5 avec un choix pertinent des paramètres (les  exercices 7, 8, 9 seront traités avec des fonctions après le chapitre suivant).
-- ($\star$) exercices feuille TD1
+- ($\star$) exercices feuille 1
+
+## Semaine 5
+
+**Motto** :
+"1. spécification, 2. appels, 3. corps = ordre des trois étapes successives de l'écriture d'une fonction"
+
+Objectifs semaine :
+
+- Savoir reconnaître et distinguer les notions suivantes : définition/appel, spécification (en-tête, signature)/implémentation (corps), paramètres formels/effectifs, return/print
+- Comprendre les effets d'un appel de fonction
+- Savoir définir et écrire la spécification d'une fonction à paramètres scalaires, son implémentation, des appels simples (tests unitaires) 
+- Exercices : 80% de la feuille 1 selon vos objectifs 
+
+Conseils avant TD/CM 
+
+- Lire chapitre "Boucles, tableaux et fonctions"
+
+
+Objectifs séance de TD 
+
+- exercices feuille 1 
+- ($\star$) exercices feuille 2
 
 <!-- #endregion -->
