@@ -38,3 +38,4 @@ parts:
     chapters:
     - file: td/prealable-td
     - file: td/td1
+    - file: td/td2
