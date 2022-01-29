@@ -16,7 +16,7 @@ Chaque feuille d'exercices comportent **deux parties**.
     sont fortement invité.e.s à traiter cette partie.
 -  Algorithmique et Programmation : la grande majorité des exercices demandent l'écriture d'un programme. Complétez ces programmes par l'écriture de tests de validation (tests unitaires), mêmes rudimentaires. Les notebook jupyter sont parfaitement adaptés à la résolution de ces exercices. Dans certains cas, les lettres **(A)** et **(P)** indiquent des aspects plus spécifiquement algorithmiques ou de programmation.
 
-**Symboles $\blacksquare$ et $\star$**
+**Symboles** $\blacksquare$ **et** $\star$
 
 - Le symbole $\blacksquare$ indique les questions ou les exercices obligatoires. Commencez pas ceux-là.
 - Les symboles $\star$ indiquent les questions de difficulté relative plus importante.

@@ -1,6 +1,10 @@
 (td:td1)=
 # Feuille 1
 
+- Le symbole $\blacksquare$ indique les exercices ou questions obligatoires. Commencez pas ceux-là.
+- Les symboles $\star$ et $\star\star$ indiquent les exercices ou questions de difficulté relative plus importante.
+
+
 **Focus**
 
 Fonctions, plutôt numériques et cas scalaire : en-tête, appels,
@@ -23,11 +27,13 @@ Fonctions, plutôt numériques et cas scalaire : en-tête, appels,
     5. corriger si besoin
 - _Se souvenir_ :
     - Séparer les entrées-sorties des traitements !    
-    - Réduire au minimum l'utilisation des `input()` et des `print()`.  
+    - Réduire au minimum l'utilisation des `input()` (les entrées au clavier) et des `print()` (les sorties à l'écran).  
+    - Utiliser des identifiants différents pour les paramètres formels et effectifs, respectivement dans la définition et les appels.
+
 
 ## Objectif 10
 
-### $\blacksquare$ Exercice
+### $\blacksquare$ Exercice (présenté en CM)
 
 1.  Écrire un algorithme qui calcule et affiche le maximum de 3 valeurs
     entières entrées au clavier.
@@ -69,7 +75,7 @@ après le traitement (voir exercice 4, feuille TD no 2 du semestre 1).
     nombre arbitraire de triangles entrées au clavier par l'utilisateur.
 
 (exo:suites)= 
-###Exercice 
+### $\blacksquare$ Exercice 
 
 On rappelle quelques suites et séries numériques classiques.
 
