@@ -128,7 +128,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="2-boucles-avancees.html">
-   Boucles, tableaux et fonctions : compléments
+   Boucles, tableaux et fonctions
   </a>
  </li>
  <li class="toctree-l1">
@@ -408,7 +408,7 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#definir-des-ndarray-a-partir-de-listes-python-lst">
+    <a class="reference internal nav-link" href="#definir-des-ndarray-a-partir-de-listes-python-list">
      Définir des
      <code class="docutils literal notranslate">
       <span class="pre">
@@ -418,7 +418,7 @@
      à partir de listes python (
      <code class="docutils literal notranslate">
       <span class="pre">
-       lst
+       list
       </span>
      </code>
      )
@@ -563,7 +563,7 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#definir-des-ndarray-a-partir-de-listes-python-lst">
+    <a class="reference internal nav-link" href="#definir-des-ndarray-a-partir-de-listes-python-list">
      Définir des
      <code class="docutils literal notranslate">
       <span class="pre">
@@ -573,7 +573,7 @@
      à partir de listes python (
      <code class="docutils literal notranslate">
       <span class="pre">
-       lst
+       list
       </span>
      </code>
      )
@@ -617,12 +617,11 @@
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="les-ndarray-de-vrais-tableaux-en-python">
-<h1>Les ‘ndarray’ : de vrais tableaux en python<a class="headerlink" href="#les-ndarray-de-vrais-tableaux-en-python" title="Permalink to this headline">¶</a></h1>
-<p>version 2020, PhL.</p>
+<span id="ann-ndarray"></span><h1>Les ‘ndarray’ : de vrais tableaux en python<a class="headerlink" href="#les-ndarray-de-vrais-tableaux-en-python" title="Permalink to this headline">¶</a></h1>
+<p>version 2022, PhL.</p>
 <p>Chapitre où sont présentés les vrais tableaux en python : les <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> (tableaux) <code class="docutils literal notranslate"><span class="pre">numpy</span></code>.</p>
 <p>Les sections avec une <span class="math notranslate nohighlight">\(\star\)</span> sont de niveau <em>Objectif 20</em>.</p>
-<h1>Table of Contents<span class="tocSkip"></span></h1>
-<div class="toc"><ul class="toc-item"><li><span><a href="#Les-'ndarray'-:-de-vrais-tableaux-en-python" data-toc-modified-id="Les-'ndarray'-:-de-vrais-tableaux-en-python-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Les 'ndarray' : de vrais tableaux en python</a></span><ul class="toc-item"><li><span><a href="#Les-tableaux" data-toc-modified-id="Les-tableaux-1.1"><span class="toc-item-num">1.1&nbsp;&nbsp;</span>Les tableaux</a></span><ul class="toc-item"><li><span><a href="#La-vision-classique" data-toc-modified-id="La-vision-classique-1.1.1"><span class="toc-item-num">1.1.1&nbsp;&nbsp;</span>La vision classique</a></span></li><li><span><a href="#En-python" data-toc-modified-id="En-python-1.1.2"><span class="toc-item-num">1.1.2&nbsp;&nbsp;</span>En python</a></span></li></ul></li><li><span><a href="#Les-ndarray-de-numpy" data-toc-modified-id="Les-ndarray-de-numpy-1.2"><span class="toc-item-num">1.2&nbsp;&nbsp;</span>Les <code>ndarray</code> de <code>numpy</code></a></span><ul class="toc-item"><li><span><a href="#Préliminaire-nécessaire-à-l'utilisation-de-numpy" data-toc-modified-id="Préliminaire-nécessaire-à-l'utilisation-de-numpy-1.2.1"><span class="toc-item-num">1.2.1&nbsp;&nbsp;</span>Préliminaire nécessaire à l'utilisation de <code>numpy</code></a></span></li><li><span><a href="#Créer-un-ndarray-:-fonctions-de-création" data-toc-modified-id="Créer-un-ndarray-:-fonctions-de-création-1.2.2"><span class="toc-item-num">1.2.2&nbsp;&nbsp;</span>Créer un <code>ndarray</code> : fonctions de création</a></span></li><li><span><a href="#Choisir-le-type-des-valeurs-à-la-création" data-toc-modified-id="Choisir-le-type-des-valeurs-à-la-création-1.2.3"><span class="toc-item-num">1.2.3&nbsp;&nbsp;</span>Choisir le type des valeurs à la création</a></span></li><li><span><a href="#Accéder-aux-éléments-d'un-ndarray" data-toc-modified-id="Accéder-aux-éléments-d'un-ndarray-1.2.4"><span class="toc-item-num">1.2.4&nbsp;&nbsp;</span>Accéder aux éléments d'un <code>ndarray</code></a></span></li><li><span><a href="#Afficher-un-ndarray:-fonction-d'affichage" data-toc-modified-id="Afficher-un-ndarray:-fonction-d'affichage-1.2.5"><span class="toc-item-num">1.2.5&nbsp;&nbsp;</span>Afficher un <code>ndarray</code>: fonction d'affichage</a></span></li><li><span><a href="#Méthodes-d'introspection" data-toc-modified-id="Méthodes-d'introspection-1.2.6"><span class="toc-item-num">1.2.6&nbsp;&nbsp;</span>Méthodes d'introspection</a></span></li><li><span><a href="#Fonctions-:-élément-par-élément-vs.-tableau" data-toc-modified-id="Fonctions-:-élément-par-élément-vs.-tableau-1.2.7"><span class="toc-item-num">1.2.7&nbsp;&nbsp;</span>Fonctions : élément-par-élément vs. tableau</a></span></li><li><span><a href="#Définir-des-ndarray-à-partir-de-listes-python-(lst)" data-toc-modified-id="Définir-des-ndarray-à-partir-de-listes-python-(lst)-1.2.8"><span class="toc-item-num">1.2.8&nbsp;&nbsp;</span>Définir des <code>ndarray</code> à partir de listes python (<code>lst</code>)</a></span></li></ul></li><li><span><a href="#Aspects-plus-avancés----($\star$)" data-toc-modified-id="Aspects-plus-avancés----($\star$)-1.3"><span class="toc-item-num">1.3&nbsp;&nbsp;</span>Aspects plus avancés    ($\star$)</a></span><ul class="toc-item"><li><span><a href="#Autres-constructeurs-et-autres-descripteurs" data-toc-modified-id="Autres-constructeurs-et-autres-descripteurs-1.3.1"><span class="toc-item-num">1.3.1&nbsp;&nbsp;</span>Autres constructeurs et autres descripteurs</a></span></li><li><span><a href="#Autres-fonctions-et-méthodes-utiles" data-toc-modified-id="Autres-fonctions-et-méthodes-utiles-1.3.2"><span class="toc-item-num">1.3.2&nbsp;&nbsp;</span>Autres fonctions et méthodes utiles</a></span></li></ul></li><li><span><a href="#Synthèse" data-toc-modified-id="Synthèse-1.4"><span class="toc-item-num">1.4&nbsp;&nbsp;</span>Synthèse</a></span></li></ul></li></ul></div><div class="section" id="les-tableaux">
+<div class="section" id="les-tableaux">
 <h2>Les tableaux<a class="headerlink" href="#les-tableaux" title="Permalink to this headline">¶</a></h2>
 <p>Les <em>types scalaires</em> permettent de manipuler des valeurs scalaires comme les :</p>
 <ul class="simple">
@@ -658,9 +657,8 @@ Les tableaux sont l’une d’entre elles.</p>
 </div>
 <div class="section" id="en-python">
 <h3>En python<a class="headerlink" href="#en-python" title="Permalink to this headline">¶</a></h3>
-<p>Nous verrons au chapitre suivant des tas de types composés proposés par python.<br />
-Au semestre 1, les <strong>listes python</strong> (vous) ont été présentées comme une façon de représenter des tableaux.<br />
-Nous verrons qu’une liste python est très différente de la définition – la vision classique – des tableaux.</p>
+<p>Jusque-là, les tableaux ont été représentés par des listes python.
+Au <span class="xref myst">chapitre “Types composés”</span>, on a vu qu’une liste python est très différente de la définition – la vision classique – des tableaux.</p>
 <p>Voilà pourquoi nous allons étudier les <code class="docutils literal notranslate"><span class="pre">ndarray</span></code>, qui définissent un type composé fourni par le module <code class="docutils literal notranslate"><span class="pre">numpy</span></code> et qui correspondent aux tableaux classiques.</p>
 </div>
 </div>
@@ -1069,8 +1067,8 @@ size : 6
 <p><strong>ATTENTION :</strong> La mise en garde précédente s’appuie sur le fait que <strong>seul</strong> le type <strong>ndarray</strong> de numpy a été introduit dans ce cours.<br />
 En particulier, le terme suivant est utilisé une et une seule fois, ici : matrix!</p>
 </div></div>
-<div class="section" id="definir-des-ndarray-a-partir-de-listes-python-lst">
-<h3>Définir des <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> à partir de listes python (<code class="docutils literal notranslate"><span class="pre">lst</span></code>)<a class="headerlink" href="#definir-des-ndarray-a-partir-de-listes-python-lst" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="definir-des-ndarray-a-partir-de-listes-python-list">
+<h3>Définir des <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> à partir de listes python (<code class="docutils literal notranslate"><span class="pre">list</span></code>)<a class="headerlink" href="#definir-des-ndarray-a-partir-de-listes-python-list" title="Permalink to this headline">¶</a></h3>
 <p>L’exemple suivant utilise un autre constructeur, dénoté <code class="docutils literal notranslate"><span class="pre">np.array()</span></code> qui définit un tableau <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> à partir de la <em>liste</em> de ses valeurs (cf. paragraphe suivant).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1166,9 +1164,9 @@ tranche de tableau: [0 0 1]
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">array()</span></code></p></td>
 <td><p>F</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">lst</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">list</span></code></p></td>
 <td><p><strong>constructeur</strong></p></td>
-<td><p>créé un tableau à partir d’un argument <code class="docutils literal notranslate"><span class="pre">lst</span></code> python</p></td>
+<td><p>créé un tableau à partir d’un argument <code class="docutils literal notranslate"><span class="pre">list</span></code> python</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">reshape()</span></code></p></td>
 <td><p>F</p></td>
@@ -1252,10 +1250,10 @@ Ce nouveau tableau est obtenu lors de l’affectation du résultat (de la foncti
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>comparaison : False
 shapes : (4, 3) (6, 2)
-id : 140207943908880 140207943907440
+id : 140232094723504 140232094723888
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/32/9hkmzrf11t38ckpktjnyfsfc0000gn/T/ipykernel_20929/86209015.py:1: DeprecationWarning: elementwise comparison failed; this will raise an error in the future.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/32/9hkmzrf11t38ckpktjnyfsfc0000gn/T/ipykernel_37672/86209015.py:1: DeprecationWarning: elementwise comparison failed; this will raise an error in the future.
   print(&quot;comparaison :&quot;, t12 == t12bis)
 </pre></div>
 </div>
@@ -1385,8 +1383,8 @@ int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[0.0000000e+00 1.0842022e-19 1.2604487e+07]
- [2.8586489e-42 2.8025969e-45 0.0000000e+00]] 
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[0.0000000e+00 4.6566129e-10 0.0000000e+00]
+ [4.6566129e-10 3.6742108e+09 4.5752395e-41]] 
  on vous aura prévenu !
 float32
 
@@ -1426,9 +1424,6 @@ int16
 <li><p><code class="docutils literal notranslate"><span class="pre">numpy</span></code> propose de multiples autres fonctions pour manipuler efficacement des tableaux.</p></li>
 <li><p>Se référer à <a class="reference external" href="https://docs.scipy.org/doc/numpy-1.15.0/user/quickstart.html">quickstart numpy</a>  (en anglais).</p></li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span> <span class="n">nbconvert</span> <span class="mi">3</span><span class="n">p</span><span class="o">-</span><span class="n">ndarray</span><span class="o">.</span><span class="n">ipynb</span> <span class="o">--</span><span class="n">to</span> <span class="n">slides</span> <span class="o">--</span><span class="n">SlidesExporter</span><span class="o">.</span><span class="n">reveal_scroll</span><span class="o">=</span><span class="kc">True</span> <span class="o">--</span><span class="n">SlidesExporter</span><span class="o">.</span><span class="n">reveal_transition</span><span class="o">=</span><span class="n">none</span> <span class="o">--</span><span class="n">SlidesExporter</span><span class="o">.</span><span class="n">reveal_theme</span><span class="o">=</span><span class="n">solarized</span>
-</pre></div>
-</div>
 </div>
 </div>
 

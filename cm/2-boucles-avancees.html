@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Boucles, tableaux et fonctions : compléments &#8212; Algo-Prog 2022</title>
+    <title>Boucles, tableaux et fonctions &#8212; Algo-Prog 2022</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -128,7 +128,7 @@
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Boucles, tableaux et fonctions : compléments
+   Boucles, tableaux et fonctions
   </a>
  </li>
  <li class="toctree-l1">
@@ -375,16 +375,16 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#star-star-quelle-specification-pour-une-fonction-generique-genericite">
+    <a class="reference internal nav-link" href="#star-star-quelle-specification-pour-une-fonction-generique">
      (
      <span class="math notranslate nohighlight">
       \(\star\star\)
      </span>
-     ) Quelle spécification pour une fonction générique ? {#genericite}
+     ) Quelle spécification pour une fonction générique ?
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#genericite">
+      <a class="reference internal nav-link" href="#id1">
        Généricité
       </a>
      </li>
@@ -490,13 +490,8 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ce-qu-il-faut-savoir">
-     Ce qu’il faut savoir
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ce-qu-il-faut-savoir-faire">
-     Ce qu’il faut savoir faire
+    <a class="reference internal nav-link" href="#ce-qui-n-a-pas-ete-vu">
+     Ce qui n’a pas été vu
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -516,7 +511,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Boucles, tableaux et fonctions : compléments</h1>
+                <h1>Boucles, tableaux et fonctions</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -584,16 +579,16 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#star-star-quelle-specification-pour-une-fonction-generique-genericite">
+    <a class="reference internal nav-link" href="#star-star-quelle-specification-pour-une-fonction-generique">
      (
      <span class="math notranslate nohighlight">
       \(\star\star\)
      </span>
-     ) Quelle spécification pour une fonction générique ? {#genericite}
+     ) Quelle spécification pour une fonction générique ?
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#genericite">
+      <a class="reference internal nav-link" href="#id1">
        Généricité
       </a>
      </li>
@@ -699,13 +694,8 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ce-qu-il-faut-savoir">
-     Ce qu’il faut savoir
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ce-qu-il-faut-savoir-faire">
-     Ce qu’il faut savoir faire
+    <a class="reference internal nav-link" href="#ce-qui-n-a-pas-ete-vu">
+     Ce qui n’a pas été vu
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -724,9 +714,9 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="boucles-tableaux-et-fonctions-complements">
-<h1>Boucles, tableaux et fonctions : compléments<a class="headerlink" href="#boucles-tableaux-et-fonctions-complements" title="Permalink to this headline">¶</a></h1>
-<p>version 2021, PhL.</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="boucles-tableaux-et-fonctions">
+<span id="ch-boucles"></span><h1>Boucles, tableaux et fonctions<a class="headerlink" href="#boucles-tableaux-et-fonctions" title="Permalink to this headline">¶</a></h1>
+<p>2022-01-29 19:47:57, PhL.</p>
 <p>Dans ce chapitre, nous revisitons trois notions déjà connues :</p>
 <ul class="simple">
 <li><p>les structures de données de type tableau,</p></li>
@@ -760,31 +750,33 @@
 <li><p>La taille de ce tableau est <em>l’ensemble ordonné</em> de chacun de ces nombres pour chacune de ses dimensions.</p></li>
 </ul>
 <p><strong>Exemples et conventions.</strong></p>
-<ul class="simple">
-<li><p>Le vecteur <span class="math notranslate nohighlight">\((2, 4, 6)\)</span> est de dimension 1 et de taille 3.</p></li>
-<li><p>La matrice
-$<span class="math notranslate nohighlight">\(
+<p>Le vecteur <span class="math notranslate nohighlight">\((2, 4, 6)\)</span> est de dimension 1 et de taille 3.</p>
+<p>La matrice</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{pmatrix}
-  1 &amp; 2 &amp; 3 \\
-  1 &amp; 4 &amp; 9 \\
+    1 &amp; 2 &amp; 3 \\
+    1 &amp; 4 &amp; 9 \\
 \end{pmatrix}
-\)</span>$
-est de dimension 2 et de taille (2, 3) : elle contient 6 valeurs organisées en 2 lignes et 3 colonnes.</p>
-<ul>
+\end{split}\]</div>
+<p>est de dimension 2 et de taille (2, 3) :
+elle contient 6 valeurs organisées en 2 lignes et 3 colonnes.</p>
+<ul class="simple">
 <li><p>La première valeur de sa taille est son nombre de lignes.</p></li>
 <li><p>La seconde valeur de sa taille correspond à son nombre de colonnes.</p></li>
 <li><p>Ce choix ligne, puis colonne, (puis …) est arbitraire mais usuel en maths, en algo, …</p></li>
 </ul>
-</li>
-<li><p>Le vecteur colonne
-$<span class="math notranslate nohighlight">\(\begin{pmatrix}
-  1 \\
-  0 \\
-  0 \\
-\end{pmatrix}\)</span><span class="math notranslate nohighlight">\(
-qui représente souvent le premier vecteur de la base orthonormée \)</span>(i, j, k)<span class="math notranslate nohighlight">\( de \)</span>\mathbb{R}^ 3$ est (donc) de taille (3, 1).</p></li>
-</ul>
-<p>Remarquons que ces notions sont (présentées de façon) indépendantes de tout choix informatique excepté l’utilisation du terme <em>tableau</em>.</p>
+<p>Le vecteur colonne</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{pmatrix}
+    1 \\
+    0 \\
+    0 \\
+\end{pmatrix}
+\end{split}\]</div>
+<p>représente souvent le premier vecteur de la base orthonormée <span class="math notranslate nohighlight">\((i, j, k)\)</span> de <span class="math notranslate nohighlight">\(\mathbb{R}^ 3\)</span> est  de taille (3, 1).</p>
+<p>Excepté le terme <em>tableau</em>, ces notions sont indépendantes de tout choix informatique.</p>
 </div>
 <div class="section" id="tableaux-en-python">
 <h3>Tableaux en python<a class="headerlink" href="#tableaux-en-python" title="Permalink to this headline">¶</a></h3>
@@ -799,8 +791,11 @@ Les deux principales sont :</p>
 <li><p>En général, un tableau est une structure de dimension et de taille connue et <em>fixée</em> de façon invariable une fois pour toute, et composé de <em>valeurs de même type</em>. Ces deux points techniques (taille fixée et unicité du type de ses valeurs) seront expliqués plus tard.</p></li>
 <li><p>En algorithmique et en python, une liste  est une structure de données <em>dynamique</em> (sa taille peut varier au fur et à mesure de son existence) de <em>valeurs de type quelconque</em>.</p></li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>Dans la continuité du semestre 1, nous continuons avec <strong>des tableaux représentés avec des listes</strong>.
-Cependant nous nous forcerons (un peu) à distinguer <em>cette représentation avec des liste(s)</em> de la notion de “liste quelconque”.</p>
+Cependant nous nous forcerons à distinguer cette <em>représentation</em> avec des liste(s)_ de la notion générale de “liste”.</p>
+</div>
 </div>
 <div class="section" id="tableaux-multidimensionnels-representes-avec-des-listes">
 <h3>Tableaux multidimensionnels représentés avec des listes<a class="headerlink" href="#tableaux-multidimensionnels-representes-avec-des-listes" title="Permalink to this headline">¶</a></h3>
@@ -835,53 +830,52 @@ Dans ce cas, une matrice n’est pas exactement un bloc de valeurs, de forme rec
 <p>est illustrée par pythontutor comme :</p>
 <p><img alt="" src="../_images/t2d-2.png" /></p>
 <p><strong>Remarque.</strong></p>
-<p>On a choisi arbitrairement une représentation par liste de <em>lignes</em>. On aurait pu représenter ce tableau 2D comme une liste de colonnes.
+<p>On a une représentation par liste de <em>lignes</em>. On aurait tout aussi pu représenter ce tableau 2D comme une liste de colonnes.
 <strong>Algorithmiquement</strong>, dans l’un ou l’autre de ces choix, un tableau donné aura <em>les mêmes valeurs</em> désignées par <em>les mêmes indices</em> : (numéro de ligne, numéro de colonne).  En revanche, nous verrons que le stockage en mémoire de l’un ou l’autre de ces choix est différent – ce qui sera source de problèmes car ce choix varie selon <em>les langages de programmation</em>.</p>
 </div>
 <div class="section" id="pas-de-pour-definir-une-liste-multidimensionnelle">
 <h3>Pas de <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">]*</span></code> pour définir une liste multidimensionnelle<a class="headerlink" href="#pas-de-pour-definir-une-liste-multidimensionnelle" title="Permalink to this headline">¶</a></h3>
-<p><strong>Comment définir un tableau multidimentionnel représenté avec une liste de listes de … ?</strong></p>
-<p><strong>- Ce qu’il ne faut pas faire :</strong></p>
-<p>On pourrait <em>être tenté</em> d’écrire :</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
-<span class="n">c</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">n</span><span class="p">]</span> <span class="o">*</span> <span class="n">n</span>
-
+<p><strong>Comment définir un tableau multidimensionnel représenté avec une liste de listes de … ?</strong></p>
+<p><strong>Ce qu’il ne faut pas faire :</strong> on pourrait <em>être tenté</em> d’écrire :</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">n</span><span class="p">]</span> <span class="o">*</span> <span class="n">n</span>
 </pre></div>
 </div>
 <p>Cette construction utilise le sens particulier du symbole <code class="docutils literal notranslate"><span class="pre">*</span></code>  appliqué à des listes 1D qui correspond à la répétition de <em>concaténation de listes</em>.
 La concaténation de deux listes peut s’écrire en python avec le symbole <code class="docutils literal notranslate"><span class="pre">+</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">l3_zeros</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">l1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">l2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">l</span> <span class="o">=</span> <span class="n">l1</span> <span class="o">+</span> <span class="n">l2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;l=&quot;</span><span class="p">,</span> <span class="n">l</span><span class="p">)</span>
+
+<span class="n">l3_zeros</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">l3_zeros</span><span class="p">)</span>
 
 <span class="n">l3_uns</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">l3_uns</span><span class="p">)</span>
 
-<span class="n">l1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">]</span>
-<span class="n">l2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-<span class="n">l</span> <span class="o">=</span> <span class="n">l1</span> <span class="o">+</span> <span class="n">l2</span>
 <span class="n">l3</span> <span class="o">=</span> <span class="n">l3_zeros</span> <span class="o">+</span> <span class="n">l3_uns</span> 
-
-<span class="nb">print</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">l3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;l3=&quot;</span><span class="p">,</span> <span class="n">l3</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 0, 0]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>l= [3, 4, 5]
+[0, 0, 0]
 [1, 1, 1]
-[3, 4, 5] [0, 0, 0, 1, 1, 1]
+l3= [0, 0, 0, 1, 1, 1]
 </pre></div>
 </div>
 </div>
 </div>
 <p>Avant d’indiquer pourquoi il ne faut pas utiliser aveuglement cette définition par concaténation, présentons :</p>
-<p><strong>- Ce qu’il faut faire :</strong></p>
-<p>On utilisera systématiquement la <em>construction d’une liste par compréhension</em>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
-<span class="n">c</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
-
+<div class="important admonition">
+<p class="admonition-title"><strong>Ce qu’il faut faire</strong></p>
+<p>Pour définir et initialiser un tableau mono- ou multi-dimensionnel, utiliser systématiquement la <em>construction d’une liste par compréhension</em>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
 </pre></div>
+</div>
 </div>
 <p>(<span class="math notranslate nohighlight">\(\star\)</span>) <strong>Pourquoi ?</strong></p>
 <p>Le code suivant <em>à éviter</em> reprend la construction d’une liste 1D par concaténation et le fait qu’un tableau 2D est une liste de listes.</p>
@@ -904,7 +898,7 @@ La concaténation de deux listes peut s’écrire en python avec le symbole <cod
 </div>
 </div>
 </div>
-<p>Cette  <em>très mauvaise idée</em> est pourtant encore sans conséquence visible avec des affichages ou des tests trop naifs !</p>
+<p>L’affichage et des tests trop naïfs ne permettent pas d’exhiber pourquoi cette construction est dangereuse.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># definition de liste 2D en compréhension</span>
@@ -939,13 +933,11 @@ Aie !
 </div>
 </div>
 </div>
-<p>Il y a bien <strong>DANGER !</strong> : les quatre ont été modifiées alors que la modification (était supposée) s’appliquer à une seule valeur.</p>
-<p>Ce type de comportement est vraiment piégeux et particulièrement long à débugger …
-Moralité :</p>
-<ol class="simple">
-<li><p>Comprendre : 1 fois</p></li>
-<li><p>S’interdire tout risque : systématiquement !</p></li>
-</ol>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Quatre termes de la matrice ont été modifiées alors l’écriture désigne <strong>un seul terme</strong> de cette matrice.</p>
+</div>
+<p>Ce comportement assez piégeux peut être particulièrement long à identifier lors d’une phase de debug …</p>
 <p><strong>Visualiser pour bien comprendre.</strong></p>
 <p>Merci pythontutor !</p>
 <ul class="simple">
@@ -955,29 +947,27 @@ Moralité :</p>
 <p><strong>Conclusion</strong>
 Il vaut mieux s’interdire toute mauvaise habitude – même pour les listes 1D ou tableaux 1D.</p>
 <div class="alert alert-block alert-danger">
+<p>Utiliser la définition de <b>listes en compréhension :</b></p>
 <ul>
-<li>Utiliser la définition de <b>listes en compréhension :</b></li>
-    <ul>
-    <li> 1D : OUI à '[i for i in range(3)]</li>
-    <li> 2D : OUI à '[[0 for i in range(3)] for j in range(5)]'</li>
-    </ul>
-<li>Ne pas utiliser le symbole '*' de concaténation répétée pour créer et initialiser une liste.</li>
-    <ul>
-    <li> NON à '[[0] * 3] * 5'</li>
-    </ul>
-</ul>    
+<li> 1D : OUI à '[i for i in range(3)]</li>
+<li> 2D : OUI à '[[0 for i in range(3)] for j in range(5)]'</li>
+</ul>
+<p>Ne pas utiliser le symbole ‘*’ de concaténation répétée pour créer et initialiser une liste.</p>
+<ul>
+<li> NON à '[[0] * 3] * 5'</li>
+</ul>
 </div></div>
 </div>
 <div class="section" id="specifications-de-fonctions-avec-parametre-list-en-python">
 <h2>Spécifications de fonctions avec paramètre <code class="docutils literal notranslate"><span class="pre">List</span></code>  en python<a class="headerlink" href="#specifications-de-fonctions-avec-parametre-list-en-python" title="Permalink to this headline">¶</a></h2>
 <p>La spécification d’une fonction doit comporter le type de ses paramètres formels.<br />
-On s’était limité aux paramètres formels de types scalaires.</p>
+On s’était limité aux paramètres formels de types scalaires <code class="docutils literal notranslate"><span class="pre">bool</span></code>, <code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">float</span></code>, <code class="docutils literal notranslate"><span class="pre">complex</span></code>.</p>
 <p><strong>Pourquoi introduire cette notion maintenant ?</strong></p>
 <ul class="simple">
 <li><p>la fonction est la construction élémentaire pour regrouper un traitement éventuellement complexe qui dépend de paramètres (d’entrée)</p></li>
 <li><p>la vérification de la correction d’un traitement (à l’aide de tests unitaires) est facile à mettre en oeuvre lorsqu’il est défini sous la forme d’une fonction</p>
 <ul>
-<li><p>il suffit d’appeler la fonction pour des paramètres bien choisis – cad. pour lesquels le traitements attendu est connu.</p></li>
+<li><p>il suffit d’appeler la fonction pour des paramètres bien choisis – c-a-d. pour lesquels le traitements attendu est connu.</p></li>
 </ul>
 </li>
 <li><p>une fonction doit être décrite par sa spécification (son en-tête, sa signature)</p></li>
@@ -988,7 +978,7 @@ Donc nous avons besoin de <em>fonctions</em> qui manipulent des <em>tableaux</em
 <h3>Comment indiquer le type d’un paramètre formel d’une fonction lorsque celui-ci est une liste ?<a class="headerlink" href="#comment-indiquer-le-type-d-un-parametre-formel-d-une-fonction-lorsque-celui-ci-est-une-liste" title="Permalink to this headline">¶</a></h3>
 <p>Deux approches sont possibles.</p>
 <ul class="simple">
-<li><p>La première consiste à utiliser le type prédéfini <code class="docutils literal notranslate"><span class="pre">list</span></code> de façon similaire aux autres types scalaires de python. Hélas cette solution ne permet pas d’expliciter le type des <em>valeurs</em> contenues par la liste. Rappelons qu’une liste python, à la différence d’un tableau, peut contenir des valeurs de type quelconque.</p></li>
+<li><p>Il est possible d’utiliser le type prédéfini <code class="docutils literal notranslate"><span class="pre">list</span></code> de façon similaire aux autres types scalaires de python. Hélas cette solution ne permet pas d’expliciter le type des <em>valeurs</em> contenues par la liste. Rappelons qu’une liste python, à la différence d’un tableau, peut contenir des valeurs de type quelconque.</p></li>
 <li><p><strong>La solution</strong> que nous retiendrons <strong>pour les tableaux représentés avec des listes</strong> s’appuie sur type <code class="docutils literal notranslate"><span class="pre">List</span></code> (avec un L majuscule) importé du module <code class="docutils literal notranslate"><span class="pre">typing</span></code>. Cette solution nous permettra d’expliciter les deux spécificités d’un tableau : l’unicité du type des valeurs qu’il contient et sa dimension fixée une fois pour toute.</p></li>
 </ul>
 <div class="cell docutils container">
@@ -998,7 +988,7 @@ Donc nous avons besoin de <em>fonctions</em> qui manipulent des <em>tableaux</em
 </div>
 </div>
 </div>
-<p><strong>Noter le L majuscule</strong> de <code class="docutils literal notranslate"><span class="pre">List</span></code> obligatoire avec <code class="docutils literal notranslate"><span class="pre">typing</span></code> (et avant python3.9)</p>
+<p><strong>Noter le L majuscule</strong> de <code class="docutils literal notranslate"><span class="pre">List</span></code> obligatoire avec le module <code class="docutils literal notranslate"><span class="pre">typing</span></code> avant python3.9)</p>
 <p>Le type d’un tableau (représenté par une liste) sera décrit avec la syntaxe <code class="docutils literal notranslate"><span class="pre">List[type_val]</span></code> où <code class="docutils literal notranslate"><span class="pre">type_val</span></code> est le type des valeurs du tableau.</p>
 <p><em>Exemples.</em></p>
 <ul class="simple">
@@ -1007,8 +997,21 @@ Donc nous avons besoin de <em>fonctions</em> qui manipulent des <em>tableaux</em
 <li><p><code class="docutils literal notranslate"><span class="pre">List[str]</span></code> : un tableau 1D de caractères <em>ou</em> de chaîne de caractères.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">List[List[int]]</span></code> : un tableau 2D d’entiers représenté par une liste de listes</p></li>
 </ul>
-<p>Cette syntaxe permet d’expliciter le type (unique) des valeurs contenues dans un tableau.<br />
-Le paragraphe suivant indique comment préciser la taille (fixe) d’un tableau.</p>
+<p>Cette syntaxe permet d’expliciter le type (unique) des valeurs contenues dans un tableau.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Evolutions des annotations de typage</p>
+<ul class="simple">
+<li><p>python <span class="math notranslate nohighlight">\(\ge\)</span> 3.9 : module <code class="docutils literal notranslate"><span class="pre">typing</span></code> plus nécessaire pour définir <code class="docutils literal notranslate"><span class="pre">List[...]</span></code></p></li>
+<li><p>python <span class="math notranslate nohighlight">\(\ge\)</span> 3.9 : possibilité d’utiliser le type <code class="docutils literal notranslate"><span class="pre">list[...]</span></code> sans majuscule</p></li>
+<li><p>python <span class="math notranslate nohighlight">\(\ge\)</span> 3.10 : le symbole <code class="docutils literal notranslate"><span class="pre">|</span></code> pour désigner l’union de types (ex <code class="docutils literal notranslate"><span class="pre">Union</span></code>)</p></li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>La suite de ce chapitre utilise les possibilités de python 3.9.</p>
+</div>
+<p>Le paragraphe suivant indique comment préciser la taille (fixe) d’un tableau.</p>
 </div>
 <div class="section" id="comment-specifier-une-fonction-avec-des-parametres-formels-de-type-tableau">
 <h3>Comment spécifier une fonction avec des paramètres formels de type tableau ?<a class="headerlink" href="#comment-specifier-une-fonction-avec-des-parametres-formels-de-type-tableau" title="Permalink to this headline">¶</a></h3>
@@ -1016,7 +1019,7 @@ Le paragraphe suivant indique comment préciser la taille (fixe) d’un tableau.
 <p><strong>Exemple :</strong>
 la fonction <code class="docutils literal notranslate"><span class="pre">min1</span></code> doit retourner la valeur minimale d’un tableau 1 D <code class="docutils literal notranslate"><span class="pre">t</span></code>, d’entiers (par exemple) et de taille <code class="docutils literal notranslate"><span class="pre">n</span></code> quelconque.</p>
 <p>La spécification de cette fonction s’écrira :</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">min1</span><span class="p">(</span><span class="n">t</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">min1</span><span class="p">(</span><span class="n">t</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
     <span class="sd">&#39;&#39;&#39;retourne la valeur minimale du tableau d&#39;entiers t de taille n&#39;&#39;&#39;</span>
 
 </pre></div>
@@ -1030,8 +1033,8 @@ la fonction <code class="docutils literal notranslate"><span class="pre">min1</s
 <li><p>Ce paramètre supplémentaire n’est pas nécessaire en python mais <strong>il est obligatoire dans cet enseignement</strong></p></li>
 </ul>
 <p>Nous étendons cette pratique aux tableaux multidimensionnels.</p>
-<p>Par exemple pour la spécification de la fonction qui identifie et retourne la valeur minimale dans un tableau 2D s’écrit par exemple (pour un tableau 2D d’entiers) :</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">min2</span><span class="p">(</span><span class="n">t</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]],</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">m</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<p>Par exemple, la spécification de la fonction qui identifie et retourne la valeur minimale dans un tableau 2D s’écrit par exemple (pour un tableau 2D d’entiers) :</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">min2</span><span class="p">(</span><span class="n">t</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]],</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">m</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
     <span class="sd">&#39;&#39;&#39;retourne la valeur minimale du tableau 2D d&#39;entiers t de taille n x m&#39;&#39;&#39;</span>
 </pre></div>
 </div>
@@ -1052,13 +1055,13 @@ la fonction <code class="docutils literal notranslate"><span class="pre">min1</s
 <li><p>…</p></li>
 </ul>
 </div>
-<div class="section" id="star-star-quelle-specification-pour-une-fonction-generique-genericite">
-<h3>(<span class="math notranslate nohighlight">\(\star\star\)</span>) Quelle spécification pour une fonction générique ? {#genericite}<a class="headerlink" href="#star-star-quelle-specification-pour-une-fonction-generique-genericite" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="star-star-quelle-specification-pour-une-fonction-generique">
+<span id="genericite"></span><h3>(<span class="math notranslate nohighlight">\(\star\star\)</span>) Quelle spécification pour une fonction générique ?<a class="headerlink" href="#star-star-quelle-specification-pour-une-fonction-generique" title="Permalink to this headline">¶</a></h3>
 <div class="alert alert-warning">
 <p>Objectif 20 : compléments.</p>
 <p>Sauter cette section en première lecture.</p>
-</div><div class="section" id="genericite">
-<h4>Généricité<a class="headerlink" href="#genericite" title="Permalink to this headline">¶</a></h4>
+</div><div class="section" id="id1">
+<h4>Généricité<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
 <p>Cette section s’est d’abord appelée :</p>
 <blockquote>
 <div><p>“Comment spécifier un traitement générique ?”</p>
@@ -1215,7 +1218,7 @@ Cette dépendance des parcours se traduit par l’imbrication de deux <em>boucle
 <p>La fonction <code class="docutils literal notranslate"><span class="pre">min1</span></code> qui retourne la valeur minimale d’un tableau 1 D d’entiers (par exemple) et de taille <span class="math notranslate nohighlight">\(n\)</span> quelconque.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">min1</span><span class="p">(</span><span class="n">t</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">min1</span><span class="p">(</span><span class="n">t</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
     <span class="sd">&#39;&#39;&#39;retourne la valeur minimale du tableau d&#39;entiers t de taille n&#39;&#39;&#39;</span>
     <span class="n">val_min</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
@@ -1245,7 +1248,7 @@ Cette dépendance des parcours se traduit par l’imbrication de deux <em>boucle
 <p>python permet en effet de se dégager de cette obligation, entre autres grâce à la fonction prédéfinie <code class="docutils literal notranslate"><span class="pre">len()</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">min1_bis_moche</span><span class="p">(</span><span class="n">t</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">min1_bis_moche</span><span class="p">(</span><span class="n">t</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
     <span class="sd">&#39;&#39;&#39;retourne la valeur minimale du tableau d&#39;entiers t de taille n&#39;&#39;&#39;</span>
     <span class="n">val_min</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)):</span>
@@ -1287,7 +1290,7 @@ Cette dépendance des parcours se traduit par l’imbrication de deux <em>boucle
 <p>Maintenant, déterminer la valeur minimale d’un tableau 2D illustre l’utilisation de deux boucles imbriquées indépendantes pour réaliser un seul parcours complet d’un tableau 2D.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">min2</span><span class="p">(</span><span class="n">t</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]],</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">m</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">min2</span><span class="p">(</span><span class="n">t</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]],</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">m</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
     <span class="sd">&#39;&#39;&#39;retourne la valeur minimale du tableau 2D d&#39;entiers t de taille n x m&#39;&#39;&#39;</span>
     <span class="n">val_min</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
@@ -1368,7 +1371,7 @@ Combien de fois est exécuté le test de la ligne 5 de <code class="docutils lit
 <li><p>pour <code class="docutils literal notranslate"><span class="pre">tab</span> <span class="pre">=</span> <span class="pre">[[1,</span> <span class="pre">2,</span> <span class="pre">3],</span> <span class="pre">[4,</span> <span class="pre">5,</span> <span class="pre">6]]</span></code> ?</p></li>
 <li><p>pour un <code class="docutils literal notranslate"><span class="pre">t</span></code> quelconque ?</p></li>
 </ul>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">min2</span><span class="p">(</span><span class="n">t</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]],</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">m</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">min2</span><span class="p">(</span><span class="n">t</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]],</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">m</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
     <span class="sd">&#39;&#39;&#39;retourne la valeur minimale du tableau 2D d&#39;entiers t de taille n x m&#39;&#39;&#39;</span>
     <span class="n">val_min</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
@@ -1510,7 +1513,7 @@ et ils varient (ici) tous entre 0 et <span class="math notranslate nohighlight">
 <p>Le code suivant – pour des matrices entières et carrées de taille <code class="docutils literal notranslate"><span class="pre">n</span></code> par exemple – explicite donc ce traitement.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">prod_mat_carrees</span><span class="p">(</span><span class="n">a</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]],</span> <span class="n">b</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]],</span> <span class="n">n</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">prod_mat_carrees</span><span class="p">(</span><span class="n">a</span> <span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]],</span> <span class="n">b</span> <span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]],</span> <span class="n">n</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]]:</span>
     <span class="sd">&#39;&#39;&#39;retourne C = AxB ou A,B,C sont des matrices entières carrees de taille nxn&#39;&#39;&#39;</span>
     <span class="n">c</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span> <span class="c1"># bien lire cette ligne</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
@@ -1539,9 +1542,6 @@ et ils varient (ici) tous entre 0 et <span class="math notranslate nohighlight">
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[1, 2], [3, 4]]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
@@ -1613,7 +1613,7 @@ Pour la question de l’existence d’un doublon, écrire un (pseudo-)algorithme
 <h3>Une première solution avec deux boucles imbriquées indépendantes<a class="headerlink" href="#une-premiere-solution-avec-deux-boucles-imbriquees-independantes" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">existe_doublon</span><span class="p">(</span><span class="n">t</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">n</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">existe_doublon</span><span class="p">(</span><span class="n">t</span> <span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">n</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
     <span class="n">res</span> <span class="o">=</span> <span class="kc">False</span> 
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
         <span class="n">val</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
@@ -1666,7 +1666,7 @@ True False
 <p>Voici donc la bonne solution avec <em>deux boucles imbriquées <strong>dépendantes</strong></em> : l’indice de la boucle intérieure dépend de l’indice de la boucle extérieure.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">existe_doublon_2</span><span class="p">(</span><span class="n">t</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">n</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">existe_doublon_2</span><span class="p">(</span><span class="n">t</span> <span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">n</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
     <span class="n">res</span> <span class="o">=</span> <span class="kc">False</span> 
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
         <span class="n">val</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
@@ -1750,7 +1750,10 @@ Et aussi des combinaisons de boucles <code class="docutils literal notranslate">
 <h2>Synthèse<a class="headerlink" href="#synthese" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="ce-qui-a-ete-vu">
 <h3>Ce qui a été vu<a class="headerlink" href="#ce-qui-a-ete-vu" title="Permalink to this headline">¶</a></h3>
-<p><strong>Structure de données complexe : les tableaux et leur représentation</strong> les tableaux de dimension quelconque peuvent être représentés en python par des listes, des listes de listes, des listes de listes de listes …</p>
+<p><strong>Structure de données composée :</strong>  les tableaux et leur représentation</p>
+<ul class="simple">
+<li><p>les tableaux de dimension quelconque peuvent être représentés <em>en python</em> par des listes, des listes de listes, des listes de listes de listes …</p></li>
+</ul>
 <p>Avec comme conséquences :</p>
 <ul class="simple">
 <li><p>indices <code class="docutils literal notranslate"><span class="pre">[][]...[]</span></code></p></li>
@@ -1764,8 +1767,8 @@ Et aussi des combinaisons de boucles <code class="docutils literal notranslate">
 </ul>
 <p><strong>Spécifier pour vérifier</strong> une fonction avec paramètre(s) de type tableau :</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">typing</span> <span class="pre">import</span> <span class="pre">List</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">:</span> <span class="pre">[List[List[int]]</span></code> avec un <code class="docutils literal notranslate"><span class="pre">L</span></code> majuscule</p></li>
+<li><p>avant python 3.9 : <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">typing</span> <span class="pre">import</span> <span class="pre">List</span></code>  # avec un <code class="docutils literal notranslate"><span class="pre">L</span></code> majuscule</p></li>
+<li><p>depuis python 3.9 : <code class="docutils literal notranslate"><span class="pre">tab2D:</span> <span class="pre">[list[list[int]]</span></code> # avec un <code class="docutils literal notranslate"><span class="pre">l</span></code> minuscule</p></li>
 <li><p>ajouter les paramètres de dimension</p>
 <ul>
 <li><p>appel avec la fonction préféfinie <code class="docutils literal notranslate"><span class="pre">len()</span></code></p></li>
@@ -1773,27 +1776,9 @@ Et aussi des combinaisons de boucles <code class="docutils literal notranslate">
 </li>
 </ul>
 </div>
-<div class="section" id="ce-qu-il-faut-savoir">
-<h3>Ce qu’il faut savoir<a class="headerlink" href="#ce-qu-il-faut-savoir" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>Structure de données : représentation d’un tableau multidimensionnel comme une liste de listes</p></li>
-<li><p>Structure de contrôle de type boucles imbriquées indépendantes et dépendantes :</p>
-<ul>
-<li><p>intérêt et exemples simples,</p></li>
-<li><p>dénombrer les itérations de ces constructions.</p></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="section" id="ce-qu-il-faut-savoir-faire">
-<h3>Ce qu’il faut savoir faire<a class="headerlink" href="#ce-qu-il-faut-savoir-faire" title="Permalink to this headline">¶</a></h3>
-<p><strong>Cadre</strong> : en/pour python</p>
-<ul class="simple">
-<li><p>Définir et écrire un traitement classique de tableau multidimensionnel  : parcours simple, parcours conditionnel</p></li>
-<li><p>Ecrire une initialisation de tableau multidimensionnel en python (représenté par des listes)</p></li>
-<li><p>Définir et écrire une spécification de fonction avec des paramètres de type tableau</p></li>
-<li><p>Identifier les cas particuliers liés à la structure de tableau : tableau de dimension 0, tableau vide</p></li>
-</ul>
+<div class="section" id="ce-qui-n-a-pas-ete-vu">
+<h3>Ce qui n’a pas été vu<a class="headerlink" href="#ce-qui-n-a-pas-ete-vu" title="Permalink to this headline">¶</a></h3>
+<p>Les <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> du module <code class="docutils literal notranslate"><span class="pre">numpy</span></code> sont très utilisés en pratique et présentés dans <a class="reference internal" href="a2-ndarray.html#ann-ndarray"><span class="std std-ref">une annexe dédiée</span></a></p>
 </div>
 <div class="section" id="exercice-de-synthese">
 <h3>Exercice de synthèse<a class="headerlink" href="#exercice-de-synthese" title="Permalink to this headline">¶</a></h3>
