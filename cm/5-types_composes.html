@@ -1364,14 +1364,14 @@ Si besoin, l’utilisation de <code class="docutils literal notranslate"><span c
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
 [3, 1, 2] [3, 1, 2]
-140299668333888 140299668333888
+140187890131904 140187890131904
 
 duplication avec copy.copy : 
 False
 [3, 1, 2] [999, 1, 2]
 duplication par affectation de tranche complète : 
 False True
-140299667991552 140299668333888
+140187889818176 140187890131904
 </pre></div>
 </div>
 </div>
@@ -1673,16 +1673,16 @@ changement de cretin :  {&#39;2&#39;: &#39;Jack&#39;, 3: &#39;William&#39;, &#39
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;a&#39;, &#39;o&#39;, &#39;i&#39;, &#39;u&#39;, &#39;e&#39;, &#39;y&#39;} 6
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;a&#39;, &#39;u&#39;, &#39;y&#39;, &#39;e&#39;, &#39;i&#39;, &#39;o&#39;} 6
 True
 False
-aie : {&#39;a&#39;, &#39;e&#39;, &#39;i&#39;}
-voyelles : {&#39;a&#39;, &#39;o&#39;, &#39;i&#39;, &#39;u&#39;, &#39;e&#39;, &#39;y&#39;}
-union : {&#39;a&#39;, &#39;o&#39;, &#39;i&#39;, &#39;u&#39;, &#39;e&#39;, &#39;y&#39;}
-autre union : {&#39;a&#39;, &#39;b&#39;, &#39;o&#39;, &#39;i&#39;, &#39;f&#39;, &#39;u&#39;, &#39;e&#39;, &#39;y&#39;}
-intersection : {&#39;a&#39;, &#39;e&#39;, &#39;i&#39;}
+aie : {&#39;i&#39;, &#39;a&#39;, &#39;e&#39;}
+voyelles : {&#39;a&#39;, &#39;u&#39;, &#39;y&#39;, &#39;e&#39;, &#39;i&#39;, &#39;o&#39;}
+union : {&#39;a&#39;, &#39;u&#39;, &#39;y&#39;, &#39;e&#39;, &#39;i&#39;, &#39;o&#39;}
+autre union : {&#39;a&#39;, &#39;b&#39;, &#39;u&#39;, &#39;y&#39;, &#39;e&#39;, &#39;i&#39;, &#39;f&#39;, &#39;o&#39;}
+intersection : {&#39;i&#39;, &#39;a&#39;, &#39;e&#39;}
 difference :  set() {&#39;b&#39;, &#39;f&#39;}
-difference symétrique:  {&#39;o&#39;, &#39;u&#39;, &#39;y&#39;}
+difference symétrique:  {&#39;u&#39;, &#39;y&#39;, &#39;o&#39;}
 inclusions : True True False False
 </pre></div>
 </div>
@@ -1747,9 +1747,9 @@ bnor! 5
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>abc 140299612716848
-abc 140299612716848
-abcdef 140299668114544
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>abc 140187841855216
+abc 140187841855216
+abcdef 140187890059696
 </pre></div>
 </div>
 </div>
@@ -1813,7 +1813,10 @@ Les identifiants sont en général bien explicites.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False True
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> True
 [&#39;b&#39;, &#39;nj&#39;, &#39;ur !&#39;]
 bonjour ! False
 BONJOUR ! True False 
@@ -1850,10 +1853,10 @@ BONJOUR ! True False
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140299668277936
-140299668277936
-140299668279024
-140299668279024
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140187890058672
+140187890058672
+140187889415088
+140187889415088
 </pre></div>
 </div>
 </div>
@@ -1895,7 +1898,9 @@ Cela permet par exemple d’interpréter différemment les symboles <code class=
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bonjour
-	bonjour
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	bonjour
 s1: 7
 s2: 8
 [ b ]
