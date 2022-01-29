@@ -54,8 +54,11 @@ Objectifs séance de TD
 
 ## Semaine 5
 
-**Motto** :
-"1. spécification, 2. appels, 3. corps = ordre des trois étapes successives de l'écriture d'une fonction"
+**Motto** : "Ordre des trois étapes successives de l'écriture d'une fonction :
+
+1. spécification 
+2. appels 
+3. corps"  
 
 Objectifs semaine :
 
