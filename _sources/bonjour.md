@@ -3,7 +3,10 @@
 
 **Ce support est en évolution tout au long de ce semestre.**
 
+Mis à jour : {sub-ref}`today`, lecture : {sub-ref}`wordcount-minutes` minutes minimum, PhL.
+
 Ceci est le premier point d'entrée de l'UE Algo-Prog en complément de l'[espace moodle de cette UE](https://cours.univ-perp.fr/course/view.php?id=925).
+
 
 :::{important} Rappels des dates importantes
 
