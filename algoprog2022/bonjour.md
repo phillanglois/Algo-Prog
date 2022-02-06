@@ -3,7 +3,10 @@
 
 **Ce support est en évolution tout au long de ce semestre.**
 
+Mis à jour : {sub-ref}`today`, lecture : {sub-ref}`wordcount-minutes` minutes minimum, PhL.
+
 Ceci est le premier point d'entrée de l'UE Algo-Prog en complément de l'[espace moodle de cette UE](https://cours.univ-perp.fr/course/view.php?id=925).
+
 
 :::{important} Rappels des dates importantes
 
@@ -60,7 +63,7 @@ Objectifs séance de TD
 2. appels 
 3. corps"  
 
-Objectifs semaine :
+Objectifs semaine : fonction à paramètres scalaires
 
 - Savoir reconnaître et distinguer les notions suivantes : définition/appel, spécification (en-tête, signature)/implémentation (corps), paramètres formels/effectifs, return/print
 - Comprendre les effets d'un appel de fonction
@@ -77,4 +80,23 @@ Objectifs séance de TD
 - exercices feuille 1 
 - ($\star$) exercices feuille 2
 
+## Semaine 6 (programme partiel)
+
+**Motto** : "Spécifier le type des paramètres formels d'une fonction et la taille des paramètres tableaux"
+
+Objectifs semaine : Tableaux, boucles avancées et fonctions
+
+- Savoir définir et écrire un traitement classique de tableau multidimensionnel  : parcours simple, parcours conditionnel 
+- Savoir écrire une initialisation de tableau multidimensionnel en python (représenté par des listes)
+- Savoir définir et écrire une spécification de fonction avec des paramètres de type tableau  
+- Savoir identifier les cas particuliers liés à la structure de tableau : tableau de dimension 0, tableau vide
+
+Conseils avant TD/CM 
+
+- Etudier chapitre "Boucles, tableaux et fonctions"
+
+
+Objectifs séance de TD 
+
+- exercices feuille 2 selon votre objectif 
 <!-- #endregion -->
