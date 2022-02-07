@@ -95,6 +95,8 @@ Conseils avant TD/CM
 
 - Etudier chapitre "Boucles, tableaux et fonctions"
 
+- Avant le CM : 
+    - lire le chapitre "ES simples avec fichiers"
 
 Objectifs séance de TD 
 
