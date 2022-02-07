@@ -60,18 +60,21 @@ Dans/avec un notebook jupyter :
 - Définir et écrire une spécification de fonction avec des paramètres de type tableau  
 - Identifier les cas particuliers liés à la structure de tableau : tableau de dimension 0, tableau vide
 
-## Entrées-Sorties : fichiers
+## Entrées-Sorties simples avec des fichiers
 
 ### Avoir les idées claires
 
 - Distinguer fichier logique _vs._ physique, texte _vs._ binaire, mode lecture _vs._ écriture (_vs._ lecture-écriture) 
-- Connaître les étapes de manipulation d'un fichier : association/ouverture/lecture-écriture/fermeture
-- Distinguer valeur (numérique) et sa représentation textuelle 
+- Connaître les 4 étapes de manipulation d'un fichier : association/ouverture/lecture-écriture/fermeture
+- Distinguer représentation textuelle et valeur (numérique)   
+
 
 ### Savoir-faire
 
-- Savoir écrire les lectures-écritures simples de fichier texte avec les instructions python adaptées  
+- Savoir écrire les lectures-écritures simples de fichier texte avec `.readline()` et `.write()`
 - Comprendre et gérer l'effet des caractères spéciaux 
+- ($\star $) Savoir écrire les lectures-écritures de fichiers texte avec les instructions python adaptées   
+
 
 ## Complexité
 

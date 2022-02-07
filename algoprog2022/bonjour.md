@@ -80,7 +80,7 @@ Objectifs séance de TD
 - exercices feuille 1 
 - ($\star$) exercices feuille 2
 
-## Semaine 6 (programme partiel)
+## Semaine 6
 
 **Motto** : "Spécifier le type des paramètres formels d'une fonction et la taille des paramètres tableaux"
 
@@ -93,8 +93,11 @@ Objectifs semaine : Tableaux, boucles avancées et fonctions
 
 Conseils avant TD/CM 
 
-- Etudier chapitre "Boucles, tableaux et fonctions"
+- étudier chapitre "Boucles, tableaux et fonctions"
 
+Avant le CM :
+ 
+- lire le chapitre "ES simples avec fichiers"
 
 Objectifs séance de TD 
 
