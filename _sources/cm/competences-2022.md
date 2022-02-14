@@ -71,7 +71,7 @@ Dans/avec un notebook jupyter :
 
 ### Savoir-faire
 
-- Savoir écrire les lectures-écritures simples de fichier texte avec `.readline()` et `.write()`
+- Savoir écrire les lectures-écritures simples de fichier texte avec `.readline()`, `.read()` et `.write()`
 - Comprendre et gérer l'effet des caractères spéciaux 
 - ($\star $) Savoir écrire les lectures-écritures de fichiers texte avec les instructions python adaptées   
 
