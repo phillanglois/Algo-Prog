@@ -1,7 +1,7 @@
 <!-- #region -->
 # Bienvenu en Algo-Prog !
 
-**Ce support est en évolution tout au long de ce semestre.**
+**Ce support est en évolution tout au long du semestre.**
 
 Mis à jour : {sub-ref}`today`, lecture : {sub-ref}`wordcount-minutes` minutes minimum, PhL.
 
@@ -102,4 +102,22 @@ Avant le CM :
 Objectifs séance de TD 
 
 - exercices feuille 2 selon votre objectif 
+
+## Semaine 7 (programme partiel)
+
+**Motto** : "Appeler une fonction avec des paramètres effectifs différents des paramètres formels"
+
+Objectifs semaine : identiques semaine 6 
+
+Conseils avant TD/CM 
+
+- Finir les exercices des feuilles 1 et 2 selon vos objectifs 
+
+Avant le CM :
+ 
+
+Objectifs séance de TD 
+
+- exercices feuille 2 selon votre objectif
+- ($\star$) exercices feuille 3
 <!-- #endregion -->
