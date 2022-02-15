@@ -19,7 +19,7 @@ parts:
     - file: cm/3-ES-fichiers
   - caption: Algorithmique
     chapters:
-    - file: cm/4-complexite_tmp
+    - file: cm/4-complexite
     - file: cm/6-recursivite
     - file: cm/8-rechercher
     - file: cm/10-trier
