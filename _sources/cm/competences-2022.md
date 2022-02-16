@@ -1,6 +1,7 @@
 # Compétences 
 
-version 2022, PhL.
+Mis à jour : {sub-ref}`today`, lecture : {sub-ref}`wordcount-minutes`
+minutes minimum, PhL.
 
 Les compétences de cet enseignement sont rassemblées dans ce fichier pour vous aider à contrôler votre apprentissage au long du semestre.
 
@@ -80,16 +81,15 @@ Dans/avec un notebook jupyter :
 
 ### Avoir les idées claires
 
-- Principes de l'analyse de la complexité en temps : modèle de calcul RAM, paramètres de complexité, meilleur et pire cas
+- Principes de l'analyse de la complexité en temps : modèle de calcul, mesure et paramètre de la complexité, meilleur et pire cas
 - Complexité asymptotique : notations de Landau, principales classes de complexité des algorithmes, interprétation pratique de ces classes
-- Complexité, pires et meilleurs cas des algorithmes vus ce semestre
+- Algorithmes vus ce semestre : complexité, pires et meilleurs cas des 
 - Savoir établir la complexité d'algorithmes itératifs simples ou récursifs terminaux.
-
 
 ### Savoir-faire
 
 - Exemples d'algorithme des principales classes de complexité 
-- Savoir identifier (sans nécessairement le prouver) la complexité, les meilleur-pire cas d'un algorithme  
+- Savoir identifier (sans nécessairement le prouver) la complexité, les meilleur-pire cas d'un algorithme 
 
 ## Récursivité
 
@@ -123,6 +123,8 @@ Dans/avec un notebook jupyter :
 
 ### Savoir faire
 
+- Recherche séquentielle : formes itérative et récursive
+- Recherche dichotomique dans un ensemble trié : formes itérative et récursive
 
 ## Types composés
 
@@ -138,7 +140,7 @@ Distinguer les  caractéristiques des structures de données (SD) _tuple_, _list
 
 ### Savoir faire
 
-- Connaitre la syntaxe python de définition et manipulation de ces SD
+- Connaître la syntaxe python de définition et manipulation de ces SD
 - Créer des listes et dictionnaires en compréhension
 - Connaître les méthodes (prédéfinies) utiles au traitement, en particulier des chaînes de caractères 
 - Définir des spécifications de fonctions avec un ou des paramètres de type composé

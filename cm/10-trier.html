@@ -128,12 +128,12 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="2-boucles-avancees.html">
-   Boucles, tableaux et fonctions : compléments
+   Boucles, tableaux et fonctions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="3-ES-fichiers.html">
-   Les entrées-sorties avec des fichiers
+   Entrées-sorties simples avec des fichiers
   </a>
  </li>
 </ul>
@@ -144,7 +144,7 @@
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="4-complexite_tmp.html">
+  <a class="reference internal" href="4-complexite.html">
    Complexités
   </a>
  </li>
@@ -227,6 +227,16 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../td/td1.html">
    Feuille 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../td/td2.html">
+   Feuille 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../td/td3.html">
+   Feuille 3
   </a>
  </li>
 </ul>
@@ -972,9 +982,9 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[16, 46, 3, 11, 50]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[41, 15, 12, 17, 11]
 Trions !
-[3, 11, 16, 46, 50]
+[11, 12, 15, 17, 41]
 </pre></div>
 </div>
 </div>
@@ -1196,9 +1206,9 @@ meilleur cas
 [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 45 comparaisons pour n =  10
-[43, 42, 2, 58, 75, 38, 9, 50, 33, 72]
-[2, 9, 33, 38, 42, 43, 50, 58, 72, 75]
-28 comparaisons pour n =  10
+[94, 55, 5, 59, 18, 25, 23, 3, 2, 49]
+[2, 3, 5, 18, 23, 25, 49, 55, 59, 94]
+37 comparaisons pour n =  10
 </pre></div>
 </div>
 </div>
@@ -1213,36 +1223,36 @@ meilleur cas
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Meilleur cas : au plus  9 comparaisons pour n =  10
 Pire cas : au moins  45 comparaisons pour n =  10
 Moyenne de  10 cas aleatoires :
-28 comparaisons pour n =  10
+30 comparaisons pour n =  10
+31 comparaisons pour n =  10
+41 comparaisons pour n =  10
 28 comparaisons pour n =  10
 30 comparaisons pour n =  10
-26 comparaisons pour n =  10
 27 comparaisons pour n =  10
-26 comparaisons pour n =  10
-25 comparaisons pour n =  10
-36 comparaisons pour n =  10
+35 comparaisons pour n =  10
+32 comparaisons pour n =  10
+28 comparaisons pour n =  10
 30 comparaisons pour n =  10
-36 comparaisons pour n =  10
-Conclusion :  29 comparaisons en moyenne pour n =  10 ( 10 echantillons)
+Conclusion :  31 comparaisons en moyenne pour n =  10 ( 10 echantillons)
 ---------
 Meilleur cas : au plus  49 comparaisons pour n =  50
 Pire cas : au moins  1225 comparaisons pour n =  50
 Moyenne de  10 cas aleatoires :
-636 comparaisons pour n =  50
-778 comparaisons pour n =  50
-593 comparaisons pour n =  50
-763 comparaisons pour n =  50
-633 comparaisons pour n =  50
-635 comparaisons pour n =  50
-768 comparaisons pour n =  50
-587 comparaisons pour n =  50
-681 comparaisons pour n =  50
-699 comparaisons pour n =  50
-Conclusion :  677 comparaisons en moyenne pour n =  50 ( 10 echantillons)
+615 comparaisons pour n =  50
+592 comparaisons pour n =  50
+629 comparaisons pour n =  50
+575 comparaisons pour n =  50
+739 comparaisons pour n =  50
+658 comparaisons pour n =  50
+616 comparaisons pour n =  50
+634 comparaisons pour n =  50
+671 comparaisons pour n =  50
+783 comparaisons pour n =  50
+Conclusion :  651 comparaisons en moyenne pour n =  50 ( 10 echantillons)
 ---------
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>((10, 50), [9, 49], [45, 1225], [29, 677])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>((10, 50), [9, 49], [45, 1225], [31, 651])
 </pre></div>
 </div>
 </div>
@@ -1257,32 +1267,32 @@ Conclusion :  677 comparaisons en moyenne pour n =  50 ( 10 echantillons)
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Meilleur cas : au plus  9 comparaisons pour n =  10
 Pire cas : au moins  45 comparaisons pour n =  10
 Moyenne de  10 cas aleatoires :
-38 comparaisons pour n =  10
-25 comparaisons pour n =  10
-38 comparaisons pour n =  10
-30 comparaisons pour n =  10
-33 comparaisons pour n =  10
-32 comparaisons pour n =  10
-34 comparaisons pour n =  10
-23 comparaisons pour n =  10
-22 comparaisons pour n =  10
+27 comparaisons pour n =  10
 28 comparaisons pour n =  10
-Conclusion :  30 comparaisons en moyenne pour n =  10 ( 10 echantillons)
+30 comparaisons pour n =  10
+14 comparaisons pour n =  10
+30 comparaisons pour n =  10
+40 comparaisons pour n =  10
+33 comparaisons pour n =  10
+28 comparaisons pour n =  10
+27 comparaisons pour n =  10
+26 comparaisons pour n =  10
+Conclusion :  28 comparaisons en moyenne pour n =  10 ( 10 echantillons)
 ---------
 Meilleur cas : au plus  49 comparaisons pour n =  50
 Pire cas : au moins  1225 comparaisons pour n =  50
 Moyenne de  10 cas aleatoires :
-626 comparaisons pour n =  50
-685 comparaisons pour n =  50
-702 comparaisons pour n =  50
-664 comparaisons pour n =  50
-763 comparaisons pour n =  50
-619 comparaisons pour n =  50
-681 comparaisons pour n =  50
-621 comparaisons pour n =  50
-572 comparaisons pour n =  50
-736 comparaisons pour n =  50
-Conclusion :  666 comparaisons en moyenne pour n =  50 ( 10 echantillons)
+769 comparaisons pour n =  50
+689 comparaisons pour n =  50
+645 comparaisons pour n =  50
+581 comparaisons pour n =  50
+668 comparaisons pour n =  50
+693 comparaisons pour n =  50
+659 comparaisons pour n =  50
+659 comparaisons pour n =  50
+695 comparaisons pour n =  50
+726 comparaisons pour n =  50
+Conclusion :  678 comparaisons en moyenne pour n =  50 ( 10 echantillons)
 ---------
 </pre></div>
 </div>
@@ -1578,13 +1588,14 @@ après : [0, 1, 2, 4, 8, 15, 17, 23]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>avant : [19, 44, 30, 94, 48, 24, 76]
-dem : [0, 0, 0, 0, 0, 0, 0] [19, 44, 30, 94, 48, 24, 76]
-partition [g, d[:m -&gt; [ 0 , 7 [: 0 [19, 76, 24, 48, 94, 30, 44] [19, 76, 24, 48, 94, 30, 44]
-partition [g, d[:m -&gt; [ 1 , 7 [: 5 [24, 48, 30, 44, 76, 94] [24, 48, 30, 44, 76, 94]
-partition [g, d[:m -&gt; [ 1 , 5 [: 1 [24, 44, 30, 48] [24, 44, 30, 48]
-partition [g, d[:m -&gt; [ 2 , 5 [: 3 [30, 44, 48] [30, 44, 48]
-après : [19, 24, 30, 44, 48, 76, 94]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>avant : [82, 55, 71, 45, 42, 37, 78]
+dem : [0, 0, 0, 0, 0, 0, 0] [82, 55, 71, 45, 42, 37, 78]
+partition [g, d[:m -&gt; [ 0 , 7 [: 6 [55, 71, 45, 42, 37, 78, 82] [55, 71, 45, 42, 37, 78, 82]
+partition [g, d[:m -&gt; [ 0 , 6 [: 3 [45, 42, 37, 55, 78, 71] [45, 42, 37, 55, 78, 71]
+partition [g, d[:m -&gt; [ 0 , 3 [: 2 [42, 37, 45] [42, 37, 45]
+partition [g, d[:m -&gt; [ 0 , 2 [: 1 [37, 42] [37, 42]
+partition [g, d[:m -&gt; [ 4 , 6 [: 5 [71, 78] [71, 78]
+après : [37, 42, 45, 55, 71, 78, 82]
 </pre></div>
 </div>
 </div>
@@ -2182,10 +2193,10 @@ avec affichages
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 4, 0, 5, 7, 0, 7, 0] [1, 6, 2, 8, 7, 5, 0, 0]
-[0, 0, 0, 1, 4, 5, 7, 7]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[6, 5, 2, 8, 4, 3, 2, 4] [8, 0, 2, 5, 0, 8, 0, 3]
+[2, 2, 3, 4, 4, 5, 6, 8]
 nb comparaisons: 24
-[0, 0, 1, 2, 5, 6, 7, 8]
+[0, 0, 0, 2, 3, 5, 8, 8]
 nb comparaisons: 24
 </pre></div>
 </div>
