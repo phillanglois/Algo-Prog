@@ -81,15 +81,15 @@ Dans/avec un notebook jupyter :
 
 ### Avoir les idées claires
 
-- Principes de l'analyse de la complexité en temps : modèle de calcul, mesure et paramètre de la complexité, meilleur et pire cas
-- Complexité asymptotique : notations de Landau, principales classes de complexité des algorithmes, interprétation pratique de ces classes
-- Algorithmes vus ce semestre : complexité, pires et meilleurs cas des 
+- Connaître le principes de l'analyse de la complexité en temps : modèle de calcul, mesure et paramètre de la complexité, meilleur et pire cas
+- Savoir exprimer et exploiter une complexité asymptotique : notations de Landau, principales classes de complexité des algorithmes, interprétation pratique de ces classes
 - Savoir établir la complexité d'algorithmes itératifs simples ou récursifs terminaux.
 
 ### Savoir-faire
 
-- Exemples d'algorithme des principales classes de complexité 
-- Savoir identifier (sans nécessairement le prouver) la complexité, les meilleur-pire cas d'un algorithme 
+- Connaître des exemples significatifs d'algorithmes de complexité polynomiale et logarithmique (complexité, pires et meilleurs cas)  
+- Savoir identifier (sans nécessairement le prouver) la complexité, les meilleur-pire cas d'un algorithme  
+
 
 ## Récursivité
 
