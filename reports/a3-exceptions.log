@@ -17,17 +17,25 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-x = float(input("Un float stp :"))
-print("Son inverse vaut", 1./x)
+try :
+    x = float(input("Un float stp :"))
+    print("Son inverse vaut", 1./x)
+except ZeroDivisionError :
+    x = float(input("Un float NON NUL stp :"))
+    print("Son inverse vaut", 1./x)
+except:
+    print("Désolé : on ne peut rien pour toi")
+    raise
 print("et on vérifie : x * 1/x =", x * 1/x)
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mStdinNotImplementedError[0m                  Traceback (most recent call last)
-Input [0;32mIn [1][0m, in [0;36m<module>[0;34m[0m
-[0;32m----> 1[0m x [38;5;241m=[39m [38;5;28mfloat[39m([38;5;28;43minput[39;49m[43m([49m[38;5;124;43m"[39;49m[38;5;124;43mUn float stp :[39;49m[38;5;124;43m"[39;49m[43m)[49m)
-[1;32m      2[0m [38;5;28mprint[39m([38;5;124m"[39m[38;5;124mSon inverse vaut[39m[38;5;124m"[39m, [38;5;241m1.[39m[38;5;241m/[39mx)
-[1;32m      3[0m [38;5;28mprint[39m([38;5;124m"[39m[38;5;124met on vérifie : x * 1/x =[39m[38;5;124m"[39m, x [38;5;241m*[39m [38;5;241m1[39m[38;5;241m/[39mx)
+Input [0;32mIn [2][0m, in [0;36m<module>[0;34m[0m
+[1;32m      1[0m [38;5;28;01mtry[39;00m :
+[0;32m----> 2[0m     x [38;5;241m=[39m [38;5;28mfloat[39m([38;5;28;43minput[39;49m[43m([49m[38;5;124;43m"[39;49m[38;5;124;43mUn float stp :[39;49m[38;5;124;43m"[39;49m[43m)[49m)
+[1;32m      3[0m     [38;5;28mprint[39m([38;5;124m"[39m[38;5;124mSon inverse vaut[39m[38;5;124m"[39m, [38;5;241m1.[39m[38;5;241m/[39mx)
+[1;32m      4[0m [38;5;28;01mexcept[39;00m [38;5;167;01mZeroDivisionError[39;00m :
 
 File [0;32m~/.local/share/virtualenvs/L1-Algo-Prog-QBKqvp5g/lib/python3.9/site-packages/ipykernel/kernelbase.py:1041[0m, in [0;36mKernel.raw_input[0;34m(self, prompt)[0m
 [1;32m   1034[0m [38;5;124;03m"""Forward raw_input to frontends[39;00m

@@ -491,6 +491,11 @@
      </li>
     </ul>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#expressions-et-equivalents-asymptotiques-a-connaitre">
+     Expressions et équivalents asymptotiques à connaître
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -498,11 +503,6 @@
    Complexité d’algorithmes itératifs
   </a>
   <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#expressions-et-equivalents-asymptotiques-a-connaitre">
-     Expressions et équivalents asymptotiques à connaître
-    </a>
-   </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#iterations-classiques">
      Itérations classiques
@@ -758,6 +758,11 @@
      </li>
     </ul>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#expressions-et-equivalents-asymptotiques-a-connaitre">
+     Expressions et équivalents asymptotiques à connaître
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -765,11 +770,6 @@
    Complexité d’algorithmes itératifs
   </a>
   <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#expressions-et-equivalents-asymptotiques-a-connaitre">
-     Expressions et équivalents asymptotiques à connaître
-    </a>
-   </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#iterations-classiques">
      Itérations classiques
@@ -968,7 +968,7 @@ Coût en temps nécessaire à la résolution de Pb2 par <code class="docutils li
 <li><p><em>meilleur cas</em> : <code class="docutils literal notranslate"><span class="pre">val</span></code> est à l’indice 0 et coût indépendant de <span class="math notranslate nohighlight">\(n\)</span></p></li>
 <li><p><em>pire cas</em> : <code class="docutils literal notranslate"><span class="pre">val</span></code> est absente de <code class="docutils literal notranslate"><span class="pre">t</span></code> et coût fonction croissante de <span class="math notranslate nohighlight">\(n\)</span></p></li>
 </ul>
-<p>Conclusions : les <strong>complexité en temps</strong> de ces 2 problèmes aux entrées très similaires dépendent de <strong>paramètres</strong> différents. La complexité en temps de la résolution de Pb2 n’est pas constante, même pour une valeur de <span class="math notranslate nohighlight">\(n\)</span> fixée. Elle dépend de <em>l’instance</em> du problème de recherche à résoudre. De façon imagée, Pb2 “dépend plus” de l’instance du problème que Pb1. Il faudra distinguer parmi ces instances celles qui conduisent à <strong>pires cas</strong> pour le coût en temps, et inversement les <strong>meilleurs cas</strong>.</p>
+<p>Conclusions : les <strong>complexité en temps</strong> de ces 2 problèmes aux entrées très similaires dépendent de <strong>paramètres</strong> différents. La complexité en temps de la résolution de Pb2 n’est pas constante, même pour une valeur de <span class="math notranslate nohighlight">\(n\)</span> fixée. Elle dépend de <em>l’instance</em> du problème de recherche à résoudre. De façon imagée, Pb2 “dépend plus” de l’instance du problème que Pb1. Parmi les instances du Pb2, il faudra distinguer  celles qui conduisent à des <strong>pires cas</strong> pour le coût en temps, et inversement à des <strong>meilleurs cas</strong>.</p>
 </div>
 <div class="section" id="complexite-en-espace">
 <h4>Complexité en espace<a class="headerlink" href="#complexite-en-espace" title="Permalink to this headline">¶</a></h4>
@@ -1085,14 +1085,14 @@ retour, contrôle de boucle <code class="docutils literal notranslate"><span cla
 <ul class="simple">
 <li><p>Il est inutile de compter toutes les instructions de <code class="docutils literal notranslate"><span class="pre">sommer()</span></code></p></li>
 <li><p>on simplifie le décompte en <em>identifiant certaines instructions significatives</em> du temps de traitement.</p></li>
-<li><p>on réduit au maximum ce nombre d’instructions significatives : on verra qu’on n’est pas à un facteur multiplicatif près” (ordre de grandeur)</p></li>
+<li><p>on réduit au maximum ce nombre d’instructions significatives : on verra qu’on n’est pas à un facteur multiplicatif près (ordre de grandeur)</p></li>
 </ul>
 <p>Ici on <strong>compte</strong> seulement <strong>les additions de la ligne 4</strong> dans <code class="docutils literal notranslate"><span class="pre">sommer()</span></code></p>
 <ul>
 <li><p>on a autant d’affectations dans <code class="docutils literal notranslate"><span class="pre">res</span></code> que d’additions</p></li>
 <li><p>on ne compte pas ces affectations,</p></li>
-<li><p>ni les additions cachées dans la mise à jour des indices de la boucle <code class="docutils literal notranslate"><span class="pre">for</span></code></p></li>
-<li><p>écart : facteur multiplicatif du nombre d’additions comptées</p></li>
+<li><p>ni les traitements cachées dans <em>le contrôle</em> de la boucle <code class="docutils literal notranslate"><span class="pre">for</span></code> (voir <a class="reference internal" href="#rmq-controle"><span class="std std-ref">remarque</span></a>)</p></li>
+<li><p>écart : un facteur multiplicatif du nombre d’additions comptées</p></li>
 <li><p>conclusion :</p>
 <blockquote>
 <div><p>complexité(<code class="docutils literal notranslate"><span class="pre">sommer()</span></code>) = f(nombre d’additions du corps de boucle)</p>
@@ -1244,12 +1244,13 @@ exécutions possibles, <em>ie.</em> le pire coût de résolution de toutes les i
 </div>
 <p><strong>Analyse :</strong></p>
 <ul class="simple">
-<li><p>on ne compte pas les <code class="docutils literal notranslate"><span class="pre">n</span></code> places-mémoire pour l’entrée : le tableau d’entiers <code class="docutils literal notranslate"><span class="pre">t</span></code></p></li>
-<li><p>on ne compte pas le résultat retourné <code class="docutils literal notranslate"><span class="pre">res</span></code></p></li>
-<li><p>il suffit de pouvoir stocker l’accumulation des <code class="docutils literal notranslate"><span class="pre">t[i]</span></code> : ici dans <code class="docutils literal notranslate"><span class="pre">res</span></code></p></li>
-<li><p><strong>un seul entier suffit et ce quelque soit la taille du problème !</strong></p></li>
+<li><p>ligne 1 : on ne compte pas les <code class="docutils literal notranslate"><span class="pre">n</span></code> places-mémoire pour l’entrée : le tableau d’entiers <code class="docutils literal notranslate"><span class="pre">t</span></code></p></li>
+<li><p>lignes 2 et 5 : on ne compte pas la place mémoire pour le résultat retourné <code class="docutils literal notranslate"><span class="pre">res</span></code></p></li>
+<li><p>il suffit de pouvoir stocker l’accumulation des <code class="docutils literal notranslate"><span class="pre">t[i]</span></code> avec et dans <code class="docutils literal notranslate"><span class="pre">res</span></code></p></li>
+<li><p><strong>au plus un seul entier suffit</strong> (selon que l’accumulation s’effectue en place ou non) et ce <strong>quelque soit la taille du problème !</strong></p></li>
+<li><p>on oublie encore le contrôle de la boucle <code class="docutils literal notranslate"><span class="pre">for</span></code> qui nécessite la place mémoire pour <code class="docutils literal notranslate"><span class="pre">i</span></code> au moins.</p></li>
 </ul>
-<p><strong>Conclusion :</strong> La complexité en espace-mémoire de <code class="docutils literal notranslate"><span class="pre">sommer()</span></code> est constante – et égal à 1.</p>
+<p><strong>Conclusion :</strong> La complexité en espace-mémoire de <code class="docutils literal notranslate"><span class="pre">sommer()</span></code> est constante.</p>
 <p><strong>Remarque :</strong> c’est encore la ligne 4 qui est significative !</p>
 </div>
 </div>
@@ -1265,19 +1266,18 @@ exécutions possibles, <em>ie.</em> le pire coût de résolution de toutes les i
 <li><p>Le degré de ce polynôme donne  l’ordre de grandeur cherché</p></li>
 </ul>
 <div class="section" id="complexite-quadratique-du-produit-matrice-x-vecteur">
-<h3>Complexité quadratique du produit matrice x vecteur<a class="headerlink" href="#complexite-quadratique-du-produit-matrice-x-vecteur" title="Permalink to this headline">¶</a></h3>
+<span id="sec-prodmatvec"></span><h3>Complexité quadratique du produit matrice x vecteur<a class="headerlink" href="#complexite-quadratique-du-produit-matrice-x-vecteur" title="Permalink to this headline">¶</a></h3>
 <p>Pb : calculer le produit matrice x vecteur</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">Au</span><span class="p">(</span><span class="n">A</span> <span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]],</span> <span class="n">nblA</span><span class="p">:</span> <span class="nb">int</span> <span class="p">,</span> <span class="n">nbcA</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">u</span> <span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> \
-       <span class="n">nbcu</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">Au</span><span class="p">(</span><span class="n">A</span> <span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]],</span> <span class="n">nblA</span><span class="p">:</span> <span class="nb">int</span> <span class="p">,</span> <span class="n">nbcA</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">u</span> <span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="n">nblu</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]:</span>
     <span class="sd">&#39;&#39;&#39; calcule produit mat-vec pour : </span>
 <span class="sd">    A matrice carrée de taille nblA x nbcA</span>
-<span class="sd">    u : vecteur de taille nbcu</span>
-<span class="sd">    si nbcA == nbcu retourne </span>
+<span class="sd">    u : vecteur de taille nblu</span>
+<span class="sd">    si nbcA == nblu retourne </span>
 <span class="sd">    v: vecteur de taille nblA</span>
 <span class="sd">    &#39;&#39;&#39;</span>
-    <span class="k">assert</span> <span class="n">nbcA</span> <span class="o">==</span> <span class="n">nbcu</span>
+    <span class="k">assert</span> <span class="n">nbcA</span> <span class="o">==</span> <span class="n">nblu</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nblA</span><span class="p">):</span>
         <span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># j&#39;accumule dans v[i]</span>
         <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nbcA</span><span class="p">):</span>
@@ -1292,7 +1292,7 @@ exécutions possibles, <em>ie.</em> le pire coût de résolution de toutes les i
 <li><p>appel pour <code class="docutils literal notranslate"><span class="pre">A[n][n],</span> <span class="pre">u[n]</span> <span class="pre">-&gt;</span> <span class="pre">v[n]</span></code></p></li>
 <li><p>on simplifie l’écriture du code pour cet appel :</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">nblA</span> <span class="pre">==</span> <span class="pre">nbcA</span> <span class="pre">==</span> <span class="pre">nbcu</span> <span class="pre">==</span> <span class="pre">nblv</span> <span class="pre">==</span> <span class="pre">n</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nblA</span> <span class="pre">==</span> <span class="pre">nbcA</span> <span class="pre">==</span> <span class="pre">nblu</span> <span class="pre">==</span> <span class="pre">n</span></code></p></li>
 </ul>
 </li>
 </ul>
@@ -1307,17 +1307,13 @@ exécutions possibles, <em>ie.</em> le pire coût de résolution de toutes les i
 <p>Exemple de décompte (presque) exhaustif des instructions :</p>
 <p>Deux boucles <code class="docutils literal notranslate"><span class="pre">for</span></code> imbriquées de taille n chacune.</p>
 <ul class="simple">
-<li><p>boucle extérieure : n itérations de</p>
+<li><p>boucle extérieure : n répétitions de</p>
 <ul>
-<li><p>ligne 3 : total = n affectations</p></li>
-<li><p>ligne 4 : la boucle <code class="docutils literal notranslate"><span class="pre">for</span></code> intérieure :</p>
-<ul>
-<li><p>n itérations de</p>
+<li><p>ligne 3 : 1 affectation</p></li>
+<li><p>ligne 4 : boucle intérieure : n répétitions de</p>
 <ul>
 <li><p>ligne 5 : 1 *, 1 +, 1 =</p></li>
-</ul>
-</li>
-<li><p>total intérieur = 2n opérations, n affectations</p></li>
+<li><p><span class="math notranslate nohighlight">\(\to\)</span> total intérieur = 2n opérations arithm., n affectations</p></li>
 </ul>
 </li>
 </ul>
@@ -1325,40 +1321,41 @@ exécutions possibles, <em>ie.</em> le pire coût de résolution de toutes les i
 </ul>
 <p><strong>Total</strong> extérieur-intérieur :</p>
 <ul class="simple">
-<li><p><strong>2 n**2</strong> opérations</p></li>
-<li><p>n**2 + n affectations</p></li>
+<li><p><strong>2n<span class="math notranslate nohighlight">\(^2\)</span></strong> opérations</p></li>
+<li><p>n<span class="math notranslate nohighlight">\(^2\)</span> + n affectations</p></li>
 </ul>
-<p><strong>Remarque.</strong>
-Bien que détaillé, ce décompte basé sur les instructions d’affectations explicites n’est pas exhaustif en pratique. En effet, les construction <code class="docutils literal notranslate"><span class="pre">for</span></code> comportent implicitement des affectations, comparaisons et incrémentations qui n’ont pas été ajoutés au décompte total.</p>
-<p>En pratique, la construction <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">range(n):</span></code> comporte :</p>
+<p id="rmq-controle"><strong>Remarque.</strong>
+Bien que détaillé, ce décompte basé sur les instructions d’affectations explicites n’est pas exhaustif en pratique. En effet, les construction <code class="docutils literal notranslate"><span class="pre">for</span></code> comportent implicitement des affectations, comparaisons et incrémentations qui n’ont pas été ajoutées au décompte total.</p>
+<p>En pratique, la construction <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">range(n):</span></code> comporte</p>
 <ul class="simple">
 <li><p>1+n affectations,</p></li>
 <li><p>n incrémentations,</p></li>
-<li><p>n+1 comparaisons.<br />
-Ces instructions représente <em>le contrôle de la boucle <code class="docutils literal notranslate"><span class="pre">for</span></code></em>.</p></li>
+<li><p>n+1 comparaisons.</p></li>
 </ul>
-<p>Quel est l’effet de ce contrôle sur le décompte effectué pour les 2 boucles imbriquées ?  On vous laisse vous convaincre qu’il ne fait qu’augmenter les facteur multiplicatifs des expressions qui dépendent de <span class="math notranslate nohighlight">\(n\)</span>. Ce contrôle (même dans le cas imbriqué) n’impacte pas le <em>degré en <span class="math notranslate nohighlight">\(n\)</span> des expressions identifiées</em>. Lorsque <span class="math notranslate nohighlight">\(n\)</span> est arbitrairement grand, c-a-d. <span class="math notranslate nohighlight">\(n \rightarrow +\infty\)</span>, ces expressions varient comme leur terme de plus haut degré.</p>
+<p>Ces instructions représente <em>le contrôle de la boucle <code class="docutils literal notranslate"><span class="pre">for</span></code></em>.</p>
+<p>Quel est l’effet de ce contrôle sur le décompte effectué pour les 2 boucles imbriquées ?  On vous laisse vous convaincre qu’il ne fait qu’augmenter les facteur multiplicatifs des expressions qui dépendent de <span class="math notranslate nohighlight">\(n\)</span>. Ce contrôle (même dans le cas imbriqué) n’impacte pas le <em>degré en <span class="math notranslate nohighlight">\(n\)</span> des expressions identifiées</em>. Lorsque <span class="math notranslate nohighlight">\(n\)</span> est arbitrairement grand, c-a-d. <span class="math notranslate nohighlight">\(n \rightarrow +\infty\)</span>, ces expressions varient comme leur terme de plus haut degré. Leur coefficient (lui impacté par le facteur multiplicatif) n’a aucun d’effet sur l’ordre de gradeur de l’expression, et à un effet secondaire sur la tendance.</p>
 <p><strong>Asymptotiquement :</strong> pour <code class="docutils literal notranslate"><span class="pre">n</span></code> arbitrairement grand,</p>
 <blockquote>
-<div><p>C(Ax) ~ n**2 : complexité <strong>quadratique</strong> en temps</p>
+<div><p>C(Ax) <span class="math notranslate nohighlight">\(\sim\)</span> n<span class="math notranslate nohighlight">\(^2\)</span> : complexité <strong>quadratique</strong> en temps</p>
 </div></blockquote>
-<p>C’est cette <strong>tendance asymptotique</strong> qui nous intéresse. Ainsi, <em>un décompte simplifié aux instructions significatives de cette complexité asymptotique</em> est souvent suffisant pour nos études de complexité. Attention cependant de ne pas oublier dans ce cas, qu’un telle complexité <em>cache des facteurs multiplicatifs</em> qui peuvent être importants pour des “petites” valeurs de <span class="math notranslate nohighlight">\(n\)</span>. Nous reviendrons sur cet aspect dans une <a class="reference internal" href="#sec-complexiteasymptotique"><span class="std std-ref">section prochaine</span></a>.</p>
+<p>C’est cette <strong>tendance asymptotique</strong> qui nous intéresse. Ainsi, <em>un décompte simplifié aux instructions significatives de cette complexité asymptotique</em> est souvent suffisant pour nos études de complexité. Attention cependant de ne pas oublier, dans ce cas, qu’une telle complexité <em>cache des facteurs multiplicatifs</em> qui peuvent être importants pour des “petites” valeurs de <span class="math notranslate nohighlight">\(n\)</span>. Nous reviendrons sur cet aspect dans une <a class="reference internal" href="#sec-complexiteasymptotique"><span class="std std-ref">section prochaine</span></a>.</p>
 <p><strong>Exercice.</strong> Effectuer une analyse de complexité à partir de l’expression mathématique du produite matrice x vecteur.</p>
 </div>
 <div class="section" id="mesures-du-temps-d-execution-du-produit-matrice-vecteur">
 <h3>Mesures du temps d’exécution du produit matrice-vecteur<a class="headerlink" href="#mesures-du-temps-d-execution-du-produit-matrice-vecteur" title="Permalink to this headline">¶</a></h3>
 <div class="figure align-default" id="fig-timingprodmatvec">
 <a class="reference internal image-reference" href="../_images/complexiteProdMatVec.png"><img alt="../_images/complexiteProdMatVec.png" src="../_images/complexiteProdMatVec.png" style="height: 150mm;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">L’échelle log-log est adaptée au tracé de ce temps d’exécution quadratique en la taille.</span><a class="headerlink" href="#fig-timingprodmatvec" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Les mesures sont alignées sur une droite parallèle à celle <span class="math notranslate nohighlight">\(n^2\)</span> (une droite en échelle log-log).</span><a class="headerlink" href="#fig-timingprodmatvec" title="Permalink to this image">¶</a></p>
 </div>
+<p>L’échelle log-log est adaptée au tracé de ce temps d’exécution quadratique en la taille : la taille prend des ordre de grandeurs différents. Ici de 10 à 10000.</p>
 <ul class="simple">
-<li><p>Attention : échelle <span class="math notranslate nohighlight">\(\log_10\)</span> sur les axes des x et des y !</p></li>
 <li><p>La pente vaut 2, ce qui représente :</p>
 <ul>
 <li><p><span class="math notranslate nohighlight">\(10^1\)</span> sur x <span class="math notranslate nohighlight">\(\to\)</span> <span class="math notranslate nohighlight">\(10^2\)</span> sur y</p></li>
 <li><p>soit donc x \to<span class="math notranslate nohighlight">\( \)</span>x^2$</p></li>
 </ul>
 </li>
+<li><p>Attention : <span class="math notranslate nohighlight">\(\log_10\)</span> sur les axes des x et des y mais avec des échelles différentes ! (comparer la distance entre deux valeurs espacées d’un facteur 10).</p></li>
 </ul>
 <p>Ci-après une autre illustration où le temps de calcul normalisé par <span class="math notranslate nohighlight">\(n^2\)</span> est bien une droite horizontale.</p>
 <p>Question : que représente la valeur indiquée par cette droite ?</p>
@@ -1370,6 +1367,7 @@ Ces instructions représente <em>le contrôle de la boucle <code class="docutils
 </div>
 <div class="section" id="complexite-en-memoire-du-produit-matrice-x-vecteur">
 <h3>Complexité en mémoire du produit matrice x vecteur<a class="headerlink" href="#complexite-en-memoire-du-produit-matrice-x-vecteur" title="Permalink to this headline">¶</a></h3>
+<p>Assez similaire à celle de <code class="docutils literal notranslate"><span class="pre">sommer()</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">def</span> <span class="nf">Au</span><span class="p">(</span><span class="n">A</span> <span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]],</span> <span class="n">u</span> <span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]:</span>
 <span class="hll"><span class="linenos">2</span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
 </span><span class="linenos">3</span>        <span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># j&#39;accumule dans v[i]</span>
@@ -1382,17 +1380,22 @@ Ces instructions représente <em>le contrôle de la boucle <code class="docutils
 <li><p>données et résultats</p></li>
 </ol>
 <ul class="simple">
-<li><p>entrée : <code class="docutils literal notranslate"><span class="pre">A[n][n],</span> <span class="pre">u[n]</span></code> <span class="math notranslate nohighlight">\(\to  n^2 + n\)</span></p></li>
-<li><p>résultat : `v[n] <span class="math notranslate nohighlight">\(\to n\)</span></p></li>
+<li><p>entrée : <code class="docutils literal notranslate"><span class="pre">A[n][n],</span> <span class="pre">u[n]</span></code> <span class="math notranslate nohighlight">\(\to\)</span>  n<span class="math notranslate nohighlight">\(^2\)</span> + n</p></li>
+<li><p>résultat : <code class="docutils literal notranslate"><span class="pre">v[n]</span></code> <span class="math notranslate nohighlight">\(\to\)</span> n</p></li>
 </ul>
-<p>Un espace mémoire de <span class="math notranslate nohighlight">\(n^2 + n\)</span> unité-mémoire est minimal (sauf matrice ou vecteur
+<p>Un espace mémoire de n<span class="math notranslate nohighlight">\(^2\)</span> + n unités-mémoire est minimal (sauf matrice ou vecteur
 particulier)</p>
 <ol class="simple">
 <li><p>algorithme</p></li>
 </ol>
 <ul class="simple">
-<li><p>mise à jour de chaque composante : traitement <em>en place</em></p></li>
-<li><p>espace mémoire supplémentaire <strong>constant quelque soit n</strong></p></li>
+<li><p>ligne 5 : mise à jour de chaque composante :</p>
+<ul>
+<li><p>une  variable intermédiaire : résultat de la <code class="docutils literal notranslate"><span class="pre">*</span></code> si l’accumulation <code class="docutils literal notranslate"><span class="pre">+</span></code> effectuée <em>en place</em> (aucun espace-mémoire nécessaire)</p></li>
+<li><p>ou deux variables intermédiaires si l’accumulation <code class="docutils literal notranslate"><span class="pre">+</span></code> non “en place”.</p></li>
+</ul>
+</li>
+<li><p>Conclusion : espace mémoire supplémentaire <strong>constant quelque soit n</strong>.</p></li>
 </ul>
 </div>
 </div>
@@ -1436,12 +1439,14 @@ tableau de n valeurs <strong>triées</strong></p>
 <p>Analyse :</p>
 <ul class="simple">
 <li><p><strong>Nombre de comparaisons = nombre de découpages en 2</strong> du tableau de longueur n</p></li>
-<li><p>Nombre <strong>maximal</strong> de comparaisons = nombre de découpages en 2 “de n valeurs” jusqu’à l’arrêt “avec absence” : le <em>pire cas</em></p></li>
+<li><p>Nombre <strong>maximal</strong> de comparaisons = nombre de découpages en 2 “de n valeurs” jusqu’à l’arrêt “avec absence” : le <em>pire cas</em> = <span class="math notranslate nohighlight">\(\lceil \log_2(n) \rceil\)</span></p></li>
 </ul>
+<div class="admonition-expliquer-ce-log-2-n admonition">
+<p class="admonition-title">Expliquer ce <span class="math notranslate nohighlight">\(\log_2(n)\)</span></p>
 <p>Un peu de maths pour compter ce nombre de divisions par 2 :</p>
 <ul class="simple">
 <li><p>question : combien de découpages par 2 de <span class="math notranslate nohighlight">\(n\)</span> valeurs jusqu’à en obtenir 1 seule ?</p></li>
-<li><p>réponse : <strong><span class="math notranslate nohighlight">\(\log_2(n)\)</span></strong></p></li>
+<li><p>réponse : <span class="math notranslate nohighlight">\(\lceil \log_2(n) \rceil\)</span> ou plus simplement <strong><span class="math notranslate nohighlight">\(\log_2(n)\)</span></strong> si <span class="math notranslate nohighlight">\(n\)</span> est une puissance de 2.</p></li>
 <li><p>comprendre le principe de la réponse : <strong>partons de <span class="math notranslate nohighlight">\(n = 2^p = n_0\)</span></strong></p>
 <ul>
 <li><p>on divise <span class="math notranslate nohighlight">\(n_0\)</span> par 2 <span class="math notranslate nohighlight">\(\to\)</span> il reste <span class="math notranslate nohighlight">\(n_1 = n_0/2 = 2^{p-1}\)</span> valeurs</p></li>
@@ -1457,8 +1462,11 @@ tableau de n valeurs <strong>triées</strong></p>
 </li>
 </ul>
 </li>
-<li><p>En partant d’une puissance de 2, on exhibe facilement <span class="math notranslate nohighlight">\(\log_2(n)\)</span>. Pour un autre <span class="math notranslate nohighlight">\(n\)</span> quelconque, on majorera par la puissance de 2 immédiatement supérieure (les notations <span class="math notranslate nohighlight">\(\lfloor ~ \rfloor\)</span> et <span class="math notranslate nohighlight">\(\lceil ~ \rceil\)</span> sont commodes pour ces cas).</p></li>
+<li><p>En partant d’une puissance de 2, on exhibe facilement <span class="math notranslate nohighlight">\(\log_2(n)\)</span>.</p></li>
+<li><p>Pour un autre <span class="math notranslate nohighlight">\(n\)</span> quelconque, on majorera par la puissance de 2 immédiatement supérieure (les notations <span class="math notranslate nohighlight">\(\lfloor ~ \rfloor\)</span> et <span class="math notranslate nohighlight">\(\lceil ~ \rceil\)</span> sont commodes pour ces cas).</p></li>
 </ul>
+</div>
+<p>Pour cette analyse en tendance, on conserve le nombre plus simple <span class="math notranslate nohighlight">\(\log_2(n)\)</span>.</p>
 <p>Résultat : la complexité en temps de la recherche dichotomique est</p>
 <blockquote>
 <div><p><span class="math notranslate nohighlight">\(C(n) = \log_2(n)\)</span> <strong>dans le pire cas</strong>.</p>
@@ -1485,10 +1493,8 @@ tableau de n valeurs <strong>triées</strong></p>
 </div>
 <div class="section" id="reduire-la-complexite-diviser-pour-regner">
 <h3>Réduire la complexité ? Diviser pour régner !<a class="headerlink" href="#reduire-la-complexite-diviser-pour-regner" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>La recherche dichotomique est un exemple d’algorithme de <em>complexité logarithmique</em></p></li>
-<li><p>Plus généralement, les algorithmes issus de stratégie <strong>diviser pour régner</strong> (<em>divide and conquer</em>) introduisent des complexités en <span class="math notranslate nohighlight">\(\log\)</span> : <span class="math notranslate nohighlight">\(\log(n)\)</span> ou <span class="math notranslate nohighlight">\(n \times \log(n)\)</span> et même <span class="math notranslate nohighlight">\(n \times \log( \log(n) )\)</span>.</p></li>
-</ul>
+<p>La recherche dichotomique est un exemple d’algorithme de <em>complexité logarithmique</em></p>
+<p>Plus généralement, les algorithmes issus de stratégie <strong>diviser pour régner</strong> (<em>divide and conquer</em>) introduisent des complexités en <span class="math notranslate nohighlight">\(\log\)</span> : <span class="math notranslate nohighlight">\(\log(n)\)</span> ou <span class="math notranslate nohighlight">\(n \times \log(n)\)</span> et même <span class="math notranslate nohighlight">\(n \times \log( \log(n) )\)</span>.</p>
 <p>Stratégie <strong>diviser pour régner</strong></p>
 <ul class="simple">
 <li><p>principe général basé sur la <em>récursivité</em></p></li>
@@ -1499,7 +1505,7 @@ tableau de n valeurs <strong>triées</strong></p>
 <li><p>… et ainsi de suite jusqu’à obtenir la solution du problème de départ</p></li>
 </ul>
 <p><strong>Exercice.</strong>
-Identifier que ce principe présent dans la recherche dichotomique !</p>
+Identifier que ce principe est présent dans la recherche dichotomique !</p>
 </div>
 </div>
 <div class="section" id="complexite-asymptotique">
@@ -1576,6 +1582,27 @@ il existe deux constante <span class="math notranslate nohighlight">\(c_1, c_2 &
 Attention aux constantes multiplicatives cachées.</p>
 <p>Ces bornes asymptotiques cachent des constantes multiplicatives qui peuvent faire la différence entre 2 algorithmes de même complexité
 asymptotique.</p>
+<div class="figure align-default" id="fig-plt-complexite">
+<a class="reference internal image-reference" href="../_images/plt-complexites.png"><img alt="../_images/plt-complexites.png" src="../_images/plt-complexites.png" style="height: 150mm;" /></a>
+<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">Principales classes de complexité</span><a class="headerlink" href="#fig-plt-complexite" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="expressions-et-equivalents-asymptotiques-a-connaitre">
+<h3>Expressions et équivalents asymptotiques à connaître<a class="headerlink" href="#expressions-et-equivalents-asymptotiques-a-connaitre" title="Permalink to this headline">¶</a></h3>
+<p>Fonction de complexité dans le cas itératif = sommes, polynômes, produits, factorielles (aie)</p>
+<ul class="simple">
+<li><p><strong>Somme arithmétique des n premiers entiers : <span class="math notranslate nohighlight">\(n(n+1)/2 = \Theta(n^2)\)</span></strong></p></li>
+<li><p>Somme arithmétique des n premiers carrés : <span class="math notranslate nohighlight">\(n(n+1)(2n+1)/6 = \theta(n^3)\)</span></p></li>
+<li><p>Somme arithmétique des n premiers cubes : <span class="math notranslate nohighlight">\(n^2(n+1)^2/4 = \theta(n^4)\)</span></p></li>
+<li><p><strong>Polynôme en n de degré <span class="math notranslate nohighlight">\(\le\)</span> k et à coefficients constants = <span class="math notranslate nohighlight">\(\Theta(n^k)\)</span></strong></p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(a_k n^k + a_{k-1} n^{k-1} + \dots + a_1 n + a_0 = \Theta(n^k)\)</span>.
+-<strong>Série harmonique : <span class="math notranslate nohighlight">\(1+1/2+1/3+\dots+1/n = \ln(n) + \cal{O}(1)\)</span></strong></p></li>
+</ul>
+</li>
+<li><p>Produits <span class="math notranslate nohighlight">\(\to\)</span> Sommes : <span class="math notranslate nohighlight">\(\ln(a_1 \times a_2 \times \dots \times a_n) = \ln(a_1) + ln(a_2) + \dots + \ln(a_n)\)</span></p></li>
+</ul>
 <p><strong>Ordres de grandeur pratiques</strong></p>
 <table class="colwidths-auto table">
 <thead>
@@ -1618,59 +1645,41 @@ asymptotique.</p>
 </tr>
 </tbody>
 </table>
-<div class="figure align-default" id="fig-plt-complexite">
-<a class="reference internal image-reference" href="../_images/plt-complexites.png"><img alt="../_images/plt-complexites.png" src="../_images/plt-complexites.png" style="height: 150mm;" /></a>
-<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">Principales classes de complexité</span><a class="headerlink" href="#fig-plt-complexite" title="Permalink to this image">¶</a></p>
-</div>
-</div>
 </div>
 </div>
 <div class="section" id="complexite-d-algorithmes-iteratifs">
 <h2>Complexité d’algorithmes itératifs<a class="headerlink" href="#complexite-d-algorithmes-iteratifs" title="Permalink to this headline">¶</a></h2>
 <p>On explicite maintenant quelques expressions de fonctions de complexité d’algorithmes classiques ainsi que les expressions asymptotiques associées.</p>
-<div class="section" id="expressions-et-equivalents-asymptotiques-a-connaitre">
-<h3>Expressions et équivalents asymptotiques à connaître<a class="headerlink" href="#expressions-et-equivalents-asymptotiques-a-connaitre" title="Permalink to this headline">¶</a></h3>
-<p>Fonction de complexité dans le cas itératif = sommes, polynômes, produits, factorielles (aie)</p>
-<ul class="simple">
-<li><p>Somme arithmétique des n premiers entiers : <span class="math notranslate nohighlight">\(n(n+1)/2 = \Theta(n^2)\)</span></p></li>
-<li><p>Somme arithmétique des n premiers carrés : <span class="math notranslate nohighlight">\(n(n+1)(2n+1)/6 = \theta(n^3)\)</span></p></li>
-<li><p>Somme arithmétique des n premiers cubes : <span class="math notranslate nohighlight">\(n^2(n+1)2/4 = \theta(n^4)\)</span></p></li>
-<li><p>Polynôme de puissances de n, de degré <span class="math notranslate nohighlight">\(\le\)</span> k et à coefficients constants = <span class="math notranslate nohighlight">\(\Theta(n^k)\)</span></p></li>
-<li><p>Sommes géométriques :
-<span class="math notranslate nohighlight">\(1+x+x^2+\dots+x^n = (x^{n+1} - 1)/(x-1) \to 1/1-x\)</span> si <span class="math notranslate nohighlight">\(|x| &lt; 1\)</span> et diverge sinon</p></li>
-<li><p>Série harmonique : <span class="math notranslate nohighlight">\(1+1/2+1/3+...+1/n = \ln(n) + \cal{O}(1)\)</span></p></li>
-<li><p>Produits <span class="math notranslate nohighlight">\(\to\)</span> Sommes : <span class="math notranslate nohighlight">\(\ln(a_1 \times a_2 \times \dots \times a_n) = \ln(a_1) + ln(a_2) + \dots + \ln(a_n)\)</span></p></li>
-</ul>
-</div>
 <div class="section" id="iterations-classiques">
 <h3>Itérations classiques<a class="headerlink" href="#iterations-classiques" title="Permalink to this headline">¶</a></h3>
-<p>Boucle de n répétitions indépendantes de p instructions : <span class="math notranslate nohighlight">\(n \times p\)</span> avec p &lt; n quand n est grand</p>
+<p><strong>Boucle de n répétitions indépendantes de p instructions</strong> : <span class="math notranslate nohighlight">\(n \times p\)</span> avec p &lt; n quand n est grand</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="n">inst_1</span><span class="p">;</span> <span class="n">inst_2</span><span class="p">;</span> <span class="o">...</span><span class="p">,</span> <span class="n">inst_p</span>
 </pre></div>
 </div>
 <p><span class="math notranslate nohighlight">\( \to \Theta(n)\)</span>, asymptotiquement linéaire</p>
-<p>Boucle de n répétitions dépendantes : <span class="math notranslate nohighlight">\(1+2+...+n = n(n+1)/2\)</span></p>
+<p><strong>Boucle de n répétitions dépendantes</strong> : <span class="math notranslate nohighlight">\(1+2+\dots+n = n(n+1)/2\)</span></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="n">inst_1</span><span class="p">;</span> <span class="o">...</span> <span class="p">;</span> <span class="n">inst_i</span><span class="p">;</span>
 </pre></div>
 </div>
 <p><span class="math notranslate nohighlight">\(\to \Theta(n^2)\)</span>, asymptotiquement quadratique</p>
-<p>Deux boucles imbriquées indépendantes de longueur n qui répètent p instructions : <span class="math notranslate nohighlight">\(n^2 \times p\)</span> avec p &lt;n quand n est grand</p>
+<p><strong>Deux boucles imbriquées indépendantes de longueur n qui répètent p instructions</strong> : <span class="math notranslate nohighlight">\(n^2 \times p\)</span> avec p &lt;n quand n est grand</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span> 
     <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
         <span class="n">inst_1</span><span class="p">;</span> <span class="n">inst_2</span><span class="p">;</span> <span class="o">...</span><span class="p">,</span> <span class="n">inst_p</span>
 </pre></div>
 </div>
 <p><span class="math notranslate nohighlight">\(\to \Theta(n^2)\)</span>, asymptotiquement quadratique</p>
-<p>Deux boucles imbriquées indépendantes (i,j) de longueur n  qui répètent j instructions : <span class="math notranslate nohighlight">\(n(1+2+...+n) = n \times n(n+1)/2\)</span></p>
+<p><strong>Deux boucles imbriquées indépendantes de longueur n et corps de boucle interne dépendant</strong> :
+<span class="math notranslate nohighlight">\(n(1+2+\dots+n) = n \times n(n+1)/2\)</span></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span> 
     <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
         <span class="n">inst_1</span><span class="p">;</span> <span class="o">...</span> <span class="p">;</span> <span class="n">inst_j</span>
 </pre></div>
 </div>
 <p><span class="math notranslate nohighlight">\(\to \Theta(n^3)\)</span>, asymptotiquement cubique</p>
-<p>Répétition avec structure <code class="docutils literal notranslate"><span class="pre">while</span></code></p>
+<p><strong>Répétition avec structure <code class="docutils literal notranslate"><span class="pre">while</span></code></strong> :</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="n">cond</span><span class="p">:</span>
     <span class="n">inst_1</span><span class="p">;</span> <span class="o">...</span> <span class="p">;</span> <span class="n">inst_p</span><span class="p">;</span>
 </pre></div>
@@ -1781,7 +1790,7 @@ avec <span class="math notranslate nohighlight">\(b' = b/(a-1)\)</span> pour <sp
 <h2>Synthèse<a class="headerlink" href="#synthese" title="Permalink to this headline">¶</a></h2>
 <p><strong>Complexités en temps et en espace</strong></p>
 <ul class="simple">
-<li><p>comprendre le principe, l’objectif général et le modèle d’analyse de complexité</p></li>
+<li><p>principe, objectif général et modèle d’analyse de complexité</p></li>
 <li><p>identifier ce qu’il est significatif de mesurer et le paramètre du problème qui dirige cette mesure</p></li>
 <li><p>distinguer pires cas <em>vs.</em> meilleurs cas</p></li>
 <li><p>savoir comment on compte dans les cas itératifs ou récursifs</p></li>
@@ -1789,9 +1798,9 @@ avec <span class="math notranslate nohighlight">\(b' = b/(a-1)\)</span> pour <sp
 <p><strong>Complexité asymptotique</strong></p>
 <ul class="simple">
 <li><p>notations de Landau : <span class="math notranslate nohighlight">\(\cal{O}, \Omega, \theta\)</span> et leurs propriétés</p></li>
-<li><p>savoir conclure : quel est le sur-coût quand je multiplie la taille de mon</p></li>
+<li><p>savoir conclure : quel est le sur-coût quand je multiplie la taille de mon problème par \dots ?</p></li>
 </ul>
-<p>Exemples d’algorithmes de différentes complexités en temps</p>
+<p><strong>Exemples significatifs d’algorithmes de différentes complexités en temps</strong></p>
 <ul class="simple">
 <li><p>logarithmique : recherche dichotomique dans une liste triée</p></li>
 <li><p>linéaire : sommes, parcours ou recherche itérative, …</p></li>
@@ -1860,16 +1869,15 @@ automates, …</p></li>
 <div class="section" id="avoir-les-idees-claires">
 <h3>Avoir les idées claires<a class="headerlink" href="#avoir-les-idees-claires" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p>Principes de l’analyse de la complexité en temps : modèle de calcul, mesure et paramètre de la complexité, meilleur et pire cas</p></li>
-<li><p>Complexité asymptotique : notations de Landau, principales classes de complexité des algorithmes, interprétation pratique de ces classes</p></li>
-<li><p>Algorithmes vus ce semestre : complexité, pires et meilleurs cas des</p></li>
+<li><p>Connaître le principes de l’analyse de la complexité en temps : modèle de calcul, mesure et paramètre de la complexité, meilleur et pire cas</p></li>
+<li><p>Savoir exprimer et exploiter une complexité asymptotique : notations de Landau, principales classes de complexité des algorithmes, interprétation pratique de ces classes</p></li>
 <li><p>Savoir établir la complexité d’algorithmes itératifs simples ou récursifs terminaux.</p></li>
 </ul>
 </div>
 <div class="section" id="savoir-faire">
 <h3>Savoir-faire<a class="headerlink" href="#savoir-faire" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p>Exemples d’algorithme des principales classes de complexité</p></li>
+<li><p>Connaître des exemples significatifs d’algorithmes de complexité polynomiale et logarithmique (complexité, pires et meilleurs cas)</p></li>
 <li><p>Savoir identifier (sans nécessairement le prouver) la complexité, les meilleur-pire cas d’un algorithme</p></li>
 </ul>
 </div>
