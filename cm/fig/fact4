@@ -1,3 +1,0 @@
-digraph {
-	f4 [label="fact(4)"]
-}

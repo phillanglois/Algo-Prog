@@ -103,7 +103,7 @@ Objectifs séance de TD
 
 - exercices feuille 2 selon votre objectif 
 
-## Semaine 7 (programme partiel)
+## Semaine 7
 
 **Motto** : "Appeler une fonction avec des paramètres effectifs différents des paramètres formels"
 
@@ -113,8 +113,9 @@ Conseils avant TD/CM
 
 - Finir les exercices des feuilles 1 et 2 selon vos objectifs 
 
-Avant le CM :
+Après le CM :
  
+- Lire plusieurs fois le chapitre _Complexités_
 
 Objectifs séance de TD 
 
