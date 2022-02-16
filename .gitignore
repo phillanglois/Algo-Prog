@@ -1,0 +1,4 @@
+# no export of this to master branch in github
+_build/*
+_build/.*
+._ipynb_checkpoints/
