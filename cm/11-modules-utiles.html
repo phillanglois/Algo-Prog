@@ -750,7 +750,7 @@ Le module <code class="docutils literal notranslate"><span class="pre">random</s
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
 False
 True
-[0.8684279219377568, 0.3382314267019244, 0.9573202945887479, 0.8493956201555417, 0.18150102173530558, 0.44555780270470047, 0.18714797098004954, 0.3343687215345653, 0.39904706158655445, 0.2876633993350354]
+[0.3623276001840623, 0.21214956803783425, 0.7567710917718804, 0.16326331271852257, 0.14488844811616264, 0.9867305882032654, 0.04088663819701599, 0.44574430296347245, 0.24074700745176703, 0.581368944273691]
 [0.41661987254534116, 0.010169169457068361, 0.8252065092537432, 0.2986398551995928, 0.3684116894884757, 0.19366134904507426, 0.5660081687288613, 0.1616878239293682, 0.12426688428353017, 0.4329362680099159]
 </pre></div>
 </div>
@@ -914,7 +914,7 @@ Il est conseillé de “jouer” avec les différentes commandes jusqu’à obte
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fc5f941c5e0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7ffad9bde5e0&gt;
 </pre></div>
 </div>
 <img alt="../_images/11-modules-utiles_22_1.png" src="../_images/11-modules-utiles_22_1.png" />
@@ -975,9 +975,8 @@ Il est conseillé de “jouer” avec les différentes commandes jusqu’à obte
 </div>
 </div>
 </div>
-<blockquote>
-<div><p>toggle “off” all axis labels and ticks by using a dictionary comprehension and passing the result to ax.tick_params()</p>
-</div></blockquote>
+<p>On supprime les indications d’axes adaptées aux courbes mais inutiles ici.
+La modification est sauvegardée dans un dictionnaire (<code class="docutils literal notranslate"><span class="pre">nolabels</span></code>) qui sera utilisé avant l’affichage.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sides</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="s1">&#39;top&#39;</span><span class="p">,</span> <span class="s1">&#39;bottom&#39;</span><span class="p">)</span>
@@ -993,6 +992,13 @@ Il est conseillé de “jouer” avec les différentes commandes jusqu’à obte
 </div>
 </div>
 </div>
+<p>Avec la fonction-méthode <code class="docutils literal notranslate"><span class="pre">.matshow()</span></code>, on affiche les images correspondants aux tableaux définis plus haut.<br />
+On note les paramètres effectifs qui définissent comment interpréter les valeurs du tableau :</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cmap</span></code> (<em>color map</em>) ici une échelle de gris définie à partir de :</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vmin</span></code> jusqu’à</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vmax</span></code>.</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">,</span> <span class="n">ax3</span><span class="p">,</span> <span class="n">ax4</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
@@ -1008,12 +1014,36 @@ Il est conseillé de “jouer” avec les différentes commandes jusqu’à obte
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7fc5f9e7bd30&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7ffada533dc0&gt;
 </pre></div>
 </div>
-<img alt="../_images/11-modules-utiles_30_1.png" src="../_images/11-modules-utiles_30_1.png" />
+<img alt="../_images/11-modules-utiles_31_1.png" src="../_images/11-modules-utiles_31_1.png" />
 </div>
 </div>
+<p>On va nettoyer cet affichage à l’aide du dictionnaire <code class="docutils literal notranslate"><span class="pre">nolabels</span></code> et de la construction un peu chimique suivante.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">,</span> <span class="n">ax3</span><span class="p">,</span> <span class="n">ax4</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">matshow</span><span class="p">(</span><span class="n">t0</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">255</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">matshow</span><span class="p">(</span><span class="n">t127</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">255</span><span class="p">)</span>
+<span class="n">ax3</span><span class="o">.</span><span class="n">matshow</span><span class="p">(</span><span class="n">t255</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">255</span><span class="p">)</span>
+<span class="n">ax4</span><span class="o">.</span><span class="n">matshow</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;gray_r&quot;</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">255</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">ax</span> <span class="ow">in</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">,</span> <span class="n">ax3</span><span class="p">,</span> <span class="n">ax4</span><span class="p">):</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">nolabels</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/11-modules-utiles_33_0.png" src="../_images/11-modules-utiles_33_0.png" />
+</div>
+</div>
+<p>Voilà exactement ce qu’on souhaitait !</p>
+<p><strong>Exercice.</strong></p>
+<ul class="simple">
+<li><p>Regardez ce que donne la <code class="docutils literal notranslate"><span class="pre">cmap=&quot;gray_r&quot;</span></code> ?</p></li>
+</ul>
 </div>
 <div class="section" id="a-vous-maintenant">
 <h3>A vous maintenant !<a class="headerlink" href="#a-vous-maintenant" title="Permalink to this headline">¶</a></h3>
@@ -1041,7 +1071,7 @@ de Von Koch d’ordres <span class="math notranslate nohighlight">\(0, \cdots, 4
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/11-modules-utiles_32_0.jpg" src="../_images/11-modules-utiles_32_0.jpg" />
+<img alt="../_images/11-modules-utiles_37_0.jpg" src="../_images/11-modules-utiles_37_0.jpg" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1051,7 +1081,7 @@ de Von Koch d’ordres <span class="math notranslate nohighlight">\(0, \cdots, 4
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/11-modules-utiles_33_0.jpg" src="../_images/11-modules-utiles_33_0.jpg" />
+<img alt="../_images/11-modules-utiles_38_0.jpg" src="../_images/11-modules-utiles_38_0.jpg" />
 </div>
 </div>
 <p><strong>Traçons-le !</strong></p>
@@ -1077,7 +1107,7 @@ premières itérations du segment <span class="math notranslate nohighlight">\([
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/11-modules-utiles_35_0.png" src="../_images/11-modules-utiles_35_0.png" />
+<img alt="../_images/11-modules-utiles_40_0.png" src="../_images/11-modules-utiles_40_0.png" />
 </div>
 </div>
 </div>
@@ -1283,26 +1313,26 @@ réserves précédentes).</p></li>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.092e-03 9.558e-04
-1.280e-03 1.057e-03
-1.108e-03 1.007e-03
-9.568e-04 1.107e-03
-9.739e-04 1.050e-03
-1.131e-03 1.098e-03
-1.229e-03 1.065e-03
-1.041e-03 1.107e-03
-9.861e-04 1.073e-03
-9.580e-04 9.568e-04
-9.899e-04 9.716e-04
-1.108e-03 8.786e-04
-1.037e-03 1.107e-03
-1.019e-03 1.190e-03
-8.230e-04 1.105e-03
-8.411e-04 1.127e-03
-1.068e-03 1.095e-03
-1.101e-03 1.234e-03
-9.308e-04 1.113e-03
-1.005e-03 1.049e-03
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7.679e-04 6.756e-04
+7.310e-04 6.634e-04
+6.561e-04 6.643e-04
+9.053e-04 6.595e-04
+6.893e-04 6.504e-04
+6.747e-04 6.414e-04
+6.521e-04 6.590e-04
+6.599e-04 7.444e-04
+7.141e-04 7.328e-04
+6.661e-04 6.771e-04
+6.669e-04 6.927e-04
+6.621e-04 7.208e-04
+8.399e-04 6.563e-04
+6.530e-04 8.516e-04
+6.700e-04 9.289e-04
+6.540e-04 6.907e-04
+7.591e-04 7.512e-04
+7.060e-04 9.041e-04
+7.451e-04 8.475e-04
+9.060e-04 8.803e-04
 </pre></div>
 </div>
 </div>
@@ -1332,7 +1362,7 @@ réserves précédentes).</p></li>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;20 mesures répétées&#39;)
 </pre></div>
 </div>
-<img alt="../_images/11-modules-utiles_54_1.png" src="../_images/11-modules-utiles_54_1.png" />
+<img alt="../_images/11-modules-utiles_59_1.png" src="../_images/11-modules-utiles_59_1.png" />
 </div>
 </div>
 </div>
@@ -1393,18 +1423,18 @@ Allons-y pour des mesures comme <em>fonction de cette taille</em>.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>00000100 1.168e-05 1.168e-07
-00001000 8.750e-05 8.750e-08
-00010000 9.122e-04 9.122e-08
-00100000 1.013e-02 1.013e-07
-01000000 9.249e-02 9.249e-08
-10000000 9.979e-01 9.979e-08
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>00000100 1.252e-05 1.252e-07
+00001000 7.277e-05 7.277e-08
+00010000 7.629e-04 7.629e-08
+00100000 7.920e-03 7.920e-08
+01000000 7.459e-02 7.459e-08
+10000000 7.666e-01 7.666e-08
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fc5f9f00d60&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7ffada6f4a90&gt;
 </pre></div>
 </div>
-<img alt="../_images/11-modules-utiles_56_2.png" src="../_images/11-modules-utiles_56_2.png" />
+<img alt="../_images/11-modules-utiles_61_2.png" src="../_images/11-modules-utiles_61_2.png" />
 </div>
 </div>
 <p><strong>Conclusion</strong></p>
