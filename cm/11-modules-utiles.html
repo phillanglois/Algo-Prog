@@ -291,6 +291,19 @@
 
             <!-- Source interaction buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        
+        <a class="issues-button"
+            href="https://github.com/phillanglois/Algo-Prog/issues/new?title=Issue%20on%20page%20%2Fcm/11-modules-utiles.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Ouvrez un problème"><i class="fas fa-lightbulb"></i>signaler un problème</button></a>
+        
+    </div>
+</div>
+
             <!-- Full screen (wrap in <a> to have style consistency -->
 
 <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -386,6 +399,16 @@
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#exercice">
      Exercice
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#manipuler-des-images-avec-matplotlib">
+     Manipuler des images avec
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       matplotlib
+      </span>
+     </code>
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -540,6 +563,16 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#manipuler-des-images-avec-matplotlib">
+     Manipuler des images avec
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       matplotlib
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#a-vous-maintenant">
      A vous maintenant !
     </a>
@@ -619,8 +652,9 @@
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="modules-utiles">
-<h1>Modules utiles<a class="headerlink" href="#modules-utiles" title="Permalink to this headline">¶</a></h1>
-<p>v 1.21</p>
+<span id="ch-modulesutiles"></span><h1>Modules utiles<a class="headerlink" href="#modules-utiles" title="Permalink to this headline">¶</a></h1>
+<p>Mis à jour : Feb 21, 2022, lecture : 8
+minutes minimum, PhL.</p>
 <p><strong><code class="docutils literal notranslate"><span class="pre">random</span></code>, <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> et <code class="docutils literal notranslate"><span class="pre">time</span></code></strong>  pour des expériences de complexité, entre autres.</p>
 <p>Petites expériences qui nous permettent de découvrir des modules bien utiles :</p>
 <ul class="simple">
@@ -632,7 +666,7 @@
 <li><p>d’apprendre à <strong>faire des graphiques</strong> avec <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></p></li>
 <li><p>d’utiliser des fonctions de modules importés du module <code class="docutils literal notranslate"><span class="pre">time</span></code> pour <strong>mesurer des temps d’exécution</strong>,</p>
 <ul>
-<li><p>et ainsi apprécier la validitité et les limites de la notion de complexité algorithmique,</p></li>
+<li><p>et ainsi apprécier la validité et les limites de la notion de complexité algorithmique,</p></li>
 </ul>
 </li>
 </ul>
@@ -716,7 +750,7 @@ Le module <code class="docutils literal notranslate"><span class="pre">random</s
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
 False
 True
-[0.3437468327341312, 0.35660506081791543, 0.5962246196771204, 0.24635756561979683, 0.7985720948489669, 0.5168220394201712, 0.9765522014788011, 0.262250423475635, 0.7290765847627618, 0.5588259389291093]
+[0.8684279219377568, 0.3382314267019244, 0.9573202945887479, 0.8493956201555417, 0.18150102173530558, 0.44555780270470047, 0.18714797098004954, 0.3343687215345653, 0.39904706158655445, 0.2876633993350354]
 [0.41661987254534116, 0.010169169457068361, 0.8252065092537432, 0.2986398551995928, 0.3684116894884757, 0.19366134904507426, 0.5660081687288613, 0.1616878239293682, 0.12426688428353017, 0.4329362680099159]
 </pre></div>
 </div>
@@ -735,7 +769,8 @@ On verra même qu’il permet d’afficher des images, ds photos, …</p>
 <ul class="simple">
 <li><p>Ses options sont très nombreuses, de même que la documentation en
 ligne ou “livrée avec”.
-<code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> est composé de nombreux sous-modules. Parmi ceux-ci, celui qui nous intéresse est <code class="docutils literal notranslate"><span class="pre">pyplot</span></code>.<br />
+<code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> est composé de nombreux sous-modules.
+Parmi ceux-ci, celui qui nous intéresse est <code class="docutils literal notranslate"><span class="pre">pyplot</span></code>.<br />
 L’instruction suivante est très très classique.</p></li>
 </ul>
 <div class="cell docutils container">
@@ -779,13 +814,40 @@ même figure.</p></li>
 </ul>
 <p>De façon plus guidée :</p>
 <ul class="simple">
-<li><p><a class="reference external" href="http://www.labri.fr/perso/nrougier/teaching/matplotlib/">cette présentation</a></p></li>
-<li><p>ou le chapitre 3 du <a class="reference external" href="https://matplotlib.org/contents.html"><em>user guide</em></a> (qui comporte plus de 2500 pages).</p></li>
+<li><p><a class="reference external" href="http://www.labri.fr/perso/nrougier/teaching/matplotlib/">cette présentation</a> en français</p></li>
+<li><p><a class="reference external" href="https://realpython.com/python-matplotlib-guide/">celle ci</a>, en anglais et extraite du site de qualité <a class="reference external" href="https://realpython.com">realpython.com</a></p></li>
+<li><p>les “tutoriaux” de <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> en anglais mais par niveau : <a class="reference external" href="https://matplotlib.org/stable/tutorials/index.html">débutant</a>, <a class="reference external" href="https://matplotlib.org/stable/tutorials/index.html#intermediate">intermédiaire</a> ou <a class="reference external" href="https://matplotlib.org/stable/tutorials/index.html#advanced">avancé</a></p></li>
+<li><p>ou enfin le chapitre 3 du <a class="reference external" href="https://matplotlib.org/contents.html"><em>user guide</em></a> (qui comporte plus de 2500 pages).</p></li>
 </ul>
+<p><strong>Vocabulaire et notions de base</strong></p>
+<p>Le schéma suivant illustre les principales notions de base d’un tracé <code class="docutils literal notranslate"><span class="pre">pyplot</span></code>.</p>
+<p><img alt="" src="../_images/vocab_pyplot.png" /></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">figure</span></code> est un regroupement d’un ou plusieurs <code class="docutils literal notranslate"><span class="pre">axes</span></code> <strong>avec <code class="docutils literal notranslate"><span class="pre">es</span></code></strong> (<em>ie.</em> un container python d’objets <code class="docutils literal notranslate"><span class="pre">axes</span></code>)</p>
+<ul>
+<li><p>plusieurs <code class="docutils literal notranslate"><span class="pre">axes</span></code> sont stockés comme un tableau d’<code class="docutils literal notranslate"><span class="pre">axes</span></code> sous la forme d’un <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> <code class="docutils literal notranslate"><span class="pre">numpy</span></code> (et donc avec un indiçage différent des <code class="docutils literal notranslate"><span class="pre">list</span></code>2D python)</p></li>
+</ul>
+</li>
+<li><p>un <code class="docutils literal notranslate"><span class="pre">axes</span></code> <strong>avec <code class="docutils literal notranslate"><span class="pre">es</span></code></strong>  (le pluriel de <em>axis</em>) représente un tracé (d’une ou plusieurs courbes, diagrammes en bâtons, …). Il est donc composé d’<code class="docutils literal notranslate"><span class="pre">axis</span></code> (avec <code class="docutils literal notranslate"><span class="pre">is</span></code>) : les “axes des x, des y”, d’échelles, de légendes, titres …</p>
+<ul>
+<li><p>ne pas confondre <code class="docutils literal notranslate"><span class="pre">axes</span></code> et <code class="docutils literal notranslate"><span class="pre">axis</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">axes</span></code> est l’objet central : pour obtenir un tracé, on va manipuler un <code class="docutils literal notranslate"><span class="pre">axes</span></code> par des appels de fonctions-méthodes spécifiques</p></li>
+<li><p>chaque appel modifie l’état de l’<code class="docutils literal notranslate"><span class="pre">axes</span></code> : définir  des <code class="docutils literal notranslate"><span class="pre">axis</span></code>, leur échelle, tracer les courbes, ajouter un titre, … on procède par couches successives</p>
+<ul>
+<li><p>le cas échéant on changera d’<code class="docutils literal notranslate"><span class="pre">axes</span></code> pour effectuer d’autres manipulations</p></li>
+</ul>
+</li>
+<li><p>et on affichera l’état final de la  <code class="docutils literal notranslate"><span class="pre">figure</span></code></p></li>
+</ul>
+</li>
+</ul>
+<p>Ces notions sont hiérarchiques :<br />
+<code class="docutils literal notranslate"><span class="pre">figure</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">axes</span></code> &gt; (<code class="docutils literal notranslate"><span class="pre">xaxis</span></code>, <code class="docutils literal notranslate"><span class="pre">yaxis</span></code>, <code class="docutils literal notranslate"><span class="pre">title</span></code>, <code class="docutils literal notranslate"><span class="pre">xlabel</span></code>, …) &gt; <code class="docutils literal notranslate"><span class="pre">xticks</span></code>,</p>
 <p>On va montrer quelques commandes de base :</p>
 <ul class="simple">
-<li><p>afficher de courbes : <strong><code class="docutils literal notranslate"><span class="pre">plot</span></code></strong>, <code class="docutils literal notranslate"><span class="pre">figure</span></code>, <code class="docutils literal notranslate"><span class="pre">title</span></code>, <code class="docutils literal notranslate"><span class="pre">legend</span></code> ;</p></li>
-<li><p>gérer les axes : <code class="docutils literal notranslate"><span class="pre">xticks</span></code>, <code class="docutils literal notranslate"><span class="pre">xlim</span></code>, <code class="docutils literal notranslate"><span class="pre">loglog</span></code>, <code class="docutils literal notranslate"><span class="pre">semilogx</span></code> ;</p></li>
+<li><p>crée une <code class="docutils literal notranslate"><span class="pre">figure</span></code> et le/les <code class="docutils literal notranslate"><span class="pre">axes</span></code> (un par défaut) qui la compose : <code class="docutils literal notranslate"><span class="pre">subplots()</span></code></p></li>
+<li><p>afficher de courbes : <strong><code class="docutils literal notranslate"><span class="pre">plot</span></code></strong>, <code class="docutils literal notranslate"><span class="pre">title</span></code>, <code class="docutils literal notranslate"><span class="pre">legend</span></code> ;</p></li>
+<li><p>gérer les <code class="docutils literal notranslate"><span class="pre">axis</span></code> : <code class="docutils literal notranslate"><span class="pre">xticks</span></code>, <code class="docutils literal notranslate"><span class="pre">xlim</span></code>, <code class="docutils literal notranslate"><span class="pre">loglog</span></code>, <code class="docutils literal notranslate"><span class="pre">semilogx</span></code> ;</p></li>
 <li><p>gérer les affichages : <code class="docutils literal notranslate"><span class="pre">show</span></code>, <code class="docutils literal notranslate"><span class="pre">savefig</span></code>, <code class="docutils literal notranslate"><span class="pre">close</span></code>.</p></li>
 </ul>
 </div>
@@ -852,10 +914,10 @@ Il est conseillé de “jouer” avec les différentes commandes jusqu’à obte
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fc026d2ca90&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fc5f941c5e0&gt;
 </pre></div>
 </div>
-<img alt="../_images/11-modules-utiles_19_1.png" src="../_images/11-modules-utiles_19_1.png" />
+<img alt="../_images/11-modules-utiles_22_1.png" src="../_images/11-modules-utiles_22_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -874,6 +936,82 @@ Il est conseillé de “jouer” avec les différentes commandes jusqu’à obte
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 800x640 with 0 Axes&gt;
 </pre></div>
 </div>
+</div>
+</div>
+</div>
+<div class="section" id="manipuler-des-images-avec-matplotlib">
+<h3>Manipuler des images avec <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code><a class="headerlink" href="#manipuler-des-images-avec-matplotlib" title="Permalink to this headline">¶</a></h3>
+<p>Il est classique de définir des images à niveaux de gris par un tableau 2D d’entiers compris en 0 (noir) et 255 (blanc) – voir par exemple la <a class="reference internal" href="../td/td3.html#td-td3"><span class="std std-ref">Feuille 3</span></a>.</p>
+<p>Voyons comment afficher de telles images avec <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>.</p>
+<p>Si ce n’est pas encore fait, on importe <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>On définit 4 images basiques à l’aide de tableaux python.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mi">4</span>
+
+<span class="n">t0</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">c</span><span class="p">)]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">l</span><span class="p">)]</span> <span class="c1"># un tableau de 0</span>
+<span class="n">t127</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">127</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">c</span><span class="p">)]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">l</span><span class="p">)]</span> <span class="c1"># un tableau de 127</span>
+<span class="n">t255</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">255</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">c</span><span class="p">)]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">l</span><span class="p">)]</span> <span class="c1"># # un tableau de 255</span>
+
+<span class="c1"># un degradé de valeurs de 0 à 255</span>
+<span class="n">unit</span> <span class="o">=</span> <span class="mi">255</span><span class="o">//</span><span class="p">(</span><span class="n">l</span><span class="o">*</span><span class="n">c</span><span class="p">)</span> 
+<span class="n">t</span> <span class="o">=</span> <span class="p">[[</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="n">j</span><span class="o">*</span><span class="n">c</span><span class="p">)</span> <span class="o">*</span> <span class="n">unit</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">c</span><span class="p">)]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">l</span><span class="p">)]</span> 
+
+<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[0, 21, 42, 63], [84, 105, 126, 147], [168, 189, 210, 231]]
+</pre></div>
+</div>
+</div>
+</div>
+<blockquote>
+<div><p>toggle “off” all axis labels and ticks by using a dictionary comprehension and passing the result to ax.tick_params()</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sides</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="s1">&#39;top&#39;</span><span class="p">,</span> <span class="s1">&#39;bottom&#39;</span><span class="p">)</span>
+<span class="n">nolabels</span> <span class="o">=</span> <span class="p">{</span><span class="n">s</span><span class="p">:</span> <span class="kc">False</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">sides</span><span class="p">}</span>
+<span class="n">nolabels</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;label</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">s</span><span class="p">:</span> <span class="kc">False</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">sides</span><span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nolabels</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;left&#39;: False, &#39;right&#39;: False, &#39;top&#39;: False, &#39;bottom&#39;: False, &#39;labelleft&#39;: False, &#39;labelright&#39;: False, &#39;labeltop&#39;: False, &#39;labelbottom&#39;: False}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">,</span> <span class="n">ax3</span><span class="p">,</span> <span class="n">ax4</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">matshow</span><span class="p">(</span><span class="n">t0</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">255</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">matshow</span><span class="p">(</span><span class="n">t127</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">255</span><span class="p">)</span>
+<span class="n">ax3</span><span class="o">.</span><span class="n">matshow</span><span class="p">(</span><span class="n">t255</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">255</span><span class="p">)</span>
+<span class="n">ax4</span><span class="o">.</span><span class="n">matshow</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;gray_r&quot;</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">255</span><span class="p">)</span>
+
+<span class="c1">#for ax in (ax1, ax2, ax3, ax4):</span>
+<span class="c1">#    ax.tick_params(axis=&#39;both&#39;, which=&#39;both&#39;, **nolabels)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7fc5f9e7bd30&gt;
+</pre></div>
+</div>
+<img alt="../_images/11-modules-utiles_30_1.png" src="../_images/11-modules-utiles_30_1.png" />
 </div>
 </div>
 </div>
@@ -903,7 +1041,7 @@ de Von Koch d’ordres <span class="math notranslate nohighlight">\(0, \cdots, 4
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/11-modules-utiles_22_0.jpg" src="../_images/11-modules-utiles_22_0.jpg" />
+<img alt="../_images/11-modules-utiles_32_0.jpg" src="../_images/11-modules-utiles_32_0.jpg" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -913,7 +1051,7 @@ de Von Koch d’ordres <span class="math notranslate nohighlight">\(0, \cdots, 4
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/11-modules-utiles_23_0.jpg" src="../_images/11-modules-utiles_23_0.jpg" />
+<img alt="../_images/11-modules-utiles_33_0.jpg" src="../_images/11-modules-utiles_33_0.jpg" />
 </div>
 </div>
 <p><strong>Traçons-le !</strong></p>
@@ -939,7 +1077,7 @@ premières itérations du segment <span class="math notranslate nohighlight">\([
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/11-modules-utiles_25_0.png" src="../_images/11-modules-utiles_25_0.png" />
+<img alt="../_images/11-modules-utiles_35_0.png" src="../_images/11-modules-utiles_35_0.png" />
 </div>
 </div>
 </div>
@@ -1145,26 +1283,26 @@ réserves précédentes).</p></li>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8.509e-04 7.470e-04
-8.330e-04 7.271e-04
-8.442e-04 7.241e-04
-1.075e-03 6.861e-04
-8.500e-04 6.998e-04
-8.111e-04 6.920e-04
-7.989e-04 6.923e-04
-8.032e-04 6.897e-04
-7.739e-04 7.033e-04
-7.739e-04 6.799e-04
-7.770e-04 7.038e-04
-7.672e-04 7.541e-04
-7.343e-04 1.233e-03
-7.420e-04 8.499e-04
-7.339e-04 8.116e-04
-7.682e-04 6.995e-04
-7.100e-04 6.974e-04
-7.260e-04 6.872e-04
-7.532e-04 6.872e-04
-9.050e-04 6.920e-04
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.092e-03 9.558e-04
+1.280e-03 1.057e-03
+1.108e-03 1.007e-03
+9.568e-04 1.107e-03
+9.739e-04 1.050e-03
+1.131e-03 1.098e-03
+1.229e-03 1.065e-03
+1.041e-03 1.107e-03
+9.861e-04 1.073e-03
+9.580e-04 9.568e-04
+9.899e-04 9.716e-04
+1.108e-03 8.786e-04
+1.037e-03 1.107e-03
+1.019e-03 1.190e-03
+8.230e-04 1.105e-03
+8.411e-04 1.127e-03
+1.068e-03 1.095e-03
+1.101e-03 1.234e-03
+9.308e-04 1.113e-03
+1.005e-03 1.049e-03
 </pre></div>
 </div>
 </div>
@@ -1194,7 +1332,7 @@ réserves précédentes).</p></li>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;20 mesures répétées&#39;)
 </pre></div>
 </div>
-<img alt="../_images/11-modules-utiles_44_1.png" src="../_images/11-modules-utiles_44_1.png" />
+<img alt="../_images/11-modules-utiles_54_1.png" src="../_images/11-modules-utiles_54_1.png" />
 </div>
 </div>
 </div>
@@ -1255,30 +1393,24 @@ Allons-y pour des mesures comme <em>fonction de cette taille</em>.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>00000100 7.081e-06 7.081e-08
-00001000 6.349e-05 6.349e-08
-00010000 6.634e-04 6.634e-08
-00100000 7.722e-03 7.722e-08
-01000000 6.860e-02 6.860e-08
-10000000 6.814e-01 6.814e-08
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>00000100 1.168e-05 1.168e-07
+00001000 8.750e-05 8.750e-08
+00010000 9.122e-04 9.122e-08
+00100000 1.013e-02 1.013e-07
+01000000 9.249e-02 9.249e-08
+10000000 9.979e-01 9.979e-08
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fc02758f310&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fc5f9f00d60&gt;
 </pre></div>
 </div>
-<img alt="../_images/11-modules-utiles_46_2.png" src="../_images/11-modules-utiles_46_2.png" />
+<img alt="../_images/11-modules-utiles_56_2.png" src="../_images/11-modules-utiles_56_2.png" />
 </div>
 </div>
 <p><strong>Conclusion</strong></p>
 <ul class="simple">
 <li><p>on observe bien un comportement linéaire, ie. en <span class="math notranslate nohighlight">\(\theta(n)\)</span>.</p></li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span> <span class="n">nbconvert</span> <span class="o">--</span><span class="n">to</span> <span class="n">html_embed</span> <span class="o">--</span><span class="n">template</span> <span class="n">toc2</span> <span class="mi">11</span><span class="o">-</span><span class="n">modules</span><span class="o">-</span><span class="n">utiles</span><span class="o">.</span><span class="n">ipynb</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span> <span class="n">nbconvert</span> <span class="mi">11</span><span class="o">-</span><span class="n">modules</span><span class="o">-</span><span class="n">utiles</span><span class="o">.</span><span class="n">ipynb</span> <span class="o">--</span><span class="n">to</span> <span class="n">slides</span> <span class="o">--</span><span class="n">SlidesExporter</span><span class="o">.</span><span class="n">reveal_scroll</span><span class="o">=</span><span class="kc">True</span> <span class="o">--</span><span class="n">SlidesExporter</span><span class="o">.</span><span class="n">reveal_transition</span><span class="o">=</span><span class="n">none</span> <span class="o">--</span><span class="n">SlidesExporter</span><span class="o">.</span><span class="n">reveal_theme</span><span class="o">=</span><span class="n">solarized</span>
-</pre></div>
-</div>
 </div>
 </div>
 </div>
@@ -1331,12 +1463,6 @@ Allons-y pour des mesures comme <em>fonction de cette taille</em>.</p>
     
       Par Ph. Langlois<br/>
     
-      <div class="extra_footer">
-        <p>
-PhL. UPVD. 2022.
-</p>
-
-      </div>
   </p>
 </footer>
 </main>

@@ -138,7 +138,8 @@ Avant le CM :
 
 Objectifs séance de TD 
 
-- tp de démonstration
+- ~~tp de démonstration~~
+- Feuille 3 selon vos objectifs  
 
 
 <!-- #endregion -->

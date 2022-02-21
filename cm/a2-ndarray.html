@@ -291,6 +291,19 @@
 
             <!-- Source interaction buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        
+        <a class="issues-button"
+            href="https://github.com/phillanglois/Algo-Prog/issues/new?title=Issue%20on%20page%20%2Fcm/a2-ndarray.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Ouvrez un problème"><i class="fas fa-lightbulb"></i>signaler un problème</button></a>
+        
+    </div>
+</div>
+
             <!-- Full screen (wrap in <a> to have style consistency -->
 
 <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -1260,10 +1273,10 @@ Ce nouveau tableau est obtenu lors de l’affectation du résultat (de la foncti
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>comparaison : False
 shapes : (4, 3) (6, 2)
-id : 140344241921648 140344241921936
+id : 140432832568560 140432832568368
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/32/9hkmzrf11t38ckpktjnyfsfc0000gn/T/ipykernel_1188/86209015.py:1: DeprecationWarning: elementwise comparison failed; this will raise an error in the future.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/32/9hkmzrf11t38ckpktjnyfsfc0000gn/T/ipykernel_88561/86209015.py:1: DeprecationWarning: elementwise comparison failed; this will raise an error in the future.
   print(&quot;comparaison :&quot;, t12 == t12bis)
 </pre></div>
 </div>
@@ -1393,8 +1406,8 @@ int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 0.0000000e+00 -2.0000000e+00  3.4099660e+04]
- [-1.0844661e-19  8.4077908e-45  0.0000000e+00]] 
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 0.000000e+00 -2.524355e-29  0.000000e+00]
+ [-2.524355e-29  4.203895e-45  0.000000e+00]] 
  on vous aura prévenu !
 float32
 
@@ -1485,12 +1498,6 @@ int16
     
       Par Ph. Langlois<br/>
     
-      <div class="extra_footer">
-        <p>
-PhL. UPVD. 2022.
-</p>
-
-      </div>
   </p>
 </footer>
 </main>

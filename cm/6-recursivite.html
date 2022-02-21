@@ -291,6 +291,19 @@
 
             <!-- Source interaction buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        
+        <a class="issues-button"
+            href="https://github.com/phillanglois/Algo-Prog/issues/new?title=Issue%20on%20page%20%2Fcm/6-recursivite.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Ouvrez un problème"><i class="fas fa-lightbulb"></i>signaler un problème</button></a>
+        
+    </div>
+</div>
+
             <!-- Full screen (wrap in <a> to have style consistency -->
 
 <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -1180,43 +1193,30 @@ ATTENTION : il faudrait **vérifier la validité du paramètre effectif**
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">RecursionError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="sd">&quot;&quot;&quot;Calcul de factorielle n -- version récursive</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span><span class="sd">     entrée : n </span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span><span class="sd">     sortie n!</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span>     <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">f</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># récursion</span>
-<span class="ne">----&gt; </span><span class="mi">8</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1! =&quot;</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>---------------------------------------------------------------------------
+RecursionError                            Traceback (most recent call last)
+/var/folders/32/9hkmzrf11t38ckpktjnyfsfc0000gn/T/ipykernel_88527/3758232641.py in &lt;module&gt;
+      6     return n * f(n-1) # récursion
+      7 
+----&gt; 8 print(&quot;1! =&quot;, f(1))
 
-<span class="nn">Input In [3],</span> in <span class="ni">f</span><span class="nt">(n)</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">n</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="sd">&quot;&quot;&quot;Calcul de factorielle n -- version récursive</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span><span class="sd">     entrée : n </span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span><span class="sd">     sortie n!</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">----&gt; </span><span class="mi">6</span>     <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">f</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+/var/folders/32/9hkmzrf11t38ckpktjnyfsfc0000gn/T/ipykernel_88527/3758232641.py in f(n)
+      4     sortie n!
+      5     &quot;&quot;&quot;
+----&gt; 6     return n * f(n-1) # récursion
+      7 
+      8 print(&quot;1! =&quot;, f(1))
 
-<span class="nn">Input In [3],</span> in <span class="ni">f</span><span class="nt">(n)</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">n</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="sd">&quot;&quot;&quot;Calcul de factorielle n -- version récursive</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span><span class="sd">     entrée : n </span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span><span class="sd">     sortie n!</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">----&gt; </span><span class="mi">6</span>     <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">f</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+... last 1 frames repeated, from the frame below ...
 
-    <span class="p">[</span><span class="o">...</span> <span class="n">skipping</span> <span class="n">similar</span> <span class="n">frames</span><span class="p">:</span> <span class="n">f</span> <span class="n">at</span> <span class="n">line</span> <span class="mi">6</span> <span class="p">(</span><span class="mi">2970</span> <span class="n">times</span><span class="p">)]</span>
+/var/folders/32/9hkmzrf11t38ckpktjnyfsfc0000gn/T/ipykernel_88527/3758232641.py in f(n)
+      4     sortie n!
+      5     &quot;&quot;&quot;
+----&gt; 6     return n * f(n-1) # récursion
+      7 
+      8 print(&quot;1! =&quot;, f(1))
 
-<span class="nn">Input In [3],</span> in <span class="ni">f</span><span class="nt">(n)</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">n</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="sd">&quot;&quot;&quot;Calcul de factorielle n -- version récursive</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span><span class="sd">     entrée : n </span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span><span class="sd">     sortie n!</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">----&gt; </span><span class="mi">6</span>     <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">f</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="ne">RecursionError</span>: maximum recursion depth exceeded
+RecursionError: maximum recursion depth exceeded
 </pre></div>
 </div>
 </div>
@@ -1246,6 +1246,12 @@ INFO: python limite à 1000 le nombre  d'appels récursifs
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3! = 6
+1! = 1
+</pre></div>
+</div>
+</div>
 </div>
 <div class="alert alert-warning">
 ATTENTION : pourquoi ne pas demander de calculer `f(0)`?
@@ -1271,6 +1277,12 @@ ATTENTION : pourquoi ne pas demander de calculer `f(0)`?
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;3! =&quot;</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;10! =&quot;</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>  
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3! = 6
+10! = 3628800
 </pre></div>
 </div>
 </div>
@@ -1324,6 +1336,31 @@ Pour cela, on décortique bien la fonction.</p></li>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.... entrée dans f( 4 )
+.... 4 * f( 3 ) = ?
+.... appel de f( 3 )
+........ entrée dans f( 3 )
+........ 3 * f( 2 ) = ?
+........ appel de f( 2 )
+............ entrée dans f( 2 )
+............ 2 * f( 1 ) = ?
+............ appel de f( 1 )
+................ entrée dans f( 1 )
+................ terminaison : on renvoit 1 pour n =  1
+............ on a calculé f( 1 )
+............ on a fait le produit  2 * f( 1 )
+............ Retour de la valeur 2
+........ on a calculé f( 2 )
+........ on a fait le produit  3 * f( 2 )
+........ Retour de la valeur 6
+.... on a calculé f( 3 )
+.... on a fait le produit  4 * f( 3 )
+.... Retour de la valeur 24
+0
+</pre></div>
+</div>
+</div>
 </div>
 <div class="alert alert-warning">
 <p>CONSEIL : bien regarder le moment où on effectue la <strong>première</strong> multiplication</p>
@@ -1364,6 +1401,11 @@ Pour cela, on décortique bien la fonction.</p></li>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10715086071862673209484250490600018105614048117055336074437503883703510511249361224931983788156958581275946729175531468251871452856923140435984577574698574803934567774824230985421074605062371141877954182153046474983581941267398767559165543946077062914571196477686542167660429831652624386837205668069376
+</pre></div>
+</div>
+</div>
 </div>
 <p><strong>Exercice :</strong></p>
 <ul class="simple">
@@ -1397,6 +1439,20 @@ Pour cela, on décortique bien la fonction.</p></li>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">32</span><span class="o">/</span><span class="mi">9</span><span class="n">hkmzrf11t38ckpktjnyfsfc0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_88527</span><span class="o">/</span><span class="mf">2360248509.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="k">def</span> <span class="nf">expo_rapide0</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="n">integer</span><span class="p">):</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="sd">&#39;&#39;&#39;calcule x**n : version récursive rapide </span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span><span class="sd">     entrées : x (float), n (int)&#39;&#39;&#39;</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>         <span class="k">return</span> <span class="mi">1</span>
+
+<span class="ne">NameError</span>: name &#39;integer&#39; is not defined
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1422,6 +1478,20 @@ Pour cela, on décortique bien la fonction.</p></li>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">32</span><span class="o">/</span><span class="mi">9</span><span class="n">hkmzrf11t38ckpktjnyfsfc0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_88527</span><span class="o">/</span><span class="mf">2263261956.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="k">def</span> <span class="nf">expo_rapide</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span><span class="n">n</span><span class="p">:</span> <span class="n">integer</span><span class="p">):</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="sd">&#39;&#39;&#39;calcule x**n : version récursive rapide </span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span><span class="sd">     entrées : x (float), n (int)&#39;&#39;&#39;</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;terminaison&quot;</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;integer&#39; is not defined
+</pre></div>
+</div>
+</div>
 </div>
 <p><strong>Exercice</strong></p>
 <p>Exhibons que <code class="docutils literal notranslate"><span class="pre">expo_rapide()</span></code>est effectivement plus rapide que <code class="docutils literal notranslate"><span class="pre">expo</span></code></p>
@@ -1434,6 +1504,19 @@ Pour cela, on décortique bien la fonction.</p></li>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># %time mesure le temps d&#39;exécution d&#39;une script</span>
 <span class="o">%</span><span class="k">time</span> expo(2,200)
 <span class="o">%</span><span class="k">time</span> expo_rapide(2,200)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 47 µs, sys: 0 ns, total: 47 µs
+Wall time: 50.1 µs
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">timed</span> <span class="nb">eval</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+
+<span class="ne">NameError</span>: name &#39;expo_rapide&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -1461,6 +1544,60 @@ Pour cela, on décortique bien la fonction.</p></li>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.12 µs ± 206 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">32</span><span class="o">/</span><span class="mi">9</span><span class="n">hkmzrf11t38ckpktjnyfsfc0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_88527</span><span class="o">/</span><span class="mf">3195353865.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># timeit plus fiable : répète plusieurs mesures</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">get_ipython</span><span class="p">()</span><span class="o">.</span><span class="n">run_line_magic</span><span class="p">(</span><span class="s1">&#39;timeit&#39;</span><span class="p">,</span> <span class="s1">&#39;expo(3,20)&#39;</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">get_ipython</span><span class="p">()</span><span class="o">.</span><span class="n">run_line_magic</span><span class="p">(</span><span class="s1">&#39;timeit&#39;</span><span class="p">,</span> <span class="s1">&#39;expo_rapide(3,20)&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="nb">print</span><span class="p">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> 
+
+<span class="nn">~/.local/share/virtualenvs/L1-Algo-Prog-QBKqvp5g/lib/python3.9/site-packages/IPython/core/interactiveshell.py</span> in <span class="ni">run_line_magic</span><span class="nt">(self, magic_name, line, _stack_depth)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2362</span>                 <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;local_ns&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_local_scope</span><span class="p">(</span><span class="n">stack_depth</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2363</span>             <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">builtin_trap</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">2364</span>                 <span class="n">result</span> <span class="o">=</span> <span class="n">fn</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2365</span>             <span class="k">return</span> <span class="n">result</span>
+<span class="g g-Whitespace">   </span><span class="mi">2366</span> 
+
+<span class="nn">~/.local/share/virtualenvs/L1-Algo-Prog-QBKqvp5g/lib/python3.9/site-packages/decorator.py</span> in <span class="ni">fun</span><span class="nt">(*args, **kw)</span>
+<span class="g g-Whitespace">    </span><span class="mi">230</span>             <span class="k">if</span> <span class="ow">not</span> <span class="n">kwsyntax</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">231</span>                 <span class="n">args</span><span class="p">,</span> <span class="n">kw</span> <span class="o">=</span> <span class="n">fix</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="n">kw</span><span class="p">,</span> <span class="n">sig</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">232</span>             <span class="k">return</span> <span class="n">caller</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="o">*</span><span class="p">(</span><span class="n">extras</span> <span class="o">+</span> <span class="n">args</span><span class="p">),</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">233</span>     <span class="n">fun</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">=</span> <span class="n">func</span><span class="o">.</span><span class="vm">__name__</span>
+<span class="g g-Whitespace">    </span><span class="mi">234</span>     <span class="n">fun</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">=</span> <span class="n">func</span><span class="o">.</span><span class="vm">__doc__</span>
+
+<span class="nn">~/.local/share/virtualenvs/L1-Algo-Prog-QBKqvp5g/lib/python3.9/site-packages/IPython/core/magic.py</span> in <span class="ni">&lt;lambda&gt;</span><span class="nt">(f, *a, **k)</span>
+<span class="g g-Whitespace">    </span><span class="mi">185</span>     <span class="c1"># but it&#39;s overkill for just that one bit of state.</span>
+<span class="g g-Whitespace">    </span><span class="mi">186</span>     <span class="k">def</span> <span class="nf">magic_deco</span><span class="p">(</span><span class="n">arg</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">187</span>         <span class="n">call</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">f</span><span class="p">,</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="o">**</span><span class="n">k</span><span class="p">:</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="o">**</span><span class="n">k</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">188</span> 
+<span class="g g-Whitespace">    </span><span class="mi">189</span>         <span class="k">if</span> <span class="n">callable</span><span class="p">(</span><span class="n">arg</span><span class="p">):</span>
+
+<span class="nn">~/.local/share/virtualenvs/L1-Algo-Prog-QBKqvp5g/lib/python3.9/site-packages/IPython/core/magics/execution.py</span> in <span class="ni">timeit</span><span class="nt">(self, line, cell, local_ns)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1178</span>             <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1179</span>                 <span class="n">number</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">**</span> <span class="n">index</span>
+<span class="ne">-&gt; </span><span class="mi">1180</span>                 <span class="n">time_number</span> <span class="o">=</span> <span class="n">timer</span><span class="o">.</span><span class="n">timeit</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1181</span>                 <span class="k">if</span> <span class="n">time_number</span> <span class="o">&gt;=</span> <span class="mf">0.2</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1182</span>                     <span class="k">break</span>
+
+<span class="nn">~/.local/share/virtualenvs/L1-Algo-Prog-QBKqvp5g/lib/python3.9/site-packages/IPython/core/magics/execution.py</span> in <span class="ni">timeit</span><span class="nt">(self, number)</span>
+<span class="g g-Whitespace">    </span><span class="mi">167</span>         <span class="n">gc</span><span class="o">.</span><span class="n">disable</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">168</span>         <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">169</span>             <span class="n">timing</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">inner</span><span class="p">(</span><span class="n">it</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">timer</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">170</span>         <span class="k">finally</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">171</span>             <span class="k">if</span> <span class="n">gcold</span><span class="p">:</span>
+
+<span class="nn">&lt;magic-timeit&gt;</span> in <span class="ni">inner</span><span class="nt">(_it, _timer)</span>
+
+<span class="ne">NameError</span>: name &#39;expo_rapide&#39; is not defined
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -1485,6 +1622,20 @@ $<span class="math notranslate nohighlight">\(F(0) = F(1) = 1.\)</span>$</p>
     
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">fibo</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0 : 1
+1 : 1
+2 : 2
+3 : 3
+4 : 5
+5 : 8
+6 : 13
+7 : 21
+8 : 34
+9 : 55
 </pre></div>
 </div>
 </div>
@@ -1562,6 +1713,20 @@ Nous montrons par exemple comment utiliser depuis des petits codes python, le la
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">32</span><span class="o">/</span><span class="mi">9</span><span class="n">hkmzrf11t38ckpktjnyfsfc0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_88527</span><span class="o">/</span><span class="mf">2592414928.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="sd">&#39;&#39;&#39; arbre des appels du calcul de fact(4) : construction simple&#39;&#39;&#39;</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">graphviz</span> <span class="k">as</span> <span class="nn">gvz</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">functools</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">fact4</span> <span class="o">=</span> <span class="n">gvz</span><span class="o">.</span><span class="n">Digraph</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="s1">&#39;jpg&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">fact4</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="s1">&#39;f4&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;fact(4)&#39;</span><span class="p">)</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;graphviz&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1625,6 +1790,20 @@ Nous montrons par exemple comment utiliser depuis des petits codes python, le la
         <span class="p">(</span><span class="s1">&#39;f2&#39;</span><span class="p">,</span> <span class="s1">&#39;f1&#39;</span><span class="p">)</span>
     <span class="p">]</span>
 <span class="p">)</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="s1">&#39;fig/fact4_complet&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">32</span><span class="o">/</span><span class="mi">9</span><span class="n">hkmzrf11t38ckpktjnyfsfc0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_88527</span><span class="o">/</span><span class="mf">2671336264.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="sd">&#39;&#39;&#39; arbre des appels du calcul de fact(4) : construction plus complète&#39;&#39;&#39;</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">graphviz</span> <span class="k">as</span> <span class="nn">gvz</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">functools</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> 
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">digraph</span> <span class="o">=</span> <span class="n">functools</span><span class="o">.</span><span class="n">partial</span><span class="p">(</span><span class="n">gvz</span><span class="o">.</span><span class="n">Digraph</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;jpg&#39;</span><span class="p">)</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;graphviz&#39;
 </pre></div>
 </div>
 </div>
@@ -1997,6 +2176,17 @@ On formalisera plus tard cette analyse de la <em>terminaison</em> de la solution
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">32</span><span class="o">/</span><span class="mi">9</span><span class="n">hkmzrf11t38ckpktjnyfsfc0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_88527</span><span class="o">/</span><span class="mf">2697864728.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="sd">&#39;&#39;&#39; resolution : appel &#39;&#39;&#39;</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">hanoi0</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;A&#39; is not defined
+</pre></div>
+</div>
+</div>
 </div>
 <p>Les piquets `A, B, C’ n’existent pas en tant qu’objet (variable) python.</p>
 <p>Pour rendre effectif un traitement,</p>
@@ -2027,6 +2217,25 @@ On formalisera plus tard cette analyse de la <em>terminaison</em> de la solution
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A --&gt; B
+A --&gt; C
+B --&gt; C
+A --&gt; B
+C --&gt; A
+C --&gt; B
+A --&gt; B
+A --&gt; C
+B --&gt; C
+B --&gt; A
+C --&gt; A
+B --&gt; C
+A --&gt; B
+A --&gt; C
+B --&gt; C
+</pre></div>
+</div>
+</div>
 </div>
 <div class="alert alert-danger">
 <p>ATTENTION : il y a 0 <code class="docutils literal notranslate"><span class="pre">return</span></code> et 1 <code class="docutils literal notranslate"><span class="pre">print</span></code> … et pourtant l’algorithme termine et (semble) donner les déplacements qui résolvent le pb … C’est un biais pédagogique introduit par la <em>modélisation</em> des piquets par des caractères (difficile de faire autre chose que des <code class="docutils literal notranslate"><span class="pre">print</span></code> sur des caractères). Vous reprendrez cette résolution lorsque vous saurez représenter les empilements de disques par … des piles.</p>
@@ -2038,6 +2247,22 @@ On formalisera plus tard cette analyse de la <em>terminaison</em> de la solution
 <span class="n">hanoi</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;---------&quot;</span><span class="p">)</span>
 <span class="n">hanoi</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>---------
+A --&gt; B
+A --&gt; C
+B --&gt; C
+---------
+A --&gt; C
+A --&gt; B
+C --&gt; B
+A --&gt; C
+B --&gt; A
+B --&gt; C
+A --&gt; C
 </pre></div>
 </div>
 </div>
@@ -2092,6 +2317,23 @@ et vérifier que les problèmes sont effectivement résolus !</p>
     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;disques  -&gt; &#39;</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="s1">&#39;déplacements&#39;</span><span class="p">)</span>
     <span class="n">a</span> <span class="o">=</span> <span class="n">c</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ca vous fait penser à quelque chose :) ?&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2 disques  -&gt;  3 déplacements
+3 disques  -&gt;  7 déplacements
+4 disques  -&gt;  15 déplacements
+5 disques  -&gt;  31 déplacements
+6 disques  -&gt;  63 déplacements
+7 disques  -&gt;  127 déplacements
+8 disques  -&gt;  255 déplacements
+9 disques  -&gt;  511 déplacements
+10 disques  -&gt;  1023 déplacements
+11 disques  -&gt;  2047 déplacements
+12 disques  -&gt;  4095 déplacements
+13 disques  -&gt;  8191 déplacements
+Ca vous fait penser à quelque chose :) ?
 </pre></div>
 </div>
 </div>
@@ -2190,12 +2432,6 @@ et vérifier que les problèmes sont effectivement résolus !</p>
     
       Par Ph. Langlois<br/>
     
-      <div class="extra_footer">
-        <p>
-PhL. UPVD. 2022.
-</p>
-
-      </div>
   </p>
 </footer>
 </main>
