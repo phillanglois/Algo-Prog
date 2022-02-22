@@ -138,7 +138,7 @@ Avant le CM :
 
 Objectifs séance de TD 
 
-- ~~tp de démonstration~~
+- (annulé) ~~tp de démonstration~~
 - Feuille 3 selon vos objectifs  
 
 

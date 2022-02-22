@@ -37,20 +37,22 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Boucles, tableaux et fonctions" href="2-boucles-avancees.html" />
@@ -945,7 +947,7 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="fonctions">
 <span id="ch-fonctions"></span><h1>Fonctions<a class="headerlink" href="#fonctions" title="Permalink to this headline">¶</a></h1>
-<p>Mis à jour : Feb 21, 2022, lecture : 19 minutes minimum, PhL.</p>
+<p>Mis à jour : Feb 22, 2022, lecture : 19 minutes minimum, PhL.</p>
 <p>Dans ce premier chapitre, nous abordons une notion importante qui fait l’objet de différentes appellations : fonction, procédure ou sous-programme. (Le titre de ce chapitre à longtemps été “Fonctions, procédures, sous-programmes”).
 Vous connaissez les fonctions en mathématiques depuis le collège.
 La notion de sous-programme à une consonance très “programmation”.
@@ -1335,23 +1337,23 @@ Morale : “Pas de nouvelle, bonne nouvelle !”</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.0
-1.0
-1.0
-1.0
-1.0
-1.0
-1.0
-1.0
 0.9999999999999999
-1.0
-1.0
-1.0
-1.0
 1.0
 1.0
 1.0000000000000002
 1.0
 1.0
+0.9999999999999999
+0.9999999999999998
+0.9999999999999999
+1.0000000000000002
+1.0
+0.9999999999999999
+1.0
+0.9999999999999999
+0.9999999999999998
+1.0
+0.9999999999999999
 1.0
 1.0
 </pre></div>
@@ -2217,9 +2219,6 @@ appel tetu 1
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 </div>
 </div>
 </div>
@@ -2478,9 +2477,7 @@ appel tetu 1
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Carcassonne est la préfecture du département 11
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>------------------------------------------------
+------------------------------------------------
 Perpignan est la préfecture du département 66
 ------------------------------------------------
 Montpellier est la préfecture du département 34

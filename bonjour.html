@@ -37,20 +37,22 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Algorithmique et Programmation en 2022" href="cm/0-presentation-2022.html" />
@@ -415,7 +417,7 @@
 <div class="tex2jax_ignore mathjax_ignore section" id="bienvenu-en-algo-prog">
 <h1>Bienvenu en Algo-Prog !<a class="headerlink" href="#bienvenu-en-algo-prog" title="Permalink to this headline">¶</a></h1>
 <p><strong>Ce support est en évolution tout au long du semestre.</strong></p>
-<p>Mis à jour : Feb 21, 2022, lecture : 3 minutes minimum, PhL.</p>
+<p>Mis à jour : Feb 22, 2022, lecture : 3 minutes minimum, PhL.</p>
 <p>Ceci est le premier point d’entrée de l’UE Algo-Prog en complément de l’<a class="reference external" href="https://cours.univ-perp.fr/course/view.php?id=925">espace moodle de cette UE</a>.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
@@ -557,7 +559,7 @@ La première séance de CM a eu lieu en semaine 3.</p></li>
 </ul>
 <p>Objectifs séance de TD</p>
 <ul class="simple">
-<li><p>~~tp de démonstration~~</p></li>
+<li><p>(annulé) ~~tp de démonstration~~</p></li>
 <li><p>Feuille 3 selon vos objectifs</p></li>
 </ul>
 <!-- #endregion -->

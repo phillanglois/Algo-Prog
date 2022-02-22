@@ -37,20 +37,22 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Complexités" href="4-complexite.html" />
@@ -971,7 +973,7 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="entrees-sorties-simples-avec-des-fichiers">
 <span id="ch-es-fichiers"></span><h1>Entrées-sorties simples avec des fichiers<a class="headerlink" href="#entrees-sorties-simples-avec-des-fichiers" title="Permalink to this headline">¶</a></h1>
-<p>Mis à jour : Feb 21, 2022, lecture : 14 minutes minimum, PhL.</p>
+<p>Mis à jour : Feb 22, 2022, lecture : 14 minutes minimum, PhL.</p>
 <p>Chapitre où on étudie comment effectuer des entrées-sorties (E/S) simples à l’aide de fichiers.</p>
 <p>Jusqu’à présent les entrées-sorties ont été générées à grands coups de <code class="docutils literal notranslate"><span class="pre">print()</span></code> et d’<code class="docutils literal notranslate"> <span class="pre">input()</span></code> pour interagir avec l’écran ou le clavier.
 Les entrées-sorties ne sont pas limitées au couple écran-clavier.
@@ -1488,7 +1490,7 @@ On vous invite à continuer en ce sens en exercice.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7 [1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0] [1.0, 0.5, 0.3333333333333333, 0.25, 0.2, 0.16666666666666666, 0.14285714285714285] 7.0
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6 [1.0, 2.0, 3.0, 4.0, 5.0, 6.0] [1.0, 0.5, 0.3333333333333333, 0.25, 0.2, 0.16666666666666666] 6.0
 </pre></div>
 </div>
 </div>
@@ -1518,10 +1520,10 @@ On vous invite à continuer en ce sens en exercice.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-rw-r--r--  1 langlois  staff   30  7 fév 19:50 tmp/test_prod_scal.txt
--rw-r--r--  1 langlois  staff   91  7 fév 19:50 tmp/test_prod_scal2.txt
--rw-r--r--  1 langlois  staff   97  8 fév 12:24 tmp/test_prod_scal3.txt
--rw-r--r--  1 langlois  staff  110 21 fév 18:41 tmp/test_prod_scal_write.txt
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-rw-r--r--  1 langlois  staff  30  7 fév 19:50 tmp/test_prod_scal.txt
+-rw-r--r--  1 langlois  staff  91  7 fév 19:50 tmp/test_prod_scal2.txt
+-rw-r--r--  1 langlois  staff  97  8 fév 12:24 tmp/test_prod_scal3.txt
+-rw-r--r--  1 langlois  staff  86 22 fév 09:00 tmp/test_prod_scal_write.txt
 </pre></div>
 </div>
 </div>
@@ -1533,22 +1535,20 @@ On vous invite à continuer en ce sens en exercice.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
 1.0
 2.0
 3.0
 4.0
 5.0
 6.0
-7.0
 1.0
 0.5
 0.3333333333333333
 0.25
 0.2
 0.16666666666666666
-0.14285714285714285
-7.0
+6.0
 </pre></div>
 </div>
 </div>
