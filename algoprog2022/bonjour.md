@@ -121,4 +121,25 @@ Objectifs séance de TD
 
 - exercices feuille 2 selon votre objectif
 - ($\star$) exercices feuille 3
+
+## Semaine 8
+
+**Motto** : "Dans l'en-tête d'une fonction qui contient un ou plusieurs paramètres formels de type tableau, ajouter autant de paramètres supplémentaires pour définir la taille de ces tableaux"
+
+Objectifs semaine : 
+
+- Finir les exercices des feuilles 1, 2 et 3 selon vos objectifs 
+- Etudier le chapitre _Complexités_
+- Relire, comprendre et appliquer tous les motto.
+
+Avant le CM :
+ 
+- Lire le chapitre _Modules utiles_
+
+Objectifs séance de TD 
+
+- (annulé) ~~tp de démonstration~~
+- Feuille 3 selon vos objectifs  
+
+
 <!-- #endregion -->

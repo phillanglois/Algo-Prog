@@ -5,10 +5,13 @@ title: Algo-Prog 2022
 author: Ph. Langlois
 logo: logo2022.png
 
+exclude_patterns : [_build, .DS_Store, "**.ipynb_checkpoints"]
+
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
   execute_notebooks: force
+  allow_errors : true
   
 # Define the name of the latex output file for PDF builds
 latex:
@@ -34,15 +37,11 @@ html:
 # PhL
 only_build_toc_files: true
 
+
 launch_buttons:
   notebook_interface: "classic" # "jupyterlab"
   binderhub_url: "https://mybinder.org"
 
-html:
-  extra_footer: |
-    <p>
-    PhL. UPVD. 2022.
-    </p>
 sphinx:
   config:
     html_show_copyright: false

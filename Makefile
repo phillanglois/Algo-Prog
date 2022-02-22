@@ -59,6 +59,10 @@ enligne: $(BOOKDIR)/$(ALLSRC)
 	@pipenv run jupyter-book build algoprog2022
 	@pipenv run ghp-import -n -p -f algoprog2022/_build/html -m "version en ligne : maj"
 
+tp: $(BOOKDIR)/$(ALLSRC)
+	@cd /Users/langlois/2021/ens/L1-Algo-Prog
+	@pipenv run jupyter-book build tp22
+
 $(SRC).pdf: $(SRC).ipynb
 	@mkdir -p $(DESTDIRPDF)
 	$(CXX) $(OPTPDF)  $< 
