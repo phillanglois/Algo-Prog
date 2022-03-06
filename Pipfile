@@ -16,6 +16,7 @@ jupyter-contrib-nbextensions = "*"
 jupyterlab-spellchecker = "*"
 jupyterlab-language-pack-fr-fr = "*"
 sphinxnotes-strike = "*"
+nbdime = "*"
 
 [dev-packages]
 

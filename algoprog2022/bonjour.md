@@ -141,5 +141,40 @@ Objectifs séance de TD
 - (annulé) ~~tp de démonstration~~
 - Feuille 3 selon vos objectifs  
 
+## Semaine 9 (vacances d'hiver)
+
+**Motto** : Prendre du recul.
+
+Objectifs semaine : 
+
+- Maîtrise des compétences des chapitres _Fonctions_, _Boucles avancées_ et _Entrées-sorties simples_
+- Prise en main des compétences des chapitres _Complexités_ et _Modules utiles_
+- TP noté du 7 mars 2022
+
+## Semaine 10 
+
+**Motto** : Relire le cours encore et encore.
+
+Objectifs semaine : 
+
+- Maîtrise des compétences du chapitre _Complexités_
+
+Avant le CM :
+ 
+- Lire le chapitre _Les types composés_
+
+Objectifs séance de TD 
+
+- Feuille 4 selon vos objectifs  
+
+## Semaine 11
+
+**Motto** : Je vérifie que j'ai bien acquis les compétences des chapitres étudiés à ce jour.
+
+Objectifs semaine : 
+
+- Contrôle continu écrit et noté du 16 mars 2022
+
+
 
 <!-- #endregion -->
