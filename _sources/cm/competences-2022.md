@@ -108,7 +108,7 @@ Dans/avec un notebook jupyter :
 
 ### Avoir les idées claires
 
-- Connaître les principes des formes itératives et récursives des algorithmes de recherche fondamentaux (recherche séquentielle, recherche dichotomique) 
+- Connaître les principes des formes itératives et récursives des algorithmes de recherche fondamentaux : recherche séquentielle, recherche dichotomique.
 - Savoir conduire une approche diviser pour régner et en déduire une solution récursive pour le problème de la recherche d'une valeur dans un ensemble ou des problèmes similaires.
 - Savoir identifier la (ou les) terminaison, la récursion et l'initialisation d'une recherche de valeur (ou problème similaire) avec un algorithme récursif
  
@@ -117,21 +117,12 @@ Dans/avec un notebook jupyter :
 - Savoir écrire sous la forme d'une fonction de même signature les versions itérative et récursive d'un algorithme de recherche de valeur dans un ensemble
 - Savoir écrire des tests unitaires pertinents pour ces traitements  
 
-## Rechercher
-
-### Avoir les idées claires
-
-### Savoir faire
-
-- Recherche séquentielle : formes itérative et récursive
-- Recherche dichotomique dans un ensemble trié : formes itérative et récursive
 
 ## Types composés
 
 ### Avoir les idées claires
 
 Distinguer les  caractéristiques des structures de données (SD) _tuple_, _liste_, _dictionnaire_, _ensemble_ et _chaîne de caractères_ -- aussi appelés type composé ou conteneur en python
-
  
 - pour représenter, stocker les données et effectuer les traitements adaptés au problème  
 - pour effectuer l'accès aux valeurs, le parcours (séquences, itérateur), et la modification ou la copie (mutabilité) de ces SD.

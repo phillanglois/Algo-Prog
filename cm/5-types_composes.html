@@ -241,6 +241,11 @@ const thebe_selector_output = ".output, .cell_output"
    Feuille 3
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../td/td4.html">
+   Feuille 4
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -1389,14 +1394,14 @@ Si besoin, l’utilisation de <code class="docutils literal notranslate"><span c
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
 [3, 1, 2] [3, 1, 2]
-140441647043840 140441647043840
+140430985151616 140430985151616
 
 duplication avec copy.copy : 
 False
 [3, 1, 2] [999, 1, 2]
 duplication par affectation de tranche complète : 
 False True
-140441647016832 140441647043840
+140430985125696 140430985151616
 </pre></div>
 </div>
 </div>
@@ -1538,7 +1543,9 @@ non: False
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;le_mechant&#39;: &#39;Jo&#39;, &#39;2&#39;: &#39;Jack&#39;, 3: &#39;William&#39;, &#39;le_cretin&#39;: &#39;Averell&#39;}
-dict_keys([&#39;le_mechant&#39;, &#39;2&#39;, 3, &#39;le_cretin&#39;])
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_keys([&#39;le_mechant&#39;, &#39;2&#39;, 3, &#39;le_cretin&#39;])
 &lt;class &#39;dict_keys&#39;&gt;
 dict_values([&#39;Jo&#39;, &#39;Jack&#39;, &#39;William&#39;, &#39;Averell&#39;]) &lt;class &#39;dict_values&#39;&gt;
 dict_items([(&#39;le_mechant&#39;, &#39;Jo&#39;), (&#39;2&#39;, &#39;Jack&#39;), (3, &#39;William&#39;), (&#39;le_cretin&#39;, &#39;Averell&#39;)]) &lt;class &#39;dict_items&#39;&gt;
@@ -1569,7 +1576,9 @@ dict_items([(&#39;le_mechant&#39;, &#39;Jo&#39;), (&#39;2&#39;, &#39;Jack&#39;),
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Attention : l&#39;itération simple suivante parcourt les clés
-le_mechant
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>le_mechant
 2
 3
 le_cretin
@@ -1698,16 +1707,16 @@ changement de cretin :  {&#39;2&#39;: &#39;Jack&#39;, 3: &#39;William&#39;, &#39
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;a&#39;, &#39;i&#39;, &#39;u&#39;, &#39;y&#39;, &#39;o&#39;, &#39;e&#39;} 6
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;e&#39;, &#39;u&#39;, &#39;a&#39;, &#39;o&#39;, &#39;y&#39;, &#39;i&#39;} 6
 True
 False
-aie : {&#39;a&#39;, &#39;i&#39;, &#39;e&#39;}
-voyelles : {&#39;a&#39;, &#39;i&#39;, &#39;u&#39;, &#39;y&#39;, &#39;o&#39;, &#39;e&#39;}
-union : {&#39;a&#39;, &#39;i&#39;, &#39;u&#39;, &#39;y&#39;, &#39;o&#39;, &#39;e&#39;}
-autre union : {&#39;a&#39;, &#39;b&#39;, &#39;i&#39;, &#39;f&#39;, &#39;u&#39;, &#39;y&#39;, &#39;o&#39;, &#39;e&#39;}
-intersection : {&#39;a&#39;, &#39;i&#39;, &#39;e&#39;}
+aie : {&#39;a&#39;, &#39;e&#39;, &#39;i&#39;}
+voyelles : {&#39;e&#39;, &#39;u&#39;, &#39;a&#39;, &#39;o&#39;, &#39;y&#39;, &#39;i&#39;}
+union : {&#39;e&#39;, &#39;u&#39;, &#39;a&#39;, &#39;o&#39;, &#39;y&#39;, &#39;i&#39;}
+autre union : {&#39;b&#39;, &#39;e&#39;, &#39;f&#39;, &#39;u&#39;, &#39;a&#39;, &#39;o&#39;, &#39;y&#39;, &#39;i&#39;}
+intersection : {&#39;a&#39;, &#39;e&#39;, &#39;i&#39;}
 difference :  set() {&#39;b&#39;, &#39;f&#39;}
-difference symétrique:  {&#39;y&#39;, &#39;o&#39;, &#39;u&#39;}
+difference symétrique:  {&#39;u&#39;, &#39;o&#39;, &#39;y&#39;}
 inclusions : True True False False
 </pre></div>
 </div>
@@ -1772,9 +1781,9 @@ bnor! 5
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>abc 140441588858672
-abc 140441588858672
-abcdef 140441646963376
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>abc 140430908030768
+abc 140430908030768
+abcdef 140430985074288
 </pre></div>
 </div>
 </div>
@@ -1875,10 +1884,10 @@ BONJOUR ! True False
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140441646992752
-140441646992752
-140441646993904
-140441646993904
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140430985092720
+140430985092720
+140430984822320
+140430984822320
 </pre></div>
 </div>
 </div>
@@ -2049,7 +2058,9 @@ Bonjour &quot;mon ami&quot; !
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[	]
-[xxxxxxx]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[xxxxxxx]
 
 Bonjour &quot;collègue&quot; ! 
  	 	  Ca va ?
@@ -2153,9 +2164,7 @@ Ces derniers ayant été représentés en python par le type (composé) <em>list
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+4
 3
 13
 13
@@ -2285,7 +2294,10 @@ Le module <code class="docutils literal notranslate"><span class="pre">typing</s
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2 2.2
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 2.2
 </pre></div>
 </div>
 </div>
