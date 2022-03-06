@@ -9,6 +9,15 @@
 
 -   complexité : analyses et approches expérimentales
 
+**Compétences**
+
+- Connaître le principes de l'analyse de la complexité en temps : modèle de calcul, mesure et paramètre de la complexité, meilleur et pire cas
+- Connaître des exemples significatifs d'algorithmes de complexité polynomiale et logarithmique (complexité, pires et meilleurs cas)  
+- Savoir établir la complexité d'algorithmes itératifs simples ou récursifs terminaux (algorithmes étudiés en cours)
+- Savoir exprimer et exploiter une complexité asymptotique : notations de Landau, principales classes de complexité des algorithmes, interprétation pratique de ces classes
+- Savoir identifier (sans nécessairement le prouver) la complexité, les meilleur-pire cas d'un algorithme 
+
+
 ## Objectif 10
 
 (exo:doubleboucle)=

@@ -83,7 +83,7 @@ Dans/avec un notebook jupyter :
 
 - Connaître le principes de l'analyse de la complexité en temps : modèle de calcul, mesure et paramètre de la complexité, meilleur et pire cas
 - Savoir exprimer et exploiter une complexité asymptotique : notations de Landau, principales classes de complexité des algorithmes, interprétation pratique de ces classes
-- Savoir établir la complexité d'algorithmes itératifs simples ou récursifs terminaux.
+- Savoir établir la complexité d'algorithmes itératifs simples ou récursifs terminaux (algorithmes étudiés en cours)
 
 ### Savoir-faire
 
