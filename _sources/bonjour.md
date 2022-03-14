@@ -181,7 +181,7 @@ Avant le CC :
 
 Objectif séance de TP :
 
-- Prise en main du chapitre _Types composés_ avec le TP SD   
+- Prise en main du chapitre _Types composés_ avec le TP _Structures de données_ (moodle).  
 
 
 <!-- #endregion -->
