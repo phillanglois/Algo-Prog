@@ -149,7 +149,7 @@ Objectifs semaine :
 
 - Maîtrise des compétences des chapitres _Fonctions_, _Boucles avancées_ et _Entrées-sorties simples_
 - Prise en main des compétences des chapitres _Complexités_ et _Modules utiles_
-- TP noté du 7 mars 2022
+- **CC1 : TP noté du 7 mars 2022**
 
 ## Semaine 10 
 
@@ -173,8 +173,15 @@ Objectifs séance de TD
 
 Objectifs semaine : 
 
-- Contrôle continu écrit et noté du 16 mars 2022
+- **CC2 : Contrôle continu écrit et noté du 16 mars 2022**
 
+Avant le CC : 
+
+- Vérifier compétences acquises à l'aide des quiz _Fonctions_, _Boucles avancées_ et (surtout) _Complexité_
+
+Objectif séance de TP :
+
+- Prise en main du chapitre _Types composés_ avec le TP SD   
 
 
 <!-- #endregion -->
