@@ -756,7 +756,7 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="les-types-composes">
 <span id="ch-typescomposes"></span><h1>Les types composés<a class="headerlink" href="#les-types-composes" title="Permalink to this headline">¶</a></h1>
-<p>Mis à jour : Mar 07, 2022, lecture : 14
+<p>Mis à jour : Mar 14, 2022, lecture : 14
 minutes minimum, PhL.</p>
 <p>Les types composés ou <em>conteneurs</em> de python sont  introduits  dans ce chapitre :</p>
 <ul class="simple">
@@ -1462,14 +1462,14 @@ lst: [&#39;r&#39;, &#39;a&#39;, &#39;n&#39;, &#39;t&#39;, &#39;a&#39;, &#39;n&#3
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
 [3, 1, 2] [3, 1, 2]
-140364196257216 140364196257216
+140476804734784 140476804734784
 
 duplication avec copy.copy : 
 False
 [3, 1, 2] [999, 1, 2]
 duplication par affectation de tranche complète : 
 False True
-140364196262336 140364196257216
+140476804428352 140476804734784
 </pre></div>
 </div>
 </div>
@@ -1781,9 +1781,9 @@ bnor! 5
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>abc 140364146278192
-abc 140364146278192
-abcdef 140364196195568
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>abc 140476763340592
+abc 140476763340592
+abcdef 140476804666736
 </pre></div>
 </div>
 </div>
@@ -1887,10 +1887,10 @@ BONJOUR ! True False
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140364196164528
-140364196164528
-140364196164336
-140364196164336
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140476804649328
+140476804649328
+140476804652528
+140476804652528
 </pre></div>
 </div>
 </div>
@@ -1932,7 +1932,9 @@ Cela permet par exemple d’interpréter différemment les symboles <code class=
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bonjour
-	bonjour
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	bonjour
 s1: 7
 s2: 8
 [ b ]
@@ -1960,8 +1962,9 @@ s2: 8
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\ texte avec &#39;\&#39; au début et à la fin \
-
-Bo
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Bo
 jour
 Bo\njour
 Bo\nnjour
@@ -2061,7 +2064,9 @@ Bonjour &quot;mon ami&quot; !
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[	]
-[xxxxxxx]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[xxxxxxx]
 
 Bonjour &quot;collègue&quot; ! 
  	 	  Ca va ?
@@ -2138,16 +2143,19 @@ Bonjour &quot;collègue&quot; !
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;o&#39;, &#39;a&#39;, &#39;u&#39;, &#39;e&#39;, &#39;i&#39;, &#39;y&#39;} 6
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;a&#39;, &#39;y&#39;, &#39;e&#39;, &#39;u&#39;, &#39;i&#39;, &#39;o&#39;}
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 6
 True
 False
-aie : {&#39;a&#39;, &#39;i&#39;, &#39;e&#39;}
-voyelles : {&#39;o&#39;, &#39;a&#39;, &#39;u&#39;, &#39;e&#39;, &#39;i&#39;, &#39;y&#39;}
-union : {&#39;o&#39;, &#39;a&#39;, &#39;u&#39;, &#39;e&#39;, &#39;i&#39;, &#39;y&#39;}
-autre union : {&#39;o&#39;, &#39;a&#39;, &#39;u&#39;, &#39;e&#39;, &#39;b&#39;, &#39;i&#39;, &#39;y&#39;, &#39;f&#39;}
-intersection : {&#39;a&#39;, &#39;i&#39;, &#39;e&#39;}
+aie : {&#39;a&#39;, &#39;e&#39;, &#39;i&#39;}
+voyelles : {&#39;a&#39;, &#39;y&#39;, &#39;e&#39;, &#39;u&#39;, &#39;i&#39;, &#39;o&#39;}
+union : {&#39;a&#39;, &#39;y&#39;, &#39;e&#39;, &#39;u&#39;, &#39;i&#39;, &#39;o&#39;}
+autre union : {&#39;a&#39;, &#39;b&#39;, &#39;y&#39;, &#39;f&#39;, &#39;e&#39;, &#39;u&#39;, &#39;i&#39;, &#39;o&#39;}
+intersection : {&#39;a&#39;, &#39;e&#39;, &#39;i&#39;}
 difference :  set() {&#39;b&#39;, &#39;f&#39;}
-difference symétrique:  {&#39;o&#39;, &#39;y&#39;, &#39;u&#39;}
+difference symétrique:  {&#39;y&#39;, &#39;u&#39;, &#39;o&#39;}
 inclusions : True True False False
 </pre></div>
 </div>
