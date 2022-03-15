@@ -24,13 +24,15 @@ La première séance de CM a eu lieu en semaine 3.
  
 ## Semaine 3 
 
-- Avant le CM : 
-    - lire le chapitre "Fonctions, procédures et sous-programmes"
-- Préparation semaine suivante :
-    - CM : lire en entier le chapitre "Fonctions, procédures et sous-programmes"
-    - Compétences : Savoir faire et pré-requis technique
-    - Quizz 1
-    - TD : installer le notebook jupyter sur sa machine personnelle, à défaut savoir utiliser une solution en ligne
+Avant le CM : 
+
+- lire le chapitre "Fonctions, procédures et sous-programmes"
+
+Préparation semaine suivante :
+
+- CM : lire en entier le chapitre "Fonctions, procédures et sous-programmes"
+- Compétences : Savoir faire et pré-requis technique
+- TD : installer le notebook jupyter sur sa machine personnelle, à défaut savoir utiliser une solution en ligne
 
 ## Semaine 4 
 
@@ -80,6 +82,10 @@ Objectifs séance de TD
 - exercices feuille 1 
 - ($\star$) exercices feuille 2
 
+**Auto-**valider l'acquisition de ses connaissances
+
+- Quiz 1 : fonction 
+
 ## Semaine 6
 
 **Motto** : "Spécifier le type des paramètres formels d'une fonction et la taille des paramètres tableaux"
@@ -95,7 +101,7 @@ Conseils avant TD/CM
 
 - étudier chapitre "Boucles, tableaux et fonctions"
 
-Avant le CM :
+Avant le CM 
  
 - lire le chapitre "ES simples avec fichiers"
 
@@ -103,11 +109,12 @@ Objectifs séance de TD
 
 - exercices feuille 2 selon votre objectif 
 
+
 ## Semaine 7
 
 **Motto** : "Appeler une fonction avec des paramètres effectifs différents des paramètres formels"
 
-Objectifs semaine : identiques semaine 6 
+Objectifs semaine : Tableaux, boucles avancées et fonctions  (identiques semaine 6) 
 
 Conseils avant TD/CM 
 
@@ -141,6 +148,10 @@ Objectifs séance de TD
 - (annulé) ~~tp de démonstration~~
 - Feuille 3 selon vos objectifs  
 
+**Auto-**valider l'acquisition de ses connaissances
+
+- Quiz 2 : boucles avancées 
+
 ## Semaine 9 (vacances d'hiver)
 
 **Motto** : Prendre du recul.
@@ -149,6 +160,9 @@ Objectifs semaine :
 
 - Maîtrise des compétences des chapitres _Fonctions_, _Boucles avancées_ et _Entrées-sorties simples_
 - Prise en main des compétences des chapitres _Complexités_ et _Modules utiles_
+
+**Valider l'acquisition de ses connaissances**
+
 - **CC1 : TP noté du 7 mars 2022**
 
 ## Semaine 10 
@@ -167,21 +181,25 @@ Objectifs séance de TD
 
 - Feuille 4 selon vos objectifs  
 
+**Auto-**valider l'acquisition de ses connaissances
+
+- Quiz 3 : complexité 
+
+
 ## Semaine 11
 
 **Motto** : Je vérifie que j'ai bien acquis les compétences des chapitres étudiés à ce jour.
 
-Objectifs semaine : 
+Objectifs semaine :
 
-- **CC2 : Contrôle continu écrit et noté du 16 mars 2022**
-
-Avant le CC : 
-
-- Vérifier compétences acquises à l'aide des quiz _Fonctions_, _Boucles avancées_ et (surtout) _Complexité_
+- Vérifier compétences acquises en _reprenant_ les quiz _Fonctions_, _Boucles avancées_ et (surtout) _Complexité_
 
 Objectif séance de TP :
 
 - Prise en main du chapitre _Types composés_ avec le TP _Structures de données_ (moodle).  
 
+**Valider l'acquisition de ses connaissances**
+
+- **CC2 : Contrôle continu écrit et noté du 16 mars 2022**
 
 <!-- #endregion -->
