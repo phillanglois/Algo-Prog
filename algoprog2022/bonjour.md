@@ -196,10 +196,23 @@ Objectifs semaine :
 
 Objectif séance de TP :
 
-- Prise en main du chapitre _Types composés_ avec le TP _Structures de données_ (moodle).  
+- TP _Bin packing_ (moodle).  
 
 **Valider l'acquisition de ses connaissances**
 
 - **CC2 : Contrôle continu écrit et noté du 16 mars 2022**
+
+
+## Semaine 12
+
+**Motto** : 
+
+Objectifs semaine :
+
+
+Objectif séance de TP :
+
+- Prise en main du chapitre _Types composés_ avec le TP _Structures de données_ (moodle).  
+
 
 <!-- #endregion -->
