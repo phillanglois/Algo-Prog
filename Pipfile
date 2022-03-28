@@ -17,6 +17,7 @@ jupyterlab-spellchecker = "*"
 jupyterlab-language-pack-fr-fr = "*"
 sphinxnotes-strike = "*"
 nbdime = "*"
+nbgrader = {path = "./nbgrader"}
 
 [dev-packages]
 
