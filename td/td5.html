@@ -1,0 +1,747 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feuille 5 &#8212; Algo-Prog 2022</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Feuille 4" href="td4.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo2022.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Algo-Prog 2022</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bonjour.html">
+   Bienvenu en Algo-Prog !
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Présentation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cm/0-presentation-2022.html">
+   Algorithmique et Programmation en 2022
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cm/competences-2022.html">
+   Compétences
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Les bases
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cm/1-fonctions.html">
+   Fonctions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cm/2-boucles-avancees.html">
+   Boucles, tableaux et fonctions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cm/3-ES-fichiers.html">
+   Entrées-sorties simples avec des fichiers
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Algorithmique
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cm/4-complexite.html">
+   Complexités
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cm/6-recursivite.html">
+   Récursivité
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cm/8-rechercher.html">
+   Rechercher
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cm/10-trier.html">
+   Trier
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Programmation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cm/5-types_composes.html">
+   Les types composés
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cm/7-fonctions-avancees.html">
+   Sous-programme et affectation – aspects avancés
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cm/9-ES-avancees.html">
+   Les entrées-sorties (E/S) : aspects avancés
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cm/11-modules-utiles.html">
+   Modules utiles
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Annexes
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cm/a1-booleens.html">
+   Annexe : les booléens en python (&gt;3.6)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cm/a2-ndarray.html">
+   Les ‘ndarray’ : de vrais tableaux en python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cm/a3-exceptions.html">
+   Exceptions
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  TD
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="prealable-td.html">
+   Préalables
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="td1.html">
+   Feuille 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="td2.html">
+   Feuille 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="td3.html">
+   Feuille 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="td4.html">
+   Feuille 4
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Feuille 5
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Basculer la navigation" aria-controls="site-navigation"
+                title="Basculer la navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Téléchargez cette page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/td/td5.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimer au format PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        
+        <a class="issues-button"
+            href="https://github.com/phillanglois/Algo-Prog/issues/new?title=Issue%20on%20page%20%2Ftd/td5.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Ouvrez un problème"><i class="fas fa-lightbulb"></i>signaler un problème</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Mode plein écran"
+        title="Mode plein écran"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contenu
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Feuille 5
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#objectif-10">
+     Objectif 10
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#blacksquare-exercice">
+       <span class="math notranslate nohighlight">
+        \(\blacksquare\)
+       </span>
+       Exercice.
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       <span class="math notranslate nohighlight">
+        \(\blacksquare\)
+       </span>
+       Exercice.
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id2">
+       <span class="math notranslate nohighlight">
+        \(\blacksquare\)
+       </span>
+       Exercice.
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objectif-20">
+   Objectif 20
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Feuille 5</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contenu </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Feuille 5
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#objectif-10">
+     Objectif 10
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#blacksquare-exercice">
+       <span class="math notranslate nohighlight">
+        \(\blacksquare\)
+       </span>
+       Exercice.
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       <span class="math notranslate nohighlight">
+        \(\blacksquare\)
+       </span>
+       Exercice.
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id2">
+       <span class="math notranslate nohighlight">
+        \(\blacksquare\)
+       </span>
+       Exercice.
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objectif-20">
+   Objectif 20
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="feuille-5">
+<span id="td-td5"></span><h1>Feuille 5<a class="headerlink" href="#feuille-5" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Le symbole <span class="math notranslate nohighlight">\(\blacksquare \)</span> indique les exercices ou questions obligatoires. Commencez pas ceux-là.</p></li>
+<li><p>Les symboles <span class="math notranslate nohighlight">\(\star\)</span> et <span class="math notranslate nohighlight">\(\star \star\)</span> indiquent les exercices ou questions de difficulté relative plus importante.</p></li>
+</ul>
+<p><strong>Focus</strong></p>
+<ul class="simple">
+<li><p>récursivité et notions associées : arbre et pile des appels,
+environnements</p></li>
+<li><p>recherche dichotomique</p></li>
+</ul>
+<p><strong>Compétences</strong></p>
+<ul class="simple">
+<li><p>Savoir conduire une approche diviser pour régner et en déduire une solution récursive : application à des exemples calculatoires simples – comme ceux vus en cours, <em>e.g</em>. factorielles, exponentiation entière, exponentiation rapide.</p></li>
+<li><p>Savoir identifier la (ou les) terminaison, la récursion et l’initialisation d’un traitement avec un algorithme récursif : application à des exemples simples – comme ceux vus en cours, <em>e.g</em>. factorielles, exponentiation entière, exponentiation rapide.</p></li>
+<li><p>Savoir exprimer la complexité d’un algorithme récursif</p></li>
+<li><p>Savoir écrire sous la forme d’une fonction de même signature les versions itérative et récursive d’un traitement calculatoire simple</p></li>
+<li><p>Construire la pile des appels et son évolution lors d’un traitement récursif</p></li>
+</ul>
+<div class="section" id="objectif-10">
+<h2>Objectif 10<a class="headerlink" href="#objectif-10" title="Permalink to this headline">¶</a></h2>
+<p>(exo:fibo):</p>
+<div class="section" id="blacksquare-exercice">
+<h3><span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice.<a class="headerlink" href="#blacksquare-exercice" title="Permalink to this headline">¶</a></h3>
+<p>On rappelle la suite de Fibonacci : <span class="math notranslate nohighlight">\(F(0)=F(1)=1\)</span> et <span class="math notranslate nohighlight">\(F(n+1) =
+F(n)+F(n-1)\)</span>. Elle permet entre autres de modéliser l’évolution d’une
+population de lapins.</p>
+<ol class="simple">
+<li><p>Calculer les premières valeurs de <span class="math notranslate nohighlight">\(F\)</span> pour se convaincre qu’elles
+augmentent rapidement.</p></li>
+<li><p>les premières valeurs de <span class="math notranslate nohighlight">\(F\)</span> pour se convaincre qu’elles
+augmentent rapidement.</p></li>
+<li><p>Rappeler l’algorithme récursif du calcul de <span class="math notranslate nohighlight">\(F(n)\)</span>.</p></li>
+<li><p>Expliciter l’arbre des appels récursifs du calcul de <span class="math notranslate nohighlight">\(F(4)\)</span> puis de
+<span class="math notranslate nohighlight">\(F(5)\)</span> — prévoir une feuille A4 en largeur. Dénombrer le nombre
+des appels nécessaires dans les 2 cas.</p></li>
+<li><p>Détailler l’exécution du calcul de <span class="math notranslate nohighlight">\(F(3)\)</span> en explicitant l’évolution
+de la pile des appels.</p></li>
+</ol>
+<img alt="&lt;https://commons.wikimedia.org/w/index.php?curid=11104228&gt;" class="align-center" src="../_images/FibonacciRabbit.png" />
+<p>(exo:sumrec):</p>
+</div>
+<div class="section" id="id1">
+<h3><span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice.<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Écrire puis coder une version itérative des calculs suivants.</p>
+<ol class="simple">
+<li><p>la somme <span class="math notranslate nohighlight">\(s(n)\)</span> des <span class="math notranslate nohighlight">\(n\)</span> premiers entiers</p></li>
+<li><p>la valeur <span class="math notranslate nohighlight">\(u(n)= 2^n\)</span> pour <span class="math notranslate nohighlight">\(n&gt;0\)</span></p></li>
+</ol>
+</li>
+<li><p>Écrire puis coder une version récursive des calculs suivants.</p>
+<ol class="simple">
+<li><p>la somme <span class="math notranslate nohighlight">\(s(n)\)</span> des <span class="math notranslate nohighlight">\(n\)</span> premiers entiers</p></li>
+<li><p>la valeur <span class="math notranslate nohighlight">\(u(n)= 2^n\)</span> pour <span class="math notranslate nohighlight">\(n&gt;0\)</span></p></li>
+</ol>
+</li>
+<li><p>Expliciter l’arbre des appels et les calculs associés lors de
+l’évaluation de <span class="math notranslate nohighlight">\(s(4)\)</span>. Combien d’appels récursifs à <span class="math notranslate nohighlight">\(s\)</span> sont
+nécessaires ?</p></li>
+<li><p>Même question pour <span class="math notranslate nohighlight">\(u(5)\)</span>.</p></li>
+</ol>
+<p>(exo:expo):</p>
+</div>
+<div class="section" id="id2">
+<h3><span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice.<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>On souhaite calculer la
+valeur de <span class="math notranslate nohighlight">\(x^n\)</span> où <span class="math notranslate nohighlight">\(n\)</span> et un entier positif, et <span class="math notranslate nohighlight">\(x\)</span> un flottant. On
+rappelle que <span class="math notranslate nohighlight">\(x^0 = 1.0\)</span>.</p>
+<ol class="simple">
+<li><ol class="simple">
+<li><p>Écrire un algorithme itératif qui calcule <span class="math notranslate nohighlight">\(x^n\)</span>.</p></li>
+<li><p>Combien de multiplications sont nécessaires à ce calcul ?</p></li>
+</ol>
+</li>
+<li><ol class="simple">
+<li><p>Utiliser la propriété <span class="math notranslate nohighlight">\(x^p = x \times x^{p-1}\)</span> pour écrire un
+algorithme récursif qui calcule <span class="math notranslate nohighlight">\(x^n\)</span>.</p></li>
+<li><p>Combien de multiplications sont nécessaires à ce calcul ?</p></li>
+</ol>
+</li>
+<li><ol class="simple">
+<li><p>Utiliser la propriété <span class="math notranslate nohighlight">\(x^p \times x^p = x^{2p}\)</span> pour écrire un
+algorithme récursif qui calcule <span class="math notranslate nohighlight">\(x^n\)</span>. On pourra utiliser
+l’opérateur python <code class="docutils literal notranslate"><span class="pre">divmod</span></code>.</p></li>
+<li><p>Combien de multiplications sont nécessaires à ce calcul pour
+<span class="math notranslate nohighlight">\(n=2, 4, 8, 16, \dots, 2^p\)</span> ?</p></li>
+</ol>
+</li>
+<li><p>Que pensez vous de ces deux versions récursives ?</p></li>
+<li><p>Dans ces deux cas, compter le nombre d’appels récursifs pour les
+valeurs suivantes de <span class="math notranslate nohighlight">\(n = 4, 7, 8, 9, 63, 64, 65\)</span>.</p></li>
+</ol>
+<p><strong>Exercice .</strong> <strong>Si il n’y avait qu’un seul exercice à faire, c’est
+celui-ci !</strong>.\</p>
+<ol class="simple">
+<li><p><strong>()</strong> Donner la forme récursive qui produit le même traitement que
+celui d’une boucle for qui (parcourt et) affiche les indices entiers
+successifs de 11 à 1.</p></li>
+<li><p><strong>()</strong> Même question pour obtenir l’affichage : 1, 2, …, 10, 11.</p></li>
+</ol>
+<p><strong>Exercice .</strong> []{#exo:dicho label=”exo:dicho”}</p>
+<ol class="simple">
+<li><p><strong>()</strong> Écrire un algorithme itératif qui calcule un booléen
+indiquant si un tableau d’entiers <strong>donné trié</strong> par ordre croissant
+contient une valeur donnée. La recherche sera effectuée par
+dichotomie.</p></li>
+<li><p><strong>()</strong> Écrire une fonction récursive <code class="docutils literal notranslate"><span class="pre">trouve</span></code> (c’est-à-dire son
+en-tête, puis l’appel puis le corps) qui retourne le booléen
+précédent.</p></li>
+</ol>
+<p><strong>Exercice .</strong></p>
+<ol class="simple">
+<li><p>Dérouler l’algorithme de recherche dichotomique (version itérative)
+pour rechercher la valeur 3 dans la tableau [0,1,2,3,4,5,6,7,8,9].</p></li>
+<li><p>Donner une valeur à rechercher qui minimise le nombre d’itérations
+de la recherche.</p></li>
+<li><p>Même question pour celle qui maximise ce nombre.</p></li>
+<li><p><strong>()</strong> Coder ces traitements et vérifier votre analyse.</p></li>
+</ol>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="objectif-20">
+<h1>Objectif 20<a class="headerlink" href="#objectif-20" title="Permalink to this headline">¶</a></h1>
+<p><strong>Exercice .</strong> Fibonacci (encore).</p>
+<ol class="simple">
+<li><p><strong>()</strong> Tracer les appels successifs en ajoutant un <code class="docutils literal notranslate"><span class="pre">print</span></code>.</p></li>
+<li><p><strong>()</strong> Tester pour <code class="docutils literal notranslate"><span class="pre">fibo(5)</span></code>.</p></li>
+</ol>
+<p><strong>Exercice .</strong> Exponentiation rapide (encore).</p>
+<ol class="simple">
+<li><p><strong>()</strong> Tracer les appels successifs en ajoutant un <code class="docutils literal notranslate"><span class="pre">print</span></code></p></li>
+<li><p>Quels sont appels à <code class="docutils literal notranslate"><span class="pre">expo(x,n)</span></code> évités par <code class="docutils literal notranslate"><span class="pre">expo_rapide(x,n)</span></code> ?
+Commencer avec des valeurs de <span class="math notranslate nohighlight">\(n\)</span> arbitrairement choisies.</p></li>
+</ol>
+<p><strong>Exercice .</strong> La suite de Syracuse <span class="math notranslate nohighlight">\(s\)</span> d’un nombre <span class="math notranslate nohighlight">\(N\)</span> donné est
+définie de façon récursive comme suit.<br />
+On commence avec <span class="math notranslate nohighlight">\(s(0) = N\)</span>, puis :\</p>
+<hr class="docutils" />
+<p><span class="math notranslate nohighlight">\(s(n+1) =  s(n)/2\)</span>,    si <span class="math notranslate nohighlight">\(s(n)\)</span> est pair,
+<span class="math notranslate nohighlight">\(s(n+1) =  3s(n)+1\)</span>,   si <span class="math notranslate nohighlight">\(s(n)\)</span> est impair.</p>
+<hr class="docutils" />
+<p>Ainsi définie, c’est une suite (infinie) de valeurs entières construites
+à partir de la valeur de départ <span class="math notranslate nohighlight">\(N\)</span>.</p>
+<ol class="simple">
+<li><p>A la main pour commencer.</p>
+<ol class="simple">
+<li><p>Calculer à la main les valeurs de la suite pour les valeurs de
+départ <span class="math notranslate nohighlight">\(N = 4, 2, 1\)</span>. Qu’en déduire ?</p></li>
+<li><p>Calculer à la main les valeurs de la suite pour les valeurs de
+départ <span class="math notranslate nohighlight">\(N = 3, 5, 6, 7, 8, 16, 32\)</span>. Il peut être utile de
+représenter les valeurs obtenues sous la forme d’un tableau où
+chaque colonne (ou ligne) à la forme <span class="math notranslate nohighlight">\(N u_1 u_2 \dots u_n \dots\)</span>
+où les <span class="math notranslate nohighlight">\(u_i\)</span> sont les valeurs de la suite pour la valeur de
+départ <span class="math notranslate nohighlight">\(N\)</span>. Qu’en déduire et en particulier que penser de la
+terminaison de cette suite ?</p></li>
+</ol>
+</li>
+<li><p><strong>()</strong> La coder de façon récursive et observer son comportement pour
+l’une de ces valeurs de <span class="math notranslate nohighlight">\(N\)</span>. Attention !!!</p></li>
+<li><p><strong>()</strong> Terminaison : on arrête la suite <span class="math notranslate nohighlight">\(s(n)\)</span> quand on rencontre
+<span class="math notranslate nohighlight">\(n =
+  1\)</span> (c’est-à-dire <span class="math notranslate nohighlight">\(s(2)\)</span>). D’après la conjecture de Collatz, cette
+valeur est rencontrée quelque soit le terme de départ <span class="math notranslate nohighlight">\(N\)</span>.</p>
+<ol class="simple">
+<li><p>Compléter votre code précédent avec cette condition d’arrêt.</p></li>
+<li><p>Compléter votre code précédent avec l’affichage de chaque valeur
+calculée avant la terminaison.</p></li>
+</ol>
+</li>
+<li><p><strong>()</strong> Écrire des fonctions qui calculent les notions suivantes
+(source Wikipédia) :</p>
+<ol class="simple">
+<li><p>le temps de vol qui est le plus petit indice <span class="math notranslate nohighlight">\(n\)</span> tel que
+<span class="math notranslate nohighlight">\(s(n) = 1\)</span>, <em>i.e.</em> jusqu’à la terminaison.</p></li>
+<li><p>le temps de vol en altitude qui est le plus petit indice <span class="math notranslate nohighlight">\(n\)</span> tel
+que <span class="math notranslate nohighlight">\(s(n) \le N\)</span>.</p></li>
+<li><p>l’altitude maximale qui est la valeur maximale <span class="math notranslate nohighlight">\(s(n)\)</span> de la
+suite.</p></li>
+</ol>
+</li>
+<li><p><strong>()</strong> Coder ces fonctions et proposer des graphiques instructifs.</p></li>
+<li><p><strong>()</strong> Coder ces fonctions et proposer des graphiques instructifs.</p></li>
+<li><p><strong>()</strong> Coder le calcul avec terminaison de façon itérative.</p></li>
+</ol>
+<p><strong>Exercice .</strong> (Euclide encore) Wikipédia décrit l’algorithme d’Euclide
+pour calculer le pgcd de deux entiers (<span class="math notranslate nohighlight">\(a &gt; b\)</span>) comme suit.</p>
+<blockquote>
+<div><p><em>Soient deux entiers naturels a et b, dont on cherche le PGCD. Le cas
+où a ou b est nul ne nécessite aucun algorithme ; on l’exclut. Une
+suite d’entiers <span class="math notranslate nohighlight">\((a_n)_n\)</span> est définie par récurrence de pas 2, plus
+précisément par divisions euclidiennes successives ; la suite est
+initialisée par <span class="math notranslate nohighlight">\(a_0 = a, a_1 = b\)</span>, puis propagée par la règle de
+récurrence : tant que <span class="math notranslate nohighlight">\(a_{n+1}\)</span> est non nul, <span class="math notranslate nohighlight">\(a_{n+2}\)</span> est défini
+comme le reste de la division euclidienne de <span class="math notranslate nohighlight">\(a_n\)</span> par <span class="math notranslate nohighlight">\(a_{n+1}\)</span>.</em></p>
+<p>On commence donc par calculer le reste de la division de a par b,
+qu’on note r ; puis on remplace a par b, puis b par r, et on
+ré-applique le procédé depuis le début.</p>
+<p>On obtient ainsi une suite, qui vaut 0 à un certain rang ; le PGCD
+cherché est le terme précédent de la suite.</p>
+</div></blockquote>
+<ol class="simple">
+<li><p>Ecrire (à nouveau) un algorithme itératif qui calcule ce pgcd.</p></li>
+<li><p>Écrire un algorithme récursif qui calcule ce pgcd.</p></li>
+<li><p>Proposer une formulation synthétique de l’algorithme d’Euclide (qui
+remplacerait avantageusement l’extrait de Wikipédia).</p></li>
+<li><p>Profiter de la page Wikipédia pour lire comment sont prouvées la
+correction et la terminaison l’algorithme d’Euclide, ainsi que sa
+complexité (problème beaucoup plus difficile).</p></li>
+</ol>
+<p><strong>Exercice .</strong> On souhaite additionner deux entiers de <span class="math notranslate nohighlight">\(p\)</span> chiffres
+décimaux. On dispose pour cela d’une fonction <code class="docutils literal notranslate"><span class="pre">add(c1,c2)</span></code> qui calcule
+et retourne un couple <code class="docutils literal notranslate"><span class="pre">(r,s)</span></code> où :</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">c1,</span> <span class="pre">c2,</span> <span class="pre">s</span></code> sont des entiers compris entre 0 et 9,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">r</span></code> est égal à 0 ou à 1, et</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">c1</span> <span class="pre">+</span> <span class="pre">c2</span> <span class="pre">=</span> <span class="pre">10</span> <span class="pre">r</span> <span class="pre">+</span> <span class="pre">c</span></code>.</p></li>
+</ul>
+<p>Ainsi <code class="docutils literal notranslate"><span class="pre">r</span></code> est la retenue de l’addition des chiffres <code class="docutils literal notranslate"><span class="pre">c1</span></code> et <code class="docutils literal notranslate"><span class="pre">c2</span></code> et <code class="docutils literal notranslate"><span class="pre">s</span></code>
+est la valeur “des unités” de cette somme. Par exemple : <code class="docutils literal notranslate"><span class="pre">add(2,3)</span></code>
+retourne <code class="docutils literal notranslate"><span class="pre">(0,5)</span></code> et <code class="docutils literal notranslate"><span class="pre">add(8,5)</span></code> retourne <code class="docutils literal notranslate"><span class="pre">(1,3)</span></code>.</p>
+<p>On représente un entier <span class="math notranslate nohighlight">\(n\)</span> à <span class="math notranslate nohighlight">\(p\)</span> chiffres décimaux par un tableau <span class="math notranslate nohighlight">\(N\)</span>
+de longueur <span class="math notranslate nohighlight">\(p\)</span>. On peut choisir par exemple
+<span class="math notranslate nohighlight">\(n = \sum_{i=0}^{p-1} N[i]\cdot 10^i\)</span>. Dit plus simplement dans ce cas,
+le dernier chiffre de <span class="math notranslate nohighlight">\(n\)</span> (celui des unités) est stocké en position 0
+dans le tableau <span class="math notranslate nohighlight">\(N\)</span>, l’avant-dernier (celui des dizaines) en position 1,
+… — et on notera qu’il est ainsi plaisant que les tableaux soient
+indicés à partir de 0. Il est aussi possible de choisir une écriture
+plus classique où les chiffres sont stockés dans l’ordre des puissances
+décroissantes (numération de position habituelle).</p>
+<ol class="simple">
+<li><p>Utiliser la fonction <code class="docutils literal notranslate"><span class="pre">add</span></code> pour écrire un algorithme qui calcule la
+somme de deux entiers <span class="math notranslate nohighlight">\(n1\)</span> et <span class="math notranslate nohighlight">\(n2\)</span> respectivement représentés par
+les tableaux <span class="math notranslate nohighlight">\(N1\)</span> et <span class="math notranslate nohighlight">\(N2\)</span>. Le résultat <span class="math notranslate nohighlight">\(s = n1+n2\)</span> sera aussi
+représenté par un tableau adapté.</p></li>
+<li><p>Soient <span class="math notranslate nohighlight">\(n1 = 1234\)</span>, <span class="math notranslate nohighlight">\(n2=4567\)</span> et <span class="math notranslate nohighlight">\(n3=9876\)</span>. Dérouler l’algorithme
+pour les deux calculs <span class="math notranslate nohighlight">\(n1+n2\)</span> et <span class="math notranslate nohighlight">\(n1+n3\)</span>.</p></li>
+<li><p><strong>()</strong> Coder et valider ces fonctions.</p></li>
+</ol>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./td"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="td4.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Feuille 4</p>
+        </div>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      Par Ph. Langlois<br/>
+    
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
