@@ -207,12 +207,37 @@ Objectif séance de TP :
 
 **Motto** : 
 
+1. Lire l'énoncé en entier avant de commencer à coder/à répondre. 
+2. Comprendre _vraiment_ un algorithme en l'appliquant _à la main sur une feuille_ à un ou plusieurs petits problèmes exemples dont la solution est connue.  
+
 Objectifs semaine :
 
+- Prise en main des compétences du chapitre _Types composés_
+
+Avant le CM :
+ 
+- Lire le chapitre _Les types composés_ en entier
 
 Objectif séance de TP :
 
 - Prise en main du chapitre _Types composés_ avec le TP _Structures de données_ (moodle).  
+
+## Semaine 13
+
+**Motto** : Attention aux affectations de listes !
+
+Objectifs semaine :
+
+- Maîtrise des compétences du chapitre _Types composés_
+
+Avant le CM :
+ 
+- Lire le chapitre _Récursivité_ jusqu'à la section "Fibonnaci ou l'inefficacité de la récursion"  (section comprise)
+
+Objectif séance de TP :
+
+- Finir le TP _Structures de données_ (moodle).  
+
 
 
 <!-- #endregion -->

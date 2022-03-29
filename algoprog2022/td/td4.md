@@ -21,7 +21,7 @@
 ## Objectif 10
 
 (exo:doubleboucle)=
-### $\blacksquare $ Exercice
+### $\blacksquare$ Exercice
 
 1.  Dérouler l'algorithme suivant en explicitant les valeurs de
     l'ensemble de ses variables.
