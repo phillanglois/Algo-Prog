@@ -154,7 +154,7 @@ Exponentiation rapide (encore).
 2.  Quels sont appels à `expo(x,n)` évités par `expo_rapide(x,n)` ?
     Commencer avec des valeurs de $n$ arbitrairement choisies.
 
-(exo:syracuse)
+(exo:syracuse)=
 ### $\star$ Exercice. 
 
 La suite de Syracuse $s$ d'un nombre $N$ donné est
@@ -212,7 +212,7 @@ Ainsi définie, $s$ est une suite infinie de valeurs entières construites
 
 7.  Coder le calcul avec terminaison de façon itérative.
 
-(exo:euclide2)
+(exo:euclide2)=
 ### $\star$ Exercice. 
 (Euclide encore) 
 
@@ -245,9 +245,8 @@ pour calculer le pgcd de deux entiers ($a > b$) comme suit.
     correction et la terminaison l'algorithme d'Euclide, ainsi que sa
     complexité (problème beaucoup plus difficile).
 
-**Exercice .** 
 
-(exo:addint)
+(exo:addint)=
 ### $\star$ Exercice. 
 
 On souhaite additionner deux entiers de $p$ chiffres
@@ -282,4 +281,4 @@ décroissantes (numération de position habituelle).
 2.  Soient $n1 = 1234$, $n2=4567$ et $n3=9876$. Dérouler l'algorithme
     pour les deux calculs $n1+n2$ et $n1+n3$.
 
-3.  oder et valider ces fonctions.
+3.  Coder et valider ces fonctions.
