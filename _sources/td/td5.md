@@ -1,8 +1,8 @@
 (td:td5)=
 # Feuille 5
 
-- Le symbole $\blacksquare $ indique les exercices ou questions obligatoires. Commencez pas ceux-là.
-- Les symboles $\star$ et $\star \star$ indiquent les exercices ou questions de difficulté relative plus importante.
+- Le symbole $\blacksquare$ indique les exercices ou questions obligatoires. Commencez pas ceux-là.
+- Les symboles $\star$ et $\star\star$ indiquent les exercices ou questions de difficulté relative plus importante.
 
 
 **Focus**
@@ -21,19 +21,19 @@
 
 ## Objectif 10
 
-(exo:fibo):
+(exo:fibo)=
 ### $\blacksquare$ Exercice.
 
-On rappelle la suite de Fibonacci : $F(0)=F(1)=1$ et $F(n+1) =
-F(n)+F(n-1)$. Elle permet entre autres de modéliser l'évolution d'une
+On rappelle la suite de Fibonacci : 
+
+$F(0)=F(1)=1$ et $F(n+1) = F(n)+F(n-1)$. 
+
+Elle permet entre autres de modéliser l'évolution d'une
 population de lapins.
 
-1.  Calculer les premières valeurs de $F$ pour se convaincre qu'elles
+1.  Ecrire une version itérative du calcul de $F(n)$ et calculer les premières valeurs de $F$ pour se convaincre qu'elles
     augmentent rapidement.
     
-1.   les premières valeurs de $F$ pour se convaincre qu'elles
-    augmentent rapidement.    
-
 2.  Rappeler l'algorithme récursif du calcul de $F(n)$.
 
 3.  Expliciter l'arbre des appels récursifs du calcul de $F(4)$ puis de
@@ -49,7 +49,7 @@ population de lapins.
 ```
 
 
-(exo:sumrec):
+(exo:sumrec)=
 ### $\blacksquare$ Exercice.
 
 1. Écrire puis coder une version itérative des calculs suivants.
@@ -70,7 +70,7 @@ population de lapins.
 
 3.  Même question pour $u(5)$.
 
-(exo:expo):
+(exo:expo)=
 ### $\blacksquare$ Exercice.
 
 On souhaite calculer la
@@ -98,27 +98,31 @@ rappelle que $x^0 = 1.0$.
 5.  Dans ces deux cas, compter le nombre d'appels récursifs pour les
     valeurs suivantes de $n = 4, 7, 8, 9, 63, 64, 65$.
 
-**Exercice .** **Si il n'y avait qu'un seul exercice à faire, c'est
-celui-ci !**.\
+(exo:forrec)=
+### $\blacksquare\blacksquare$ Exercice.
+**Si il n'y avait qu'un seul exercice à faire, c'est celui-ci !**.\
 
-1.  **()** Donner la forme récursive qui produit le même traitement que
+1.  Donner la forme récursive qui produit le même traitement que
     celui d'une boucle for qui (parcourt et) affiche les indices entiers
     successifs de 11 à 1.
 
-2.  **()** Même question pour obtenir l'affichage : 1, 2, ..., 10, 11.
+2.  Même question pour obtenir l'affichage : 1, 2, ..., 10, 11.
 
-**Exercice .** []{#exo:dicho label="exo:dicho"}
+(exo:dicho)=
+### $\blacksquare$ Exercice.
 
-1.  **()** Écrire un algorithme itératif qui calcule un booléen
+1.  Écrire un algorithme itératif qui calcule un booléen
     indiquant si un tableau d'entiers **donné trié** par ordre croissant
     contient une valeur donnée. La recherche sera effectuée par
     dichotomie.
 
-2.  **()** Écrire une fonction récursive `trouve` (c'est-à-dire son
+2.  Écrire une fonction récursive `trouve` (c'est-à-dire son
     en-tête, puis l'appel puis le corps) qui retourne le booléen
-    précédent.
+    précédent en appliquant aussi une recherche par dichotomie.
 
-**Exercice .**
+
+(exo:dicho2)=
+### $\blacksquare$ Exercice.
 
 1.  Dérouler l'algorithme de recherche dichotomique (version itérative)
     pour rechercher la valeur 3 dans la tableau \[0,1,2,3,4,5,6,7,8,9\].
@@ -128,33 +132,41 @@ celui-ci !**.\
 
 3.  Même question pour celle qui maximise ce nombre.
 
-4.  **()** Coder ces traitements et vérifier votre analyse.
+4.  Coder ces traitements et vérifier votre analyse.
 
-# Objectif 20
 
-**Exercice .** Fibonacci (encore).
+## Objectif 20
 
-1.  **()** Tracer les appels successifs en ajoutant un `print`.
+(exo:fibo2)=
+### Exercice.
+Fibonacci (encore).
 
-2.  **()** Tester pour `fibo(5)`.
+1.  Tracer les appels successifs en ajoutant un `print`.
 
-**Exercice .** Exponentiation rapide (encore).
+2.  Tester pour `fibo(5)`.
 
-1.  **()** Tracer les appels successifs en ajoutant un `print`
+(exo:exporapide2)=
+### Exercice.
+Exponentiation rapide (encore).
+
+1.  Tracer les appels successifs en ajoutant un `print`
 
 2.  Quels sont appels à `expo(x,n)` évités par `expo_rapide(x,n)` ?
     Commencer avec des valeurs de $n$ arbitrairement choisies.
 
-**Exercice .** La suite de Syracuse $s$ d'un nombre $N$ donné est
-définie de façon récursive comme suit.\
-On commence avec $s(0) = N$, puis :\
+(exo:syracuse)
+### $\star$ Exercice. 
 
-  ---------------------- -----------------------
-  $s(n+1) =  s(n)/2$,    si $s(n)$ est pair,
-  $s(n+1) =  3s(n)+1$,   si $s(n)$ est impair.
-  ---------------------- -----------------------
+La suite de Syracuse $s$ d'un nombre $N$ donné est
+définie de façon récursive comme suit.
 
-Ainsi définie, c'est une suite (infinie) de valeurs entières construites
+On commence avec $s(0) = N$, puis :
+
+- $s(n+1) =  s(n)/2$,    si $s(n)$ est pair,  
+- $s(n+1) =  3s(n)+1$,   si $s(n)$ est impair.
+
+
+Ainsi définie, $s$ est une suite infinie de valeurs entières construites
 à partir de la valeur de départ $N$.
 
 1.  A la main pour commencer.
@@ -170,12 +182,11 @@ Ainsi définie, c'est une suite (infinie) de valeurs entières construites
         départ $N$. Qu'en déduire et en particulier que penser de la
         terminaison de cette suite ?
 
-2.  **()** La coder de façon récursive et observer son comportement pour
+2.  La coder de façon récursive et observer son comportement pour
     l'une de ces valeurs de $N$. Attention !!!
 
-3.  **()** Terminaison : on arrête la suite $s(n)$ quand on rencontre
-    $n =
-      1$ (c'est-à-dire $s(2)$). D'après la conjecture de Collatz, cette
+3.  Terminaison : on arrête la suite $s(n)$ quand on rencontre
+    $n = 1$ (c'est-à-dire $s(2)$). D'après la conjecture de Collatz, cette
     valeur est rencontrée quelque soit le terme de départ $N$.
 
     1.  Compléter votre code précédent avec cette condition d'arrêt.
@@ -183,7 +194,7 @@ Ainsi définie, c'est une suite (infinie) de valeurs entières construites
     2.  Compléter votre code précédent avec l'affichage de chaque valeur
         calculée avant la terminaison.
 
-4.  **()** Écrire des fonctions qui calculent les notions suivantes
+4.  Écrire des fonctions qui calculent les notions suivantes
     (source Wikipédia) :
 
     1.  le temps de vol qui est le plus petit indice $n$ tel que
@@ -195,13 +206,17 @@ Ainsi définie, c'est une suite (infinie) de valeurs entières construites
     3.  l'altitude maximale qui est la valeur maximale $s(n)$ de la
         suite.
 
-5.  **()** Coder ces fonctions et proposer des graphiques instructifs.
+5.  Coder ces fonctions et proposer des graphiques instructifs.
 
-6.  **()** Coder ces fonctions et proposer des graphiques instructifs.
+6.  Coder ces fonctions et proposer des graphiques instructifs.
 
-7.  **()** Coder le calcul avec terminaison de façon itérative.
+7.  Coder le calcul avec terminaison de façon itérative.
 
-**Exercice .** (Euclide encore) Wikipédia décrit l'algorithme d'Euclide
+(exo:euclide2)
+### $\star$ Exercice. 
+(Euclide encore) 
+
+Wikipédia décrit l'algorithme d'Euclide
 pour calculer le pgcd de deux entiers ($a > b$) comme suit.
 
 > *Soient deux entiers naturels a et b, dont on cherche le PGCD. Le cas
@@ -230,7 +245,12 @@ pour calculer le pgcd de deux entiers ($a > b$) comme suit.
     correction et la terminaison l'algorithme d'Euclide, ainsi que sa
     complexité (problème beaucoup plus difficile).
 
-**Exercice .** On souhaite additionner deux entiers de $p$ chiffres
+**Exercice .** 
+
+(exo:addint)
+### $\star$ Exercice. 
+
+On souhaite additionner deux entiers de $p$ chiffres
 décimaux. On dispose pour cela d'une fonction `add(c1,c2)` qui calcule
 et retourne un couple `(r,s)` où :
 
@@ -262,4 +282,4 @@ décroissantes (numération de position habituelle).
 2.  Soient $n1 = 1234$, $n2=4567$ et $n3=9876$. Dérouler l'algorithme
     pour les deux calculs $n1+n2$ et $n1+n3$.
 
-3.  **()** Coder et valider ces fonctions.
+3.  oder et valider ces fonctions.
