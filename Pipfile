@@ -8,7 +8,6 @@ numpy = "*"
 notebook = "*"
 autopep8 = "*"
 matplotlib = "*"
-jupyter-book = "*"
 ghp-import = "*"
 jupyter = "*"
 jupyterlab = "*"
@@ -18,6 +17,8 @@ jupyterlab-language-pack-fr-fr = "*"
 sphinxnotes-strike = "*"
 nbdime = "*"
 nbgrader = {path = "./nbgrader"}
+jupyter-book = "*"
+jinja2 = "==3.0.3"
 
 [dev-packages]
 
