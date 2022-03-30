@@ -597,23 +597,23 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#complements">
-   Compléments
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusion
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id5">
+    <a class="reference internal nav-link" href="#ce-qui-a-ete-vu">
+     Ce qui a été vu
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ce-qui-reste-a-voir">
+     Ce qui reste à voir
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#complements">
      Compléments
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#a-venir">
-     A venir
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#pour-tracer-des-graphes">
-     Pour tracer des graphes
     </a>
    </li>
   </ul>
@@ -883,23 +883,23 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#complements">
-   Compléments
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusion
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id5">
+    <a class="reference internal nav-link" href="#ce-qui-a-ete-vu">
+     Ce qui a été vu
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ce-qui-reste-a-voir">
+     Ce qui reste à voir
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#complements">
      Compléments
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#a-venir">
-     A venir
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#pour-tracer-des-graphes">
-     Pour tracer des graphes
     </a>
    </li>
   </ul>
@@ -915,7 +915,7 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="recursivite">
 <span id="ch-recursivite"></span><h1>Récursivité<a class="headerlink" href="#recursivite" title="Permalink to this headline">¶</a></h1>
-<p>Mis à jour : Mar 29, 2022, lecture : 12
+<p>Mis à jour : Mar 30, 2022, lecture : 15
 minutes minimum, PhL.</p>
 <div class="section" id="definitions-et-premiers-exemples">
 <h2>Définitions et premiers exemples<a class="headerlink" href="#definitions-et-premiers-exemples" title="Permalink to this headline">¶</a></h2>
@@ -1143,13 +1143,35 @@ minutes minimum, PhL.</p>
 </div>
 </div>
 </div>
-<p>L’exécution suivante déclenche l’erreur suivante :</p>
+<p>L’exécution suivante déclenche l’erreur :</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ne">RecursionError</span><span class="p">:</span> <span class="n">maximum</span> <span class="n">recursion</span> <span class="n">depth</span> <span class="n">exceeded</span>
 </pre></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#print(&quot;1! =&quot;, f(1))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1! =&quot;</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>---------------------------------------------------------------------------
+RecursionError                            Traceback (most recent call last)
+/var/folders/32/9hkmzrf11t38ckpktjnyfsfc0000gn/T/ipykernel_86973/1127868052.py in &lt;cell line: 1&gt;()
+----&gt; 1 print(&quot;1! =&quot;, f(1))
+
+/var/folders/32/9hkmzrf11t38ckpktjnyfsfc0000gn/T/ipykernel_86973/3422208276.py in f(n)
+      4     sortie n!
+      5     &quot;&quot;&quot;
+----&gt; 6     return n * f(n-1) # récursion
+
+... last 1 frames repeated, from the frame below ...
+
+/var/folders/32/9hkmzrf11t38ckpktjnyfsfc0000gn/T/ipykernel_86973/3422208276.py in f(n)
+      4     sortie n!
+      5     &quot;&quot;&quot;
+----&gt; 6     return n * f(n-1) # récursion
+
+RecursionError: maximum recursion depth exceeded
 </pre></div>
 </div>
 </div>
@@ -1271,6 +1293,9 @@ minutes minimum, PhL.</p>
 </div>
 </div>
 </div>
+<p><strong>Rmq sur la validité de ces 3 écritures récursives.</strong></p>
+<p>Même dans ces versions récursives, il faut protéger le traitement des appels avec des arguments invalides. Comme précédemment, on ajoute l’assertion :
+<code class="docutils literal notranslate"><span class="pre">assert</span> <span class="pre">n</span> <span class="pre">&gt;=</span> <span class="pre">0</span></code> avant le début du traitement.</p>
 </div>
 <div class="section" id="bien-comprendre-les-appels-recursifs">
 <h4>Bien comprendre les appels récursifs !<a class="headerlink" href="#bien-comprendre-les-appels-recursifs" title="Permalink to this headline">¶</a></h4>
@@ -1287,7 +1312,7 @@ Pour cela, on décortique bien la fonction.</p></li>
 <span class="sd">    entrée : n &gt;= 0</span>
 <span class="sd">    sortie n!</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="c1"># pour voir les imbrications des appels</span>
+    <span class="c1"># pour compter les imbrications des appels</span>
     <span class="k">global</span> <span class="n">nb</span>
     <span class="c1"># on met a jour indent avant chaque return</span>
     
@@ -1384,7 +1409,7 @@ Réponse :<div class="summary-down docutils">
 <p>Objectif : calculer <span class="math notranslate nohighlight">\(x^n\)</span> où <span class="math notranslate nohighlight">\(x\)</span> est un réel et <span class="math notranslate nohighlight">\(n\)</span> un entier positif.</p>
 <div class="section" id="une-premiere-recursion">
 <h3>Une première récursion<a class="headerlink" href="#une-premiere-recursion" title="Permalink to this headline">¶</a></h3>
-<p>Elle est basée sur la relation récursive : <span class="math notranslate nohighlight">\(x^n = x \times x^{n-1}\)</span> et <span class="math notranslate nohighlight">\(x^0 = 1\)</span>, pour <span class="math notranslate nohighlight">\(n &gt; 0\)</span>.</p>
+<p>Elle est basée sur la relation récursive : <span class="math notranslate nohighlight">\(x^n = x \times x^{n-1}\)</span> pour <span class="math notranslate nohighlight">\(n &gt; 0\)</span> et <span class="math notranslate nohighlight">\(x^0 = 1\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">expo</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
@@ -1421,9 +1446,11 @@ Réponse :<div class="summary-down docutils">
 <h3>Une seconde récursion rapide, beaucoup plus rapide<a class="headerlink" href="#une-seconde-recursion-rapide-beaucoup-plus-rapide" title="Permalink to this headline">¶</a></h3>
 <p>Autre écriture de <span class="math notranslate nohighlight">\(x^n\)</span> avec des airs de dichotomie :)</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(x^{2p} = (x^p)^2\)</span> – c’est simple et récursif, non ?</p></li>
+<li><p><span class="math notranslate nohighlight">\(x^{2p} = (x^p)^2\)</span> – c’est simple et récursif !</p></li>
 <li><p><span class="math notranslate nohighlight">\(x^{2p+1} = x \times (x^p)^2\)</span> –  c’est simple et aussi récursif, non ?</p></li>
 </ul>
+<p>On a bien sûr besoin de la terminaison de cette écriture récursive :
+<span class="math notranslate nohighlight">\(x^0 = 1\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">expo_rapide</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
@@ -1452,6 +1479,40 @@ Réponse :<div class="summary-down docutils">
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.0715086071862673e+301
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Rmq.</strong></p>
+<ul class="simple">
+<li><p>L’écriture précédente s’appuie sur la division entière de python (<code class="docutils literal notranslate"><span class="pre">//</span></code>). On peut calculer <code class="docutils literal notranslate"><span class="pre">r</span></code> sans ce soucier de sa parité : <code class="docutils literal notranslate"><span class="pre">n//2</span></code> sera toujours le quotient de la division euclidienne de <code class="docutils literal notranslate"><span class="pre">n</span></code> par <code class="docutils literal notranslate"><span class="pre">2</span></code> avec reste nul (cas pair) ou non (cas impair).</p></li>
+<li><p>L’écriture suivante est bien sûr possible et conduit au <em>même</em> traitement.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">expo_rapide2</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="sd">&#39;&#39;&#39;calcule x**n : version récursive rapide </span>
+<span class="sd">    entrées : x (float), n (int)&#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>              <span class="c1"># si n est pair</span>
+            <span class="n">r</span> <span class="o">=</span>  <span class="n">expo_rapide</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="o">//</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># appel recursif sur exposant moitié</span>
+            <span class="n">res</span> <span class="o">=</span> <span class="n">r</span> <span class="o">*</span> <span class="n">r</span>               <span class="c1"># calcul du résultat</span>
+        <span class="k">else</span><span class="p">:</span>                         <span class="c1"># si n est impair</span>
+            <span class="n">r</span> <span class="o">=</span>  <span class="n">expo_rapide</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># appel recursif sur &quot;exposant paire&quot; moitié </span>
+            <span class="n">res</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="n">r</span> <span class="o">*</span> <span class="n">r</span>           <span class="c1"># calcul du résultat</span>
+            
+        <span class="k">return</span> <span class="n">res</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># une vérification ponctuelle de l&#39;équivalence des 2 versions</span>
+<span class="k">assert</span> <span class="n">expo_rapide</span><span class="p">(</span><span class="mf">2.0</span><span class="p">,</span> <span class="mi">256</span><span class="p">)</span> <span class="o">==</span> <span class="n">expo_rapide2</span><span class="p">(</span><span class="mf">2.0</span><span class="p">,</span> <span class="mi">256</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">expo_rapide</span><span class="p">(</span><span class="mf">2.0</span><span class="p">,</span> <span class="mi">257</span><span class="p">)</span> <span class="o">==</span> <span class="n">expo_rapide2</span><span class="p">(</span><span class="mf">2.0</span><span class="p">,</span> <span class="mi">257</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1486,14 +1547,21 @@ Réponse :<div class="summary-down docutils">
 </div>
 </div>
 </div>
+<p>La version avec affichage de la trace du calcul récursif complet exhibe un nombre beaucoup plus faible d’appels récursifs (et donc de calculs) pour cette version (dite) rapide comparée à la version classique.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expo_rapide_aff</span><span class="p">(</span><span class="mf">2.0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>  
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expo_rapide_aff</span><span class="p">(</span><span class="mf">2.0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>  
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>appel pour n = 5
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>appel pour n = 256
+appel pour n = 128
+appel pour n = 64
+appel pour n = 32
+appel pour n = 16
+appel pour n = 8
+appel pour n = 4
 appel pour n = 2
 appel pour n = 1
 terminaison
@@ -1502,14 +1570,32 @@ cas impair et res = 2.0
 retour de n//2 : 2.0
 cas pair et res = 4.0
 retour de n//2 : 4.0
-cas impair et res = 32.0
+cas pair et res = 16.0
+retour de n//2 : 16.0
+cas pair et res = 256.0
+retour de n//2 : 256.0
+cas pair et res = 65536.0
+retour de n//2 : 65536.0
+cas pair et res = 4294967296.0
+retour de n//2 : 4294967296.0
+cas pair et res = 1.8446744073709552e+19
+retour de n//2 : 1.8446744073709552e+19
+cas pair et res = 3.402823669209385e+38
+retour de n//2 : 3.402823669209385e+38
+cas pair et res = 1.157920892373162e+77
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>32.0
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.157920892373162e+77
 </pre></div>
 </div>
 </div>
 </div>
+<p><strong>Exercice</strong></p>
+<ul class="simple">
+<li><p>Combien d’appels récursifs ou de multiplications sont effectués dans l’exponentiation entière (classique) ?</p></li>
+<li><p>Même question dans le cas de cette exponentiation entière rapide ?</p></li>
+<li><p>Qu’en déduire sur la complexité asymptotique de ces 2 versions ?</p></li>
+</ul>
 <p><strong>(<span class="math notranslate nohighlight">\(\star\)</span>) Exercice</strong></p>
 <p>Exhibons que <code class="docutils literal notranslate"><span class="pre">expo_rapide()</span></code>est effectivement plus rapide que <code class="docutils literal notranslate"><span class="pre">expo</span></code></p>
 <p>On en profite pour utiliser le module <a class="reference external" href="https://docs.python.org/fr/3/library/timeit.html"><code class="docutils literal notranslate"><span class="pre">timeit</span></code></a>.
@@ -1528,33 +1614,39 @@ Ce module complète (et utilise) le module <em>time</em> déjà décrit dans le
 <span class="o">%</span><span class="k">timeit</span> expo_rapide(3,20)
 <span class="nb">print</span><span class="p">()</span>
 
+<span class="c1"># répétition de 100 mesures</span>
 <span class="o">%</span><span class="k">timeit</span> -n 100 expo(3,20)
 <span class="o">%</span><span class="k">timeit</span> -n 100 expo_rapide(3,20)
 <span class="nb">print</span><span class="p">()</span>
 
-
+<span class="c1"># 5 répétitions </span>
 <span class="o">%</span><span class="k">timeit</span> -r 5 expo(3,20)
 <span class="o">%</span><span class="k">timeit</span> -r 5 expo_rapide(3,20)
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.01 µs ± 35.4 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.01 µs ± 60.8 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.2 µs ± 49.1 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.17 µs ± 9.17 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
 
-3.04 µs ± 135 ns per loop (mean ± std. dev. of 7 runs, 100 loops each)
-1.16 µs ± 5.6 ns per loop (mean ± std. dev. of 7 runs, 100 loops each)
+2.99 µs ± 8.28 ns per loop (mean ± std. dev. of 7 runs, 100 loops each)
+1.16 µs ± 5.95 ns per loop (mean ± std. dev. of 7 runs, 100 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.01 µs ± 35 ns per loop (mean ± std. dev. of 5 runs, 100000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.9 µs ± 121 ns per loop (mean ± std. dev. of 5 runs, 100000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.16 µs ± 4.91 ns per loop (mean ± std. dev. of 5 runs, 1000000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.08 µs ± 5.34 ns per loop (mean ± std. dev. of 5 runs, 1000000 loops each)
 </pre></div>
 </div>
 </div>
+</div>
+<p>L’exécution sur ma machine donne un facteur multiplicatif de 3 environ entre ces 2 versions :</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="m">3</span>.02 µs ± <span class="m">30</span>.3 ns per loop <span class="o">(</span>mean ± std. dev. of <span class="m">5</span> runs, <span class="m">100000</span> loops each<span class="o">)</span>
+<span class="m">1</span>.2 µs ± <span class="m">30</span>.1 ns per loop <span class="o">(</span>mean ± std. dev. of <span class="m">5</span> runs, <span class="m">1000000</span> loops each<span class="o">)</span>
+</pre></div>
 </div>
 </div>
 </div>
@@ -1613,15 +1705,26 @@ $<span class="math notranslate nohighlight">\(F(0) = F(1) = 1.\)</span>$</p>
         <span class="n">f</span> <span class="o">=</span> <span class="n">f0</span> <span class="o">+</span> <span class="n">f1</span>
         <span class="n">f0</span> <span class="o">=</span> <span class="n">f1</span>
         <span class="n">f1</span> <span class="o">=</span> <span class="n">f</span>  
-    <span class="k">return</span> <span class="n">f</span>
+    <span class="k">return</span> <span class="n">f1</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>On s’assure de la correction des 2 traitements.</p>
+<p><strong>Rmq.</strong> Pourquoi ne pas avoir écrit <code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">f</span></code> ?</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Réponse<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Pour un traitement correct des cas <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">==</span> <span class="pre">0</span></code> ou <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">==</span> <span class="pre">1</span></code> car la variable d’accumulation <code class="docutils literal notranslate"><span class="pre">f</span></code> n’est définie que pour n &gt;= 2.</p>
+</div>
+</details><p>On s’assure de la correction des 2 traitements.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">fibo</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span> <span class="o">==</span> <span class="n">fibo_iter</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span> 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">15</span><span class="p">):</span>
+    <span class="k">assert</span> <span class="n">fibo</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">==</span> <span class="n">fibo_iter</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> 
 </pre></div>
 </div>
 </div>
@@ -1635,17 +1738,18 @@ $<span class="math notranslate nohighlight">\(F(0) = F(1) = 1.\)</span>$</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>268 µs ± 3.19 µs per loop (mean ± std. dev. of 5 runs, 1000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>241 µs ± 473 ns per loop (mean ± std. dev. of 5 runs, 1000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>945 ns ± 4.46 ns per loop (mean ± std. dev. of 5 runs, 1000000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>953 ns ± 21.2 ns per loop (mean ± std. dev. of 5 runs, 1000000 loops each)
 </pre></div>
 </div>
 </div>
 </div>
-<p>On observe ici un temps de calcul 3 à 5 fois supérieur avec la version récursive.
-Pourtant <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">=</span> <span class="pre">15</span></code> n’est pas une très grande valeur <em>a priori</em>;
-On vous laisse observer que ce comportement se dégrade de plus de plus significativement quand <code class="docutils literal notranslate"><span class="pre">n</span></code> augmente …</p>
+<p>On observe ici un temps de calcul environ 300 fois supérieur avec la version récursive.
+Pourtant <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">=</span> <span class="pre">15</span></code> n’est pas une très grande valeur <em>a priori</em>.
+Vous observerez que ce comportement se dégrade de plus de plus significativement quand <code class="docutils literal notranslate"><span class="pre">n</span></code> augmente …</p>
+<p><strong>Rmq.</strong> On remarque que <code class="docutils literal notranslate"><span class="pre">timeit</span></code> a automatiquement adapté sa mesure au temps d’exécution de chacune des versions : la version itérative est mesurée sur une exécution 1000 fois plus importante que la version récursive.</p>
 <p>Pour d’abord expliquer pourquoi cette solution récursive est inefficace en pratique, étudions maintenant plus en détail comment s’exécute un appel récursif.</p>
 </div>
 </div>
@@ -1656,39 +1760,61 @@ On en restera surtout aux principes, aux <em>abstractions algorithmiques</em>.<b
 Les aspects plus détaillés de la mise en oeuvre (implantation du mécanisme d’appel de fonction) sont étudiés en deuxième année.</p>
 <div class="section" id="environnement">
 <h3>Environnement<a class="headerlink" href="#environnement" title="Permalink to this headline">¶</a></h3>
-<p>Chaque appel récursif nécessite de construire <strong>dynamiquement</strong> un nouvel <strong>environnement</strong> avec les informations suivantes :</p>
+<p>On rappelle que l’appel d’une fonction rompt la séquentialité du calcul.</p>
 <ul class="simple">
+<li><p>l’appel déplace l’<strong>environnement d’exécution</strong> de <em>l’appelant</em> vers un nouvel environnement dédié à <em>l’appelé</em>.</p></li>
+<li><p>le traitement de l’appel s’effectue dans cet environnement jusqu’à l’exécution d’un <code class="docutils literal notranslate"><span class="pre">return</span></code>.</p></li>
+<li><p>ce <code class="docutils literal notranslate"><span class="pre">return</span></code> termine l’appel et permet de revenir à l’environnement de <em>l’appelant</em> pour continuer le traitement (en général l’affectation de la valeur retournée par l’appel).</p></li>
+<li><p>L’environnement de <em>l’appelé</em> n’a plus d’utilité et peut donc être “détruit”.</p></li>
+</ul>
+<p>L’environnement créé par l’appel contient l’information qui répond aux questions suivantes.</p>
+<ul class="simple">
+<li><p>Quelles sont les valeurs des paramètres effectifs de l’appel (nécessaires au traitement) ?</p></li>
 <li><p>Où retourner le résultat de l’appel ? (une ou des adresses de retour)</p></li>
-<li><p>Quelles valeurs ont les paramètres effectifs de l’appel ?</p></li>
 <li><p>Où stocker les variables locales nécessaires au traitement de l’appel ?</p></li>
 </ul>
+<p><strong>Le cas récursif.</strong>
+Chaque appel récursif nécessite de construire <strong>dynamiquement</strong> un nouvel environnement.</p>
 <p>En pratique, on ne connaît pas le nombre de fois où une/des fonctions sont appelées.<br />
-Toutes ces informations sont donc  stockées dans une  <em>pile d’exécution</em> ou <em>pile des appels</em>.<br />
-Une pile est une structure de donnée adaptée au stockage et à une certain type de traitements : empiler et dépiler.</p>
+Chaque environnement est donc conservé dans une structure de donnée adaptée à son stockage et aux traitements à effectuer : en pratique, ajouter un nouvel environnement (appel), supprimer un environnement (suite au <code class="docutils literal notranslate"><span class="pre">return</span></code>)</p>
+<p>Cette structure de données est appelée la <em>pile d’exécution</em> ou la <em>pile des appels</em>.</p>
 </div>
 <div class="section" id="pile-d-execution">
 <h3>Pile d’exécution<a class="headerlink" href="#pile-d-execution" title="Permalink to this headline">¶</a></h3>
-<p>La <strong>pile d’exécution</strong> est la mémoire associée nécessaire au stockage des paramètres d’appel, des adresses de retour, des variables locales</p>
+<p>La <strong>pile d’exécution</strong> est la mémoire associée nécessaire au stockage des paramètres d’appel, des adresses de retour, des variables locales.</p>
+<p>Elle est gérée par le langage de programmation : une pile LIFO (<em>last in, first out</em>) de taille préfixée.
+Mais il y a un risque de débordement mémoire si les appels imbriqués trop nombreux – sans libération de la place occupée.</p>
 <ul class="simple">
-<li><p>gérée par le langage de programmation : une pile LIFO (<em>last in, first out</em>) de taille préfixée</p></li>
-<li><p>mais risque de débordement mémoire si appels imbriqués trop nombreux – sans libération de la place occupée.</p></li>
+<li><p>En python : 1000 appels au maximum ou trop volumineux</p></li>
 </ul>
-<p>En python : 1000 appels au maximum ou trop volumineux</p>
-<p>Imaginons un paramètre tableau de grande taille réduit récursivement de 1 élément par 1 élément …</p>
+<p>Utile en pratique ? Oui et pas qu’en cas de <em>bug</em> !</p>
 <ul class="simple">
-<li><p>Exemple : sommer récursivement les n valeurs d’un tableau.</p></li>
+<li><p>Imaginons par exemple, un paramètre tableau de grande taille réduit récursivement de 1 élément par 1 élément …</p>
+<ul>
+<li><p>exemple : sommer récursivement les n valeurs d’un tableau.</p></li>
 </ul>
-<p>Qui plus est si la récursion consiste en plusieurs appels  comme la suite de Fibonacci : <span class="math notranslate nohighlight">\(f(n+1) = f(n) + f(n-1)\)</span>.</p>
+</li>
+<li><p>Qui plus est si la récursion consiste en plusieurs appels : <em>récursion multiple</em>.</p>
+<ul>
+<li><p>exemple : la suite de Fibonacci  <span class="math notranslate nohighlight">\(f(n+1) = f(n) + f(n-1)\)</span>.</p></li>
+</ul>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>En pratique : <code class="docutils literal notranslate"><span class="pre">stack</span> <span class="pre">overflow</span> <span class="pre">!</span></code> est le message classique quand … ça ne va pas !</p>
+<p><em>stack</em> se traduit “pile” en français.</p>
+</div>
+<p>Pour cette année, on va introduire deux vues plus simples de cette pile d’exécution qui aident à mieux comprendre l’exécution d’un traitement récursif.</p>
 <ul class="simple">
-<li><p>C’est un exemple de <em>récursion multiple</em>.</p></li>
+<li><p>La pile des appels récursifs</p></li>
+<li><p>L’arbre des appels récursifs</p></li>
 </ul>
-<DIV class="alert alert-danger">
-<p>En pratique : <code class="docutils literal notranslate"><span class="pre">stack</span> <span class="pre">overflow</span> <span class="pre">!</span></code> est le message classique quand … ça ne va pas :</p>
-</DIV></div>
+<p>Ces “vues plus simples”, aussi appelées des <em>abstractions algorithmiques</em>, représentent la logique de fonctionnement de la pile d’exécution. Elles permettent de ne pas avoir à détailler pas toutes les caractéristiques de l’environnement de chaque appel.</p>
+</div>
 <div class="section" id="pile-des-appels">
 <h3>Pile des appels<a class="headerlink" href="#pile-des-appels" title="Permalink to this headline">¶</a></h3>
-<p>La <strong>pile des appels</strong> est une <em>abstraction algorithmique</em> qui représente la logique de la pile d’exécution <strong>en se limitant à l’identifiant de chaque appel</strong>.<br />
-On ne détaille pas l’environnement de chaque appel.</p>
+<p>La <strong>pile des appels</strong> est une <em>abstraction algorithmique</em> qui représente la logique de la pile d’exécution <strong>en se limitant à l’identifiant de chaque appel</strong>.</p>
 </div>
 <div class="section" id="arbre-des-appels-recursifs">
 <h3>Arbre des appels récursifs<a class="headerlink" href="#arbre-des-appels-recursifs" title="Permalink to this headline">¶</a></h3>
@@ -1699,16 +1825,13 @@ Le parcours des noeuds d’un arbre se représente aussi avec une pile … d’o
 <h3>Illustration sur la factorielle récursive<a class="headerlink" href="#illustration-sur-la-factorielle-recursive" title="Permalink to this headline">¶</a></h3>
 <p>Calcul de <code class="docutils literal notranslate"><span class="pre">fact(4)</span></code></p>
 <p><img alt="factorielle(4)" src="../_images/fact4.jpg" /></p>
-<p><strong>Rmq.</strong>
-On a régulièrement besoin de dessiner des graphes. Il existe de nombreux outils à cet effet.
-Dans <a class="reference internal" href="#ann-graphviz"><span class="std std-ref">cette annexe</span></a>, nous  montrons comment utiliser depuis des petits codes python, le langage <code class="docutils literal notranslate"><span class="pre">dot</span></code>et le module <code class="docutils literal notranslate"><span class="pre">graphviz</span></code> – tous les deux très classiques en la matière.
-<strong>Ces aspects sont hors du programme de ce chapitre.</strong></p>
 <div class="section" id="arbre-des-appels">
 <h4>arbre des appels<a class="headerlink" href="#arbre-des-appels" title="Permalink to this headline">¶</a></h4>
 <p>La représentation suivante exhibe l’<em>arbre des appels</em> récursif de <code class="docutils literal notranslate"><span class="pre">f</span></code></p>
 <p><img alt="" src="../_images/fact4_dot.jpg" /></p>
 <p>Ici, les calculs intermédiaires sont simples (1 multiplication) et on peut compléter cet arbre des appels en exhibant les opérandes de ces calculs.</p>
 <p><img alt="" src="../_images/fact4_complet.jpg" /></p>
+<p><strong>Rmq.</strong> (<span class="math notranslate nohighlight">\(\star\)</span>) Ces tracés sont obtenus à partir de petits codes python décrits dans cette <span class="xref myst">annexe</span>.</p>
 </div>
 <div class="section" id="id1">
 <h4>pile des appels<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
@@ -1726,69 +1849,100 @@ La pile est représentée à chacun de ces changements d’<em>état</em> :</p>
 <li><p>chaque retour de valeur à l’appelant a pour effet de <em>dépiler</em> l’environnement de l’appelé<br />
 Ainsi la pile redevient vide après le traitement complet de l’appel principal.</p></li>
 </ul>
-<p>Dans les affichages successifs, chaque colonne (verticale) représente l’état de la pile à un instant donné de l’exécution récursive – comme une suite de photographies de cette pile.  La bas de la pile est le bas de la colonne.</p>
+<p>Dans les affichages successifs :</p>
+<ul class="simple">
+<li><p>chaque colonne verticale représente l’état de la pile à un instant donné de l’exécution récursive</p></li>
+<li><p>le bas de la pile est le bas de la colonne</p></li>
+<li><p>à chaque <em>changement d’état</em> de la pile, une nouvelle colonne est ajoutée à droite des précédentes</p>
+<ul>
+<li><p>un nouvel appel est empilé ou un appel terminé est dépilé</p></li>
+<li><p>la colonne la plus à droite représente l’état le plus récent de la pile</p></li>
+</ul>
+</li>
+</ul>
+<p>Ainsi les tracés successifs peuvent être vus comme une suite de photographies de la pile prises au fur et à mesure du traitement récursif. Le dernier tracé contient “tout le film” de l’évolution de la pile pour la totalité du traitement récursif.</p>
 <p><strong>Construction de la pile des appels du calcul de <span class="math notranslate nohighlight">\(4!\)</span> :</strong></p>
 <ul class="simple">
-<li><p>avant l’appel principal :  la pile est vide<br />
-.</p></li>
+<li><p>avant l’appel principal :  la pile est vide</p></li>
 </ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>      . 
+</pre></div>
+</div>
 <ul class="simple">
-<li><p>l’appel principal : on empile f(4)<br />
-. f(4)</p></li>
+<li><p>l’appel principal : on empile f(4)</p></li>
 </ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>      . f<span class="o">(</span><span class="m">4</span><span class="o">)</span>
+</pre></div>
+</div>
 <ul class="simple">
-<li><p>dans f(4), l’appel de f(3) : on empile f(3)<br />
-f(3)
-. f(4) f(4)</p></li>
+<li><p>dans f(4), l’appel de f(3) : on empile f(3)</p></li>
 </ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>             f<span class="o">(</span><span class="m">3</span><span class="o">)</span> 
+      . f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span>   
+</pre></div>
+</div>
 <ul class="simple">
-<li><p>dans f(3), l’appel de f(2) : on empile f(2)<br />
-f(2)
-f(3) f(3)
-. f(4) f(4) f(4)</p></li>
+<li><p>dans f(3), l’appel de f(2) : on empile f(2)</p></li>
 </ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>                  f<span class="o">(</span><span class="m">2</span><span class="o">)</span> 
+             f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> 
+      . f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span>   
+</pre></div>
+</div>
 <ul class="simple">
-<li><p>dans f(2), l’appel de f(1) : on empile f(1)
-f(1)
-f(2) f(2)
-f(3) f(3) f(3)
-. f(4) f(4) f(4) f(4)</p></li>
+<li><p>dans f(2), l’appel de f(1) : on empile f(1)</p></li>
 </ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>                       f<span class="o">(</span><span class="m">1</span><span class="o">)</span>
+                  f<span class="o">(</span><span class="m">2</span><span class="o">)</span> f<span class="o">(</span><span class="m">2</span><span class="o">)</span> 
+             f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> 
+      . f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span>   
+</pre></div>
+</div>
 <ul class="simple">
-<li><p>f(1) est terminal (cet appel renvoie une valeur (1)) : on dépile f(1)
-f(1)
-f(2) f(2) f(2)
-f(3) f(3) f(3) f(3)
-. f(4) f(4) f(4) f(4) f(4)</p></li>
+<li><p>f(1) est terminal (cet appel renvoie une valeur (1)) : on dépile f(1)</p></li>
 </ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>                       f<span class="o">(</span><span class="m">1</span><span class="o">)</span>
+                  f<span class="o">(</span><span class="m">2</span><span class="o">)</span> f<span class="o">(</span><span class="m">2</span><span class="o">)</span> f<span class="o">(</span><span class="m">2</span><span class="o">)</span>
+             f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span>
+      . f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span>  
+</pre></div>
+</div>
 <ul class="simple">
-<li><p>f(2) est calculé et cet appel renvoie la valeur 1x2 : on dépile f(2)
-f(1)
-f(2) f(2) f(2)
-f(3) f(3) f(3) f(3) f(3)
-. f(4) f(4) f(4) f(4) f(4) f(4)</p></li>
+<li><p>f(2) est calculé et cet appel renvoie la valeur 1 x 2 : on dépile f(2)</p></li>
 </ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>                       f<span class="o">(</span><span class="m">1</span><span class="o">)</span>
+                  f<span class="o">(</span><span class="m">2</span><span class="o">)</span> f<span class="o">(</span><span class="m">2</span><span class="o">)</span> f<span class="o">(</span><span class="m">2</span><span class="o">)</span>
+             f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span>
+      . f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span>  
+</pre></div>
+</div>
 <ul class="simple">
-<li><p>f(3) est calculé et cet appel renvoit la valeur 1x2x3 : on dépile f(3)
-f(1)
-f(2) f(2) f(2)
-f(3) f(3) f(3) f(3) f(3)
-. f(4) f(4) f(4) f(4) f(4) f(4) f(4)</p></li>
+<li><p>f(3) est calculé et cet appel renvoit la valeur 1x2x3 : on dépile f(3)</p></li>
 </ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>                       f<span class="o">(</span><span class="m">1</span><span class="o">)</span>
+                  f<span class="o">(</span><span class="m">2</span><span class="o">)</span> f<span class="o">(</span><span class="m">2</span><span class="o">)</span> f<span class="o">(</span><span class="m">2</span><span class="o">)</span>
+             f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span>
+      . f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span>  
+</pre></div>
+</div>
 <ul class="simple">
-<li><p>f(4) est calculé et cet appel renvoie la valeur 1x2x3x4 : on dépile f(4)
-f(1)
-f(2) f(2) f(2)
-f(3) f(3) f(3) f(3) f(3)
-. f(4) f(4) f(4) f(4) f(4) f(4) f(4)</p></li>
+<li><p>f(4) est calculé et cet appel renvoie la valeur 1x2x3x4 : on dépile f(4)</p></li>
 </ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>                       f<span class="o">(</span><span class="m">1</span><span class="o">)</span>
+                  f<span class="o">(</span><span class="m">2</span><span class="o">)</span> f<span class="o">(</span><span class="m">2</span><span class="o">)</span> f<span class="o">(</span><span class="m">2</span><span class="o">)</span>
+             f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span>
+      . f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span>  
+</pre></div>
+</div>
 <ul class="simple">
-<li><p>la pile est vide et on a bien obtenu le résultat attendu (24)
-f(1)
-f(2) f(2) f(2)
-f(3) f(3) f(3) f(3) f(3)
-. f(4) f(4) f(4) f(4) f(4) f(4) f(4) .</p></li>
+<li><p>la pile est vide et on a bien obtenu le résultat attendu (24)</p></li>
 </ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>                       f<span class="o">(</span><span class="m">1</span><span class="o">)</span>
+                  f<span class="o">(</span><span class="m">2</span><span class="o">)</span> f<span class="o">(</span><span class="m">2</span><span class="o">)</span> f<span class="o">(</span><span class="m">2</span><span class="o">)</span>
+             f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span>
+      . f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> .   
+</pre></div>
+</div>
 </div>
 <div class="section" id="environnements-successifs-pour-factorielle-3">
 <h4>environnements successifs pour factorielle(3)<a class="headerlink" href="#environnements-successifs-pour-factorielle-3" title="Permalink to this headline">¶</a></h4>
@@ -1796,15 +1950,15 @@ f(3) f(3) f(3) f(3) f(3)
 <p>appel = f(3)</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Calcul de factorielle n -- version récursive</span>
-<span class="sd">    entrée : n </span>
+<span class="sd">    entrée : n &gt; 0</span>
 <span class="sd">    sortie n!</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>     
         <span class="k">return</span> <span class="mi">1</span>   
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">r</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># appel -&gt; changement d&#39;environnement</span>
         <span class="n">p</span> <span class="o">=</span> <span class="n">n</span> <span class="o">*</span> <span class="n">r</span>
-        <span class="k">return</span> <span class="n">p</span> <span class="c1"># récursion</span>
+        <span class="k">return</span> <span class="n">p</span>   <span class="c1"># return -&gt; retour vers l&#39;environnement de l&#39;appelant </span>
 
 </pre></div>
 </div>
@@ -1893,10 +2047,10 @@ f(3) f(3) f(3) f(3) f(3)
 Les appels récursifs sont empilés (avec leur environnement) dans une <em>pile d’appels</em><br />
 Les appels avec terminaison permettent de dépiler l’appelant<br />
 L’appel principal est exécuté une fois la pile vidée</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>               f(1) f(0)
-          f(2) f(2) f(2) f(2)      f(1)                f(1) f(0)
-     f(3) f(3) f(3) f(3) f(3) f(3) f(3) f(3)      f(2) f(2) f(2) f(2)
-f(4) f(4) f(4) f(4) f(4) f(4) f(4) f(4) f(4) f(4) f(4) f(4) f(4) f(4) f(4)
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>                   f<span class="o">(</span><span class="m">1</span><span class="o">)</span> f<span class="o">(</span><span class="m">0</span><span class="o">)</span>
+              f<span class="o">(</span><span class="m">2</span><span class="o">)</span> f<span class="o">(</span><span class="m">2</span><span class="o">)</span> f<span class="o">(</span><span class="m">2</span><span class="o">)</span> f<span class="o">(</span><span class="m">2</span><span class="o">)</span>      f<span class="o">(</span><span class="m">1</span><span class="o">)</span>                f<span class="o">(</span><span class="m">1</span><span class="o">)</span> f<span class="o">(</span><span class="m">0</span><span class="o">)</span>
+         f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span>      f<span class="o">(</span><span class="m">2</span><span class="o">)</span> f<span class="o">(</span><span class="m">2</span><span class="o">)</span> f<span class="o">(</span><span class="m">2</span><span class="o">)</span> f<span class="o">(</span><span class="m">2</span><span class="o">)</span>
+    f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span>
 </pre></div>
 </div>
 </div>
@@ -1907,7 +2061,7 @@ f(4) f(4) f(4) f(4) f(4) f(4) f(4) f(4) f(4) f(4) f(4) f(4) f(4) f(4) f(4)
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>fibo(4)</p></th>
-<th class="text-align:center head"><p>#appels</p></th>
+<th class="text-align:center head"><p>nbre d’appels</p></th>
 </tr>
 </thead>
 <tbody>
@@ -1923,12 +2077,13 @@ f(4) f(4) f(4) f(4) f(4) f(4) f(4) f(4) f(4) f(4) f(4) f(4) f(4) f(4) f(4)
 <tr class="row-odd"><td><p>fibo(3)</p></td>
 <td class="text-align:center"><p>1</p></td>
 </tr>
-<tr class="row-even"><td><p><em>total</em></p></td>
-<td class="text-align:center"><p><em>8</em></p></td>
+<tr class="row-even"><td><p><strong>total</strong></p></td>
+<td class="text-align:center"><p><strong>8</strong></p></td>
 </tr>
 </tbody>
 </table>
 <p>Ces évaluations intermédiaires répétées engendrent des <em>sur-coûts</em> en mémoire et en calcul qui dégradent l’efficacité de l’évaluation récursive de <code class="docutils literal notranslate"><span class="pre">fibo(</span> <span class="pre">)</span></code>.</p>
+<p><strong>Rmq.</strong>  N’y-a-t-il pas des calculs inutiles ? (<span class="math notranslate nohighlight">\(\star\)</span>) Comment les éviter ?</p>
 <div class="section" id="environnements-et-pile-d-execution">
 <h4>environnements et pile d’exécution<a class="headerlink" href="#environnements-et-pile-d-execution" title="Permalink to this headline">¶</a></h4>
 <p>Profitons du python tutor pour visualiser l’enchaînement des appels et l’évolution de l’environnement :</p>
@@ -1947,8 +2102,8 @@ Indication<div class="summary-down docutils">
 <div class="summary-up docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<p class="card-text">Avancer dans l’itération en stockant toutes les valeurs déjà calculées.</p>
-<p class="card-text">La solution itérative est plus efficace car elle évite de re-calculer les termes déjà calculés.</p>
+<p class="card-text">Avancer dans l’itération en stockant toutes les valeurs déjà calculées (par exemple dans un tableau).<br />
+La solution itérative est plus efficace car elle évite de re-calculer les termes déjà calculés.</p>
 </div>
 </details></div>
 <div class="section" id="id3">
@@ -1966,8 +2121,8 @@ Indication<div class="summary-down docutils">
 <li><p>un disque ne peut être posé que sur un disque de diamètre supérieur
 On doit utiliser le piquet du milieu.</p></li>
 </ul>
-<p>début -&gt; fin
-<img alt="hanoi_debut" src="../_images/hanoi1.jpg" /> <img alt="hanoi_fin" src="../_images/hanoi2.jpg" /></p>
+<p>Situation initiale : <img alt="hanoi_debut" src="../_images/hanoi1.jpg" /></p>
+<p>Situation finale : <img alt="hanoi_fin" src="../_images/hanoi2.jpg" /></p>
 </div>
 <div class="section" id="id4">
 <h3>Solution récursive<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
@@ -1976,7 +2131,7 @@ On doit utiliser le piquet du milieu.</p></li>
 <ul class="simple">
 <li><p>On  note les piquets A, B, C de la gauche vers la droite.  Départ = A, objectif = C</p></li>
 <li><p>On note <span class="math notranslate nohighlight">\(n\)</span> le nombre de disques à déplacer ; ici <span class="math notranslate nohighlight">\(n=4\)</span></p></li>
-<li><p>On veut donc <strong>résoudre le problème des tours de Hoanoi de taille 4 en allant de A vers C grâce à l’utilisation de B</strong></p>
+<li><p>On veut donc <strong>résoudre le problème des tours de Hanoi de taille 4 en allant de A vers C grâce à l’utilisation de B</strong></p>
 <ul>
 <li><p>notons la résolution de ce problème <code class="docutils literal notranslate"><span class="pre">Hanoi(4,</span> <span class="pre">A,</span> <span class="pre">C,</span> <span class="pre">B)</span></code></p></li>
 <li><p>plus généralement : <strong>Hanoi(n, départ, arrivée, intermédiaire)</strong></p></li>
@@ -2054,9 +2209,22 @@ On formalisera plus tard cette analyse de la <em>terminaison</em> de la solution
 </div>
 </div>
 <p>L’appel suivant déclenche une erreur.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39; resolution : appel &#39;&#39;&#39;</span>
-<span class="n">hanoi0</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hanoi0</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="nn">/var/folders/32/9hkmzrf11t38ckpktjnyfsfc0000gn/T/ipykernel_86973/2035115461.py</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">hanoi0</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;A&#39; is not defined
+</pre></div>
+</div>
+</div>
 </div>
 <p>En effet, les piquets <code class="docutils literal notranslate"><span class="pre">A,</span> <span class="pre">B,</span> <span class="pre">C</span></code> n’existent pas en tant qu’objet (variable) python.
 On remarque que l’en-tête de la fonction était silencieuse à ce sujet …</p>
@@ -2211,305 +2379,72 @@ Ca vous fait penser à quelque chose :) ?
 </div>
 </div>
 </div>
+<div class="section" id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ce-qui-a-ete-vu">
+<h3>Ce qui a été vu<a class="headerlink" href="#ce-qui-a-ete-vu" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Les solutions récursives sont souvent plus faciles à écrire, à comprendre, à prouver.</p></li>
+<li><p>Commencer par écrire la terminaison de la solution récursive.</p></li>
+<li><p>La stratégie diviser pour régner conduit naturellement à une solution récursive – mais pas que !</p></li>
+<li><p>Chaque appel récursif augmente l’espace mémoire nécessaire à la résolution.</p>
+<ul>
+<li><p>Expliciter la pile de ces appels et son évolution lors de l’exécution</p></li>
+</ul>
+</li>
+<li><p>Des exemples importants de solutions récursives de problèmes <strong>dont on connaissait déjà des solutions itératives</strong></p>
+<ul>
+<li><p>calcul de factorielles, exponentiation entière, exponentiation rapide</p></li>
+<li><p>recherche par dichotomie</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="ce-qui-reste-a-voir">
+<h3>Ce qui reste à voir<a class="headerlink" href="#ce-qui-reste-a-voir" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Version récursive d’autres algorithmes importants</p>
+<ul class="simple">
+<li><p>algorithmes de tri : tri fusion, tri rapide : voir chapitre “Trier”</p></li>
+</ul>
+</li>
+<li><p>Etablir la complexité d’algos récursifs</p>
+<ul class="simple">
+<li><p>La fonction de complexité est une expression récurrente</p>
+<ul>
+<li><p>la complexité de la résolution récursive d’un problème de taille <span class="math notranslate nohighlight">\(n\)</span> est fonction de la complexité de la résolution (récursive) du problème de taille réduite.</p></li>
+</ul>
+</li>
+<li><p>exemples :</p>
+<ul>
+<li><p>factorielle, somme <span class="math notranslate nohighlight">\(n\)</span> valeurs, exponentiation : <span class="math notranslate nohighlight">\(C(n) = C(n-1) + 1\)</span> et <span class="math notranslate nohighlight">\(C(1) = 1\)</span></p></li>
+<li><p>exponentiation rapide, dichotomie (pour <span class="math notranslate nohighlight">\(n=2^p\)</span>) : <span class="math notranslate nohighlight">\(C(n) = C(n/2) + 1\)</span> et <span class="math notranslate nohighlight">\(C(1) = 1\)</span></p></li>
+<li><p>diviser pour régner en <span class="math notranslate nohighlight">\(p\)</span> problèmes de taille <span class="math notranslate nohighlight">\(n/p\)</span> : <span class="math notranslate nohighlight">\(C(n) = p \times C(n/p) + f(p)\)</span> et <span class="math notranslate nohighlight">\(C(1) = 1\)</span></p></li>
+<li><p>…</p></li>
+</ul>
+</li>
+<li><p>Traité en dernière partie du chapitre “Complexités”</p></li>
+</ul>
+</li>
+<li><p><span class="math notranslate nohighlight">\(\star\)</span> Prouver la terminaison et la correction de ces algos récursifs</p>
+<ul class="simple">
+<li><p>Traité dans le chapitre “Prouver”</p></li>
+</ul>
+</li>
+<li><p><span class="math notranslate nohighlight">\(\star\)</span> Dé-récursifier : récursif -&gt; itératif (quand on peut)</p>
+<ul class="simple">
+<li><p>voir par exemple les slides du cours de 2016 : <a class="reference external" href="http://perso.univ-perp.fr/langlois/images/pdf/ens/L1/s7-sl4.pdf">http://perso.univ-perp.fr/langlois/images/pdf/ens/L1/s7-sl4.pdf</a></p></li>
+</ul>
+</li>
+</ol>
+</div>
 <div class="section" id="complements">
-<h2>Compléments<a class="headerlink" href="#complements" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id5">
-<h3>Compléments<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<h3>Compléments<a class="headerlink" href="#complements" title="Permalink to this headline">¶</a></h3>
 <p>Des ressources utiles :</p>
 <ul class="simple">
 <li><p>sur <a class="reference external" href="http://interstices.info">interstices.info</a> : <a class="reference external" href="https://interstices.info/jcms/p_82121/les-tours-de-hanoi-un-probleme-classique-de-recursion">hanoi_interstices</a></p></li>
 <li><p>un <a class="reference external" href="https://programmation-recursive-2.appspot.com/coursehttps://programmation-recursive-2.appspot.com/course">mooc</a> sur la récursivité (UPMC)</p></li>
 </ul>
-</div>
-<div class="section" id="a-venir">
-<h3>A venir<a class="headerlink" href="#a-venir" title="Permalink to this headline">¶</a></h3>
-<ol class="simple">
-<li><p>Autres algorithmes récursifs importants</p>
-<ul class="simple">
-<li><p>recherche séquentielle et dichotomique : voir chapitre “Rechercher”</p></li>
-<li><p>trier : tri fusion, tri rapide : voir chapitre “Trier”</p></li>
-</ul>
-</li>
-<li><p>Etablir la complexité d’algos récursifs</p>
-<ul class="simple">
-<li><p>La fonction de complexité est une suite récursive : la complexité de la résolution récursive d’un problème de taille n est fonction de la complexité de la résolution (récursive) du problème de taille réduite.</p></li>
-<li><p>exemple : <span class="math notranslate nohighlight">\(C(n) = 2 \times C(n/2) + 1\)</span> et <span class="math notranslate nohighlight">\(C(1) = 1\)</span></p></li>
-<li><p>autre exemple : <span class="math notranslate nohighlight">\(C(n) = p \times C(n/p) + f(p)\)</span> et <span class="math notranslate nohighlight">\(C(1) = 1\)</span></p></li>
-<li><p>…</p></li>
-<li><p>est traité en dernière partie du chapitre “Complexités”</p></li>
-</ul>
-</li>
-<li><p>Prouver la terminaison et la correction de ces algos récursifs</p>
-<ul class="simple">
-<li><p>est traité dans le chapitre “Prouver”</p></li>
-</ul>
-</li>
-<li><p>Dé-récursifier : récursif -&gt; itératif (quand on peut)</p>
-<ul class="simple">
-<li><p>voir les slides du cours de 2016 : <a class="reference external" href="http://perso.univ-perp.fr/langlois/images/pdf/ens/L1/s7-sl4.pdf">http://perso.univ-perp.fr/langlois/images/pdf/ens/L1/s7-sl4.pdf</a></p></li>
-</ul>
-</li>
-</ol>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">turtle</span> <span class="k">as</span> <span class="nn">t</span>
-<span class="c1">#help(t)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;Turtle : mouvements elementaires&quot;&quot;&quot;</span>
-
-<span class="c1"># init : taille ecran en pixels, clear ecran, reset des variablesm</span>
-<span class="n">t</span><span class="o">.</span><span class="n">screensize</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span><span class="mi">500</span><span class="p">)</span>
-<span class="n">t</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
-<span class="n">t</span><span class="o">.</span><span class="n">hideturtle</span><span class="p">()</span> <span class="c1"># pour aller plus vite</span>
-<span class="n">t</span><span class="o">.</span><span class="n">degrees</span><span class="p">()</span> <span class="c1"># angles en deg</span>
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39;Utilise le module turtle </span>
-<span class="sd">Ouvre une fenêtre </span>
-<span class="sd">et trace 3 segments de VK</span>
-<span class="sd">&#39;&#39;&#39;</span>
-
-<span class="k">def</span> <span class="nf">segment</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;segment de von Koch</span>
-<span class="sd">    recursion sur n pour decouper le segment de longueur d et</span>
-<span class="sd">    tracer d (longueur du segment) pixels si n==0&quot;&quot;&quot;</span>
-    <span class="n">t</span><span class="o">.</span><span class="n">pencolor</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>        
-
-    <span class="k">if</span> <span class="n">n</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
-        <span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">dsur3</span> <span class="o">=</span> <span class="n">d</span><span class="o">//</span><span class="mi">3</span>
-        <span class="n">segment</span><span class="p">(</span><span class="n">dsur3</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-        <span class="n">t</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
-        <span class="n">segment</span><span class="p">(</span><span class="n">dsur3</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-        <span class="n">t</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span>
-        <span class="n">segment</span><span class="p">(</span><span class="n">dsur3</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-        <span class="n">t</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
-        <span class="n">segment</span><span class="p">(</span><span class="n">dsur3</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="c1"># init        </span>
-<span class="n">t</span><span class="o">.</span><span class="n">screensize</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span><span class="mi">500</span><span class="p">)</span>
-<span class="n">t</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
-<span class="n">t</span><span class="o">.</span><span class="n">hideturtle</span><span class="p">()</span> <span class="c1"># pour aller plus vite</span>
-<span class="n">t</span><span class="o">.</span><span class="n">degrees</span><span class="p">()</span> <span class="c1"># angles en deg</span>
-
-<span class="c1"># taille</span>
-<span class="n">d</span> <span class="o">=</span> <span class="mi">300</span>
-<span class="c1">#nbiter = input(&quot;nombre d&#39;iterations = &quot;)</span>
-<span class="n">nbiter</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">h</span> <span class="o">=</span> <span class="mi">150</span> <span class="c1"># espace vertical entre 2 traces</span>
-
-<span class="c1"># point de depart</span>
-<span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mi">200</span><span class="p">,</span> <span class="mi">400</span><span class="p">)</span>
-
-<span class="c1"># trace et changement point de depart</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nbiter</span><span class="p">):</span>
-    <span class="c1"># deplacement au point de depart</span>
-    <span class="n">t</span><span class="o">.</span><span class="n">up</span><span class="p">()</span>
-    <span class="n">t</span><span class="o">.</span><span class="n">goto</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-    <span class="n">t</span><span class="o">.</span><span class="n">down</span><span class="p">()</span>
-
-    <span class="c1"># trace </span>
-    <span class="n">segment</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
-    
-    <span class="c1"># maj point de depart</span>
-    <span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">h</span><span class="p">)</span>
-
-<span class="c1"># pour attendre avant d&#39;effacer la fenetre turtle</span>
-<span class="n">v</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;OK ?&quot;</span><span class="p">)</span>
-<span class="n">t</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
-
-<span class="c1"># pour que le trace reste a l ecran</span>
-<span class="n">t</span><span class="o">.</span> <span class="n">mainloop</span><span class="p">()</span>
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39;trace (nbiter) flocons de VK&#39;&#39;&#39;</span>
-<span class="k">def</span> <span class="nf">flocon</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39; trace flocon de VK en utilisant segment&#39;&#39;&#39;</span>
-    <span class="n">segment</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">color</span><span class="p">)</span>
-    <span class="n">t</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span>
-    <span class="n">segment</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">color</span><span class="p">)</span>
-    <span class="n">t</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span>
-    <span class="n">segment</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">color</span><span class="p">)</span>
-    <span class="n">t</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span>
-
-<span class="c1">#nbiter = input(&quot;nombre d&#39;iterations = &quot;)</span>
-<span class="n">nbiter</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">h</span> <span class="o">=</span> <span class="mi">150</span> <span class="c1"># espace vertical entre 2 traces</span>
-<span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span> <span class="c1"># point de depart</span>
-<span class="n">d</span> <span class="o">=</span> <span class="mi">84</span>  <span class="c1"># taille</span>
-
-<span class="c1"># trace et changement point de depart</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nbiter</span><span class="p">):</span>
-    <span class="c1"># deplacement au point de depart</span>
-    <span class="n">t</span><span class="o">.</span><span class="n">up</span><span class="p">()</span>
-    <span class="n">t</span><span class="o">.</span><span class="n">goto</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-    <span class="n">t</span><span class="o">.</span><span class="n">down</span><span class="p">()</span>
-
-    <span class="c1"># trace </span>
-    <span class="n">flocon</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
-    
-    <span class="c1"># maj point de depart</span>
-    <span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">h</span><span class="p">)</span>
-
-<span class="c1"># pour attendre avant d&#39;effacer la fenetre turtle</span>
-<span class="n">v</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;OK ?&quot;</span><span class="p">)</span>
-<span class="n">t</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="pour-tracer-des-graphes">
-<span id="ann-graphviz"></span><h3>Pour tracer des graphes<a class="headerlink" href="#pour-tracer-des-graphes" title="Permalink to this headline">¶</a></h3>
-<p>Un arbre est un graphe.
-Commençons avec une première construction simple de l’arbre des appels de <code class="docutils literal notranslate"><span class="pre">fact(4)</span></code>.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">graphviz</span> <span class="k">as</span> <span class="nn">gvz</span>
-<span class="kn">import</span> <span class="nn">functools</span>
-
-<span class="c1">#help(gvz)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="nn">/var/folders/32/9hkmzrf11t38ckpktjnyfsfc0000gn/T/ipykernel_80321/3586426686.py</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">graphviz</span> <span class="k">as</span> <span class="nn">gvz</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">functools</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> 
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1">#help(gvz)</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;graphviz&#39;
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39; arbre des appels du calcul de fact(4) : construction simple&#39;&#39;&#39;</span>
-<span class="n">fact4</span> <span class="o">=</span> <span class="n">gvz</span><span class="o">.</span><span class="n">Digraph</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="s1">&#39;jpg&#39;</span><span class="p">)</span>
-<span class="n">fact4</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="s1">&#39;f4&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;fact(4)&#39;</span><span class="p">)</span>
-<span class="n">fact4</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="s1">&#39;f3&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;fact(3)&#39;</span><span class="p">)</span>
-<span class="n">fact4</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="s1">&#39;f2&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;fact(2)&#39;</span><span class="p">)</span>
-<span class="n">fact4</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="s1">&#39;f1&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;fact(1)&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
-<span class="n">fact4</span><span class="o">.</span><span class="n">edge</span><span class="p">(</span><span class="s1">&#39;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;f3&#39;</span><span class="p">)</span>
-<span class="n">fact4</span><span class="o">.</span><span class="n">edge</span><span class="p">(</span><span class="s1">&#39;f3&#39;</span><span class="p">,</span> <span class="s1">&#39;f2&#39;</span><span class="p">)</span>
-<span class="n">fact4</span><span class="o">.</span><span class="n">edge</span><span class="p">(</span><span class="s1">&#39;f2&#39;</span><span class="p">,</span> <span class="s1">&#39;f1&#39;</span><span class="p">)</span>
-
-<span class="n">file_out</span> <span class="o">=</span> <span class="n">fact4</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="s1">&#39;fig/fact4_dot&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">/var/folders/32/9hkmzrf11t38ckpktjnyfsfc0000gn/T/ipykernel_80321/3148325599.py</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="sd">&#39;&#39;&#39; arbre des appels du calcul de fact(4) : construction simple&#39;&#39;&#39;</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">fact4</span> <span class="o">=</span> <span class="n">gvz</span><span class="o">.</span><span class="n">Digraph</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="s1">&#39;jpg&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">fact4</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="s1">&#39;f4&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;fact(4)&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">fact4</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="s1">&#39;f3&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;fact(3)&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">fact4</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="s1">&#39;f2&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;fact(2)&#39;</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;gvz&#39; is not defined
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39;Affichage arbre construit avec le code précédent&#39;&#39;&#39;</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">Image</span>
-<span class="nb">print</span><span class="p">(</span><span class="vm">__doc__</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="n">Image</span><span class="p">(</span><span class="s1">&#39;fig/fact4_dot.jpg&#39;</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Affichage arbre construit avec le code précédent
-</pre></div>
-</div>
-<img alt="../_images/6-recursivite_129_1.jpg" src="../_images/6-recursivite_129_1.jpg" />
-</div>
-</div>
-<p>Arbre des appels du calcul de fact(4) : construction plus complète</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39; arbre des appels du calcul de fact(4) : construction plus complète&#39;&#39;&#39;</span>
-
-<span class="n">digraph</span> <span class="o">=</span> <span class="n">functools</span><span class="o">.</span><span class="n">partial</span><span class="p">(</span><span class="n">gvz</span><span class="o">.</span><span class="n">Digraph</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;jpg&#39;</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">add_nodes</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">nodes</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">nodes</span><span class="p">:</span>
-        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">):</span>
-            <span class="n">graph</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="n">n</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="o">**</span><span class="n">n</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">graph</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">graph</span>
-
-<span class="k">def</span> <span class="nf">add_edges</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">edges</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">edges</span><span class="p">:</span>
-        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">e</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nb">tuple</span><span class="p">):</span>
-            <span class="n">graph</span><span class="o">.</span><span class="n">edge</span><span class="p">(</span><span class="o">*</span><span class="n">e</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="o">**</span><span class="n">e</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">graph</span><span class="o">.</span><span class="n">edge</span><span class="p">(</span><span class="o">*</span><span class="n">e</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">graph</span>
-
-<span class="sd">&#39;&#39;&#39; arbre complet de l&#39;évaluation fact(4)&#39;&#39;&#39;</span>
-<span class="n">fact4_complet</span> <span class="o">=</span> <span class="n">add_edges</span><span class="p">(</span>
-    <span class="n">add_nodes</span><span class="p">(</span><span class="n">digraph</span><span class="p">(),</span> <span class="p">[</span>
-        <span class="p">(</span><span class="s1">&#39;4&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;3&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">),</span>
-        <span class="p">(</span><span class="s1">&#39;f4&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s1">&#39;fact(4)&#39;</span><span class="p">}),</span>
-        <span class="p">(</span><span class="s1">&#39;f3&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s1">&#39;fact(3)&#39;</span><span class="p">}),</span>
-        <span class="p">(</span><span class="s1">&#39;f2&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s1">&#39;fact(2)&#39;</span><span class="p">}),</span>
-        <span class="p">(</span><span class="s1">&#39;f1&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s1">&#39;fact(1)&#39;</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span><span class="p">:</span><span class="s1">&#39;red&#39;</span><span class="p">}),</span>
-    <span class="p">]),</span>
-    <span class="p">[</span>
-        <span class="p">(</span><span class="s1">&#39;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;4&#39;</span><span class="p">),</span>
-        <span class="p">(</span><span class="s1">&#39;f3&#39;</span><span class="p">,</span> <span class="s1">&#39;3&#39;</span><span class="p">),</span>
-        <span class="p">(</span><span class="s1">&#39;f2&#39;</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">),</span>
-        <span class="p">(</span><span class="s1">&#39;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;f3&#39;</span><span class="p">),</span>
-        <span class="p">(</span><span class="s1">&#39;f3&#39;</span><span class="p">,</span> <span class="s1">&#39;f2&#39;</span><span class="p">),</span>
-        <span class="p">(</span><span class="s1">&#39;f2&#39;</span><span class="p">,</span> <span class="s1">&#39;f1&#39;</span><span class="p">)</span>
-    <span class="p">]</span>
-<span class="p">)</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="s1">&#39;fig/fact4_complet&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">/var/folders/32/9hkmzrf11t38ckpktjnyfsfc0000gn/T/ipykernel_80321/2968239175.py</span> in <span class="ni">&lt;cell line: 3&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="sd">&#39;&#39;&#39; arbre des appels du calcul de fact(4) : construction plus complète&#39;&#39;&#39;</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> 
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">digraph</span> <span class="o">=</span> <span class="n">functools</span><span class="o">.</span><span class="n">partial</span><span class="p">(</span><span class="n">gvz</span><span class="o">.</span><span class="n">Digraph</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;jpg&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> 
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="k">def</span> <span class="nf">add_nodes</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">nodes</span><span class="p">):</span>
-
-<span class="ne">NameError</span>: name &#39;functools&#39; is not defined
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39;Affichage arbre&#39;&#39;&#39;</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">Image</span>
-<span class="nb">print</span><span class="p">(</span><span class="vm">__doc__</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="n">Image</span><span class="p">(</span><span class="s1">&#39;fig/fact4_complet.jpg&#39;</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Affichage arbre
-</pre></div>
-</div>
-<img alt="../_images/6-recursivite_132_1.jpg" src="../_images/6-recursivite_132_1.jpg" />
-</div>
-</div>
 </div>
 </div>
 </div>
