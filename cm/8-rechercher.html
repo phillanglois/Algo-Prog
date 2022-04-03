@@ -368,8 +368,8 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#en-tete-generique-de-la-fonction">
-       En-tête générique de la fonction
+      <a class="reference internal nav-link" href="#en-tete-modele-de-la-fonction">
+       En-tête “modèle” de la fonction
       </a>
      </li>
     </ul>
@@ -528,8 +528,8 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#en-tete-generique-de-la-fonction">
-       En-tête générique de la fonction
+      <a class="reference internal nav-link" href="#en-tete-modele-de-la-fonction">
+       En-tête “modèle” de la fonction
       </a>
      </li>
     </ul>
@@ -662,11 +662,13 @@ const thebe_selector_output = ".output, .cell_output"
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="rechercher">
-<h1>Rechercher<a class="headerlink" href="#rechercher" title="Permalink to this headline">¶</a></h1>
-<p>version 2.21 (PhL)</p>
+<span id="ch-rechercher"></span><h1>Rechercher<a class="headerlink" href="#rechercher" title="Permalink to this headline">¶</a></h1>
+<p>Mis à jour : Apr 03, 2022, lecture : 16
+minutes minimum, PhL.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># pour python&lt;3.9</span>
+<span class="c1">#from typing import list</span>
 </pre></div>
 </div>
 </div>
@@ -675,8 +677,8 @@ const thebe_selector_output = ".output, .cell_output"
 <h2>Objectif du chapitre<a class="headerlink" href="#objectif-du-chapitre" title="Permalink to this headline">¶</a></h2>
 <p>Ce chapitre présente des versions de deux algorithmes (déjà connus) pour <em>rechercher si une valeur est présente ou non dans un ensemble de valeurs</em>.
 Cet ensemble de valeurs est stocké dans <em>un tableau</em> (1D ou nD selon le type de valeurs).</p>
-<p>Au delà de la question de la recherche de valeur dans un ensemble, l’objectif central de ce chapitre est de <em>construire des versions itératives et récursives d’un <strong>même algorithme</strong></em>.</p>
-<p>L’analyse de la complexité de ces traitements sera aussi réalisée ainsi qu’une illustration de preuve de terminaison et de correction de ces traitements.</p>
+<p>Au delà de la question de la recherche de valeur dans un ensemble, l’objectif est ici de <em>construire des versions itératives et récursives d’un <strong>même algorithme</strong></em>.</p>
+<p>L’analyse de la complexité de ces traitements sera aussi réalisée ainsi (<span class="math notranslate nohighlight">\(\star\)</span>) qu’une illustration de preuve de terminaison et de correction de ces traitements.</p>
 <p>Les algorithmes concernés sont :</p>
 <ul class="simple">
 <li><p>la recherche séquentielle</p></li>
@@ -702,7 +704,7 @@ Parcourir <em>séquentiellement</em> le tableau de valeurs et comparer à la val
 <li><p>exemple : du début à la fin du tableau donc pour un ordre croissant des indices</p></li>
 </ul>
 </li>
-<li><p>parcours complet : de 0 à <code class="docutils literal notranslate"><span class="pre">len(t)</span></code></p></li>
+<li><p>parcours complet : de 0 à <code class="docutils literal notranslate"><span class="pre">len(t)-1</span></code></p></li>
 <li><p>parcours optimal : arrêt du parcours dès la valeur trouvée</p></li>
 </ul>
 <p><strong>Exemple pour la suite</strong>.</p>
@@ -727,17 +729,16 @@ Parcourir <em>séquentiellement</em> le tableau de valeurs et comparer à la val
 </div>
 </div>
 </div>
-<div class="section" id="en-tete-generique-de-la-fonction">
-<h4>En-tête générique de la fonction<a class="headerlink" href="#en-tete-generique-de-la-fonction" title="Permalink to this headline">¶</a></h4>
-<p><em>En-tête générique</em> : cet en-tête est à la fois suffisamment général pour définir différents algorithmes de traitement (qui résolvent notre problème, ici la recherche d’une valeur dans un ensemble) et suffisamment précis pour être la spécification complète de tous ces cas.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rech_seq</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">tab</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<div class="section" id="en-tete-modele-de-la-fonction">
+<h4>En-tête “modèle” de la fonction<a class="headerlink" href="#en-tete-modele-de-la-fonction" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rech_seq</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">tab</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>entrées :</p>
 <ul>
 <li><p><em>val</em> : la valeur à chercher – ici un <code class="docutils literal notranslate"><span class="pre">int</span></code></p></li>
-<li><p><em>tab</em> : le tableau 1D qui contient les valeurs – ici u tableau 1D représenté par une liste python</p></li>
+<li><p><em>tab</em> : le tableau 1D qui contient les valeurs – ici un tableau 1D représenté par une liste python</p></li>
 <li><p><em>dim</em> : <code class="docutils literal notranslate"><span class="pre">len(tab)</span></code> le nombre de valeurs</p></li>
 </ul>
 </li>
@@ -747,8 +748,13 @@ Parcourir <em>séquentiellement</em> le tableau de valeurs et comparer à la val
 </ul>
 </li>
 </ul>
-<p>En pratique, cet en-tête est un <em>modèle</em> d’en-tête qui peut être modifié de façon minime pour spécifier la fonction qui (ici) effectue recherche de valeur de type différent (ici des <code class="docutils literal notranslate"><span class="pre">int</span></code>), dans un ensemble représenté autrement (qu’ici, un tableau 1D).</p>
-<p>On peut voir <em>le type des valeurs</em> et <em>la structure de stockage</em> comme des paramètres de plus haut niveau d’abstraction de ce traitement.  Ceci correspond à la notion de <em>généricité</em> ou de certaines formes de la notion d’héritage dans les langages (dits) objet.</p>
+<p>Cet en-tête de fonction fixe certaines caractéristiques des paramètres du problème.
+En effet, la recherche s’effectue ici dans <em>un ensemble</em> représenté par un tableau et <em>la valeur cherchée</em> est un entier.
+Ces paramètres ensemble et valeur pourraient être différents : par exemple la recherche peut s’effectuer dans une liste de nombres flottants, une chaîne de caractères, un dictionnaire …
+Il faudrait alors modifier l’en-tête pour ces types de données.</p>
+<p>Cet en-tête est donc un <em>modèle</em> d’en-tête pour une fonction de recherche.
+On peut voir <em>le type des valeurs</em> et <em>la structure de stockage</em> comme des paramètres de plus haut niveau d’abstraction de ce traitement.
+Ceci correspond à la notion de <em>généricité</em> ou de certaines formes de la notion d’héritage dans les langages (dits) objet.</p>
 </div>
 </div>
 <div class="section" id="algorithmes-iteratifs">
@@ -768,7 +774,7 @@ Parcourir <em>séquentiellement</em> le tableau de valeurs et comparer à la val
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rech_seq_for</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">tab</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rech_seq_for</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">tab</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
     <span class="n">trouve</span> <span class="o">=</span> <span class="kc">False</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">dim</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">val</span><span class="p">:</span>
@@ -814,7 +820,7 @@ Parcourir <em>séquentiellement</em> le tableau de valeurs et comparer à la val
 <p>Voilà une première version qui découle de la construction avec <code class="docutils literal notranslate"><span class="pre">for</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rech_seq_while_v0</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">tab</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rech_seq_while_v0</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">tab</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
     <span class="n">trouve</span> <span class="o">=</span> <span class="kc">False</span>
     <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">dim</span> <span class="ow">and</span> <span class="n">trouve</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
@@ -849,7 +855,7 @@ Parcourir <em>séquentiellement</em> le tableau de valeurs et comparer à la val
 <p>La variable <code class="docutils literal notranslate"><span class="pre">trouve</span></code> n’est pas nécessaire comme l’illustre la version plus simple suivante.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rech_seq_while</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">tab</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rech_seq_while</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">tab</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
     <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">dim</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">val</span><span class="p">:</span>
@@ -924,7 +930,7 @@ Attention à l’ordre des tests dans la condition de la ligne 4</p>
 <p>La construction suivante permet le même traitement minimal au sein d’une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rech_seq_for_ecourtee</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">tab</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rech_seq_for_ecourtee</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">tab</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
     <span class="n">trouve</span> <span class="o">=</span> <span class="kc">False</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">dim</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">val</span><span class="p">:</span>
@@ -971,7 +977,7 @@ Attention à l’ordre des tests dans la condition de la ligne 4</p>
 <p>On verra que l’analyse de la correction de cet algorithme donne une autre solution.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rech_seq_while_2</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">tab</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rech_seq_while_2</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">tab</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
     <span class="sd">&#39;&#39;&#39;traite le cas du tableau vide&#39;&#39;&#39;</span>
     <span class="k">assert</span> <span class="n">dim</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span>
 
@@ -1057,7 +1063,7 @@ On reprend la description précédente :</p>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rech_seq_rec_gd</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">tab</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">g</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span><span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rech_seq_rec_gd</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">tab</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">g</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span><span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
     <span class="sd">&#39;&#39;&#39;recherche val dans tab[g,d[&#39;&#39;&#39;</span>
     <span class="k">if</span> <span class="n">g</span> <span class="o">==</span> <span class="n">d</span><span class="p">:</span>
         <span class="k">return</span> <span class="kc">False</span>
@@ -1066,7 +1072,7 @@ On reprend la description précédente :</p>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">rech_seq_rec_gd</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">tab</span><span class="p">,</span> <span class="n">g</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
     
-<span class="k">def</span> <span class="nf">rech_seq_rec</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">tab</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="k">def</span> <span class="nf">rech_seq_rec</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">tab</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
     <span class="k">return</span> <span class="n">rech_seq_rec_gd</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">tab</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">))</span>
 </pre></div>
 </div>
@@ -1270,7 +1276,7 @@ Ici aussi, l'ordre du traitement des terminaisons (lignes 14 et 16) est importan
 <p>Rmq.: A la place de <code class="docutils literal notranslate"><span class="pre">n</span></code>,  on pourrait déduire la taille effective du tableau traité à partir de <code class="docutils literal notranslate"><span class="pre">g</span></code>et <code class="docutils literal notranslate"><span class="pre">d</span></code>. Mais on convenu d’ajouter systématiquement la taille d’un tableau passé en argument d’un sous-programme.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dichotomie</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">t</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim_t</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">g</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dichotomie</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">t</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim_t</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">g</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
     <span class="sd">&#39;&#39;&#39;recherche dichotomique : version récursive</span>
 <span class="sd">    recherche val dans t[g, d] et retourne True ou False</span>
 <span class="sd">    entrées. val : int, t: tableau d&#39;int de taille n,</span>
@@ -1288,7 +1294,7 @@ Ici aussi, l'ordre du traitement des terminaisons (lignes 14 et 16) est importan
         <span class="n">dim_t</span> <span class="o">=</span> <span class="n">d</span> <span class="o">-</span> <span class="n">m</span>
         <span class="k">return</span> <span class="n">dichotomie</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">dim_t</span><span class="p">,</span> <span class="n">m</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
         
-<span class="k">def</span> <span class="nf">dichotomie_recursive</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">t</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim_t</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<span class="k">def</span> <span class="nf">dichotomie_recursive</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">t</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim_t</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="mi">0</span><span class="p">:</span>
     <span class="sd">&#39;&#39;&#39;recherche dichotomique de val dans t de taille dim_t</span>
 <span class="sd">    pour ressembler ) la version iterative en utilisant dichotomie</span>
 <span class="sd">    &#39;&#39;&#39;</span>
@@ -1421,7 +1427,7 @@ Ce qui permettra de prouver la terminaison de l’algorithme.</p>
 <p>La terminaison de l’algorithme itératif est prouvé si ce <em>variant arrête la répétition</em> (la boucle) – et ce quelques soient les entrées de la répétition.</p>
 <p>Reprenons une version itérative de la recherche séquentielle.</p>
 <p>Celle avec le <code class="docutils literal notranslate"><span class="pre">while</span></code> est la plus simple pour commencer.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rech_seq_while</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">tab</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rech_seq_while</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">tab</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
     <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">dim</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">val</span><span class="p">:</span>
@@ -1454,7 +1460,7 @@ Ce qui permettra de prouver la terminaison de l’algorithme.</p>
 Cette ré-écriture est un changement de variable “classique”.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rech_seq_while_variant</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">tab</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rech_seq_while_variant</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">tab</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
     <span class="sd">&#39;&#39;&#39;recherche équentielle itérative : s&#39;il fallait n&#39;en garder qu&#39;une !&#39;&#39;&#39;</span>
     <span class="k">assert</span> <span class="n">dim</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span>
 
