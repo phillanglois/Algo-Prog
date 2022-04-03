@@ -915,7 +915,7 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="recursivite">
 <span id="ch-recursivite"></span><h1>Récursivité<a class="headerlink" href="#recursivite" title="Permalink to this headline">¶</a></h1>
-<p>Mis à jour : Mar 30, 2022, lecture : 15
+<p>Mis à jour : Apr 03, 2022, lecture : 15
 minutes minimum, PhL.</p>
 <div class="section" id="definitions-et-premiers-exemples">
 <h2>Définitions et premiers exemples<a class="headerlink" href="#definitions-et-premiers-exemples" title="Permalink to this headline">¶</a></h2>
@@ -1156,17 +1156,17 @@ minutes minimum, PhL.</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>---------------------------------------------------------------------------
 RecursionError                            Traceback (most recent call last)
-/var/folders/32/9hkmzrf11t38ckpktjnyfsfc0000gn/T/ipykernel_86973/1127868052.py in &lt;cell line: 1&gt;()
+/var/folders/32/9hkmzrf11t38ckpktjnyfsfc0000gn/T/ipykernel_99074/1127868052.py in &lt;cell line: 1&gt;()
 ----&gt; 1 print(&quot;1! =&quot;, f(1))
 
-/var/folders/32/9hkmzrf11t38ckpktjnyfsfc0000gn/T/ipykernel_86973/3422208276.py in f(n)
+/var/folders/32/9hkmzrf11t38ckpktjnyfsfc0000gn/T/ipykernel_99074/3422208276.py in f(n)
       4     sortie n!
       5     &quot;&quot;&quot;
 ----&gt; 6     return n * f(n-1) # récursion
 
 ... last 1 frames repeated, from the frame below ...
 
-/var/folders/32/9hkmzrf11t38ckpktjnyfsfc0000gn/T/ipykernel_86973/3422208276.py in f(n)
+/var/folders/32/9hkmzrf11t38ckpktjnyfsfc0000gn/T/ipykernel_99074/3422208276.py in f(n)
       4     sortie n!
       5     &quot;&quot;&quot;
 ----&gt; 6     return n * f(n-1) # récursion
@@ -1626,19 +1626,19 @@ Ce module complète (et utilise) le module <em>time</em> déjà décrit dans le
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.01 µs ± 60.8 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.05 µs ± 70.6 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.17 µs ± 9.17 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.22 µs ± 42.3 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
 
-2.99 µs ± 8.28 ns per loop (mean ± std. dev. of 7 runs, 100 loops each)
-1.16 µs ± 5.95 ns per loop (mean ± std. dev. of 7 runs, 100 loops each)
+2.98 µs ± 23.6 ns per loop (mean ± std. dev. of 7 runs, 100 loops each)
+1.16 µs ± 5.32 ns per loop (mean ± std. dev. of 7 runs, 100 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.9 µs ± 121 ns per loop (mean ± std. dev. of 5 runs, 100000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.02 µs ± 8.8 ns per loop (mean ± std. dev. of 5 runs, 100000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.08 µs ± 5.34 ns per loop (mean ± std. dev. of 5 runs, 1000000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.23 µs ± 55.3 ns per loop (mean ± std. dev. of 5 runs, 1000000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1738,10 +1738,10 @@ Réponse<div class="summary-down docutils">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>241 µs ± 473 ns per loop (mean ± std. dev. of 5 runs, 1000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>264 µs ± 1.21 µs per loop (mean ± std. dev. of 5 runs, 1000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>953 ns ± 21.2 ns per loop (mean ± std. dev. of 5 runs, 1000000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>952 ns ± 4.25 ns per loop (mean ± std. dev. of 5 runs, 1000000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1857,6 +1857,7 @@ Ainsi la pile redevient vide après le traitement complet de l’appel principal
 <ul>
 <li><p>un nouvel appel est empilé ou un appel terminé est dépilé</p></li>
 <li><p>la colonne la plus à droite représente l’état le plus récent de la pile</p></li>
+<li><p>le numéro sous la pile aide à suivre l’évolution de la pile dans le temps</p></li>
 </ul>
 </li>
 </ul>
@@ -1866,12 +1867,14 @@ Ainsi la pile redevient vide après le traitement complet de l’appel principal
 <li><p>avant l’appel principal :  la pile est vide</p></li>
 </ul>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>      . 
+      <span class="m">0</span>
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>l’appel principal : on empile f(4)</p></li>
 </ul>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>      . f<span class="o">(</span><span class="m">4</span><span class="o">)</span>
+      <span class="m">0</span>  <span class="m">1</span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -1879,6 +1882,7 @@ Ainsi la pile redevient vide après le traitement complet de l’appel principal
 </ul>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>             f<span class="o">(</span><span class="m">3</span><span class="o">)</span> 
       . f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span>   
+      <span class="m">0</span>   <span class="m">1</span>   <span class="m">2</span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -1887,6 +1891,7 @@ Ainsi la pile redevient vide après le traitement complet de l’appel principal
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>                  f<span class="o">(</span><span class="m">2</span><span class="o">)</span> 
              f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> 
       . f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span>   
+      <span class="m">0</span>   <span class="m">1</span>    <span class="m">2</span>   <span class="m">3</span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -1896,6 +1901,7 @@ Ainsi la pile redevient vide après le traitement complet de l’appel principal
                   f<span class="o">(</span><span class="m">2</span><span class="o">)</span> f<span class="o">(</span><span class="m">2</span><span class="o">)</span> 
              f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> 
       . f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span>   
+      <span class="m">0</span>   <span class="m">1</span>    <span class="m">2</span>   <span class="m">3</span>    <span class="m">4</span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -1905,6 +1911,7 @@ Ainsi la pile redevient vide après le traitement complet de l’appel principal
                   f<span class="o">(</span><span class="m">2</span><span class="o">)</span> f<span class="o">(</span><span class="m">2</span><span class="o">)</span> f<span class="o">(</span><span class="m">2</span><span class="o">)</span>
              f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span>
       . f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span>  
+      <span class="m">0</span>   <span class="m">1</span>    <span class="m">2</span>   <span class="m">3</span>    <span class="m">4</span>    <span class="m">5</span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -1914,15 +1921,17 @@ Ainsi la pile redevient vide après le traitement complet de l’appel principal
                   f<span class="o">(</span><span class="m">2</span><span class="o">)</span> f<span class="o">(</span><span class="m">2</span><span class="o">)</span> f<span class="o">(</span><span class="m">2</span><span class="o">)</span>
              f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span>
       . f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span>  
+      <span class="m">0</span>   <span class="m">1</span>    <span class="m">2</span>   <span class="m">3</span>    <span class="m">4</span>    <span class="m">5</span>    <span class="m">6</span>  
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>f(3) est calculé et cet appel renvoit la valeur 1x2x3 : on dépile f(3)</p></li>
+<li><p>f(3) est calculé et cet appel renvoie la valeur 1x2x3 : on dépile f(3)</p></li>
 </ul>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>                       f<span class="o">(</span><span class="m">1</span><span class="o">)</span>
                   f<span class="o">(</span><span class="m">2</span><span class="o">)</span> f<span class="o">(</span><span class="m">2</span><span class="o">)</span> f<span class="o">(</span><span class="m">2</span><span class="o">)</span>
              f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span>
       . f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span>  
+      <span class="m">0</span>   <span class="m">1</span>    <span class="m">2</span>   <span class="m">3</span>    <span class="m">4</span>    <span class="m">5</span>    <span class="m">6</span>    <span class="m">7</span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -1931,18 +1940,13 @@ Ainsi la pile redevient vide après le traitement complet de l’appel principal
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>                       f<span class="o">(</span><span class="m">1</span><span class="o">)</span>
                   f<span class="o">(</span><span class="m">2</span><span class="o">)</span> f<span class="o">(</span><span class="m">2</span><span class="o">)</span> f<span class="o">(</span><span class="m">2</span><span class="o">)</span>
              f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span>
-      . f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span>  
+      . f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> .
+      <span class="m">0</span>   <span class="m">1</span>    <span class="m">2</span>   <span class="m">3</span>    <span class="m">4</span>    <span class="m">5</span>    <span class="m">6</span>    <span class="m">7</span>   <span class="m">8</span> 
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>la pile est vide et on a bien obtenu le résultat attendu (24)</p></li>
+<li><p>la pile est vide et on a bien obtenu le résultat attendu (24).</p></li>
 </ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>                       f<span class="o">(</span><span class="m">1</span><span class="o">)</span>
-                  f<span class="o">(</span><span class="m">2</span><span class="o">)</span> f<span class="o">(</span><span class="m">2</span><span class="o">)</span> f<span class="o">(</span><span class="m">2</span><span class="o">)</span>
-             f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span>
-      . f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> .   
-</pre></div>
-</div>
 </div>
 <div class="section" id="environnements-successifs-pour-factorielle-3">
 <h4>environnements successifs pour factorielle(3)<a class="headerlink" href="#environnements-successifs-pour-factorielle-3" title="Permalink to this headline">¶</a></h4>
@@ -2047,12 +2051,16 @@ Ainsi la pile redevient vide après le traitement complet de l’appel principal
 Les appels récursifs sont empilés (avec leur environnement) dans une <em>pile d’appels</em><br />
 Les appels avec terminaison permettent de dépiler l’appelant<br />
 L’appel principal est exécuté une fois la pile vidée</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>                   f<span class="o">(</span><span class="m">1</span><span class="o">)</span> f<span class="o">(</span><span class="m">0</span><span class="o">)</span>
-              f<span class="o">(</span><span class="m">2</span><span class="o">)</span> f<span class="o">(</span><span class="m">2</span><span class="o">)</span> f<span class="o">(</span><span class="m">2</span><span class="o">)</span> f<span class="o">(</span><span class="m">2</span><span class="o">)</span>      f<span class="o">(</span><span class="m">1</span><span class="o">)</span>                f<span class="o">(</span><span class="m">1</span><span class="o">)</span> f<span class="o">(</span><span class="m">0</span><span class="o">)</span>
-         f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span>      f<span class="o">(</span><span class="m">2</span><span class="o">)</span> f<span class="o">(</span><span class="m">2</span><span class="o">)</span> f<span class="o">(</span><span class="m">2</span><span class="o">)</span> f<span class="o">(</span><span class="m">2</span><span class="o">)</span>
-    f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>                   f<span class="o">(</span><span class="m">1</span><span class="o">)</span>      f<span class="o">(</span><span class="m">0</span><span class="o">)</span>
+              f<span class="o">(</span><span class="m">2</span><span class="o">)</span> f<span class="o">(</span><span class="m">2</span><span class="o">)</span> f<span class="o">(</span><span class="m">2</span><span class="o">)</span> f<span class="o">(</span><span class="m">2</span><span class="o">)</span> f<span class="o">(</span><span class="m">2</span><span class="o">)</span>      f<span class="o">(</span><span class="m">1</span><span class="o">)</span>                f<span class="o">(</span><span class="m">1</span><span class="o">)</span>      f<span class="o">(</span><span class="m">0</span><span class="o">)</span>
+         f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span> f<span class="o">(</span><span class="m">3</span><span class="o">)</span>      f<span class="o">(</span><span class="m">2</span><span class="o">)</span> f<span class="o">(</span><span class="m">2</span><span class="o">)</span> f<span class="o">(</span><span class="m">2</span><span class="o">)</span> f<span class="o">(</span><span class="m">2</span><span class="o">)</span> f<span class="o">(</span><span class="m">2</span><span class="o">)</span>
+    f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span> f<span class="o">(</span><span class="m">4</span><span class="o">)</span>
+      <span class="m">0</span>   <span class="m">1</span>    <span class="m">2</span>    <span class="m">3</span>    <span class="m">4</span>    <span class="m">5</span>    <span class="m">6</span>    <span class="m">7</span>    <span class="m">8</span>    <span class="m">9</span>    <span class="m">10</span>   <span class="m">11</span>   <span class="m">12</span>   <span class="m">13</span>   <span class="m">14</span>   <span class="m">15</span>   <span class="m">16</span>
 </pre></div>
 </div>
+<p><strong>Rmq.</strong> Une évolution de la pile un peu différente de la celle tracée ci-dessus peut aussi être envisagée.<br />
+En effet, l’évaluation de <code class="docutils literal notranslate"><span class="pre">fibo(n-1)</span> <span class="pre">+</span> <span class="pre">fibo(n-2)</span></code> (dans une affectation ou un <code class="docutils literal notranslate"><span class="pre">return</span></code>) provoque l’empilement de <code class="docutils literal notranslate"><span class="pre">fibo(n-2)</span></code> et <code class="docutils literal notranslate"><span class="pre">fibo(n-1)</span></code> avant leur traitement (dans un ordre arbitraire). Ainsi, la pile peut augmenter de 2 niveaux avant de redescendre d’un seul. Le traitement complet reste bien sûr équivalent.</p>
+<p><strong>Exercice.</strong> Tracer une telle évolution pour <code class="docutils literal notranslate"><span class="pre">f(4)</span></code>.</p>
 </div>
 </div>
 <div class="section" id="retour-sur-l-inefficacite-du-calcul-recursif-de-fibonacci">
@@ -2218,7 +2226,7 @@ On formalisera plus tard cette analyse de la <em>terminaison</em> de la solution
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">/var/folders/32/9hkmzrf11t38ckpktjnyfsfc0000gn/T/ipykernel_86973/2035115461.py</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="nn">/var/folders/32/9hkmzrf11t38ckpktjnyfsfc0000gn/T/ipykernel_99074/2035115461.py</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">hanoi0</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
 
 <span class="ne">NameError</span>: name &#39;A&#39; is not defined
