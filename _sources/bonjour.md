@@ -1,4 +1,5 @@
 <!-- #region -->
+(ch:bonjour)=
 # Bienvenu en Algo-Prog !
 
 **Ce support est en évolution tout au long du semestre.**

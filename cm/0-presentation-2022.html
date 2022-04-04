@@ -292,9 +292,9 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/cm/0-presentation-2022.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/cm/0-presentation-2022.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
+                data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimer au format PDF"
                 onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -324,23 +324,6 @@ const thebe_selector_output = ".output, .cell_output"
             class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/phillanglois/Algo-Prog/main?urlpath=tree/algoprog2022/cm/0-presentation-2022.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="lancement Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
-    </div>
-</div>
 
         </div>
 
@@ -718,8 +701,8 @@ const thebe_selector_output = ".output, .cell_output"
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="algorithmique-et-programmation-en-2022">
-<h1>Algorithmique et Programmation en 2022<a class="headerlink" href="#algorithmique-et-programmation-en-2022" title="Permalink to this headline">¶</a></h1>
-<p>Mis à jour : Mar 30, 2022, lecture : 10 minutes minimum, PhL.</p>
+<span id="ch-intro"></span><h1>Algorithmique et Programmation en 2022<a class="headerlink" href="#algorithmique-et-programmation-en-2022" title="Permalink to this headline">¶</a></h1>
+<p>Mis à jour : Apr 04, 2022, lecture : 10 minutes minimum, PhL.</p>
 <ul class="simple">
 <li><p>Vous : <strong>L1 math-info</strong></p></li>
 <li><p>Moi : <strong>Philippe Langlois</strong></p></li>
@@ -745,28 +728,24 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="section" id="controle-de-connaissances-et-dates-importantes">
 <h3>Contrôle de connaissances et dates importantes<a class="headerlink" href="#controle-de-connaissances-et-dates-importantes" title="Permalink to this headline">¶</a></h3>
-<p>CC : contrôle “dit” continu, CT contôle “dit” terminal</p>
+<p>CC : contrôle “dit” continu, CT contrôle “dit” terminal</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p><strong>Note UE = CC1/2 + CC2/4 + CT/4</strong></p>
 </div>
 <ul class="simple">
-<li><p>CC1 : 0.2 * TP1 + 0.8 * TP2</p>
+<li><p>modifié le 04.07.22 ~~CC1 : 0.2 * TP1 + 0.8 * TP2~~</p></li>
+<li><p>CC1 : 0.2 * TP1 + 0.4 * TP2 + 0.4 * TP3</p>
 <ul>
-<li><p>mi-parcours : TP1 à rendre en <code class="docutils literal notranslate"><span class="pre">sd</span></code>+7</p></li>
-<li><p>fin de semestre : TP2 individuel, en temps limité, sur machine UPVD : 3h à <code class="docutils literal notranslate"><span class="pre">sd</span></code>+14</p></li>
+<li><p>1/3-parcours : TP1 à rendre en <code class="docutils literal notranslate"><span class="pre">sd</span></code>+7</p></li>
+<li><p>2/3-parcours : TP2  individuel, en temps limité, sur machine UPVD : 3h à <code class="docutils literal notranslate"><span class="pre">sd</span></code>+12</p></li>
+<li><p>fin de semestre : TP3 individuel, en temps limité, sur machine UPVD : 3h à <code class="docutils literal notranslate"><span class="pre">sd</span></code>+14</p></li>
 </ul>
 </li>
 <li><p>CC2 : écrit mi-parcours, 2h à <code class="docutils literal notranslate"><span class="pre">sd</span></code>+8</p></li>
 <li><p>CT : écrit de fin de semestre, 2h pendant semaine examen</p></li>
 </ul>
-<p><strong>Dates <em>envisagées</em></strong> mais susceptibles d’adaptations mineures</p>
-<ul class="simple">
-<li><p>lundi 7 mars 2022 : dead-line rendu du TP1 (pour CC1)</p></li>
-<li><p>mercredi 16 mars 2022 : écrit mi-parcours (CC2)</p></li>
-<li><p>mardi 10 mai 2022 : TP en temps limité (pour CC1)</p></li>
-<li><p>semaines du 16 ou 23 mai 2022 : écrit de fin de semestre (CT)</p></li>
-</ul>
+<p><strong>Dates.</strong> Les dates de ces évaluations sont annoncées en début de <a class="reference internal" href="../bonjour.html#ch-bonjour"><span class="std std-ref">la page d’accueil du cours</span></a>.</p>
 </div>
 </div>
 <div class="section" id="structure-de-l-enseignement">
@@ -807,15 +786,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>les 2/3 du travail de compréhension/mémorisation reposent sur les CM</p></li>
 </ul>
 </li>
-</ul>
-<ul class="simple">
 <li><p><strong>Morale</strong> : ne manquer aucun CM, être attentif, prendre des notes, poser des questions, <strong>se poser</strong> des questions, demander des pauses pour reprendre une attention maximale</p>
 <ul>
 <li><p>les notes de cours fournies sont trompeuses : comme un film sans le son</p></li>
 </ul>
 </li>
-</ul>
-<ul class="simple">
 <li><p><strong>Méthodologie</strong> :</p>
 <ul>
 <li><p>relire le cours le soir de l’amphi (15-20 min)</p></li>
@@ -884,8 +859,6 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <ul class="simple">
 <li><p>un environnement python qui fonctionne</p></li>
-</ul>
-<ul class="simple">
 <li><p>les <a class="reference external" href="https://jupyter.org/try">notebook jupyter</a></p>
 <ul>
 <li><p>sur votre machine : <em>la solution à privilégier</em></p></li>
@@ -894,8 +867,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>première séance  de TD</p></li>
 </ul>
 </li>
-</ul>
-<ul class="simple">
 <li><p><a class="reference external" href="http://pythontutor.com">python tutor</a></p>
 <ul>
 <li><p>permet de visualiser l’effet des instruactions d’un petit code</p></li>
@@ -904,8 +875,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>demo</p></li>
 </ul>
 </li>
-</ul>
-<ul class="simple">
 <li><p>les quizz en ligne (moodle)</p></li>
 </ul>
 </div>
@@ -927,8 +896,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>type composés : chaîne de caractères, vecteur, matrice, …</p></li>
 </ul>
 </li>
-</ul>
-<ul class="simple">
 <li><p>Connaître leur <em>représentation</em> dans un langage informatique donné</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">bool</span></code>, <code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">float</span></code>, <code class="docutils literal notranslate"><span class="pre">str</span></code>, <code class="docutils literal notranslate"><span class="pre">list</span></code></p></li>
@@ -936,8 +903,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>(python) : un rappel sur le “type” <code class="docutils literal notranslate"><span class="pre">bool</span></code>est proposé en <a class="reference internal" href="a1-booleens.html"><span class="doc std std-doc">annexe du cours</span></a>.</p></li>
 </ul>
 </li>
-</ul>
-<ul class="simple">
 <li><p>Bien différencier <em>valeur</em> vs. <em>variable</em> vs. <em>constante</em></p>
 <ul>
 <li><p><em>évaluation</em></p></li>
@@ -945,8 +910,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p><em>affectation</em> : <code class="docutils literal notranslate"><span class="pre">=</span></code></p></li>
 </ul>
 </li>
-</ul>
-<ul class="simple">
 <li><p>Bien comprendre le modèle <em>séquentiel</em> de l’exécution d’un algorithme</p>
 <ul>
 <li><p><em>instruction</em></p></li>
@@ -968,8 +931,6 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ul>
 </li>
-</ul>
-<ul class="simple">
 <li><p>Distinguer : les <em>entrées</em> vs. le <em>traitement</em> vs. la <em>sortie</em></p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">input()</span></code>, <code class="docutils literal notranslate"><span class="pre">print()</span></code></p></li>
@@ -994,8 +955,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>premières estimations de complexité</p></li>
 </ul>
 </li>
-</ul>
-<ul class="simple">
 <li><p>Complexité</p>
 <ul>
 <li><p>combien <em>coûte</em> un algorithme pour résoudre un pb donné ?</p></li>
@@ -1009,8 +968,6 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ul>
 </li>
-</ul>
-<ul class="simple">
 <li><p>Récursivité :</p>
 <ul>
 <li><p><strong>la notion centrale du semestre</strong></p></li>
@@ -1033,8 +990,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>versions itératives ou récursives de ces algorithmes</p></li>
 </ul>
 </li>
-</ul>
-<ul class="simple">
 <li><p>Trier</p>
 <ul>
 <li><p>des algorithmes de tris dits naïfs  : algos, complexité, (preuve)</p></li>
@@ -1042,8 +997,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>versions itératives ou récursives de ces algorithmes</p></li>
 </ul>
 </li>
-</ul>
-<ul class="simple">
 <li><p>Compléments si assez de temps : prouver la terminaison et la correction d’un algorithme</p>
 <ul>
 <li><p>l’algo fournit la/les solution/s en un temps fini</p></li>
@@ -1062,8 +1015,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>approfondissement : introspection</p></li>
 </ul>
 </li>
-</ul>
-<ul class="simple">
 <li><p>Fonctions <strong>une notion centrale</strong></p>
 <ul>
 <li><p>fonctions prédéfinies ou existantes</p></li>
@@ -1073,8 +1024,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>exemples du cours : doubler, permuter</p></li>
 </ul>
 </li>
-</ul>
-<ul class="simple">
 <li><p>Tableaux 1D :</p>
 <ul>
 <li><p>rappel : avec des listes python (<code class="docutils literal notranslate"><span class="pre">lst</span></code>)</p></li>
@@ -1082,8 +1031,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>applications : les vecteurs, les chaînes de caractères</p></li>
 </ul>
 </li>
-</ul>
-<ul class="simple">
 <li><p>Tableaux 2D, 3D ; application au traitement d’images</p>
 <ul>
 <li><p>avec des listes (de listes) python</p></li>
@@ -1103,15 +1050,13 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Par manque de temps, les <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> de <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, ne sont pas abordés en séance bien que très utiles en pratique.
 Ces ressources pourront être découvertes de façon autome et utilisées par les étudiants (objectif 20) qui le souhaitent.</p>
 </div>
-<ul class="simple">
-<li><p>Autres types de données composés</p>
 <ul>
+<li><p>Autres types de données composés</p>
+<ul class="simple">
 <li><p>listes (<code class="docutils literal notranslate"><span class="pre">lst</span></code>) : fonctions et méthodes</p></li>
 <li><p>n-uplets (<code class="docutils literal notranslate"><span class="pre">tuple</span></code>), ensembles (<code class="docutils literal notranslate"><span class="pre">set</span></code>), dictionnaires (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
 </ul>
 </li>
-</ul>
-<ul>
 <li><p>Entrées/sorties et fichiers</p>
 <ul class="simple">
 <li><p>Très pratique pour tester ses développements :</p></li>
@@ -1125,17 +1070,15 @@ Plus d’<code class="docutils literal notranslate"><span class="pre">input()</s
 <li><p>Chapître traité assez tôt dans le semestre</p></li>
 </ul>
 </li>
-</ul>
-<ul class="simple">
 <li><p>Modules</p>
-<ul>
+<ul class="simple">
 <li><p>utilisation de modules existants</p></li>
 <li><p>exemple d’outils :<code class="docutils literal notranslate"><span class="pre">numpy</span></code>, <code class="docutils literal notranslate"><span class="pre">scipy</span></code>, <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>, <code class="docutils literal notranslate"><span class="pre">time</span></code></p></li>
 <li><p>définition de ses modules</p></li>
 </ul>
 </li>
 <li><p>Exceptions</p>
-<ul>
+<ul class="simple">
 <li><p>En annexe par manque de temps</p></li>
 </ul>
 </li>
@@ -1178,8 +1121,6 @@ Elle peut sembler longue mais en pratique, ces composants “arrivent” d’un 
 <li><p>éditeur, interpréteur, débugger utilisé en TP au semestre 1</p></li>
 </ul>
 </li>
-</ul>
-<ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span></code></p>
 <ul>
 <li><p>pour intégrer dans <em>un unique fichier</em> du texte, des maths (<span class="math notranslate nohighlight">\(\LaTeX\)</span>) et du code python qui s’exécute, les résultats de ces éxecutions (valeurs, courbes, images, …) et exporter tout ça en <code class="docutils literal notranslate"><span class="pre">html</span></code>ou <code class="docutils literal notranslate"><span class="pre">pdf</span></code> ou en <code class="docutils literal notranslate"><span class="pre">slide</span></code></p></li>
@@ -1188,8 +1129,6 @@ Elle peut sembler longue mais en pratique, ces composants “arrivent” d’un 
 <li><p>utilisable dans toutes les matières ou presque</p></li>
 </ul>
 </li>
-</ul>
-<ul class="simple">
 <li><p>les gestionnaire de paquets (modules) python pour compléter et mettre à jour son environnement</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">conda</span></code>: plus complet si distribution anaconda utilisée (solution recommandée)</p></li>
@@ -1202,8 +1141,6 @@ Elle peut sembler longue mais en pratique, ces composants “arrivent” d’un 
 </li>
 </ul>
 </li>
-</ul>
-<ul class="simple">
 <li><p>modules indispensables</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">numpy</span> </code> : fournit des <em>vrais</em> tableaux multi-dimentionnels et des tas de fonctions et types numériques pour effectuer du calcul</p></li>
