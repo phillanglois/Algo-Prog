@@ -13,7 +13,7 @@ Ceci est le premier point d'entrée de l'UE Algo-Prog en complément de l'[espac
 
 - semaine 10, lundi 7 mars 2022 : dead-line rendu du TP1 (pour CC1)
 - semaine 11, mercredi 16 mars 2022 : écrit mi-parcours (CC2)
-- **semaine 15, vendredi 15 mai 2022 : TP2 en temps limité (pour CC1)**
+- **semaine 15, vendredi 15 avril 2022 : TP2 en temps limité (pour CC1)**
 - semaine 19, mardi 10 mai 2022 : TP3 en temps limité (pour CC1)
 - semaines 20 ou 21, du 16 ou 23 mai 2022 : écrit de fin de semestre (CT)
 :::
