@@ -619,22 +619,18 @@ de la pile des appels.</p></li>
 <li><p>Écrire puis coder une version itérative des calculs suivants.</p>
 <ol class="simple">
 <li><p>la somme <span class="math notranslate nohighlight">\(s(n)\)</span> des <span class="math notranslate nohighlight">\(n\)</span> premiers entiers</p></li>
+<li><p>la valeur <span class="math notranslate nohighlight">\(u(n)= 2^n\)</span> pour <span class="math notranslate nohighlight">\(n&gt;0\)</span></p></li>
 </ol>
 </li>
 </ol>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>2.  la valeur $u(n)= 2^n$ pour $n&gt;0$
-</pre></div>
-</div>
 <ol class="simple">
 <li><p>Écrire puis coder une version récursive des calculs suivants.</p>
 <ol class="simple">
 <li><p>la somme <span class="math notranslate nohighlight">\(s(n)\)</span> des <span class="math notranslate nohighlight">\(n\)</span> premiers entiers</p></li>
+<li><p>la valeur <span class="math notranslate nohighlight">\(u(n)= 2^n\)</span> pour <span class="math notranslate nohighlight">\(n&gt;0\)</span></p></li>
 </ol>
 </li>
 </ol>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>2.  la valeur $u(n)= 2^n$ pour $n&gt;0$
-</pre></div>
-</div>
 <ol class="simple">
 <li><p>Expliciter l’arbre des appels et les calculs associés lors de
 l’évaluation de <span class="math notranslate nohighlight">\(s(4)\)</span>. Combien d’appels récursifs à <span class="math notranslate nohighlight">\(s\)</span> sont
@@ -650,34 +646,28 @@ nécessaires ?</p></li>
 <ol class="simple">
 <li><ol class="simple">
 <li><p>Écrire un algorithme itératif qui calcule <span class="math notranslate nohighlight">\(x^n\)</span>.</p></li>
+<li><p>Combien de multiplications sont nécessaires à ce calcul ?</p></li>
 </ol>
 </li>
 </ol>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>2.  Combien de multiplications sont nécessaires à ce calcul ?
-</pre></div>
-</div>
 <ol class="simple">
 <li><ol class="simple">
 <li><p>Utiliser la propriété <span class="math notranslate nohighlight">\(x^p = x \times x^{p-1}\)</span> pour écrire un
 algorithme récursif qui calcule <span class="math notranslate nohighlight">\(x^n\)</span>.</p></li>
+<li><p>Combien de multiplications sont nécessaires à ce calcul ?</p></li>
 </ol>
 </li>
 </ol>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>2.  Combien de multiplications sont nécessaires à ce calcul ?
-</pre></div>
-</div>
 <ol class="simple">
 <li><ol class="simple">
 <li><p>Utiliser la propriété <span class="math notranslate nohighlight">\(x^p \times x^p = x^{2p}\)</span> pour écrire un
 algorithme récursif qui calcule <span class="math notranslate nohighlight">\(x^n\)</span>. On pourra utiliser
 l’opérateur python <code class="docutils literal notranslate"><span class="pre">divmod</span></code>.</p></li>
+<li><p>Combien de multiplications sont nécessaires à ce calcul pour
+<span class="math notranslate nohighlight">\(n=2, 4, 8, 16, \dots, 2^p\)</span> ?</p></li>
 </ol>
 </li>
 </ol>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>2.  Combien de multiplications sont nécessaires à ce calcul pour
-    $n=2, 4, 8, 16, \dots, 2^p$ ?
-</pre></div>
-</div>
 <ol class="simple">
 <li><p>Que pensez vous de ces deux versions récursives ?</p></li>
 </ol>
@@ -762,21 +752,20 @@ récursive comme suit.</p>
 <p>Ainsi définie, <span class="math notranslate nohighlight">\(s\)</span> est une suite infinie de valeurs entières construites
 à partir de la valeur de départ <span class="math notranslate nohighlight">\(N\)</span>.</p>
 <ol class="simple">
-<li><p>A la main pour commencer.</p></li>
+<li><p>A la main pour commencer.</p>
+<ol class="simple">
+<li><p>Calculer à la main les valeurs de la suite pour les valeurs de
+départ <span class="math notranslate nohighlight">\(N = 4, 2, 1\)</span>. Qu’en déduire ?</p></li>
+<li><p>Calculer à la main les valeurs de la suite pour les valeurs de
+départ <span class="math notranslate nohighlight">\(N = 3, 5, 6, 7, 8, 16, 32\)</span>. Il peut être utile de
+représenter les valeurs obtenues sous la forme d’un tableau où
+chaque colonne (ou ligne) à la forme <span class="math notranslate nohighlight">\(N u_1 u_2 \dots u_n \dots\)</span>
+où les <span class="math notranslate nohighlight">\(u_i\)</span> sont les valeurs de la suite pour la valeur de
+départ <span class="math notranslate nohighlight">\(N\)</span>. Qu’en déduire et en particulier que penser de la
+terminaison de cette suite ?</p></li>
 </ol>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>1.  Calculer à la main les valeurs de la suite pour les valeurs de
-    départ $N = 4, 2, 1$. Qu&#39;en déduire ?
-</pre></div>
-</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>2.  Calculer à la main les valeurs de la suite pour les valeurs de
-    départ $N = 3, 5, 6, 7, 8, 16, 32$. Il peut être utile de
-    représenter les valeurs obtenues sous la forme d&#39;un tableau où
-    chaque colonne (ou ligne) à la forme $N u_1 u_2 \dots u_n \dots$
-    où les $u_i$ sont les valeurs de la suite pour la valeur de
-    départ $N$. Qu&#39;en déduire et en particulier que penser de la
-    terminaison de cette suite ?
-</pre></div>
-</div>
+</li>
+</ol>
 <ol class="simple">
 <li><p>La coder de façon récursive et observer son comportement pour l’une
 de ces valeurs de <span class="math notranslate nohighlight">\(N\)</span>. Attention !!!</p></li>
@@ -787,30 +776,24 @@ de ces valeurs de <span class="math notranslate nohighlight">\(N\)</span>. Atten
 valeur est rencontrée quelque soit le terme de départ <span class="math notranslate nohighlight">\(N\)</span>.</p>
 <ol class="simple">
 <li><p>Compléter votre code précédent avec cette condition d’arrêt.</p></li>
+<li><p>Compléter votre code précédent avec l’affichage de chaque valeur
+calculée avant la terminaison.</p></li>
 </ol>
 </li>
 </ol>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>2.  Compléter votre code précédent avec l&#39;affichage de chaque valeur
-    calculée avant la terminaison.
-</pre></div>
-</div>
 <ol class="simple">
 <li><p>Écrire des fonctions qui calculent les notions suivantes (source
 Wikipédia) :</p>
 <ol class="simple">
 <li><p>le temps de vol qui est le plus petit indice <span class="math notranslate nohighlight">\(n\)</span> tel que
 <span class="math notranslate nohighlight">\(s(n) = 1\)</span>, <em>i.e.</em> jusqu’à la terminaison.</p></li>
+<li><p>le temps de vol en altitude qui est le plus petit indice <span class="math notranslate nohighlight">\(n\)</span> tel
+que <span class="math notranslate nohighlight">\(s(n) \le N\)</span>.</p></li>
+<li><p>l’altitude maximale qui est la valeur maximale <span class="math notranslate nohighlight">\(s(n)\)</span> de la
+suite.</p></li>
 </ol>
 </li>
 </ol>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>2.  le temps de vol en altitude qui est le plus petit indice $n$ tel
-    que $s(n) \le N$.
-</pre></div>
-</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>3.  l&#39;altitude maximale qui est la valeur maximale $s(n)$ de la
-    suite.
-</pre></div>
-</div>
 <ol class="simple">
 <li><p>Coder ces fonctions et proposer des graphiques instructifs.</p></li>
 </ol>
