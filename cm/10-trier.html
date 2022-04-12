@@ -864,10 +864,10 @@ const thebe_selector_output = ".output, .cell_output"
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="trier">
-<h1>Trier<a class="headerlink" href="#trier" title="Permalink to this headline">¶</a></h1>
-<p>Version 2021 (PhL)</p>
-<h1>Table des matieres<span class="tocSkip"></span></h1>
-<div class="toc"><ul class="toc-item"><li><span><a href="#Introduction" data-toc-modified-id="Introduction-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Introduction</a></span><ul class="toc-item"><li><span><a href="#Vocabulaire" data-toc-modified-id="Vocabulaire-1.1"><span class="toc-item-num">1.1&nbsp;&nbsp;</span>Vocabulaire</a></span></li><li><span><a href="#Complexités" data-toc-modified-id="Complexités-1.2"><span class="toc-item-num">1.2&nbsp;&nbsp;</span>Complexités</a></span></li><li><span><a href="#Principaux-algorithmes-de-tri" data-toc-modified-id="Principaux-algorithmes-de-tri-1.3"><span class="toc-item-num">1.3&nbsp;&nbsp;</span>Principaux algorithmes de tri</a></span></li></ul></li><li><span><a href="#Tri-insertion" data-toc-modified-id="Tri-insertion-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Tri insertion</a></span><ul class="toc-item"><li><span><a href="#Principe" data-toc-modified-id="Principe-2.1"><span class="toc-item-num">2.1&nbsp;&nbsp;</span>Principe</a></span></li><li><span><a href="#($\star$)-Invariant" data-toc-modified-id="($\star$)-Invariant-2.2"><span class="toc-item-num">2.2&nbsp;&nbsp;</span>($\star$) Invariant</a></span></li><li><span><a href="#Algorithme" data-toc-modified-id="Algorithme-2.3"><span class="toc-item-num">2.3&nbsp;&nbsp;</span>Algorithme</a></span></li><li><span><a href="#Pire-cas,-meilleur-cas" data-toc-modified-id="Pire-cas,-meilleur-cas-2.4"><span class="toc-item-num">2.4&nbsp;&nbsp;</span>Pire cas, meilleur cas</a></span><ul class="toc-item"><li><span><a href="#Exercices" data-toc-modified-id="Exercices-2.4.1"><span class="toc-item-num">2.4.1&nbsp;&nbsp;</span>Exercices</a></span></li><li><span><a href="#Corrections" data-toc-modified-id="Corrections-2.4.2"><span class="toc-item-num">2.4.2&nbsp;&nbsp;</span>Corrections</a></span></li></ul></li><li><span><a href="#Vers-l'analyse-de-la-complexité" data-toc-modified-id="Vers-l'analyse-de-la-complexité-2.5"><span class="toc-item-num">2.5&nbsp;&nbsp;</span>Vers l'analyse de la complexité</a></span></li></ul></li><li><span><a href="#Tri-rapide-(ou-quicksort)" data-toc-modified-id="Tri-rapide-(ou-quicksort)-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Tri rapide (ou <em>quicksort</em>)</a></span><ul class="toc-item"><li><span><a href="#Principe" data-toc-modified-id="Principe-3.1"><span class="toc-item-num">3.1&nbsp;&nbsp;</span>Principe</a></span></li><li><span><a href="#Récursion" data-toc-modified-id="Récursion-3.2"><span class="toc-item-num">3.2&nbsp;&nbsp;</span>Récursion</a></span></li><li><span><a href="#Principe-de-mise-en-oeuvre--avec-duplication-du-tableau-t" data-toc-modified-id="Principe-de-mise-en-oeuvre--avec-duplication-du-tableau-t-3.3"><span class="toc-item-num">3.3&nbsp;&nbsp;</span>Principe de mise en oeuvre  avec duplication du tableau <code>t</code></a></span><ul class="toc-item"><li><span><a href="#Exemple" data-toc-modified-id="Exemple-3.3.1"><span class="toc-item-num">3.3.1&nbsp;&nbsp;</span>Exemple</a></span></li></ul></li><li><span><a href="#Mise-en-oeuvre-en-place" data-toc-modified-id="Mise-en-oeuvre-en-place-3.4"><span class="toc-item-num">3.4&nbsp;&nbsp;</span>Mise en oeuvre en place</a></span></li><li><span><a href="#Exercices" data-toc-modified-id="Exercices-3.5"><span class="toc-item-num">3.5&nbsp;&nbsp;</span>Exercices</a></span></li><li><span><a href="#Corrections" data-toc-modified-id="Corrections-3.6"><span class="toc-item-num">3.6&nbsp;&nbsp;</span>Corrections</a></span></li><li><span><a href="#Performances,-pire-cas,-meilleur-cas" data-toc-modified-id="Performances,-pire-cas,-meilleur-cas-3.7"><span class="toc-item-num">3.7&nbsp;&nbsp;</span>Performances, pire cas, meilleur cas</a></span><ul class="toc-item"><li><span><a href="#Exercices" data-toc-modified-id="Exercices-3.7.1"><span class="toc-item-num">3.7.1&nbsp;&nbsp;</span>Exercices</a></span></li></ul></li><li><span><a href="#Vers-l'analyse-de-la-complexité" data-toc-modified-id="Vers-l'analyse-de-la-complexité-3.8"><span class="toc-item-num">3.8&nbsp;&nbsp;</span>Vers l'analyse de la complexité</a></span></li></ul></li><li><span><a href="#Tri-fusion" data-toc-modified-id="Tri-fusion-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>Tri fusion</a></span><ul class="toc-item"><li><span><a href="#Principe" data-toc-modified-id="Principe-4.1"><span class="toc-item-num">4.1&nbsp;&nbsp;</span>Principe</a></span></li><li><span><a href="#Exemple-de-la-fusion-de-2-tableaux-triés" data-toc-modified-id="Exemple-de-la-fusion-de-2-tableaux-triés-4.2"><span class="toc-item-num">4.2&nbsp;&nbsp;</span>Exemple de la fusion de 2 tableaux triés</a></span></li><li><span><a href="#Algorithme-:-analyse-et-(une)-écriture" data-toc-modified-id="Algorithme-:-analyse-et-(une)-écriture-4.3"><span class="toc-item-num">4.3&nbsp;&nbsp;</span>Algorithme : analyse et (une) écriture</a></span><ul class="toc-item"><li><span><a href="#Fusion" data-toc-modified-id="Fusion-4.3.1"><span class="toc-item-num">4.3.1&nbsp;&nbsp;</span>Fusion</a></span></li><li><span><a href="#Analyse-plus-détaillée-de-la-programmation-de-la-fusion" data-toc-modified-id="Analyse-plus-détaillée-de-la-programmation-de-la-fusion-4.3.2"><span class="toc-item-num">4.3.2&nbsp;&nbsp;</span>Analyse plus détaillée de la programmation de la fusion</a></span><ul class="toc-item"><li><span><a href="#Petite-amélioration" data-toc-modified-id="Petite-amélioration-4.3.2.1"><span class="toc-item-num">4.3.2.1&nbsp;&nbsp;</span>Petite amélioration</a></span></li></ul></li><li><span><a href="#Exercice-de-programmation" data-toc-modified-id="Exercice-de-programmation-4.3.3"><span class="toc-item-num">4.3.3&nbsp;&nbsp;</span>Exercice de programmation</a></span></li></ul></li><li><span><a href="#Diviser-pour-régner" data-toc-modified-id="Diviser-pour-régner-4.4"><span class="toc-item-num">4.4&nbsp;&nbsp;</span>Diviser pour régner</a></span></li><li><span><a href="#Performances,-pire-cas,-meilleur-cas" data-toc-modified-id="Performances,-pire-cas,-meilleur-cas-4.5"><span class="toc-item-num">4.5&nbsp;&nbsp;</span>Performances, pire cas, meilleur cas</a></span></li><li><span><a href="#Vers-l'analyse-de-la-complexité" data-toc-modified-id="Vers-l'analyse-de-la-complexité-4.6"><span class="toc-item-num">4.6&nbsp;&nbsp;</span>Vers l'analyse de la complexité</a></span></li></ul></li><li><span><a href="#Complexités-de-ces-algorithmes-de-tri" data-toc-modified-id="Complexités-de-ces-algorithmes-de-tri-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>Complexités de ces algorithmes de tri</a></span></li><li><span><a href="#($\star$)-Prouver-la-correction-de-ces-algorithmes-de-tri" data-toc-modified-id="($\star$)-Prouver-la-correction-de-ces-algorithmes-de-tri-6"><span class="toc-item-num">6&nbsp;&nbsp;</span>($\star$) Prouver la correction de ces algorithmes de tri</a></span><ul class="toc-item"><li><span><a href="#Tri-insertion" data-toc-modified-id="Tri-insertion-6.1"><span class="toc-item-num">6.1&nbsp;&nbsp;</span>Tri insertion</a></span></li><li><span><a href="#Tri-rapide-(quicksort)" data-toc-modified-id="Tri-rapide-(quicksort)-6.2"><span class="toc-item-num">6.2&nbsp;&nbsp;</span>Tri rapide (<em>quicksort</em>)</a></span></li><li><span><a href="#Tri-fusion" data-toc-modified-id="Tri-fusion-6.3"><span class="toc-item-num">6.3&nbsp;&nbsp;</span>Tri fusion</a></span></li></ul></li><li><span><a href="#Conclusion" data-toc-modified-id="Conclusion-7"><span class="toc-item-num">7&nbsp;&nbsp;</span>Conclusion</a></span></li></ul></div><div class="section" id="introduction">
+<span id="ch-trier"></span><h1>Trier<a class="headerlink" href="#trier" title="Permalink to this headline">¶</a></h1>
+<p>Mis à jour : Apr 12, 2022, lecture : 10
+minutes minimum, PhL.</p>
+<div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="vocabulaire">
 <h3>Vocabulaire<a class="headerlink" href="#vocabulaire" title="Permalink to this headline">¶</a></h3>
@@ -934,7 +934,8 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Sans perte de généralités, les valeurs à trier sont supposées être <span class="math notranslate nohighlight">\(n\)</span> entiers stockés dans un tableau 1D (une liste python).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># si python&lt;3.9</span>
+<span class="c1">#from typing import List</span>
 </pre></div>
 </div>
 </div>
@@ -972,7 +973,7 @@ const thebe_selector_output = ".output, .cell_output"
 <h3>Algorithme<a class="headerlink" href="#algorithme" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">triInsertion</span><span class="p">(</span><span class="n">t</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">triInsertion</span><span class="p">(</span><span class="n">t</span> <span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
     <span class="sd">&#39;&#39;&#39;tri insertion : version itérative</span>
 <span class="sd">    entrées. t : tableau d entiers de longueur n = len(t)</span>
 <span class="sd">    sortie. t est trié par ordre croissant&#39;&#39;&#39;</span>
@@ -1007,9 +1008,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[4, 1, 50, 38, 0]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[42, 38, 38, 24, 48]
 Trions !
-[0, 1, 4, 38, 50]
+[24, 38, 38, 42, 48]
 </pre></div>
 </div>
 </div>
@@ -1020,11 +1021,11 @@ Trions !
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># pire et meilleur cas</span>
-<span class="k">def</span> <span class="nf">pirecasinsertion</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+<span class="k">def</span> <span class="nf">pirecasinsertion</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
     <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">))]</span>
     <span class="k">return</span> <span class="n">a</span>
 
-<span class="k">def</span> <span class="nf">meilleurcasinsertion</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+<span class="k">def</span> <span class="nf">meilleurcasinsertion</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
     <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
     <span class="k">return</span> <span class="n">a</span>
 
@@ -1078,7 +1079,7 @@ meilleur cas
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">valmax</span> <span class="o">=</span> <span class="mi">99</span>
 
-<span class="k">def</span> <span class="nf">triinsertion</span><span class="p">(</span><span class="n">t</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+<span class="k">def</span> <span class="nf">triinsertion</span><span class="p">(</span><span class="n">t</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
     <span class="sd">&#39;&#39;&#39;Même version sans le paramètre n&#39;&#39;&#39;</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)):</span>
         <span class="n">v</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
@@ -1090,7 +1091,7 @@ meilleur cas
     <span class="k">return</span> <span class="n">t</span>
 
 
-<span class="k">def</span> <span class="nf">comptriinsertion</span><span class="p">(</span><span class="n">t</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+<span class="k">def</span> <span class="nf">comptriinsertion</span><span class="p">(</span><span class="n">t</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
     <span class="sd">&quot;&quot;&quot; version avec decompte du nb comparaisons&quot;&quot;&quot;</span>
     <span class="n">c</span> <span class="o">=</span> <span class="mi">0</span> 
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)):</span>
@@ -1112,15 +1113,15 @@ meilleur cas
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># un tableau de valeurs aléatoires</span>
-<span class="k">def</span> <span class="nf">tabalea</span><span class="p">(</span><span class="n">n</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+<span class="k">def</span> <span class="nf">tabalea</span><span class="p">(</span><span class="n">n</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
     <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">valmax</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
     <span class="k">return</span> <span class="n">a</span>
 
-<span class="k">def</span> <span class="nf">pirecasinsertion</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+<span class="k">def</span> <span class="nf">pirecasinsertion</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
     <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">))]</span>
     <span class="k">return</span> <span class="n">a</span>
 
-<span class="k">def</span> <span class="nf">meilleurcasinsertion</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+<span class="k">def</span> <span class="nf">meilleurcasinsertion</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
     <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
     <span class="k">return</span> <span class="n">a</span>
 </pre></div>
@@ -1231,9 +1232,9 @@ meilleur cas
 [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 45 comparaisons pour n =  10
-[57, 77, 87, 93, 65, 36, 8, 94, 92, 5]
-[5, 8, 36, 57, 65, 77, 87, 92, 93, 94]
-31 comparaisons pour n =  10
+[29, 69, 20, 47, 43, 41, 82, 51, 5, 64]
+[5, 20, 29, 41, 43, 47, 51, 64, 69, 82]
+27 comparaisons pour n =  10
 </pre></div>
 </div>
 </div>
@@ -1248,36 +1249,36 @@ meilleur cas
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Meilleur cas : au plus  9 comparaisons pour n =  10
 Pire cas : au moins  45 comparaisons pour n =  10
 Moyenne de  10 cas aleatoires :
-36 comparaisons pour n =  10
-28 comparaisons pour n =  10
-25 comparaisons pour n =  10
-31 comparaisons pour n =  10
-29 comparaisons pour n =  10
-28 comparaisons pour n =  10
+21 comparaisons pour n =  10
+26 comparaisons pour n =  10
 32 comparaisons pour n =  10
-38 comparaisons pour n =  10
-23 comparaisons pour n =  10
+34 comparaisons pour n =  10
+36 comparaisons pour n =  10
+34 comparaisons pour n =  10
+22 comparaisons pour n =  10
+34 comparaisons pour n =  10
 25 comparaisons pour n =  10
+26 comparaisons pour n =  10
 Conclusion :  29 comparaisons en moyenne pour n =  10 ( 10 echantillons)
 ---------
 Meilleur cas : au plus  49 comparaisons pour n =  50
 Pire cas : au moins  1225 comparaisons pour n =  50
 Moyenne de  10 cas aleatoires :
-686 comparaisons pour n =  50
-552 comparaisons pour n =  50
-620 comparaisons pour n =  50
-572 comparaisons pour n =  50
-612 comparaisons pour n =  50
+654 comparaisons pour n =  50
+586 comparaisons pour n =  50
+497 comparaisons pour n =  50
+634 comparaisons pour n =  50
+632 comparaisons pour n =  50
+544 comparaisons pour n =  50
 657 comparaisons pour n =  50
-611 comparaisons pour n =  50
-601 comparaisons pour n =  50
-668 comparaisons pour n =  50
-548 comparaisons pour n =  50
-Conclusion :  612 comparaisons en moyenne pour n =  50 ( 10 echantillons)
+695 comparaisons pour n =  50
+527 comparaisons pour n =  50
+635 comparaisons pour n =  50
+Conclusion :  606 comparaisons en moyenne pour n =  50 ( 10 echantillons)
 ---------
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>((10, 50), [9, 49], [45, 1225], [29, 612])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>((10, 50), [9, 49], [45, 1225], [29, 606])
 </pre></div>
 </div>
 </div>
@@ -1292,36 +1293,36 @@ Conclusion :  612 comparaisons en moyenne pour n =  50 ( 10 echantillons)
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Meilleur cas : au plus  9 comparaisons pour n =  10
 Pire cas : au moins  45 comparaisons pour n =  10
 Moyenne de  10 cas aleatoires :
-27 comparaisons pour n =  10
-36 comparaisons pour n =  10
+28 comparaisons pour n =  10
+35 comparaisons pour n =  10
+22 comparaisons pour n =  10
+30 comparaisons pour n =  10
+41 comparaisons pour n =  10
+26 comparaisons pour n =  10
 29 comparaisons pour n =  10
 33 comparaisons pour n =  10
-28 comparaisons pour n =  10
-28 comparaisons pour n =  10
-25 comparaisons pour n =  10
-31 comparaisons pour n =  10
-30 comparaisons pour n =  10
 32 comparaisons pour n =  10
-Conclusion :  29 comparaisons en moyenne pour n =  10 ( 10 echantillons)
+30 comparaisons pour n =  10
+Conclusion :  30 comparaisons en moyenne pour n =  10 ( 10 echantillons)
 ---------
 Meilleur cas : au plus  49 comparaisons pour n =  50
 Pire cas : au moins  1225 comparaisons pour n =  50
 Moyenne de  10 cas aleatoires :
-700 comparaisons pour n =  50
+729 comparaisons pour n =  50
+728 comparaisons pour n =  50
+777 comparaisons pour n =  50
+655 comparaisons pour n =  50
+651 comparaisons pour n =  50
 733 comparaisons pour n =  50
-732 comparaisons pour n =  50
-571 comparaisons pour n =  50
-660 comparaisons pour n =  50
-535 comparaisons pour n =  50
-678 comparaisons pour n =  50
-592 comparaisons pour n =  50
-606 comparaisons pour n =  50
-623 comparaisons pour n =  50
-Conclusion :  643 comparaisons en moyenne pour n =  50 ( 10 echantillons)
+691 comparaisons pour n =  50
+628 comparaisons pour n =  50
+675 comparaisons pour n =  50
+763 comparaisons pour n =  50
+Conclusion :  703 comparaisons en moyenne pour n =  50 ( 10 echantillons)
 ---------
 </pre></div>
 </div>
-<img alt="../_images/10-trier_26_1.png" src="../_images/10-trier_26_1.png" />
+<img alt="../_images/10-trier_25_1.png" src="../_images/10-trier_25_1.png" />
 </div>
 </div>
 </div>
@@ -1479,7 +1480,7 @@ et le return en ligne 23.</em></p>
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">partition</span><span class="p">(</span><span class="n">t</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">g</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">partition</span><span class="p">(</span><span class="n">t</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">g</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;partitionne t[g,d[</span>
 <span class="sd">    invariant : avant la boucle i</span>
 <span class="sd">    si g&lt;=k &lt; m, t[k] &lt;= pivot</span>
@@ -1509,7 +1510,7 @@ et le return en ligne 23.</em></p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">trirapide0</span><span class="p">(</span><span class="n">t</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">g</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">trirapide0</span><span class="p">(</span><span class="n">t</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">g</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&#39;&#39;&#39;partitionne t[g,d[ </span>
 <span class="sd">    et appels récursifs sur t[g,m[ et t[m+1,d[&#39;&#39;&#39;</span>
     <span class="k">if</span> <span class="n">d</span> <span class="o">-</span> <span class="n">g</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span> <span class="c1">#il reste au moins 2 elmnts ds cette sous-partie de t</span>
@@ -1517,7 +1518,7 @@ et le return en ligne 23.</em></p>
         <span class="n">trirapide0</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">m</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> 
         <span class="n">trirapide0</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">m</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>  
 
-<span class="k">def</span> <span class="nf">trirapide</span><span class="p">(</span><span class="n">t</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="k">def</span> <span class="nf">trirapide</span><span class="p">(</span><span class="n">t</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&#39;&#39;&#39;tri rapide de t[0, len(t)[&#39;&#39;&#39;</span>
     <span class="n">trirapide0</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> 
 </pre></div>
@@ -1613,13 +1614,13 @@ après : [0, 1, 2, 4, 8, 15, 17, 23]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>avant : [59, 37, 22, 14, 51, 42, 34]
-dem : [0, 0, 0, 0, 0, 0, 0] [59, 37, 22, 14, 51, 42, 34]
-partition [g, d[:m -&gt; [ 0 , 7 [: 6 [37, 22, 14, 51, 42, 34, 59] [37, 22, 14, 51, 42, 34, 59]
-partition [g, d[:m -&gt; [ 0 , 6 [: 3 [22, 14, 34, 37, 42, 51] [22, 14, 34, 37, 42, 51]
-partition [g, d[:m -&gt; [ 0 , 3 [: 1 [14, 22, 34] [14, 22, 34]
-partition [g, d[:m -&gt; [ 4 , 6 [: 4 [42, 51] [42, 51]
-après : [14, 22, 34, 37, 42, 51, 59]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>avant : [50, 35, 44, 22, 11, 63, 5]
+dem : [0, 0, 0, 0, 0, 0, 0] [50, 35, 44, 22, 11, 63, 5]
+partition [g, d[:m -&gt; [ 0 , 7 [: 5 [35, 44, 22, 11, 5, 50, 63] [35, 44, 22, 11, 5, 50, 63]
+partition [g, d[:m -&gt; [ 0 , 5 [: 3 [22, 11, 5, 35, 44] [22, 11, 5, 35, 44]
+partition [g, d[:m -&gt; [ 0 , 3 [: 2 [11, 5, 22] [11, 5, 22]
+partition [g, d[:m -&gt; [ 0 , 2 [: 1 [5, 11] [5, 11]
+après : [5, 11, 22, 35, 44, 50, 63]
 </pre></div>
 </div>
 </div>
@@ -1841,7 +1842,7 @@ nb comparaisons : 9
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fusion</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">b</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">g</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">m</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fusion</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">b</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">g</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">m</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot; fusion des 2 moitiés du tableau a en le tableau b.</span>
 <span class="sd">    a et b sont passés en arguments (pas de copie locale, pas de return) : on prend dans a, on range dans b.</span>
 <span class="sd">    entrées. a, b : 2 tableaux (de même taille).</span>
@@ -1893,7 +1894,7 @@ En première lecture, sauter la section suivante et aller en section 4.4 _Divise
 <p>Affichons les états successifs du tableau fusionné.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fusionPrint</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">b</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">g</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">m</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fusionPrint</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">b</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">g</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">m</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot; version avec affichages de :</span>
 <span class="sd">    fusion avec deux tableaux a et b passés en arguments</span>
 <span class="sd">    (pas de copie locale, pas de return) : on prend dans a, on range dans b.</span>
@@ -1999,7 +2000,7 @@ Objectif : ne pas aller inutilement jusqu’au bout d’un sous-tableau alors qu
 <p>Une seule version avec et sans affichage</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fusion</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">b</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">g</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">m</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">verb</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fusion</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">b</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">g</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">m</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">verb</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot; version avec choix d&#39;affichage de :</span>
 <span class="sd">    fusion avec deux tableaux a et b passés en arguments</span>
 <span class="sd">    (pas de copie locale, pas de return) : on prend dans a, on range dans b.</span>
@@ -2074,7 +2075,7 @@ avec affichages
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">trifusion</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim_a</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">trifusion</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim_a</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;tri fusion qui utilise fusion(a,b,g,m,d)</span>
 <span class="sd">    avec une fonction récursive locale pour travailler sur 1 seul tableau&quot;&quot;&quot;</span>
     <span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="p">[:]</span> <span class="c1"># copie de a</span>
@@ -2217,10 +2218,10 @@ avec affichages
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 7, 4, 4, 4, 2, 3] [6, 1, 8, 7, 7, 8, 8, 2]
-[1, 2, 2, 3, 4, 4, 4, 7]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2, 5, 0, 4, 0, 6, 4, 4] [4, 5, 3, 4, 7, 2, 1, 1]
+[0, 0, 2, 4, 4, 4, 5, 6]
 nb comparaisons: 24
-[1, 2, 6, 7, 7, 8, 8, 8]
+[1, 1, 2, 3, 4, 4, 5, 7]
 nb comparaisons: 24
 </pre></div>
 </div>
