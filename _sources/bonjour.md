@@ -256,5 +256,24 @@ Objectif séance de TP :
 
 - Feuille 5 selon vos objectifs  
 
+## Semaine 15
+
+**Motto** : Avoir confiance en ses acquis !
+
+Objectifs semaine :
+
+- **Auto-**valider l'acquisition de ses connaissances
+    - Quiz 4 : récursivité 
+    - Refaire les quiz 1, 2 et 3
+- Maîtrise des compétences du chapitre _Rechercher_ 
+
+Avant le CM :
+ 
+- Lire le chapitre _Trier_ 
+
+**Valider l'acquisition de ses connaissances**
+
+- **CC1 : TP noté du 15 avril 2022**
+
 
 <!-- #endregion -->
