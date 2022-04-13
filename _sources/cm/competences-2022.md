@@ -128,7 +128,7 @@ Dans/avec un notebook jupyter :
  
 ### Savoir-faire
 
-- Savoir écrire des traitements récursifs en place de tableaux (indices \[g, d \[, sentinelles)
+- Savoir écrire des traitements récursifs en place de tableaux (indices \[g, d \[)
 - Savoir écrire les tris insertion, quicksort et fusion sous une forme simple (itérative vs. récursive)
 - Savoir écrire des tests unitaires pertinents pour ces traitements  
 
