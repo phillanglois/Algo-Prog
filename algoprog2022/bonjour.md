@@ -1,4 +1,5 @@
 <!-- #region -->
+(ch:bonjour)=
 # Bienvenu en Algo-Prog !
 
 **Ce support est en évolution tout au long du semestre.**
@@ -12,7 +13,8 @@ Ceci est le premier point d'entrée de l'UE Algo-Prog en complément de l'[espac
 
 - semaine 10, lundi 7 mars 2022 : dead-line rendu du TP1 (pour CC1)
 - semaine 11, mercredi 16 mars 2022 : écrit mi-parcours (CC2)
-- semaine 19, mardi 10 mai 2022 : TP en temps limité (pour CC1)
+- **semaine 15, vendredi 15 avril 2022 : TP2 en temps limité (pour CC1)**
+- semaine 19, mardi 10 mai 2022 : TP3 en temps limité (pour CC1)
 - semaines 20 ou 21, du 16 ou 23 mai 2022 : écrit de fin de semestre (CT)
 :::
 
@@ -238,6 +240,40 @@ Objectif séance de TP :
 
 - Finir le TP _Structures de données_ (moodle).  
 
+## Semaine 14
+
+**Motto** : Commencer par la terminaison (de la récursion) !
+
+Objectifs semaine :
+
+- Maîtrise des compétences du chapitre _Récursivité_
+
+Avant le CM :
+ 
+- Lire le chapitre _Rechercher_ 
+
+Objectif séance de TP :
+
+- Feuille 5 selon vos objectifs  
+
+## Semaine 15
+
+**Motto** : Avoir confiance en ses acquis !
+
+Objectifs semaine :
+
+- **Auto-**valider l'acquisition de ses connaissances
+    - Quiz 4 : récursivité 
+    - Refaire les quiz 1, 2 et 3
+- Maîtrise des compétences du chapitre _Rechercher_ 
+
+Avant le CM :
+ 
+- Lire le chapitre _Trier_ 
+
+**Valider l'acquisition de ses connaissances**
+
+- **CC1 : TP noté du 15 avril 2022**
 
 
 <!-- #endregion -->

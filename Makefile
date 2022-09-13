@@ -38,36 +38,40 @@ all:book
 
 # changer si necessaire
 BOOKDIR = algoprog2022
+
+# tous d'un coup
+ALLSRC = $(wildcard  $(BOOKDIR)/cm/*.ipynb $(BOOKDIR)/cm/*.md $(BOOKDIR)/td/*.ipynb $(BOOKDIR)/td/*.md)
+
+#--------------------------------------------------------------------
+
+book: $(ALLSRC)
+	@cd /Users/langlois/2021/ens/L1-Algo-Prog
+	@pipenv run jupyter-book build algoprog2022
+
+enligne: $(ALLSRC)
+	@cd /Users/langlois/2021/ens/L1-Algo-Prog
+	@pipenv run jupyter-book build algoprog2022
+	@pipenv run ghp-import -n -p -f algoprog2022/_build/html -m "version en ligne : maj"
+
+tp: $(BOOKDIR)/$(wildcard tp2022/*.ipynb)
+	@cd /Users/langlois/2021/ens/L1-Algo-Prog
+	@pipenv run jupyter-book build tp2022
+#--------------------------------------------------------------------
+
 SRCDIR = cm
 DESTDIRPDF = cm-webpdf
 DESTDIRHTML = cm-html
 SRC = $(SRCDIR)/$(NAME)
 
-# tous d'un coup
-ALLSRC = $(wildcard  $(SRCDIR)/*.ipynb)
-
 CXX = jupyter nbconvert 
 OPTPDF =  --to webpdf --template classic --output-dir="$(DESTDIRPDF)"
 OPTHTML= --to html_embed --HTMLExporter.theme=dark  --output-dir="$(DESTDIRHTML)"
-
-book: $(BOOKDIR)/$(ALLSRC)
-	@cd /Users/langlois/2021/ens/L1-Algo-Prog
-	@pipenv run jupyter-book build algoprog2022
-
-enligne: $(BOOKDIR)/$(ALLSRC)
-	@cd /Users/langlois/2021/ens/L1-Algo-Prog
-	@pipenv run jupyter-book build algoprog2022
-	@pipenv run ghp-import -n -p -f algoprog2022/_build/html -m "version en ligne : maj"
-
-tp: $(BOOKDIR)/$(ALLSRC)
-	@cd /Users/langlois/2021/ens/L1-Algo-Prog
-	@pipenv run jupyter-book build tp22
 
 $(SRC).pdf: $(SRC).ipynb
 	@mkdir -p $(DESTDIRPDF)
 	$(CXX) $(OPTPDF)  $< 
 
-$(SRC).html: $(SRC).ipynb
+$(SRC).html: $(SRC).ipynb 
 	@mkdir -p $(DESTDIRHTML)
 	$(CXX) $(OPTHTML)  $<
 

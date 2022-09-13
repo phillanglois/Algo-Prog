@@ -117,6 +117,20 @@ Dans/avec un notebook jupyter :
 - Savoir écrire sous la forme d'une fonction de même signature les versions itérative et récursive d'un algorithme de recherche de valeur dans un ensemble
 - Savoir écrire des tests unitaires pertinents pour ces traitements  
 
+## Trier
+
+### Avoir les idées claires
+
+- Connaître, reconnaître et savoir classifier les algorithmes de tri selon leurs caractéristiques (tris en place, par comparaisons, quadratiques/rapides/linéaires) 
+- Comprendre les algorithmes de tri insertion, _quicksort_ et fusion grâce à leur invariant
+- Savoir identifier les pires et meilleurs cas des tris insertion, _quicksort_ et fusion
+
+ 
+### Savoir-faire
+
+- Savoir écrire des traitements récursifs en place de tableaux (indices \[g, d \[)
+- Savoir écrire les tris insertion, quicksort et fusion sous une forme simple (itérative vs. récursive)
+- Savoir écrire des tests unitaires pertinents pour ces traitements  
 
 ## Types composés
 
@@ -169,7 +183,7 @@ Distinguer les  caractéristiques des structures de données (SD) _tuple_, _list
 
 ### Avoir les idées claires
 
-- Connaitre les principes du formatage des données pour pouvoir retrouver rapidement dans la documentation (de cours ou de référence) les commandes pour effectuer ce traitement.
+- Connaître les principes du formatage des données pour pouvoir retrouver rapidement dans la documentation (de cours ou de référence) les commandes pour effectuer ce traitement.
 
 ### Savoir-faire
 

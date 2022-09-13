@@ -19,6 +19,7 @@ nbdime = "*"
 nbgrader = {path = "./nbgrader"}
 jupyter-book = "*"
 jinja2 = "==3.0.3"
+pandas = "*"
 
 [dev-packages]
 
