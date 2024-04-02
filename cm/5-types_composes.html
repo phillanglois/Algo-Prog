@@ -210,7 +210,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../lecons/5-lecon-rechercher.html">6. Leçon 5 : rechercher</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lecons/6-lecon-trier.html">7. Leçon 6 : trier</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lecons/7-lecon-conteneurs-1.html">8. Leçon 7 : types composés (début)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lecons/9-lecon-es.html">9. Leçon 9 : entrées sorties simples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecons/8-lecon-conteneurs-2.html">9. Leçon 8 : types composés (fin)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecons/9-lecon-es.html">10. Leçon 9 : entrées sorties simples</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">TD</span></p>
 <ul class="nav bd-sidenav">
@@ -1246,7 +1247,7 @@ lst: [&#39;r&#39;, &#39;a&#39;, &#39;n&#39;, &#39;t&#39;, &#39;a&#39;, &#39;n&#3
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
 [3, 1, 2] [3, 1, 2]
-4393146560 4393146560
+4394907136 4394907136
 </pre></div>
 </div>
 </div>
@@ -1282,7 +1283,7 @@ False
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>duplication par affectation de tranche complète : 
 False True
-4358279616 4393146560
+4389817280 4394907136
 </pre></div>
 </div>
 </div>
@@ -1683,9 +1684,12 @@ bnor! 5
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>abc 4305524304
-abc 4305524304
-abcdef 4393191792
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>abc
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 4337096272
+abc 4337096272
+abcdef 4394910768
 </pre></div>
 </div>
 </div>
@@ -1834,10 +1838,10 @@ BONJOUR ! True False
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4393260208
-4393260208
-4393264176
-4393264176
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4394988976
+4394988976
+4394990128
+4394990128
 </pre></div>
 </div>
 </div>
@@ -2069,7 +2073,7 @@ Bonjour &quot;collègue&quot; !
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;y&#39;, &#39;u&#39;, &#39;i&#39;, &#39;o&#39;, &#39;a&#39;, &#39;e&#39;} 6
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;o&#39;, &#39;y&#39;, &#39;i&#39;, &#39;e&#39;, &#39;a&#39;, &#39;u&#39;} 6
 </pre></div>
 </div>
 </div>
@@ -2083,7 +2087,7 @@ Bonjour &quot;collègue&quot; !
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>frozenset({&#39;t&#39;, &#39;l&#39;, &#39; &#39;, &#39;n&#39;, &#39;u&#39;, &#39;b&#39;, &#39;o&#39;, &#39;m&#39;, &#39;a&#39;, &#39;e&#39;}) 10
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>frozenset({&#39; &#39;, &#39;l&#39;, &#39;o&#39;, &#39;b&#39;, &#39;t&#39;, &#39;m&#39;, &#39;e&#39;, &#39;n&#39;, &#39;a&#39;, &#39;u&#39;}) 10
 </pre></div>
 </div>
 </div>
@@ -2096,8 +2100,8 @@ Bonjour &quot;collègue&quot; !
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>aie : {&#39;a&#39;, &#39;i&#39;, &#39;e&#39;}
-voyelles : {&#39;y&#39;, &#39;u&#39;, &#39;i&#39;, &#39;o&#39;, &#39;a&#39;, &#39;e&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>aie : {&#39;e&#39;, &#39;a&#39;, &#39;i&#39;}
+voyelles : {&#39;o&#39;, &#39;y&#39;, &#39;i&#39;, &#39;e&#39;, &#39;a&#39;, &#39;u&#39;}
 </pre></div>
 </div>
 </div>
@@ -2144,11 +2148,11 @@ False
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>union : {&#39;y&#39;, &#39;u&#39;, &#39;i&#39;, &#39;o&#39;, &#39;a&#39;, &#39;e&#39;}
-autre union : {&#39;y&#39;, &#39;f&#39;, &#39;u&#39;, &#39;i&#39;, &#39;o&#39;, &#39;b&#39;, &#39;a&#39;, &#39;e&#39;}
-intersection : {&#39;a&#39;, &#39;i&#39;, &#39;e&#39;}
-difference :  set() {&#39;f&#39;, &#39;b&#39;}
-difference symétrique:  {&#39;y&#39;, &#39;o&#39;, &#39;u&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>union : {&#39;o&#39;, &#39;y&#39;, &#39;i&#39;, &#39;e&#39;, &#39;a&#39;, &#39;u&#39;}
+autre union : {&#39;o&#39;, &#39;b&#39;, &#39;y&#39;, &#39;i&#39;, &#39;e&#39;, &#39;f&#39;, &#39;a&#39;, &#39;u&#39;}
+intersection : {&#39;e&#39;, &#39;a&#39;, &#39;i&#39;}
+difference :  set() {&#39;b&#39;, &#39;f&#39;}
+difference symétrique:  {&#39;o&#39;, &#39;y&#39;, &#39;u&#39;}
 inclusions : True True False False
 </pre></div>
 </div>
