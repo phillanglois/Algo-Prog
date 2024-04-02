@@ -110,11 +110,14 @@ Vacances en s8, s15-s16
 
 ## Semaine 14
 
-- C2 (s14) : jeudi 4 avril 2024, 13h15, écrit, 2 heures
+- Leçon 9 sur les _ES simples_
+- CC2 (s14) : jeudi 4 avril 2024, 13h15, **amphi 2**, écrit, 2 heures
+- TP de la semaine : finir TP2
 
 ## _Semaines 15 et 16_
 
 - Vacances de printemps
+
 
 ## Semaine 17
 
