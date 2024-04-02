@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>6. Leçon 5 : rechercher &#8212; Algo-Prog 2024</title>
+    <title>9. Leçon 9 : entrées sorties simples &#8212; Algo-Prog 2024</title>
   
   
   
@@ -62,13 +62,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'lecons/5-lecon-rechercher';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lecons/9-lecon-es';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="7. Leçon 6 : trier" href="6-lecon-trier.html" />
-    <link rel="prev" title="5. Leçon 4 : récursivité" href="4-lecon-recursion-2.html" />
+    <link rel="next" title="1. Feuille 1 : fonctions" href="../td/td1.html" />
+    <link rel="prev" title="8. Leçon 7 : types composés (début)" href="7-lecon-conteneurs-1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -207,10 +205,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="2-lecon-fonctions-recursion.html">3. Leçon 2 : fonctions et récursion (début)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="3-lecon-recursion.html">4. Leçon 3 : récursivité (début)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="4-lecon-recursion-2.html">5. Leçon 4 : récursivité</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">6. Leçon 5 : rechercher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5-lecon-rechercher.html">6. Leçon 5 : rechercher</a></li>
 <li class="toctree-l1"><a class="reference internal" href="6-lecon-trier.html">7. Leçon 6 : trier</a></li>
 <li class="toctree-l1"><a class="reference internal" href="7-lecon-conteneurs-1.html">8. Leçon 7 : types composés (début)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="9-lecon-es.html">9. Leçon 9 : entrées sorties simples</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">9. Leçon 9 : entrées sorties simples</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">TD</span></p>
 <ul class="nav bd-sidenav">
@@ -274,7 +272,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/phillanglois/Algo-Prog-2024/main?urlpath=tree/algoprog2024/lecons/5-lecon-rechercher.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/phillanglois/Algo-Prog-2024/main?urlpath=tree/algoprog2024/lecons/9-lecon-es.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onBinder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -294,7 +292,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<a href="https://github.com/phillanglois/Algo-Prog-2024/issues/new?title=Issue%20on%20page%20%2Flecons/5-lecon-rechercher.html&body=Your%20issue%20content%20here." target="_blank"
+<a href="https://github.com/phillanglois/Algo-Prog-2024/issues/new?title=Issue%20on%20page%20%2Flecons/9-lecon-es.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button"
    title="Open an issue"
    data-bs-placement="bottom" data-bs-toggle="tooltip"
@@ -320,7 +318,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/lecons/5-lecon-rechercher.ipynb" target="_blank"
+      <li><a href="../_sources/lecons/9-lecon-es.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -404,7 +402,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Leçon 5 : rechercher</h1>
+    <h1>Leçon 9 : entrées sorties simples</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -414,9 +412,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1-recherche-sequentielle">6.1. Exercice 1 : recherche séquentielle</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2-recherche-dichotomique">6.2. Exercice 2 : recherche dichotomique</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#star-bonus">6.3. (<span class="math notranslate nohighlight">\(\star\)</span>) Bonus</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qcm-nsi">9.1. QCM NSI</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qcm-real-python">9.2. QCM Real Python</a></li>
 </ul>
             </nav>
         </div>
@@ -428,58 +425,28 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="lecon-5-rechercher">
-<h1><span class="section-number">6. </span>Leçon 5 : rechercher<a class="headerlink" href="#lecon-5-rechercher" title="Permalink to this heading">#</a></h1>
-<p><strong>Dépôt attendu</strong></p>
-<p>En pdf ou html et/ou jpeg mais <strong>pas de .ipynb</strong> : exercices 1 et 2</p>
-<section id="exercice-1-recherche-sequentielle">
-<h2><span class="section-number">6.1. </span>Exercice 1 : recherche séquentielle<a class="headerlink" href="#exercice-1-recherche-sequentielle" title="Permalink to this heading">#</a></h2>
-<ol class="arabic simple">
-<li><p>Quelle version de recherche séquentielle (parcours complet vs. minimal) correspond à l’écriture récursive proposée pour <code class="docutils literal notranslate"><span class="pre">rech_seq_rec_g</span></code> ?</p></li>
-<li><p>Ecrire l’autre version récursive. Expliquer le principe de cette nouvelle version et l’initialisation correspondante dans <code class="docutils literal notranslate"><span class="pre">rech_seq_rec</span></code>.</p></li>
-<li><p>Vérifier que les 4 tests unitaires sont bien conservés par cette nouvelle version de <code class="docutils literal notranslate"><span class="pre">rech_seq_rec</span></code>.</p></li>
-</ol>
+  <section class="tex2jax_ignore mathjax_ignore" id="lecon-9-entrees-sorties-simples">
+<h1><span class="section-number">9. </span>Leçon 9 : entrées sorties simples<a class="headerlink" href="#lecon-9-entrees-sorties-simples" title="Permalink to this heading">#</a></h1>
+<p><strong>Dépôt attendu :</strong>
+Aucun</p>
+<p>Ces notions sont au programme de NSI, classe de première.
+Il existe ainsi de très nombreux QCM en ligne que vous pouvez utiliser pour accompagner votre acquisition du chapitre.</p>
+<p>En voici deux à effectuer.</p>
+<ul class="simple">
+<li><p>le premier rédigé en français est un peu naïf (choisir 25 questions).</p></li>
+<li><p>le second est extrait du <em>très bon</em> site <a class="reference external" href="https://realpython.com">Real Python</a> que vous savez apprécier maintenant.</p></li>
+</ul>
+<section id="qcm-nsi">
+<h2><span class="section-number">9.1. </span>QCM NSI<a class="headerlink" href="#qcm-nsi" title="Permalink to this heading">#</a></h2>
+<p>Dans <a class="reference external" href="http://fractale.gecif.net/python/qcm/">gecif.net</a>, sélectionner le sujet  “Accès aux fichiers en Python”.</p>
 </section>
-<section id="exercice-2-recherche-dichotomique">
-<h2><span class="section-number">6.2. </span>Exercice 2 : recherche dichotomique<a class="headerlink" href="#exercice-2-recherche-dichotomique" title="Permalink to this heading">#</a></h2>
-<p><strong>Remarque.</strong> Il est <strong>très fortement conseillé</strong> d’effectuer ce travail  en déroulant les algorithmes “à la main” et non en les exécutant sur ordinateur. Ce genre d’exercice peut être demandé en CT écrit.</p>
-<p>Vous présenterez vos résultats successifs sous la forme d’un tableau adapté.</p>
-<ol class="arabic simple">
-<li><p>L’algorithme <code class="docutils literal notranslate"><span class="pre">dichotomie_iterative()</span></code> utilise les variables d’indices <code class="docutils literal notranslate"><span class="pre">g</span></code>, <code class="docutils literal notranslate"><span class="pre">d</span></code> et <code class="docutils literal notranslate"><span class="pre">m</span></code>. Expliciter les valeurs successives prises par ces variables pour les 3 tests unitaires sur <code class="docutils literal notranslate"><span class="pre">t</span></code> et celui du tableau vide.</p></li>
-<li><p>a. Modifier la version du cours de la fonction <code class="docutils literal notranslate"><span class="pre">dichotomie()</span></code> en complétant les <code class="docutils literal notranslate"><span class="pre">...</span></code> de la version suivante qui permet d’écrire un (seul) appel récursif sous la forme  <code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">dichotomie(val,</span> <span class="pre">t,</span> <span class="pre">dim_t,</span> <span class="pre">g,</span> <span class="pre">d)</span></code>.</p></li>
-</ol>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dichotomie</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">t</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim_t</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">g</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;recherche dichotomique : version récursive</span>
-<span class="sd">    recherche val dans t[g, d] et retourne True ou False</span>
-<span class="sd">    entrées. val : int, t: tableau d&#39;int de taille n,</span>
-<span class="sd">    g, d : int indices gauche et droite</span>
-<span class="sd">    &#39;&#39;&#39;</span>
-    <span class="k">if</span> <span class="n">g</span> <span class="o">&gt;</span> <span class="n">d</span><span class="p">:</span>
-        <span class="k">return</span> <span class="kc">False</span> <span class="c1"># t est vide</span>
-    <span class="n">m</span> <span class="o">=</span> <span class="p">(</span><span class="n">g</span> <span class="o">+</span> <span class="n">d</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span> 
-    <span class="k">if</span> <span class="n">t</span><span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="o">==</span> <span class="n">val</span><span class="p">:</span>
-        <span class="k">return</span> <span class="kc">True</span>
-    <span class="k">elif</span> <span class="n">val</span> <span class="o">&lt;</span> <span class="n">t</span><span class="p">[</span><span class="n">m</span><span class="p">]:</span>
-        <span class="o">...</span>
-    <span class="k">else</span><span class="p">:</span>            
-        <span class="o">...</span>
-    <span class="k">return</span> <span class="n">dichotomie</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">dim_t</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
-  
-</pre></div>
-</div>
-<ol class="arabic" start="3">
-<li><p>Reprendre la question 1 (valeurs de <code class="docutils literal notranslate"><span class="pre">g,</span> <span class="pre">m,</span> <span class="pre">d</span></code>) pour <code class="docutils literal notranslate"><span class="pre">dichotomie_recursive()</span></code> qui utilise la “nouvelle” version de <code class="docutils literal notranslate"><span class="pre">dichotomie()</span></code> — celle avec <code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">dichotomie(val,</span> <span class="pre">t,</span> <span class="pre">dim_t,</span> <span class="pre">g,</span> <span class="pre">d)</span></code>).
-Indiquer aussi la valeur de <code class="docutils literal notranslate"><span class="pre">dim_t</span></code> à chaque appel.</p></li>
-<li><p>Et pour chacun des traitements précédents, expliciter :</p>
-<p>a. l’arbre des appels associé,<br />
-b. l’évolution de la pile des appels associée</p>
-<p><strong>Notations.</strong> Pour alléger les notations de ces deux questions, on notera plus simplement   <code class="docutils literal notranslate"><span class="pre">dichotomie(val:</span> <span class="pre">int,</span> <span class="pre">t:</span> <span class="pre">list[int],</span> <span class="pre">dim_t:</span> <span class="pre">int,</span> <span class="pre">g:</span> <span class="pre">int,</span> <span class="pre">d:</span> <span class="pre">int)</span></code> par <code class="docutils literal notranslate"><span class="pre">f(g,</span> <span class="pre">d)</span></code> ; il faut quand même expliciter les valeurs de <code class="docutils literal notranslate"><span class="pre">g</span></code>et <code class="docutils literal notranslate"><span class="pre">d</span></code> des appels concernés.</p>
-</li>
-</ol>
-</section>
-<section id="star-bonus">
-<h2><span class="section-number">6.3. </span>(<span class="math notranslate nohighlight">\(\star\)</span>) Bonus<a class="headerlink" href="#star-bonus" title="Permalink to this heading">#</a></h2>
-<p>Objectif 20 : signaler toutes les fautes ou incorrections typographiques de ce chapitre (sections 4.1 à 4.3 inclus).</p>
+<section id="qcm-real-python">
+<h2><span class="section-number">9.2. </span>QCM Real Python<a class="headerlink" href="#qcm-real-python" title="Permalink to this heading">#</a></h2>
+<p>2 QCM sur les <code class="docutils literal notranslate"><span class="pre">f-strings</span></code> :</p>
+<ul class="simple">
+<li><p><span class="xref myst">qcm1</span></p></li>
+<li><p><a class="reference external" href="https://realpython.com/quizzes/f-strings/">qcm2</a></p></li>
+</ul>
 </section>
 </section>
 
@@ -514,20 +481,20 @@ b. l’évolution de la pile des appels associée</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="4-lecon-recursion-2.html"
+       href="7-lecon-conteneurs-1.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">5. </span>Leçon 4 : récursivité</p>
+        <p class="prev-next-title"><span class="section-number">8. </span>Leçon 7 : types composés (début)</p>
       </div>
     </a>
     <a class="right-next"
-       href="6-lecon-trier.html"
+       href="../td/td1.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">7. </span>Leçon 6 : trier</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Feuille 1 : fonctions</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -547,9 +514,8 @@ b. l’évolution de la pile des appels associée</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1-recherche-sequentielle">6.1. Exercice 1 : recherche séquentielle</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2-recherche-dichotomique">6.2. Exercice 2 : recherche dichotomique</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#star-bonus">6.3. (<span class="math notranslate nohighlight">\(\star\)</span>) Bonus</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qcm-nsi">9.1. QCM NSI</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qcm-real-python">9.2. QCM Real Python</a></li>
 </ul>
   </nav></div>
 
