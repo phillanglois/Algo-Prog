@@ -121,6 +121,9 @@ Vacances en s8, s15-s16
 
 ## Semaine 17
 
+- Avant le CM de jeudi : lire le chapitre _Affectation et appel de fonction -- aspects avancés_ (section 3 et 6 pour Objectif 20) 
+- TP de la semaine : TP3 (knn)
+  
 ## Semaine 18
 
 <!-- #endregion -->
