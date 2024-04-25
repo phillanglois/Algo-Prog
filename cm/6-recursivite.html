@@ -200,6 +200,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="a0-boucles-avancees.html">1. Tableaux et boucles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="a1-booleens.html">2. Annexe : les booléens en python (&gt;3.6)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="a2-ndarray.html">3. Les ‘ndarray’ : de vrais tableaux en python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11-modules-utiles.html">4. Modules utiles</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Leçons</span></p>
 <ul class="nav bd-sidenav">
@@ -504,7 +505,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="recursivite">
 <span id="ch-recursivite"></span><h1><span class="section-number">3. </span>Récursivité<a class="headerlink" href="#recursivite" title="Permalink to this heading">#</a></h1>
-<p>Mis à jour : Apr 22, 2024, lecture : 16
+<p>Mis à jour : Apr 25, 2024, lecture : 16
 minutes minimum, PhL.</p>
 <section id="definitions-et-premiers-exemples">
 <h2><span class="section-number">3.1. </span>Définitions et premiers exemples<a class="headerlink" href="#definitions-et-premiers-exemples" title="Permalink to this heading">#</a></h2>
@@ -1210,7 +1211,7 @@ cas pair et res = 1.157920892373162e+77
 <p>Exhibons que <code class="docutils literal notranslate"><span class="pre">expo_rapide()</span></code>est effectivement plus rapide que <code class="docutils literal notranslate"><span class="pre">expo</span></code></p>
 <p>On en profite pour utiliser le module <a class="reference external" href="https://docs.python.org/fr/3/library/timeit.html"><code class="docutils literal notranslate"><span class="pre">timeit</span></code></a>.
 Ce module complète (et utilise) le module <em>time</em> déjà décrit dans le
-<span class="xref myst">chapitre Modules utiles</span> pour :</p>
+<a class="reference internal" href="11-modules-utiles.html#ch-modulesutiles"><span class="std std-ref">chapitre Modules utiles</span></a> pour :</p>
 <ul class="simple">
 <li><p>automatiquement répéter la partie de code à mesurer (si elle prend très peu de temps) –&gt; option <code class="docutils literal notranslate"><span class="pre">-n</span></code></p></li>
 <li><p>ou automatiquement répéter les mesures et les analyser : garder la meilleure, regarder la moyenne … –&gt; option <code class="docutils literal notranslate"><span class="pre">r</span></code></p></li>
@@ -1227,10 +1228,10 @@ Ce module complète (et utilise) le module <em>time</em> déjà décrit dans le
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>711 ns ± 1.1 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>709 ns ± 2.8 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>371 ns ± 0.995 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>371 ns ± 0.616 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1245,8 +1246,8 @@ Ce module complète (et utilise) le module <em>time</em> déjà décrit dans le
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>709 ns ± 6.18 ns per loop (mean ± std. dev. of 7 runs, 100 loops each)
-372 ns ± 10.6 ns per loop (mean ± std. dev. of 7 runs, 100 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>731 ns ± 47.6 ns per loop (mean ± std. dev. of 7 runs, 100 loops each)
+370 ns ± 9.84 ns per loop (mean ± std. dev. of 7 runs, 100 loops each)
 </pre></div>
 </div>
 </div>
@@ -1260,10 +1261,10 @@ Ce module complète (et utilise) le module <em>time</em> déjà décrit dans le
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>709 ns ± 3.09 ns per loop (mean ± std. dev. of 5 runs, 1,000,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>705 ns ± 2.83 ns per loop (mean ± std. dev. of 5 runs, 1,000,000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>368 ns ± 0.158 ns per loop (mean ± std. dev. of 5 runs, 1,000,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>364 ns ± 0.316 ns per loop (mean ± std. dev. of 5 runs, 1,000,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1363,10 +1364,10 @@ Réponse<div class="sd-summary-down docutils">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>64.8 µs ± 180 ns per loop (mean ± std. dev. of 5 runs, 10,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>65.2 µs ± 204 ns per loop (mean ± std. dev. of 5 runs, 10,000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>308 ns ± 0.114 ns per loop (mean ± std. dev. of 5 runs, 1,000,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>301 ns ± 0.0483 ns per loop (mean ± std. dev. of 5 runs, 1,000,000 loops each)
 </pre></div>
 </div>
 </div>

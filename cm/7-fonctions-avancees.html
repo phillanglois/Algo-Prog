@@ -200,6 +200,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="a0-boucles-avancees.html">1. Tableaux et boucles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="a1-booleens.html">2. Annexe : les booléens en python (&gt;3.6)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="a2-ndarray.html">3. Les ‘ndarray’ : de vrais tableaux en python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11-modules-utiles.html">4. Modules utiles</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Leçons</span></p>
 <ul class="nav bd-sidenav">
@@ -482,7 +483,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="affectation-et-appel-de-fonction-aspects-avances">
 <span id="ch-affectation"></span><h1><span class="section-number">9. </span>Affectation et appel de fonction – aspects avancés<a class="headerlink" href="#affectation-et-appel-de-fonction-aspects-avances" title="Permalink to this heading">#</a></h1>
-<p>Mis à jour : Apr 22, 2024, lecture : 16
+<p>Mis à jour : Apr 25, 2024, lecture : 16
 minutes minimum, PhL.</p>
 <p>Nous abordons maintenant les aspects des fonctions qui dépendent des langages de programmation. Nous insistons surtout sur les choix de python3.</p>
 <p><strong>Rappel.</strong>  Le terme <em>paramètre effectif</em>, et son compagnon <em>paramètre formel</em>, sont des termes “langage-indépendant”. En python, le terme <em>argument</em> est utilisé à la place du terme <em>paramètre effectif</em>. Ainsi argument et paramètre effectif sont des synonymes, et seront utilisés comme tel dans ce qui suit.</p>
@@ -605,7 +606,7 @@ Puis comment ces notions existent en python.</p>
 </li>
 <li><p>une <em>valeur</em> est stockée à un emplacement en mémoire aussi appelé <em>espace de stockage</em></p>
 <ul>
-<li><p>il est unique et test repéré par son <em>adresse</em></p></li>
+<li><p>il est unique et est repéré par son <em>adresse</em></p></li>
 <li><p>une adresse est (similaire à) un <code class="docutils literal notranslate"><span class="pre">int</span></code></p></li>
 <li><p>la taille de l’espace mémoire dépend du type des valeurs à stocker : <code class="docutils literal notranslate"><span class="pre">int</span></code> (par exemple 32 bits) vs <code class="docutils literal notranslate"><span class="pre">float</span></code>(64 bits) vs. une <code class="docutils literal notranslate"><span class="pre">list</span></code> de <code class="docutils literal notranslate"><span class="pre">float</span></code></p></li>
 </ul>
@@ -639,7 +640,7 @@ L’identifiant de la variable est ainsi <strong>une référence</strong> à un 
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">y</span></code> où <code class="docutils literal notranslate"><span class="pre">x</span></code> et <code class="docutils literal notranslate"><span class="pre">y</span></code> sont deux variables.</p>
 </div></blockquote>
-<p>L’association variable <code class="docutils literal notranslate"><span class="pre">x</span></code> &lt;-&gt; variable <code class="docutils literal notranslate"><span class="pre">y</span></code> peut être en effet réalisée de 2 façons :</p>
+<p>L’affectation “variable <code class="docutils literal notranslate"><span class="pre">x</span></code> &lt;- variable <code class="docutils literal notranslate"><span class="pre">y</span></code>” peut être en effet réalisée de 2 façons :</p>
 <ul class="simple">
 <li><p>par <strong>copie</strong> : la variable <code class="docutils literal notranslate"><span class="pre">x</span></code> prend comme valeur <em>la valeur</em> de <code class="docutils literal notranslate"><span class="pre">y</span></code> (la répétition de “valeur” est voulue)</p>
 <ul>
@@ -696,9 +697,22 @@ Mais une référence à quoi ? A une valeur ? A une adresse de la mémoire ?</p>
 </div></blockquote>
 <p><strong>pythontutor.</strong> Illustrons cette importante différence avec cet
 <a class="reference external" href="http://pythontutor.com/visualize.html#code=x%20%3D%203%0At%20%3D%20%5B1,%202,%203%5D%0A&amp;cumulative=false&amp;curInstr=2&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">exemple</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">t</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">x</span></code> est une variable non mutable (c’est un <code class="docutils literal notranslate"><span class="pre">int</span></code>) et son identifiant correspond bien à la valeur d’initialisation, ici <code class="docutils literal notranslate"><span class="pre">3</span></code>. <code class="docutils literal notranslate"><span class="pre">x</span></code> est bien une (référence à) une valeur : la valeur <code class="docutils literal notranslate"><span class="pre">3</span></code>.</p></li>
-<li><p>En revanche, <code class="docutils literal notranslate"><span class="pre">t</span></code>  est une liste python qui représente le tableau 1D de longueur 3 initialisé par les valeurs entières ‘1, 2, 3’. <em>Une liste python est une variable mutable</em>. Ainsi, on voit que la variable <code class="docutils literal notranslate"><span class="pre">t</span></code> est représentée par une flèche qui désigne une (la) zone mémoire où sont stockés les 3 valeurs du tableau <code class="docutils literal notranslate"><span class="pre">t</span></code>.  <code class="docutils literal notranslate"><span class="pre">t</span></code> est encore une valeur mais cette fois, cette valeur est une adresse (vers les valeurs de la variable mutable).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x</span></code> est une variable non mutable (c’est un <code class="docutils literal notranslate"><span class="pre">int</span></code>) et son identifiant correspond bien à la valeur d’initialisation, ici <code class="docutils literal notranslate"><span class="pre">3</span></code>.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">x</span></code> est bien une (référence à) une valeur : la valeur <code class="docutils literal notranslate"><span class="pre">3</span></code>.</p></li>
+</ul>
+</li>
+<li><p>En revanche, <code class="docutils literal notranslate"><span class="pre">t</span></code>  est une liste python qui représente le tableau 1D de longueur 3 initialisé par les valeurs entières ‘1, 2, 3’.</p>
+<ul>
+<li><p><em>Une liste python est une variable mutable</em>. Ainsi, on voit que la variable <code class="docutils literal notranslate"><span class="pre">t</span></code> est représentée par une flèche qui désigne une (la) zone mémoire où sont stockés les 3 valeurs du tableau <code class="docutils literal notranslate"><span class="pre">t</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">t</span></code> est encore une valeur mais cette fois, cette valeur est une adresse (vers les valeurs de la variable mutable).</p></li>
+</ul>
+</li>
 </ul>
 <p>Cette différence va prendre tout son sens avec l’affectation (et le passage de paramètre pour les fonctions).</p>
 <div class="cell docutils container">
@@ -708,14 +722,6 @@ Mais une référence à quoi ? A une valeur ? A une adresse de la mémoire ?</p>
 <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;bonjour&quot;</span>
 <span class="n">e0</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="c1"># un tuple est non mutable</span>
 <span class="n">l0</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="c1"># une liste est mutable</span>
-
-
-<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bonjour
 </pre></div>
 </div>
 </div>
@@ -735,7 +741,7 @@ La modification ultérieure de l’une ou de l’autre des variables nécessite 
 <li><p>Modifier <b>ultérieurement</b> <code class="docutils literal notranslate"><span class="pre">y</span></code>  a-t-il aussi un effet sur <code class="docutils literal notranslate"><span class="pre">x</span></code> ?</p></li>
 </ul>
 </div><p>Un tel effet est appelé un <strong>effet de bord</strong> ; ce qui peut être choquant d’un point de vue algorithmique.</p>
-<p>En python, il est clair maintenant que la réponse à cette question dépend du caractère <em>mutable</em> ou <em>non mutable</em> du type de la variable.</p>
+<p>En python, il est clair maintenant que <strong>la réponse à cette question dépend du caractère <em>mutable</em> ou <em>non mutable</em></strong> du type <strong>de la variable</strong>.</p>
 <p><strong>Rmq.</strong> La fonction prédéfinie <code class="docutils literal notranslate"><span class="pre">id()</span></code> est définie au paragraphe suivant.  Elle retourne l’adresse “en mémoire” de son argument.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -750,45 +756,29 @@ La modification ultérieure de l’une ou de l’autre des variables nécessite 
         <span class="nb">print</span><span class="p">(</span><span class="n">v1</span><span class="p">,</span> <span class="n">v2</span><span class="p">,</span> <span class="n">CAS_VRAI</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">v1</span><span class="p">,</span> <span class="n">v2</span><span class="p">,</span> <span class="n">CAS_FAUX</span><span class="p">)</span>
-
-<span class="c1"># les int sont non mutables</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># les int sont non mutables</span>
 <span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">x</span>
 <span class="n">aff</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="c1"># rmq. pythontutor n&#39;exhibe pas le même traitement  </span>
+<span class="c1"># voir plus loin : exemples introspection</span>
+
 <span class="n">y</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">aff</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
 <span class="n">x</span> <span class="o">=</span> <span class="mi">6</span>
 <span class="n">aff</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
 <span class="c1"># gardons ce cas particulier pour plus tard</span>
-<span class="c1">#x = 5</span>
-<span class="c1">#aff(x, y)</span>
-<span class="nb">print</span><span class="p">()</span>
-
-<span class="c1"># les strings sont non mutables</span>
-<span class="n">s1</span> <span class="o">=</span> <span class="s2">&quot;aa&quot;</span>
-<span class="n">s2</span> <span class="o">=</span> <span class="n">s1</span>
-<span class="n">aff</span><span class="p">(</span><span class="n">s1</span><span class="p">,</span> <span class="n">s2</span><span class="p">)</span>
-<span class="n">s2</span> <span class="o">=</span> <span class="s2">&quot;bb&quot;</span>
-<span class="n">aff</span><span class="p">(</span><span class="n">s1</span><span class="p">,</span> <span class="n">s2</span><span class="p">)</span>
-<span class="n">s1</span> <span class="o">=</span> <span class="s2">&quot;ab&quot;</span>
-<span class="n">aff</span><span class="p">(</span><span class="n">s1</span><span class="p">,</span> <span class="n">s2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">()</span> 
-
-<span class="c1"># les listes sont mutables</span>
-<span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
-<span class="n">m</span> <span class="o">=</span> <span class="n">l</span>
-<span class="n">aff</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span>
-<span class="n">m</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;je modifie complètement m :&quot;</span><span class="p">)</span>
-<span class="n">aff</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">()</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;je recommence avec l = [1,1] et m = l &quot;</span><span class="p">)</span>
-<span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
-<span class="n">m</span> <span class="o">=</span> <span class="n">l</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;mais je modifie partiellement m sans penser à l :&quot;</span><span class="p">)</span>
-<span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span> 
-<span class="n">aff</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">aff</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="c1"># rmq. pythontutor n&#39;exhibe pas le même traitement  </span>
 </pre></div>
 </div>
 </div>
@@ -796,17 +786,69 @@ La modification ultérieure de l’une ou de l’autre des variables nécessite 
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3 3 emplacements mémoire identiques
 3 5 emplacements mémoire différents
 6 5 emplacements mémoire différents
+5 5 emplacements mémoire identiques
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># les strings sont non mutables</span>
+<span class="n">s1</span> <span class="o">=</span> <span class="s2">&quot;aa&quot;</span>
+<span class="n">s2</span> <span class="o">=</span> <span class="n">s1</span>
+<span class="n">aff</span><span class="p">(</span><span class="n">s1</span><span class="p">,</span> <span class="n">s2</span><span class="p">)</span>
 
-aa aa emplacements mémoire identiques
+<span class="n">s2</span> <span class="o">=</span> <span class="s2">&quot;bb&quot;</span>
+<span class="n">aff</span><span class="p">(</span><span class="n">s1</span><span class="p">,</span> <span class="n">s2</span><span class="p">)</span>
+
+<span class="n">s1</span> <span class="o">=</span> <span class="s2">&quot;ab&quot;</span>
+<span class="n">aff</span><span class="p">(</span><span class="n">s1</span><span class="p">,</span> <span class="n">s2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>aa aa emplacements mémoire identiques
 aa bb emplacements mémoire différents
 ab bb emplacements mémoire différents
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># les listes sont mutables</span>
+<span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">l</span>
+<span class="n">aff</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span>
 
-[1, 1] [1, 1] emplacements mémoire identiques
+<span class="n">m</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;je modifie complètement m :&quot;</span><span class="p">)</span>
+<span class="n">aff</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 1] [1, 1] emplacements mémoire identiques
 je modifie complètement m :
 [1, 1] [2, 2] emplacements mémoire différents
-
-je recommence avec l = [1,1] et m = l 
-mais je modifie partiellement m sans penser à l :
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;je recommence avec l = [1,1] et m = l &quot;</span><span class="p">)</span>
+<span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">l</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;mais je modifie partiellement m -- sans penser à l :&quot;</span><span class="p">)</span>
+<span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span> 
+<span class="n">aff</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>je recommence avec l = [1,1] et m = l 
+mais je modifie partiellement m -- sans penser à l :
 [0, 1] [0, 1] emplacements mémoire identiques
 </pre></div>
 </div>
@@ -842,7 +884,7 @@ Une <em>classe</em> d’objets est un modèle d’objets et ainsi un objet d’u
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mf">1.1</span>
 
-<span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mi">10</span>
+<span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
 <span class="n">t</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
@@ -854,11 +896,11 @@ Une <em>classe</em> d’objets est un modèle d’objets et ainsi un objet d’u
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 &lt;class &#39;int&#39;&gt; 4348128376
-1.1 &lt;class &#39;float&#39;&gt; 4400357264
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] &lt;class &#39;list&#39;&gt; 4400582144
-[1, 1] &lt;class &#39;list&#39;&gt; 4400372800
-4348128344 4348128344
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 &lt;class &#39;int&#39;&gt; 4370361464
+1.1 &lt;class &#39;float&#39;&gt; 4422586544
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] &lt;class &#39;list&#39;&gt; 4422827648
+[1, 1] &lt;class &#39;list&#39;&gt; 4422827008
+4370361432 4370361432
 </pre></div>
 </div>
 </div>
@@ -915,6 +957,7 @@ dir(...)
 </div>
 </div>
 </div>
+<p><strong>Rmq.</strong> Redémarrez le noyau avant d’exécuter les cellules suivantes (affichage réduit).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">locals</span><span class="p">()</span> <span class="o">==</span> <span class="nb">globals</span><span class="p">()</span>
@@ -932,15 +975,20 @@ dir(...)
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span><span class="p">()</span>
 <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="c1">#print(dir(a))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">())</span>
 <span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-<span class="c1">#print(dir(l))</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">==</span> <span class="nb">dir</span><span class="p">(</span><span class="n">l</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">())</span>
+<span class="c1">#</span>
+<span class="n">dir_a</span> <span class="o">=</span> <span class="nb">dir</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="n">dir_l</span> <span class="o">=</span> <span class="nb">dir</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dir_a</span> <span class="o">==</span> <span class="n">dir_l</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;In&#39;, &#39;Out&#39;, &#39;_&#39;, &#39;_9&#39;, &#39;__&#39;, &#39;___&#39;, &#39;__builtin__&#39;, &#39;__builtins__&#39;, &#39;__doc__&#39;, &#39;__loader__&#39;, &#39;__name__&#39;, &#39;__package__&#39;, &#39;__spec__&#39;, &#39;_dh&#39;, &#39;_i&#39;, &#39;_i1&#39;, &#39;_i10&#39;, &#39;_i2&#39;, &#39;_i3&#39;, &#39;_i4&#39;, &#39;_i5&#39;, &#39;_i6&#39;, &#39;_i7&#39;, &#39;_i8&#39;, &#39;_i9&#39;, &#39;_ih&#39;, &#39;_ii&#39;, &#39;_iii&#39;, &#39;_oh&#39;, &#39;a&#39;, &#39;aff&#39;, &#39;b&#39;, &#39;e0&#39;, &#39;exit&#39;, &#39;get_ipython&#39;, &#39;l&#39;, &#39;l0&#39;, &#39;m&#39;, &#39;open&#39;, &#39;quit&#39;, &#39;s&#39;, &#39;s1&#39;, &#39;s2&#39;, &#39;t&#39;, &#39;x&#39;, &#39;y&#39;]
+[&#39;In&#39;, &#39;Out&#39;, &#39;_&#39;, &#39;_9&#39;, &#39;__&#39;, &#39;___&#39;, &#39;__builtin__&#39;, &#39;__builtins__&#39;, &#39;__doc__&#39;, &#39;__loader__&#39;, &#39;__name__&#39;, &#39;__package__&#39;, &#39;__spec__&#39;, &#39;_dh&#39;, &#39;_i&#39;, &#39;_i1&#39;, &#39;_i10&#39;, &#39;_i2&#39;, &#39;_i3&#39;, &#39;_i4&#39;, &#39;_i5&#39;, &#39;_i6&#39;, &#39;_i7&#39;, &#39;_i8&#39;, &#39;_i9&#39;, &#39;_ih&#39;, &#39;_ii&#39;, &#39;_iii&#39;, &#39;_oh&#39;, &#39;a&#39;, &#39;aff&#39;, &#39;b&#39;, &#39;e0&#39;, &#39;exit&#39;, &#39;get_ipython&#39;, &#39;l&#39;, &#39;l0&#39;, &#39;m&#39;, &#39;open&#39;, &#39;quit&#39;, &#39;s&#39;, &#39;s1&#39;, &#39;s2&#39;, &#39;t&#39;, &#39;x&#39;, &#39;y&#39;]
+False
 </pre></div>
 </div>
 </div>
@@ -984,20 +1032,20 @@ Etonné ?</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a: 1 &lt;class &#39;int&#39;&gt; 4348128376
-b: 1 &lt;class &#39;int&#39;&gt; 4348128376
-b: 2 &lt;class &#39;int&#39;&gt; 4348128408 
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a: 1 &lt;class &#39;int&#39;&gt; 4370361464
+b: 1 &lt;class &#39;int&#39;&gt; 4370361464
+b: 2 &lt;class &#39;int&#39;&gt; 4370361496 
 
-s: aagskjhdsqgf qkdhqhq  &lt;class &#39;str&#39;&gt; 4400629040
-s2 aagskjhdsqgf qkdhqhq  &lt;class &#39;str&#39;&gt; 4400629040
-s2 a &lt;class &#39;str&#39;&gt; 4347905592 
+s: aagskjhdsqgf qkdhqhq  &lt;class &#39;str&#39;&gt; 4422242576
+s2 aagskjhdsqgf qkdhqhq  &lt;class &#39;str&#39;&gt; 4422242576
+s2 a &lt;class &#39;str&#39;&gt; 4370138680 
 
-[0, 0] &lt;class &#39;list&#39;&gt; 4400380416
-[0, 0] &lt;class &#39;list&#39;&gt; 4400380416
-[1, 0] &lt;class &#39;list&#39;&gt; 4400381120
-[0, 0] &lt;class &#39;list&#39;&gt; 4400380416
-[1, 1] &lt;class &#39;list&#39;&gt; 4400379648
-[0, 1] &lt;class &#39;list&#39;&gt; 4400379648 
+[0, 0] &lt;class &#39;list&#39;&gt; 4422839872
+[0, 0] &lt;class &#39;list&#39;&gt; 4422839872
+[1, 0] &lt;class &#39;list&#39;&gt; 4422840000
+[0, 0] &lt;class &#39;list&#39;&gt; 4422839872
+[1, 1] &lt;class &#39;list&#39;&gt; 4422840256
+[0, 1] &lt;class &#39;list&#39;&gt; 4422840256 
 </pre></div>
 </div>
 </div>
@@ -1079,23 +1127,23 @@ Cependant, elle est sans effet sur les instructions suivantes, comme cet exemple
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a= 1 4348128376
-b= 1 4348128376
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a= 1 4370361464
+b= 1 4370361464
 pas de nouvel espace mémoire suite à b = a. 
 
-a= 2 4348128408
-b= 1 4348128376
+a= 2 4370361496
+b= 1 4370361464
 a est modifié donc un nouvel espace mémoire est créé pour a. 
 
-a= 3 4348128440
+a= 3 4370361528
 a est encore modifié et un nouvel espace mémoire est encore créé.
 Un autre choix aurait été possible mais celui-ci est en cohérence avec le premier traitement observé.
 
-a= 5 4348128504
-a= 6 4348128536 bizarre : a += 1 devrait être effectué en place : cf. plus loin
+a= 5 4370361592
+a= 6 4370361624 bizarre : a += 1 devrait être effectué en place : cf. plus loin
 
-a= 3 4348128440
-b= 1 4348128376
+a= 3 4370361528
+b= 1 4370361464
 pas de surprise
 </pre></div>
 </div>
@@ -1152,21 +1200,21 @@ pas de surprise
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>t = l
-[0, 0] 4400604672
-[0, 0] 4400604672
+[0, 0] 4422416448
+[0, 0] 4422416448
 modification partielle de l
-[2, 0] 4400604672
-[2, 0] 4400604672
+[2, 0] 4422416448
+[2, 0] 4422416448
 modification totale de l
-[4, 3] 4400378048
-[2, 0] 4400604672
+[4, 3] 4422641600
+[2, 0] 4422416448
 modifications de l par ses méthodes (aspects POO)
-[3, 4] 4400378048
-[3, 4] 4400378048
-[4, 3] 4400378048
-[4, 3] 4400378048
-[4, 11, 3] 4400378048
-[4, 11, 3] 4400378048
+[3, 4] 4422641600
+[3, 4] 4422641600
+[4, 3] 4422641600
+[4, 3] 4422641600
+[4, 11, 3] 4422641600
+[4, 11, 3] 4422641600
 </pre></div>
 </div>
 </div>
@@ -1268,15 +1316,15 @@ l= [0, 0, 0] =/ m= [5, 2, 3]  == mm= [5, 2, 3]  == m_copy= [5, 2, 3]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4400446960 Jo
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4422839280 Jo
 
-4400373312 [&#39;Jo&#39;]
-4400446960 Jo
+4422838656 [&#39;Jo&#39;]
+4422839280 Jo
 
 affectation par référence (pas de duplication)
-4400373312 [&#39;Jo&#39;, &#39;Jack&#39;]
-4400373312 [&#39;Jo&#39;, &#39;Jack&#39;]
-4400563440 Averell
+4422838656 [&#39;Jo&#39;, &#39;Jack&#39;]
+4422838656 [&#39;Jo&#39;, &#39;Jack&#39;]
+4422842800 Averell
 
 Averell [&#39;Jo&#39;, &#39;Jack&#39;] [&#39;Jo&#39;, &#39;Jack&#39;]
 </pre></div>
@@ -1310,16 +1358,16 @@ Averell [&#39;Jo&#39;, &#39;Jack&#39;] [&#39;Jo&#39;, &#39;Jack&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4400446960 Jo
-4400379584 [&#39;Jo&#39;]
-4400446960 Jo
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4422839280 Jo
+4422840064 [&#39;Jo&#39;]
+4422839280 Jo
 
 affectation avec duplication
-4400379584 [&#39;Jo&#39;]
-4400373312 [&#39;Jo&#39;]
+4422840064 [&#39;Jo&#39;]
+4422838656 [&#39;Jo&#39;]
 
-4400379584 [&#39;Jo&#39;, &#39;Averell&#39;]
-4400373312 [&#39;Jo&#39;, &#39;Jack&#39;]
+4422840064 [&#39;Jo&#39;, &#39;Averell&#39;]
+4422838656 [&#39;Jo&#39;, &#39;Jack&#39;]
 Averell [&#39;Jo&#39;, &#39;Averell&#39;] [&#39;Jo&#39;, &#39;Jack&#39;]
 </pre></div>
 </div>
@@ -1359,10 +1407,10 @@ Mystère ?</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4348128344 4348128696
-4348128376 4348128728
-4400600896 4400588864
-4400600896 4400528384
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4370361432 4370361784
+4370361464 4370361816
+4422607744 4422833600
+4422607744 4422817664
 </pre></div>
 </div>
 </div>
@@ -1404,12 +1452,12 @@ Le traitement sur la liste <code class="docutils literal notranslate"><span clas
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2 4348128408
-id dans f -- t: 4348128472 , u:  4348128408
-4 4348128472
-[10] 4400600896
-id dans f -- t: 4400593216 , u:  4400600896
-[10, 10] 4400600896
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2 4370361496
+id dans f -- t: 4370361560 , u:  4370361496
+4 4370361560
+[10] 4422607744
+id dans f -- t: 4422828992 , u:  4422607744
+[10, 10] 4422607744
 </pre></div>
 </div>
 </div>
@@ -1436,12 +1484,12 @@ id dans f -- t: 4400593216 , u:  4400600896
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2 4348128408
-id dans f -- t: 4348128472 , u:  4348128408
-6 4348128536
-[10] 4400600576
-id dans f -- t: 4400594432 , u:  4400600576
-[10, 10, 10] 4400600576
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2 4370361496
+id dans f -- t: 4370361560 , u:  4370361496
+6 4370361624
+[10] 4422836544
+id dans f -- t: 4422836864 , u:  4422836544
+[10, 10, 10] 4422836544
 </pre></div>
 </div>
 </div>
@@ -1587,11 +1635,11 @@ False
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>avant appel:
 l= [0, 1] ll= [0, 1] , m= [0, 1] mm= [0, 1]
-id : l= 4400381504 , ll= 4400381504 , m= 4400579136 , mm= 4400372800
+id : l= 4422838528 , ll= 4422838528 , m= 4422837120 , mm= 4422839872
 
 appel avec affectation l = f(l):
 l= [0, 1, 0, 1] ll= [0, 1] , m= [0, 1]
-id : l= 4400572352 , ll= 4400381504 , m= 4400579136
+id : l= 4422824768 , ll= 4422838528 , m= 4422837120
 </pre></div>
 </div>
 </div>
@@ -1651,22 +1699,22 @@ est une fois de plus instructive.</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>l, ll, m
-[0, 0] &lt;class &#39;list&#39;&gt; 4400726272
-[0, 0] &lt;class &#39;list&#39;&gt; 4400726272
-[0, 0] &lt;class &#39;list&#39;&gt; 4400726208
+[0, 0] &lt;class &#39;list&#39;&gt; 4422996672
+[0, 0] &lt;class &#39;list&#39;&gt; 4422996672
+[0, 0] &lt;class &#39;list&#39;&gt; 4422996608
 
 appel sans affectation du retour: g(l)
 print g(l)= None
 l= [0, 0, 1] ll= [0, 0, 1] , m= [0, 0]
-id= 4400726272 id= 4400726272 , id= 4400726208
+id= 4422996672 id= 4422996672 , id= 4422996608
 
 appel avec affectation: l = g(l)
 l= None ll= [0, 0, 1, 1] , m= [0, 0]
-id= 4348126864 id= 4400726272 , id= 4400726208
+id= 4370359952 id= 4422996672 , id= 4422996608
 
 appel avec affectation m = g(l):
 l= [0, 0, 1] ll= [0, 0, 1, 1] , m= None
-id= 4400726592 id= 4400726272 , id= 4348126864
+id= 4422997696 id= 4422996672 , id= 4370359952
 </pre></div>
 </div>
 </div>
@@ -1709,8 +1757,19 @@ id= 4400726592 id= 4400726272 , id= 4348126864
 <span class="n">a</span> <span class="o">=</span> <span class="n">b</span>
 <span class="n">b</span> <span class="o">=</span> <span class="n">t</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;après : a,b =&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">permuter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>avant : a,b = 1 11
+après : a,b = 11 1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">permuter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39; attention : </span>
 <span class="sd">    les print dans cette fonction sont uniquement à but pédagogique</span>
 <span class="sd">    &#39;&#39;&#39;</span>
@@ -1731,9 +1790,7 @@ id= 4400726592 id= 4400726272 , id= 4348126864
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>avant : a,b = 1 11
-après : a,b = 11 1
-avant fonction : a,b = 1 11
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>avant fonction : a,b = 1 11
 dans permuter, avant x,y : 1 11
 dans permuter, après x,y : 11 1
 après fonction : a,b = 1 11
@@ -1785,24 +1842,24 @@ Cette fonction peut être très utile pour <em>debugger</em> un développement q
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>avant les appels:
 l= [0, 0] ll= [0, 0] m= [0, 0]
-@l= 4400677376 @ll= 4400677376 @m= 4400684544
+@l= 4422939008 @ll= 4422939008 @m= 4422935104
 
 appel sans affectation du retour:
-main: @l= 4400677376
-  f avant : @= 4400677376
-  f après : @=  4400730880
-  f avant : @= 4400677376
-  f après : @=  4400731008
-print f(l)= [0, 0, 0, 0] @f(l)= 4400731008
+main: @l= 4422939008
+  f avant : @= 4422939008
+  f après : @=  4423001088
+  f avant : @= 4422939008
+  f après : @=  4423001216
+print f(l)= [0, 0, 0, 0] @f(l)= 4423001216
 l= [0, 0] ll= [0, 0] , m= [0, 0]
-@l= 4400677376 @ll= 4400677376 @m= 4400684544
+@l= 4422939008 @ll= 4422939008 @m= 4422935104
 
 appel avec affectation l = f(l):
-  f avant : @= 4400677376
-  f après : @=  4400726592
-main: @l(après l=f(l))= 4400726592
+  f avant : @= 4422939008
+  f après : @=  4422997696
+main: @l(après l=f(l))= 4422997696
 l= [0, 0, 0, 0] ll= [0, 0] , m= [0, 0]
-@l= 4400726592 @ll= 4400677376 @m= 4400684544
+@l= 4422997696 @ll= 4422939008 @m= 4422935104
 </pre></div>
 </div>
 </div>
@@ -1851,20 +1908,20 @@ l= [0, 0, 0, 0] ll= [0, 0] , m= [0, 0]
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>avant les appels:
-u= 0 @u= 4348128344
+u= 0 @u= 4370361432
 
 appel sans affectation du retour:
-  f_r: avant @= 4348128344
-  f_r: après @= 4348128344
-  f_r: avant @= 4348128344
-  f_r: après @= 4348128344
-f(u)= 2 @f(u)= 4348128408
-u= 0 @u= 4348128344
+  f_r: avant @= 4370361432
+  f_r: après @= 4370361432
+  f_r: avant @= 4370361432
+  f_r: après @= 4370361432
+f(u)= 2 @f(u)= 4370361496
+u= 0 @u= 4370361432
 
 appel avec affectation du retour:
-  f_r: avant @= 4348128344
-  f_r: après @= 4348128344
-u après u=f(u)= 2 @u= 4348128408
+  f_r: avant @= 4370361432
+  f_r: après @= 4370361432
+u après u=f(u)= 2 @u= 4370361496
 </pre></div>
 </div>
 </div>
@@ -1898,20 +1955,20 @@ u après u=f(u)= 2 @u= 4348128408
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>avant les appels:
-u= 1 @u= 4348128376
+u= 1 @u= 4370361464
 
 appel sans affectation du retour:
-  f_x: avant @= 4348128376
-  f_x: après @= 4348128440
-  f_x: avant @= 4348128376
-  f_x: après @= 4348128440
-f(u)= 3 @f(u)= 4348128440
-u= 1 @u= 4348128376
+  f_x: avant @= 4370361464
+  f_x: après @= 4370361528
+  f_x: avant @= 4370361464
+  f_x: après @= 4370361528
+f(u)= 3 @f(u)= 4370361528
+u= 1 @u= 4370361464
 
 appel avec affectation du retour:
-  f_x: avant @= 4348128376
-  f_x: après @= 4348128440
-u après u=f(u)= 3 @u= 4348128440
+  f_x: avant @= 4370361464
+  f_x: après @= 4370361528
+u après u=f(u)= 3 @u= 4370361528
 </pre></div>
 </div>
 </div>
@@ -1945,20 +2002,20 @@ u après u=f(u)= 3 @u= 4348128440
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>avant les appels:
-u= 0 @u= 4348128344
+u= 0 @u= 4370361432
 
 appel sans affectation du retour:
-  f_=: avant @= 4348128344
-  f_=: après @= 4348128408
-  f_=: avant @= 4348128344
-  f_=: après @= 4348128408
-f(u)= 2 @f(u)= 4348128408
-u= 0 @u= 4348128344
+  f_=: avant @= 4370361432
+  f_=: après @= 4370361496
+  f_=: avant @= 4370361432
+  f_=: après @= 4370361496
+f(u)= 2 @f(u)= 4370361496
+u= 0 @u= 4370361432
 
 appel avec affectation du retour:
-  f_=: avant @= 4348128344
-  f_=: après @= 4348128408
-u après u=f(u)= 2 @u= 4348128408
+  f_=: avant @= 4370361432
+  f_=: après @= 4370361496
+u après u=f(u)= 2 @u= 4370361496
 </pre></div>
 </div>
 </div>
