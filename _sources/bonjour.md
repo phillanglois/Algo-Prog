@@ -18,9 +18,10 @@ Vacances en s8, s15-s16
 
 
 - CC1 (s12) : vendredi 22 mars 2024, 14 heures, durée : 2 heures : TP1 individuel sur machine, en temps limité
-- **CC2 (s14) : jeudi 4 avril 2024, 13h15**, écrit, 2 heures
-- CC1 : TP2 3 heures individuel sur machine, à venir en semaine examen
-- CT : écrit 2 heures, à venir en semaine examen
+- Leçons (s14) : jeudi 4 avril 2024, 13h15, écrit, 20 minutes
+- CC2 (s14) : jeudi 4 avril 2024, 13h45, écrit, 2 heures
+- **CC1 : TP2** 3 heures individuel sur machine, **mercredi 29 mai 2024, 9h00**
+- **CT** (s21) : écrit 2 heures, **vendredi 24 mai 2024, 9h00**
 
 
 :::
@@ -125,5 +126,10 @@ Vacances en s8, s15-s16
 - TP de la semaine : TP3 (knn)
   
 ## Semaine 18
+
+- Leçon 10 sur les _fichiers_, les aspects avancés de l'_affectation_ et des révisions sur l'ensemble du semestre (objectif 10).
+- ($\star$) Avant le CM de jeudi : lire la section 4.5 du chapitre _Rechercher_, la section 5.6 du chapitre _Trier_
+- TP de la semaine : finir TP3 (knn)
+
 
 <!-- #endregion -->

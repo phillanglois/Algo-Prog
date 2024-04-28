@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>9. Leçon 8 : types composés (fin) &#8212; Algo-Prog 2024</title>
+    <title>11. Leçon 10 : fichiers, affectation : révisions, aspects avancés et passage de paramètres &#8212; Algo-Prog 2024</title>
   
   
   
@@ -62,11 +62,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'lecons/8-lecon-conteneurs-2';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lecons/10-lecon-fichier-affectation-revision';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="10. Leçon 9 : entrées sorties simples" href="9-lecon-es.html" />
-    <link rel="prev" title="8. Leçon 7 : types composés (début)" href="7-lecon-conteneurs-1.html" />
+    <link rel="next" title="1. Feuille 1 : fonctions" href="../td/td1.html" />
+    <link rel="prev" title="10. Leçon 9 : entrées sorties simples" href="9-lecon-es.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -210,9 +212,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="5-lecon-rechercher.html">6. Leçon 5 : rechercher</a></li>
 <li class="toctree-l1"><a class="reference internal" href="6-lecon-trier.html">7. Leçon 6 : trier</a></li>
 <li class="toctree-l1"><a class="reference internal" href="7-lecon-conteneurs-1.html">8. Leçon 7 : types composés (début)</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">9. Leçon 8 : types composés (fin)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="8-lecon-conteneurs-2.html">9. Leçon 8 : types composés (fin)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="9-lecon-es.html">10. Leçon 9 : entrées sorties simples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="10-lecon-fichier-affectation-revision.html">11. Leçon 10 : fichiers, affectation : révisions, aspects avancés et passage de paramètres</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">11. Leçon 10 : fichiers, affectation : révisions, aspects avancés et passage de paramètres</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">TD</span></p>
 <ul class="nav bd-sidenav">
@@ -276,7 +278,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/phillanglois/Algo-Prog-2024/main?urlpath=tree/algoprog2024/lecons/8-lecon-conteneurs-2.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/phillanglois/Algo-Prog-2024/main?urlpath=tree/algoprog2024/lecons/10-lecon-fichier-affectation-revision.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onBinder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -296,7 +298,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<a href="https://github.com/phillanglois/Algo-Prog-2024/issues/new?title=Issue%20on%20page%20%2Flecons/8-lecon-conteneurs-2.html&body=Your%20issue%20content%20here." target="_blank"
+<a href="https://github.com/phillanglois/Algo-Prog-2024/issues/new?title=Issue%20on%20page%20%2Flecons/10-lecon-fichier-affectation-revision.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button"
    title="Open an issue"
    data-bs-placement="bottom" data-bs-toggle="tooltip"
@@ -322,7 +324,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/lecons/8-lecon-conteneurs-2.ipynb" target="_blank"
+      <li><a href="../_sources/lecons/10-lecon-fichier-affectation-revision.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -406,7 +408,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Leçon 8 : types composés (fin)</h1>
+    <h1>Leçon 10 : fichiers, affectation : révisions, aspects avancés et passage de paramètres</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -416,8 +418,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qcm-nsi">9.1. QCM NSI</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qcm-real-python">9.2. QCM Real Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fichiers">11.1. Fichiers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#affectation-revisions-star-aspects-avances-et-passage-de-parametres">11.2. Affectation : révisions, (<span class="math notranslate nohighlight">\(\star\)</span>) aspects avancés et passage de paramètres</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#revisions-objectif-10">11.3. Révisions objectif 10</a></li>
 </ul>
             </nav>
         </div>
@@ -429,48 +432,40 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="lecon-8-types-composes-fin">
-<h1><span class="section-number">9. </span>Leçon 8 : types composés (fin)<a class="headerlink" href="#lecon-8-types-composes-fin" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="lecon-10-fichiers-affectation-revisions-aspects-avances-et-passage-de-parametres">
+<h1><span class="section-number">11. </span>Leçon 10 : fichiers, affectation : révisions, aspects avancés et passage de paramètres<a class="headerlink" href="#lecon-10-fichiers-affectation-revisions-aspects-avances-et-passage-de-parametres" title="Permalink to this heading">#</a></h1>
 <p><strong>Dépôt attendu :</strong>
 Aucun</p>
-<p>Ces notions sont au programme de NSI, classe de première.
-Il existe ainsi de très nombreux QCM en ligne que vous pouvez utiliser pour accompagner votre acquisition du chapitre.</p>
-<p>En voici deux à effectuer.</p>
 <ul class="simple">
-<li><p>le premier rédigé en français est complet (choisir au moins 25 questions).</p></li>
-<li><p>le second est extrait du <em>très bon</em> site <a class="reference external" href="https://realpython.com">Real Python</a> que vous savez apprécier maintenant.</p></li>
+<li><p>Les (<span class="math notranslate nohighlight">\(\star\)</span>) désignent des activités “Objectif 20”.</p></li>
+<li><p>Chaque question des QCM Real Python est accompagnées d’explications qu’il est conseillé de lire, qu’on ait correctement répondu ou non à la question.</p></li>
 </ul>
-<section id="qcm-nsi">
-<h2><span class="section-number">9.1. </span>QCM NSI<a class="headerlink" href="#qcm-nsi" title="Permalink to this heading">#</a></h2>
-<p>Dans <a class="reference external" href="http://fractale.gecif.net/python/qcm/">gecif.net</a>, sélectionner les 4 sujets</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- Les chaînes de caractères
-- Les listes
-- Les dictionnaires
-- Les ensembles
-</pre></div>
-</div>
+<section id="fichiers">
+<h2><span class="section-number">11.1. </span>Fichiers<a class="headerlink" href="#fichiers" title="Permalink to this heading">#</a></h2>
+<p>QCM Real Python :</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://realpython.com/quizzes/python-reading-and-writing-files/">qcm fichiers</a></p></li>
+</ul>
 </section>
-<section id="qcm-real-python">
-<h2><span class="section-number">9.2. </span>QCM Real Python<a class="headerlink" href="#qcm-real-python" title="Permalink to this heading">#</a></h2>
-<p>2 QCM sur les <code class="docutils literal notranslate"><span class="pre">dict</span></code>, 1 sur les <code class="docutils literal notranslate"><span class="pre">str</span></code> (parmi d’autres sur ce site), 1 sur les <code class="docutils literal notranslate"><span class="pre">set</span></code>.</p>
-<ol class="arabic simple">
-<li><p><a class="reference external" href="https://realpython.com/quizzes/python-basics-dictionaries/">Les bases</a> des dictionnaires</p>
+<section id="affectation-revisions-star-aspects-avances-et-passage-de-parametres">
+<h2><span class="section-number">11.2. </span>Affectation : révisions, (<span class="math notranslate nohighlight">\(\star\)</span>) aspects avancés et passage de paramètres<a class="headerlink" href="#affectation-revisions-star-aspects-avances-et-passage-de-parametres" title="Permalink to this heading">#</a></h2>
+<p>QCM Real Python</p>
 <ul class="simple">
-<li><p>Au moins une question comporte des chaines formatées (<code class="docutils literal notranslate"><span class="pre">f-string()</span></code>) qui seront vues en CM jeudi (chapitre <a class="reference internal" href="../cm/9-ES-formats.html#ch-es-formats"><span class="std std-ref">ES : formats</span></a>)</p></li>
+<li><p><a class="reference external" href="https://realpython.com/quizzes/python-variables/">qcm variables</a></p>
+<ul>
+<li><p>dans 1 ou 2 questions, comprendre <em>objet</em> comme <em>espace de stockage</em> en mémoire (voir cours)</p></li>
 </ul>
 </li>
-<li><p><a class="reference external" href="https://realpython.com/quizzes/python-dictionary-iteration/">Itérer sur des dictionnaires</a></p>
-<ul class="simple">
-<li><p>La dernière question est hors programme</p></li>
+<li><p>(<span class="math notranslate nohighlight">\(\star\)</span>) Variables, portée, visibilité : <a class="reference external" href="https://realpython.com/quizzes/python-basics-scopes/">qcm</a> Real Python</p></li>
 </ul>
-</li>
-<li><p><a class="reference external" href="https://realpython.com/quizzes/python-basics-strings-and-string-methods/">Les bases </a> des chaines de caractères</p>
+</section>
+<section id="revisions-objectif-10">
+<h2><span class="section-number">11.3. </span>Révisions objectif 10<a class="headerlink" href="#revisions-objectif-10" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Au moins une question comporte des chaines formatées (<code class="docutils literal notranslate"><span class="pre">f-string()</span></code>) qui seront vues en CM jeudi (chapitre <a class="reference internal" href="../cm/9-ES-formats.html#ch-es-formats"><span class="std std-ref">ES : formats</span></a>)</p></li>
+<li><p><strong>Rappel.</strong> Les qcm du cours sont sur moodle</p></li>
+<li><p>Vous pouvez cocher “tous les thèmes” des <a class="reference external" href="http://fractale.gecif.net/python/qcm/">qcm</a> GECIF</p></li>
+<li><p>QCP Real Python sur <em>fonctions et boucles</em> : <a class="reference external" href="https://realpython.com/quizzes/python-basics-functions-and-loops/">qcm</a></p></li>
 </ul>
-</li>
-<li><p><a class="reference external" href="https://realpython.com/quizzes/python-sets/viewer/">Les bases</a> des ensembles</p></li>
-</ol>
 </section>
 </section>
 
@@ -505,20 +500,20 @@ Il existe ainsi de très nombreux QCM en ligne que vous pouvez utiliser pour acc
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="7-lecon-conteneurs-1.html"
+       href="9-lecon-es.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">8. </span>Leçon 7 : types composés (début)</p>
+        <p class="prev-next-title"><span class="section-number">10. </span>Leçon 9 : entrées sorties simples</p>
       </div>
     </a>
     <a class="right-next"
-       href="9-lecon-es.html"
+       href="../td/td1.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">10. </span>Leçon 9 : entrées sorties simples</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Feuille 1 : fonctions</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -538,8 +533,9 @@ Il existe ainsi de très nombreux QCM en ligne que vous pouvez utiliser pour acc
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qcm-nsi">9.1. QCM NSI</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qcm-real-python">9.2. QCM Real Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fichiers">11.1. Fichiers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#affectation-revisions-star-aspects-avances-et-passage-de-parametres">11.2. Affectation : révisions, (<span class="math notranslate nohighlight">\(\star\)</span>) aspects avancés et passage de paramètres</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#revisions-objectif-10">11.3. Révisions objectif 10</a></li>
 </ul>
   </nav></div>
 
