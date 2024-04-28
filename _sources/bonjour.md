@@ -20,8 +20,8 @@ Vacances en s8, s15-s16
 - CC1 (s12) : vendredi 22 mars 2024, 14 heures, durée : 2 heures : TP1 individuel sur machine, en temps limité
 - Leçons (s14) : jeudi 4 avril 2024, 13h15, écrit, 20 minutes
 - CC2 (s14) : jeudi 4 avril 2024, 13h45, écrit, 2 heures
-- **CC1 : TP2** 3 heures individuel sur machine, **mercredi 29 mai 2024, 9h00**
-- **CT** (s21) : écrit 2 heures, **vendredi 24 mai 2024, 9h00**
+- **CC1 (s22) : TP2 3 heures individuel sur machine, mercredi 29 mai 2024, 9h00**
+- **CT (s21) : écrit 2 heures, vendredi 24 mai 2024, 9h00**
 
 
 :::
