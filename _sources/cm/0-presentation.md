@@ -1,5 +1,5 @@
 (ch:intro)=
-# Algo Prog en 2024
+# Algo Prog en 2025
 
 Mis à jour : {sub-ref}`today`, lecture : {sub-ref}`wordcount-minutes` minutes minimum, PhL.
 
@@ -9,20 +9,19 @@ Mis à jour : {sub-ref}`today`, lecture : {sub-ref}`wordcount-minutes` minutes m
 - Comment me rencontrer : sur RDV _DEMANDÉ PAR E-MAIL_  
 - Où me rencontrer : au bâtiment B, étage 1, à gauche (laboratoire DALI).
 
-## Algo-Prog : version 2024
+## Algo-Prog ce semestre
 
 
-- Les [supports du CM](https://phillanglois.github.io/Algo-Prog-2024/bonjour.html) régulièrement mis à jour.
+- Les [supports du CM](https://phillanglois.github.io/Algo-Prog/bonjour.html) régulièrement mis à jour.
 - Les autres ressources sont sur l'espace moodle de cet enseignement.
 
-### Version 2024
+### Version 2025
 
-- **évolutions** vs. 2023-2024
+- **évolutions** vs. 2024-2025
 - 12 séances de CM : **2h/semaine**
-- 10.5 séances _distancielles_ (dites de "leçons") : 1h/semaines (**nouveau en 2024**) 
-- 12 séances de TD-TP : 3h/semaine 
-- chargés de TD : David Parello (TD1),, Ph. Langlois (TD2 et TD3), Vincent Zucca (TD4)
-- Démarrage : CM en semaine 3 (`sd`=s3), leçons en s5, TD en s4, vacances en s8, s15-s16
+- ~~10.5 séances _distancielles_ (dites de "leçons") : 1h/semaines (**nouveau en 2024**)~~
+- 15 séances de TD-TP : 3h/semaine ou 6h/dernières semaines  
+- chargés de TD : David Parello (TD1), Ph. Langlois (TD2 et TD3), Youssef Fahkredine (TD4), Benjamin Antunes (TD5)
 
 
 ### Contrôle de connaissances et dates importantes
@@ -30,19 +29,10 @@ Mis à jour : {sub-ref}`today`, lecture : {sub-ref}`wordcount-minutes` minutes m
 CC : contrôle "dit" continu, CT contrôle "dit" terminal
 
 ```{Warning}
-**Note UE = CC1/2 + CC2/4 + CT/4**
+**Note UE = (TP1 + TP2 + CC + CT)/4**
 ```
 
-- CC1 sur ordinateur : 0.5 * TP1 + 0.5 * TP2
-  - mi-semestre : TP1 individuel, en temps limité (2h ou plus selon possibilité edt)
-  - fin de semestre, semaine examen : TP2 individuel, en temps limité (3h) sur machine UPVD 
-- CC2 : 0.5 * leçons + 0.5 écrit
-  - leçons : évaluation randomisée du travail déposé après les 7 séances "leçons"
-  - mi-semestre : écrit surtout algorithmique, 2h.
-- CT :
-  - fin de semestre, semaine examen : écrit de 2h surtout algorithmique
-
-**Dates.** Les dates de ces évaluations sont annoncées en début de [la page d'accueil du cours](ch:bonjour).
+**Dates et détails.** Les dates de ces évaluations sont annoncées en début de [la page d'accueil du cours](ch:bonjour).
 
 ## Structure de l'enseignement
 
@@ -51,10 +41,9 @@ CC : contrôle "dit" continu, CT contrôle "dit" terminal
 - 10 chapitres, 12 semaines, 11 séances de CM, 12 séances de TD ou TP
 - "12ème séance" : écrit mi-parcours, TP de fin de semestre
 - Pour chaque chapitre  
-  - explicitation des compétences visées : savoirs, savoirs-faire
-  - leçon d'accompagnement à l'appropriations des compétences
-  - quizz d'aide à la compréhension et la mémorisation de ces compétences
-  - présentation et explication d'exercices détaillés en CM
+  - explicitation des _compétences_ visées : savoirs, savoirs-faire
+  - des quizz d'aide à la compréhension et la mémorisation de ces compétences
+  - _l'enseignant_ ... présente et explique des exercices détaillés en CM
   - _vous_ travaillez sur des exercices de TD et de TP, les contrôles des années précédentes, ...
 
 ### CM
@@ -63,11 +52,11 @@ CC : contrôle "dit" continu, CT contrôle "dit" terminal
 Le CM est **essentiel** à la compréhension globale de l'UE issue de l'articulation de toutes les notions traitées.
 ```
 
-Alternance de séquences d'1h pour séance de 2 heures :
+Alternance de séquences d'une heure pour une séance de CM de deux heures
 
 - "matière de cours" : nouvelles notions (40 min)
-- d'exercices dirigés et d'interactions : quizz, questions/réponses, ... (10 min)
-- pause (10 min)
+- exercices dirigés et interactions : quizz, questions/réponses, ... (10 min)
+- pause (5 min)
 
 ### La très grande importance des CM
 
@@ -77,63 +66,61 @@ Alternance de séquences d'1h pour séance de 2 heures :
 
 - **Morale** : ne manquer aucun CM, être attentif, prendre des notes, poser des questions, **se poser** des questions, demander des pauses pour reprendre une attention maximale  
 
-    - les notes de cours fournies sont trompeuses : comme un film sans le son
+    - les notes de cours fournies sont trompeuses : comme un film sans le son :(
 
 - **Méthodologie de travail du CM** : 
     1. relire le cours le soir de l'amphi (15-20 min) 
-    2. le reprendre en détail 4-5 jours après en "leçon" et en préparant des exercices de TD ou de TP -- en groupe : ça aide !
-    3. faire une auto-évaluation de ce que _vous_ en avez retenu la veille du cours suivant : le chapitre compétences est utile. 
+    2. le reprendre en détail 4-5 jours après et en préparant des exercices de TD ou de TP -- en groupe : ça aide !
+    3. faire une auto-évaluation de ce que _vous_ en avez retenu la veille du cours suivant : le chapitre _Compétences_ est utile. 
     4. identifier les questions à poser en séance de TD ou en CM
-
-### Les séances de "leçons" (nouveau en 2024) 
 
 **Il est faux de croire** que :
 
 > l'exercice posé en examen n'a pas été traité en cours ni en td !  
 
 Cette impression traduit une _compréhension insuffisamment approfondie_ du cours. 
-Ces séances "de leçon" vous accompagnent dans les étapes 2-3-4 de la méthodologie décrite au paragraphe précédent.
-Deux résultats sont visés. D'abord une véritable _appropriation personnelle_ du cours. 
-Ensuite, à terme, _votre autonomie_ dans cette démarche d'appropriation, autonomie indispensable à la réussite à l'université. 
+C'est-à-dire un investissement insuffisant dans les étapes 2-3-4 de la méthodologie décrite au paragraphe précédent.
+Visez deux résultats : 
 
-- Ces séances sont organisées de façon  _distancielle et synchrone_ (cad. au même moment dans l'emploi du temps pour tous les groupes de TD).
-- Elles sont obligatoires au même titre que les TD présentiels (présence renseignée, justification d'absences, interdiction d'examen au delà de 25% d'absences non justifiées).
-- Un programme de travail d'une heure (au moins) est proposé. 
-- Les ressources sont disponibles sous moodle.
-- Le travail demandé fait l'objet d'un dépôt moodle individuel en fin de séance. **Attention** : une heure limite fermera la possibilité de déposer votre travail. 
-- Ce travail sera évalué et un retour individuel sera effectué. 
-- Cette évaluation représente la part "leçons" du CC2. 
+  1. d'abord une véritable _appropriation personnelle_ du cours ;
+  2. ensuite, à terme, _votre autonomie_ dans cette démarche d'appropriation, autonomie indispensable à la réussite à l'université. 
 
+### _Objectif 10_ ou _Objectif 20_ ?
 
-### Les TD pour réfléchir et travailler en petit groupe
-
-- séance de 1h25
-- par groupe de 2 à __4__
 - **objectif 10** ou **objectif 20**  
-  - feuilles de TD en 2 parties
-  - objectif 10 : 
-    - applications basiques du cours, démarche guidée
-    - pour celles et ceux qui ne veulent pas continuer en informatique au delà du L2 math-info  
-  - objectif 20 : 
-    - applications plus avancées du cours, démarche plus autonome
-    - pour celles et ceux qui **veulent continuer** en licence et master informatique, CAPES  informatique (nouveau !), ...
-  - comment choisir son niveau d'objectif ?
-    - note algo semestre 1 < 10 --> objectif 10
-    - le choix n'est pas définitif
-    - méthodologie : __chaque (groupe) d'étudiants__ définit __son rythme__ en suivant le parcours proposé par le chargé de TD.  
+  - 
 
-### Les TP pour maitriser les notions et acquérir du savoir-faire personnel  
+Objectif 10 (O10) : 
 
+- applications basiques du cours, démarche guidée
+- pour celles et ceux qui ne veulent pas continuer en informatique au delà du L2 math-info  
+
+Objectif 20 (O20) : 
+
+- applications plus avancées du cours, démarche plus autonome
+- pour celles et ceux qui **veulent continuer** en licence et master informatique, CAPES  informatique (nouveau !), ...
+
+Comment choisir son niveau d'objectif ?
+
+- note algo semestre 1 < 10 --> objectif 10
+- le choix n'est pas définitif
+- méthodologie : __chaque (groupe) d'étudiants__ définit __son rythme__ en suivant le parcours proposé par le chargé de 
+TD.
+
+Contrat 
+
+- feuilles de TD en 2 parties : O10 et 020
+- tous les sujets notés comportent au moins 10 points de niveau O10 
+
+### TD et TP 
+
+TD : des exercices pour appliquer les connaissances du cours 
+
+TP : un sujet sur un thème pour maitriser les notions et acquérir du savoir-faire personnel  
 - 1 TP = un _notebook jupyter_
+- codage, expérimentation et approfondissement 
+- exemples de TP : mini base de données, traitement d'images, cryptographie, classification, problèmes classiques en informatique : huit reines, sac à dos, ...
 
-- codage, expérimentation et approfondissement :
-  - des TD d'algo 
-  - du CM de Programmation  
-
-- exemples de TP avec dead-line (pour l'évaluation de CC) :  
-  - mini base de données  
-  - traitement d'images  
-  - cryptographie
 
 ### Les outils pour mieux comprendre, mieux retenir
 
@@ -146,7 +133,7 @@ Ensuite, à terme, _votre autonomie_ dans cette démarche d'appropriation, auton
 - les [notebook jupyter](https://jupyter.org/try)
   - sur votre machine : _la solution à privilégier_
   - en ligne : [google colab](https://colab.research.google.com), [cocalc](https://cocalc.com)
-  - _Débuter avec les notebooks_. De Denis Pinsard et disponible sur moodle
+  - MTU _Utiliser les notebooks Jupyter_
   - première séance  de TD
 
 - [python tutor](http://pythontutor.com) 
@@ -157,12 +144,32 @@ Ensuite, à terme, _votre autonomie_ dans cette démarche d'appropriation, auton
 
 - les quizz en ligne (moodle)
 
-## Savoirs, savoir faire, savoir être
 
-- Des connaissances à connaitre :)
-- Des techniques à savoir mettre en oeuvre
-- Des outils à savoir utiliser
-- Des ressources à savoir mobiliser
+## Deux points importants
+
+1. Votre guide : la liste des [compétences par chapitre](./competences.md)
+2. Un environnement python, similaire sur sa machine perso et en salles info
+
+
+### Installer un environnement python
+
+```{Important}
+On conseille d'installer une distribution récente [Anaconda](https://www.anaconda.com/products/individual)  (python $\ge$ 3.11).  
+```
+
+Une fois Anaconda installée, vous avez accès à toutes les ressources python nécessaires ce semestre : jupyter, interpréteur python, principaux modules, gestionnaire conda, ... 
+
+Le web est bien sûr plein de tutos et autres sites explicatifs ...
+On peut s'aider des liens ci-après.
+
+- [Un tutoriel](https://zestedesavoir.com/tutoriels/1448/installer-un-environnement-de-developpement-python-avec-conda/)  
+- [Un autre](https://www.davidculley.com/installing-python-on-a-mac/) pour mac mais/et en anglais, très complet : le début seul devrait vous suffire.
+
+**Pièges**
+- Ne pas confondre ~~`python 2`~~ et `python 3` 
+
+
+## Compléments 
 
 ### Acquis du semestre 1 et prérequis 
 
@@ -180,7 +187,7 @@ Vérifiez vos acquisitions en début de semestre 2 !
   - (python) : un rappel sur le "type" `bool`est proposé en [annexe du cours](./a1-booleens.ipynb).
 
 - Bien différencier _valeur_ vs. _variable_ vs. _constante_  
-  - _évaluation_   
+  - _évaluation_ 
   - et comprendre comment le modèle d'exécution en modifie l'état  
   - _affectation_ : `=`  
 
@@ -207,8 +214,7 @@ Vérifiez vos acquisitions en début de semestre 2 !
   - _indentation_  
   - typage dynamique  
 
-## Programme détaillé : aspects plutôt algorithmique
-
+## Programme détaillé des aspects "algorithmique"
 
 - Récursivité : 
   - **la notion centrale du semestre**
@@ -237,16 +243,16 @@ La récursion s'appuie sur la notion de _fonction_ présentée dans les aspects 
   - tous les problèmes coûtent pareils ?  
   - notions : complexité en temps, pire cas, complexité asymptotique  
   - exemples d'algos plutôt numériques et leurs complexités
-      - différentes évaluations de polynômes 
+    - différentes évaluations de polynômes 
 
 - Compléments si assez de temps : prouver la terminaison et la correction d'un algorithme
   - l'algo fournit la/les solution/s en un temps fini
   - l'algo résout bien le pb
   - notions : invariant de boucle, preuve de terminaison
 
-## Programme détaillé : aspects plus programmation 
+## Programme détaillé des aspects "programmation" 
 
-### Rappels du semestre 1
+### Rappels de notions du semestre 1
 
 - Tableaux 1D :
   - rappel : avec des listes python (`lst`)
@@ -259,16 +265,17 @@ La récursion s'appuie sur la notion de _fonction_ présentée dans les aspects 
   - boucles imbriquées  
   - exemples du cours : 
     - traitement d'images : initialisation niveaux de gris, transformations d'images (miroir, contraste, contours, ...) 
-    - algorithmes sur les matrices : vérification (identité, symétrie), calcul (produit de matrices,...) , génération de formes particulières (transposée, ...
+    - algorithmes sur les matrices : vérification (identité, symétrie), calcul (produit de matrices,...) , génération de formes particulières (transposée, ...)
 
-- Fonctions **une notion centrale** 
+- Fonctions : **une notion centrale** à maitriser 
   - fonctions prédéfinies ou existantes
   - en-tête, corps, appel, paramètres formels et effectifs. 
   - portée, visibilité, variables locales vs. paramètres  
 
 ### Notions du semestre 2
 
-- Fonctions 
+- Fonctions : aspects plus avancés
+  - tests unitaires
   - mode de passage des paramètres
   - exemples du cours : doubler, permuter  
 
@@ -276,7 +283,7 @@ La récursion s'appuie sur la notion de _fonction_ présentée dans les aspects 
   - approfondissement : introspection  
   - autres types de données composés
     - listes (`lst`) : fonctions et méthodes
-    - n-uplets (`tuple`), ensembles (`set`), dictionnaires (`dict`)
+    - n-uplets (`tuple`), dictionnaires (`dict`), ensembles (`set`)
 
 - Entrées/sorties et fichiers
   - Très pratique pour tester ses développements : 
@@ -284,11 +291,10 @@ La récursion s'appuie sur la notion de _fonction_ présentée dans les aspects 
   **Bannir les entrées au clavier !** 
   Plus d'`input()` à tours de bras SVP !!!
   ```
-
 - Modules
-  - utilisation de modules existants 
-  - exemple d'outils :`numpy`, `scipy`, `matplotlib`, `time` 
-  - définition de ses modules
+  - utilisation de modules existants : `math`
+  - exemple d'outils : `numpy`, `matplotlib`, `time` 
+  
 
 -   
 ```{note}
@@ -303,20 +309,15 @@ Des ressources présentées en annexe du support de cours pourront être exploit
 ## Supports de cours
 
 ```{note}
-Excepté les supports de cours cette année, toutes les autres ressources sont sur moodle et sont mises à jour **très** régulièrement
+Excepté ce support de cours, toutes les autres ressources sont sur moodle et sont mises à jour **très** régulièrement
 ```
 
-- CM : notebook python (version pdf, html) 
 - TD : feuilles d'exercices (pdf) 
+- corrections des exercices objectif 10 des TD : au fur et à mesure du semestre
 - TP : notebook python (versions ipynb, pdf, html)  
 - sujets et correction des CC et CT des années précédentes
 
-Au fur et à mesure du semestre :
-
-- TD : corrections des exercices objectif 10 
-
-
-## Travailler en python
+### Travailler en python
 
 Il est indispensable :
 
@@ -331,6 +332,7 @@ Ensuite, les [distributions python](#En-pratique) sont assez variées, et peuven
 Il est aisé _pour chacun_ de trouver ce qui correspond à ses contraintes matérielles et ses envies.  
 
 ### IMPORTANT : De quoi a-t-on *absolument* besoin ?
+
 Ce qui suit est une liste minimale de composants utiles cette année et les années à venir. 
 Elle peut sembler longue mais en pratique, ces composants "arrivent" d'un seul coup avec une distribution -- cf. paragraphe suivant.  
 
@@ -347,9 +349,9 @@ Elle peut sembler longue mais en pratique, ces composants "arrivent" d'un seul c
 
 - les gestionnaire de paquets (modules) python pour compléter et mettre à jour son environnement
     - `conda`: plus complet si distribution anaconda utilisée (solution recommandée)  
-    - `pip` : classique   
+    - `pip` : classique
     - Exemple d'utilisation : 
-        - `conda` : `conda list`, `pip install le_module_que_je_veux` et voilà, c'est fini ! 
+        - `conda` : `conda list`, `conda install le_module_que_je_veux` et voilà, c'est fini ! 
         - `pip` : pareil `list`, `update`, `install`  
 
 - modules indispensables 
@@ -362,25 +364,10 @@ Elle peut sembler longue mais en pratique, ces composants "arrivent" d'un seul c
 - modules utiles mais optionnels cette année  
     - `scipy` : scientific python qui rassemble des modules de calcul scientifiques (dont `numpy`) 
 
-**Pièges**
-- Ne pas confondre ~~`python 2`~~ et `python 3` 
 
 **Conseil**
 - Choisir une distribution la plus complète possible dès le début.   
 
-### En pratique
-
-#### Installer un environnement python
-
-```{Important}
-On conseille d'installer une distribution récente [Anaconda](https://www.anaconda.com/products/individual)  (python $\ge$ 3.10).  
-```
-
-Dans ce cadre, on peut s'aider des  liens ci-après.
-Le web est bien sûr plein de tutos et autres sites explicatifs ...
-
-- [Un tutoriel](https://zestedesavoir.com/tutoriels/1448/installer-un-environnement-de-developpement-python-avec-conda/)  
-- [Un autre](https://www.davidculley.com/installing-python-on-a-mac/) pour mac mais/et en anglais, très complet : le début seul devrait vous suffire.
 
 #### Distributions python classiques  
 
@@ -402,8 +389,8 @@ On télécharge, on installe, on travaille !
 ## Références bibliographiques
 
 ### Algo et prog
-- Informatique pour tous en CPGE avec Python et nouveaux programmes 2013 : 
 
+- Informatique pour tous en CPGE avec Python et nouveaux programmes 2013 : 
     - B. Wack _et al._ (Eyrolles)  
     - Th. Audibert et A. Oussalah. (Ellipses)   
     - E. Le Nagard (Pearson)
