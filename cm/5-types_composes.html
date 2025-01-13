@@ -30,12 +30,12 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.4cbf315f70debaebd550c87a6162cf0f.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
@@ -49,18 +49,14 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -168,7 +164,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -197,19 +204,19 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Compléments</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="a0-boucles-avancees.html">1. Tableaux et boucles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="a1-booleens.html">2. Annexe : les booléens en python (&gt;3.6)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="a2-ndarray.html">3. Les ‘ndarray’ : de vrais tableaux en python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="11-modules-utiles.html">4. Modules utiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a0-boucles-avancees.html">10. Tableaux et boucles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a1-booleens.html">11. Annexe : les booléens en python (&gt;3.6)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a2-ndarray.html">12. Les ‘ndarray’ : de vrais tableaux en python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11-modules-utiles.html">13. Modules utiles</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">TD</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../td/td1.html">1. Feuille 1 : fonctions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../td/td2.html">2. Feuille 2 : récursivité</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../td/td1.html">14. Feuille 1 : fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../td/td2.html">15. Feuille 2 : récursivité</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">(Intervenants) suivi des séances</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../suivi_seances.html">1. (Intervenant) Suivi des séances</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../suivi_seances.html">16. (Intervenant) Suivi des séances</a></li>
 </ul>
 
     </div>
@@ -899,7 +906,7 @@ retourne le nombre d’occurrences de <code class="docutils literal notranslate"
 <p><strong>Attention.</strong></p>
 <ul class="simple">
 <li><p>Les <code class="docutils literal notranslate"><span class="pre">tuple</span></code> sont non mutables donc modifier <code class="docutils literal notranslate"><span class="pre">c</span></code> (ici par concaténation à l’avant-dernière ligne) créé en fait une <em>nouvelle</em> variable <code class="docutils literal notranslate"><span class="pre">c</span></code>.</p></li>
-<li><p>L’exécution <a class="reference external" href="https://pythontutor.com/visualize.html#code=c%20%3D%20%281,2,3%29%0Ac2%20%3D%20c%20%2B%20c%0Ad1%20%3D%20c%20*%203%0Ac%20%3D%20c%20%2B%20%284,%29&amp;cumulative=false&amp;curInstr=4&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">pythontutor</a>
+<li><p>L’exécution <a class="reference external" href="https://pythontutor.com/visualize.html#code=c%20%3D%20%281,2,3%29%0Ac2%20%3D%20c%20%2B%20c%0Ad1%20%3D%20c%20*%203%0Ac%20%3D%20c%20%2B%20%284,%29&amp;amp;cumulative=false&amp;amp;curInstr=4&amp;amp;heapPrimitives=nevernest&amp;amp;mode=display&amp;amp;origin=opt-frontend.js&amp;amp;py=3&amp;amp;rawInputLstJSON=%5B%5D&amp;amp;textReferences=false">pythontutor</a>
 illustre bien ce point important.</p></li>
 </ul>
 <p><strong>Exercice.</strong> Que penser de la fonction à la spécification incomplète suivante ?</p>
@@ -1236,7 +1243,7 @@ lst: [&#39;r&#39;, &#39;a&#39;, &#39;n&#39;, &#39;t&#39;, &#39;a&#39;, &#39;n&#3
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
 [3, 1, 2] [3, 1, 2]
-4405296128 4405296128
+4393755904 4393755904
 </pre></div>
 </div>
 </div>
@@ -1272,7 +1279,7 @@ False
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>duplication par affectation de tranche complète : 
 False True
-4405371584 4405296128
+4388493376 4393755904
 </pre></div>
 </div>
 </div>
@@ -1344,7 +1351,7 @@ False True
 </li>
 <li><p>L’<strong>accès <code class="docutils literal notranslate"><span class="pre">clé</span> <span class="pre">-&gt;</span> <span class="pre">valeur</span></code></strong> s’effectue en temps constant</p>
 <ul>
-<li><p>très court en pratique : technique de <span class="xref myst"><em>hachage</em></span></p></li>
+<li><p>très court en pratique : technique de <a class="reference internal" href="#"><span class="xref myst"><em>hachage</em></span></a></p></li>
 </ul>
 </li>
 </ul>
@@ -1673,9 +1680,9 @@ bnor! 5
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>abc 4347582032
-abc 4347582032
-abcdef 4405426032
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>abc 4335818320
+abc 4335818320
+abcdef 4393774448
 </pre></div>
 </div>
 </div>
@@ -1824,10 +1831,10 @@ BONJOUR ! True False
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4405331120
-4405331120
-4405335408
-4405335408
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4393676144
+4393676144
+4393669552
+4393669552
 </pre></div>
 </div>
 </div>
@@ -2059,7 +2066,7 @@ Bonjour &quot;collègue&quot; !
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;a&#39;, &#39;e&#39;, &#39;o&#39;, &#39;y&#39;, &#39;u&#39;, &#39;i&#39;} 6
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;y&#39;, &#39;e&#39;, &#39;a&#39;, &#39;i&#39;, &#39;o&#39;, &#39;u&#39;} 6
 </pre></div>
 </div>
 </div>
@@ -2073,7 +2080,7 @@ Bonjour &quot;collègue&quot; !
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>frozenset({&#39; &#39;, &#39;a&#39;, &#39;b&#39;, &#39;e&#39;, &#39;l&#39;, &#39;o&#39;, &#39;m&#39;, &#39;n&#39;, &#39;u&#39;, &#39;t&#39;}) 10
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>frozenset({&#39;b&#39;, &#39;m&#39;, &#39;l&#39;, &#39;e&#39;, &#39;n&#39;, &#39;a&#39;, &#39;o&#39;, &#39;t&#39;, &#39;u&#39;, &#39; &#39;}) 10
 </pre></div>
 </div>
 </div>
@@ -2086,8 +2093,8 @@ Bonjour &quot;collègue&quot; !
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>aie : {&#39;e&#39;, &#39;a&#39;, &#39;i&#39;}
-voyelles : {&#39;a&#39;, &#39;e&#39;, &#39;o&#39;, &#39;y&#39;, &#39;u&#39;, &#39;i&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>aie : {&#39;a&#39;, &#39;i&#39;, &#39;e&#39;}
+voyelles : {&#39;y&#39;, &#39;e&#39;, &#39;a&#39;, &#39;i&#39;, &#39;o&#39;, &#39;u&#39;}
 </pre></div>
 </div>
 </div>
@@ -2134,11 +2141,11 @@ False
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>union : {&#39;a&#39;, &#39;e&#39;, &#39;o&#39;, &#39;y&#39;, &#39;u&#39;, &#39;i&#39;}
-autre union : {&#39;a&#39;, &#39;e&#39;, &#39;o&#39;, &#39;f&#39;, &#39;y&#39;, &#39;u&#39;, &#39;b&#39;, &#39;i&#39;}
-intersection : {&#39;e&#39;, &#39;a&#39;, &#39;i&#39;}
-difference :  set() {&#39;b&#39;, &#39;f&#39;}
-difference symétrique:  {&#39;o&#39;, &#39;y&#39;, &#39;u&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>union : {&#39;y&#39;, &#39;e&#39;, &#39;a&#39;, &#39;i&#39;, &#39;o&#39;, &#39;u&#39;}
+autre union : {&#39;y&#39;, &#39;b&#39;, &#39;e&#39;, &#39;a&#39;, &#39;i&#39;, &#39;o&#39;, &#39;f&#39;, &#39;u&#39;}
+intersection : {&#39;a&#39;, &#39;i&#39;, &#39;e&#39;}
+difference :  set() {&#39;f&#39;, &#39;b&#39;}
+difference symétrique:  {&#39;y&#39;, &#39;o&#39;, &#39;u&#39;}
 inclusions : True True False False
 </pre></div>
 </div>

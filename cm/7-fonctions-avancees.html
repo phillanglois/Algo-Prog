@@ -30,12 +30,12 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.4cbf315f70debaebd550c87a6162cf0f.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
@@ -49,25 +49,21 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'cm/7-fonctions-avancees';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1. Tableaux et boucles" href="a0-boucles-avancees.html" />
+    <link rel="next" title="10. Tableaux et boucles" href="a0-boucles-avancees.html" />
     <link rel="prev" title="8. Les entrées-sorties (E/S) : formats" href="9-ES-formats.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -168,7 +164,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -197,19 +204,19 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Compléments</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="a0-boucles-avancees.html">1. Tableaux et boucles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="a1-booleens.html">2. Annexe : les booléens en python (&gt;3.6)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="a2-ndarray.html">3. Les ‘ndarray’ : de vrais tableaux en python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="11-modules-utiles.html">4. Modules utiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a0-boucles-avancees.html">10. Tableaux et boucles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a1-booleens.html">11. Annexe : les booléens en python (&gt;3.6)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a2-ndarray.html">12. Les ‘ndarray’ : de vrais tableaux en python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11-modules-utiles.html">13. Modules utiles</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">TD</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../td/td1.html">1. Feuille 1 : fonctions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../td/td2.html">2. Feuille 2 : récursivité</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../td/td1.html">14. Feuille 1 : fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../td/td2.html">15. Feuille 2 : récursivité</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">(Intervenants) suivi des séances</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../suivi_seances.html">1. (Intervenant) Suivi des séances</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../suivi_seances.html">16. (Intervenant) Suivi des séances</a></li>
 </ul>
 
     </div>
@@ -546,7 +553,7 @@ le mode <code class="docutils literal notranslate"><span class="pre">in-out</spa
 La suite de ce chapitre va permettre de mieux voir de quoi il s’agit.</p>
 <p>Mentionnons qu’<strong>en python</strong>, le passage de paramètres est en fait similaire à celui de l’<em>affectation</em>.
 Il nous faut donc détailler ce qu’il y a “derrière” l’affectation en python.
-C’est l’objet de la <span class="xref myst">section suivante</span>.</p>
+C’est l’objet de la <a class="reference internal" href="#revisiter_les_variables_et_l'affectation"><span class="xref myst">section suivante</span></a>.</p>
 <p>Cependant indiquons dès maintenant <strong>ce qu’il faut retenir</strong> concernant le passage de paramètres.</p>
 <div class="alert alert-block alert-info">
 <p>Le passage des paramètres ( et de l’affectation ) en python <b>dépend</b> du caractère <b>mutable</b> ou <b>non mutable de l’argument</b> (i.e. paramètre effectif) concerné.</p>
@@ -683,7 +690,7 @@ Mais une référence à quoi ? A une valeur ? A une adresse de la mémoire ?</p>
 </ul>
 </div></blockquote>
 <p><strong>pythontutor.</strong> Illustrons cette importante différence avec cet
-<a class="reference external" href="http://pythontutor.com/visualize.html#code=x%20%3D%203%0At%20%3D%20%5B1,%202,%203%5D%0A&amp;cumulative=false&amp;curInstr=2&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">exemple</a>.</p>
+<a class="reference external" href="http://pythontutor.com/visualize.html#code=x%20%3D%203%0At%20%3D%20%5B1,%202,%203%5D%0A&amp;amp;cumulative=false&amp;amp;curInstr=2&amp;amp;heapPrimitives=nevernest&amp;amp;mode=display&amp;amp;origin=opt-frontend.js&amp;amp;py=3&amp;amp;rawInputLstJSON=%5B%5D&amp;amp;textReferences=false">exemple</a>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="n">t</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 </pre></div>
@@ -883,11 +890,11 @@ Une <em>classe</em> d’objets est un modèle d’objets et ainsi un objet d’u
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 &lt;class &#39;int&#39;&gt; 4340460664
-1.1 &lt;class &#39;float&#39;&gt; 4392642832
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] &lt;class &#39;list&#39;&gt; 4392788096
-[1, 1] &lt;class &#39;list&#39;&gt; 4392787392
-4340460632 4340460632
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 &lt;class &#39;int&#39;&gt; 4335529080
+1.1 &lt;class &#39;float&#39;&gt; 4423313680
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] &lt;class &#39;list&#39;&gt; 4423457728
+[1, 1] &lt;class &#39;list&#39;&gt; 4423457088
+4335529048 4335529048
 </pre></div>
 </div>
 </div>
@@ -1019,20 +1026,20 @@ Etonné ?</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a: 1 &lt;class &#39;int&#39;&gt; 4340460664
-b: 1 &lt;class &#39;int&#39;&gt; 4340460664
-b: 2 &lt;class &#39;int&#39;&gt; 4340460696 
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a: 1 &lt;class &#39;int&#39;&gt; 4335529080
+b: 1 &lt;class &#39;int&#39;&gt; 4335529080
+b: 2 &lt;class &#39;int&#39;&gt; 4335529112 
 
-s: aagskjhdsqgf qkdhqhq  &lt;class &#39;str&#39;&gt; 4392701664
-s2 aagskjhdsqgf qkdhqhq  &lt;class &#39;str&#39;&gt; 4392701664
-s2 a &lt;class &#39;str&#39;&gt; 4340237880 
+s: aagskjhdsqgf qkdhqhq  &lt;class &#39;str&#39;&gt; 4423376592
+s2 aagskjhdsqgf qkdhqhq  &lt;class &#39;str&#39;&gt; 4423376592
+s2 a &lt;class &#39;str&#39;&gt; 4335306296 
 
-[0, 0] &lt;class &#39;list&#39;&gt; 4392798720
-[0, 0] &lt;class &#39;list&#39;&gt; 4392798720
-[1, 0] &lt;class &#39;list&#39;&gt; 4392766208
-[0, 0] &lt;class &#39;list&#39;&gt; 4392798720
-[1, 1] &lt;class &#39;list&#39;&gt; 4392798848
-[0, 1] &lt;class &#39;list&#39;&gt; 4392798848 
+[0, 0] &lt;class &#39;list&#39;&gt; 4423518144
+[0, 0] &lt;class &#39;list&#39;&gt; 4423518144
+[1, 0] &lt;class &#39;list&#39;&gt; 4423518272
+[0, 0] &lt;class &#39;list&#39;&gt; 4423518144
+[1, 1] &lt;class &#39;list&#39;&gt; 4423518528
+[0, 1] &lt;class &#39;list&#39;&gt; 4423518528 
 </pre></div>
 </div>
 </div>
@@ -1114,23 +1121,23 @@ Cependant, elle est sans effet sur les instructions suivantes, comme cet exemple
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a= 1 4340460664
-b= 1 4340460664
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a= 1 4335529080
+b= 1 4335529080
 pas de nouvel espace mémoire suite à b = a. 
 
-a= 2 4340460696
-b= 1 4340460664
+a= 2 4335529112
+b= 1 4335529080
 a est modifié donc un nouvel espace mémoire est créé pour a. 
 
-a= 3 4340460728
+a= 3 4335529144
 a est encore modifié et un nouvel espace mémoire est encore créé.
 Un autre choix aurait été possible mais celui-ci est en cohérence avec le premier traitement observé.
 
-a= 5 4340460792
-a= 6 4340460824 bizarre : a += 1 devrait être effectué en place : cf. plus loin
+a= 5 4335529208
+a= 6 4335529240 bizarre : a += 1 devrait être effectué en place : cf. plus loin
 
-a= 3 4340460728
-b= 1 4340460664
+a= 3 4335529144
+b= 1 4335529080
 pas de surprise
 </pre></div>
 </div>
@@ -1187,21 +1194,21 @@ pas de surprise
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>t = l
-[0, 0] 4392803392
-[0, 0] 4392803392
+[0, 0] 4423517504
+[0, 0] 4423517504
 modification partielle de l
-[2, 0] 4392803392
-[2, 0] 4392803392
+[2, 0] 4423517504
+[2, 0] 4423517504
 modification totale de l
-[4, 3] 4392799808
-[2, 0] 4392803392
+[4, 3] 4423521472
+[2, 0] 4423517504
 modifications de l par ses méthodes (aspects POO)
-[3, 4] 4392799808
-[3, 4] 4392799808
-[4, 3] 4392799808
-[4, 3] 4392799808
-[4, 11, 3] 4392799808
-[4, 11, 3] 4392799808
+[3, 4] 4423521472
+[3, 4] 4423521472
+[4, 3] 4423521472
+[4, 3] 4423521472
+[4, 11, 3] 4423521472
+[4, 11, 3] 4423521472
 </pre></div>
 </div>
 </div>
@@ -1303,15 +1310,15 @@ l= [0, 0, 0] =/ m= [5, 2, 3]  == mm= [5, 2, 3]  == m_copy= [5, 2, 3]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4392802992 Jo
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4423329520 Jo
 
-4392798272 [&#39;Jo&#39;]
-4392802992 Jo
+4423516544 [&#39;Jo&#39;]
+4423329520 Jo
 
 affectation par référence (pas de duplication)
-4392798272 [&#39;Jo&#39;, &#39;Jack&#39;]
-4392798272 [&#39;Jo&#39;, &#39;Jack&#39;]
-4392797744 Averell
+4423516544 [&#39;Jo&#39;, &#39;Jack&#39;]
+4423516544 [&#39;Jo&#39;, &#39;Jack&#39;]
+4423323568 Averell
 
 Averell [&#39;Jo&#39;, &#39;Jack&#39;] [&#39;Jo&#39;, &#39;Jack&#39;]
 </pre></div>
@@ -1345,16 +1352,16 @@ Averell [&#39;Jo&#39;, &#39;Jack&#39;] [&#39;Jo&#39;, &#39;Jack&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4392802992 Jo
-4392798720 [&#39;Jo&#39;]
-4392802992 Jo
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4423329520 Jo
+4423517120 [&#39;Jo&#39;]
+4423329520 Jo
 
 affectation avec duplication
-4392798720 [&#39;Jo&#39;]
-4392798272 [&#39;Jo&#39;]
+4423517120 [&#39;Jo&#39;]
+4423516544 [&#39;Jo&#39;]
 
-4392798720 [&#39;Jo&#39;, &#39;Averell&#39;]
-4392798272 [&#39;Jo&#39;, &#39;Jack&#39;]
+4423517120 [&#39;Jo&#39;, &#39;Averell&#39;]
+4423516544 [&#39;Jo&#39;, &#39;Jack&#39;]
 Averell [&#39;Jo&#39;, &#39;Averell&#39;] [&#39;Jo&#39;, &#39;Jack&#39;]
 </pre></div>
 </div>
@@ -1394,10 +1401,10 @@ Mystère ?</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4340460632 4340460984
-4340460664 4340461016
-4392793024 4392785216
-4392793024 4392716352
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4335529048 4335529400
+4335529080 4335529432
+4423465152 4423456128
+4423465152 4423464896
 </pre></div>
 </div>
 </div>
@@ -1439,12 +1446,12 @@ Le traitement sur la liste <code class="docutils literal notranslate"><span clas
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2 4340460696
-id dans f -- t: 4340460760 , u:  4340460696
-4 4340460760
-[10] 4392793024
-id dans f -- t: 4392788608 , u:  4392793024
-[10, 10] 4392793024
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2 4335529112
+id dans f -- t: 4335529176 , u:  4335529112
+4 4335529176
+[10] 4423465152
+id dans f -- t: 4423293888 , u:  4423465152
+[10, 10] 4423465152
 </pre></div>
 </div>
 </div>
@@ -1471,12 +1478,12 @@ id dans f -- t: 4392788608 , u:  4392793024
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2 4340460696
-id dans f -- t: 4340460760 , u:  4340460696
-6 4340460824
-[10] 4392794944
-id dans f -- t: 4392793536 , u:  4392794944
-[10, 10, 10] 4392794944
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2 4335529112
+id dans f -- t: 4335529176 , u:  4335529112
+6 4335529240
+[10] 4423517632
+id dans f -- t: 4423255616 , u:  4423517632
+[10, 10, 10] 4423517632
 </pre></div>
 </div>
 </div>
@@ -1504,7 +1511,7 @@ id dans f -- t: 4392793536 , u:  4392794944
 <div><p>Les paramètres effectifs (arguments) d’une fonction sont introduits dans la table de symboles locale de la fonction appelée lorsqu’elle est appelée ; par conséquent, <strong>les passages de paramètres</strong> se font par valeur, la valeur étant toujours une <strong>référence à un objet</strong>, et non la valeur de l’objet lui-même.</p>
 </div></blockquote>
 <p>Ce traitement est similaire à celui de l’<em>affectation</em> en python décrit
-<span class="xref myst">plus haut</span>.
+<a class="reference internal" href="#revisiter_les_variables_et_l_'_affectation"><span class="xref myst">plus haut</span></a>.
 Ce qui donne les 2 cas suivants.</p>
 <section id="le-parametre-est-de-type-non-mutable">
 <h3><span class="section-number">9.4.1. </span>Le paramètre est de type non-mutable<a class="headerlink" href="#le-parametre-est-de-type-non-mutable" title="Permalink to this heading">#</a></h3>
@@ -1622,11 +1629,11 @@ False
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>avant appel:
 l= [0, 1] ll= [0, 1] , m= [0, 1] mm= [0, 1]
-id : l= 4392797504 , ll= 4392797504 , m= 4392789056 , mm= 4392785728
+id : l= 4423454656 , ll= 4423454656 , m= 4423464768 , mm= 4423455168
 
 appel avec affectation l = f(l):
 l= [0, 1, 0, 1] ll= [0, 1] , m= [0, 1]
-id : l= 4392773568 , ll= 4392797504 , m= 4392789056
+id : l= 4423517504 , ll= 4423454656 , m= 4423464768
 </pre></div>
 </div>
 </div>
@@ -1640,7 +1647,7 @@ C’est pourtant bien la référence de l’argument effectif qui est connue de 
 <p>Ici, la fonction <strong>modifie complètement</strong> ce paramètre mutable. Une nouvelle variable locale est donc créée et renvoyée. L’affectation (même dans la variable fournie comme argument d’entrée) effectue la mise à jour de la variable affectée.</p>
 <p><strong>Attention</strong></p>
 <p>Les écritures approximatives de fonction (sans <code class="docutils literal notranslate"><span class="pre">return</span></code>) ou les appels sans affectation du résultat (à la procédure) peuvent être dangereux.</p>
-<p><strong>pythontutor.</strong> <a class="reference external" href="http://pythontutor.com/visualize.html#code=%23%20fonctions%20sans%20annotation%20de%20type%20pour%20l'exemple%0Adef%20f%28x%29%20%3A%0A%20%20%20%20x%20%3D%20x%20*%202%0A%20%20%20%20return%20x%0A%0Adef%20g%28x%29%20%3A%0A%20%20%20%20x%20%3D%20x%20*%202%0A%0Adef%20h%28x%29%3A%0A%20%20%20%20x%5B0%5D%20%3D%20777%0A%20%20%20%20%20%20%20%20%0Au%20%3D%203%0At%20%3D%20%5B1,%202%5D%0A%0A%23%20appel%20f%20%28modification%20complete%20avec%20return%29%20sans%20affectation%0Af%28u%29%0Af%28t%29%0A%0A%23%20appel%20g%20%28sans%20return%20explicite%29%20et%20sans%20affectation%0Ag%28u%29%0Ag%28t%29%0A%0A%23%20appel%20h%20%28modification%20partielle%29%20sans%20affectation%0Ah%28t%29&amp;cumulative=false&amp;heapPrimitives=nevernest&amp;mode=edit&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">L’exécution suivante</a>
+<p><strong>pythontutor.</strong> <a class="reference external" href="http://pythontutor.com/visualize.html#code=%23%20fonctions%20sans%20annotation%20de%20type%20pour%20l'exemple%0Adef%20f%28x%29%20%3A%0A%20%20%20%20x%20%3D%20x%20*%202%0A%20%20%20%20return%20x%0A%0Adef%20g%28x%29%20%3A%0A%20%20%20%20x%20%3D%20x%20*%202%0A%0Adef%20h%28x%29%3A%0A%20%20%20%20x%5B0%5D%20%3D%20777%0A%20%20%20%20%20%20%20%20%0Au%20%3D%203%0At%20%3D%20%5B1,%202%5D%0A%0A%23%20appel%20f%20%28modification%20complete%20avec%20return%29%20sans%20affectation%0Af%28u%29%0Af%28t%29%0A%0A%23%20appel%20g%20%28sans%20return%20explicite%29%20et%20sans%20affectation%0Ag%28u%29%0Ag%28t%29%0A%0A%23%20appel%20h%20%28modification%20partielle%29%20sans%20affectation%0Ah%28t%29&amp;amp;cumulative=false&amp;amp;heapPrimitives=nevernest&amp;amp;mode=edit&amp;amp;origin=opt-frontend.js&amp;amp;py=3&amp;amp;rawInputLstJSON=%5B%5D&amp;amp;textReferences=false">L’exécution suivante</a>
 est une fois de plus instructive.</p>
 <p>Un comportement similaire est obtenu lorsque la fonction manipule un paramètre objet par ses méthodes. L’exemple suivant illustre ce cas.</p>
 <div class="cell docutils container">
@@ -1686,22 +1693,22 @@ est une fois de plus instructive.</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>l, ll, m
-[0, 0] &lt;class &#39;list&#39;&gt; 4392875136
-[0, 0] &lt;class &#39;list&#39;&gt; 4392875136
-[0, 0] &lt;class &#39;list&#39;&gt; 4392875072
+[0, 0] &lt;class &#39;list&#39;&gt; 4423477376
+[0, 0] &lt;class &#39;list&#39;&gt; 4423477376
+[0, 0] &lt;class &#39;list&#39;&gt; 4423477312
 
 appel sans affectation du retour: g(l)
 print g(l)= None
 l= [0, 0, 1] ll= [0, 0, 1] , m= [0, 0]
-id= 4392875136 id= 4392875136 , id= 4392875072
+id= 4423477376 id= 4423477376 , id= 4423477312
 
 appel avec affectation: l = g(l)
 l= None ll= [0, 0, 1, 1] , m= [0, 0]
-id= 4340459152 id= 4392875136 , id= 4392875072
+id= 4335527568 id= 4423477376 , id= 4423477312
 
 appel avec affectation m = g(l):
 l= [0, 0, 1] ll= [0, 0, 1, 1] , m= None
-id= 4392875456 id= 4392875136 , id= 4340459152
+id= 4423464768 id= 4423477376 , id= 4335527568
 </pre></div>
 </div>
 </div>
@@ -1829,24 +1836,24 @@ Cette fonction peut être très utile pour <em>debugger</em> un développement q
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>avant les appels:
 l= [0, 0] ll= [0, 0] m= [0, 0]
-@l= 4392866752 @ll= 4392866752 @m= 4392867712
+@l= 4423479168 @ll= 4423479168 @m= 4423531264
 
 appel sans affectation du retour:
-main: @l= 4392866752
-  f avant : @= 4392866752
-  f après : @=  4392945344
-  f avant : @= 4392866752
-  f après : @=  4392944832
-print f(l)= [0, 0, 0, 0] @f(l)= 4392944832
+main: @l= 4423479168
+  f avant : @= 4423479168
+  f après : @=  4423482496
+  f avant : @= 4423479168
+  f après : @=  4423482624
+print f(l)= [0, 0, 0, 0] @f(l)= 4423482624
 l= [0, 0] ll= [0, 0] , m= [0, 0]
-@l= 4392866752 @ll= 4392866752 @m= 4392867712
+@l= 4423479168 @ll= 4423479168 @m= 4423531264
 
 appel avec affectation l = f(l):
-  f avant : @= 4392866752
-  f après : @=  4392875456
-main: @l(après l=f(l))= 4392875456
+  f avant : @= 4423479168
+  f après : @=  4423464768
+main: @l(après l=f(l))= 4423464768
 l= [0, 0, 0, 0] ll= [0, 0] , m= [0, 0]
-@l= 4392875456 @ll= 4392866752 @m= 4392867712
+@l= 4423464768 @ll= 4423479168 @m= 4423531264
 </pre></div>
 </div>
 </div>
@@ -1895,20 +1902,20 @@ l= [0, 0, 0, 0] ll= [0, 0] , m= [0, 0]
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>avant les appels:
-u= 0 @u= 4340460632
+u= 0 @u= 4335529048
 
 appel sans affectation du retour:
-  f_r: avant @= 4340460632
-  f_r: après @= 4340460632
-  f_r: avant @= 4340460632
-  f_r: après @= 4340460632
-f(u)= 2 @f(u)= 4340460696
-u= 0 @u= 4340460632
+  f_r: avant @= 4335529048
+  f_r: après @= 4335529048
+  f_r: avant @= 4335529048
+  f_r: après @= 4335529048
+f(u)= 2 @f(u)= 4335529112
+u= 0 @u= 4335529048
 
 appel avec affectation du retour:
-  f_r: avant @= 4340460632
-  f_r: après @= 4340460632
-u après u=f(u)= 2 @u= 4340460696
+  f_r: avant @= 4335529048
+  f_r: après @= 4335529048
+u après u=f(u)= 2 @u= 4335529112
 </pre></div>
 </div>
 </div>
@@ -1942,20 +1949,20 @@ u après u=f(u)= 2 @u= 4340460696
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>avant les appels:
-u= 1 @u= 4340460664
+u= 1 @u= 4335529080
 
 appel sans affectation du retour:
-  f_x: avant @= 4340460664
-  f_x: après @= 4340460728
-  f_x: avant @= 4340460664
-  f_x: après @= 4340460728
-f(u)= 3 @f(u)= 4340460728
-u= 1 @u= 4340460664
+  f_x: avant @= 4335529080
+  f_x: après @= 4335529144
+  f_x: avant @= 4335529080
+  f_x: après @= 4335529144
+f(u)= 3 @f(u)= 4335529144
+u= 1 @u= 4335529080
 
 appel avec affectation du retour:
-  f_x: avant @= 4340460664
-  f_x: après @= 4340460728
-u après u=f(u)= 3 @u= 4340460728
+  f_x: avant @= 4335529080
+  f_x: après @= 4335529144
+u après u=f(u)= 3 @u= 4335529144
 </pre></div>
 </div>
 </div>
@@ -1989,20 +1996,20 @@ u après u=f(u)= 3 @u= 4340460728
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>avant les appels:
-u= 0 @u= 4340460632
+u= 0 @u= 4335529048
 
 appel sans affectation du retour:
-  f_=: avant @= 4340460632
-  f_=: après @= 4340460696
-  f_=: avant @= 4340460632
-  f_=: après @= 4340460696
-f(u)= 2 @f(u)= 4340460696
-u= 0 @u= 4340460632
+  f_=: avant @= 4335529048
+  f_=: après @= 4335529112
+  f_=: avant @= 4335529048
+  f_=: après @= 4335529112
+f(u)= 2 @f(u)= 4335529112
+u= 0 @u= 4335529048
 
 appel avec affectation du retour:
-  f_=: avant @= 4340460632
-  f_=: après @= 4340460696
-u après u=f(u)= 2 @u= 4340460696
+  f_=: avant @= 4335529048
+  f_=: après @= 4335529112
+u après u=f(u)= 2 @u= 4335529112
 </pre></div>
 </div>
 </div>
@@ -2202,7 +2209,7 @@ modification partielles <em>vs.</em> duplication (par <code class="docutils lite
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1. </span>Tableaux et boucles</p>
+        <p class="prev-next-title"><span class="section-number">10. </span>Tableaux et boucles</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

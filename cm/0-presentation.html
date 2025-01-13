@@ -30,12 +30,12 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.4cbf315f70debaebd550c87a6162cf0f.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
@@ -49,18 +49,14 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -168,7 +164,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -197,19 +204,19 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Compléments</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="a0-boucles-avancees.html">1. Tableaux et boucles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="a1-booleens.html">2. Annexe : les booléens en python (&gt;3.6)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="a2-ndarray.html">3. Les ‘ndarray’ : de vrais tableaux en python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="11-modules-utiles.html">4. Modules utiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a0-boucles-avancees.html">10. Tableaux et boucles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a1-booleens.html">11. Annexe : les booléens en python (&gt;3.6)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a2-ndarray.html">12. Les ‘ndarray’ : de vrais tableaux en python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11-modules-utiles.html">13. Modules utiles</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">TD</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../td/td1.html">1. Feuille 1 : fonctions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../td/td2.html">2. Feuille 2 : récursivité</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../td/td1.html">14. Feuille 1 : fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../td/td2.html">15. Feuille 2 : récursivité</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">(Intervenants) suivi des séances</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../suivi_seances.html">1. (Intervenant) Suivi des séances</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../suivi_seances.html">16. (Intervenant) Suivi des séances</a></li>
 </ul>
 
     </div>
@@ -383,9 +390,6 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cm">CM</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#la-tres-grande-importance-des-cm">La très grande importance des CM</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#objectif-10-ou-objectif-20"><em>Objectif 10</em> ou <em>Objectif 20</em> ?</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><strong>objectif 10</strong> ou <strong>objectif 20</strong></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#td-et-tp">TD et TP</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-outils-pour-mieux-comprendre-mieux-retenir">Les outils pour mieux comprendre, mieux retenir</a></li>
 </ul>
@@ -538,8 +542,9 @@ Visez deux résultats :</p>
 </section>
 <section id="objectif-10-ou-objectif-20">
 <h3><em>Objectif 10</em> ou <em>Objectif 20</em> ?<a class="headerlink" href="#objectif-10-ou-objectif-20" title="Permalink to this heading">#</a></h3>
-<ul class="simple">
-<li></li>
+<ul>
+<li><h2 class="rubric" id="id1"><strong>objectif 10</strong> ou <strong>objectif 20</strong></h2>
+</li>
 </ul>
 <p>Objectif 10 (O10) :</p>
 <ul class="simple">
@@ -564,9 +569,6 @@ TD.</p></li>
 <li><p>tous les sujets notés comportent au moins 10 points de niveau O10</p></li>
 </ul>
 </section>
-</section>
-<section id="id1">
-<h2><strong>objectif 10</strong> ou <strong>objectif 20</strong><a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
 <section id="td-et-tp">
 <h3>TD et TP<a class="headerlink" href="#td-et-tp" title="Permalink to this heading">#</a></h3>
 <p>TD : des exercices pour appliquer les connaissances du cours</p>
@@ -608,7 +610,7 @@ TD.</p></li>
 <section id="deux-points-importants">
 <h2>Deux points importants<a class="headerlink" href="#deux-points-importants" title="Permalink to this heading">#</a></h2>
 <ol class="arabic simple">
-<li><p>Votre guide : la liste des <a class="reference internal" href="competences.html"><span class="doc std std-doc">compétences par chapitre</span></a></p></li>
+<li><p>Votre guide : la liste des <a class="reference internal" href="competences.html"><span class="std std-doc">compétences par chapitre</span></a></p></li>
 <li><p>Un environnement python, similaire sur sa machine perso et en salles info</p></li>
 </ol>
 <section id="installer-un-environnement-python">
@@ -649,7 +651,7 @@ On peut s’aider des liens ci-après.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">bool</span></code>, <code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">float</span></code>, <code class="docutils literal notranslate"><span class="pre">str</span></code>, <code class="docutils literal notranslate"><span class="pre">list</span></code></p></li>
 <li><p>et les changement de types associés : <code class="docutils literal notranslate"><span class="pre">int()</span></code>, <code class="docutils literal notranslate"><span class="pre">float()</span></code>, …</p></li>
-<li><p>(python) : un rappel sur le “type” <code class="docutils literal notranslate"><span class="pre">bool</span></code>est proposé en <a class="reference internal" href="a1-booleens.html"><span class="doc std std-doc">annexe du cours</span></a>.</p></li>
+<li><p>(python) : un rappel sur le “type” <code class="docutils literal notranslate"><span class="pre">bool</span></code>est proposé en <a class="reference internal" href="a1-booleens.html"><span class="std std-doc">annexe du cours</span></a>.</p></li>
 </ul>
 </li>
 <li><p>Bien différencier <em>valeur</em> vs. <em>variable</em> vs. <em>constante</em></p>
@@ -859,7 +861,7 @@ Des ressources présentées en annexe du support de cours pourront être exploit
 <li><p>d’avoir son propre ordinateur configuré de façon complète et selon vos préférences.</p></li>
 </ul>
 <p>Il y a déjà 3 choix d’OS possibles : windows, linux et mac os ; les 2 premiers étant disponibles sur les ordinateurs de l’UPVD.</p>
-<p>Ensuite, les <span class="xref myst">distributions python</span> sont assez variées, et peuvent différer selon les OS .</p>
+<p>Ensuite, les <a class="reference internal" href="#En-pratique"><span class="xref myst">distributions python</span></a> sont assez variées, et peuvent différer selon les OS .</p>
 <p>Il est aisé <em>pour chacun</em> de trouver ce qui correspond à ses contraintes matérielles et ses envies.</p>
 </section>
 <section id="important-de-quoi-a-t-on-absolument-besoin">
@@ -1109,9 +1111,6 @@ ISBN : 2091574651 (Première),  2091575437  (Terminale)</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cm">CM</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#la-tres-grande-importance-des-cm">La très grande importance des CM</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#objectif-10-ou-objectif-20"><em>Objectif 10</em> ou <em>Objectif 20</em> ?</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><strong>objectif 10</strong> ou <strong>objectif 20</strong></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#td-et-tp">TD et TP</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-outils-pour-mieux-comprendre-mieux-retenir">Les outils pour mieux comprendre, mieux retenir</a></li>
 </ul>

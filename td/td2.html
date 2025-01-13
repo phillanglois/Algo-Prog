@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>2. Feuille 2 : récursivité &#8212; Algo-Prog L1-S2</title>
+    <title>15. Feuille 2 : récursivité &#8212; Algo-Prog L1-S2</title>
   
   
   
@@ -30,12 +30,12 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.4cbf315f70debaebd550c87a6162cf0f.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
@@ -49,26 +49,22 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'td/td2';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1. (Intervenant) Suivi des séances" href="../suivi_seances.html" />
-    <link rel="prev" title="1. Feuille 1 : fonctions" href="td1.html" />
+    <link rel="next" title="16. (Intervenant) Suivi des séances" href="../suivi_seances.html" />
+    <link rel="prev" title="14. Feuille 1 : fonctions" href="td1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -168,7 +164,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -197,19 +204,19 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Compléments</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../cm/a0-boucles-avancees.html">1. Tableaux et boucles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../cm/a1-booleens.html">2. Annexe : les booléens en python (&gt;3.6)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../cm/a2-ndarray.html">3. Les ‘ndarray’ : de vrais tableaux en python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../cm/11-modules-utiles.html">4. Modules utiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/a0-boucles-avancees.html">10. Tableaux et boucles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/a1-booleens.html">11. Annexe : les booléens en python (&gt;3.6)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/a2-ndarray.html">12. Les ‘ndarray’ : de vrais tableaux en python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/11-modules-utiles.html">13. Modules utiles</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">TD</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="td1.html">1. Feuille 1 : fonctions</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Feuille 2 : récursivité</a></li>
+<li class="toctree-l1"><a class="reference internal" href="td1.html">14. Feuille 1 : fonctions</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">15. Feuille 2 : récursivité</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">(Intervenants) suivi des séances</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../suivi_seances.html">1. (Intervenant) Suivi des séances</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../suivi_seances.html">16. (Intervenant) Suivi des séances</a></li>
 </ul>
 
     </div>
@@ -404,22 +411,22 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectif-10">2.1. Objectif 10</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-exercice">2.1.1. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exo-expo">2.1.2. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-blacksquare-exercice-si-il-n-y-avait-qu-un-seul-exercice-a-faire-c-est-celui-ci">2.1.3. <span class="math notranslate nohighlight">\(\blacksquare\blacksquare\)</span> Exercice. <strong>Si il n’y avait qu’un seul exercice à faire, c’est celui-ci !</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-exercice-recherche-dichotomique">2.1.4. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice.  (recherche dichotomique)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exo-dicho2">2.1.5. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice. (recherche dichotomique)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-palindrome">2.1.6. Exercice. (palindrome)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-exercice-maths">2.1.7. (<span class="math notranslate nohighlight">\(\star\)</span>) Exercice. (Maths)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectif-10">15.1. Objectif 10</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-exercice">15.1.1. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exo-expo">15.1.2. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-blacksquare-exercice-si-il-n-y-avait-qu-un-seul-exercice-a-faire-c-est-celui-ci">15.1.3. <span class="math notranslate nohighlight">\(\blacksquare\blacksquare\)</span> Exercice. <strong>Si il n’y avait qu’un seul exercice à faire, c’est celui-ci !</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-exercice-recherche-dichotomique">15.1.4. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice.  (recherche dichotomique)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exo-dicho2">15.1.5. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice. (recherche dichotomique)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-palindrome">15.1.6. Exercice. (palindrome)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-exercice-maths">15.1.7. (<span class="math notranslate nohighlight">\(\star\)</span>) Exercice. (Maths)</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectif-20">2.2. Objectif 20</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice">2.2.1. Exercice.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-info">2.2.2. Exercice. (Info).</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-exercice-suite-de-syracuse">2.2.3. (<span class="math notranslate nohighlight">\(\star\)</span>) Exercice. (suite de Syracuse)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-exercice-recursivite-terminale">2.2.4. (<span class="math notranslate nohighlight">\(\star\)</span>) Exercice. (récursivité terminale)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-exercice-addition-de-2-entiers">2.2.5. (<span class="math notranslate nohighlight">\(\star\)</span>) Exercice. (addition de 2 entiers)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectif-20">15.2. Objectif 20</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice">15.2.1. Exercice.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-info">15.2.2. Exercice. (Info).</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-exercice-suite-de-syracuse">15.2.3. (<span class="math notranslate nohighlight">\(\star\)</span>) Exercice. (suite de Syracuse)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-exercice-recursivite-terminale">15.2.4. (<span class="math notranslate nohighlight">\(\star\)</span>) Exercice. (récursivité terminale)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-exercice-addition-de-2-entiers">15.2.5. (<span class="math notranslate nohighlight">\(\star\)</span>) Exercice. (addition de 2 entiers)</a></li>
 </ul>
 </li>
 </ul>
@@ -434,7 +441,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="feuille-2-recursivite">
-<span id="td-td5"></span><h1><span class="section-number">2. </span>Feuille 2 : récursivité<a class="headerlink" href="#feuille-2-recursivite" title="Permalink to this heading">#</a></h1>
+<span id="td-td5"></span><h1><span class="section-number">15. </span>Feuille 2 : récursivité<a class="headerlink" href="#feuille-2-recursivite" title="Permalink to this heading">#</a></h1>
 <ul class="simple">
 <li><p>Le symbole <span class="math notranslate nohighlight">\(\blacksquare\)</span> indique les exercices ou questions
 obligatoires. Commencez pas ceux-là.</p></li>
@@ -464,9 +471,9 @@ versions itérative et récursive d’un traitement calculatoire simple</p></li>
 récursif</p></li>
 </ul>
 <section id="objectif-10">
-<h2><span class="section-number">2.1. </span>Objectif 10<a class="headerlink" href="#objectif-10" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">15.1. </span>Objectif 10<a class="headerlink" href="#objectif-10" title="Permalink to this heading">#</a></h2>
 <section id="blacksquare-exercice">
-<span id="exo-sumrec"></span><h3><span class="section-number">2.1.1. </span><span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice.<a class="headerlink" href="#blacksquare-exercice" title="Permalink to this heading">#</a></h3>
+<span id="exo-sumrec"></span><h3><span class="section-number">15.1.1. </span><span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice.<a class="headerlink" href="#blacksquare-exercice" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Écrire puis coder une version itérative de <span class="math notranslate nohighlight">\(u(n)= 2^n\)</span> pour <span class="math notranslate nohighlight">\(n&gt;0\)</span></p></li>
 <li><p>Écrire puis coder une version récursive de ce même calcul.</p></li>
@@ -477,7 +484,7 @@ récursif</p></li>
 </ol>
 </section>
 <section id="exo-expo">
-<span id="id1"></span><h3><span class="section-number">2.1.2. </span><span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice.<a class="headerlink" href="#exo-expo" title="Permalink to this heading">#</a></h3>
+<span id="id1"></span><h3><span class="section-number">15.1.2. </span><span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice.<a class="headerlink" href="#exo-expo" title="Permalink to this heading">#</a></h3>
 <p>De façon plus générale qu’à l’exercice précédent, on calcule la valeur de <span class="math notranslate nohighlight">\(x^n\)</span> où <span class="math notranslate nohighlight">\(n\)</span> et un entier positif, et
 <span class="math notranslate nohighlight">\(x\)</span> un flottant. On rappelle que <span class="math notranslate nohighlight">\(x^0 = 1.0\)</span>.</p>
 <ol class="arabic simple">
@@ -491,7 +498,7 @@ récursif</p></li>
 </ol>
 </section>
 <section id="blacksquare-blacksquare-exercice-si-il-n-y-avait-qu-un-seul-exercice-a-faire-c-est-celui-ci">
-<span id="exo-forrec"></span><h3><span class="section-number">2.1.3. </span><span class="math notranslate nohighlight">\(\blacksquare\blacksquare\)</span> Exercice. <strong>Si il n’y avait qu’un seul exercice à faire, c’est celui-ci !</strong><a class="headerlink" href="#blacksquare-blacksquare-exercice-si-il-n-y-avait-qu-un-seul-exercice-a-faire-c-est-celui-ci" title="Permalink to this heading">#</a></h3>
+<span id="exo-forrec"></span><h3><span class="section-number">15.1.3. </span><span class="math notranslate nohighlight">\(\blacksquare\blacksquare\)</span> Exercice. <strong>Si il n’y avait qu’un seul exercice à faire, c’est celui-ci !</strong><a class="headerlink" href="#blacksquare-blacksquare-exercice-si-il-n-y-avait-qu-un-seul-exercice-a-faire-c-est-celui-ci" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Donner la forme récursive qui produit le même traitement que celui
 d’une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code> qui (parcourt et) affiche les indices entiers
@@ -500,7 +507,7 @@ successifs de 11 à 1.</p></li>
 </ol>
 </section>
 <section id="blacksquare-exercice-recherche-dichotomique">
-<span id="exo-dicho"></span><h3><span class="section-number">2.1.4. </span><span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice.  (recherche dichotomique)<a class="headerlink" href="#blacksquare-exercice-recherche-dichotomique" title="Permalink to this heading">#</a></h3>
+<span id="exo-dicho"></span><h3><span class="section-number">15.1.4. </span><span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice.  (recherche dichotomique)<a class="headerlink" href="#blacksquare-exercice-recherche-dichotomique" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Écrire un algorithme itératif qui calcule un booléen indiquant si un
 tableau d’entiers <strong>donné trié</strong> par ordre croissant contient une
@@ -511,7 +518,7 @@ appliquant aussi une recherche par dichotomie.</p></li>
 </ol>
 </section>
 <section id="exo-dicho2">
-<span id="id2"></span><h3><span class="section-number">2.1.5. </span><span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice. (recherche dichotomique)<a class="headerlink" href="#exo-dicho2" title="Permalink to this heading">#</a></h3>
+<span id="id2"></span><h3><span class="section-number">15.1.5. </span><span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice. (recherche dichotomique)<a class="headerlink" href="#exo-dicho2" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Dérouler l’algorithme de recherche dichotomique (version itérative)
 pour rechercher la valeur 3 dans la tableau [0,1,2,3,4,5,6,7,8,9].</p></li>
@@ -522,7 +529,7 @@ de la recherche.</p></li>
 </ol>
 </section>
 <section id="exercice-palindrome">
-<span id="exo-palindromerec"></span><h3><span class="section-number">2.1.6. </span>Exercice. (palindrome)<a class="headerlink" href="#exercice-palindrome" title="Permalink to this heading">#</a></h3>
+<span id="exo-palindromerec"></span><h3><span class="section-number">15.1.6. </span>Exercice. (palindrome)<a class="headerlink" href="#exercice-palindrome" title="Permalink to this heading">#</a></h3>
 <p>Dans #exo:palindromeiter, on a défini et donné un algorithme itératif qui vérifie si un mot est ou non un palindrome.</p>
 <ol class="arabic simple">
 <li><p>Donner une version récursive de cette vérification.</p></li>
@@ -530,7 +537,7 @@ de la recherche.</p></li>
 </ol>
 </section>
 <section id="star-exercice-maths">
-<span id="exo-eucliderec"></span><h3><span class="section-number">2.1.7. </span>(<span class="math notranslate nohighlight">\(\star\)</span>) Exercice. (Maths)<a class="headerlink" href="#star-exercice-maths" title="Permalink to this heading">#</a></h3>
+<span id="exo-eucliderec"></span><h3><span class="section-number">15.1.7. </span>(<span class="math notranslate nohighlight">\(\star\)</span>) Exercice. (Maths)<a class="headerlink" href="#star-exercice-maths" title="Permalink to this heading">#</a></h3>
 <p>Dans l’exo:pgcd, on a défini et donné une version itérative du calcul du pgcd de deux entiers par l’algorithme d’Euclide.</p>
 <ol class="arabic simple">
 <li><p>En écrire une version récursive.</p></li>
@@ -539,20 +546,20 @@ de la recherche.</p></li>
 </section>
 </section>
 <section id="objectif-20">
-<h2><span class="section-number">2.2. </span>Objectif 20<a class="headerlink" href="#objectif-20" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">15.2. </span>Objectif 20<a class="headerlink" href="#objectif-20" title="Permalink to this heading">#</a></h2>
 <section id="exercice">
-<span id="exo-nbchiffres"></span><h3><span class="section-number">2.2.1. </span>Exercice.<a class="headerlink" href="#exercice" title="Permalink to this heading">#</a></h3>
+<span id="exo-nbchiffres"></span><h3><span class="section-number">15.2.1. </span>Exercice.<a class="headerlink" href="#exercice" title="Permalink to this heading">#</a></h3>
 <p>Ecrire une fonction récursive <code class="docutils literal notranslate"><span class="pre">nbChiffresDec(n:</span> <span class="pre">int)</span> <span class="pre">-&gt;</span> <span class="pre">int</span></code> qui calcule et retourne le nombre de chiffres de l’écriture décimale de l’entier <span class="math notranslate nohighlight">\(n \ge 0\)</span>.</p>
 <p>Par exemple, <code class="docutils literal notranslate"><span class="pre">nbChiffresDec(12345)</span> <span class="pre">==</span> <span class="pre">5</span></code>.</p>
 </section>
 <section id="exercice-info">
-<span id="exo-nbbits"></span><h3><span class="section-number">2.2.2. </span>Exercice. (Info).<a class="headerlink" href="#exercice-info" title="Permalink to this heading">#</a></h3>
+<span id="exo-nbbits"></span><h3><span class="section-number">15.2.2. </span>Exercice. (Info).<a class="headerlink" href="#exercice-info" title="Permalink to this heading">#</a></h3>
 <p>Ecrire une fonction récursive <code class="docutils literal notranslate"><span class="pre">nbBits(n:</span> <span class="pre">int)</span> <span class="pre">-&gt;</span> <span class="pre">int</span></code> qui calcule et retourne le nombre de bits valant 1 dans l’écriture binaire de l’entier <span class="math notranslate nohighlight">\(n \ge 0\)</span>.
 L’entier <span class="math notranslate nohighlight">\(n\)</span> est donné en décimales.</p>
 <p>Par exemple, <code class="docutils literal notranslate"><span class="pre">nbChiffresDec(255)</span> <span class="pre">==</span> <span class="pre">8</span></code>.</p>
 </section>
 <section id="star-exercice-suite-de-syracuse">
-<span id="exo-syracuse"></span><h3><span class="section-number">2.2.3. </span>(<span class="math notranslate nohighlight">\(\star\)</span>) Exercice. (suite de Syracuse)<a class="headerlink" href="#star-exercice-suite-de-syracuse" title="Permalink to this heading">#</a></h3>
+<span id="exo-syracuse"></span><h3><span class="section-number">15.2.3. </span>(<span class="math notranslate nohighlight">\(\star\)</span>) Exercice. (suite de Syracuse)<a class="headerlink" href="#star-exercice-suite-de-syracuse" title="Permalink to this heading">#</a></h3>
 <p>La suite de Syracuse <span class="math notranslate nohighlight">\(s\)</span> d’un nombre <span class="math notranslate nohighlight">\(N\)</span> donné est définie de façon
 récursive comme suit.</p>
 <p>On commence avec <span class="math notranslate nohighlight">\(s(0) = N\)</span>, puis :</p>
@@ -604,7 +611,7 @@ suite.</p></li>
 </ol>
 </section>
 <section id="star-exercice-recursivite-terminale">
-<span id="exo-recterm"></span><h3><span class="section-number">2.2.4. </span>(<span class="math notranslate nohighlight">\(\star\)</span>) Exercice. (récursivité terminale)<a class="headerlink" href="#star-exercice-recursivite-terminale" title="Permalink to this heading">#</a></h3>
+<span id="exo-recterm"></span><h3><span class="section-number">15.2.4. </span>(<span class="math notranslate nohighlight">\(\star\)</span>) Exercice. (récursivité terminale)<a class="headerlink" href="#star-exercice-recursivite-terminale" title="Permalink to this heading">#</a></h3>
 <p>Une fonction récursive est dite <em>récursive terminale</em> lorsque l’appel récursif est la dernière instruction exécutée.</p>
 <ol class="arabic simple">
 <li><p>Donner la liste de telles fonctions récursives terminales qui apparaissent dans les exemples du chapitre. Justifier votre réponse.</p></li>
@@ -613,7 +620,7 @@ suite.</p></li>
 </ol>
 </section>
 <section id="star-exercice-addition-de-2-entiers">
-<span id="exo-addint"></span><h3><span class="section-number">2.2.5. </span>(<span class="math notranslate nohighlight">\(\star\)</span>) Exercice. (addition de 2 entiers)<a class="headerlink" href="#star-exercice-addition-de-2-entiers" title="Permalink to this heading">#</a></h3>
+<span id="exo-addint"></span><h3><span class="section-number">15.2.5. </span>(<span class="math notranslate nohighlight">\(\star\)</span>) Exercice. (addition de 2 entiers)<a class="headerlink" href="#star-exercice-addition-de-2-entiers" title="Permalink to this heading">#</a></h3>
 <p>On souhaite additionner deux entiers de <span class="math notranslate nohighlight">\(p\)</span> chiffres décimaux. On
 dispose pour cela d’une fonction <code class="docutils literal notranslate"><span class="pre">add(c1,c2)</span></code> qui calcule et retourne un
 couple <code class="docutils literal notranslate"><span class="pre">(r,s)</span></code> où :</p>
@@ -683,7 +690,7 @@ pour les deux calculs <span class="math notranslate nohighlight">\(n1+n2\)</span
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">1. </span>Feuille 1 : fonctions</p>
+        <p class="prev-next-title"><span class="section-number">14. </span>Feuille 1 : fonctions</p>
       </div>
     </a>
     <a class="right-next"
@@ -691,7 +698,7 @@ pour les deux calculs <span class="math notranslate nohighlight">\(n1+n2\)</span
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1. </span>(Intervenant) Suivi des séances</p>
+        <p class="prev-next-title"><span class="section-number">16. </span>(Intervenant) Suivi des séances</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -711,22 +718,22 @@ pour les deux calculs <span class="math notranslate nohighlight">\(n1+n2\)</span
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectif-10">2.1. Objectif 10</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-exercice">2.1.1. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exo-expo">2.1.2. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-blacksquare-exercice-si-il-n-y-avait-qu-un-seul-exercice-a-faire-c-est-celui-ci">2.1.3. <span class="math notranslate nohighlight">\(\blacksquare\blacksquare\)</span> Exercice. <strong>Si il n’y avait qu’un seul exercice à faire, c’est celui-ci !</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-exercice-recherche-dichotomique">2.1.4. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice.  (recherche dichotomique)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exo-dicho2">2.1.5. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice. (recherche dichotomique)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-palindrome">2.1.6. Exercice. (palindrome)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-exercice-maths">2.1.7. (<span class="math notranslate nohighlight">\(\star\)</span>) Exercice. (Maths)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectif-10">15.1. Objectif 10</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-exercice">15.1.1. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exo-expo">15.1.2. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-blacksquare-exercice-si-il-n-y-avait-qu-un-seul-exercice-a-faire-c-est-celui-ci">15.1.3. <span class="math notranslate nohighlight">\(\blacksquare\blacksquare\)</span> Exercice. <strong>Si il n’y avait qu’un seul exercice à faire, c’est celui-ci !</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-exercice-recherche-dichotomique">15.1.4. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice.  (recherche dichotomique)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exo-dicho2">15.1.5. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice. (recherche dichotomique)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-palindrome">15.1.6. Exercice. (palindrome)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-exercice-maths">15.1.7. (<span class="math notranslate nohighlight">\(\star\)</span>) Exercice. (Maths)</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectif-20">2.2. Objectif 20</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice">2.2.1. Exercice.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-info">2.2.2. Exercice. (Info).</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-exercice-suite-de-syracuse">2.2.3. (<span class="math notranslate nohighlight">\(\star\)</span>) Exercice. (suite de Syracuse)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-exercice-recursivite-terminale">2.2.4. (<span class="math notranslate nohighlight">\(\star\)</span>) Exercice. (récursivité terminale)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-exercice-addition-de-2-entiers">2.2.5. (<span class="math notranslate nohighlight">\(\star\)</span>) Exercice. (addition de 2 entiers)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectif-20">15.2. Objectif 20</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice">15.2.1. Exercice.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-info">15.2.2. Exercice. (Info).</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-exercice-suite-de-syracuse">15.2.3. (<span class="math notranslate nohighlight">\(\star\)</span>) Exercice. (suite de Syracuse)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-exercice-recursivite-terminale">15.2.4. (<span class="math notranslate nohighlight">\(\star\)</span>) Exercice. (récursivité terminale)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-exercice-addition-de-2-entiers">15.2.5. (<span class="math notranslate nohighlight">\(\star\)</span>) Exercice. (addition de 2 entiers)</a></li>
 </ul>
 </li>
 </ul>
