@@ -1,25 +1,34 @@
+all:book
+
+# changer si necessaire
+WD = /Users/langlois/2025/ens/L1-Algo-Prog
+BOOKDIR = algoprog25
+
+# Tous d'un coup
+ALLSRC = $(wildcard  $(BOOKDIR)/cm/*.ipynb $(BOOKDIR)/cm/*.md $(BOOKDIR)/td/*.ipynb $(BOOKDIR)/td/*.md)
+
+#--------------------------------------------------------------------
+book: $(ALLSRC)
+	@cd $(WD)
+	@jupyter-book build $(BOOKDIR)
+
+enligne: $(ALLSRC)
+	@cd $(WD)
+	@jupyter-book build $(BOOKDIR)
+	@ghp-import -n -p -f $(BOOKDIR)/_build/html -m "version en ligne : maj"
+
+tp: $(BOOKDIR)/$(wildcard tp2022/*.ipynb)
+	@cd $(WD)
+	@run jupyter-book build tp2024
+#--------------------------------------------------------------------
+
 # $^: liste des dependances
 # $< premiere dependance 
 # $@: cible
 
-#CXX = pandoc --self-contained --toc -N 
-#CSSFLAGS = -c $(CSSFILE)/pandoc.css
-#CSSFLAGS = -c $(CSSFILE)/pandoc2.css
-#CSSFILE = css
-
-##### Creation du pdf/html au mm endroit que la source
-# %.pdf: %.ipynb
-# 	$(CXX) $(OPTPDF)  $<
-
-# %.html: %.ipynb
-# 	$(CXX) $(OPTHTML) $< 
-
-##### La suite pour l'arborescence L1-Algo-Prog
-
 # Generer tout html ou webpdf
 #all: pdf
 #all: html
-all:book
 
 # notebook par notebook
 #NAME = 0-presentation-2022
@@ -36,26 +45,19 @@ all:book
 #NAME = Competences-2021
 #NAME = Complements-2021
 
-# changer si necessaire
-BOOKDIR = algoprog2023
+#CXX = pandoc --self-contained --toc -N 
+#CSSFLAGS = -c $(CSSFILE)/pandoc.css
+#CSSFLAGS = -c $(CSSFILE)/pandoc2.css
+#CSSFILE = css
 
-# Tous d'un coup
-ALLSRC = $(wildcard  $(BOOKDIR)/cm/*.ipynb $(BOOKDIR)/cm/*.md $(BOOKDIR)/td/*.ipynb $(BOOKDIR)/td/*.md)
+##### Creation du pdf/html au mm endroit que la source
+# %.pdf: %.ipynb
+# 	$(CXX) $(OPTPDF)  $<
 
-#--------------------------------------------------------------------
-book: $(ALLSRC)
-	@cd /Users/langlois/2023/ens/L1-Algo-Prog
-	@jupyter-book build $(BOOKDIR)
+# %.html: %.ipynb
+# 	$(CXX) $(OPTHTML) $< 
 
-enligne: $(ALLSRC)
-	@cd /Users/langlois/2023/ens/L1-Algo-Prog
-	@jupyter-book build $(BOOKDIR)
-	@ghp-import -n -p -f $(BOOKDIR)/_build/html -m "version en ligne : maj"
-
-tp: $(BOOKDIR)/$(wildcard tp2022/*.ipynb)
-	@cd /Users/langlois/2023/ens/L1-Algo-Prog
-	@run jupyter-book build tp2023
-#--------------------------------------------------------------------
+##### La suite pour l'arborescence L1-Algo-Prog
 
 SRCDIR = cm
 DESTDIRPDF = cm-webpdf
