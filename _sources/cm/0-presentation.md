@@ -17,11 +17,10 @@ Mis à jour : {sub-ref}`today`, lecture : {sub-ref}`wordcount-minutes` minutes m
 
 ### Version 2025
 
-- **évolutions** vs. 2024-2025
 - 12 séances de CM : **2h/semaine**
-- ~~10.5 séances _distancielles_ (dites de "leçons") : 1h/semaines (**nouveau en 2024**)~~
 - 15 séances de TD-TP : 3h/semaine ou 6h/dernières semaines  
-- chargés de TD : David Parello (TD1), Ph. Langlois (TD2 et TD3), Youssef Fahkredine (TD4), Benjamin Antunes (TD5)
+- chargés de TD : David Parello (TD1), Youssef Fahkredine (TD2), Ph. Langlois (TD3), Laurent Zamo (TD4), Benjamin Antunes (TD5)
+- évolution vs. 2024-2025 : plus de "leçons"
 
 
 ### Contrôle de connaissances et dates importantes
@@ -147,7 +146,7 @@ TP : un sujet sur un thème pour maitriser les notions et acquérir du savoir-fa
 
 ## Deux points importants
 
-1. Votre guide : la liste des [compétences par chapitre](./competences.md)
+1. Votre guide : la liste des [compétences par chapitre](ch:competences)
 2. Un environnement python, similaire sur sa machine perso et en salles info
 
 
@@ -327,7 +326,7 @@ Il est indispensable :
 
 Il y a déjà 3 choix d'OS possibles : windows, linux et mac os ; les 2 premiers étant disponibles sur les ordinateurs de l'UPVD.    
 
-Ensuite, les [distributions python](#En-pratique) sont assez variées, et peuvent différer selon les OS .
+Ensuite, les [distributions python](#distributions-python-classiques) sont assez variées, et peuvent différer selon les OS .
 
 Il est aisé _pour chacun_ de trouver ce qui correspond à ses contraintes matérielles et ses envies.  
 
@@ -380,7 +379,7 @@ On télécharge, on installe, on travaille !
 - [SAGEMATH](http://sagemath.org/)  : bcp plus général qu'un simple environnement python. A conseiller pour ceux qui veulent continuer en ... mathématiques.
 
 
-### Que faire en cas de problème avec sa configuration python ....
+### Que faire en cas de problème avec sa configuration python ...
 
 1. En parler en TD : solution sans garantie de succès tant les configurations de vos ordinateurs peuvent être variées
 2. Utiliser le forum moodle de cet UE pour solliciter les autres étudiants de votre promotion : il est probable que vous partagiez une configuration commune
