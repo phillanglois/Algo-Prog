@@ -37,7 +37,7 @@ Vacances en s9, s16-s17
 
 - Lire la présentation [Algo Prog en 2025](ch:intro)
 - S'assurer que son environnement de travail python est conforme à la section "Deux points importants" de [Algo Prog en 2025](ch:intro). Vérifier en particulier que _jupyter lab_ ou à défaut _jupyter notebook_ est opérationnel pour du python en version $\ge$ 3.11.
-- Effectuer la MTU "Utiliser les notebooks Jupyter"
+- Effectuer la MTU "Utiliser les notebooks Jupyter" disponible sous l'espace moodle de ce cours. 
 
 ## Semaine 4
 
