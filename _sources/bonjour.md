@@ -15,10 +15,10 @@ Démarrages : CM en semaine s3 (celle du lundi 13 janvier 2025), TD en s4
 
 Contrôle de connaissances 
 
-- CC1 (s10) TP1 individuel sur machine, 2 heures : vendredi 22 mars 2024 :
-- CC2 (s15) écrit, 2 heures : jeudi 4 avril 2024
-- CC1 (s21) : TP2 individuel sur machine, 3 heures : mercredi 29 mai 2024
-- CT (s21) : écrit 2 heures, vendredi 24 mai 2024, 9h00**
+- TP1 individuel sur machine, 2 heures $\to$ vendredi 7 mars 2025 (s10) 
+- CC1 écrit, 2 heures $\to$ jeudi 10 avril 2025 (s15)
+- TP2 individuel sur machine, 3 heures : mercredi 21 mai 2025 (s21)
+- CT écrit 2 heures, date à fixer (s20 ou s21) :
 
 Vacances en s9, s16-s17
 :::
