@@ -19,8 +19,8 @@ Mis à jour : {sub-ref}`today`, lecture : {sub-ref}`wordcount-minutes` minutes m
 
 - 12 séances de CM : **2h/semaine**
 - 15 séances de TD-TP : 3h/semaine ou 6h/dernières semaines  
-- chargés de TD : David Parello (TD1), Youssef Fahkredine (TD2), Ph. Langlois (TD3), Laurent Zamo (TD4), Benjamin Antunes (TD5)
-- évolution vs. 2024-2025 : plus de "leçons"
+- chargés de TD : David Parello (TD1), Benjamin Antunes (TD2), Ph. Langlois (TD3), Laurent Zamo (TD4), Youssef Fahkredine (TD5) 
+- évolution vs. 2024-2025 : disparition des "leçons"
 
 
 ### Contrôle de connaissances et dates importantes
@@ -42,8 +42,8 @@ CC : contrôle "dit" continu, CT contrôle "dit" terminal
 - Pour chaque chapitre  
   - explicitation des _compétences_ visées : savoirs, savoirs-faire
   - des quizz d'aide à la compréhension et la mémorisation de ces compétences
-  - _l'enseignant_ ... présente et explique des exercices détaillés en CM
-  - _vous_ travaillez sur des exercices de TD et de TP, les contrôles des années précédentes, ...
+  - _l'enseignant_ ... présente et explique des exercices détaillés en CM : top-down
+  - _vous_ travaillez sur des exercices de TD et de TP, les contrôles des années précédentes, ... _Vous_ sollicitez le chargé de TD pour toute question : bottom-up
 
 ### CM
 
@@ -51,7 +51,7 @@ CC : contrôle "dit" continu, CT contrôle "dit" terminal
 Le CM est **essentiel** à la compréhension globale de l'UE issue de l'articulation de toutes les notions traitées.
 ```
 
-Alternance de séquences d'une heure pour une séance de CM de deux heures
+Une séance de CM de deux heures = deux séquences d'une heure organisées comme suit :
 
 - "matière de cours" : nouvelles notions (40 min)
 - exercices dirigés et interactions : quizz, questions/réponses, ... (10 min)
@@ -65,7 +65,7 @@ Alternance de séquences d'une heure pour une séance de CM de deux heures
 
 - **Morale** : ne manquer aucun CM, être attentif, prendre des notes, poser des questions, **se poser** des questions, demander des pauses pour reprendre une attention maximale  
 
-    - les notes de cours fournies sont trompeuses : comme un film sans le son :(
+  - les notes de cours fournies sont trompeuses : comme un film sans le son :(
 
 - **Méthodologie de travail du CM** : 
     1. relire le cours le soir de l'amphi (15-20 min) 
@@ -86,36 +86,34 @@ Visez deux résultats :
 
 ### _Objectif 10_ ou _Objectif 20_ ?
 
-- **objectif 10** ou **objectif 20**  
-  - 
-
-Objectif 10 (O10) : 
+**Objectif 10 (O10)** 
 
 - applications basiques du cours, démarche guidée
 - pour celles et ceux qui ne veulent pas continuer en informatique au delà du L2 math-info  
 
-Objectif 20 (O20) : 
+**Objectif 20 (O20)**
 
 - applications plus avancées du cours, démarche plus autonome
 - pour celles et ceux qui **veulent continuer** en licence et master informatique, CAPES  informatique (nouveau !), ...
 
-Comment choisir son niveau d'objectif ?
+**Contrat**
+
+- feuilles de TD en 2 parties : O10 et 020
+- tous les sujets notés comportent au moins 10 points de niveau O10 
+
+**Comment choisir son niveau d'objectif ?**
 
 - note algo semestre 1 < 10 --> objectif 10
 - le choix n'est pas définitif
 - méthodologie : __chaque (groupe) d'étudiants__ définit __son rythme__ en suivant le parcours proposé par le chargé de 
 TD.
 
-Contrat 
-
-- feuilles de TD en 2 parties : O10 et 020
-- tous les sujets notés comportent au moins 10 points de niveau O10 
-
 ### TD et TP 
 
 TD : des exercices pour appliquer les connaissances du cours 
 
 TP : un sujet sur un thème pour maitriser les notions et acquérir du savoir-faire personnel  
+
 - 1 TP = un _notebook jupyter_
 - codage, expérimentation et approfondissement 
 - exemples de TP : mini base de données, traitement d'images, cryptographie, classification, problèmes classiques en informatique : huit reines, sac à dos, ...
@@ -150,7 +148,7 @@ TP : un sujet sur un thème pour maitriser les notions et acquérir du savoir-fa
 2. Un environnement python, similaire sur sa machine perso et en salles info
 
 
-### Installer un environnement python
+**Installer un environnement python**
 
 ```{Important}
 On conseille d'installer une distribution récente [Anaconda](https://www.anaconda.com/products/individual)  (python $\ge$ 3.11).  
@@ -165,6 +163,7 @@ On peut s'aider des liens ci-après.
 - [Un autre](https://www.davidculley.com/installing-python-on-a-mac/) pour mac mais/et en anglais, très complet : le début seul devrait vous suffire.
 
 **Pièges**
+
 - Ne pas confondre ~~`python 2`~~ et `python 3` 
 
 
