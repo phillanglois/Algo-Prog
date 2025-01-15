@@ -8,6 +8,10 @@ Mis à jour : {sub-ref}`today`, lecture : {sub-ref}`wordcount-minutes` minutes m
 
 Ceci est le premier point d'entrée de l'UE Algo-Prog en complément de l'[espace moodle de cette UE](https://cours.univ-perp.fr/course/view.php?id=925).
 
+Cette page contient :
+
+- les dates importantes
+- le programme de travail actualisé chaque semaine
 
 :::{important} Rappels des dates importantes
 

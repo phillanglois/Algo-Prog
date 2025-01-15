@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>1. Préalables &#8212; Algo-Prog 2024</title>
+    <title>14. Préalables &#8212; Algo-Prog L1-S2</title>
   
   
   
@@ -30,12 +30,12 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.4cbf315f70debaebd550c87a6162cf0f.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
@@ -49,26 +49,22 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'td/prealable-td';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2. Feuille 1" href="td1.html" />
-    <link rel="prev" title="3. Les ‘ndarray’ : de vrais tableaux en python" href="../cm/a2-ndarray.html" />
+    <link rel="next" title="15. Feuille 1 : fonctions" href="td1.html" />
+    <link rel="prev" title="13. Modules utiles" href="../cm/11-modules-utiles.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -163,44 +159,61 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="Algo-Prog 2024 - Home"/>
-    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Algo-Prog 2024 - Home"/>`);</script>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Algo-Prog L1-S2 - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Algo-Prog L1-S2 - Home"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../bonjour.html">
-                    Bienvenu en Algo-Prog !
+                    Bienvenu en Algo-Prog, version 2025 !
                 </a>
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Présentation</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../cm/0-presentation-2024.html">1. Algo Prog en 2024</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../cm/competences.html">2. Compétences</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/0-presentation.html">Algo Prog en 2025</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/0a-competences.html">Compétences</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Les bases</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapitres</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../cm/1-fonctions.html">1. Fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/1b-fonctions-exemple.html">2. Un exemple, plein de fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/6-recursivite.html">3. Récursivité</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/8-rechercher.html">4. Rechercher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/10-trier.html">5. Trier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/5-types_composes.html">6. Les types composés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/3-ES-fichiers.html">7. Entrées-sorties simples avec des fichiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/9-ES-formats.html">8. Les entrées-sorties (E/S) : formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/7-fonctions-avancees.html">9. Affectation et appel de fonction – aspects avancés</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Annexes</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Compléments</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../cm/a0-boucles-avancees.html">1. Tableaux et boucles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../cm/a1-booleens.html">2. Annexe : les booléens en python (&gt;3.6)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../cm/a2-ndarray.html">3. Les ‘ndarray’ : de vrais tableaux en python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/a0-boucles-avancees.html">10. Tableaux et boucles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/a1-booleens.html">11. Annexe : les booléens en python (&gt;3.6)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/a2-ndarray.html">12. Les ‘ndarray’ : de vrais tableaux en python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/11-modules-utiles.html">13. Modules utiles</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">TD</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">1. Préalables</a></li>
-<li class="toctree-l1"><a class="reference internal" href="td1.html">2. Feuille 1</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">(Intervenants) suivi des séances</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../suivi_seances.html">1. (Intervenant) Suivi des séances</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">14. Préalables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="td1.html">15. Feuille 1 : fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="td2.html">16. Feuille 2 : récursivité</a></li>
 </ul>
 
     </div>
@@ -244,7 +257,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="article-header-buttons">
 
 
-<a href="https://github.com/phillanglois/Algo-Prog-2024/issues/new?title=Issue%20on%20page%20%2Ftd/prealable-td.html&body=Your%20issue%20content%20here." target="_blank"
+<a href="https://github.com/phillanglois/Algo-Prog/issues/new?title=Issue%20on%20page%20%2Ftd/prealable-td.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button"
    title="Open an issue"
    data-bs-placement="bottom" data-bs-toggle="tooltip"
@@ -367,7 +380,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="prealables">
-<h1><span class="section-number">1. </span>Préalables<a class="headerlink" href="#prealables" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">14. </span>Préalables<a class="headerlink" href="#prealables" title="Permalink to this heading">#</a></h1>
 <p>Chaque feuille d’exercices comportent <strong>deux parties</strong>.</p>
 <ul class="simple">
 <li><p>La partie 1 “Objectif 10” propose des exercices proches du cours et
@@ -422,12 +435,12 @@ sont fortement invité.e.s à traiter cette partie.</p></li>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../cm/a2-ndarray.html"
+       href="../cm/11-modules-utiles.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">3. </span>Les ‘ndarray’ : de vrais tableaux en python</p>
+        <p class="prev-next-title"><span class="section-number">13. </span>Modules utiles</p>
       </div>
     </a>
     <a class="right-next"
@@ -435,7 +448,7 @@ sont fortement invité.e.s à traiter cette partie.</p></li>
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2. </span>Feuille 1</p>
+        <p class="prev-next-title"><span class="section-number">15. </span>Feuille 1 : fonctions</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

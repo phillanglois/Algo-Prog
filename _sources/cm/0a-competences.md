@@ -44,7 +44,8 @@ Dans/avec un notebook jupyter :
 
 - utiliser une fonction prédéfinie ou existante
 - définir et écrire la spécification d'une fonction qui réalise un traitement décrit en français, ou qui résout un problème (simple) décrit en français  
-- définir et écrire des appels simples (tests unitaires) 
+- définir et écrire des appels simples (ou des tests unitaires) 
+- définir, écrire et utiliser des tests unitaires 
 - définir et écrire l'implémentation d'une fonction associée à une spécification 
 
 

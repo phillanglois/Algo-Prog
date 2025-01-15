@@ -57,7 +57,7 @@ Une séance de CM de deux heures = deux séquences d'une heure organisées comme
 - exercices dirigés et interactions : quizz, questions/réponses, ... (10 min)
 - pause (5 min)
 
-### La très grande importance des CM
+#### La très grande importance des CM
 
 - **Tout** ce qui est nécessaire à votre compréhension est présenté en cours avec des explications orales adaptées, les répétitions nécessaires des points importants, les mises en garde sur les notions difficiles,  ce qui est essentiel _vs._ ce qui est plus secondaire, les compétences à acquérir : savoir, savoir faire et savoir être, ce qui est attendu pour le contrôle de connaissance, ce qui relève de l'objectif 10 _vs._ de l'objectif 20, ...
   
@@ -84,7 +84,7 @@ Visez deux résultats :
   1. d'abord une véritable _appropriation personnelle_ du cours ;
   2. ensuite, à terme, _votre autonomie_ dans cette démarche d'appropriation, autonomie indispensable à la réussite à l'université. 
 
-### _Objectif 10_ ou _Objectif 20_ ?
+### Objectif 10 ou Objectif 20 ?
 
 **Objectif 10 (O10)** 
 
@@ -118,8 +118,17 @@ TP : un sujet sur un thème pour maitriser les notions et acquérir du savoir-fa
 - codage, expérimentation et approfondissement 
 - exemples de TP : mini base de données, traitement d'images, cryptographie, classification, problèmes classiques en informatique : huit reines, sac à dos, ...
 
+### Supports de cours
 
-### Les outils pour mieux comprendre, mieux retenir
+```{note}
+Excepté ce support de cours, toutes les autres ressources sont sur moodle et sont mises à jour **très** régulièrement
+```
+
+- corrections des exercices objectif 10 des TD : au fur et à mesure du semestre
+- sujets des TP : notebook python (versions ipynb, pdf, html)  
+- sujets et correction des CC et CT des années précédentes
+
+### Les outils pour comprendre, mieux retenir
 
 ```{tip}
 **Pratiquer pour maitriser**
@@ -156,6 +165,8 @@ On conseille d'installer une distribution récente [Anaconda](https://www.anacon
 
 Une fois Anaconda installée, vous avez accès à toutes les ressources python nécessaires ce semestre : jupyter, interpréteur python, principaux modules, gestionnaire conda, ... 
 
+Plus de détail [un peu plus loin](#travailler-en-python)
+
 Le web est bien sûr plein de tutos et autres sites explicatifs ...
 On peut s'aider des liens ci-après.
 
@@ -167,7 +178,7 @@ On peut s'aider des liens ci-après.
 - Ne pas confondre ~~`python 2`~~ et `python 3` 
 
 
-## Compléments 
+## Pré-requis et programme 
 
 ### Acquis du semestre 1 et prérequis 
 
@@ -212,7 +223,7 @@ Vérifiez vos acquisitions en début de semestre 2 !
   - _indentation_  
   - typage dynamique  
 
-## Programme détaillé des aspects "algorithmique"
+### Programme détaillé des aspects "algorithmique"
 
 - Récursivité : 
   - **la notion centrale du semestre**
@@ -248,9 +259,9 @@ La récursion s'appuie sur la notion de _fonction_ présentée dans les aspects 
   - l'algo résout bien le pb
   - notions : invariant de boucle, preuve de terminaison
 
-## Programme détaillé des aspects "programmation" 
+### Programme détaillé des aspects "programmation" 
 
-### Rappels de notions du semestre 1
+#### Rappels de notions du semestre 1
 
 - Tableaux 1D :
   - rappel : avec des listes python (`lst`)
@@ -270,7 +281,7 @@ La récursion s'appuie sur la notion de _fonction_ présentée dans les aspects 
   - en-tête, corps, appel, paramètres formels et effectifs. 
   - portée, visibilité, variables locales vs. paramètres  
 
-### Notions du semestre 2
+#### Notions du semestre 2
 
 - Fonctions : aspects plus avancés
   - tests unitaires
@@ -304,18 +315,8 @@ Des ressources présentées en annexe du support de cours pourront être exploit
 ```
 
 
-## Supports de cours
 
-```{note}
-Excepté ce support de cours, toutes les autres ressources sont sur moodle et sont mises à jour **très** régulièrement
-```
-
-- TD : feuilles d'exercices (pdf) 
-- corrections des exercices objectif 10 des TD : au fur et à mesure du semestre
-- TP : notebook python (versions ipynb, pdf, html)  
-- sujets et correction des CC et CT des années précédentes
-
-### Travailler en python
+## Travailler en python
 
 Il est indispensable :
 
@@ -367,7 +368,7 @@ Elle peut sembler longue mais en pratique, ces composants "arrivent" d'un seul c
 - Choisir une distribution la plus complète possible dès le début.   
 
 
-#### Distributions python classiques  
+### Distributions python classiques  
 
 On télécharge, on installe, on travaille !  
 
