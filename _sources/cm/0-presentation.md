@@ -468,8 +468,10 @@ ISBN : 2091574651 (Première),  2091575437  (Terminale)
 
 ### Approfondisssement en programmation Python
 
-- poly ou bouquin de Cordeau-Pointal (fr)
-- [ref python 3](https://docs.python.org/3/reference/index.html)  (eng)
+- poly ou [bouquin](https://www.dunod.com/sciences-techniques/python-3-apprendre-programmer-dans-ecosysteme-python-0) de Cordeau-Pointal (fr)
+- le site en anglais [RealPython](https://realpython.com) est de très grande qualité (eng.)
+- [ref python 3](https://docs.python.org/3/reference/index.html)  (eng.)
+
 
 ## Conclusion
 

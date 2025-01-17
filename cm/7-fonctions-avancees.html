@@ -474,7 +474,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="affectation-et-appel-de-fonction-aspects-avances">
 <span id="ch-affectation"></span><h1><span class="section-number">9. </span>Affectation et appel de fonction – aspects avancés<a class="headerlink" href="#affectation-et-appel-de-fonction-aspects-avances" title="Permalink to this heading">#</a></h1>
-<p>Mis à jour : Jan 15, 2025, lecture : 16
+<p>Mis à jour : Jan 17, 2025, lecture : 16
 minutes minimum, PhL.</p>
 <p>Nous abordons maintenant les aspects des fonctions qui dépendent des langages de programmation. Nous insistons surtout sur les choix de python3.</p>
 <p><strong>Rappel.</strong>  Le terme <em>paramètre effectif</em>, et son compagnon <em>paramètre formel</em>, sont des termes “langage-indépendant”. En python, le terme <em>argument</em> est utilisé à la place du terme <em>paramètre effectif</em>. Ainsi argument et paramètre effectif sont des synonymes, et seront utilisés comme tel dans ce qui suit.</p>
@@ -887,11 +887,11 @@ Une <em>classe</em> d’objets est un modèle d’objets et ainsi un objet d’u
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 &lt;class &#39;int&#39;&gt; 4304120952
-1.1 &lt;class &#39;float&#39;&gt; 4386291088
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] &lt;class &#39;list&#39;&gt; 4387790208
-[1, 1] &lt;class &#39;list&#39;&gt; 4387789504
-4304120920 4304120920
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 &lt;class &#39;int&#39;&gt; 4379913336
+1.1 &lt;class &#39;float&#39;&gt; 4486228208
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] &lt;class &#39;list&#39;&gt; 4486356608
+[1, 1] &lt;class &#39;list&#39;&gt; 4486355840
+4379913304 4379913304
 </pre></div>
 </div>
 </div>
@@ -1023,20 +1023,20 @@ Etonné ?</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a: 1 &lt;class &#39;int&#39;&gt; 4304120952
-b: 1 &lt;class &#39;int&#39;&gt; 4304120952
-b: 2 &lt;class &#39;int&#39;&gt; 4304120984 
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a: 1 &lt;class &#39;int&#39;&gt; 4379913336
+b: 1 &lt;class &#39;int&#39;&gt; 4379913336
+b: 2 &lt;class &#39;int&#39;&gt; 4379913368 
 
-s: aagskjhdsqgf qkdhqhq  &lt;class &#39;str&#39;&gt; 4387755696
-s2 aagskjhdsqgf qkdhqhq  &lt;class &#39;str&#39;&gt; 4387755696
-s2 a &lt;class &#39;str&#39;&gt; 4303898168 
+s: aagskjhdsqgf qkdhqhq  &lt;class &#39;str&#39;&gt; 4486372352
+s2 aagskjhdsqgf qkdhqhq  &lt;class &#39;str&#39;&gt; 4486372352
+s2 a &lt;class &#39;str&#39;&gt; 4379690552 
 
-[0, 0] &lt;class &#39;list&#39;&gt; 4387865024
-[0, 0] &lt;class &#39;list&#39;&gt; 4387865024
-[1, 0] &lt;class &#39;list&#39;&gt; 4387865152
-[0, 0] &lt;class &#39;list&#39;&gt; 4387865024
-[1, 1] &lt;class &#39;list&#39;&gt; 4387864640
-[0, 1] &lt;class &#39;list&#39;&gt; 4387864640 
+[0, 0] &lt;class &#39;list&#39;&gt; 4486382848
+[0, 0] &lt;class &#39;list&#39;&gt; 4486382848
+[1, 0] &lt;class &#39;list&#39;&gt; 4486382976
+[0, 0] &lt;class &#39;list&#39;&gt; 4486382848
+[1, 1] &lt;class &#39;list&#39;&gt; 4486383232
+[0, 1] &lt;class &#39;list&#39;&gt; 4486383232 
 </pre></div>
 </div>
 </div>
@@ -1118,23 +1118,23 @@ Cependant, elle est sans effet sur les instructions suivantes, comme cet exemple
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a= 1 4304120952
-b= 1 4304120952
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a= 1 4379913336
+b= 1 4379913336
 pas de nouvel espace mémoire suite à b = a. 
 
-a= 2 4304120984
-b= 1 4304120952
+a= 2 4379913368
+b= 1 4379913336
 a est modifié donc un nouvel espace mémoire est créé pour a. 
 
-a= 3 4304121016
+a= 3 4379913400
 a est encore modifié et un nouvel espace mémoire est encore créé.
 Un autre choix aurait été possible mais celui-ci est en cohérence avec le premier traitement observé.
 
-a= 5 4304121080
-a= 6 4304121112 bizarre : a += 1 devrait être effectué en place : cf. plus loin
+a= 5 4379913464
+a= 6 4379913496 bizarre : a += 1 devrait être effectué en place : cf. plus loin
 
-a= 3 4304121016
-b= 1 4304120952
+a= 3 4379913400
+b= 1 4379913336
 pas de surprise
 </pre></div>
 </div>
@@ -1191,21 +1191,21 @@ pas de surprise
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>t = l
-[0, 0] 4387869888
-[0, 0] 4387869888
+[0, 0] 4486352320
+[0, 0] 4486352320
 modification partielle de l
-[2, 0] 4387869888
-[2, 0] 4387869888
+[2, 0] 4486352320
+[2, 0] 4486352320
 modification totale de l
-[4, 3] 4387870016
-[2, 0] 4387869888
+[4, 3] 4486387584
+[2, 0] 4486352320
 modifications de l par ses méthodes (aspects POO)
-[3, 4] 4387870016
-[3, 4] 4387870016
-[4, 3] 4387870016
-[4, 3] 4387870016
-[4, 11, 3] 4387870016
-[4, 11, 3] 4387870016
+[3, 4] 4486387584
+[3, 4] 4486387584
+[4, 3] 4486387584
+[4, 3] 4486387584
+[4, 11, 3] 4486387584
+[4, 11, 3] 4486387584
 </pre></div>
 </div>
 </div>
@@ -1307,15 +1307,15 @@ l= [0, 0, 0] =/ m= [5, 2, 3]  == mm= [5, 2, 3]  == m_copy= [5, 2, 3]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4387790000 Jo
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4486184560 Jo
 
-4387791040 [&#39;Jo&#39;]
-4387790000 Jo
+4486139968 [&#39;Jo&#39;]
+4486184560 Jo
 
 affectation par référence (pas de duplication)
-4387791040 [&#39;Jo&#39;, &#39;Jack&#39;]
-4387791040 [&#39;Jo&#39;, &#39;Jack&#39;]
-4387795056 Averell
+4486139968 [&#39;Jo&#39;, &#39;Jack&#39;]
+4486139968 [&#39;Jo&#39;, &#39;Jack&#39;]
+4486146352 Averell
 
 Averell [&#39;Jo&#39;, &#39;Jack&#39;] [&#39;Jo&#39;, &#39;Jack&#39;]
 </pre></div>
@@ -1349,16 +1349,16 @@ Averell [&#39;Jo&#39;, &#39;Jack&#39;] [&#39;Jo&#39;, &#39;Jack&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4387790000 Jo
-4387798400 [&#39;Jo&#39;]
-4387790000 Jo
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4486184560 Jo
+4486381824 [&#39;Jo&#39;]
+4486184560 Jo
 
 affectation avec duplication
-4387798400 [&#39;Jo&#39;]
-4387791040 [&#39;Jo&#39;]
+4486381824 [&#39;Jo&#39;]
+4486139968 [&#39;Jo&#39;]
 
-4387798400 [&#39;Jo&#39;, &#39;Averell&#39;]
-4387791040 [&#39;Jo&#39;, &#39;Jack&#39;]
+4486381824 [&#39;Jo&#39;, &#39;Averell&#39;]
+4486139968 [&#39;Jo&#39;, &#39;Jack&#39;]
 Averell [&#39;Jo&#39;, &#39;Averell&#39;] [&#39;Jo&#39;, &#39;Jack&#39;]
 </pre></div>
 </div>
@@ -1398,10 +1398,10 @@ Mystère ?</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4304120920 4304121272
-4304120952 4304121304
-4387580288 4387551424
-4387580288 4387539456
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4379913304 4379913656
+4379913336 4379913688
+4486364288 4486351616
+4486364288 4486365120
 </pre></div>
 </div>
 </div>
@@ -1443,12 +1443,12 @@ Le traitement sur la liste <code class="docutils literal notranslate"><span clas
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2 4304120984
-id dans f -- t: 4304121048 , u:  4304120984
-4 4304121048
-[10] 4387580288
-id dans f -- t: 4387787776 , u:  4387580288
-[10, 10] 4387580288
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2 4379913368
+id dans f -- t: 4379913432 , u:  4379913368
+4 4379913432
+[10] 4486364288
+id dans f -- t: 4486148992 , u:  4486364288
+[10, 10] 4486364288
 </pre></div>
 </div>
 </div>
@@ -1475,12 +1475,12 @@ id dans f -- t: 4387787776 , u:  4387580288
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2 4304120984
-id dans f -- t: 4304121048 , u:  4304120984
-6 4304121112
-[10] 4387612864
-id dans f -- t: 4387798592 , u:  4387612864
-[10, 10, 10] 4387612864
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2 4379913368
+id dans f -- t: 4379913432 , u:  4379913368
+6 4379913496
+[10] 4486184192
+id dans f -- t: 4486363776 , u:  4486184192
+[10, 10, 10] 4486184192
 </pre></div>
 </div>
 </div>
@@ -1626,11 +1626,11 @@ False
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>avant appel:
 l= [0, 1] ll= [0, 1] , m= [0, 1] mm= [0, 1]
-id : l= 4387671808 , ll= 4387671808 , m= 4387551552 , mm= 4387778944
+id : l= 4486147712 , ll= 4486147712 , m= 4486363904 , mm= 4486353984
 
 appel avec affectation l = f(l):
 l= [0, 1, 0, 1] ll= [0, 1] , m= [0, 1]
-id : l= 4387789504 , ll= 4387671808 , m= 4387551552
+id : l= 4486352320 , ll= 4486147712 , m= 4486363904
 </pre></div>
 </div>
 </div>
@@ -1690,22 +1690,22 @@ est une fois de plus instructive.</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>l, ll, m
-[0, 0] &lt;class &#39;list&#39;&gt; 4387906048
-[0, 0] &lt;class &#39;list&#39;&gt; 4387906048
-[0, 0] &lt;class &#39;list&#39;&gt; 4387905984
+[0, 0] &lt;class &#39;list&#39;&gt; 4486459200
+[0, 0] &lt;class &#39;list&#39;&gt; 4486459200
+[0, 0] &lt;class &#39;list&#39;&gt; 4486459136
 
 appel sans affectation du retour: g(l)
 print g(l)= None
 l= [0, 0, 1] ll= [0, 0, 1] , m= [0, 0]
-id= 4387906048 id= 4387906048 , id= 4387905984
+id= 4486459200 id= 4486459200 , id= 4486459136
 
 appel avec affectation: l = g(l)
 l= None ll= [0, 0, 1, 1] , m= [0, 0]
-id= 4304119440 id= 4387906048 , id= 4387905984
+id= 4379911824 id= 4486459200 , id= 4486459136
 
 appel avec affectation m = g(l):
 l= [0, 0, 1] ll= [0, 0, 1, 1] , m= None
-id= 4387786624 id= 4387906048 , id= 4304119440
+id= 4486460224 id= 4486459200 , id= 4379911824
 </pre></div>
 </div>
 </div>
@@ -1833,24 +1833,24 @@ Cette fonction peut être très utile pour <em>debugger</em> un développement q
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>avant les appels:
 l= [0, 0] ll= [0, 0] m= [0, 0]
-@l= 4387748032 @ll= 4387748032 @m= 4387864640
+@l= 4486459648 @ll= 4486459648 @m= 4486453888
 
 appel sans affectation du retour:
-main: @l= 4387748032
-  f avant : @= 4387748032
-  f après : @=  4387910720
-  f avant : @= 4387748032
-  f après : @=  4387797184
-print f(l)= [0, 0, 0, 0] @f(l)= 4387797184
+main: @l= 4486459648
+  f avant : @= 4486459648
+  f après : @=  4486530240
+  f avant : @= 4486459648
+  f après : @=  4486530368
+print f(l)= [0, 0, 0, 0] @f(l)= 4486530368
 l= [0, 0] ll= [0, 0] , m= [0, 0]
-@l= 4387748032 @ll= 4387748032 @m= 4387864640
+@l= 4486459648 @ll= 4486459648 @m= 4486453888
 
 appel avec affectation l = f(l):
-  f avant : @= 4387748032
-  f après : @=  4387786624
-main: @l(après l=f(l))= 4387786624
+  f avant : @= 4486459648
+  f après : @=  4486460224
+main: @l(après l=f(l))= 4486460224
 l= [0, 0, 0, 0] ll= [0, 0] , m= [0, 0]
-@l= 4387786624 @ll= 4387748032 @m= 4387864640
+@l= 4486460224 @ll= 4486459648 @m= 4486453888
 </pre></div>
 </div>
 </div>
@@ -1899,20 +1899,20 @@ l= [0, 0, 0, 0] ll= [0, 0] , m= [0, 0]
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>avant les appels:
-u= 0 @u= 4304120920
+u= 0 @u= 4379913304
 
 appel sans affectation du retour:
-  f_r: avant @= 4304120920
-  f_r: après @= 4304120920
-  f_r: avant @= 4304120920
-  f_r: après @= 4304120920
-f(u)= 2 @f(u)= 4304120984
-u= 0 @u= 4304120920
+  f_r: avant @= 4379913304
+  f_r: après @= 4379913304
+  f_r: avant @= 4379913304
+  f_r: après @= 4379913304
+f(u)= 2 @f(u)= 4379913368
+u= 0 @u= 4379913304
 
 appel avec affectation du retour:
-  f_r: avant @= 4304120920
-  f_r: après @= 4304120920
-u après u=f(u)= 2 @u= 4304120984
+  f_r: avant @= 4379913304
+  f_r: après @= 4379913304
+u après u=f(u)= 2 @u= 4379913368
 </pre></div>
 </div>
 </div>
@@ -1946,20 +1946,20 @@ u après u=f(u)= 2 @u= 4304120984
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>avant les appels:
-u= 1 @u= 4304120952
+u= 1 @u= 4379913336
 
 appel sans affectation du retour:
-  f_x: avant @= 4304120952
-  f_x: après @= 4304121016
-  f_x: avant @= 4304120952
-  f_x: après @= 4304121016
-f(u)= 3 @f(u)= 4304121016
-u= 1 @u= 4304120952
+  f_x: avant @= 4379913336
+  f_x: après @= 4379913400
+  f_x: avant @= 4379913336
+  f_x: après @= 4379913400
+f(u)= 3 @f(u)= 4379913400
+u= 1 @u= 4379913336
 
 appel avec affectation du retour:
-  f_x: avant @= 4304120952
-  f_x: après @= 4304121016
-u après u=f(u)= 3 @u= 4304121016
+  f_x: avant @= 4379913336
+  f_x: après @= 4379913400
+u après u=f(u)= 3 @u= 4379913400
 </pre></div>
 </div>
 </div>
@@ -1993,20 +1993,20 @@ u après u=f(u)= 3 @u= 4304121016
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>avant les appels:
-u= 0 @u= 4304120920
+u= 0 @u= 4379913304
 
 appel sans affectation du retour:
-  f_=: avant @= 4304120920
-  f_=: après @= 4304120984
-  f_=: avant @= 4304120920
-  f_=: après @= 4304120984
-f(u)= 2 @f(u)= 4304120984
-u= 0 @u= 4304120920
+  f_=: avant @= 4379913304
+  f_=: après @= 4379913368
+  f_=: avant @= 4379913304
+  f_=: après @= 4379913368
+f(u)= 2 @f(u)= 4379913368
+u= 0 @u= 4379913304
 
 appel avec affectation du retour:
-  f_=: avant @= 4304120920
-  f_=: après @= 4304120984
-u après u=f(u)= 2 @u= 4304120984
+  f_=: avant @= 4379913304
+  f_=: après @= 4379913368
+u après u=f(u)= 2 @u= 4379913368
 </pre></div>
 </div>
 </div>

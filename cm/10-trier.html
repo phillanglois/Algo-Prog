@@ -481,7 +481,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="trier">
 <span id="ch-trier"></span><h1><span class="section-number">5. </span>Trier<a class="headerlink" href="#trier" title="Permalink to this heading">#</a></h1>
-<p>Mis à jour : Jan 15, 2025, lecture : 11
+<p>Mis à jour : Jan 17, 2025, lecture : 11
 minutes minimum, PhL.</p>
 <section id="introduction">
 <h2><span class="section-number">5.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
@@ -624,9 +624,9 @@ minutes minimum, PhL.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[37, 17, 41, 45, 11]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[45, 0, 22, 22, 5]
 Trions !
-[11, 17, 37, 41, 45]
+[0, 5, 22, 22, 45]
 </pre></div>
 </div>
 </div>
@@ -893,9 +893,9 @@ C. Expérimenter en mesurant aussi les temps d’exécution.</p></li>
 [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 45 comparaisons pour n =  10
-[37, 20, 50, 79, 42, 78, 26, 98, 70, 68]
-[20, 26, 37, 42, 50, 68, 70, 78, 79, 98]
-24 comparaisons pour n =  10
+[20, 49, 14, 74, 85, 16, 19, 65, 32, 28]
+[14, 16, 19, 20, 28, 32, 49, 65, 74, 85]
+29 comparaisons pour n =  10
 </pre></div>
 </div>
 </div>
@@ -916,114 +916,114 @@ C. Expérimenter en mesurant aussi les temps d’exécution.</p></li>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Meilleur cas : au plus  9 comparaisons pour n =  10
 Pire cas : au moins  45 comparaisons pour n =  10
 Moyenne de  10 cas aleatoires :
-22 comparaisons pour n =  10
-29 comparaisons pour n =  10
-28 comparaisons pour n =  10
-26 comparaisons pour n =  10
 27 comparaisons pour n =  10
-35 comparaisons pour n =  10
-24 comparaisons pour n =  10
+26 comparaisons pour n =  10
+19 comparaisons pour n =  10
 34 comparaisons pour n =  10
 29 comparaisons pour n =  10
-35 comparaisons pour n =  10
+34 comparaisons pour n =  10
+33 comparaisons pour n =  10
+20 comparaisons pour n =  10
+26 comparaisons pour n =  10
+37 comparaisons pour n =  10
 Conclusion :  28 comparaisons en moyenne pour n =  10 ( 10 echantillons)
 ---------
 Meilleur cas : au plus  49 comparaisons pour n =  50
 Pire cas : au moins  1225 comparaisons pour n =  50
 Moyenne de  10 cas aleatoires :
-728 comparaisons pour n =  50
-772 comparaisons pour n =  50
-624 comparaisons pour n =  50
-588 comparaisons pour n =  50
-646 comparaisons pour n =  50
-726 comparaisons pour n =  50
-691 comparaisons pour n =  50
-726 comparaisons pour n =  50
-565 comparaisons pour n =  50
-502 comparaisons pour n =  50
-Conclusion :  656 comparaisons en moyenne pour n =  50 ( 10 echantillons)
+618 comparaisons pour n =  50
+750 comparaisons pour n =  50
+873 comparaisons pour n =  50
+710 comparaisons pour n =  50
+583 comparaisons pour n =  50
+618 comparaisons pour n =  50
+679 comparaisons pour n =  50
+611 comparaisons pour n =  50
+710 comparaisons pour n =  50
+661 comparaisons pour n =  50
+Conclusion :  681 comparaisons en moyenne pour n =  50 ( 10 echantillons)
 ---------
 Meilleur cas : au plus  99 comparaisons pour n =  100
 Pire cas : au moins  4950 comparaisons pour n =  100
 Moyenne de  10 cas aleatoires :
-2600 comparaisons pour n =  100
+2548 comparaisons pour n =  100
+2482 comparaisons pour n =  100
+2469 comparaisons pour n =  100
+2699 comparaisons pour n =  100
 2347 comparaisons pour n =  100
-2659 comparaisons pour n =  100
-2640 comparaisons pour n =  100
-2695 comparaisons pour n =  100
-2774 comparaisons pour n =  100
-2519 comparaisons pour n =  100
-2777 comparaisons pour n =  100
-2458 comparaisons pour n =  100
-2509 comparaisons pour n =  100
-Conclusion :  2597 comparaisons en moyenne pour n =  100 ( 10 echantillons)
+2400 comparaisons pour n =  100
+2639 comparaisons pour n =  100
+2495 comparaisons pour n =  100
+2502 comparaisons pour n =  100
+2531 comparaisons pour n =  100
+Conclusion :  2511 comparaisons en moyenne pour n =  100 ( 10 echantillons)
 ---------
 Meilleur cas : au plus  199 comparaisons pour n =  200
 Pire cas : au moins  19900 comparaisons pour n =  200
 Moyenne de  10 cas aleatoires :
-9959 comparaisons pour n =  200
-10168 comparaisons pour n =  200
-9972 comparaisons pour n =  200
-10180 comparaisons pour n =  200
-10771 comparaisons pour n =  200
-9314 comparaisons pour n =  200
-10416 comparaisons pour n =  200
-10323 comparaisons pour n =  200
-9437 comparaisons pour n =  200
-10706 comparaisons pour n =  200
-Conclusion :  10124 comparaisons en moyenne pour n =  200 ( 10 echantillons)
+10090 comparaisons pour n =  200
+10140 comparaisons pour n =  200
+11165 comparaisons pour n =  200
+10118 comparaisons pour n =  200
+10524 comparaisons pour n =  200
+9784 comparaisons pour n =  200
+10354 comparaisons pour n =  200
+10488 comparaisons pour n =  200
+9243 comparaisons pour n =  200
+10672 comparaisons pour n =  200
+Conclusion :  10257 comparaisons en moyenne pour n =  200 ( 10 echantillons)
 ---------
 Meilleur cas : au plus  299 comparaisons pour n =  300
 Pire cas : au moins  44850 comparaisons pour n =  300
 Moyenne de  10 cas aleatoires :
-21633 comparaisons pour n =  300
-21790 comparaisons pour n =  300
-22989 comparaisons pour n =  300
-22685 comparaisons pour n =  300
-22177 comparaisons pour n =  300
-22314 comparaisons pour n =  300
-22971 comparaisons pour n =  300
-23156 comparaisons pour n =  300
-22362 comparaisons pour n =  300
-21791 comparaisons pour n =  300
-Conclusion :  22386 comparaisons en moyenne pour n =  300 ( 10 echantillons)
+23299 comparaisons pour n =  300
+22512 comparaisons pour n =  300
+22677 comparaisons pour n =  300
+22129 comparaisons pour n =  300
+23202 comparaisons pour n =  300
+23539 comparaisons pour n =  300
+21819 comparaisons pour n =  300
+22977 comparaisons pour n =  300
+21655 comparaisons pour n =  300
+20190 comparaisons pour n =  300
+Conclusion :  22399 comparaisons en moyenne pour n =  300 ( 10 echantillons)
 ---------
 Meilleur cas : au plus  499 comparaisons pour n =  500
 Pire cas : au moins  124750 comparaisons pour n =  500
 Moyenne de  10 cas aleatoires :
-57508 comparaisons pour n =  500
-61467 comparaisons pour n =  500
-63887 comparaisons pour n =  500
-61832 comparaisons pour n =  500
-58063 comparaisons pour n =  500
-60777 comparaisons pour n =  500
-59360 comparaisons pour n =  500
-60516 comparaisons pour n =  500
-66160 comparaisons pour n =  500
-60482 comparaisons pour n =  500
-Conclusion :  61005 comparaisons en moyenne pour n =  500 ( 10 echantillons)
+63233 comparaisons pour n =  500
+62210 comparaisons pour n =  500
+60509 comparaisons pour n =  500
+58249 comparaisons pour n =  500
+60969 comparaisons pour n =  500
+63200 comparaisons pour n =  500
+60918 comparaisons pour n =  500
+64652 comparaisons pour n =  500
+63866 comparaisons pour n =  500
+63150 comparaisons pour n =  500
+Conclusion :  62095 comparaisons en moyenne pour n =  500 ( 10 echantillons)
 ---------
 Meilleur cas : au plus  999 comparaisons pour n =  1000
 Pire cas : au moins  499500 comparaisons pour n =  1000
 Moyenne de  10 cas aleatoires :
-248517 comparaisons pour n =  1000
-242649 comparaisons pour n =  1000
-249442 comparaisons pour n =  1000
-248459 comparaisons pour n =  1000
-248559 comparaisons pour n =  1000
-246834 comparaisons pour n =  1000
-246667 comparaisons pour n =  1000
-247666 comparaisons pour n =  1000
-255228 comparaisons pour n =  1000
-245404 comparaisons pour n =  1000
-Conclusion :  247942 comparaisons en moyenne pour n =  1000 ( 10 echantillons)
+243826 comparaisons pour n =  1000
+247407 comparaisons pour n =  1000
+250458 comparaisons pour n =  1000
+251805 comparaisons pour n =  1000
+245368 comparaisons pour n =  1000
+250003 comparaisons pour n =  1000
+248419 comparaisons pour n =  1000
+246344 comparaisons pour n =  1000
+250884 comparaisons pour n =  1000
+235954 comparaisons pour n =  1000
+Conclusion :  247046 comparaisons en moyenne pour n =  1000 ( 10 echantillons)
 ---------
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>((10, 50, 100, 200, 300, 500, 1000),
  [9, 49, 99, 199, 299, 499, 999],
  [45, 1225, 4950, 19900, 44850, 124750, 499500],
- [28, 656, 2597, 10124, 22386, 61005, 247942])
+ [28, 681, 2511, 10257, 22399, 62095, 247046])
 </pre></div>
 </div>
 </div>
@@ -1039,115 +1039,115 @@ Conclusion :  247942 comparaisons en moyenne pour n =  1000 ( 10 echantillons)
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Meilleur cas : au plus  9 comparaisons pour n =  10
 Pire cas : au moins  45 comparaisons pour n =  10
 Moyenne de  10 cas aleatoires :
-22 comparaisons pour n =  10
+25 comparaisons pour n =  10
 28 comparaisons pour n =  10
-22 comparaisons pour n =  10
-30 comparaisons pour n =  10
 26 comparaisons pour n =  10
-21 comparaisons pour n =  10
-32 comparaisons pour n =  10
 24 comparaisons pour n =  10
-31 comparaisons pour n =  10
+39 comparaisons pour n =  10
 32 comparaisons pour n =  10
+23 comparaisons pour n =  10
+24 comparaisons pour n =  10
+23 comparaisons pour n =  10
+24 comparaisons pour n =  10
 Conclusion :  26 comparaisons en moyenne pour n =  10 ( 10 echantillons)
 ---------
 Meilleur cas : au plus  49 comparaisons pour n =  50
 Pire cas : au moins  1225 comparaisons pour n =  50
 Moyenne de  10 cas aleatoires :
-682 comparaisons pour n =  50
+659 comparaisons pour n =  50
+618 comparaisons pour n =  50
+679 comparaisons pour n =  50
+681 comparaisons pour n =  50
+521 comparaisons pour n =  50
+598 comparaisons pour n =  50
 688 comparaisons pour n =  50
-675 comparaisons pour n =  50
-543 comparaisons pour n =  50
-665 comparaisons pour n =  50
-594 comparaisons pour n =  50
-662 comparaisons pour n =  50
-742 comparaisons pour n =  50
-614 comparaisons pour n =  50
-552 comparaisons pour n =  50
-Conclusion :  641 comparaisons en moyenne pour n =  50 ( 10 echantillons)
+710 comparaisons pour n =  50
+743 comparaisons pour n =  50
+658 comparaisons pour n =  50
+Conclusion :  655 comparaisons en moyenne pour n =  50 ( 10 echantillons)
 ---------
 Meilleur cas : au plus  99 comparaisons pour n =  100
 Pire cas : au moins  4950 comparaisons pour n =  100
 Moyenne de  10 cas aleatoires :
-2569 comparaisons pour n =  100
-2379 comparaisons pour n =  100
-2352 comparaisons pour n =  100
-2489 comparaisons pour n =  100
-2508 comparaisons pour n =  100
-2553 comparaisons pour n =  100
-2603 comparaisons pour n =  100
-2349 comparaisons pour n =  100
-2235 comparaisons pour n =  100
-2418 comparaisons pour n =  100
-Conclusion :  2445 comparaisons en moyenne pour n =  100 ( 10 echantillons)
+2395 comparaisons pour n =  100
+2444 comparaisons pour n =  100
+2511 comparaisons pour n =  100
+2505 comparaisons pour n =  100
+2613 comparaisons pour n =  100
+2616 comparaisons pour n =  100
+2469 comparaisons pour n =  100
+2773 comparaisons pour n =  100
+2528 comparaisons pour n =  100
+2648 comparaisons pour n =  100
+Conclusion :  2550 comparaisons en moyenne pour n =  100 ( 10 echantillons)
 ---------
 Meilleur cas : au plus  199 comparaisons pour n =  200
 Pire cas : au moins  19900 comparaisons pour n =  200
 Moyenne de  10 cas aleatoires :
-10438 comparaisons pour n =  200
-10164 comparaisons pour n =  200
-9386 comparaisons pour n =  200
-9984 comparaisons pour n =  200
-10019 comparaisons pour n =  200
-10239 comparaisons pour n =  200
-8912 comparaisons pour n =  200
-9641 comparaisons pour n =  200
-10005 comparaisons pour n =  200
-10097 comparaisons pour n =  200
-Conclusion :  9888 comparaisons en moyenne pour n =  200 ( 10 echantillons)
+10608 comparaisons pour n =  200
+9729 comparaisons pour n =  200
+9806 comparaisons pour n =  200
+10343 comparaisons pour n =  200
+10371 comparaisons pour n =  200
+9728 comparaisons pour n =  200
+8935 comparaisons pour n =  200
+10264 comparaisons pour n =  200
+9945 comparaisons pour n =  200
+10510 comparaisons pour n =  200
+Conclusion :  10023 comparaisons en moyenne pour n =  200 ( 10 echantillons)
 ---------
 Meilleur cas : au plus  299 comparaisons pour n =  300
 Pire cas : au moins  44850 comparaisons pour n =  300
 Moyenne de  10 cas aleatoires :
-21797 comparaisons pour n =  300
-22574 comparaisons pour n =  300
-23356 comparaisons pour n =  300
-23414 comparaisons pour n =  300
-21679 comparaisons pour n =  300
-22416 comparaisons pour n =  300
-22780 comparaisons pour n =  300
-21747 comparaisons pour n =  300
-22355 comparaisons pour n =  300
-22192 comparaisons pour n =  300
-Conclusion :  22431 comparaisons en moyenne pour n =  300 ( 10 echantillons)
+23625 comparaisons pour n =  300
+22592 comparaisons pour n =  300
+22707 comparaisons pour n =  300
+21162 comparaisons pour n =  300
+21526 comparaisons pour n =  300
+20487 comparaisons pour n =  300
+23079 comparaisons pour n =  300
+23085 comparaisons pour n =  300
+22602 comparaisons pour n =  300
+23267 comparaisons pour n =  300
+Conclusion :  22413 comparaisons en moyenne pour n =  300 ( 10 echantillons)
 ---------
 Meilleur cas : au plus  499 comparaisons pour n =  500
 Pire cas : au moins  124750 comparaisons pour n =  500
 Moyenne de  10 cas aleatoires :
-62304 comparaisons pour n =  500
-62244 comparaisons pour n =  500
-63132 comparaisons pour n =  500
-62782 comparaisons pour n =  500
-61113 comparaisons pour n =  500
-60711 comparaisons pour n =  500
-62922 comparaisons pour n =  500
-67944 comparaisons pour n =  500
-59407 comparaisons pour n =  500
-65029 comparaisons pour n =  500
-Conclusion :  62758 comparaisons en moyenne pour n =  500 ( 10 echantillons)
+62790 comparaisons pour n =  500
+63493 comparaisons pour n =  500
+61429 comparaisons pour n =  500
+62367 comparaisons pour n =  500
+62462 comparaisons pour n =  500
+63232 comparaisons pour n =  500
+63137 comparaisons pour n =  500
+61727 comparaisons pour n =  500
+63362 comparaisons pour n =  500
+63309 comparaisons pour n =  500
+Conclusion :  62730 comparaisons en moyenne pour n =  500 ( 10 echantillons)
 ---------
 Meilleur cas : au plus  999 comparaisons pour n =  1000
 Pire cas : au moins  499500 comparaisons pour n =  1000
 Moyenne de  10 cas aleatoires :
-245790 comparaisons pour n =  1000
+249357 comparaisons pour n =  1000
+249523 comparaisons pour n =  1000
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>248993 comparaisons pour n =  1000
-241872 comparaisons pour n =  1000
-237088 comparaisons pour n =  1000
-247864 comparaisons pour n =  1000
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>248347 comparaisons pour n =  1000
+249041 comparaisons pour n =  1000
+256026 comparaisons pour n =  1000
+249073 comparaisons pour n =  1000
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>246213 comparaisons pour n =  1000
-250228 comparaisons pour n =  1000
-244615 comparaisons pour n =  1000
-246151 comparaisons pour n =  1000
-252432 comparaisons pour n =  1000
-Conclusion :  246124 comparaisons en moyenne pour n =  1000 ( 10 echantillons)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>256244 comparaisons pour n =  1000
+249434 comparaisons pour n =  1000
+244590 comparaisons pour n =  1000
+250100 comparaisons pour n =  1000
+Conclusion :  250173 comparaisons en moyenne pour n =  1000 ( 10 echantillons)
 ---------
 </pre></div>
 </div>
-<img alt="../_images/1b7f8a23db7d16958fb3285ba0d48b53382b5bfcabc77154ee749390d1dd04bf.png" src="../_images/1b7f8a23db7d16958fb3285ba0d48b53382b5bfcabc77154ee749390d1dd04bf.png" />
+<img alt="../_images/42503536fb21b5ab85109872f9671323fbe4bb6b067a572169479f62a8f0f33b.png" src="../_images/42503536fb21b5ab85109872f9671323fbe4bb6b067a572169479f62a8f0f33b.png" />
 </div>
 </div>
 </section>
@@ -1460,14 +1460,13 @@ après : [0, 1, 2, 4, 8, 15, 17, 23]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>avant : [48, 86, 6, 21, 39, 40, 63]
-dem : [0, 0, 0, 0, 0, 0, 0] [48, 86, 6, 21, 39, 40, 63]
-partition [g, d[:m -&gt; [ 0 , 7 [: 4 [6, 21, 39, 40, 48, 63, 86] [6, 21, 39, 40, 48, 63, 86]
-partition [g, d[:m -&gt; [ 0 , 4 [: 0 [6, 40, 39, 21] [6, 40, 39, 21]
-partition [g, d[:m -&gt; [ 1 , 4 [: 3 [39, 21, 40] [39, 21, 40]
-partition [g, d[:m -&gt; [ 1 , 3 [: 2 [21, 39] [21, 39]
-partition [g, d[:m -&gt; [ 5 , 7 [: 5 [63, 86] [63, 86]
-après : [6, 21, 39, 40, 48, 63, 86]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>avant : [64, 76, 22, 3, 50, 3, 47]
+dem : [0, 0, 0, 0, 0, 0, 0] [64, 76, 22, 3, 50, 3, 47]
+partition [g, d[:m -&gt; [ 0 , 7 [: 5 [22, 3, 50, 3, 47, 64, 76] [22, 3, 50, 3, 47, 64, 76]
+partition [g, d[:m -&gt; [ 0 , 5 [: 2 [3, 3, 22, 47, 50] [3, 3, 22, 47, 50]
+partition [g, d[:m -&gt; [ 0 , 2 [: 1 [3, 3] [3, 3]
+partition [g, d[:m -&gt; [ 3 , 5 [: 3 [47, 50] [47, 50]
+après : [3, 3, 22, 47, 50, 64, 76]
 </pre></div>
 </div>
 </div>
@@ -2097,10 +2096,10 @@ avec affichages
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[6, 1, 5, 7, 4, 6, 7, 0] [0, 2, 1, 5, 7, 1, 5, 5]
-[0, 1, 4, 5, 6, 6, 7, 7]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[7, 4, 7, 8, 1, 1, 8, 7] [1, 3, 5, 3, 0, 2, 0, 7]
+[1, 1, 4, 7, 7, 7, 8, 8]
 nb comparaisons: 24
-[0, 1, 1, 2, 5, 5, 5, 7]
+[0, 0, 1, 2, 3, 3, 5, 7]
 nb comparaisons: 24
 </pre></div>
 </div>

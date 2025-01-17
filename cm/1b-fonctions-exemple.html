@@ -412,7 +412,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#avec-une-fonction-predefinie-exemple-d-appel-de-fonction">2.2. Avec une fonction prédéfinie : exemple d’appel de fonction</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#avec-notre-propre-fonction-d-abord-la-signature-l-en-tete">2.3. Avec notre propre fonction : d’abord la signature (l’en-tête)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#avec-notre-propre-fonction-ensuite-au-moins-un-appel">2.4. Avec notre propre fonction : ensuite au moins un appel</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#validons-notre-fonction-avec-des-test-unitaires">2.5. Validons notre fonction avec des test unitaires</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#validons-notre-fonction-avec-des-tests-unitaires">2.5. Validons notre fonction avec des tests unitaires</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#avec-notre-propre-fonction-puis-son-corps">2.6. Avec notre propre fonction :  puis son corps</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#avec-notre-propre-fonction-on-l-utilise-a-souhait">2.7. Avec notre propre fonction : on l’utilise à souhait</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rmq-ou-placer-la-definition-d-une-fonction">2.7.1. Rmq. Où placer la définition d’une fonction ?</a></li>
@@ -469,9 +469,12 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\cal{C}_n^p = \frac{n!}{p! (n-p)!}.\]</div>
 <p>Rappel : <span class="math notranslate nohighlight">\(n! = n \times (n-1) \times \dots \times 2 \times 1\)</span> et <span class="math notranslate nohighlight">\(0! = 1\)</span>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>La version en ligne de ce notebook ne permet pas une prise ne compte correcte des entrées (<code class="docutils literal notranslate"><span class="pre">input()</span></code>). Ces entrées sont donc ponctuellement modifiées : mise en commentaires et initialisation en ligne.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>La version en ligne de ce notebook ne permet pas une prise ne compte correcte des entrées (<code class="docutils literal notranslate"><span class="pre">input()</span></code>).
+Ces entrées sont donc ponctuellement modifiées : mise en commentaires et initialisation en ligne.</p>
+</div>
+<p><em>Exemple.</em></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;n:&quot;</span><span class="p">))</span>
 <span class="n">p</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;p:&quot;</span><span class="p">))</span>
 </pre></div>
@@ -482,7 +485,6 @@ document.write(`
 <span class="n">n</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="n">p</span> <span class="o">=</span> <span class="mi">2</span>
 </pre></div>
-</div>
 </div>
 <section id="comme-au-premier-semestre-sans-fonction">
 <h2><span class="section-number">2.1. </span>Comme au premier semestre : sans fonction<a class="headerlink" href="#comme-au-premier-semestre-sans-fonction" title="Permalink to this heading">#</a></h2>
@@ -634,28 +636,20 @@ Ce qui ne permet pas de continuer les calculs (de <code class="docutils literal 
 </div>
 </div>
 </section>
-<section id="validons-notre-fonction-avec-des-test-unitaires">
-<h2><span class="section-number">2.5. </span>Validons notre fonction avec des test unitaires<a class="headerlink" href="#validons-notre-fonction-avec-des-test-unitaires" title="Permalink to this heading">#</a></h2>
+<section id="validons-notre-fonction-avec-des-tests-unitaires">
+<h2><span class="section-number">2.5. </span>Validons notre fonction avec des tests unitaires<a class="headerlink" href="#validons-notre-fonction-avec-des-tests-unitaires" title="Permalink to this heading">#</a></h2>
 <p><strong>Indicateur</strong> : <code class="docutils literal notranslate"><span class="pre">assert</span></code></p>
 <p>Comme avec l’appel, l’exécution de ces tests unitaires déclenche une erreur tant que le corps de la fonction n’est pas écrit (mais simplement remplacé par <code class="docutils literal notranslate"><span class="pre">pass</span></code>).</p>
 <p>Ces tests, qui peuvent être écrits <em>avant</em> le corps, sont donc mis en commentaires (entre <code class="docutils literal notranslate"><span class="pre">'''</span></code>) en attendant.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39;</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">assert fact(0) == 1</span>
 <span class="sd">assert fact(1) == 1</span>
+
 <span class="sd"># utilisation d&#39;une propriété générale pour un choix arbitraire de valeurs (ici 55..75)</span>
 <span class="sd">for i in range(55,75):</span>
 <span class="sd">    assert fact(i) == i * fact(i-1)</span>
 <span class="sd">&#39;&#39;&#39;</span>
 </pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&quot;\nassert fact(0) == 1\nassert fact(1) == 1\n# utilisation d&#39;une propriété générale pour un choix arbitraire de valeurs (ici 55..75)\nfor i in range(55,75):\n    assert fact(i) == i * fact(i-1)\n&quot;
-</pre></div>
-</div>
-</div>
 </div>
 </section>
 <section id="avec-notre-propre-fonction-puis-son-corps">
@@ -678,6 +672,7 @@ Ce qui ne permet pas de continuer les calculs (de <code class="docutils literal 
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#premiers tests unitaires de notre fonction fact()</span>
 <span class="k">assert</span> <span class="n">fact</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
 <span class="k">assert</span> <span class="n">fact</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
+
 <span class="c1"># utilisation d&#39;une propriété générale pour un choix arbitraire de valeurs (ici 55..75)</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">55</span><span class="p">,</span><span class="mi">75</span><span class="p">):</span>
     <span class="k">assert</span> <span class="n">fact</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">==</span> <span class="n">i</span> <span class="o">*</span> <span class="n">fact</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
@@ -985,8 +980,9 @@ Elle peut être appelée dans la définition de la fonction englobante.</p>
 <p><strong>Cadre</strong> : en/pour python</p>
 <ul class="simple">
 <li><p>utiliser une fonction prédéfinie ou existante</p></li>
-<li><p>définir et écrire la spécification d’une fonction qui réalise un traitement décrit en français, ou qui résoud un problème (simple) décrit en français</p></li>
-<li><p>définir et écrire des appels simples (tests unitaires)</p></li>
+<li><p>définir et écrire la spécification d’une fonction qui réalise un traitement décrit en français, ou qui résout un problème (simple) décrit en français</p></li>
+<li><p>définir et écrire des appels simples (ou des tests unitaires)</p></li>
+<li><p>définir, écrire et utiliser des tests unitaires</p></li>
 <li><p>définir et écrire l’implémentation d’une fonction associée à une spécification</p></li>
 </ul>
 </section>
@@ -1061,7 +1057,7 @@ Elle peut être appelée dans la définition de la fonction englobante.</p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#avec-une-fonction-predefinie-exemple-d-appel-de-fonction">2.2. Avec une fonction prédéfinie : exemple d’appel de fonction</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#avec-notre-propre-fonction-d-abord-la-signature-l-en-tete">2.3. Avec notre propre fonction : d’abord la signature (l’en-tête)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#avec-notre-propre-fonction-ensuite-au-moins-un-appel">2.4. Avec notre propre fonction : ensuite au moins un appel</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#validons-notre-fonction-avec-des-test-unitaires">2.5. Validons notre fonction avec des test unitaires</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#validons-notre-fonction-avec-des-tests-unitaires">2.5. Validons notre fonction avec des tests unitaires</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#avec-notre-propre-fonction-puis-son-corps">2.6. Avec notre propre fonction :  puis son corps</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#avec-notre-propre-fonction-on-l-utilise-a-souhait">2.7. Avec notre propre fonction : on l’utilise à souhait</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rmq-ou-placer-la-definition-d-une-fonction">2.7.1. Rmq. Où placer la définition d’une fonction ?</a></li>

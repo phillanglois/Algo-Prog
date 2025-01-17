@@ -430,12 +430,13 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice">1.3.3. Exercice</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specifications-de-fonctions-avec-parametre-list-en-python">1.4. Spécifications de fonctions avec paramètre <code class="docutils literal notranslate"><span class="pre">list</span></code> en python</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specifier-le-type-des-parametres-d-une-fonction">1.4. Spécifier le type des paramètres d’une fonction</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comment-indiquer-le-type-d-un-parametre-formel-list">1.4.1. Comment indiquer le type d’un paramètre formel <code class="docutils literal notranslate"><span class="pre">list</span></code> ?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comment-specifier-une-fonction-avec-des-parametres-formels-de-type-tableau">1.4.2. Comment spécifier une fonction avec des paramètres formels de type tableau ?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-sur-les-annotations-de-fonctions">1.4.3. <span class="math notranslate nohighlight">\(\star\)</span> Sur les annotations de fonctions</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#autres-complements">1.5. Autres compléments</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complements">1.5. Compléments</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ne-pas-confondre-return-et-print">1.5.1. Ne pas confondre <code class="docutils literal notranslate"><span class="pre">return</span></code> et <code class="docutils literal notranslate"><span class="pre">print</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#help-et-docstring">1.5.2. <code class="docutils literal notranslate"><span class="pre">help()</span></code> et <em>docstring</em></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plusieurs-parametres">1.5.3. Plusieurs paramètres</a></li>
@@ -444,9 +445,8 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#portee-des-variables-variable-locale-variable-globale">1.5.6. Portée des variables, variable locale, variable globale,</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fonction-locale">1.5.7. Fonction locale</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pas-d-effet-de-bord-pas-de-global">1.5.8. Pas d’effet de bord ! Pas de <code class="docutils literal notranslate"><span class="pre">global</span></code> !</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-sur-les-annotations-de-fonctions">1.5.9. <span class="math notranslate nohighlight">\(\star\)</span> Sur les annotations de fonctions</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-statique-vs-dynamique-trace-d-execution">1.5.10. <span class="math notranslate nohighlight">\(\star\)</span> Statique <em>vs.</em> dynamique, trace d’exécution</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-venir">1.5.11. A venir</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-statique-vs-dynamique-trace-d-execution">1.5.9. <span class="math notranslate nohighlight">\(\star\)</span> Statique <em>vs.</em> dynamique, trace d’exécution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-venir">1.5.10. A venir</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercices-en-demonstration">1.6. Exercices en démonstration</a><ul class="nav section-nav flex-column">
@@ -467,7 +467,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="fonctions">
 <span id="ch-fonctions"></span><h1><span class="section-number">1. </span>Fonctions<a class="headerlink" href="#fonctions" title="Permalink to this heading">#</a></h1>
-<p>Mis à jour : Jan 15, 2025, lecture : 18 minutes minimum, PhL.</p>
+<p>Mis à jour : Jan 17, 2025, lecture : 18 minutes minimum, PhL.</p>
 <p>Ce premier chapitre présente des rappels et quelques compléments sur les fonctions.</p>
 <section id="rappels">
 <h2><span class="section-number">1.1. </span>Rappels<a class="headerlink" href="#rappels" title="Permalink to this heading">#</a></h2>
@@ -512,14 +512,17 @@ Elle sont définies et donc <em>appelables</em>.</p>
 </div>
 </div>
 </div>
-<div class="alert alert-block alert-info">
-<p><strong>A retenir</strong> : Les <strong>parenthèses <code class="docutils literal notranslate"><span class="pre">(...)</span></code></strong> derrière le nom de la fonction : c’est à ça qu’on reconnait une fonction !</p>
+<div class="admonition-a-retenir admonition">
+<p class="admonition-title">A retenir</p>
+<p>Les <strong>parenthèses <code class="docutils literal notranslate"><span class="pre">(...)</span></code></strong> derrière le nom de la fonction : c’est à ça qu’on reconnaît une fonction !</p>
 </div>
-<div class="alert alert-block alert-info">
-<p><strong>A retenir</strong> : la construction
+<div class="admonition-a-retenir admonition">
+<p class="admonition-title">A retenir</p>
+<p>La construction
 <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">module</span> <span class="pre">import</span> <span class="pre">fonction1,</span> <span class="pre">fonction2</span></code>
 permet d’utiliser les fonctions <code class="docutils literal notranslate"><span class="pre">fonction1</span></code> et <code class="docutils literal notranslate"><span class="pre">fonction2</span></code> définies dans la bibliothèque <code class="docutils literal notranslate"><span class="pre">module</span></code></p>
-</div><ol class="arabic simple" start="3">
+</div>
+<ol class="arabic simple" start="3">
 <li><p><strong>Retourner un résultat.</strong> Dans cet exemple, l’appel de la fonction <code class="docutils literal notranslate"><span class="pre">cos()</span></code> effectue un calcul et <em>retourne un résultat</em> : ici 0.5000000000000001.</p></li>
 </ol>
 <p><strong>Remarques.</strong></p>
@@ -611,13 +614,14 @@ On veut calculer <span class="math notranslate nohighlight">\(f(0)\)</span>, <sp
 </ul>
 </li>
 </ul>
-<div class='alert alert-block alert-info'>
-<p><strong>RETENIR</strong> :</p>
+<div class="admonition-a-retenir admonition">
+<p class="admonition-title">A retenir</p>
 <ul class="simple">
 <li><p>Le mot clé <code class="docutils literal notranslate"><span class="pre">def</span></code>, les <code class="docutils literal notranslate"><span class="pre">()</span></code> et le <code class="docutils literal notranslate"><span class="pre">:</span></code></p></li>
 <li><p>Les types des paramètres formels et de la valeur retournée : les <code class="docutils literal notranslate"><span class="pre">:</span></code> dans les <code class="docutils literal notranslate"><span class="pre">(</span> <span class="pre">)</span></code>et le <code class="docutils literal notranslate"><span class="pre">-&gt;</span></code></p></li>
 </ul>
-</div>    </section>
+</div>
+</section>
 <section id="appeler-cette-fonction">
 <h3><span class="section-number">1.1.3. </span>Appeler cette fonction<a class="headerlink" href="#appeler-cette-fonction" title="Permalink to this heading">#</a></h3>
 <p>Exécuter la cellule qui contient la définition de la fonction <code class="docutils literal notranslate"><span class="pre">f()</span></code> ne calcule rien. Pour “calculer avec f”, il faut appeler la fonction <code class="docutils literal notranslate"><span class="pre">f()</span></code> pour des valeurs de son paramètre <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
@@ -695,9 +699,11 @@ On veut calculer <span class="math notranslate nohighlight">\(f(0)\)</span>, <sp
 <img alt="../_images/860df530eb0ce75af3cf4dc798fc07543b800f6e4bbed55f7b7e29b4f8e9452e.png" src="../_images/860df530eb0ce75af3cf4dc798fc07543b800f6e4bbed55f7b7e29b4f8e9452e.png" />
 </div>
 </div>
-<div class='alert alert-block alert-danger'>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
 <p>NE PAS CONFONDRE :  <strong>LA</strong> définition  vs. <strong>LES</strong> appels</p>
-</div></section>
+</div>
+</section>
 <section id="tester-cette-fonction">
 <h3><span class="section-number">1.1.4. </span>Tester cette fonction<a class="headerlink" href="#tester-cette-fonction" title="Permalink to this heading">#</a></h3>
 <p>Il faut s’assurer que l’implémentation effectue sans erreur le traitement voulu.
@@ -773,17 +779,19 @@ Il en est de même pour <span class="math notranslate nohighlight">\(\pi/2\)</sp
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9999999999999999
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.0
 1.0
-0.9999999999999999
-0.9999999999999999
 1.0
+1.0
+1.0
+1.0000000000000002
 1.0000000000000002
 1.0
 1.0
 1.0
+0.9999999999999999
 1.0
-1.0
+0.9999999999999999
 1.0
 1.0
 1.0
@@ -791,16 +799,15 @@ Il en est de même pour <span class="math notranslate nohighlight">\(\pi/2\)</sp
 1.0
 1.0
 0.9999999999999999
-1.0
-1.0
 </pre></div>
 </div>
 </div>
 </div>
-<div class='alert alert-block alert-info'>
-<p><strong>RETENIR.</strong></p>
+<div class="admonition-a-retenir admonition">
+<p class="admonition-title">A retenir</p>
 <p>Toujours tester les fonctions que vous définissez</p>
-</div>   <p>En pratique, je teste une fonction avec l’instruction <code class="docutils literal notranslate"><span class="pre">assert</span></code> et <strong>pas avec <code class="docutils literal notranslate"><span class="pre">print()</span></code></strong></p>
+</div>
+<p>En pratique, je teste une fonction avec l’instruction <code class="docutils literal notranslate"><span class="pre">assert</span></code> et <strong>pas avec <code class="docutils literal notranslate"><span class="pre">print()</span></code></strong></p>
 <p>Des tests unitaires, même en grand nombre, ne vous permettent pas de conclure que votre implémentation est correcte. Mais juste que vous n’avez pas réussi à exhiber un éventuel traitement faux.</p>
 </section>
 <section id="pourquoi-des-fonctions">
@@ -834,13 +841,15 @@ Il en est de même pour <span class="math notranslate nohighlight">\(\pi/2\)</sp
 <li><p><strong>la spécification</strong> d’une fonction = ce que ça fait : le QUOI</p></li>
 <li><p><strong>une implémentation</strong> de cette fonction = comment ça le fait : le COMMENT</p></li>
 </ul>
-<div class='alert alert-block alert-warning'>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
 <p>Vocabulaire – selon les langages de programmation :</p>
-<ul>
-    <li> spécification = signature = en-tête (= prototype)  </li>
-    <li> implémentation = corps   </li>
+<ul class="simple">
+<li><p>spécification = signature = en-tête (= prototype)</p></li>
+<li><p>implémentation = corps</p></li>
 </ul>
-</div>    </section>
+</div>
+</section>
 <section id="la-signature-d-une-fonction-en-python">
 <h3><span class="section-number">1.2.2. </span>La signature d’une fonction en python<a class="headerlink" href="#la-signature-d-une-fonction-en-python" title="Permalink to this heading">#</a></h3>
 <p>La <em>signature</em> d’une fonction explicite le minimum nécessaire et suffisant pour appeler cette fonction, ie. le <em>quoi</em> : que fait la fonction et de quoi a-t-elle besoin pour ça ?</p>
@@ -854,11 +863,13 @@ Il en est de même pour <span class="math notranslate nohighlight">\(\pi/2\)</sp
 </div>
 </div>
 <p>La lecture de cette signature indique que la fonction <code class="docutils literal notranslate"><span class="pre">f</span></code>  prend en entrée un paramètre de type numérique à virgule flottante (<em>un flottant</em>) noté <code class="docutils literal notranslate"><span class="pre">x</span></code> et fourni en retour une valeur flottante.
-Le commentaire, appelé <em>docstring</em> décrit ce que fait la fonction <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
-<div class='alert alert-block alert-danger'>
+Le commentaire, appelé <em>docstring</em> (ou zone de documentation) décrit ce que fait la fonction <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
 <p>ATTENTION  : cette seule signature ne définie pas une fonction exécutable en python</p>
 <p>En revanche, cette signature <em>suffit à</em> écrire les tests unitaires qui seront exécutés une fois la fonction entièrement définie.</p>
-</div></section>
+</div>
+</section>
 <section id="le-corps-et-le-retour-de-valeur-en-python">
 <h3><span class="section-number">1.2.3. </span>Le corps et le retour de valeur en python<a class="headerlink" href="#le-corps-et-le-retour-de-valeur-en-python" title="Permalink to this heading">#</a></h3>
 <p>Le corps définit le traitement effectué par la fonction, <em>ie.</em> l’implémentation de la fonction.
@@ -929,14 +940,16 @@ Ce traitement comporte en général une valeur de sortie retournée par l’inst
 </div>
 </div>
 </div>
-<div class='alert alert-block alert-danger'>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
 <p><strong>NE PAS CONFONDRE</strong> :  <strong>paramètre formel</strong> <em>vs.</em> <strong>paramètre effectif</strong> ou argument</p>
-</div>    
+</div>
 </section>
 <section id="methodologie-d-ecriture-des-fonctions-pour-ce-semestre">
 <h3><span class="section-number">1.2.5. </span>Méthodologie d’écriture des fonctions pour ce semestre<a class="headerlink" href="#methodologie-d-ecriture-des-fonctions-pour-ce-semestre" title="Permalink to this heading">#</a></h3>
 <p>En pratique, vous respecterez <strong>l’ordre d’écriture</strong> suivant.</p>
-<div class='alert alert-block alert-info'>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
 <ol class="arabic simple">
 <li><p>écriture de la signature de la fonction</p>
 <ul class="simple">
@@ -958,7 +971,9 @@ Ce traitement comporte en général une valeur de sortie retournée par l’inst
 <li><p>écriture des appels voulus</p></li>
 <li><p><strong>exécution</strong> des appels voulus</p></li>
 </ol>
-</div><div class='alert alert-block alert-warning'>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
 <p>CONSIGNE PEDAGOGIQUE : L’écriture de l’appel (simple ou test unitaire) est effectuée avant celle du corps, <em>ie.</em> en se basant uniquement sur la signature.</p>
 </div>
 <p>Ainsi :</p>
@@ -1007,9 +1022,11 @@ Ce traitement comporte en général une valeur de sortie retournée par l’inst
 </div>
 </div>
 </div>
-<div class='alert alert-block alert-danger'>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
 <p><strong>INTERDIT PEDAGOGIQUE</strong> : il est interdit d’utiliser l’identifiant du paramètre formel comme paramètre effectif d’un appel.</p>
-</div><div class="cell docutils container">
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="c1"># L&#39;appel suivant est interdit pour la fonction affine f(x) définie précédemment</span>
@@ -1024,12 +1041,13 @@ Ce traitement comporte en général une valeur de sortie retournée par l’inst
 </div>
 </div>
 </div>
-<div class="alert alert-block alert-info">
-<p><strong>A retenir :</strong> l’appel est situé <em>après</em> la définition</p>
-</div>  
+<div class="admonition-a-retenir admonition">
+<p class="admonition-title">A retenir</p>
+<p>L’appel est situé <em>après</em> la définition</p>
+</div>
 <ul class="simple">
 <li><p>logique : il faut connaître la fonction pour l’utiliser !</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">python</span></code> : se souvenir que <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">module</span> <span class="pre">import</span> <span class="pre">f</span></code> permet de connaître, donc d’utiliser, <code class="docutils literal notranslate"><span class="pre">f</span></code> qui a été définie (par moi ou par un.e autre) dans la bibliothèque <code class="docutils literal notranslate"><span class="pre">module</span></code></p></li>
+<li><p>python : se souvenir que <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">module</span> <span class="pre">import</span> <span class="pre">f</span></code> permet de connaître, donc d’utiliser, <code class="docutils literal notranslate"><span class="pre">f</span></code> qui a été définie (par moi ou par un.e autre) dans la bibliothèque <code class="docutils literal notranslate"><span class="pre">module</span></code></p></li>
 </ul>
 </section>
 </section>
@@ -1056,7 +1074,11 @@ Les fonctions génèrent un ordre d’exécution encore différent.</p>
 </ul>
 <p>On observe :</p>
 <ul class="simple">
-<li><p>l’appel de fonction provoque une rupture de l’exécution séquentielle, un débranchement de l’appelant vers l’appelé ;</p></li>
+<li><p>l’appel de fonction provoque une rupture de l’exécution séquentielle,</p>
+<ul>
+<li><p>il provoque un “débranchement” de l’appelant vers l’appelé ;</p></li>
+</ul>
+</li>
 <li><p>le <code class="docutils literal notranslate"><span class="pre">return</span></code> provoque le retour au cadre appelant pour continuer l’exécution séquentielle.</p></li>
 <li><p>Plusieurs <code class="docutils literal notranslate"><span class="pre">return</span></code> ?</p>
 <ul>
@@ -1077,13 +1099,14 @@ Les fonctions génèrent un ordre d’exécution encore différent.</p>
 <li><p>L’exécution revient dans la zone de l’appelant une fois achevée l’exécution de l’appelé  – en pratique, après l’exécution d’un <code class="docutils literal notranslate"><span class="pre">return</span></code>.</p></li>
 <li><p>Ce <code class="docutils literal notranslate"><span class="pre">return</span></code> déclenche le retour dans l’appelant à l’instruction de l’appel – car c’est souvent une affectation si l’appelé est une (vraie) fonction – ou à l’instruction suivante – si c’est une procédure qui ne renvoie aucun résultat, cad. un appel sans affectation.</p></li>
 </ul>
-<div class="alert alert-block alert-info">
-<p><strong>Retenir :</strong></p>
+<div class="admonition-a-retenir admonition">
+<p class="admonition-title">A retenir</p>
 <ul class="simple">
 <li><p>l’appel = appelant -&gt; appelé</p></li>
 <li><p>le <code class="docutils literal notranslate"><span class="pre">return</span></code> = appelé -&gt; appelant</p></li>
 </ul>
-</div> </section>
+</div>
+</section>
 <section id="le-return-termine-l-appel-de-la-fonction">
 <h3><span class="section-number">1.3.2. </span>Le <code class="docutils literal notranslate"><span class="pre">return</span></code> termine l’appel de la fonction<a class="headerlink" href="#le-return-termine-l-appel-de-la-fonction" title="Permalink to this heading">#</a></h3>
 <p>L’exécution d’un <code class="docutils literal notranslate"><span class="pre">return</span></code>, quel qu’il soit, <em>termine l’exécution de la fonction</em> – et provoque le retour dans le cadre appelant.</p>
@@ -1176,12 +1199,10 @@ abs2(u: float) -&gt; float
 </ul>
 </section>
 </section>
-<section id="specifications-de-fonctions-avec-parametre-list-en-python">
-<h2><span class="section-number">1.4. </span>Spécifications de fonctions avec paramètre <code class="docutils literal notranslate"><span class="pre">list</span></code> en python<a class="headerlink" href="#specifications-de-fonctions-avec-parametre-list-en-python" title="Permalink to this heading">#</a></h2>
-<p>Les <code class="docutils literal notranslate"><span class="pre">list</span></code> python sont utilisées pour représenter des tableaux.
-Rappelons comment spécifier des paramètres formels de type <code class="docutils literal notranslate"><span class="pre">list</span></code>.</p>
-<section id="comment-indiquer-le-type-d-un-parametre-formel-list">
-<h3><span class="section-number">1.4.1. </span>Comment indiquer le type d’un paramètre formel <code class="docutils literal notranslate"><span class="pre">list</span></code> ?<a class="headerlink" href="#comment-indiquer-le-type-d-un-parametre-formel-list" title="Permalink to this heading">#</a></h3>
+<section id="specifier-le-type-des-parametres-d-une-fonction">
+<h2><span class="section-number">1.4. </span>Spécifier le type des paramètres d’une fonction<a class="headerlink" href="#specifier-le-type-des-parametres-d-une-fonction" title="Permalink to this heading">#</a></h2>
+<p>Avant d’indiquer comment spécifier des paramètres formels de type <code class="docutils literal notranslate"><span class="pre">list</span></code>, rappelons comment procéder pour les types scalaires.</p>
+<p>En python, il s’agit d’<em>annotations</em> de typage.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Evolutions des annotations de typage</p>
@@ -1193,9 +1214,24 @@ Rappelons comment spécifier des paramètres formels de type <code class="docuti
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>La suite de ce chapitre utilise les possibilités de python 3.9.</p>
+<p>La suite de ce chapitre utilise les possibilités de python <span class="math notranslate nohighlight">\(\ge\)</span> 3.9`</p>
 </div>
-<p>Le type d’un tableau (représenté par une liste) sera décrit avec la syntaxe <code class="docutils literal notranslate"><span class="pre">list[type_val]</span></code> où <code class="docutils literal notranslate"><span class="pre">type_val</span></code> est le type des valeurs du tableau.</p>
+<p><strong>Syntaxe des annotations</strong></p>
+<p>Dans la définition de la fonction, c-a-d. <code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">f()</span> <span class="pre">...</span></code></p>
+<ul class="simple">
+<li><p>paramètres entre <code class="docutils literal notranslate"><span class="pre">(</span> <span class="pre">)</span></code> : <code class="docutils literal notranslate"><span class="pre">identifiant_du_paramètre</span> <span class="pre">:</span> <span class="pre">type_du_paramètre</span></code></p></li>
+<li><p>paramètre de retour : <code class="docutils literal notranslate"><span class="pre">-&gt;</span> <span class="pre">type_du_paramètre</span></code></p></li>
+</ul>
+<p>Les mots-clés des types de paramètres sont explicites : <code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">float</span></code>, <code class="docutils literal notranslate"><span class="pre">str</span></code>, <code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
+<p><em>Exemples.</em></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">prixTotal</span><span class="p">(</span><span class="n">nbUnités</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">prixUnitaire</span> <span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span>
+<span class="k">def</span> <span class="nf">nbVoyelles</span><span class="p">(</span><span class="n">mot</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span>
+<span class="k">def</span> <span class="nf">assertion</span><span class="p">(</span><span class="n">s</span> <span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span>
+</pre></div>
+</div>
+<section id="comment-indiquer-le-type-d-un-parametre-formel-list">
+<h3><span class="section-number">1.4.1. </span>Comment indiquer le type d’un paramètre formel <code class="docutils literal notranslate"><span class="pre">list</span></code> ?<a class="headerlink" href="#comment-indiquer-le-type-d-un-parametre-formel-list" title="Permalink to this heading">#</a></h3>
+<p>Le type d’un tableau, représenté par une liste, sera décrit avec la syntaxe <code class="docutils literal notranslate"><span class="pre">list[type_val]</span></code> où <code class="docutils literal notranslate"><span class="pre">type_val</span></code> est le type des valeurs du tableau.</p>
 <p><em>Exemples.</em></p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">list[int]</span></code> : un tableau 1D d’entiers</p></li>
@@ -1236,13 +1272,14 @@ la fonction <code class="docutils literal notranslate"><span class="pre">min1()<
 <li><p>l’annotation du type de <code class="docutils literal notranslate"><span class="pre">t</span></code>, paramètre formel de “type tableau 2D”, comme une liste de listes d’entiers,</p></li>
 <li><p>et les 2 paramètres de taille <code class="docutils literal notranslate"><span class="pre">n</span></code> et <code class="docutils literal notranslate"><span class="pre">m</span></code>, qui désignent respectivement le nombre de lignes et de colonnes de <code class="docutils literal notranslate"><span class="pre">t</span></code>.</p></li>
 </ul>
-<div class="alert alert-block alert-info">
-    <b>Convention à appliquer ce semestre.</b> 
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Convention à appliquer ce semestre</strong></p>
 <ol class="arabic simple">
 <li><p>Lorsqu’une fonction admet un paramètre formel de type tableau (ou plus d’un), on convient que les paramètres de taille de chaque paramètre tableau suivent sa définition dans la spécification de la fonction.</p></li>
-<li><p>La seule simplfication possible est la suivante : si la fonction admet plusieurs paramètres de type tableau de même taille, alors ces paramètres sont placés en dernier, suivis d’une seule définition de leur taille.</p></li>
+<li><p>La seule simplification possible est la suivante : si la fonction admet plusieurs paramètres de type tableau de même taille, alors ces paramètres sont placés en dernier, suivis d’une seule définition de leur taille.</p></li>
 </ol>
-</div>    
+</div>
 <p><strong>Exemples.</strong></p>
 <ul class="simple">
 <li><p>si il y a 1 paramètre tableau 1D, on écrit dans l’ordre les types de <code class="docutils literal notranslate"><span class="pre">tab1,</span> <span class="pre">taille_de_tab1</span></code></p></li>
@@ -1261,14 +1298,40 @@ la fonction <code class="docutils literal notranslate"><span class="pre">min1()<
 </div>
 </div>
 </section>
+<section id="star-sur-les-annotations-de-fonctions">
+<h3><span class="section-number">1.4.3. </span><span class="math notranslate nohighlight">\(\star\)</span> Sur les annotations de fonctions<a class="headerlink" href="#star-sur-les-annotations-de-fonctions" title="Permalink to this heading">#</a></h3>
+<p>Le type des paramètres de fonctions sont des <em>annotations</em> en python.
+Ces annotations sont optionnelles.
+Ainsi, un appel qui ne respecte pas <em>le type</em> des paramètres ne provoquera pas d’erreur.
+python appliquera un <em>typage dynamique</em> : la valeur définit le type de la variable affectée.
+Ainsi le traitement de la fonction pourra, selon l’incompatibilité, provoquer ou non une erreur à l’exécution.</p>
+<p>D’autres langages de programmation sont moins permissifs et signalent ces erreurs de type à la compilation.
+Des outils python effectuent ce contrôle de types : <a class="reference external" href="https://mypy.readthedocs.io/en/stable/">mypy</a> par exemple.</p>
+<p><strong>Exemple.</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v</span> <span class="o">=</span> <span class="n">doubler</span><span class="p">(</span><span class="mf">5.5</span><span class="p">)</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">doubler</span><span class="p">(</span><span class="s2">&quot;bonjour&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>11.0 bonjourbonjour
+</pre></div>
+</div>
+</div>
+</div>
 </section>
-<section id="autres-complements">
-<h2><span class="section-number">1.5. </span>Autres compléments<a class="headerlink" href="#autres-complements" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="complements">
+<h2><span class="section-number">1.5. </span>Compléments<a class="headerlink" href="#complements" title="Permalink to this heading">#</a></h2>
 <section id="ne-pas-confondre-return-et-print">
 <h3><span class="section-number">1.5.1. </span>Ne pas confondre <code class="docutils literal notranslate"><span class="pre">return</span></code> et <code class="docutils literal notranslate"><span class="pre">print</span></code><a class="headerlink" href="#ne-pas-confondre-return-et-print" title="Permalink to this heading">#</a></h3>
 <p>C’est une erreur très fréquente hélas.
-La relecture de paragraphe sur le rôle du <code class="docutils literal notranslate"><span class="pre">return</span></code> permet de bien se convaincre qu’un <code class="docutils literal notranslate"><span class="pre">return</span></code> fait des choses bien différentes d’un <code class="docutils literal notranslate"><span class="pre">print</span></code>.</p>
-<div class="alert alert-info">
+La relecture de paragraphe sur le rôle du <code class="docutils literal notranslate"><span class="pre">return</span></code> permet de bien se convaincre qu’un <code class="docutils literal notranslate"><span class="pre">return</span></code> réalise un traitement bien différent d’un affichage – ce qui est le rôle du <code class="docutils literal notranslate"><span class="pre">print</span></code>.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
 <p>CONSEIL DÉJÀ SOUVENT RAPPELÉ : séparer les E/S des traitements</p>
 </div>
 <p>En pratique, les E/S (<code class="docutils literal notranslate"><span class="pre">print</span></code> et <code class="docutils literal notranslate"><span class="pre">input</span></code>) doivent être limitées :</p>
@@ -1440,7 +1503,8 @@ appel tetu 1
 </section>
 <section id="fonction-sans-return">
 <h3><span class="section-number">1.5.5. </span>Fonction sans <code class="docutils literal notranslate"><span class="pre">return</span></code><a class="headerlink" href="#fonction-sans-return" title="Permalink to this heading">#</a></h3>
-<div class="alert alert-block alert-warning">
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
 <p>Toute fonction python retourne un résultat. Si aucun <code class="docutils literal notranslate"><span class="pre">return</span></code> est exécuté, la valeur <code class="docutils literal notranslate"><span class="pre">None</span></code> est systématiquement retournée.</p>
 </div>
 <p><strong>Exemple</strong></p>
@@ -1472,7 +1536,7 @@ appel tetu 1
 <section id="portee-des-variables-variable-locale-variable-globale">
 <h3><span class="section-number">1.5.6. </span>Portée des variables, variable locale, variable globale,<a class="headerlink" href="#portee-des-variables-variable-locale-variable-globale" title="Permalink to this heading">#</a></h3>
 <blockquote>
-<div><p>La <strong>portée</strong> d’une variable : la zone où une variable est <em>accessible</em> c-a-d. (re)connue à l’aide de son identifiant.</p>
+<div><p>La <strong>portée</strong> d’une variable : la zone où une variable est <em>accessible</em>, c-a-d. (re)connue à l’aide de son identifiant.</p>
 </div></blockquote>
 <p>Les notions de variable locale (à une fonction) ou de variable globale sont classiques en programmation.</p>
 <blockquote>
@@ -1495,20 +1559,24 @@ appel tetu 1
 <li><p>Les portées d’une variable globale et d’une variable locale peuvent se recouvrir (dans la fonction de la variable locale) si <em>ces 2 variables ont le même identifiant</em>.</p></li>
 </ul>
 <p>Cette dernière remarque justifie les deux interdits suivants.</p>
-<div class="alert alert-block alert-danger">
-<p>INTERDITS PEDAGOGIQUES :</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p><strong>INTERDITS PEDAGOGIQUES</strong></p>
 <ol class="arabic simple">
 <li><p>Dans la définition d’une fonction, il est interdit d’introduire ou d’utiliser des variables globales, excepté si ce sont des <strong>constantes</strong>.</p></li>
 <li><p>Il est interdit d’utiliser l’identifiant du paramètre formel comme paramètre effectif d’un appel.</p></li>
 </ol>
-</div><ol class="arabic simple">
+</div>
+<ol class="arabic simple">
 <li><p>Ainsi en pratique, vous limitez le corps d’une fonction au traitement de ses paramètres formels et de variables locales.</p></li>
 <li><p>(<span class="math notranslate nohighlight">\(\star\)</span>) On comprend maintenant la justification de cet interdit déjà posé.</p></li>
 </ol>
-<div class="alert alert-block alert-info">
+<div class="admonition-a-retenir admonition">
+<p class="admonition-title">A retenir</p>
 <p>CONVENTION PYTHON : les identifiants de constantes s’écrivent en MAJUSCULES</p>
 <p><code class="docutils literal notranslate"><span class="pre">ANNEE_EN_COURS</span> <span class="pre">=</span> <span class="pre">2020</span></code></p>
-</div><p><strong>Exemple.</strong></p>
+</div>
+<p><strong>Exemple.</strong></p>
 <ul class="simple">
 <li><p>Reprendre le pythontutor précédent et observer comment <code class="docutils literal notranslate"><span class="pre">res1</span></code> ou <code class="docutils literal notranslate"><span class="pre">res2</span></code> naissent, vivent et meurent.</p></li>
 </ul>
@@ -1683,8 +1751,8 @@ appel tetu 1
 <h3><span class="section-number">1.5.8. </span>Pas d’effet de bord ! Pas de <code class="docutils literal notranslate"><span class="pre">global</span></code> !<a class="headerlink" href="#pas-d-effet-de-bord-pas-de-global" title="Permalink to this heading">#</a></h3>
 <p>Une fonction réalise un <em>effet de bord</em> si son traitement modifie (au moins) une variable de l’appelant qui n’est pas la variable d’affectation de son retour, ni un paramètre effectif de l’appel (comme nous le verrons dans un prochain chapitre).</p>
 <p>En pratique (en python), l’éventuel effet de bord peut concerner n’importe qu’elle variable de l’appelant qui existe avant l’appel de la fonction, ie. hors du cadre de la fonction, dès lors que cette variable est caractérisée comme  (pour variable globale).</p>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
 <p>Pas d’effet de bord implique donc en python  pas d’utilisation du mot-clé <code class="docutils literal notranslate"><span class="pre">global</span></code>.</p>
 </div>
 <p><strong>Exemple.</strong></p>
@@ -1719,35 +1787,18 @@ appel tetu 1
 </div>
 </div>
 </section>
-<section id="star-sur-les-annotations-de-fonctions">
-<h3><span class="section-number">1.5.9. </span><span class="math notranslate nohighlight">\(\star\)</span> Sur les annotations de fonctions<a class="headerlink" href="#star-sur-les-annotations-de-fonctions" title="Permalink to this heading">#</a></h3>
-<p>Le type des paramètres de fonctions sont des <em>annotations</em> en python. Ces annotations sont optionnelles. Ainsi, un appel qui ne respecte pas <em>le type</em> des paramètres ne provoquera pas d’erreur sigificative de cette incompatibilité. python appliquera le traitement de la fonction qui pourra, selon l’incompatibilité, provoquer ou non une erreur à l’exécution.</p>
-<p><strong>Exemple.</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v</span> <span class="o">=</span> <span class="n">doubler</span><span class="p">(</span><span class="mf">5.5</span><span class="p">)</span>
-<span class="n">s</span> <span class="o">=</span> <span class="n">doubler</span><span class="p">(</span><span class="s2">&quot;bonjour&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>11.0 bonjourbonjour
-</pre></div>
-</div>
-</div>
-</div>
-</section>
 <section id="star-statique-vs-dynamique-trace-d-execution">
-<h3><span class="section-number">1.5.10. </span><span class="math notranslate nohighlight">\(\star\)</span> Statique <em>vs.</em> dynamique, trace d’exécution<a class="headerlink" href="#star-statique-vs-dynamique-trace-d-execution" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.5.9. </span><span class="math notranslate nohighlight">\(\star\)</span> Statique <em>vs.</em> dynamique, trace d’exécution<a class="headerlink" href="#star-statique-vs-dynamique-trace-d-execution" title="Permalink to this heading">#</a></h3>
 <p>Selon les langages de programmation, la signature peut-être séparée, voire compilée, indépendamment du corps de la fonction.
 Ainsi connue du compilateur, cette signature peut lui servir pour <em>vérifier automatiquement la correction</em> de l’implémentation de la fonction et aussi des appels à cette fonction : nombre de paramètres effectifs, type de ces paramètres, type du résultat retourné, …
 Ces vérifications sont possibles lors de la <em>compilation</em> , cad. <em>avant toute exécution</em> du programme. Ce type de vérification diminue le risque d’erreur lors de l’exécution.</p>
 <p>On parle d’analyse <em>statique</em> (ou de vérification statique) pour ces <em>traitements effectués lors de la compilation</em>.</p>
 <p>De façon complémentaire, on parle d’analyse <em>dynamique</em> (ou de vérification dynamique) pour les traitements effectués lors de <em>l’exécution</em> du programme.</p>
-<div class="alert alert-info">
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>Par extention, le <em>statique</em> caractérise ce qui relève du code source tandis que le <em>dynamique</em> traduit ce qui est propre à l’exécution de ce code.</p>
-</div><p>A code source constant, les instructions exécutées dépendent des paramètres de l’exécution.
+</div>
+<p>A code source constant, les instructions exécutées dépendent des paramètres de l’exécution.
 On appelle <em>trace d’exécution</em> l’ensemble des valeurs et des états produits par <em>une</em> exécution.
 Ainsi, le même code <em>statique</em> engendrera des <em>traces d’exécutions</em> différentes.
 On a déjà remarqué que la séquentialité des instructions écrites dans le code source et une trace de leur exécution sont différentes.
@@ -1755,16 +1806,17 @@ La trace est une notion <em>dynamique</em>.</p>
 <p><strong>Remarque.</strong> Oui : un compilateur est un programme qui s’exécute ! Il “prend en entrée” un code (dit) source et produit en sortie un code (dit) exécutable. Ce traitement comporte plusieurs étapes dont celle de vérification mentionnée qui s’effectue lors de l’étape (dite) d’analyse syntaxique – ne pas confondre les termes “syntaxique” et “statique”.</p>
 </section>
 <section id="a-venir">
-<h3><span class="section-number">1.5.11. </span>A venir<a class="headerlink" href="#a-venir" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.5.10. </span>A venir<a class="headerlink" href="#a-venir" title="Permalink to this heading">#</a></h3>
 <p>Un point important a été passé sous silence dans ce chapitre :</p>
 <ul class="simple">
 <li><p>comment s’effectue le passage de paramètres lors de l’appel ?</p></li>
 </ul>
 <p>Autrement dit :</p>
 <ul class="simple">
-<li><p>comment les paramètres formels de la définition d’une fonction “deviennent” des paramètres effectifs, cad. des valeurs effectivement traités (ou des objets effectivement manipulés) par les instructions du corps de la fonction ?</p></li>
+<li><p>comment le traitement défini sur les paramètres formels dans la définition de la fonction s’applique aux paramètres effectifs de l’appel ?</p></li>
+<li><p>comment les paramètres formels de la définition “deviennent-ils” les paramètres effectifs de l’appel ?</p></li>
 </ul>
-<p>Cette importante question sera traitée dans un chapitre dédié.</p>
+<p>Cette question importante en pratique est traitée dans le chapitre {ref}(ch:affectation).</p>
 </section>
 </section>
 <section id="exercices-en-demonstration">
@@ -2079,12 +2131,13 @@ Foix est la préfecture du département 09
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice">1.3.3. Exercice</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specifications-de-fonctions-avec-parametre-list-en-python">1.4. Spécifications de fonctions avec paramètre <code class="docutils literal notranslate"><span class="pre">list</span></code> en python</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specifier-le-type-des-parametres-d-une-fonction">1.4. Spécifier le type des paramètres d’une fonction</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comment-indiquer-le-type-d-un-parametre-formel-list">1.4.1. Comment indiquer le type d’un paramètre formel <code class="docutils literal notranslate"><span class="pre">list</span></code> ?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comment-specifier-une-fonction-avec-des-parametres-formels-de-type-tableau">1.4.2. Comment spécifier une fonction avec des paramètres formels de type tableau ?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-sur-les-annotations-de-fonctions">1.4.3. <span class="math notranslate nohighlight">\(\star\)</span> Sur les annotations de fonctions</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#autres-complements">1.5. Autres compléments</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complements">1.5. Compléments</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ne-pas-confondre-return-et-print">1.5.1. Ne pas confondre <code class="docutils literal notranslate"><span class="pre">return</span></code> et <code class="docutils literal notranslate"><span class="pre">print</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#help-et-docstring">1.5.2. <code class="docutils literal notranslate"><span class="pre">help()</span></code> et <em>docstring</em></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plusieurs-parametres">1.5.3. Plusieurs paramètres</a></li>
@@ -2093,9 +2146,8 @@ Foix est la préfecture du département 09
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#portee-des-variables-variable-locale-variable-globale">1.5.6. Portée des variables, variable locale, variable globale,</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fonction-locale">1.5.7. Fonction locale</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pas-d-effet-de-bord-pas-de-global">1.5.8. Pas d’effet de bord ! Pas de <code class="docutils literal notranslate"><span class="pre">global</span></code> !</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-sur-les-annotations-de-fonctions">1.5.9. <span class="math notranslate nohighlight">\(\star\)</span> Sur les annotations de fonctions</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-statique-vs-dynamique-trace-d-execution">1.5.10. <span class="math notranslate nohighlight">\(\star\)</span> Statique <em>vs.</em> dynamique, trace d’exécution</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-venir">1.5.11. A venir</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-statique-vs-dynamique-trace-d-execution">1.5.9. <span class="math notranslate nohighlight">\(\star\)</span> Statique <em>vs.</em> dynamique, trace d’exécution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-venir">1.5.10. A venir</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercices-en-demonstration">1.6. Exercices en démonstration</a><ul class="nav section-nav flex-column">
