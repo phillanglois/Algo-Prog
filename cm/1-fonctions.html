@@ -467,7 +467,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="fonctions">
 <span id="ch-fonctions"></span><h1><span class="section-number">1. </span>Fonctions<a class="headerlink" href="#fonctions" title="Permalink to this heading">#</a></h1>
-<p>Mis à jour : Jan 17, 2025, lecture : 18 minutes minimum, PhL.</p>
+<p>Mis à jour : Jan 21, 2025, lecture : 18 minutes minimum, PhL.</p>
 <p>Ce premier chapitre présente des rappels et quelques compléments sur les fonctions.</p>
 <section id="rappels">
 <h2><span class="section-number">1.1. </span>Rappels<a class="headerlink" href="#rappels" title="Permalink to this heading">#</a></h2>
@@ -782,14 +782,14 @@ Il en est de même pour <span class="math notranslate nohighlight">\(\pi/2\)</sp
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.0
 1.0
 1.0
-1.0
-1.0
-1.0000000000000002
-1.0000000000000002
-1.0
-1.0
-1.0
 0.9999999999999999
+1.0
+1.0
+1.0000000000000002
+1.0
+1.0
+1.0
+1.0
 1.0
 0.9999999999999999
 1.0
@@ -974,7 +974,7 @@ Ce traitement comporte en général une valeur de sortie retournée par l’inst
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>CONSIGNE PEDAGOGIQUE : L’écriture de l’appel (simple ou test unitaire) est effectuée avant celle du corps, <em>ie.</em> en se basant uniquement sur la signature.</p>
+<p>CONSIGNE PEDAGOGIQUE : Ecrire l’appel (simple) ou les tests unitaires avant d’écrire le corps, <em>ie.</em> en se basant uniquement sur la signature.</p>
 </div>
 <p>Ainsi :</p>
 <ul class="simple">
@@ -994,8 +994,8 @@ Ce traitement comporte en général une valeur de sortie retournée par l’inst
     <span class="k">return</span> <span class="n">v</span>
 
 <span class="c1"># des tests unitaires</span>
-<span class="n">doubler</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
-<span class="n">tripler</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="k">assert</span> <span class="n">doubler</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="k">assert</span> <span class="n">tripler</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">):</span>
     <span class="k">assert</span> <span class="n">doubler</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">==</span> <span class="n">i</span> <span class="o">+</span> <span class="n">i</span>
