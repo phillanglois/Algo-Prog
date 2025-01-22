@@ -315,7 +315,7 @@ Des ressources présentées en annexe du support de cours pourront être exploit
 ```
 
 
-
+(envir-machine)=
 ## Travailler en python
 
 Il est indispensable :
