@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>14. Modules utiles &#8212; Algo-Prog L1-S2</title>
+    <title>12. Modules utiles &#8212; Algo-Prog L1-S2</title>
   
   
   
@@ -63,8 +63,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'cm/11-modules-utiles';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="15. Préalables" href="../td/prealable-td.html" />
-    <link rel="prev" title="13. Les ‘ndarray’ : de vrais tableaux en python" href="a2-ndarray.html" />
+    <link rel="next" title="13. Les booléens en python (&gt;3.6)" href="a1-booleens.html" />
+    <link rel="prev" title="11. Tableaux et boucles" href="a0-boucles-avancees.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -204,11 +204,11 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Compléments</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="01-synthese-s1.html">10. Synthèse introductive à Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01-synthese-s1.html">10. Synthèse des acquis du semestre 1 en Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="a0-boucles-avancees.html">11. Tableaux et boucles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="a1-booleens.html">12. Annexe : les booléens en python (&gt;3.6)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="a2-ndarray.html">13. Les ‘ndarray’ : de vrais tableaux en python</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">14. Modules utiles</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">12. Modules utiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a1-booleens.html">13. Les booléens en python (&gt;3.6)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a2-ndarray.html">14. Les ‘ndarray’ : de vrais tableaux en python</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">TD</span></p>
 <ul class="nav bd-sidenav">
@@ -409,31 +409,31 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#de-l-alea-avec-le-module-random">14.1. De l’aléa avec le module <code class="docutils literal notranslate"><span class="pre">random</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#principe-d-un-generateur-pseudo-aleatoire">14.1.1. Principe d’un générateur <strong>pseudo</strong>-aléatoire</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fonctions-utiles">14.1.2. Fonctions utiles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#de-l-alea-avec-le-module-random">12.1. De l’aléa avec le module <code class="docutils literal notranslate"><span class="pre">random</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#principe-d-un-generateur-pseudo-aleatoire">12.1.1. Principe d’un générateur <strong>pseudo</strong>-aléatoire</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fonctions-utiles">12.1.2. Fonctions utiles</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tracer-avec-matplotlib">14.2. Tracer avec <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matplotlib-qu-est-ce-que-ca-fait">14.2.1. <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> : qu’est ce que ça fait ?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matplotlib-comment-ca-le-fait">14.2.2. <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> : comment ça le fait ?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice">14.2.3. Exercice</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#manipuler-des-images-avec-matplotlib">14.2.4. Manipuler des images avec <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-vous-maintenant">14.2.5. A vous maintenant !</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tracer-avec-matplotlib">12.2. Tracer avec <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matplotlib-qu-est-ce-que-ca-fait">12.2.1. <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> : qu’est ce que ça fait ?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matplotlib-comment-ca-le-fait">12.2.2. <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> : comment ça le fait ?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice">12.2.3. Exercice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#manipuler-des-images-avec-matplotlib">12.2.4. Manipuler des images avec <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-vous-maintenant">12.2.5. A vous maintenant !</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#le-flocon-de-von-koch">Le flocon de Von Koch</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#star-mesurer-le-temps-d-execution-d-un-programme">14.3. (<span class="math notranslate nohighlight">\(\star\)</span>) Mesurer le temps d’exécution d’un programme</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pas-si-simple">14.3.1. Pas si simple …</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mesurer-avec-le-module-time">14.3.2. Mesurer avec le module <code class="docutils literal notranslate"><span class="pre">time</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#un-benchmark-en-theta-n-la-somme-iterative">14.3.3. Un <em>benchmark</em> en  <span class="math notranslate nohighlight">\(\theta(n)\)</span> : la somme itérative</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#un-premier-exemple">14.3.4. Un premier exemple</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#star-mesurer-le-temps-d-execution-d-un-programme">12.3. (<span class="math notranslate nohighlight">\(\star\)</span>) Mesurer le temps d’exécution d’un programme</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pas-si-simple">12.3.1. Pas si simple …</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mesurer-avec-le-module-time">12.3.2. Mesurer avec le module <code class="docutils literal notranslate"><span class="pre">time</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#un-benchmark-en-theta-n-la-somme-iterative">12.3.3. Un <em>benchmark</em> en  <span class="math notranslate nohighlight">\(\theta(n)\)</span> : la somme itérative</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#un-premier-exemple">12.3.4. Un premier exemple</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#premiere-mesure-de-complexite">14.4. Première mesure de complexité</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#des-donnees-de-taille-variable">14.4.1. Des données de taille variable</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#premiere-mesure-de-complexite">12.4. Première mesure de complexité</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#des-donnees-de-taille-variable">12.4.1. Des données de taille variable</a></li>
 </ul>
 </li>
 </ul>
@@ -448,8 +448,8 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="modules-utiles">
-<span id="ch-modulesutiles"></span><h1><span class="section-number">14. </span>Modules utiles<a class="headerlink" href="#modules-utiles" title="Permalink to this heading">#</a></h1>
-<p>Mis à jour : Jan 17, 2025, lecture : 8
+<span id="ch-modulesutiles"></span><h1><span class="section-number">12. </span>Modules utiles<a class="headerlink" href="#modules-utiles" title="Permalink to this heading">#</a></h1>
+<p>Mis à jour : Jan 27, 2025, lecture : 8
 minutes minimum, PhL.</p>
 <p><strong><code class="docutils literal notranslate"><span class="pre">random</span></code>, <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> et <code class="docutils literal notranslate"><span class="pre">time</span></code></strong>  pour des expériences de complexité, entre autres.</p>
 <p>Petites expériences qui nous permettent de découvrir des modules bien utiles :</p>
@@ -467,19 +467,19 @@ minutes minimum, PhL.</p>
 </li>
 </ul>
 <section id="de-l-alea-avec-le-module-random">
-<h2><span class="section-number">14.1. </span>De l’aléa avec le module <code class="docutils literal notranslate"><span class="pre">random</span></code><a class="headerlink" href="#de-l-alea-avec-le-module-random" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">12.1. </span>De l’aléa avec le module <code class="docutils literal notranslate"><span class="pre">random</span></code><a class="headerlink" href="#de-l-alea-avec-le-module-random" title="Permalink to this heading">#</a></h2>
 <p>Commençons par ce module déjà utilisé au semestre 1.</p>
 <p>Les expérimentations demandent souvent <em>mais pas systématiquement</em> de générer des données aléatoires.<br />
 Le module <code class="docutils literal notranslate"><span class="pre">random</span></code> permet ça, ou presque car la génération <strong>déterministe</strong> de valeurs a priori quelconques est un processus <strong>pseudo-aléatoire</strong> .</p>
 <section id="principe-d-un-generateur-pseudo-aleatoire">
-<h3><span class="section-number">14.1.1. </span>Principe d’un générateur <strong>pseudo</strong>-aléatoire<a class="headerlink" href="#principe-d-un-generateur-pseudo-aleatoire" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">12.1.1. </span>Principe d’un générateur <strong>pseudo</strong>-aléatoire<a class="headerlink" href="#principe-d-un-generateur-pseudo-aleatoire" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>une graine : <span class="math notranslate nohighlight">\(u_0\)</span></p></li>
 <li><p>une récurrence déterministe : <span class="math notranslate nohighlight">\(u_n = f(u_{n-1})\)</span> où <span class="math notranslate nohighlight">\(f\)</span> définit de l’<em>aléa</em>.</p></li>
 </ul>
 </section>
 <section id="fonctions-utiles">
-<h3><span class="section-number">14.1.2. </span>Fonctions utiles<a class="headerlink" href="#fonctions-utiles" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">12.1.2. </span>Fonctions utiles<a class="headerlink" href="#fonctions-utiles" title="Permalink to this heading">#</a></h3>
 <p>Après un :</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -546,7 +546,7 @@ Le module <code class="docutils literal notranslate"><span class="pre">random</s
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
 False
 True
-[0.5939849511692922, 0.3706264795521189, 0.25389787171766076, 0.4544469577376551, 0.5837814375350382, 0.022163828853910106, 0.4573237634238315, 0.6501165136639113, 0.3042313446326862, 0.016534406589159167]
+[0.6684102028705827, 0.9834702983731467, 0.8717570511496927, 0.22976314335870884, 0.5173991879799942, 0.9766812373684695, 0.8707406523909432, 0.0844562119653961, 0.1449656579541937, 0.8007956538026064]
 [0.41661987254534116, 0.010169169457068361, 0.8252065092537432, 0.2986398551995928, 0.3684116894884757, 0.19366134904507426, 0.5660081687288613, 0.1616878239293682, 0.12426688428353017, 0.4329362680099159]
 </pre></div>
 </div>
@@ -555,10 +555,10 @@ True
 </section>
 </section>
 <section id="tracer-avec-matplotlib">
-<h2><span class="section-number">14.2. </span>Tracer avec <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code><a class="headerlink" href="#tracer-avec-matplotlib" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">12.2. </span>Tracer avec <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code><a class="headerlink" href="#tracer-avec-matplotlib" title="Permalink to this heading">#</a></h2>
 <p>C’est utile … et pas moche !</p>
 <section id="matplotlib-qu-est-ce-que-ca-fait">
-<h3><span class="section-number">14.2.1. </span><code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> : qu’est ce que ça fait ?<a class="headerlink" href="#matplotlib-qu-est-ce-que-ca-fait" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">12.2.1. </span><code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> : qu’est ce que ça fait ?<a class="headerlink" href="#matplotlib-qu-est-ce-que-ca-fait" title="Permalink to this heading">#</a></h3>
 <p>Le module python <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> est un module adapté à tous les types de tracés
 scientifiques : courbes, histogrammes, nuages de points, <span class="math notranslate nohighlight">\(\dots\)</span>
 On verra même qu’il permet d’afficher des images, ds photos, …</p>
@@ -602,7 +602,7 @@ même figure.</p></li>
 </div>
 </section>
 <section id="matplotlib-comment-ca-le-fait">
-<h3><span class="section-number">14.2.2. </span><code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> : comment ça le fait ?<a class="headerlink" href="#matplotlib-comment-ca-le-fait" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">12.2.2. </span><code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> : comment ça le fait ?<a class="headerlink" href="#matplotlib-comment-ca-le-fait" title="Permalink to this heading">#</a></h3>
 <p>Une première prise en main grâce à :</p>
 <ul class="simple">
 <li><p>ces synthèses très  bien faites pour niveaux <a class="reference external" href="https://matplotlib.org/cheatsheets/_images/handout-beginner.png">débutant</a> ou <a class="reference external" href="https://matplotlib.org/cheatsheets/_images/handout-intermediate.png">intermédiaire</a> et <a class="reference external" href="https://matplotlib.org/cheatsheets/_images/handout-tips.png">des compléments</a></p></li>
@@ -648,7 +648,7 @@ même figure.</p></li>
 </ul>
 </section>
 <section id="exercice">
-<h3><span class="section-number">14.2.3. </span>Exercice<a class="headerlink" href="#exercice" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">12.2.3. </span>Exercice<a class="headerlink" href="#exercice" title="Permalink to this heading">#</a></h3>
 <p>Obtenir le tracé des principales classes de complexités : <span class="math notranslate nohighlight">\(log_2n\)</span>, <span class="math notranslate nohighlight">\(n\)</span>, <span class="math notranslate nohighlight">\(n\ \log_2(n)\)</span>, <span class="math notranslate nohighlight">\(n^2\)</span>, <span class="math notranslate nohighlight">\(n^3\)</span>, <span class="math notranslate nohighlight">\(2^n\)</span>
 pour les premières puissances de 2 – par exemple de 2 à 128.</p>
 <p>A votre avis, pourquoi des échelles logarithmiques sont adaptées ?</p>
@@ -710,7 +710,7 @@ Il est conseillé de “jouer” avec les différentes commandes jusqu’à obte
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x122cd9890&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x122635710&gt;
 </pre></div>
 </div>
 <img alt="../_images/a8998c42ef8c27cd3f342bbb9f7be6c8644cc3573356f3882eb772b2b0bbec2f.png" src="../_images/a8998c42ef8c27cd3f342bbb9f7be6c8644cc3573356f3882eb772b2b0bbec2f.png" />
@@ -736,7 +736,7 @@ Il est conseillé de “jouer” avec les différentes commandes jusqu’à obte
 </div>
 </section>
 <section id="manipuler-des-images-avec-matplotlib">
-<h3><span class="section-number">14.2.4. </span>Manipuler des images avec <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code><a class="headerlink" href="#manipuler-des-images-avec-matplotlib" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">12.2.4. </span>Manipuler des images avec <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code><a class="headerlink" href="#manipuler-des-images-avec-matplotlib" title="Permalink to this heading">#</a></h3>
 <p>Il est classique de définir des images à niveaux de gris par un tableau 2D d’entiers compris en 0 (noir) et 255 (blanc) – voir par exemple la <a class="reference internal" href="#td:td3"><span class="xref myst">Feuille 3</span></a>.</p>
 <p>Voyons comment afficher de telles images avec <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>.</p>
 <p>Si ce n’est pas encore fait, on importe <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot</span></code></p>
@@ -793,7 +793,7 @@ On note les paramètres effectifs qui définissent comment interpréter les vale
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x1235c6c50&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x122e5ac50&gt;
 </pre></div>
 </div>
 <img alt="../_images/564c0f777db4edce5831dd122c874100c30342a95980992de2fc520203fa5333.png" src="../_images/564c0f777db4edce5831dd122c874100c30342a95980992de2fc520203fa5333.png" />
@@ -843,7 +843,7 @@ Oui ! En l’état de vos connaissances, ce traitement peut vous paraître un pe
 </ul>
 </section>
 <section id="a-vous-maintenant">
-<h3><span class="section-number">14.2.5. </span>A vous maintenant !<a class="headerlink" href="#a-vous-maintenant" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">12.2.5. </span>A vous maintenant !<a class="headerlink" href="#a-vous-maintenant" title="Permalink to this heading">#</a></h3>
 <section id="le-flocon-de-von-koch">
 <h4>Le flocon de Von Koch<a class="headerlink" href="#le-flocon-de-von-koch" title="Permalink to this heading">#</a></h4>
 <p>Le flocon de Von Koch (1906) est une courbe fractale
@@ -911,9 +911,9 @@ premières itérations du segment <span class="math notranslate nohighlight">\([
 </section>
 </section>
 <section id="star-mesurer-le-temps-d-execution-d-un-programme">
-<h2><span class="section-number">14.3. </span>(<span class="math notranslate nohighlight">\(\star\)</span>) Mesurer le temps d’exécution d’un programme<a class="headerlink" href="#star-mesurer-le-temps-d-execution-d-un-programme" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">12.3. </span>(<span class="math notranslate nohighlight">\(\star\)</span>) Mesurer le temps d’exécution d’un programme<a class="headerlink" href="#star-mesurer-le-temps-d-execution-d-un-programme" title="Permalink to this heading">#</a></h2>
 <section id="pas-si-simple">
-<h3><span class="section-number">14.3.1. </span>Pas si simple …<a class="headerlink" href="#pas-si-simple" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">12.3.1. </span>Pas si simple …<a class="headerlink" href="#pas-si-simple" title="Permalink to this heading">#</a></h3>
 <p>Mesurer le temps d’exécution d’un programme sur une machine actuelle
 est une une tâche beaucoup plus ardue qu’il n’y parait.
 En effet, l’impression que l’<strong>exécution</strong> de votre programme
@@ -966,7 +966,7 @@ confirme l’intérêt des notations asymptotiques <span class="math notranslate
 détails.</p>
 </section>
 <section id="mesurer-avec-le-module-time">
-<h3><span class="section-number">14.3.2. </span>Mesurer avec le module <code class="docutils literal notranslate"><span class="pre">time</span></code><a class="headerlink" href="#mesurer-avec-le-module-time" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">12.3.2. </span>Mesurer avec le module <code class="docutils literal notranslate"><span class="pre">time</span></code><a class="headerlink" href="#mesurer-avec-le-module-time" title="Permalink to this heading">#</a></h3>
 <p>Ce module python fournit beaucoup de fonctions en rapport avec le temps :
 gestions de calendriers, des systèmes horaires, d’horloges …</p>
 <p>Il permet aussi une estimation des temps d’exécution des programmes
@@ -1003,7 +1003,7 @@ réserves précédentes).</p></li>
 <p>Ne pas oublier de <em>boucler autour</em> de la portion à analyser et de <em>mesurer à l’extérieur</em> de cette boucle.</p>
 </section>
 <section id="un-benchmark-en-theta-n-la-somme-iterative">
-<h3><span class="section-number">14.3.3. </span>Un <em>benchmark</em> en  <span class="math notranslate nohighlight">\(\theta(n)\)</span> : la somme itérative<a class="headerlink" href="#un-benchmark-en-theta-n-la-somme-iterative" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">12.3.3. </span>Un <em>benchmark</em> en  <span class="math notranslate nohighlight">\(\theta(n)\)</span> : la somme itérative<a class="headerlink" href="#un-benchmark-en-theta-n-la-somme-iterative" title="Permalink to this heading">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">sommer()</span></code> : l’algorithme classique par accumulation itérative.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1039,7 +1039,7 @@ réserves précédentes).</p></li>
 </div>
 </section>
 <section id="un-premier-exemple">
-<h3><span class="section-number">14.3.4. </span>Un premier exemple<a class="headerlink" href="#un-premier-exemple" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">12.3.4. </span>Un premier exemple<a class="headerlink" href="#un-premier-exemple" title="Permalink to this heading">#</a></h3>
 <p>où on compare <code class="docutils literal notranslate"><span class="pre">time.time()</span></code> et <code class="docutils literal notranslate"><span class="pre">time.perf_counter()</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1110,26 +1110,26 @@ réserves précédentes).</p></li>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.893e-04 1.679e-04
-1.779e-04 1.675e-04
-1.721e-04 1.673e-04
-1.721e-04 1.681e-04
-1.791e-04 1.676e-04
-1.800e-04 1.704e-04
-1.979e-04 1.670e-04
-1.774e-04 1.676e-04
-1.707e-04 1.670e-04
-1.671e-04 1.671e-04
-1.669e-04 1.676e-04
-1.669e-04 2.732e-04
-1.671e-04 1.728e-04
-1.671e-04 1.697e-04
-1.788e-04 1.668e-04
-1.671e-04 1.675e-04
-1.681e-04 1.669e-04
-1.657e-04 1.672e-04
-1.674e-04 1.675e-04
-1.659e-04 1.710e-04
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.681e-04 1.680e-04
+1.621e-04 1.678e-04
+1.609e-04 1.642e-04
+1.609e-04 1.608e-04
+1.700e-04 1.607e-04
+1.681e-04 1.656e-04
+1.719e-04 1.648e-04
+1.726e-04 2.898e-04
+1.612e-04 1.644e-04
+1.609e-04 1.687e-04
+1.612e-04 1.610e-04
+1.700e-04 1.608e-04
+1.609e-04 1.612e-04
+1.609e-04 1.605e-04
+1.612e-04 1.643e-04
+1.659e-04 1.603e-04
+1.750e-04 1.642e-04
+1.650e-04 1.605e-04
+1.719e-04 1.610e-04
+1.612e-04 1.705e-04
 </pre></div>
 </div>
 </div>
@@ -1159,15 +1159,15 @@ réserves précédentes).</p></li>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;20 mesures répétées&#39;)
 </pre></div>
 </div>
-<img alt="../_images/2fb3d13bb8e192029af19083f30824b4f8cb1efb92bd76bccadc932aa3cdd247.png" src="../_images/2fb3d13bb8e192029af19083f30824b4f8cb1efb92bd76bccadc932aa3cdd247.png" />
+<img alt="../_images/4faa07493bb712f247770f0e86d0fb2e2a1f07840cd8e04c81efce87c191f375.png" src="../_images/4faa07493bb712f247770f0e86d0fb2e2a1f07840cd8e04c81efce87c191f375.png" />
 </div>
 </div>
 </section>
 </section>
 <section id="premiere-mesure-de-complexite">
-<h2><span class="section-number">14.4. </span>Première mesure de complexité<a class="headerlink" href="#premiere-mesure-de-complexite" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">12.4. </span>Première mesure de complexité<a class="headerlink" href="#premiere-mesure-de-complexite" title="Permalink to this heading">#</a></h2>
 <section id="des-donnees-de-taille-variable">
-<h3><span class="section-number">14.4.1. </span>Des données de taille variable<a class="headerlink" href="#des-donnees-de-taille-variable" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">12.4.1. </span>Des données de taille variable<a class="headerlink" href="#des-donnees-de-taille-variable" title="Permalink to this heading">#</a></h3>
 <p>L’analyse de complexité dépend de la taille des entrées : <span class="math notranslate nohighlight">\(n\)</span>.<br />
 Allons-y pour des mesures comme <em>fonction de cette taille</em>.</p>
 <p>On fait ça avec <code class="docutils literal notranslate"><span class="pre">time.time()</span></code>.</p>
@@ -1220,18 +1220,18 @@ Allons-y pour des mesures comme <em>fonction de cette taille</em>.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>00000100 2.503e-06 2.503e-08
-00001000 1.688e-05 1.688e-08
-00010000 1.706e-04 1.706e-08
-00100000 1.726e-03 1.726e-08
-01000000 1.729e-02 1.729e-08
-10000000 1.794e-01 1.794e-08
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>00000100 2.575e-06 2.575e-08
+00001000 1.731e-05 1.731e-08
+00010000 1.712e-04 1.712e-08
+00100000 1.718e-03 1.718e-08
+01000000 1.709e-02 1.709e-08
+10000000 1.728e-01 1.728e-08
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x1239cb9d0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x12315ac10&gt;
 </pre></div>
 </div>
-<img alt="../_images/01e705da49994fd1675179574684a1f92923e74de21309fbe5f50bedf46797bb.png" src="../_images/01e705da49994fd1675179574684a1f92923e74de21309fbe5f50bedf46797bb.png" />
+<img alt="../_images/0cb1497bb6fe70ea1547a6376c43487f8477aa075dd6873ed5ffd152877c2e17.png" src="../_images/0cb1497bb6fe70ea1547a6376c43487f8477aa075dd6873ed5ffd152877c2e17.png" />
 </div>
 </div>
 <p><strong>Conclusion</strong></p>
@@ -1273,20 +1273,20 @@ Allons-y pour des mesures comme <em>fonction de cette taille</em>.</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="a2-ndarray.html"
+       href="a0-boucles-avancees.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">13. </span>Les ‘ndarray’ : de vrais tableaux en python</p>
+        <p class="prev-next-title"><span class="section-number">11. </span>Tableaux et boucles</p>
       </div>
     </a>
     <a class="right-next"
-       href="../td/prealable-td.html"
+       href="a1-booleens.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">15. </span>Préalables</p>
+        <p class="prev-next-title"><span class="section-number">13. </span>Les booléens en python (&gt;3.6)</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1306,31 +1306,31 @@ Allons-y pour des mesures comme <em>fonction de cette taille</em>.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#de-l-alea-avec-le-module-random">14.1. De l’aléa avec le module <code class="docutils literal notranslate"><span class="pre">random</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#principe-d-un-generateur-pseudo-aleatoire">14.1.1. Principe d’un générateur <strong>pseudo</strong>-aléatoire</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fonctions-utiles">14.1.2. Fonctions utiles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#de-l-alea-avec-le-module-random">12.1. De l’aléa avec le module <code class="docutils literal notranslate"><span class="pre">random</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#principe-d-un-generateur-pseudo-aleatoire">12.1.1. Principe d’un générateur <strong>pseudo</strong>-aléatoire</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fonctions-utiles">12.1.2. Fonctions utiles</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tracer-avec-matplotlib">14.2. Tracer avec <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matplotlib-qu-est-ce-que-ca-fait">14.2.1. <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> : qu’est ce que ça fait ?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matplotlib-comment-ca-le-fait">14.2.2. <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> : comment ça le fait ?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice">14.2.3. Exercice</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#manipuler-des-images-avec-matplotlib">14.2.4. Manipuler des images avec <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-vous-maintenant">14.2.5. A vous maintenant !</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tracer-avec-matplotlib">12.2. Tracer avec <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matplotlib-qu-est-ce-que-ca-fait">12.2.1. <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> : qu’est ce que ça fait ?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matplotlib-comment-ca-le-fait">12.2.2. <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> : comment ça le fait ?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice">12.2.3. Exercice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#manipuler-des-images-avec-matplotlib">12.2.4. Manipuler des images avec <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-vous-maintenant">12.2.5. A vous maintenant !</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#le-flocon-de-von-koch">Le flocon de Von Koch</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#star-mesurer-le-temps-d-execution-d-un-programme">14.3. (<span class="math notranslate nohighlight">\(\star\)</span>) Mesurer le temps d’exécution d’un programme</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pas-si-simple">14.3.1. Pas si simple …</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mesurer-avec-le-module-time">14.3.2. Mesurer avec le module <code class="docutils literal notranslate"><span class="pre">time</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#un-benchmark-en-theta-n-la-somme-iterative">14.3.3. Un <em>benchmark</em> en  <span class="math notranslate nohighlight">\(\theta(n)\)</span> : la somme itérative</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#un-premier-exemple">14.3.4. Un premier exemple</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#star-mesurer-le-temps-d-execution-d-un-programme">12.3. (<span class="math notranslate nohighlight">\(\star\)</span>) Mesurer le temps d’exécution d’un programme</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pas-si-simple">12.3.1. Pas si simple …</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mesurer-avec-le-module-time">12.3.2. Mesurer avec le module <code class="docutils literal notranslate"><span class="pre">time</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#un-benchmark-en-theta-n-la-somme-iterative">12.3.3. Un <em>benchmark</em> en  <span class="math notranslate nohighlight">\(\theta(n)\)</span> : la somme itérative</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#un-premier-exemple">12.3.4. Un premier exemple</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#premiere-mesure-de-complexite">14.4. Première mesure de complexité</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#des-donnees-de-taille-variable">14.4.1. Des données de taille variable</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#premiere-mesure-de-complexite">12.4. Première mesure de complexité</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#des-donnees-de-taille-variable">12.4.1. Des données de taille variable</a></li>
 </ul>
 </li>
 </ul>

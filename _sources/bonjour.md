@@ -46,8 +46,8 @@ Vacances en s9, s16-s17
 
 ## Semaine 5
 
-- Avant le CM de jeudi : 
-- Avant le TD : 
+- Avant le CM de jeudi : lire chapitre _Récursivité_ jusqu'à section 3.4 inclus
+- Avant le TD : réviser quizz fonctions, avancer feuille 1 selon votre objectif
 
 ## Semaine 6
 
