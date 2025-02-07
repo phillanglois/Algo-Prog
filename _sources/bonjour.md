@@ -41,66 +41,71 @@ Vacances en s9, s16-s17
 
 ## Semaine 4
 
-- Avant le CM de jeudi : lire les chapitres _Fonctions_ et _Un exemple, plein de fonctions_
 - Avant la séance de TD : effectuer la MTU "Utiliser les notebooks Jupyter" (rappel)
+- Avant le CM de jeudi : lire les chapitres _Fonctions_ et _Un exemple, plein de fonctions_
 
 ## Semaine 5
 
-- Avant le CM de jeudi : lire chapitre _Récursivité_ jusqu'à section 3.4 inclus
 - Avant le TD : réviser quizz fonctions, avancer feuille 1 selon votre objectif
+- Avant le CM de jeudi : lire chapitre _Récursivité_ jusqu'à section 3.4 inclus
 
 ## Semaine 6
 
-- Avant le CM de jeudi : 
-- Avant le TD : 
+- Faire le point sur ses compétences "fonctions"
+- Avant le TD : sur feuille 1, finir tous les exercices $\blacksquare$  selon votre objectif (dernière séance)
+- Avant le CM de jeudi : lire chapitre _Récursivité_ en entier
 
 ## Semaine 7
 
-- Avant le CM de jeudi : 
+- Compétences :
 - Avant le TD : 
+- Avant le CM de jeudi : 
 
 ## Semaine 8
 
-- Avant le CM de jeudi : 
+- Compétences :
 - Avant le TD : 
+- Avant le CM de jeudi : 
 
-## _Semaine 9_
-
-- Vacances d'hiver 
+## _Semaine 9_ (vacances d'hiver) 
 
 ## Semaine 10
 
-- Avant le CM de jeudi : 
+- Compétences :
 - Avant le TD : 
+- Avant le CM de jeudi : 
 
 ## Semaine 11
 
-- Avant le CM de jeudi : 
+- Compétences :
 - Avant le TD : 
+- Avant le CM de jeudi : 
 
 ## Semaine 12
 
-- Avant le CM de jeudi : 
+- Compétences :
 - Avant le TD : 
+- Avant le CM de jeudi : 
 
 ## Semaine 13
 
-- Avant le CM de jeudi : 
+- Compétences :
 - Avant le TD : 
+- Avant le CM de jeudi : 
 
 ## Semaine 14
 
-- Avant le CM de jeudi : 
+- Compétences :
 - Avant le TD : 
-
-## Semaine 14
-
 - Avant le CM de jeudi : 
+
+## Semaine 15
+
+- Compétences :
 - Avant le TD : 
+- Avant le CM de jeudi : 
 
-## _Semaines 16 et 17_
-
-- Vacances de printemps
+## _Semaines 16 et 17_ (vacances de printemps)
 
 ## Semaine 18
 
