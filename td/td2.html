@@ -203,11 +203,11 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Compléments</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../cm/01-synthese-s1.html">10. Synthèse des acquis du semestre 1 en Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/01-synthese-s1.html">10. Synthèse des acquis du semestre 1</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cm/a0-boucles-avancees.html">11. Tableaux et boucles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../cm/a1-booleens.html">12. Les booléens en python (&gt;3.6)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../cm/a2-ndarray.html">13. Les ‘ndarray’ : de vrais tableaux en python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../cm/11-modules-utiles.html">14. Modules utiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/11-modules-utiles.html">12. Modules utiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/a1-booleens.html">13. Les booléens en python (&gt;3.6)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/a2-ndarray.html">14. Les ‘ndarray’ : de vrais tableaux en python</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">TD</span></p>
 <ul class="current nav bd-sidenav">
@@ -475,6 +475,7 @@ récursif</p></li>
 <li><p>Écrire puis coder une version itérative de <span class="math notranslate nohighlight">\(u(n)= 2^n\)</span> pour <span class="math notranslate nohighlight">\(n&gt;0\)</span></p></li>
 <li><p>Écrire puis coder une version récursive de ce même calcul.</p></li>
 <li><p>Expliciter l’arbre des appels et les calculs associés lors de l’évaluation de <span class="math notranslate nohighlight">\(u(5)\)</span>. Combien d’appels récursifs à <span class="math notranslate nohighlight">\(u\)</span> sont nécessaires ?</p></li>
+<li><p>Expliciter l’évolution de la pile des appels lors de l’évaluation de <span class="math notranslate nohighlight">\(u(5)\)</span>.</p></li>
 <li><p>Compter le nombre d’opérations arithmétiques effectuées dans le calcul itératif de <span class="math notranslate nohighlight">\(u(5)\)</span>.</p></li>
 <li><p>Faire de même pour le calcul récursif.</p></li>
 <li><p>Conclure.</p></li>
@@ -486,12 +487,14 @@ récursif</p></li>
 <span class="math notranslate nohighlight">\(x\)</span> un flottant. On rappelle que <span class="math notranslate nohighlight">\(x^0 = 1.0\)</span>.</p>
 <ol class="arabic simple">
 <li><p>Rappeler et écrire les algorithmes itératif et récursif (naïf) qui calculent <span class="math notranslate nohighlight">\(x^n\)</span>.</p></li>
+<li><p>Expliciter l’évolution de la pile des appels lors de l’évaluation de <span class="math notranslate nohighlight">\(x^n\)</span> pour <span class="math notranslate nohighlight">\(n = 8\)</span> et <span class="math notranslate nohighlight">\(n = 9\)</span>.</p></li>
 <li><p>Combien de multiplications sont nécessaires à ces calculs pour <span class="math notranslate nohighlight">\(n=2, 4, 8, 16, \dots, 2^p\)</span> ?</p></li>
 <li><p>Rappeler le principe de l’exponentiation entière rapide.</p></li>
 <li><p>Ecrire les versions itératives et récursives de cet algorithme. On pourra utiliser l’opérateur python <code class="docutils literal notranslate"><span class="pre">divmod</span></code>.</p></li>
 <li><p>Dans chacun des cas, combien de multiplications sont nécessaires à ce calcul pour
 <span class="math notranslate nohighlight">\(n=2, 4, 8, 16, \dots, 2^p\)</span> ? Conclure.</p></li>
 <li><p>Compter le nombre d’appels récursifs pour les valeurs suivantes de <span class="math notranslate nohighlight">\(n = 4, 7, 8, 9, 63, 64, 65\)</span>. Conclure.</p></li>
+<li><p>(<span class="math notranslate nohighlight">\(\star\)</span>) Expliciter l’évolution de la pile des appels lors de l’évaluation de <span class="math notranslate nohighlight">\(x^n\)</span> pour des valeurs de <span class="math notranslate nohighlight">\(n\)</span> que vous choisirez dans la liste précédentes comme significatives des différents cas de traitement.</p></li>
 </ol>
 </section>
 <section id="blacksquare-blacksquare-exercice-si-il-n-y-avait-qu-un-seul-exercice-a-faire-c-est-celui-ci">
@@ -518,11 +521,12 @@ appliquant aussi une recherche par dichotomie.</p></li>
 <span id="id2"></span><h3><span class="section-number">17.1.5. </span><span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice. (recherche dichotomique)<a class="headerlink" href="#exo-dicho2" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Dérouler l’algorithme de recherche dichotomique (version itérative)
-pour rechercher la valeur 3 dans la tableau [0,1,2,3,4,5,6,7,8,9].</p></li>
+pour rechercher la valeur 3 dans le tableau [0,1,2,3,4,5,6,7,8,9].</p></li>
 <li><p>Donner une valeur à rechercher qui minimise le nombre d’itérations
 de la recherche.</p></li>
 <li><p>Même question pour celle qui maximise ce nombre.</p></li>
 <li><p>Coder ces traitements et vérifier votre analyse.</p></li>
+<li><p>Reprendre les questions précédentes sur une version récursive de cette recherche en complétant avec l’évolution de la pile des appels de ce traitement (rechercher la valeur 3 dans le tableau indiqué).</p></li>
 </ol>
 </section>
 <section id="exercice-palindrome">
@@ -531,6 +535,7 @@ de la recherche.</p></li>
 <ol class="arabic simple">
 <li><p>Donner une version récursive de cette vérification.</p></li>
 <li><p>Vérifier sa correction avec les tests unitaires de la version itérative.</p></li>
+<li><p>Expliciter l’évolution de la pile des appels des vérifications de “kayak” et de “mamama”.</p></li>
 </ol>
 </section>
 <section id="star-exercice-maths">
@@ -612,7 +617,7 @@ suite.</p></li>
 <p>Une fonction récursive est dite <em>récursive terminale</em> lorsque l’appel récursif est la dernière instruction exécutée.</p>
 <ol class="arabic simple">
 <li><p>Donner la liste de telles fonctions récursives terminales qui apparaissent dans les exemples du chapitre. Justifier votre réponse.</p></li>
-<li><p>Donner une version récursive terminale du calcul de <span class="math notranslate nohighlight">\(n!\)</span>. Vous pouvez modifier la signature de la fonction vue en cours.</p></li>
+<li><p>Donner une version récursive terminale du calcul de <span class="math notranslate nohighlight">\(n!\)</span>. Vous pouvez modifier la signature vue en cours pour cette fonction.</p></li>
 <li><p>Déduire une version récursive terminale du calcul de <span class="math notranslate nohighlight">\(n!\)</span> de même signature que la fonction vue en cours.</p></li>
 </ol>
 </section>

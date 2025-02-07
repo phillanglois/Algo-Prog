@@ -57,9 +57,9 @@ Vacances en s9, s16-s17
 
 ## Semaine 7
 
-- Compétences :
-- Avant le TD : 
-- Avant le CM de jeudi : 
+- Compétences : chapitre "récursivité"
+- Avant le TD : reprendre de façon approfondie le  chapitre _Récursivité_
+- Avant le CM de jeudi : lire chapitre _Rechercher_ jusqu'à la section 4.2 inclus en entier (recherche séquentielle)
 
 ## Semaine 8
 
