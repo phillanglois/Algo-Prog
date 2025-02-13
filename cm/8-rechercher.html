@@ -204,11 +204,11 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Compléments</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="01-synthese-s1.html">10. Synthèse des acquis du semestre 1 en Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01-synthese-s1.html">10. Synthèse des acquis du semestre 1</a></li>
 <li class="toctree-l1"><a class="reference internal" href="a0-boucles-avancees.html">11. Tableaux et boucles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="a1-booleens.html">12. Les booléens en python (&gt;3.6)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="a2-ndarray.html">13. Les ‘ndarray’ : de vrais tableaux en python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="11-modules-utiles.html">14. Modules utiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11-modules-utiles.html">12. Modules utiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a1-booleens.html">13. Les booléens en python (&gt;3.6)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a2-ndarray.html">14. Les ‘ndarray’ : de vrais tableaux en python</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">TD</span></p>
 <ul class="nav bd-sidenav">
@@ -458,7 +458,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="rechercher">
 <span id="ch-rechercher"></span><h1><span class="section-number">4. </span>Rechercher<a class="headerlink" href="#rechercher" title="Permalink to this heading">#</a></h1>
-<p>Mis à jour : Jan 27, 2025, lecture : 17
+<p>Mis à jour : Feb 13, 2025, lecture : 17
 minutes minimum, PhL.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1216,7 +1216,7 @@ Un algorithme <em>diviser pour régner</em> où chaque division réduit la reche
         <span class="n">dim_t</span> <span class="o">=</span> <span class="n">d</span> <span class="o">-</span> <span class="n">m</span>
         <span class="k">return</span> <span class="n">dichotomie</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">dim_t</span><span class="p">,</span> <span class="n">m</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
         
-<span class="k">def</span> <span class="nf">dichotomie_recursive</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">t</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim_t</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<span class="k">def</span> <span class="nf">dichotomie_recursive</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">t</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim_t</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;recherche dichotomique de val dans t de taille dim_t</span>
 <span class="sd">    pour ressembler ) la version iterative en utilisant dichotomie</span>
 <span class="sd">    &#39;&#39;&#39;</span>
