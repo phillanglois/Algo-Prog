@@ -196,7 +196,7 @@
 <li class="toctree-l1"><a class="reference internal" href="1b-fonctions-exemple.html">2. Un exemple, plein de fonctions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="6-recursivite.html">3. Récursivité</a></li>
 <li class="toctree-l1"><a class="reference internal" href="8-rechercher.html">4. Rechercher</a></li>
-<li class="toctree-l1"><a class="reference internal" href="4-complexite2025.html">5. Complexités</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4-complexite2025.html">5. Complexité</a></li>
 <li class="toctree-l1"><a class="reference internal" href="10-trier.html">6. Trier</a></li>
 <li class="toctree-l1"><a class="reference internal" href="5-types_composes.html">7. Les types composés</a></li>
 <li class="toctree-l1"><a class="reference internal" href="3-ES-fichiers.html">8. Entrées-sorties simples avec des fichiers</a></li>
@@ -216,6 +216,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../td/prealable-td.html">16. Préalables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../td/td1.html">17. Feuille 1 : fonctions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../td/td2.html">18. Feuille 2 : récursivité</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../td/td3.html">19. Feuille 3 : complexité</a></li>
 </ul>
 
     </div>
@@ -450,7 +451,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="modules-utiles">
 <span id="ch-modulesutiles"></span><h1><span class="section-number">13. </span>Modules utiles<a class="headerlink" href="#modules-utiles" title="Permalink to this heading">#</a></h1>
-<p>Mis à jour : Jan 27, 2025, lecture : 8
+<p>Mis à jour : Feb 15, 2025, lecture : 8
 minutes minimum, PhL.</p>
 <p><strong><code class="docutils literal notranslate"><span class="pre">random</span></code>, <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> et <code class="docutils literal notranslate"><span class="pre">time</span></code></strong>  pour des expériences de complexité, entre autres.</p>
 <p>Petites expériences qui nous permettent de découvrir des modules bien utiles :</p>
@@ -547,7 +548,7 @@ Le module <code class="docutils literal notranslate"><span class="pre">random</s
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
 False
 True
-[0.6684102028705827, 0.9834702983731467, 0.8717570511496927, 0.22976314335870884, 0.5173991879799942, 0.9766812373684695, 0.8707406523909432, 0.0844562119653961, 0.1449656579541937, 0.8007956538026064]
+[0.8527012428236924, 0.3106989420007398, 0.28885092683254265, 0.23705120939588697, 0.7753365787496959, 0.586195947505066, 0.4056461454629807, 0.8233656955531066, 0.4160177940441321, 0.4451463091317619]
 [0.41661987254534116, 0.010169169457068361, 0.8252065092537432, 0.2986398551995928, 0.3684116894884757, 0.19366134904507426, 0.5660081687288613, 0.1616878239293682, 0.12426688428353017, 0.4329362680099159]
 </pre></div>
 </div>
@@ -711,7 +712,7 @@ Il est conseillé de “jouer” avec les différentes commandes jusqu’à obte
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x122635710&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x121183e90&gt;
 </pre></div>
 </div>
 <img alt="../_images/a8998c42ef8c27cd3f342bbb9f7be6c8644cc3573356f3882eb772b2b0bbec2f.png" src="../_images/a8998c42ef8c27cd3f342bbb9f7be6c8644cc3573356f3882eb772b2b0bbec2f.png" />
@@ -738,7 +739,7 @@ Il est conseillé de “jouer” avec les différentes commandes jusqu’à obte
 </section>
 <section id="manipuler-des-images-avec-matplotlib">
 <h3><span class="section-number">13.2.4. </span>Manipuler des images avec <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code><a class="headerlink" href="#manipuler-des-images-avec-matplotlib" title="Permalink to this heading">#</a></h3>
-<p>Il est classique de définir des images à niveaux de gris par un tableau 2D d’entiers compris en 0 (noir) et 255 (blanc) – voir par exemple la <a class="reference internal" href="#td:td3"><span class="xref myst">Feuille 3</span></a>.</p>
+<p>Il est classique de définir des images à niveaux de gris par un tableau 2D d’entiers compris en 0 (noir) et 255 (blanc) – voir par exemple la <a class="reference internal" href="../td/td3.html#td-td3"><span class="std std-ref">Feuille 3</span></a>.</p>
 <p>Voyons comment afficher de telles images avec <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>.</p>
 <p>Si ce n’est pas encore fait, on importe <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot</span></code></p>
 <div class="cell docutils container">
@@ -794,7 +795,7 @@ On note les paramètres effectifs qui définissent comment interpréter les vale
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x122e5ac50&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x1219b58d0&gt;
 </pre></div>
 </div>
 <img alt="../_images/564c0f777db4edce5831dd122c874100c30342a95980992de2fc520203fa5333.png" src="../_images/564c0f777db4edce5831dd122c874100c30342a95980992de2fc520203fa5333.png" />
@@ -1111,26 +1112,26 @@ réserves précédentes).</p></li>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.681e-04 1.680e-04
-1.621e-04 1.678e-04
-1.609e-04 1.642e-04
-1.609e-04 1.608e-04
-1.700e-04 1.607e-04
-1.681e-04 1.656e-04
-1.719e-04 1.648e-04
-1.726e-04 2.898e-04
-1.612e-04 1.644e-04
-1.609e-04 1.687e-04
-1.612e-04 1.610e-04
-1.700e-04 1.608e-04
-1.609e-04 1.612e-04
-1.609e-04 1.605e-04
-1.612e-04 1.643e-04
-1.659e-04 1.603e-04
-1.750e-04 1.642e-04
-1.650e-04 1.605e-04
-1.719e-04 1.610e-04
-1.612e-04 1.705e-04
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.838e-04 1.614e-04
+1.662e-04 1.653e-04
+1.659e-04 1.610e-04
+1.719e-04 1.649e-04
+1.659e-04 1.612e-04
+1.609e-04 1.640e-04
+1.721e-04 1.725e-04
+1.652e-04 1.747e-04
+1.700e-04 1.650e-04
+1.609e-04 2.265e-04
+1.609e-04 1.619e-04
+1.609e-04 1.773e-04
+1.709e-04 1.725e-04
+1.612e-04 1.611e-04
+1.650e-04 1.613e-04
+1.690e-04 1.610e-04
+1.621e-04 1.614e-04
+1.638e-04 1.610e-04
+1.678e-04 1.686e-04
+1.612e-04 1.608e-04
 </pre></div>
 </div>
 </div>
@@ -1160,7 +1161,7 @@ réserves précédentes).</p></li>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;20 mesures répétées&#39;)
 </pre></div>
 </div>
-<img alt="../_images/4faa07493bb712f247770f0e86d0fb2e2a1f07840cd8e04c81efce87c191f375.png" src="../_images/4faa07493bb712f247770f0e86d0fb2e2a1f07840cd8e04c81efce87c191f375.png" />
+<img alt="../_images/8626cfb68191a1528c8e66853710cd5760f0c2d47a161f3f9cec7e0ae7a82bd9.png" src="../_images/8626cfb68191a1528c8e66853710cd5760f0c2d47a161f3f9cec7e0ae7a82bd9.png" />
 </div>
 </div>
 </section>
@@ -1221,18 +1222,18 @@ Allons-y pour des mesures comme <em>fonction de cette taille</em>.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>00000100 2.575e-06 2.575e-08
-00001000 1.731e-05 1.731e-08
-00010000 1.712e-04 1.712e-08
-00100000 1.718e-03 1.718e-08
-01000000 1.709e-02 1.709e-08
-10000000 1.728e-01 1.728e-08
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>00000100 2.718e-06 2.718e-08
+00001000 1.659e-05 1.659e-08
+00010000 1.768e-04 1.768e-08
+00100000 1.801e-03 1.801e-08
+01000000 1.786e-02 1.786e-08
+10000000 1.769e-01 1.769e-08
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x12315ac10&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x121b934d0&gt;
 </pre></div>
 </div>
-<img alt="../_images/0cb1497bb6fe70ea1547a6376c43487f8477aa075dd6873ed5ffd152877c2e17.png" src="../_images/0cb1497bb6fe70ea1547a6376c43487f8477aa075dd6873ed5ffd152877c2e17.png" />
+<img alt="../_images/2e8e40bde6e0d64deb8c274d980735d720e2d521a7abaae509013ebf562af369.png" src="../_images/2e8e40bde6e0d64deb8c274d980735d720e2d521a7abaae509013ebf562af369.png" />
 </div>
 </div>
 <p><strong>Conclusion</strong></p>

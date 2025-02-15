@@ -63,6 +63,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'td/td2';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="19. Feuille 3 : complexité" href="td3.html" />
     <link rel="prev" title="17. Feuille 1 : fonctions" href="td1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -195,7 +196,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../cm/1b-fonctions-exemple.html">2. Un exemple, plein de fonctions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cm/6-recursivite.html">3. Récursivité</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cm/8-rechercher.html">4. Rechercher</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../cm/4-complexite2025.html">5. Complexités</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/4-complexite2025.html">5. Complexité</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cm/10-trier.html">6. Trier</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cm/5-types_composes.html">7. Les types composés</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cm/3-ES-fichiers.html">8. Entrées-sorties simples avec des fichiers</a></li>
@@ -215,6 +216,7 @@
 <li class="toctree-l1"><a class="reference internal" href="prealable-td.html">16. Préalables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="td1.html">17. Feuille 1 : fonctions</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">18. Feuille 2 : récursivité</a></li>
+<li class="toctree-l1"><a class="reference internal" href="td3.html">19. Feuille 3 : complexité</a></li>
 </ul>
 
     </div>
@@ -415,7 +417,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-blacksquare-exercice-si-il-n-y-avait-qu-un-seul-exercice-a-faire-c-est-celui-ci">18.1.3. <span class="math notranslate nohighlight">\(\blacksquare\blacksquare\)</span> Exercice. <strong>Si il n’y avait qu’un seul exercice à faire, c’est celui-ci !</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-exercice-recherche-dichotomique">18.1.4. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice.  (recherche dichotomique)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exo-dicho2">18.1.5. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice. (recherche dichotomique)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-palindrome">18.1.6. Exercice. (palindrome)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-palindrome-encore">18.1.6. Exercice. (palindrome … encore)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-exercice-maths">18.1.7. (<span class="math notranslate nohighlight">\(\star\)</span>) Exercice. (Maths)</a></li>
 </ul>
 </li>
@@ -530,9 +532,9 @@ de la recherche.</p></li>
 <li><p>Reprendre les questions précédentes sur une version récursive de cette recherche en complétant avec l’évolution de la pile des appels de ce traitement (rechercher la valeur 3 dans le tableau indiqué).</p></li>
 </ol>
 </section>
-<section id="exercice-palindrome">
-<span id="exo-palindromerec"></span><h3><span class="section-number">18.1.6. </span>Exercice. (palindrome)<a class="headerlink" href="#exercice-palindrome" title="Permalink to this heading">#</a></h3>
-<p>Dans l’exercice <span class="xref std std-ref">exo:palindromeiter</span>, on a défini et donné un algorithme itératif qui vérifie si un mot est ou non un palindrome.</p>
+<section id="exercice-palindrome-encore">
+<span id="exo-palindromerec"></span><h3><span class="section-number">18.1.6. </span>Exercice. (palindrome … encore)<a class="headerlink" href="#exercice-palindrome-encore" title="Permalink to this heading">#</a></h3>
+<p>Dans l’exercice de la feuille 1, on a défini et donné un algorithme itératif qui vérifie si un mot est ou non un palindrome.</p>
 <ol class="arabic simple">
 <li><p>Donner une version récursive de cette vérification.</p></li>
 <li><p>Vérifier sa correction avec les tests unitaires de la version itérative.</p></li>
@@ -541,7 +543,7 @@ de la recherche.</p></li>
 </section>
 <section id="star-exercice-maths">
 <span id="exo-eucliderec"></span><h3><span class="section-number">18.1.7. </span>(<span class="math notranslate nohighlight">\(\star\)</span>) Exercice. (Maths)<a class="headerlink" href="#star-exercice-maths" title="Permalink to this heading">#</a></h3>
-<p>Dans l’exercice <span class="xref std std-ref">exo:pgcd</span>, on a défini et donné une version itérative du calcul du pgcd de deux entiers par l’algorithme d’Euclide.</p>
+<p>Dans l’exercice de la feuille 1, on a défini et donné une version itérative du calcul du pgcd de deux entiers par l’algorithme d’Euclide.</p>
 <ol class="arabic simple">
 <li><p>En écrire une version récursive.</p></li>
 <li><p>Application. Ecrire une fonction qui prend en entrée 2 entiers <span class="math notranslate nohighlight">\(a\)</span> et <span class="math notranslate nohighlight">\(b\)</span>, calcule et retourne les entiers <span class="math notranslate nohighlight">\(c\)</span> et <span class="math notranslate nohighlight">\(d\)</span> tels que <span class="math notranslate nohighlight">\(\frac{c}{d}\)</span> soit la forme irréductible de <span class="math notranslate nohighlight">\(\frac{a}{b}\)</span>.</p></li>
@@ -696,6 +698,15 @@ pour les deux calculs <span class="math notranslate nohighlight">\(n1+n2\)</span
         <p class="prev-next-title"><span class="section-number">17. </span>Feuille 1 : fonctions</p>
       </div>
     </a>
+    <a class="right-next"
+       href="td3.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">19. </span>Feuille 3 : complexité</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -718,7 +729,7 @@ pour les deux calculs <span class="math notranslate nohighlight">\(n1+n2\)</span
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-blacksquare-exercice-si-il-n-y-avait-qu-un-seul-exercice-a-faire-c-est-celui-ci">18.1.3. <span class="math notranslate nohighlight">\(\blacksquare\blacksquare\)</span> Exercice. <strong>Si il n’y avait qu’un seul exercice à faire, c’est celui-ci !</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-exercice-recherche-dichotomique">18.1.4. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice.  (recherche dichotomique)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exo-dicho2">18.1.5. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice. (recherche dichotomique)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-palindrome">18.1.6. Exercice. (palindrome)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-palindrome-encore">18.1.6. Exercice. (palindrome … encore)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-exercice-maths">18.1.7. (<span class="math notranslate nohighlight">\(\star\)</span>) Exercice. (Maths)</a></li>
 </ul>
 </li>
