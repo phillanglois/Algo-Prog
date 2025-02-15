@@ -188,7 +188,7 @@ On s'intéresse à la complexité en temps de la fonction suivante.
 
 ## Objectif 20
 
-### Exercice .** (extrait d'examen)
+### Exercice (extrait d'examen)
 
 Considérons la fonction `f()` suivante.
 
