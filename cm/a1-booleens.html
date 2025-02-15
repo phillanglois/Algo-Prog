@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>13. Les booléens en python (&gt;3.6) &#8212; Algo-Prog L1-S2</title>
+    <title>14. Les booléens en python (&gt;3.6) &#8212; Algo-Prog L1-S2</title>
   
   
   
@@ -63,8 +63,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'cm/a1-booleens';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="14. Les ‘ndarray’ : de vrais tableaux en python" href="a2-ndarray.html" />
-    <link rel="prev" title="12. Modules utiles" href="11-modules-utiles.html" />
+    <link rel="next" title="15. Les ‘ndarray’ : de vrais tableaux en python" href="a2-ndarray.html" />
+    <link rel="prev" title="13. Modules utiles" href="11-modules-utiles.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -196,25 +196,26 @@
 <li class="toctree-l1"><a class="reference internal" href="1b-fonctions-exemple.html">2. Un exemple, plein de fonctions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="6-recursivite.html">3. Récursivité</a></li>
 <li class="toctree-l1"><a class="reference internal" href="8-rechercher.html">4. Rechercher</a></li>
-<li class="toctree-l1"><a class="reference internal" href="10-trier.html">5. Trier</a></li>
-<li class="toctree-l1"><a class="reference internal" href="5-types_composes.html">6. Les types composés</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3-ES-fichiers.html">7. Entrées-sorties simples avec des fichiers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="9-ES-formats.html">8. Les entrées-sorties (E/S) : formats</a></li>
-<li class="toctree-l1"><a class="reference internal" href="7-fonctions-avancees.html">9. Affectation et appel de fonction – aspects avancés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4-complexite2025.html">5. Complexités</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10-trier.html">6. Trier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5-types_composes.html">7. Les types composés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3-ES-fichiers.html">8. Entrées-sorties simples avec des fichiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9-ES-formats.html">9. Les entrées-sorties (E/S) : formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7-fonctions-avancees.html">10. Affectation et appel de fonction – aspects avancés</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Compléments</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="01-synthese-s1.html">10. Synthèse des acquis du semestre 1 en Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="a0-boucles-avancees.html">11. Tableaux et boucles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="11-modules-utiles.html">12. Modules utiles</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">13. Les booléens en python (&gt;3.6)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="a2-ndarray.html">14. Les ‘ndarray’ : de vrais tableaux en python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01-synthese-s1.html">11. Synthèse des acquis du semestre 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a0-boucles-avancees.html">12. Tableaux et boucles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11-modules-utiles.html">13. Modules utiles</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">14. Les booléens en python (&gt;3.6)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a2-ndarray.html">15. Les ‘ndarray’ : de vrais tableaux en python</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">TD</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../td/prealable-td.html">15. Préalables</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../td/td1.html">16. Feuille 1 : fonctions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../td/td2.html">17. Feuille 2 : récursivité</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../td/prealable-td.html">16. Préalables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../td/td1.html">17. Feuille 1 : fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../td/td2.html">18. Feuille 2 : récursivité</a></li>
 </ul>
 
     </div>
@@ -409,12 +410,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#synthese-qui-suffit-en-l1">13.1. Synthèse qui suffit en L1</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#valeurs-booleennes">13.2. Valeurs booléennes</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conversion-en-une-valeur-booleenne">13.3. Conversion en une valeur booléenne</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objets-et-booleens">13.4. Objets et booléens</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operations-booleennes-and-or-not">13.5. Opérations booléennes — <code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, <code class="docutils literal notranslate"><span class="pre">not</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparaisons">13.6. Comparaisons</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#synthese-qui-suffit-en-l1">14.1. Synthèse qui suffit en L1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#valeurs-booleennes">14.2. Valeurs booléennes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conversion-en-une-valeur-booleenne">14.3. Conversion en une valeur booléenne</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objets-et-booleens">14.4. Objets et booléens</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operations-booleennes-and-or-not">14.5. Opérations booléennes — <code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, <code class="docutils literal notranslate"><span class="pre">not</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparaisons">14.6. Comparaisons</a></li>
 </ul>
             </nav>
         </div>
@@ -427,7 +428,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="les-booleens-en-python-3-6">
-<h1><span class="section-number">13. </span>Les booléens en python (&gt;3.6)<a class="headerlink" href="#les-booleens-en-python-3-6" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">14. </span>Les booléens en python (&gt;3.6)<a class="headerlink" href="#les-booleens-en-python-3-6" title="Permalink to this heading">#</a></h1>
 <p>Une mise au point sur les booléens en python</p>
 <ul class="simple">
 <li><p>synthétique</p></li>
@@ -435,7 +436,7 @@ document.write(`
 <li><p>avec <strong>ce qui est important à retenir</strong> écrit en <strong>gras</strong>.</p></li>
 </ul>
 <section id="synthese-qui-suffit-en-l1">
-<h2><span class="section-number">13.1. </span>Synthèse qui suffit en L1<a class="headerlink" href="#synthese-qui-suffit-en-l1" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">14.1. </span>Synthèse qui suffit en L1<a class="headerlink" href="#synthese-qui-suffit-en-l1" title="Permalink to this heading">#</a></h2>
 <p>Python définit :</p>
 <ul class="simple">
 <li><p>deux valeurs booléennes <code class="docutils literal notranslate"><span class="pre">False</span></code> et <code class="docutils literal notranslate"><span class="pre">True</span></code></p></li>
@@ -451,7 +452,7 @@ sauf :</p>
 <p>où elle retourne <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
 </section>
 <section id="valeurs-booleennes">
-<h2><span class="section-number">13.2. </span>Valeurs booléennes<a class="headerlink" href="#valeurs-booleennes" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">14.2. </span>Valeurs booléennes<a class="headerlink" href="#valeurs-booleennes" title="Permalink to this heading">#</a></h2>
 <blockquote>
 <div><p>Les <a class="reference external" href="https://docs.python.org/fr/3.7/library/stdtypes.html#truth">valeurs booléennes</a> sont les deux objets constants <strong>False</strong> et <strong>True</strong>.</p>
 </div></blockquote>
@@ -463,7 +464,7 @@ sauf :</p>
 </div></blockquote>
 </section>
 <section id="conversion-en-une-valeur-booleenne">
-<h2><span class="section-number">13.3. </span>Conversion en une valeur booléenne<a class="headerlink" href="#conversion-en-une-valeur-booleenne" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">14.3. </span>Conversion en une valeur booléenne<a class="headerlink" href="#conversion-en-une-valeur-booleenne" title="Permalink to this heading">#</a></h2>
 <blockquote>
 <div><p>La fonction native <strong><code class="docutils literal notranslate"><span class="pre">bool()</span></code></strong> peut être utilisée pour convertir n’importe quelle valeur en booléen <strong>tant que la valeur peut être interprétée en une valeur de vérité</strong>.</p>
 </div></blockquote>
@@ -491,7 +492,7 @@ Quand cette méthode n’est pas définie, <strong><strong>len</strong>() est ap
 </div></blockquote>
 </section>
 <section id="objets-et-booleens">
-<h2><span class="section-number">13.4. </span>Objets et booléens<a class="headerlink" href="#objets-et-booleens" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">14.4. </span>Objets et booléens<a class="headerlink" href="#objets-et-booleens" title="Permalink to this heading">#</a></h2>
 <p>Tout objet peut être comparé à une valeur booléenne, typiquement dans une condition if ou while ou comme opérande des opérations booléennes ci-dessous.</p>
 <blockquote>
 <div><p>Par défaut, <strong>tout objet est considéré vrai</strong><br />
@@ -1338,7 +1339,7 @@ class str(object)
 <p>Quizz: On regarde bien les dernières lignes des deux dernières catégories et on explique pourquoi on n’est pas surpris.</p>
 </section>
 <section id="operations-booleennes-and-or-not">
-<h2><span class="section-number">13.5. </span>Opérations booléennes — <code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, <code class="docutils literal notranslate"><span class="pre">not</span></code><a class="headerlink" href="#operations-booleennes-and-or-not" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">14.5. </span>Opérations booléennes — <code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, <code class="docutils literal notranslate"><span class="pre">not</span></code><a class="headerlink" href="#operations-booleennes-and-or-not" title="Permalink to this heading">#</a></h2>
 <p>Ce sont les opérations booléennes, classées par priorité ascendante :</p>
 <blockquote>
 <div><p><strong>x or y</strong> : si x est faux, alors y, sinon x<br />
@@ -1361,7 +1362,7 @@ En pratique, dès que l’opérande de gauche a été évalué (à <code class="
 <p>Quizz : A votre avis, permuter les opérandes de la condition précédente est sans conséquence ? (True/False :)</p>
 </section>
 <section id="comparaisons">
-<h2><span class="section-number">13.6. </span>Comparaisons<a class="headerlink" href="#comparaisons" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">14.6. </span>Comparaisons<a class="headerlink" href="#comparaisons" title="Permalink to this heading">#</a></h2>
 <p>Il y a huit opérations de comparaison en Python.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">==</span></code> : égal</p></li>
@@ -1417,7 +1418,7 @@ En pratique, dès que l’opérande de gauche a été évalué (à <code class="
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">12. </span>Modules utiles</p>
+        <p class="prev-next-title"><span class="section-number">13. </span>Modules utiles</p>
       </div>
     </a>
     <a class="right-next"
@@ -1425,7 +1426,7 @@ En pratique, dès que l’opérande de gauche a été évalué (à <code class="
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">14. </span>Les ‘ndarray’ : de vrais tableaux en python</p>
+        <p class="prev-next-title"><span class="section-number">15. </span>Les ‘ndarray’ : de vrais tableaux en python</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1445,12 +1446,12 @@ En pratique, dès que l’opérande de gauche a été évalué (à <code class="
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#synthese-qui-suffit-en-l1">13.1. Synthèse qui suffit en L1</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#valeurs-booleennes">13.2. Valeurs booléennes</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conversion-en-une-valeur-booleenne">13.3. Conversion en une valeur booléenne</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objets-et-booleens">13.4. Objets et booléens</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operations-booleennes-and-or-not">13.5. Opérations booléennes — <code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, <code class="docutils literal notranslate"><span class="pre">not</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparaisons">13.6. Comparaisons</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#synthese-qui-suffit-en-l1">14.1. Synthèse qui suffit en L1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#valeurs-booleennes">14.2. Valeurs booléennes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conversion-en-une-valeur-booleenne">14.3. Conversion en une valeur booléenne</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objets-et-booleens">14.4. Objets et booléens</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operations-booleennes-and-or-not">14.5. Opérations booléennes — <code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, <code class="docutils literal notranslate"><span class="pre">not</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparaisons">14.6. Comparaisons</a></li>
 </ul>
   </nav></div>
 

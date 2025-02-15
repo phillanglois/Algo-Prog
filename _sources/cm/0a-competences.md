@@ -64,13 +64,13 @@ Dans/avec un notebook jupyter :
 - Construire la pile des appels et son évolution lors d'un traitement récursif
 
 
-## Complexité (évoluera en 2025)
+## Complexité (2025)
 
 ### Avoir les idées claires
 
 - Connaitre le principes de l'analyse de la complexité en temps : modèle de calcul, mesure et paramètre de la complexité, meilleur et pire cas
-- Savoir exprimer et exploiter une complexité asymptotique : notations de Landau, principales classes de complexité des algorithmes, interprétation pratique de ces classes
-- Savoir établir la complexité d'algorithmes itératifs simples ou récursifs terminaux (algorithmes étudiés en cours)
+- Savoir exprimer et exploiter une complexité asymptotique : principales complexités, interprétation pratique de ces complexités
+- ($\star$) Savoir établir la complexité d'algorithmes itératifs simples ou récursifs terminaux (algorithmes étudiés en cours)
 
 ### Savoir-faire
 

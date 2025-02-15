@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>11. Tableaux et boucles &#8212; Algo-Prog L1-S2</title>
+    <title>12. Tableaux et boucles &#8212; Algo-Prog L1-S2</title>
   
   
   
@@ -63,8 +63,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'cm/a0-boucles-avancees';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="12. Les booléens en python (&gt;3.6)" href="a1-booleens.html" />
-    <link rel="prev" title="10. Synthèse des acquis du semestre 1 en Python" href="01-synthese-s1.html" />
+    <link rel="next" title="13. Modules utiles" href="11-modules-utiles.html" />
+    <link rel="prev" title="11. Synthèse des acquis du semestre 1" href="01-synthese-s1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -196,25 +196,26 @@
 <li class="toctree-l1"><a class="reference internal" href="1b-fonctions-exemple.html">2. Un exemple, plein de fonctions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="6-recursivite.html">3. Récursivité</a></li>
 <li class="toctree-l1"><a class="reference internal" href="8-rechercher.html">4. Rechercher</a></li>
-<li class="toctree-l1"><a class="reference internal" href="10-trier.html">5. Trier</a></li>
-<li class="toctree-l1"><a class="reference internal" href="5-types_composes.html">6. Les types composés</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3-ES-fichiers.html">7. Entrées-sorties simples avec des fichiers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="9-ES-formats.html">8. Les entrées-sorties (E/S) : formats</a></li>
-<li class="toctree-l1"><a class="reference internal" href="7-fonctions-avancees.html">9. Affectation et appel de fonction – aspects avancés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4-complexite2025.html">5. Complexités</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10-trier.html">6. Trier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5-types_composes.html">7. Les types composés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3-ES-fichiers.html">8. Entrées-sorties simples avec des fichiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9-ES-formats.html">9. Les entrées-sorties (E/S) : formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7-fonctions-avancees.html">10. Affectation et appel de fonction – aspects avancés</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Compléments</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="01-synthese-s1.html">10. Synthèse des acquis du semestre 1 en Python</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">11. Tableaux et boucles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="a1-booleens.html">12. Les booléens en python (&gt;3.6)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="a2-ndarray.html">13. Les ‘ndarray’ : de vrais tableaux en python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="11-modules-utiles.html">14. Modules utiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01-synthese-s1.html">11. Synthèse des acquis du semestre 1</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">12. Tableaux et boucles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11-modules-utiles.html">13. Modules utiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a1-booleens.html">14. Les booléens en python (&gt;3.6)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a2-ndarray.html">15. Les ‘ndarray’ : de vrais tableaux en python</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">TD</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../td/prealable-td.html">15. Préalables</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../td/td1.html">16. Feuille 1 : fonctions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../td/td2.html">17. Feuille 2 : récursivité</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../td/prealable-td.html">16. Préalables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../td/td1.html">17. Feuille 1 : fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../td/td2.html">18. Feuille 2 : récursivité</a></li>
 </ul>
 
     </div>
@@ -409,32 +410,32 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tableaux">11.1. Tableaux</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vocabulaire">11.1.1. Vocabulaire</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tableaux-en-python">11.1.2. Tableaux en python</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tableaux-multidimensionnels-representes-avec-des-listes">11.1.3. Tableaux multidimensionnels représentés avec des listes</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pas-de-pour-definir-une-liste-multidimensionnelle">11.1.4. Pas de <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">]*</span></code> pour définir une liste multidimensionnelle</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tableaux">12.1. Tableaux</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vocabulaire">12.1.1. Vocabulaire</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tableaux-en-python">12.1.2. Tableaux en python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tableaux-multidimensionnels-representes-avec-des-listes">12.1.3. Tableaux multidimensionnels représentés avec des listes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pas-de-pour-definir-une-liste-multidimensionnelle">12.1.4. Pas de <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">]*</span></code> pour définir une liste multidimensionnelle</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boucles-imbriquees">11.2. Boucles imbriquées</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#le-contexte">11.2.1. Le contexte</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#min1">11.2.2. <code class="docutils literal notranslate"><span class="pre">min1()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#min2">11.2.3. <code class="docutils literal notranslate"><span class="pre">min2()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comptons-1-2-3">11.2.4. Comptons  1, 2, 3, …</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#imbriquons-trois-boucles">11.2.5. Imbriquons trois boucles !</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boucles-imbriquees">12.2. Boucles imbriquées</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#le-contexte">12.2.1. Le contexte</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#min1">12.2.2. <code class="docutils literal notranslate"><span class="pre">min1()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#min2">12.2.3. <code class="docutils literal notranslate"><span class="pre">min2()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comptons-1-2-3">12.2.4. Comptons  1, 2, 3, …</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#imbriquons-trois-boucles">12.2.5. Imbriquons trois boucles !</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boucles-imbriquees-dependantes">11.3. Boucles imbriquées dépendantes</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#valeur-repetee-dans-un-tableau-1d">11.3.1. Valeur répétée dans un tableau 1D</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#une-premiere-solution-avec-deux-boucles-imbriquees-independantes">11.3.2. Une première solution avec deux boucles imbriquées indépendantes</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#une-solution-avec-deux-boucles-imbriquees-dependantes">11.3.3. Une solution avec deux boucles imbriquées dépendantes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boucles-imbriquees-dependantes">12.3. Boucles imbriquées dépendantes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#valeur-repetee-dans-un-tableau-1d">12.3.1. Valeur répétée dans un tableau 1D</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#une-premiere-solution-avec-deux-boucles-imbriquees-independantes">12.3.2. Une première solution avec deux boucles imbriquées indépendantes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#une-solution-avec-deux-boucles-imbriquees-dependantes">12.3.3. Une solution avec deux boucles imbriquées dépendantes</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#autres-imbrications-de-boucles">11.4. Autres imbrications de boucles</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#synthese">11.5. Synthèse</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ce-qui-a-ete-vu">11.5.1. Ce qui a été vu</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ce-qui-n-a-pas-ete-vu">11.5.2. Ce qui n’a pas été vu</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-de-synthese">11.5.3. Exercice de synthèse</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#autres-imbrications-de-boucles">12.4. Autres imbrications de boucles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#synthese">12.5. Synthèse</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ce-qui-a-ete-vu">12.5.1. Ce qui a été vu</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ce-qui-n-a-pas-ete-vu">12.5.2. Ce qui n’a pas été vu</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-de-synthese">12.5.3. Exercice de synthèse</a></li>
 </ul>
 </li>
 </ul>
@@ -449,7 +450,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="tableaux-et-boucles">
-<span id="ann-boucles"></span><h1><span class="section-number">11. </span>Tableaux et boucles<a class="headerlink" href="#tableaux-et-boucles" title="Permalink to this heading">#</a></h1>
+<span id="ann-boucles"></span><h1><span class="section-number">12. </span>Tableaux et boucles<a class="headerlink" href="#tableaux-et-boucles" title="Permalink to this heading">#</a></h1>
 <p>Mis à jour : Jan 27, 2025, lecture : 16 minutes minimum, PhL.</p>
 <p>Dans ce chapitre, nous revisitons deux notions déjà connues :</p>
 <ul class="simple">
@@ -466,9 +467,9 @@ document.write(`
 <li><p>la représentation de tableaux multidimensionnels en python.</p></li>
 </ul>
 <section id="tableaux">
-<h2><span class="section-number">11.1. </span>Tableaux<a class="headerlink" href="#tableaux" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">12.1. </span>Tableaux<a class="headerlink" href="#tableaux" title="Permalink to this heading">#</a></h2>
 <section id="vocabulaire">
-<h3><span class="section-number">11.1.1. </span>Vocabulaire<a class="headerlink" href="#vocabulaire" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">12.1.1. </span>Vocabulaire<a class="headerlink" href="#vocabulaire" title="Permalink to this heading">#</a></h3>
 <div class="alert alert-block alert-info">
 <b>Vocabulaire.</b> distinguer la dimension d'un tableau <em>vs.</em> la taille d'un tableau
 </div><p><strong>Dimension.</strong></p>
@@ -511,7 +512,7 @@ elle contient 6 valeurs organisées en 2 lignes et 3 colonnes.</p>
 <p>Excepté le terme <em>tableau</em>, ces notions sont indépendantes de tout choix informatique.</p>
 </section>
 <section id="tableaux-en-python">
-<h3><span class="section-number">11.1.2. </span>Tableaux en python<a class="headerlink" href="#tableaux-en-python" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">12.1.2. </span>Tableaux en python<a class="headerlink" href="#tableaux-en-python" title="Permalink to this heading">#</a></h3>
 <p>Il y a différentes façons de représenter et manipuler des tableaux <em>en python</em>.
 Les deux principales sont :</p>
 <ul class="simple">
@@ -530,7 +531,7 @@ Cependant nous nous forcerons à distinguer cette <em>représentation</em> avec 
 </div>
 </section>
 <section id="tableaux-multidimensionnels-representes-avec-des-listes">
-<h3><span class="section-number">11.1.3. </span>Tableaux multidimensionnels représentés avec des listes<a class="headerlink" href="#tableaux-multidimensionnels-representes-avec-des-listes" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">12.1.3. </span>Tableaux multidimensionnels représentés avec des listes<a class="headerlink" href="#tableaux-multidimensionnels-representes-avec-des-listes" title="Permalink to this heading">#</a></h3>
 <p>Un tableau 2D peut-être défini en python par une liste de listes.
 Dans ce cas, une matrice n’est pas exactement un bloc de valeurs, de forme rectangulaire ou carrée, mais <strong>une liste de lignes</strong>, chacune accessible comme une tableau 1D : chaque ligne est représentée par la liste des ses valeurs.</p>
 <p>Dans les 2 cas, il faut bien 2 indices <code class="docutils literal notranslate"><span class="pre">[ligne][colonne]</span></code> pour accéder à chaque valeur d’un tel tableau 2D.</p>
@@ -566,7 +567,7 @@ Dans ce cas, une matrice n’est pas exactement un bloc de valeurs, de forme rec
 <strong>Algorithmiquement</strong>, dans l’un ou l’autre de ces choix, un tableau donné aura <em>les mêmes valeurs</em> désignées par <em>les mêmes indices</em> : (numéro de ligne, numéro de colonne).  En revanche, nous verrons que le stockage en mémoire de l’un ou l’autre de ces choix est différent – ce qui sera source de problèmes car ce choix varie selon <em>les langages de programmation</em>.</p>
 </section>
 <section id="pas-de-pour-definir-une-liste-multidimensionnelle">
-<h3><span class="section-number">11.1.4. </span>Pas de <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">]*</span></code> pour définir une liste multidimensionnelle<a class="headerlink" href="#pas-de-pour-definir-une-liste-multidimensionnelle" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">12.1.4. </span>Pas de <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">]*</span></code> pour définir une liste multidimensionnelle<a class="headerlink" href="#pas-de-pour-definir-une-liste-multidimensionnelle" title="Permalink to this heading">#</a></h3>
 <p><strong>Comment définir un tableau multidimensionnel représenté avec une liste de listes de … ?</strong></p>
 <p><strong>Ce qu’il ne faut pas faire :</strong> on pourrait <em>être tenté</em> d’écrire :</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">n</span><span class="p">]</span> <span class="o">*</span> <span class="n">n</span>
@@ -705,9 +706,9 @@ Donc nous avons besoin de <em>fonctions</em> qui manipulent des <em>tableaux</em
 </section>
 </section>
 <section id="boucles-imbriquees">
-<h2><span class="section-number">11.2. </span>Boucles imbriquées<a class="headerlink" href="#boucles-imbriquees" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">12.2. </span>Boucles imbriquées<a class="headerlink" href="#boucles-imbriquees" title="Permalink to this heading">#</a></h2>
 <section id="le-contexte">
-<h3><span class="section-number">11.2.1. </span>Le contexte<a class="headerlink" href="#le-contexte" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">12.2.1. </span>Le contexte<a class="headerlink" href="#le-contexte" title="Permalink to this heading">#</a></h3>
 <p>Les boucles sont classiquement utilisées pour parcourir des tableaux de dimension quelconque.<br />
 Si le nombre de valeurs à parcourir dans tableau  est connu alors la boucle <code class="docutils literal notranslate"><span class="pre">for</span></code> est la plus naturelle.<br />
 Un exemple est le parcours complet d’un tableau de taille connue.</p>
@@ -791,7 +792,7 @@ Cette dépendance des parcours se traduit par l’imbrication de deux <em>boucle
 Le cas échéant, reprendre le chapitre <a class="reference internal" href="1-fonctions.html#ch-fonctions"><span class="std std-ref">Fonctions et tableaux</span></a>.</p>
 </div></section>
 <section id="min1">
-<h3><span class="section-number">11.2.2. </span><code class="docutils literal notranslate"><span class="pre">min1()</span></code><a class="headerlink" href="#min1" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">12.2.2. </span><code class="docutils literal notranslate"><span class="pre">min1()</span></code><a class="headerlink" href="#min1" title="Permalink to this heading">#</a></h3>
 <p>La fonction <code class="docutils literal notranslate"><span class="pre">min1</span></code> qui retourne la valeur minimale d’un tableau 1 D d’entiers (par exemple) et de taille <span class="math notranslate nohighlight">\(n\)</span> quelconque.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -868,7 +869,7 @@ Le cas échéant, reprendre le chapitre <a class="reference internal" href="1-fo
 </div>
 </details></section>
 <section id="min2">
-<h3><span class="section-number">11.2.3. </span><code class="docutils literal notranslate"><span class="pre">min2()</span></code><a class="headerlink" href="#min2" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">12.2.3. </span><code class="docutils literal notranslate"><span class="pre">min2()</span></code><a class="headerlink" href="#min2" title="Permalink to this heading">#</a></h3>
 <p>Maintenant, déterminer la valeur minimale d’un tableau 2D illustre l’utilisation de deux boucles imbriquées indépendantes pour réaliser un seul parcours complet d’un tableau 2D.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -945,7 +946,7 @@ Le cas échéant, reprendre le chapitre <a class="reference internal" href="1-fo
 Des traitements un petit peu plus complexes nécessitent d’imbriquer <em>plus que deux boucles</em>. Nous verrons un exemple classique de 3 boucles imbriquées avec le produit matriciel.</p>
 </section>
 <section id="comptons-1-2-3">
-<h3><span class="section-number">11.2.4. </span>Comptons  1, 2, 3, …<a class="headerlink" href="#comptons-1-2-3" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">12.2.4. </span>Comptons  1, 2, 3, …<a class="headerlink" href="#comptons-1-2-3" title="Permalink to this heading">#</a></h3>
 <p>Il est important de bien se représenter les répétitions “cachées” par l’écriture synthétique de boucles imbriquées.</p>
 <p><strong>Questions.</strong>
 Combien de fois est exécuté le test de la ligne 5 de <code class="docutils literal notranslate"><span class="pre">min2()</span></code> :</p>
@@ -979,7 +980,7 @@ Dans le cas général :</p>
 <p><strong>Remarque.</strong> Ne pourrait-on pas écrire une version plus “économique” de <code class="docutils literal notranslate"><span class="pre">min2</span></code> ?</p>
 </section>
 <section id="imbriquons-trois-boucles">
-<h3><span class="section-number">11.2.5. </span>Imbriquons trois boucles !<a class="headerlink" href="#imbriquons-trois-boucles" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">12.2.5. </span>Imbriquons trois boucles !<a class="headerlink" href="#imbriquons-trois-boucles" title="Permalink to this heading">#</a></h3>
 <div class="alert alert-warning">
 <p>Sauter cette section en première lecture.</p>
 </div>
@@ -1183,10 +1184,10 @@ On aurait du écrire 6 paramètres d’entrée car il en faut 3 pour définir ch
 </details></section>
 </section>
 <section id="boucles-imbriquees-dependantes">
-<h2><span class="section-number">11.3. </span>Boucles imbriquées dépendantes<a class="headerlink" href="#boucles-imbriquees-dependantes" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">12.3. </span>Boucles imbriquées dépendantes<a class="headerlink" href="#boucles-imbriquees-dependantes" title="Permalink to this heading">#</a></h2>
 <p>Il est classique de devoir utiliser des boucles imbriquées pour certains traitements de tableaux 1D. Nous verrons plusieurs fois le cas avec les <em>algorithmes de tri</em>.</p>
 <section id="valeur-repetee-dans-un-tableau-1d">
-<h3><span class="section-number">11.3.1. </span>Valeur répétée dans un tableau 1D<a class="headerlink" href="#valeur-repetee-dans-un-tableau-1d" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">12.3.1. </span>Valeur répétée dans un tableau 1D<a class="headerlink" href="#valeur-repetee-dans-un-tableau-1d" title="Permalink to this heading">#</a></h3>
 <p>Revenons sur l’exemple de la recherche de valeurs en double dans un tableau 1D.
 On peut imaginer plusieurs variations autour de cette question :</p>
 <ul class="simple">
@@ -1215,7 +1216,7 @@ Soit pour ce problème et un tableau <span class="math notranslate nohighlight">
 Pour la question de l’existence d’un doublon, écrire un (pseudo-)algorithme en français qui (vous) aide à identifier les répétitions, les imbrications et les éventuelles contraintes sur les indices.</p>
 </section>
 <section id="une-premiere-solution-avec-deux-boucles-imbriquees-independantes">
-<h3><span class="section-number">11.3.2. </span>Une première solution avec deux boucles imbriquées indépendantes<a class="headerlink" href="#une-premiere-solution-avec-deux-boucles-imbriquees-independantes" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">12.3.2. </span>Une première solution avec deux boucles imbriquées indépendantes<a class="headerlink" href="#une-premiere-solution-avec-deux-boucles-imbriquees-independantes" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">existe_doublon</span><span class="p">(</span><span class="n">t</span> <span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">n</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
@@ -1272,7 +1273,7 @@ True False
 </div>
 </details></section>
 <section id="une-solution-avec-deux-boucles-imbriquees-dependantes">
-<h3><span class="section-number">11.3.3. </span>Une solution avec deux boucles imbriquées dépendantes<a class="headerlink" href="#une-solution-avec-deux-boucles-imbriquees-dependantes" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">12.3.3. </span>Une solution avec deux boucles imbriquées dépendantes<a class="headerlink" href="#une-solution-avec-deux-boucles-imbriquees-dependantes" title="Permalink to this heading">#</a></h3>
 <p>Dans l’exemple précédent, la boucle intérieure peut être limitée au sous-tableau des zones non encore explorées pour la valeur testée avec la boucle extérieure.</p>
 <p>En l’occurrence, à l’itération <code class="docutils literal notranslate"><span class="pre">i</span></code>, il suffit d’explorer le sous-tableau droit à partir de l’indice <code class="docutils literal notranslate"><span class="pre">i+1</span></code>, cad. pour les indices <code class="docutils literal notranslate"><span class="pre">i+1,</span> <span class="pre">i+2,</span> <span class="pre">...,</span> <span class="pre">n-1</span></code>.</p>
 <p>Ainsi le test <code class="docutils literal notranslate"><span class="pre">i</span> <span class="pre">!=</span> <span class="pre">j</span></code> est toujours satisfait donc inutile.</p>
@@ -1326,7 +1327,7 @@ True False
 </details></section>
 </section>
 <section id="autres-imbrications-de-boucles">
-<h2><span class="section-number">11.4. </span>Autres imbrications de boucles<a class="headerlink" href="#autres-imbrications-de-boucles" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">12.4. </span>Autres imbrications de boucles<a class="headerlink" href="#autres-imbrications-de-boucles" title="Permalink to this heading">#</a></h2>
 <p>La boucle <code class="docutils literal notranslate"><span class="pre">while</span> <span class="pre">...</span> <span class="pre">:</span></code> est l’autre structure de répétition disponible en python.</p>
 <p>Il est bien sûr possible d’imbriquer, extérieurement et intérieurement, des boucles <code class="docutils literal notranslate"><span class="pre">while</span></code>.
 Et aussi des combinaisons de boucles <code class="docutils literal notranslate"><span class="pre">while</span></code> et <code class="docutils literal notranslate"><span class="pre">for</span></code>.</p>
@@ -1376,9 +1377,9 @@ Et aussi des combinaisons de boucles <code class="docutils literal notranslate">
 </div>
 </details></section>
 <section id="synthese">
-<h2><span class="section-number">11.5. </span>Synthèse<a class="headerlink" href="#synthese" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">12.5. </span>Synthèse<a class="headerlink" href="#synthese" title="Permalink to this heading">#</a></h2>
 <section id="ce-qui-a-ete-vu">
-<h3><span class="section-number">11.5.1. </span>Ce qui a été vu<a class="headerlink" href="#ce-qui-a-ete-vu" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">12.5.1. </span>Ce qui a été vu<a class="headerlink" href="#ce-qui-a-ete-vu" title="Permalink to this heading">#</a></h3>
 <p><strong>Structure de données composée :</strong>  les tableaux et leur représentation</p>
 <ul class="simple">
 <li><p>les tableaux de dimension quelconque peuvent être représentés <em>en python</em> par des listes, des listes de listes, des listes de listes de listes …</p></li>
@@ -1396,11 +1397,11 @@ Et aussi des combinaisons de boucles <code class="docutils literal notranslate">
 </ul>
 </section>
 <section id="ce-qui-n-a-pas-ete-vu">
-<h3><span class="section-number">11.5.2. </span>Ce qui n’a pas été vu<a class="headerlink" href="#ce-qui-n-a-pas-ete-vu" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">12.5.2. </span>Ce qui n’a pas été vu<a class="headerlink" href="#ce-qui-n-a-pas-ete-vu" title="Permalink to this heading">#</a></h3>
 <p>Les <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> du module <code class="docutils literal notranslate"><span class="pre">numpy</span></code> sont très utilisés en pratique et présentés dans <a class="reference internal" href="a2-ndarray.html#ann-ndarray"><span class="std std-ref">une annexe dédiée</span></a></p>
 </section>
 <section id="exercice-de-synthese">
-<h3><span class="section-number">11.5.3. </span>Exercice de synthèse<a class="headerlink" href="#exercice-de-synthese" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">12.5.3. </span>Exercice de synthèse<a class="headerlink" href="#exercice-de-synthese" title="Permalink to this heading">#</a></h3>
 <p>Dans un notebook jupyter dédié, s’intéresser aux problèmes de l’égalité, de la similarité et de la comparaison de deux tableaux 1D.</p>
 <p><strong>Définitions</strong></p>
 <ul class="simple">
@@ -1487,15 +1488,15 @@ Et aussi des combinaisons de boucles <code class="docutils literal notranslate">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">10. </span>Synthèse des acquis du semestre 1 en Python</p>
+        <p class="prev-next-title"><span class="section-number">11. </span>Synthèse des acquis du semestre 1</p>
       </div>
     </a>
     <a class="right-next"
-       href="a1-booleens.html"
+       href="11-modules-utiles.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">12. </span>Les booléens en python (&gt;3.6)</p>
+        <p class="prev-next-title"><span class="section-number">13. </span>Modules utiles</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1515,32 +1516,32 @@ Et aussi des combinaisons de boucles <code class="docutils literal notranslate">
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tableaux">11.1. Tableaux</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vocabulaire">11.1.1. Vocabulaire</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tableaux-en-python">11.1.2. Tableaux en python</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tableaux-multidimensionnels-representes-avec-des-listes">11.1.3. Tableaux multidimensionnels représentés avec des listes</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pas-de-pour-definir-une-liste-multidimensionnelle">11.1.4. Pas de <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">]*</span></code> pour définir une liste multidimensionnelle</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tableaux">12.1. Tableaux</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vocabulaire">12.1.1. Vocabulaire</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tableaux-en-python">12.1.2. Tableaux en python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tableaux-multidimensionnels-representes-avec-des-listes">12.1.3. Tableaux multidimensionnels représentés avec des listes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pas-de-pour-definir-une-liste-multidimensionnelle">12.1.4. Pas de <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">]*</span></code> pour définir une liste multidimensionnelle</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boucles-imbriquees">11.2. Boucles imbriquées</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#le-contexte">11.2.1. Le contexte</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#min1">11.2.2. <code class="docutils literal notranslate"><span class="pre">min1()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#min2">11.2.3. <code class="docutils literal notranslate"><span class="pre">min2()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comptons-1-2-3">11.2.4. Comptons  1, 2, 3, …</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#imbriquons-trois-boucles">11.2.5. Imbriquons trois boucles !</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boucles-imbriquees">12.2. Boucles imbriquées</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#le-contexte">12.2.1. Le contexte</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#min1">12.2.2. <code class="docutils literal notranslate"><span class="pre">min1()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#min2">12.2.3. <code class="docutils literal notranslate"><span class="pre">min2()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comptons-1-2-3">12.2.4. Comptons  1, 2, 3, …</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#imbriquons-trois-boucles">12.2.5. Imbriquons trois boucles !</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boucles-imbriquees-dependantes">11.3. Boucles imbriquées dépendantes</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#valeur-repetee-dans-un-tableau-1d">11.3.1. Valeur répétée dans un tableau 1D</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#une-premiere-solution-avec-deux-boucles-imbriquees-independantes">11.3.2. Une première solution avec deux boucles imbriquées indépendantes</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#une-solution-avec-deux-boucles-imbriquees-dependantes">11.3.3. Une solution avec deux boucles imbriquées dépendantes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boucles-imbriquees-dependantes">12.3. Boucles imbriquées dépendantes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#valeur-repetee-dans-un-tableau-1d">12.3.1. Valeur répétée dans un tableau 1D</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#une-premiere-solution-avec-deux-boucles-imbriquees-independantes">12.3.2. Une première solution avec deux boucles imbriquées indépendantes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#une-solution-avec-deux-boucles-imbriquees-dependantes">12.3.3. Une solution avec deux boucles imbriquées dépendantes</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#autres-imbrications-de-boucles">11.4. Autres imbrications de boucles</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#synthese">11.5. Synthèse</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ce-qui-a-ete-vu">11.5.1. Ce qui a été vu</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ce-qui-n-a-pas-ete-vu">11.5.2. Ce qui n’a pas été vu</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-de-synthese">11.5.3. Exercice de synthèse</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#autres-imbrications-de-boucles">12.4. Autres imbrications de boucles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#synthese">12.5. Synthèse</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ce-qui-a-ete-vu">12.5.1. Ce qui a été vu</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ce-qui-n-a-pas-ete-vu">12.5.2. Ce qui n’a pas été vu</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-de-synthese">12.5.3. Exercice de synthèse</a></li>
 </ul>
 </li>
 </ul>

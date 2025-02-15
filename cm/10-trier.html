@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>5. Trier &#8212; Algo-Prog L1-S2</title>
+    <title>6. Trier &#8212; Algo-Prog L1-S2</title>
   
   
   
@@ -63,8 +63,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'cm/10-trier';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="6. Les types composés" href="5-types_composes.html" />
-    <link rel="prev" title="4. Rechercher" href="8-rechercher.html" />
+    <link rel="next" title="7. Les types composés" href="5-types_composes.html" />
+    <link rel="prev" title="5. Complexités" href="4-complexite2025.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -196,25 +196,26 @@
 <li class="toctree-l1"><a class="reference internal" href="1b-fonctions-exemple.html">2. Un exemple, plein de fonctions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="6-recursivite.html">3. Récursivité</a></li>
 <li class="toctree-l1"><a class="reference internal" href="8-rechercher.html">4. Rechercher</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">5. Trier</a></li>
-<li class="toctree-l1"><a class="reference internal" href="5-types_composes.html">6. Les types composés</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3-ES-fichiers.html">7. Entrées-sorties simples avec des fichiers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="9-ES-formats.html">8. Les entrées-sorties (E/S) : formats</a></li>
-<li class="toctree-l1"><a class="reference internal" href="7-fonctions-avancees.html">9. Affectation et appel de fonction – aspects avancés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4-complexite2025.html">5. Complexités</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">6. Trier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5-types_composes.html">7. Les types composés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3-ES-fichiers.html">8. Entrées-sorties simples avec des fichiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9-ES-formats.html">9. Les entrées-sorties (E/S) : formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7-fonctions-avancees.html">10. Affectation et appel de fonction – aspects avancés</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Compléments</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="01-synthese-s1.html">10. Synthèse des acquis du semestre 1 en Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="a0-boucles-avancees.html">11. Tableaux et boucles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="a1-booleens.html">12. Les booléens en python (&gt;3.6)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="a2-ndarray.html">13. Les ‘ndarray’ : de vrais tableaux en python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="11-modules-utiles.html">14. Modules utiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01-synthese-s1.html">11. Synthèse des acquis du semestre 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a0-boucles-avancees.html">12. Tableaux et boucles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11-modules-utiles.html">13. Modules utiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a1-booleens.html">14. Les booléens en python (&gt;3.6)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a2-ndarray.html">15. Les ‘ndarray’ : de vrais tableaux en python</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">TD</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../td/prealable-td.html">15. Préalables</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../td/td1.html">16. Feuille 1 : fonctions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../td/td2.html">17. Feuille 2 : récursivité</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../td/prealable-td.html">16. Préalables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../td/td1.html">17. Feuille 1 : fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../td/td2.html">18. Feuille 2 : récursivité</a></li>
 </ul>
 
     </div>
@@ -409,45 +410,45 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">5.1. Introduction</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vocabulaire">5.1.1. Vocabulaire</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#complexites">5.1.2. Complexités</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#principaux-algorithmes-de-tri">5.1.3. Principaux algorithmes de tri</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">6.1. Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vocabulaire">6.1.1. Vocabulaire</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#complexites">6.1.2. Complexités</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#principaux-algorithmes-de-tri">6.1.3. Principaux algorithmes de tri</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tri-insertion">5.2. Tri insertion</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#principe">5.2.1. Principe</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-invariant">5.2.2. (<span class="math notranslate nohighlight">\(\star\)</span>) Invariant</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithme">5.2.3. Algorithme</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pire-cas-meilleur-cas">5.2.4. Pire cas, meilleur cas</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tri-insertion">6.2. Tri insertion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#principe">6.2.1. Principe</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-invariant">6.2.2. (<span class="math notranslate nohighlight">\(\star\)</span>) Invariant</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithme">6.2.3. Algorithme</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pire-cas-meilleur-cas">6.2.4. Pire cas, meilleur cas</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exercices">Exercices</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#corrections">Corrections</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vers-l-analyse-de-la-complexite">5.2.5. Vers l’analyse de la complexité</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vers-l-analyse-de-la-complexite">6.2.5. Vers l’analyse de la complexité</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tri-rapide-ou-quicksort">5.3. Tri rapide (ou <em>quicksort</em>)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">5.3.1. Principe</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recursion">5.3.2. Récursion</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#principe-de-mise-en-oeuvre-avec-duplication-du-tableau-t">5.3.3. Principe de mise en oeuvre  avec duplication du tableau <code class="docutils literal notranslate"><span class="pre">t</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tri-rapide-ou-quicksort">6.3. Tri rapide (ou <em>quicksort</em>)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">6.3.1. Principe</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recursion">6.3.2. Récursion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#principe-de-mise-en-oeuvre-avec-duplication-du-tableau-t">6.3.3. Principe de mise en oeuvre  avec duplication du tableau <code class="docutils literal notranslate"><span class="pre">t</span></code></a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple">Exemple</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mise-en-oeuvre-en-place">5.3.4. Mise en oeuvre en place</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">5.3.5. Exercices</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">5.3.6. Corrections</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#performances-pire-cas-meilleur-cas">5.3.7. Performances, pire cas, meilleur cas</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mise-en-oeuvre-en-place">6.3.4. Mise en oeuvre en place</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">6.3.5. Exercices</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">6.3.6. Corrections</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#performances-pire-cas-meilleur-cas">6.3.7. Performances, pire cas, meilleur cas</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Exercices</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">5.3.8. Vers l’analyse de la complexité</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">6.3.8. Vers l’analyse de la complexité</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tri-fusion">5.4. Tri fusion</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">5.4.1. Principe</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple-de-la-fusion-de-2-tableaux-tries">5.4.2. Exemple de la fusion de 2 tableaux triés</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithme-analyse-et-une-ecriture">5.4.3. Algorithme : analyse et (une) écriture</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tri-fusion">6.4. Tri fusion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">6.4.1. Principe</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple-de-la-fusion-de-2-tableaux-tries">6.4.2. Exemple de la fusion de 2 tableaux triés</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithme-analyse-et-une-ecriture">6.4.3. Algorithme : analyse et (une) écriture</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fusion">Fusion</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#analyse-plus-detaillee-de-la-programmation-de-la-fusion">Analyse plus détaillée de la programmation de la fusion</a><ul class="nav section-nav flex-column">
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#petite-amelioration">Petite amélioration</a></li>
@@ -456,19 +457,19 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-de-programmation">Exercice de programmation</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diviser-pour-regner">5.4.4. Diviser pour régner</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">5.4.5. Performances, pire cas, meilleur cas</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">5.4.6. Vers l’analyse de la complexité</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diviser-pour-regner">6.4.4. Diviser pour régner</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">6.4.5. Performances, pire cas, meilleur cas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">6.4.6. Vers l’analyse de la complexité</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complexites-de-ces-algorithmes-de-tri">5.5. Complexités de ces algorithmes de tri</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#star-prouver-la-correction-de-ces-algorithmes-de-tri">5.6. (<span class="math notranslate nohighlight">\(\star\)</span>) Prouver la correction de ces algorithmes de tri</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">5.6.1. Tri insertion</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tri-rapide-quicksort">5.6.2. Tri rapide (<em>quicksort</em>)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">5.6.3. Tri fusion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complexites-de-ces-algorithmes-de-tri">6.5. Complexités de ces algorithmes de tri</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#star-prouver-la-correction-de-ces-algorithmes-de-tri">6.6. (<span class="math notranslate nohighlight">\(\star\)</span>) Prouver la correction de ces algorithmes de tri</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">6.6.1. Tri insertion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tri-rapide-quicksort">6.6.2. Tri rapide (<em>quicksort</em>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">6.6.3. Tri fusion</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">5.7. Conclusion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">6.7. Conclusion</a></li>
 </ul>
             </nav>
         </div>
@@ -481,13 +482,13 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="trier">
-<span id="ch-trier"></span><h1><span class="section-number">5. </span>Trier<a class="headerlink" href="#trier" title="Permalink to this heading">#</a></h1>
+<span id="ch-trier"></span><h1><span class="section-number">6. </span>Trier<a class="headerlink" href="#trier" title="Permalink to this heading">#</a></h1>
 <p>Mis à jour : Jan 27, 2025, lecture : 11
 minutes minimum, PhL.</p>
 <section id="introduction">
-<h2><span class="section-number">5.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
 <section id="vocabulaire">
-<h3><span class="section-number">5.1.1. </span>Vocabulaire<a class="headerlink" href="#vocabulaire" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.1.1. </span>Vocabulaire<a class="headerlink" href="#vocabulaire" title="Permalink to this heading">#</a></h3>
 <p><strong>Trier</strong> : classer, <strong>ordonner</strong> des valeurs, des objets</p>
 <ul class="simple">
 <li><p>trier des copies par notes</p></li>
@@ -507,7 +508,7 @@ minutes minimum, PhL.</p>
 </ul>
 </section>
 <section id="complexites">
-<h3><span class="section-number">5.1.2. </span>Complexités<a class="headerlink" href="#complexites" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.1.2. </span>Complexités<a class="headerlink" href="#complexites" title="Permalink to this heading">#</a></h3>
 <p><strong>Tris <em>en place</em></strong></p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(\cal{O}(1)\)</span> : complexité <em>en espace</em> constante <em>vs.</em> nombre de valeurs à trier</p></li>
@@ -530,7 +531,7 @@ minutes minimum, PhL.</p>
 </ul>
 </section>
 <section id="principaux-algorithmes-de-tri">
-<h3><span class="section-number">5.1.3. </span>Principaux algorithmes de tri<a class="headerlink" href="#principaux-algorithmes-de-tri" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.1.3. </span>Principaux algorithmes de tri<a class="headerlink" href="#principaux-algorithmes-de-tri" title="Permalink to this heading">#</a></h3>
 <p><strong>Tris par comparaisons : algorithmes lents</strong></p>
 <ul class="simple">
 <li><p>pire cas : <span class="math notranslate nohighlight">\(\cal{O}(n^2)\)</span></p></li>
@@ -560,10 +561,10 @@ minutes minimum, PhL.</p>
 </section>
 </section>
 <section id="tri-insertion">
-<h2><span class="section-number">5.2. </span>Tri insertion<a class="headerlink" href="#tri-insertion" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.2. </span>Tri insertion<a class="headerlink" href="#tri-insertion" title="Permalink to this heading">#</a></h2>
 <p>Un exemple de tri par comparaisons, en place et de complexité au pire quadratique.</p>
 <section id="principe">
-<h3><span class="section-number">5.2.1. </span>Principe<a class="headerlink" href="#principe" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.2.1. </span>Principe<a class="headerlink" href="#principe" title="Permalink to this heading">#</a></h3>
 <p>Analogue au tri d’une main de cartes</p>
 <ul class="simple">
 <li><p>je parcours la partie triée de la main de cartes</p></li>
@@ -575,7 +576,7 @@ minutes minimum, PhL.</p>
 </ul>
 </section>
 <section id="star-invariant">
-<h3><span class="section-number">5.2.2. </span>(<span class="math notranslate nohighlight">\(\star\)</span>) Invariant<a class="headerlink" href="#star-invariant" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.2.2. </span>(<span class="math notranslate nohighlight">\(\star\)</span>) Invariant<a class="headerlink" href="#star-invariant" title="Permalink to this heading">#</a></h3>
 <blockquote>
 <div><p>(P) : Avant l’itération <span class="math notranslate nohighlight">\(i\)</span>, le sous-tableau t[0, <span class="math notranslate nohighlight">\(i\)</span>[ est trié.</p>
 </div></blockquote>
@@ -587,7 +588,7 @@ minutes minimum, PhL.</p>
 </ul>
 </section>
 <section id="algorithme">
-<h3><span class="section-number">5.2.3. </span>Algorithme<a class="headerlink" href="#algorithme" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.2.3. </span>Algorithme<a class="headerlink" href="#algorithme" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">triInsertion</span><span class="p">(</span><span class="n">t</span> <span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
@@ -634,7 +635,7 @@ Trions !
 </div>
 </section>
 <section id="pire-cas-meilleur-cas">
-<h3><span class="section-number">5.2.4. </span>Pire cas, meilleur cas<a class="headerlink" href="#pire-cas-meilleur-cas" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.2.4. </span>Pire cas, meilleur cas<a class="headerlink" href="#pire-cas-meilleur-cas" title="Permalink to this heading">#</a></h3>
 <p>Ces cas dépendent de l’ordre de parcours des valeurs à trier<br />
 - Nous avons choisi de parcourir ces valeurs par indices croissants : c-a-d. 1, 2, …, n-1</p>
 <p>Pire cas : les valeurs sont dans un ordre inverse de l’ordre trié<br />
@@ -1152,7 +1153,7 @@ Conclusion :  249181 comparaisons en moyenne pour n =  1000 ( 10 echantillons)
 </section>
 </section>
 <section id="vers-l-analyse-de-la-complexite">
-<h3><span class="section-number">5.2.5. </span>Vers l’analyse de la complexité<a class="headerlink" href="#vers-l-analyse-de-la-complexite" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.2.5. </span>Vers l’analyse de la complexité<a class="headerlink" href="#vers-l-analyse-de-la-complexite" title="Permalink to this heading">#</a></h3>
 <p>Le tri insertion se compose de deux boucles imbriquées : <code class="docutils literal notranslate"><span class="pre">for</span> </code> puis <code class="docutils literal notranslate"><span class="pre">while</span></code></p>
 <ul class="simple">
 <li><p>Quel paramètre de la complexité en temps de ce tri ?</p></li>
@@ -1171,13 +1172,13 @@ Conclusion :  249181 comparaisons en moyenne pour n =  1000 ( 10 echantillons)
 </section>
 </section>
 <section id="tri-rapide-ou-quicksort">
-<h2><span class="section-number">5.3. </span>Tri rapide (ou <em>quicksort</em>)<a class="headerlink" href="#tri-rapide-ou-quicksort" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.3. </span>Tri rapide (ou <em>quicksort</em>)<a class="headerlink" href="#tri-rapide-ou-quicksort" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Un premier exemple de tri (par comparaisons) récursif très efficace en pratique.</p></li>
 <li><p>Introduit par l’informaticien britannique C.A.R Hoare en 1961 (<a class="reference external" href="https://fr.wikipedia.org/wiki/Tri_rapide">page wikipedia</a>)</p></li>
 </ul>
 <section id="id1">
-<h3><span class="section-number">5.3.1. </span>Principe<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.3.1. </span>Principe<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
 <p>Ranger une valeur à sa place définitive</p>
 <ul class="simple">
 <li><p>toutes celles à sa gauche sont plus petites</p></li>
@@ -1189,7 +1190,7 @@ Conclusion :  249181 comparaisons en moyenne pour n =  1000 ( 10 echantillons)
 <p>Cette propriété est un <em>invariant</em> du tri rapide.</p>
 </section>
 <section id="recursion">
-<h3><span class="section-number">5.3.2. </span>Récursion<a class="headerlink" href="#recursion" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.3.2. </span>Récursion<a class="headerlink" href="#recursion" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Hypothèse de départ :</p>
 <ul class="simple">
@@ -1220,7 +1221,7 @@ Conclusion :  249181 comparaisons en moyenne pour n =  1000 ( 10 echantillons)
 </ol>
 </section>
 <section id="principe-de-mise-en-oeuvre-avec-duplication-du-tableau-t">
-<h3><span class="section-number">5.3.3. </span>Principe de mise en oeuvre  avec duplication du tableau <code class="docutils literal notranslate"><span class="pre">t</span></code><a class="headerlink" href="#principe-de-mise-en-oeuvre-avec-duplication-du-tableau-t" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.3.3. </span>Principe de mise en oeuvre  avec duplication du tableau <code class="docutils literal notranslate"><span class="pre">t</span></code><a class="headerlink" href="#principe-de-mise-en-oeuvre-avec-duplication-du-tableau-t" title="Permalink to this heading">#</a></h3>
 <p>Une première mise en oeuvre “à vocation pédagogique” s’appuie sur la duplication du tableau de valeurs à chaque étape de la récursion.</p>
 <p><strong>Etape 1 :</strong> placer correctement le pivot <code class="docutils literal notranslate"><span class="pre">v</span></code></p>
 <ul class="simple">
@@ -1260,7 +1261,7 @@ Conclusion :  249181 comparaisons en moyenne pour n =  1000 ( 10 echantillons)
 </section>
 </section>
 <section id="mise-en-oeuvre-en-place">
-<h3><span class="section-number">5.3.4. </span>Mise en oeuvre en place<a class="headerlink" href="#mise-en-oeuvre-en-place" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.3.4. </span>Mise en oeuvre en place<a class="headerlink" href="#mise-en-oeuvre-en-place" title="Permalink to this heading">#</a></h3>
 <p>Le principe étant bien compris, on effectue un traitement équivalent <em>en place</em>, c-a-d. sans dupliquer le tableau de valeurs.</p>
 <p><strong>Rmq:</strong> <em>Les valeurs entre <code class="docutils literal notranslate"><span class="pre">[.]</span></code> sont les numéros de ligne dans le code de <code class="docutils literal notranslate"><span class="pre">partition</span></code> qui suit.<br />
 Hélas les numéros de lignes n’apparaissent pas dans la version html ;
@@ -1371,14 +1372,14 @@ après : [0, 1, 2, 4, 8, 15, 17, 23]
 </div>
 </section>
 <section id="id2">
-<h3><span class="section-number">5.3.5. </span>Exercices<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.3.5. </span>Exercices<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Ecrire une version (<code class="docutils literal notranslate"><span class="pre">partition2</span></code>) plus simple avec duplication du tableau</p></li>
 <li><p>Ecrire une version qui affiche les évolutions successives de <code class="docutils literal notranslate"><span class="pre">t</span></code> après chaque pivot</p></li>
 </ul>
 </section>
 <section id="id3">
-<h3><span class="section-number">5.3.6. </span>Corrections<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.3.6. </span>Corrections<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
 <p><strong>Sauter ce passage en première lecture</strong></p>
 <div class="cell tag_hide-cell docutils container">
 <details class="hide above-input">
@@ -1473,7 +1474,7 @@ après : [17, 31, 39, 49, 55, 63, 96]
 </div>
 </section>
 <section id="performances-pire-cas-meilleur-cas">
-<h3><span class="section-number">5.3.7. </span>Performances, pire cas, meilleur cas<a class="headerlink" href="#performances-pire-cas-meilleur-cas" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.3.7. </span>Performances, pire cas, meilleur cas<a class="headerlink" href="#performances-pire-cas-meilleur-cas" title="Permalink to this heading">#</a></h3>
 <p>S’inspirer de la démarche sur <code class="docutils literal notranslate"><span class="pre">triInsertion(</span> <span class="pre">)</span></code> avec les exercices suivants. Bon travail !</p>
 <section id="id4">
 <h4>Exercices<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h4>
@@ -1592,7 +1593,7 @@ nb comparaisons : 9
 </section>
 </section>
 <section id="id5">
-<h3><span class="section-number">5.3.8. </span>Vers l’analyse de la complexité<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.3.8. </span>Vers l’analyse de la complexité<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
 <p>Le tri rapide :</p>
 <ul class="simple">
 <li><p>consiste en des appels récursifs qui effectuent des partitions successives (en 2 sous-tableaux de taille strictement inférieure) jusqu’à terminaison (sous-tableau de taille 1 ou 0).</p></li>
@@ -1626,10 +1627,10 @@ nb comparaisons : 9
 </section>
 </section>
 <section id="tri-fusion">
-<h2><span class="section-number">5.4. </span>Tri fusion<a class="headerlink" href="#tri-fusion" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.4. </span>Tri fusion<a class="headerlink" href="#tri-fusion" title="Permalink to this heading">#</a></h2>
 <p>Un exemple de tri de complexité optimale (semi-logarithmique : <span class="math notranslate nohighlight">\(n\log(n)\)</span>) issu de la stratégie <strong>diviser pour régner</strong>.</p>
 <section id="id6">
-<h3><span class="section-number">5.4.1. </span>Principe<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.4.1. </span>Principe<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p><strong>Fusionner</strong> 2 tableaux <em>triés</em> pour obtenir un tableau unique <em>trié</em></p></li>
 </ol>
@@ -1659,7 +1660,7 @@ nb comparaisons : 9
 <p>La forme récursive du tri fusion est issue d’une stratégie “diviser pour régner” similaire à celle utilisée pour la recherche dichotomique. En pratique, les appels récursifs définissent les moitiés de tableaux à manipuler. Le “coeur” de l’algorithme est donc la phase de fusion que nous détaillons maintenant.</p>
 </section>
 <section id="exemple-de-la-fusion-de-2-tableaux-tries">
-<h3><span class="section-number">5.4.2. </span>Exemple de la fusion de 2 tableaux triés<a class="headerlink" href="#exemple-de-la-fusion-de-2-tableaux-tries" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.4.2. </span>Exemple de la fusion de 2 tableaux triés<a class="headerlink" href="#exemple-de-la-fusion-de-2-tableaux-tries" title="Permalink to this heading">#</a></h3>
 <p>On illustre la fusion de 2 tableaux triés quelconques à l’aide de l’exemple suivant.</p>
 <p>Fusionnons les 8 valeurs stockées dans les tableaux triés  <code class="docutils literal notranslate"><span class="pre">t_g</span> <span class="pre">=</span>&#160; <span class="pre">[1,3,5,8,11]</span></code> et <code class="docutils literal notranslate"><span class="pre">t_d</span> <span class="pre">=</span> <span class="pre">[2,6,7]</span></code>.</p>
 <p><strong>Rmq.</strong> La récursion du tri fusion conduirait ici à 2 tableaux triés de taille 4 chacun.</p>
@@ -1667,7 +1668,7 @@ nb comparaisons : 9
 <p><img alt="Fusionner 2 tableaux triés" src="../_images/fusion.png" /></p>
 </section>
 <section id="algorithme-analyse-et-une-ecriture">
-<h3><span class="section-number">5.4.3. </span>Algorithme : analyse et (une) écriture<a class="headerlink" href="#algorithme-analyse-et-une-ecriture" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.4.3. </span>Algorithme : analyse et (une) écriture<a class="headerlink" href="#algorithme-analyse-et-une-ecriture" title="Permalink to this heading">#</a></h3>
 <section id="fusion">
 <h4>Fusion<a class="headerlink" href="#fusion" title="Permalink to this heading">#</a></h4>
 <p><strong>Entrées</strong> : 2 tableaux <code class="docutils literal notranslate"><span class="pre">t1</span></code> et <code class="docutils literal notranslate"><span class="pre">t2</span></code>, de longueurs <code class="docutils literal notranslate"><span class="pre">n1</span></code> et <code class="docutils literal notranslate"><span class="pre">n2</span></code>, <strong>triés</strong><br />
@@ -1922,7 +1923,7 @@ avec affichages
 </section>
 </section>
 <section id="diviser-pour-regner">
-<h3><span class="section-number">5.4.4. </span>Diviser pour régner<a class="headerlink" href="#diviser-pour-regner" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.4.4. </span>Diviser pour régner<a class="headerlink" href="#diviser-pour-regner" title="Permalink to this heading">#</a></h3>
 <p>L’algorithme complet du tri fusion peut maintenant s’écrire à partir de l’analyse “diviser pour régner”  appliquée au tableau à trier.</p>
 <ul class="simple">
 <li><p>Principe récursif de division en 2 parties de taille moitié jusqu’à obtenir un tableau de longueur 0 ou 1</p></li>
@@ -1977,7 +1978,7 @@ avec affichages
 <p><strong>A venir :</strong> le même principe “divise pour régner” avec des variations d’implémentation.</p>
 </section>
 <section id="id7">
-<h3><span class="section-number">5.4.5. </span>Performances, pire cas, meilleur cas<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.4.5. </span>Performances, pire cas, meilleur cas<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
 <p>S’inspirer des démarches précédentes. Bon travail !</p>
 <div class="cell tag_hide-cell tag_hide-output docutils container">
 <details class="hide above-input">
@@ -2107,7 +2108,7 @@ nb comparaisons: 24
 </div>
 </section>
 <section id="id8">
-<h3><span class="section-number">5.4.6. </span>Vers l’analyse de la complexité<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.4.6. </span>Vers l’analyse de la complexité<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
 <p>Le tri fusion consiste en des appels récursifs qui :</p>
 <ul class="simple">
 <li><p>effectuent des <em>partitions</em> successives en 2 sous-tableaux de taille moitié jusqu’à terminaison (sous-tableau de taille 1 ou 0 donc trié),</p></li>
@@ -2134,7 +2135,7 @@ nb comparaisons: 24
 </section>
 </section>
 <section id="complexites-de-ces-algorithmes-de-tri">
-<h2><span class="section-number">5.5. </span>Complexités de ces algorithmes de tri<a class="headerlink" href="#complexites-de-ces-algorithmes-de-tri" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.5. </span>Complexités de ces algorithmes de tri<a class="headerlink" href="#complexites-de-ces-algorithmes-de-tri" title="Permalink to this heading">#</a></h2>
 <p>On synthétise les différents résultats de complexité de ces algorithmes de tri.</p>
 <table class="colwidths-auto table">
 <thead>
@@ -2179,17 +2180,17 @@ nb comparaisons: 24
 </table>
 </section>
 <section id="star-prouver-la-correction-de-ces-algorithmes-de-tri">
-<h2><span class="section-number">5.6. </span>(<span class="math notranslate nohighlight">\(\star\)</span>) Prouver la correction de ces algorithmes de tri<a class="headerlink" href="#star-prouver-la-correction-de-ces-algorithmes-de-tri" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.6. </span>(<span class="math notranslate nohighlight">\(\star\)</span>) Prouver la correction de ces algorithmes de tri<a class="headerlink" href="#star-prouver-la-correction-de-ces-algorithmes-de-tri" title="Permalink to this heading">#</a></h2>
 <p>On explicite les invariants des algorithmes présentés dans ce chapitre.
 On laisse en exercice la preuve de ces invariants.</p>
 <section id="id9">
-<h3><span class="section-number">5.6.1. </span>Tri insertion<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.6.1. </span>Tri insertion<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h3>
 <blockquote>
 <div><p>(P) Avant l’itération i, le sous-tableau <code class="docutils literal notranslate"><span class="pre">t[0,</span> <span class="pre">i[</span></code> est trié.</p>
 </div></blockquote>
 </section>
 <section id="tri-rapide-quicksort">
-<h3><span class="section-number">5.6.2. </span>Tri rapide (<em>quicksort</em>)<a class="headerlink" href="#tri-rapide-quicksort" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.6.2. </span>Tri rapide (<em>quicksort</em>)<a class="headerlink" href="#tri-rapide-quicksort" title="Permalink to this heading">#</a></h3>
 <p>Invariant de <code class="docutils literal notranslate"><span class="pre">partition(t,</span> <span class="pre">g,</span> <span class="pre">d)</span></code> :</p>
 <blockquote>
 <div><p>au début de l’itération <span class="math notranslate nohighlight">\(i\)</span> : pour tout <span class="math notranslate nohighlight">\(k\)</span> dans <span class="math notranslate nohighlight">\([g, d[\)</span>, on a :</p>
@@ -2202,7 +2203,7 @@ On laisse en exercice la preuve de ces invariants.</p>
 <p>Remarque : on ne dit rien sur la tranche <span class="math notranslate nohighlight">\(t[i, d-1[\)</span> qui sont a priori quelconques.</p>
 </section>
 <section id="id10">
-<h3><span class="section-number">5.6.3. </span>Tri fusion<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.6.3. </span>Tri fusion<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h3>
 <p>Invariant de la boucle <code class="docutils literal notranslate"><span class="pre">for</span></code> dans <code class="docutils literal notranslate"><span class="pre">fusion(t,</span> <span class="pre">g,</span> <span class="pre">m,</span> <span class="pre">d)</span></code> :</p>
 <blockquote>
 <div><p>au début de l’itération <span class="math notranslate nohighlight">\(k\)</span> :</p>
@@ -2214,7 +2215,7 @@ On laisse en exercice la preuve de ces invariants.</p>
 </section>
 </section>
 <section id="conclusion">
-<h2><span class="section-number">5.7. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.7. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Trois algorithmes de tris de complexités différentes</p>
 <ul>
@@ -2264,12 +2265,12 @@ On laisse en exercice la preuve de ces invariants.</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="8-rechercher.html"
+       href="4-complexite2025.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">4. </span>Rechercher</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>Complexités</p>
       </div>
     </a>
     <a class="right-next"
@@ -2277,7 +2278,7 @@ On laisse en exercice la preuve de ces invariants.</p>
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">6. </span>Les types composés</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>Les types composés</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -2297,45 +2298,45 @@ On laisse en exercice la preuve de ces invariants.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">5.1. Introduction</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vocabulaire">5.1.1. Vocabulaire</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#complexites">5.1.2. Complexités</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#principaux-algorithmes-de-tri">5.1.3. Principaux algorithmes de tri</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">6.1. Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vocabulaire">6.1.1. Vocabulaire</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#complexites">6.1.2. Complexités</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#principaux-algorithmes-de-tri">6.1.3. Principaux algorithmes de tri</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tri-insertion">5.2. Tri insertion</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#principe">5.2.1. Principe</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-invariant">5.2.2. (<span class="math notranslate nohighlight">\(\star\)</span>) Invariant</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithme">5.2.3. Algorithme</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pire-cas-meilleur-cas">5.2.4. Pire cas, meilleur cas</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tri-insertion">6.2. Tri insertion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#principe">6.2.1. Principe</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-invariant">6.2.2. (<span class="math notranslate nohighlight">\(\star\)</span>) Invariant</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithme">6.2.3. Algorithme</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pire-cas-meilleur-cas">6.2.4. Pire cas, meilleur cas</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exercices">Exercices</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#corrections">Corrections</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vers-l-analyse-de-la-complexite">5.2.5. Vers l’analyse de la complexité</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vers-l-analyse-de-la-complexite">6.2.5. Vers l’analyse de la complexité</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tri-rapide-ou-quicksort">5.3. Tri rapide (ou <em>quicksort</em>)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">5.3.1. Principe</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recursion">5.3.2. Récursion</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#principe-de-mise-en-oeuvre-avec-duplication-du-tableau-t">5.3.3. Principe de mise en oeuvre  avec duplication du tableau <code class="docutils literal notranslate"><span class="pre">t</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tri-rapide-ou-quicksort">6.3. Tri rapide (ou <em>quicksort</em>)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">6.3.1. Principe</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recursion">6.3.2. Récursion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#principe-de-mise-en-oeuvre-avec-duplication-du-tableau-t">6.3.3. Principe de mise en oeuvre  avec duplication du tableau <code class="docutils literal notranslate"><span class="pre">t</span></code></a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple">Exemple</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mise-en-oeuvre-en-place">5.3.4. Mise en oeuvre en place</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">5.3.5. Exercices</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">5.3.6. Corrections</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#performances-pire-cas-meilleur-cas">5.3.7. Performances, pire cas, meilleur cas</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mise-en-oeuvre-en-place">6.3.4. Mise en oeuvre en place</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">6.3.5. Exercices</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">6.3.6. Corrections</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#performances-pire-cas-meilleur-cas">6.3.7. Performances, pire cas, meilleur cas</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Exercices</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">5.3.8. Vers l’analyse de la complexité</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">6.3.8. Vers l’analyse de la complexité</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tri-fusion">5.4. Tri fusion</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">5.4.1. Principe</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple-de-la-fusion-de-2-tableaux-tries">5.4.2. Exemple de la fusion de 2 tableaux triés</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithme-analyse-et-une-ecriture">5.4.3. Algorithme : analyse et (une) écriture</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tri-fusion">6.4. Tri fusion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">6.4.1. Principe</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple-de-la-fusion-de-2-tableaux-tries">6.4.2. Exemple de la fusion de 2 tableaux triés</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithme-analyse-et-une-ecriture">6.4.3. Algorithme : analyse et (une) écriture</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fusion">Fusion</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#analyse-plus-detaillee-de-la-programmation-de-la-fusion">Analyse plus détaillée de la programmation de la fusion</a><ul class="nav section-nav flex-column">
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#petite-amelioration">Petite amélioration</a></li>
@@ -2344,19 +2345,19 @@ On laisse en exercice la preuve de ces invariants.</p>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-de-programmation">Exercice de programmation</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diviser-pour-regner">5.4.4. Diviser pour régner</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">5.4.5. Performances, pire cas, meilleur cas</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">5.4.6. Vers l’analyse de la complexité</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diviser-pour-regner">6.4.4. Diviser pour régner</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">6.4.5. Performances, pire cas, meilleur cas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">6.4.6. Vers l’analyse de la complexité</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complexites-de-ces-algorithmes-de-tri">5.5. Complexités de ces algorithmes de tri</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#star-prouver-la-correction-de-ces-algorithmes-de-tri">5.6. (<span class="math notranslate nohighlight">\(\star\)</span>) Prouver la correction de ces algorithmes de tri</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">5.6.1. Tri insertion</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tri-rapide-quicksort">5.6.2. Tri rapide (<em>quicksort</em>)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">5.6.3. Tri fusion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complexites-de-ces-algorithmes-de-tri">6.5. Complexités de ces algorithmes de tri</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#star-prouver-la-correction-de-ces-algorithmes-de-tri">6.6. (<span class="math notranslate nohighlight">\(\star\)</span>) Prouver la correction de ces algorithmes de tri</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">6.6.1. Tri insertion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tri-rapide-quicksort">6.6.2. Tri rapide (<em>quicksort</em>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">6.6.3. Tri fusion</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">5.7. Conclusion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">6.7. Conclusion</a></li>
 </ul>
   </nav></div>
 

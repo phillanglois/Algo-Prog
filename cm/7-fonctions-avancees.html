@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>9. Affectation et appel de fonction – aspects avancés &#8212; Algo-Prog L1-S2</title>
+    <title>10. Affectation et appel de fonction – aspects avancés &#8212; Algo-Prog L1-S2</title>
   
   
   
@@ -63,8 +63,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'cm/7-fonctions-avancees';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="10. Synthèse des acquis du semestre 1 en Python" href="01-synthese-s1.html" />
-    <link rel="prev" title="8. Les entrées-sorties (E/S) : formats" href="9-ES-formats.html" />
+    <link rel="next" title="11. Synthèse des acquis du semestre 1" href="01-synthese-s1.html" />
+    <link rel="prev" title="9. Les entrées-sorties (E/S) : formats" href="9-ES-formats.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -196,25 +196,26 @@
 <li class="toctree-l1"><a class="reference internal" href="1b-fonctions-exemple.html">2. Un exemple, plein de fonctions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="6-recursivite.html">3. Récursivité</a></li>
 <li class="toctree-l1"><a class="reference internal" href="8-rechercher.html">4. Rechercher</a></li>
-<li class="toctree-l1"><a class="reference internal" href="10-trier.html">5. Trier</a></li>
-<li class="toctree-l1"><a class="reference internal" href="5-types_composes.html">6. Les types composés</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3-ES-fichiers.html">7. Entrées-sorties simples avec des fichiers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="9-ES-formats.html">8. Les entrées-sorties (E/S) : formats</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">9. Affectation et appel de fonction – aspects avancés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4-complexite2025.html">5. Complexités</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10-trier.html">6. Trier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5-types_composes.html">7. Les types composés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3-ES-fichiers.html">8. Entrées-sorties simples avec des fichiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9-ES-formats.html">9. Les entrées-sorties (E/S) : formats</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">10. Affectation et appel de fonction – aspects avancés</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Compléments</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="01-synthese-s1.html">10. Synthèse des acquis du semestre 1 en Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="a0-boucles-avancees.html">11. Tableaux et boucles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="a1-booleens.html">12. Les booléens en python (&gt;3.6)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="a2-ndarray.html">13. Les ‘ndarray’ : de vrais tableaux en python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="11-modules-utiles.html">14. Modules utiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01-synthese-s1.html">11. Synthèse des acquis du semestre 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a0-boucles-avancees.html">12. Tableaux et boucles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11-modules-utiles.html">13. Modules utiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a1-booleens.html">14. Les booléens en python (&gt;3.6)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a2-ndarray.html">15. Les ‘ndarray’ : de vrais tableaux en python</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">TD</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../td/prealable-td.html">15. Préalables</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../td/td1.html">16. Feuille 1 : fonctions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../td/td2.html">17. Feuille 2 : récursivité</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../td/prealable-td.html">16. Préalables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../td/td1.html">17. Feuille 1 : fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../td/td2.html">18. Feuille 2 : récursivité</a></li>
 </ul>
 
     </div>
@@ -409,31 +410,31 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#le-passage-des-parametres-un-probleme-generique">9.1. Le passage des paramètres : un problème générique</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comment-est-transmis-un-parametre-effectif">9.1.1. Comment est transmis un paramètre effectif ?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deux-modes-materiels-de-passage-des-parametres">9.1.2. Deux modes <em>matériels</em> de passage des paramètres</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#trois-modes-logiques-de-passage-des-parametres">9.1.3. Trois modes <em>logiques</em> de passage des paramètres</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#le-passage-des-parametres-un-probleme-generique">10.1. Le passage des paramètres : un problème générique</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comment-est-transmis-un-parametre-effectif">10.1.1. Comment est transmis un paramètre effectif ?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deux-modes-materiels-de-passage-des-parametres">10.1.2. Deux modes <em>matériels</em> de passage des paramètres</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#trois-modes-logiques-de-passage-des-parametres">10.1.3. Trois modes <em>logiques</em> de passage des paramètres</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#et-pour-python">9.2. Et pour python ?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#star-variable-et-affection-aspects-avances">9.3. (<span class="math notranslate nohighlight">\(\star\)</span>) Variable et affection : aspects avancés</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notions-importantes">9.3.1. Notions importantes</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#et-pour-python">10.2. Et pour python ?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#star-variable-et-affection-aspects-avances">10.3. (<span class="math notranslate nohighlight">\(\star\)</span>) Variable et affection : aspects avancés</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notions-importantes">10.3.1. Notions importantes</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-valeur-espace-de-stockage-adresse-en-memoire-reference">Variable, valeur, espace de stockage, adresse en mémoire, référence</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#affectation-et-evaluation">Affectation et évaluation</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#declaration-vs-affectation">Déclaration <em>vs.</em> affectation</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-et-affectation-en-python">9.3.2. Variables et affectation en python</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-et-affectation-en-python">10.3.2. Variables et affectation en python</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-en-python-mutable-ou-non-mutable">Variables en python : mutable ou non mutable ?</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dupliquer-des-valeurs-par-reference-mutable-vs-non-mutable">Dupliquer des valeurs par référence :  mutable <em>vs.</em> non mutable</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#approfondissons-par-introspection">9.3.3. Approfondissons par <em>introspection</em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#approfondissons-par-introspection">10.3.3. Approfondissons par <em>introspection</em></a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#les-fonctions-type-et-id">Les fonctions  <code class="docutils literal notranslate"><span class="pre">type(</span> <span class="pre">)</span></code> et <code class="docutils literal notranslate"><span class="pre">id(</span> <span class="pre">)</span></code></a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#introspection-de-l-affectation">Introspection de l’affectation</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#affectation-en-python-complements">9.3.4. Affectation en python : compléments</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#affectation-en-python-complements">10.3.4. Affectation en python : compléments</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#modification-partielle-vs-modification-complete-d-un-mutable">Modification partielle <em>vs.</em> modification complète d’un mutable</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#comment-dupliquer-re-copier-un-objet-mutable-et-obtenir-2-objets-differents-en-memoire">Comment dupliquer (re-copier) un objet mutable et obtenir 2 objets différents en mémoire ?</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#des-subtilites-pour-x-1-vs-x-x-1">Des subtilités pour <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">+=</span> <span class="pre">1</span></code> <em>vs.</em> <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">+</span> <span class="pre">1</span></code></a></li>
@@ -441,25 +442,25 @@ document.write(`
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#star-fonctions-aspects-avances">9.4. (<span class="math notranslate nohighlight">\(\star\)</span>) Fonctions : aspects avancés</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#le-parametre-est-de-type-non-mutable">9.4.1. Le paramètre est de type non-mutable</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#le-parametre-de-type-mutable">9.4.2. Le paramètre de type mutable</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optionnel-avoir-les-id-claires">9.4.3. (Optionnel) Avoir les <code class="docutils literal notranslate"><span class="pre">id</span> </code> claires !</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#star-fonctions-aspects-avances">10.4. (<span class="math notranslate nohighlight">\(\star\)</span>) Fonctions : aspects avancés</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#le-parametre-est-de-type-non-mutable">10.4.1. Le paramètre est de type non-mutable</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#le-parametre-de-type-mutable">10.4.2. Le paramètre de type mutable</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optionnel-avoir-les-id-claires">10.4.3. (Optionnel) Avoir les <code class="docutils literal notranslate"><span class="pre">id</span> </code> claires !</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#utilisons-les-id-avec-les-mutables">Utilisons les <code class="docutils literal notranslate"><span class="pre">id()</span></code> avec les mutables</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#utilisons-les-id-avec-les-non-mutables">Utilisons les <code class="docutils literal notranslate"><span class="pre">id()</span></code> avec les non mutables</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-fonctions-en-python-derniers-complements-faciles">9.5. Les fonctions en python : derniers compléments faciles</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arguments-nommes">9.5.1. Arguments nommés</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#argument-avec-valeur-par-defaut">9.5.2. Argument avec valeur par défaut</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ce-qu-il-reste-a-voir-sur-les-fonctions-en-python">9.5.3. Ce qu’il reste à voir sur les fonctions en python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-fonctions-en-python-derniers-complements-faciles">10.5. Les fonctions en python : derniers compléments faciles</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arguments-nommes">10.5.1. Arguments nommés</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#argument-avec-valeur-par-defaut">10.5.2. Argument avec valeur par défaut</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ce-qu-il-reste-a-voir-sur-les-fonctions-en-python">10.5.3. Ce qu’il reste à voir sur les fonctions en python</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#synthese">9.6. Synthèse</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#avoir-les-idees-claires">9.6.1. Avoir les idées claires</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#savoir-faire-en-python">9.6.2. Savoir-faire en python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#synthese">10.6. Synthèse</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#avoir-les-idees-claires">10.6.1. Avoir les idées claires</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#savoir-faire-en-python">10.6.2. Savoir-faire en python</a></li>
 </ul>
 </li>
 </ul>
@@ -474,13 +475,13 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="affectation-et-appel-de-fonction-aspects-avances">
-<span id="ch-affectation"></span><h1><span class="section-number">9. </span>Affectation et appel de fonction – aspects avancés<a class="headerlink" href="#affectation-et-appel-de-fonction-aspects-avances" title="Permalink to this heading">#</a></h1>
+<span id="ch-affectation"></span><h1><span class="section-number">10. </span>Affectation et appel de fonction – aspects avancés<a class="headerlink" href="#affectation-et-appel-de-fonction-aspects-avances" title="Permalink to this heading">#</a></h1>
 <p>Mis à jour : Jan 27, 2025, lecture : 16
 minutes minimum, PhL.</p>
 <p>Nous abordons maintenant les aspects des fonctions qui dépendent des langages de programmation. Nous insistons surtout sur les choix de python3.</p>
 <p><strong>Rappel.</strong>  Le terme <em>paramètre effectif</em>, et son compagnon <em>paramètre formel</em>, sont des termes “langage-indépendant”. En python, le terme <em>argument</em> est utilisé à la place du terme <em>paramètre effectif</em>. Ainsi argument et paramètre effectif sont des synonymes, et seront utilisés comme tel dans ce qui suit.</p>
 <section id="le-passage-des-parametres-un-probleme-generique">
-<h2><span class="section-number">9.1. </span>Le passage des paramètres : un problème générique<a class="headerlink" href="#le-passage-des-parametres-un-probleme-generique" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">10.1. </span>Le passage des paramètres : un problème générique<a class="headerlink" href="#le-passage-des-parametres-un-probleme-generique" title="Permalink to this heading">#</a></h2>
 <p>Le corps de la fonction ne connaît que les paramètres formels.<br />
 L’appel de la fonction définit les paramètres effectifs .</p>
 <ul class="simple">
@@ -494,7 +495,7 @@ L’appel de la fonction définit les paramètres effectifs .</p>
 </ul>
 <p>Se sont les questions du passage de paramètres appelant-&gt;appelé</p>
 <section id="comment-est-transmis-un-parametre-effectif">
-<h3><span class="section-number">9.1.1. </span>Comment est transmis un paramètre effectif ?<a class="headerlink" href="#comment-est-transmis-un-parametre-effectif" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">10.1.1. </span>Comment est transmis un paramètre effectif ?<a class="headerlink" href="#comment-est-transmis-un-parametre-effectif" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Si c’est une constante :  <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">f(3)</span></code><br />
 OK : la valeur constante est connue et utilisée dans l’appel</p></li>
@@ -508,7 +509,7 @@ OK : la valeur constante est connue et utilisée dans l’appel</p></li>
 </ul>
 </section>
 <section id="deux-modes-materiels-de-passage-des-parametres">
-<h3><span class="section-number">9.1.2. </span>Deux modes <em>matériels</em> de passage des paramètres<a class="headerlink" href="#deux-modes-materiels-de-passage-des-parametres" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">10.1.2. </span>Deux modes <em>matériels</em> de passage des paramètres<a class="headerlink" href="#deux-modes-materiels-de-passage-des-parametres" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p><strong>passage par valeur</strong> ou <strong>copie</strong> :  seules les <em>valeurs</em> des paramètres effectifs sont connus par la fonction.<br />
 Ainsi, <strong>les paramètres effectifs</strong>, qui sont des variables dans le programme appelant, <strong>ne sont pas modifiés</strong>. Bien sûr, ce n’est pas le cas du/des paramètre/s de sortie).</p></li>
@@ -527,7 +528,7 @@ Pros/cons : la copie de la valeur d'une "grosse" variable coûte plus cher que l
 <p>C-a-d. que les 2 modes peuvent coexister dans un même langage.</p>
 </section>
 <section id="trois-modes-logiques-de-passage-des-parametres">
-<h3><span class="section-number">9.1.3. </span>Trois modes <em>logiques</em> de passage des paramètres<a class="headerlink" href="#trois-modes-logiques-de-passage-des-parametres" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">10.1.3. </span>Trois modes <em>logiques</em> de passage des paramètres<a class="headerlink" href="#trois-modes-logiques-de-passage-des-parametres" title="Permalink to this heading">#</a></h3>
 <p>Certains langages (Ada par exemple) se sont dégagés des aspects matériels pour définir des modes <em>logiques</em>.<br />
 Bien sûr, l’implantation de ces modes logiques repose sur l’une ou l’autre des 2 modes physiques.</p>
 <ol class="arabic simple">
@@ -542,7 +543,7 @@ le mode <code class="docutils literal notranslate"><span class="pre">in-out</spa
 </section>
 </section>
 <section id="et-pour-python">
-<h2><span class="section-number">9.2. </span>Et pour python ?<a class="headerlink" href="#et-pour-python" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">10.2. </span>Et pour python ?<a class="headerlink" href="#et-pour-python" title="Permalink to this heading">#</a></h2>
 <p>Le <a class="reference external" href="https://docs.python.org/fr/3/tutorial/controlflow.html#id2">tutoriel python.org</a> dit :</p>
 <blockquote>
 <div><p>Les paramètres effectifs (arguments) d’une fonction sont introduits dans la table de symboles locale de la fonction appelée lorsqu’elle est appelée ; par conséquent, <strong>les passages de paramètres</strong> se font par valeur, la valeur étant toujours une <strong>référence à un objet</strong>, et non la valeur de l’objet lui-même.</p>
@@ -580,14 +581,14 @@ C’est l’objet de la <a class="reference internal" href="#revisiter_les_varia
 <strong>Il appartient au programmeur d’être attentif au caractère mutable ou non mutable des paramètres des appels de fonctions</strong> – surtout dans le contexte de typage dynamique de python : rappelons que les annotations de type des paramètres ne sont que des indications pour le lecteur ou des outils spécialisés mais sont ignorées de l’interpréteur python.</p>
 </section>
 <section id="star-variable-et-affection-aspects-avances">
-<h2><span class="section-number">9.3. </span>(<span class="math notranslate nohighlight">\(\star\)</span>) Variable et affection : aspects avancés<a class="headerlink" href="#star-variable-et-affection-aspects-avances" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">10.3. </span>(<span class="math notranslate nohighlight">\(\star\)</span>) Variable et affection : aspects avancés<a class="headerlink" href="#star-variable-et-affection-aspects-avances" title="Permalink to this heading">#</a></h2>
 <div class="alert alert-block alert-success">
     Cette section relève de <b>l'objectif 20</b>
 </div>
 <p>Commençons par revenir sur les notions de <strong>variable</strong> et d’<strong>affectation</strong>.
 Puis comment ces notions existent en python.</p>
 <section id="notions-importantes">
-<h3><span class="section-number">9.3.1. </span>Notions importantes<a class="headerlink" href="#notions-importantes" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">10.3.1. </span>Notions importantes<a class="headerlink" href="#notions-importantes" title="Permalink to this heading">#</a></h3>
 <section id="variable-valeur-espace-de-stockage-adresse-en-memoire-reference">
 <h4>Variable, valeur, espace de stockage, adresse en mémoire, référence<a class="headerlink" href="#variable-valeur-espace-de-stockage-adresse-en-memoire-reference" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
@@ -668,7 +669,7 @@ Cette première affectation définit le type de cette variable et sa valeur (et 
 </section>
 </section>
 <section id="variables-et-affectation-en-python">
-<h3><span class="section-number">9.3.2. </span>Variables et affectation en python<a class="headerlink" href="#variables-et-affectation-en-python" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">10.3.2. </span>Variables et affectation en python<a class="headerlink" href="#variables-et-affectation-en-python" title="Permalink to this heading">#</a></h3>
 <section id="variables-en-python-mutable-ou-non-mutable">
 <h4>Variables en python : mutable ou non mutable ?<a class="headerlink" href="#variables-en-python-mutable-ou-non-mutable" title="Permalink to this heading">#</a></h4>
 <p>On a écrit qu’une variable python est une référence.
@@ -857,7 +858,7 @@ Ce qui lui permet le cas échéant de récupérer les zones qui ne sont plus dé
 </section>
 </section>
 <section id="approfondissons-par-introspection">
-<h3><span class="section-number">9.3.3. </span>Approfondissons par <em>introspection</em><a class="headerlink" href="#approfondissons-par-introspection" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">10.3.3. </span>Approfondissons par <em>introspection</em><a class="headerlink" href="#approfondissons-par-introspection" title="Permalink to this heading">#</a></h3>
 <p>Nous verrons plus tard que les “entités python” sont des <em>objets</em>.<br />
 python fait partie des langages de programmation appelés <strong>langage objet</strong> ou <strong>langage orienté objet</strong>.<br />
 Un <em>objet</em> est un ensemble d’<em>attributs</em> (des valeurs nommées) et de <em>méthodes</em> (des fonctions qui s’appliquent à <em>tout</em> ou <em>partie</em> de cet objet), cet ensemble étant accessible par un <em>identifiant</em> (le nom de l’objet).<br />
@@ -1144,7 +1145,7 @@ pas de surprise
 </section>
 </section>
 <section id="affectation-en-python-complements">
-<h3><span class="section-number">9.3.4. </span>Affectation en python : compléments<a class="headerlink" href="#affectation-en-python-complements" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">10.3.4. </span>Affectation en python : compléments<a class="headerlink" href="#affectation-en-python-complements" title="Permalink to this heading">#</a></h3>
 <section id="modification-partielle-vs-modification-complete-d-un-mutable">
 <h4>Modification partielle <em>vs.</em> modification complète d’un mutable<a class="headerlink" href="#modification-partielle-vs-modification-complete-d-un-mutable" title="Permalink to this heading">#</a></h4>
 <div class="alert alert-block alert-info">
@@ -1490,7 +1491,7 @@ id dans f -- t: 4398202496 , u:  4398202688
 </section>
 </section>
 <section id="star-fonctions-aspects-avances">
-<h2><span class="section-number">9.4. </span>(<span class="math notranslate nohighlight">\(\star\)</span>) Fonctions : aspects avancés<a class="headerlink" href="#star-fonctions-aspects-avances" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">10.4. </span>(<span class="math notranslate nohighlight">\(\star\)</span>) Fonctions : aspects avancés<a class="headerlink" href="#star-fonctions-aspects-avances" title="Permalink to this heading">#</a></h2>
 <div class="alert alert-block alert-success">
     Cette section relève de <b>l'objectif 20</b>
 </div><p>Nous allons étudier plus en détail le passage des paramètres de fonction en python.</p>
@@ -1512,7 +1513,7 @@ id dans f -- t: 4398202496 , u:  4398202688
 <a class="reference internal" href="#revisiter_les_variables_et_l_'_affectation"><span class="xref myst">plus haut</span></a>.
 Ce qui donne les 2 cas suivants.</p>
 <section id="le-parametre-est-de-type-non-mutable">
-<h3><span class="section-number">9.4.1. </span>Le paramètre est de type non-mutable<a class="headerlink" href="#le-parametre-est-de-type-non-mutable" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">10.4.1. </span>Le paramètre est de type non-mutable<a class="headerlink" href="#le-parametre-est-de-type-non-mutable" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>transmission de la <em>valeur</em> de l’argument effectif</p></li>
 <li><p>argument formel <em>similaire à</em> une variable locale de la fonction</p></li>
@@ -1585,7 +1586,7 @@ False
 <p><strong>Exercice</strong>. Expliquer pourquoi c’est normal !</p>
 </section>
 <section id="le-parametre-de-type-mutable">
-<h3><span class="section-number">9.4.2. </span>Le paramètre de type mutable<a class="headerlink" href="#le-parametre-de-type-mutable" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">10.4.2. </span>Le paramètre de type mutable<a class="headerlink" href="#le-parametre-de-type-mutable" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>transmission de <em>l’adresse</em> de l’argument effectif</p></li>
 <li><p>l’argument effectif est <em>ainsi</em> la variable extérieure à la fonction</p>
@@ -1792,7 +1793,7 @@ après fonction : a,b = 1 11
 </div>
 </section>
 <section id="optionnel-avoir-les-id-claires">
-<h3><span class="section-number">9.4.3. </span>(Optionnel) Avoir les <code class="docutils literal notranslate"><span class="pre">id</span> </code> claires !<a class="headerlink" href="#optionnel-avoir-les-id-claires" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">10.4.3. </span>(Optionnel) Avoir les <code class="docutils literal notranslate"><span class="pre">id</span> </code> claires !<a class="headerlink" href="#optionnel-avoir-les-id-claires" title="Permalink to this heading">#</a></h3>
 <p>Reprenons les observations précédentes effectuées grâce à pythontutor avec un focus particulier sur cette fonction <code class="docutils literal notranslate"><span class="pre">id()</span></code>.
 Cette fonction peut être très utile pour <em>debugger</em> un développement qui ne fonctionne pas correctement.</p>
 <section id="utilisons-les-id-avec-les-mutables">
@@ -2016,10 +2017,10 @@ u après u=f(u)= 2 @u= 4345769112
 </section>
 </section>
 <section id="les-fonctions-en-python-derniers-complements-faciles">
-<h2><span class="section-number">9.5. </span>Les fonctions en python : derniers compléments faciles<a class="headerlink" href="#les-fonctions-en-python-derniers-complements-faciles" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">10.5. </span>Les fonctions en python : derniers compléments faciles<a class="headerlink" href="#les-fonctions-en-python-derniers-complements-faciles" title="Permalink to this heading">#</a></h2>
 <p>Deux compléments faciles (arguments nommés et argument avec valeur par défaut) ainsi qu’une courte liste de ce qu’il reste à découvrir … pour les plus curieux.</p>
 <section id="arguments-nommes">
-<h3><span class="section-number">9.5.1. </span>Arguments nommés<a class="headerlink" href="#arguments-nommes" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">10.5.1. </span>Arguments nommés<a class="headerlink" href="#arguments-nommes" title="Permalink to this heading">#</a></h3>
 <p>Lors de l’<em>appel</em>, nommer les paramètres <em>formels</em> et la valeur correspondante de l’argument (effectif), permet un ordre quelconque de ceux-ci.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2050,7 +2051,7 @@ Bonjour étudiantes et étudiants !
 </div>
 </section>
 <section id="argument-avec-valeur-par-defaut">
-<h3><span class="section-number">9.5.2. </span>Argument avec valeur par défaut<a class="headerlink" href="#argument-avec-valeur-par-defaut" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">10.5.2. </span>Argument avec valeur par défaut<a class="headerlink" href="#argument-avec-valeur-par-defaut" title="Permalink to this heading">#</a></h3>
 <p>Les <em>derniers</em> paramètres formels peuvent bénéficier de valeurs par défaut</p>
 <ul class="simple">
 <li><p>derniers : tous à partir d’un rang arbitraire</p></li>
@@ -2102,7 +2103,7 @@ Au revoir les uns, et les autres.
 </div>
 </section>
 <section id="ce-qu-il-reste-a-voir-sur-les-fonctions-en-python">
-<h3><span class="section-number">9.5.3. </span>Ce qu’il reste à voir sur les fonctions en python<a class="headerlink" href="#ce-qu-il-reste-a-voir-sur-les-fonctions-en-python" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">10.5.3. </span>Ce qu’il reste à voir sur les fonctions en python<a class="headerlink" href="#ce-qu-il-reste-a-voir-sur-les-fonctions-en-python" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Argument de type fonction</p></li>
 <li><p>Nombre variable d’arguments (tuple et dictionnaire)</p></li>
@@ -2111,9 +2112,9 @@ Au revoir les uns, et les autres.
 </section>
 </section>
 <section id="synthese">
-<h2><span class="section-number">9.6. </span>Synthèse<a class="headerlink" href="#synthese" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">10.6. </span>Synthèse<a class="headerlink" href="#synthese" title="Permalink to this heading">#</a></h2>
 <section id="avoir-les-idees-claires">
-<h3><span class="section-number">9.6.1. </span>Avoir les idées claires<a class="headerlink" href="#avoir-les-idees-claires" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">10.6.1. </span>Avoir les idées claires<a class="headerlink" href="#avoir-les-idees-claires" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Les principes du passage de paramètres appelant &lt;-&gt; appelé</p>
 <ul>
@@ -2137,7 +2138,7 @@ Au revoir les uns, et les autres.
 </ul>
 </section>
 <section id="savoir-faire-en-python">
-<h3><span class="section-number">9.6.2. </span>Savoir-faire en python<a class="headerlink" href="#savoir-faire-en-python" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">10.6.2. </span>Savoir-faire en python<a class="headerlink" href="#savoir-faire-en-python" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Fonctions avec arguments nommés, avec paramètres par défaut.</p></li>
 </ul>
@@ -2199,7 +2200,7 @@ modification partielles <em>vs.</em> duplication (par <code class="docutils lite
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">8. </span>Les entrées-sorties (E/S) : formats</p>
+        <p class="prev-next-title"><span class="section-number">9. </span>Les entrées-sorties (E/S) : formats</p>
       </div>
     </a>
     <a class="right-next"
@@ -2207,7 +2208,7 @@ modification partielles <em>vs.</em> duplication (par <code class="docutils lite
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">10. </span>Synthèse des acquis du semestre 1 en Python</p>
+        <p class="prev-next-title"><span class="section-number">11. </span>Synthèse des acquis du semestre 1</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -2227,31 +2228,31 @@ modification partielles <em>vs.</em> duplication (par <code class="docutils lite
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#le-passage-des-parametres-un-probleme-generique">9.1. Le passage des paramètres : un problème générique</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comment-est-transmis-un-parametre-effectif">9.1.1. Comment est transmis un paramètre effectif ?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deux-modes-materiels-de-passage-des-parametres">9.1.2. Deux modes <em>matériels</em> de passage des paramètres</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#trois-modes-logiques-de-passage-des-parametres">9.1.3. Trois modes <em>logiques</em> de passage des paramètres</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#le-passage-des-parametres-un-probleme-generique">10.1. Le passage des paramètres : un problème générique</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comment-est-transmis-un-parametre-effectif">10.1.1. Comment est transmis un paramètre effectif ?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deux-modes-materiels-de-passage-des-parametres">10.1.2. Deux modes <em>matériels</em> de passage des paramètres</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#trois-modes-logiques-de-passage-des-parametres">10.1.3. Trois modes <em>logiques</em> de passage des paramètres</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#et-pour-python">9.2. Et pour python ?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#star-variable-et-affection-aspects-avances">9.3. (<span class="math notranslate nohighlight">\(\star\)</span>) Variable et affection : aspects avancés</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notions-importantes">9.3.1. Notions importantes</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#et-pour-python">10.2. Et pour python ?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#star-variable-et-affection-aspects-avances">10.3. (<span class="math notranslate nohighlight">\(\star\)</span>) Variable et affection : aspects avancés</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notions-importantes">10.3.1. Notions importantes</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-valeur-espace-de-stockage-adresse-en-memoire-reference">Variable, valeur, espace de stockage, adresse en mémoire, référence</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#affectation-et-evaluation">Affectation et évaluation</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#declaration-vs-affectation">Déclaration <em>vs.</em> affectation</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-et-affectation-en-python">9.3.2. Variables et affectation en python</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-et-affectation-en-python">10.3.2. Variables et affectation en python</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-en-python-mutable-ou-non-mutable">Variables en python : mutable ou non mutable ?</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dupliquer-des-valeurs-par-reference-mutable-vs-non-mutable">Dupliquer des valeurs par référence :  mutable <em>vs.</em> non mutable</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#approfondissons-par-introspection">9.3.3. Approfondissons par <em>introspection</em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#approfondissons-par-introspection">10.3.3. Approfondissons par <em>introspection</em></a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#les-fonctions-type-et-id">Les fonctions  <code class="docutils literal notranslate"><span class="pre">type(</span> <span class="pre">)</span></code> et <code class="docutils literal notranslate"><span class="pre">id(</span> <span class="pre">)</span></code></a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#introspection-de-l-affectation">Introspection de l’affectation</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#affectation-en-python-complements">9.3.4. Affectation en python : compléments</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#affectation-en-python-complements">10.3.4. Affectation en python : compléments</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#modification-partielle-vs-modification-complete-d-un-mutable">Modification partielle <em>vs.</em> modification complète d’un mutable</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#comment-dupliquer-re-copier-un-objet-mutable-et-obtenir-2-objets-differents-en-memoire">Comment dupliquer (re-copier) un objet mutable et obtenir 2 objets différents en mémoire ?</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#des-subtilites-pour-x-1-vs-x-x-1">Des subtilités pour <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">+=</span> <span class="pre">1</span></code> <em>vs.</em> <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">+</span> <span class="pre">1</span></code></a></li>
@@ -2259,25 +2260,25 @@ modification partielles <em>vs.</em> duplication (par <code class="docutils lite
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#star-fonctions-aspects-avances">9.4. (<span class="math notranslate nohighlight">\(\star\)</span>) Fonctions : aspects avancés</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#le-parametre-est-de-type-non-mutable">9.4.1. Le paramètre est de type non-mutable</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#le-parametre-de-type-mutable">9.4.2. Le paramètre de type mutable</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optionnel-avoir-les-id-claires">9.4.3. (Optionnel) Avoir les <code class="docutils literal notranslate"><span class="pre">id</span> </code> claires !</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#star-fonctions-aspects-avances">10.4. (<span class="math notranslate nohighlight">\(\star\)</span>) Fonctions : aspects avancés</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#le-parametre-est-de-type-non-mutable">10.4.1. Le paramètre est de type non-mutable</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#le-parametre-de-type-mutable">10.4.2. Le paramètre de type mutable</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optionnel-avoir-les-id-claires">10.4.3. (Optionnel) Avoir les <code class="docutils literal notranslate"><span class="pre">id</span> </code> claires !</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#utilisons-les-id-avec-les-mutables">Utilisons les <code class="docutils literal notranslate"><span class="pre">id()</span></code> avec les mutables</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#utilisons-les-id-avec-les-non-mutables">Utilisons les <code class="docutils literal notranslate"><span class="pre">id()</span></code> avec les non mutables</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-fonctions-en-python-derniers-complements-faciles">9.5. Les fonctions en python : derniers compléments faciles</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arguments-nommes">9.5.1. Arguments nommés</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#argument-avec-valeur-par-defaut">9.5.2. Argument avec valeur par défaut</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ce-qu-il-reste-a-voir-sur-les-fonctions-en-python">9.5.3. Ce qu’il reste à voir sur les fonctions en python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-fonctions-en-python-derniers-complements-faciles">10.5. Les fonctions en python : derniers compléments faciles</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arguments-nommes">10.5.1. Arguments nommés</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#argument-avec-valeur-par-defaut">10.5.2. Argument avec valeur par défaut</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ce-qu-il-reste-a-voir-sur-les-fonctions-en-python">10.5.3. Ce qu’il reste à voir sur les fonctions en python</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#synthese">9.6. Synthèse</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#avoir-les-idees-claires">9.6.1. Avoir les idées claires</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#savoir-faire-en-python">9.6.2. Savoir-faire en python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#synthese">10.6. Synthèse</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#avoir-les-idees-claires">10.6.1. Avoir les idées claires</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#savoir-faire-en-python">10.6.2. Savoir-faire en python</a></li>
 </ul>
 </li>
 </ul>

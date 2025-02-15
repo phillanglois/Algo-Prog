@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>6. Les types composés &#8212; Algo-Prog L1-S2</title>
+    <title>7. Les types composés &#8212; Algo-Prog L1-S2</title>
   
   
   
@@ -63,8 +63,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'cm/5-types_composes';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="7. Entrées-sorties simples avec des fichiers" href="3-ES-fichiers.html" />
-    <link rel="prev" title="5. Trier" href="10-trier.html" />
+    <link rel="next" title="8. Entrées-sorties simples avec des fichiers" href="3-ES-fichiers.html" />
+    <link rel="prev" title="6. Trier" href="10-trier.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -196,25 +196,26 @@
 <li class="toctree-l1"><a class="reference internal" href="1b-fonctions-exemple.html">2. Un exemple, plein de fonctions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="6-recursivite.html">3. Récursivité</a></li>
 <li class="toctree-l1"><a class="reference internal" href="8-rechercher.html">4. Rechercher</a></li>
-<li class="toctree-l1"><a class="reference internal" href="10-trier.html">5. Trier</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">6. Les types composés</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3-ES-fichiers.html">7. Entrées-sorties simples avec des fichiers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="9-ES-formats.html">8. Les entrées-sorties (E/S) : formats</a></li>
-<li class="toctree-l1"><a class="reference internal" href="7-fonctions-avancees.html">9. Affectation et appel de fonction – aspects avancés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4-complexite2025.html">5. Complexités</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10-trier.html">6. Trier</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">7. Les types composés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3-ES-fichiers.html">8. Entrées-sorties simples avec des fichiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9-ES-formats.html">9. Les entrées-sorties (E/S) : formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7-fonctions-avancees.html">10. Affectation et appel de fonction – aspects avancés</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Compléments</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="01-synthese-s1.html">10. Synthèse des acquis du semestre 1 en Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="a0-boucles-avancees.html">11. Tableaux et boucles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="a1-booleens.html">12. Les booléens en python (&gt;3.6)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="a2-ndarray.html">13. Les ‘ndarray’ : de vrais tableaux en python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="11-modules-utiles.html">14. Modules utiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01-synthese-s1.html">11. Synthèse des acquis du semestre 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a0-boucles-avancees.html">12. Tableaux et boucles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11-modules-utiles.html">13. Modules utiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a1-booleens.html">14. Les booléens en python (&gt;3.6)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a2-ndarray.html">15. Les ‘ndarray’ : de vrais tableaux en python</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">TD</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../td/prealable-td.html">15. Préalables</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../td/td1.html">16. Feuille 1 : fonctions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../td/td2.html">17. Feuille 2 : récursivité</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../td/prealable-td.html">16. Préalables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../td/td1.html">17. Feuille 1 : fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../td/td2.html">18. Feuille 2 : récursivité</a></li>
 </ul>
 
     </div>
@@ -409,44 +410,44 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-types-composes-ou-conteneurs-en-python">6.1. Les types composés ou <em>conteneurs</em> en python</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-questions-abordees-dans-ce-chapitre">6.1.1. Les questions abordées dans ce chapitre</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#la-vision-classique">6.1.2. La vision classique</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-conteneurs-python">6.1.3. Les conteneurs python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-types-composes-ou-conteneurs-en-python">7.1. Les types composés ou <em>conteneurs</em> en python</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-questions-abordees-dans-ce-chapitre">7.1.1. Les questions abordées dans ce chapitre</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#la-vision-classique">7.1.2. La vision classique</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-conteneurs-python">7.1.3. Les conteneurs python</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ce-qui-est-commun-aux-conteneurs-python">6.2. Ce qui est commun aux conteneurs python</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operations-communes-aux-conteneurs-python">6.2.1. Opérations communes aux conteneurs python</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conteneurs-iterables-et-sequences">6.2.2. Conteneurs itérables et séquences</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ce-qui-est-commun-aux-conteneurs-python">7.2. Ce qui est commun aux conteneurs python</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operations-communes-aux-conteneurs-python">7.2.1. Opérations communes aux conteneurs python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conteneurs-iterables-et-sequences">7.2.2. Conteneurs itérables et séquences</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-tuple">6.3. Les <code class="docutils literal notranslate"><span class="pre">tuple</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-listes-list">6.4. Les listes <code class="docutils literal notranslate"><span class="pre">list</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creer-une-liste">6.4.1. Créer une liste</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#methodes-sur-des-listes">6.4.2. Méthodes sur des listes</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#affectation-entre-listes">6.4.3. Affectation entre listes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-tuple">7.3. Les <code class="docutils literal notranslate"><span class="pre">tuple</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-listes-list">7.4. Les listes <code class="docutils literal notranslate"><span class="pre">list</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creer-une-liste">7.4.1. Créer une liste</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#methodes-sur-des-listes">7.4.2. Méthodes sur des listes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#affectation-entre-listes">7.4.3. Affectation entre listes</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-dictionnaires-dict">6.5. Les dictionnaires  <code class="docutils literal notranslate"><span class="pre">dict</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tableau-associatif">6.5.1. Tableau associatif</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionnaire-dict-en-python">6.5.2. Dictionnaire <code class="docutils literal notranslate"><span class="pre">dict</span></code> en python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-dictionnaires-dict">7.5. Les dictionnaires  <code class="docutils literal notranslate"><span class="pre">dict</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tableau-associatif">7.5.1. Tableau associatif</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionnaire-dict-en-python">7.5.2. Dictionnaire <code class="docutils literal notranslate"><span class="pre">dict</span></code> en python</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-chaines-de-caracteres-str">6.6. Les chaînes de caractères <code class="docutils literal notranslate"><span class="pre">str</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operations">6.6.1. Opérations</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fonctions-methodes">6.6.2. Fonctions-méthodes</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-caracteres-speciaux-ou-caracteres-sequences-d-echappement">6.6.3. Les caractères spéciaux ou caractères/séquences d’échappement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-chaines-de-caracteres-str">7.6. Les chaînes de caractères <code class="docutils literal notranslate"><span class="pre">str</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operations">7.6.1. Opérations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fonctions-methodes">7.6.2. Fonctions-méthodes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-caracteres-speciaux-ou-caracteres-sequences-d-echappement">7.6.3. Les caractères spéciaux ou caractères/séquences d’échappement</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-ensembles-set-et-frozenset">6.7. Les ensembles   <code class="docutils literal notranslate"><span class="pre">set</span></code> et <code class="docutils literal notranslate"><span class="pre">frozenset</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specifier-des-fonctions-avec-des-types-composes">6.8. Spécifier des fonctions avec des types composés</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parametres-de-type-compose-predefini">6.8.1. Paramètres de type composé prédéfini</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-mieux-expliciter-le-type-compose">6.8.2. (<span class="math notranslate nohighlight">\(\star\)</span>) Mieux expliciter le type composé</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-ensembles-set-et-frozenset">7.7. Les ensembles   <code class="docutils literal notranslate"><span class="pre">set</span></code> et <code class="docutils literal notranslate"><span class="pre">frozenset</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specifier-des-fonctions-avec-des-types-composes">7.8. Spécifier des fonctions avec des types composés</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parametres-de-type-compose-predefini">7.8.1. Paramètres de type composé prédéfini</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-mieux-expliciter-le-type-compose">7.8.2. (<span class="math notranslate nohighlight">\(\star\)</span>) Mieux expliciter le type composé</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#synthese">6.9. Synthèse</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#avoir-les-idees-claires">6.9.1. Avoir les idées claires</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#savoir-faire">6.9.2. Savoir faire</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#synthese">7.9. Synthèse</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#avoir-les-idees-claires">7.9.1. Avoir les idées claires</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#savoir-faire">7.9.2. Savoir faire</a></li>
 </ul>
 </li>
 </ul>
@@ -461,7 +462,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="les-types-composes">
-<span id="ch-typescomposes"></span><h1><span class="section-number">6. </span>Les types composés<a class="headerlink" href="#les-types-composes" title="Permalink to this heading">#</a></h1>
+<span id="ch-typescomposes"></span><h1><span class="section-number">7. </span>Les types composés<a class="headerlink" href="#les-types-composes" title="Permalink to this heading">#</a></h1>
 <p>Mis à jour : Jan 27, 2025, lecture : 15
 minutes minimum, PhL.</p>
 <p>Les types composés ou <em>conteneurs</em> de python sont  introduits  dans ce chapitre :</p>
@@ -473,7 +474,7 @@ minutes minimum, PhL.</p>
 <p>J’utilise les termes <em>mutable</em> et <em>non mutable</em>.<br />
 La version française de la documentation de python préfère les termes <em>muable</em> et <em>immuable</em>.</p>
 <section id="les-types-composes-ou-conteneurs-en-python">
-<h2><span class="section-number">6.1. </span>Les types composés ou <em>conteneurs</em> en python<a class="headerlink" href="#les-types-composes-ou-conteneurs-en-python" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">7.1. </span>Les types composés ou <em>conteneurs</em> en python<a class="headerlink" href="#les-types-composes-ou-conteneurs-en-python" title="Permalink to this heading">#</a></h2>
 <p>Les types scalaires suivants permettent de manipuler des <em>valeurs scalaires</em>  :</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p></li>
@@ -488,7 +489,7 @@ Ces types composés sont appelés des <em>conteneurs</em> en python.
 Ce sont aussi des premiers exemples de <em>structures de données</em> en algorithmique.</p>
 <p><strong>Exercice.</strong> Vous en connaissez déjà au moins un. Lequel ?</p>
 <section id="les-questions-abordees-dans-ce-chapitre">
-<h3><span class="section-number">6.1.1. </span>Les questions abordées dans ce chapitre<a class="headerlink" href="#les-questions-abordees-dans-ce-chapitre" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">7.1.1. </span>Les questions abordées dans ce chapitre<a class="headerlink" href="#les-questions-abordees-dans-ce-chapitre" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Comment créer un conteneur ?</p></li>
 <li><p>Comment accéder à une valeur dans un conteneur ?</p></li>
@@ -511,7 +512,7 @@ Ce sont aussi des premiers exemples de <em>structures de données</em> en algori
 <p>(<span class="math notranslate nohighlight">\(\star\)</span>) On analysera aussi la complexité des ces différents traitements selon les principaux types composés.</p>
 </section>
 <section id="la-vision-classique">
-<h3><span class="section-number">6.1.2. </span>La vision classique<a class="headerlink" href="#la-vision-classique" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">7.1.2. </span>La vision classique<a class="headerlink" href="#la-vision-classique" title="Permalink to this heading">#</a></h3>
 <p>Dans la plupart des langages de programmation, les types composés <em>classiques</em> sont les suivants.</p>
 <p><strong>Les tableaux</strong>, déjà revus dans ce <a class="reference internal" href="a0-boucles-avancees.html#ann-boucles"><span class="std std-ref">chapitre</span></a>, sont définis comme des ensembles de valeurs <em>de même type</em> et de nombre <em>connu et fixé</em> “une fois pour toute” lors de leur définition (ce nombre est la <em>taille</em> ou la <em>dimension</em> du tableau) et dont les valeurs sont <em>ainsi stockées de façon contigüe en mémoire</em>.<br />
 - les valeurs sont accédées par un ou des <em>indice</em> indiqué entre un ou plusieurs <code class="docutils literal notranslate"><span class="pre">[]</span></code></p>
@@ -529,7 +530,7 @@ Le module <code class="docutils literal notranslate"><span class="pre">numpy</sp
 </ul>
 </section>
 <section id="les-conteneurs-python">
-<h3><span class="section-number">6.1.3. </span>Les conteneurs python<a class="headerlink" href="#les-conteneurs-python" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">7.1.3. </span>Les conteneurs python<a class="headerlink" href="#les-conteneurs-python" title="Permalink to this heading">#</a></h3>
 <p><strong>Vocabulaire python :</strong>  un <em>conteneur</em> est une variable (un objet) de type composé</p>
 <p>Les conteneurs python sont répartis en 2 familles.</p>
 <ol class="arabic simple">
@@ -555,9 +556,9 @@ Ils ne sont pas abordés ici et font l’objet de ce <a class="reference interna
 </section>
 </section>
 <section id="ce-qui-est-commun-aux-conteneurs-python">
-<h2><span class="section-number">6.2. </span>Ce qui est commun aux conteneurs python<a class="headerlink" href="#ce-qui-est-commun-aux-conteneurs-python" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">7.2. </span>Ce qui est commun aux conteneurs python<a class="headerlink" href="#ce-qui-est-commun-aux-conteneurs-python" title="Permalink to this heading">#</a></h2>
 <section id="operations-communes-aux-conteneurs-python">
-<h3><span class="section-number">6.2.1. </span>Opérations communes aux conteneurs python<a class="headerlink" href="#operations-communes-aux-conteneurs-python" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">7.2.1. </span>Opérations communes aux conteneurs python<a class="headerlink" href="#operations-communes-aux-conteneurs-python" title="Permalink to this heading">#</a></h3>
 <p><strong>itération sur les <em>valeurs</em></strong> d’un conteneur :</p>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">val</span> <span class="pre">in</span> <span class="pre">conteneur:</span></code></p>
@@ -756,7 +757,7 @@ On retrouve 40 avec 8 répétitions de 5 caractères (les <code class="docutils 
 </div>
 </section>
 <section id="conteneurs-iterables-et-sequences">
-<h3><span class="section-number">6.2.2. </span>Conteneurs itérables et séquences<a class="headerlink" href="#conteneurs-iterables-et-sequences" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">7.2.2. </span>Conteneurs itérables et séquences<a class="headerlink" href="#conteneurs-iterables-et-sequences" title="Permalink to this heading">#</a></h3>
 <p>Tous les conteneurs sont (des) <em>itérables</em>.</p>
 <ul class="simple">
 <li><p>la construction suivante a du sens et permet le parcours des <em>valeurs</em> du conteneur</p></li>
@@ -842,7 +843,7 @@ retourne le nombre d’occurrences de <code class="docutils literal notranslate"
 </section>
 </section>
 <section id="les-tuple">
-<h2><span class="section-number">6.3. </span>Les <code class="docutils literal notranslate"><span class="pre">tuple</span></code><a class="headerlink" href="#les-tuple" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">7.3. </span>Les <code class="docutils literal notranslate"><span class="pre">tuple</span></code><a class="headerlink" href="#les-tuple" title="Permalink to this heading">#</a></h2>
 <p><strong><code class="docutils literal notranslate"><span class="pre">tuple</span></code></strong> ( ou t-uplets ) : <em>conteneur</em> <em>non mutable</em> de valeurs <em>écrites entre <code class="docutils literal notranslate"><span class="pre">(</span>&#160; <span class="pre">)</span></code></em> ,  séparées par des <code class="docutils literal notranslate"><span class="pre">,</span></code>, et <em>indexées de 0 à <code class="docutils literal notranslate"><span class="pre">len(tuple)-1</span></code></em>.</p>
 <blockquote>
 <div><p>(3, “bonjour”, 7, 1.32)</p>
@@ -978,7 +979,7 @@ illustre bien ce point important.</p></li>
 </div>
 </section>
 <section id="les-listes-list">
-<h2><span class="section-number">6.4. </span>Les listes <code class="docutils literal notranslate"><span class="pre">list</span></code><a class="headerlink" href="#les-listes-list" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">7.4. </span>Les listes <code class="docutils literal notranslate"><span class="pre">list</span></code><a class="headerlink" href="#les-listes-list" title="Permalink to this heading">#</a></h2>
 <p><strong><code class="docutils literal notranslate"><span class="pre">list</span></code></strong> : <em>conteneur</em> <strong>mutable</strong> de valeurs <em>écrites entre <code class="docutils literal notranslate"><span class="pre">[</span>&#160; <span class="pre">]</span></code></em>,  séparées par des <code class="docutils literal notranslate"><span class="pre">,</span></code>, et <em>indexées de 0 à <code class="docutils literal notranslate"><span class="pre">len(lst)-1</span></code></em></p>
 <blockquote>
 <div><p>[3, “bonjour”, 7, 1.32]</p>
@@ -988,7 +989,7 @@ illustre bien ce point important.</p></li>
 </ul>
 <p>En pratique, les listes python sont des structures de données sophistiquées, très souples d’utilisation.</p>
 <section id="creer-une-liste">
-<h3><span class="section-number">6.4.1. </span>Créer une liste<a class="headerlink" href="#creer-une-liste" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">7.4.1. </span>Créer une liste<a class="headerlink" href="#creer-une-liste" title="Permalink to this heading">#</a></h3>
 <p>Une liste peut être construite comme suit :</p>
 <ul class="simple">
 <li><p>à partir d’une liste vide notée : <code class="docutils literal notranslate"><span class="pre">[]</span></code></p></li>
@@ -1044,7 +1045,7 @@ False True
 </div>
 </section>
 <section id="methodes-sur-des-listes">
-<h3><span class="section-number">6.4.2. </span>Méthodes sur des listes<a class="headerlink" href="#methodes-sur-des-listes" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">7.4.2. </span>Méthodes sur des listes<a class="headerlink" href="#methodes-sur-des-listes" title="Permalink to this heading">#</a></h3>
 <p><strong>Rappel :</strong> Une <em>méthode</em> est une fonction qui s’applique à <em>une</em> variable (un objet) avec une notation pointée – et non des parenthèses.</p>
 <p><strong>Compléments :</strong></p>
 <ul class="simple">
@@ -1202,7 +1203,7 @@ lst: [&#39;r&#39;, &#39;a&#39;, &#39;n&#39;, &#39;t&#39;, &#39;a&#39;, &#39;n&#3
 </div>
 </section>
 <section id="affectation-entre-listes">
-<h3><span class="section-number">6.4.3. </span>Affectation entre listes<a class="headerlink" href="#affectation-entre-listes" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">7.4.3. </span>Affectation entre listes<a class="headerlink" href="#affectation-entre-listes" title="Permalink to this heading">#</a></h3>
 <div class="alert alert-block alert-danger">
 <p><strong>ATTENTION</strong> : l’affectation <code class="docutils literal notranslate"><span class="pre">liste_destination</span> <span class="pre">=</span> <span class="pre">liste_source</span></code> <strong>ne crée pas une nouvelle</strong> <code class="docutils literal notranslate"><span class="pre">liste_destination</span></code>.</p>
 </div> 
@@ -1285,10 +1286,10 @@ False True
 </section>
 </section>
 <section id="les-dictionnaires-dict">
-<h2><span class="section-number">6.5. </span>Les dictionnaires  <code class="docutils literal notranslate"><span class="pre">dict</span></code><a class="headerlink" href="#les-dictionnaires-dict" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">7.5. </span>Les dictionnaires  <code class="docutils literal notranslate"><span class="pre">dict</span></code><a class="headerlink" href="#les-dictionnaires-dict" title="Permalink to this heading">#</a></h2>
 <p>Les dictionnaires python sont des <em>tableaux associatifs</em>.</p>
 <section id="tableau-associatif">
-<h3><span class="section-number">6.5.1. </span>Tableau associatif<a class="headerlink" href="#tableau-associatif" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">7.5.1. </span>Tableau associatif<a class="headerlink" href="#tableau-associatif" title="Permalink to this heading">#</a></h3>
 <p>Structure de données classique (hors python)</p>
 <ul class="simple">
 <li><p>type de donnée <em>composé</em></p></li>
@@ -1303,7 +1304,7 @@ False True
 </ul>
 </section>
 <section id="dictionnaire-dict-en-python">
-<h3><span class="section-number">6.5.2. </span>Dictionnaire <code class="docutils literal notranslate"><span class="pre">dict</span></code> en python<a class="headerlink" href="#dictionnaire-dict-en-python" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">7.5.2. </span>Dictionnaire <code class="docutils literal notranslate"><span class="pre">dict</span></code> en python<a class="headerlink" href="#dictionnaire-dict-en-python" title="Permalink to this heading">#</a></h3>
 <p><strong>Syntaxe.</strong></p>
 <ul class="simple">
 <li><p>des couples <code class="docutils literal notranslate"><span class="pre">clé</span> <span class="pre">:</span> <span class="pre">valeur</span></code> – bien noter la séparation avec <code class="docutils literal notranslate"><span class="pre">:</span></code></p></li>
@@ -1619,7 +1620,7 @@ Averell
 </section>
 </section>
 <section id="les-chaines-de-caracteres-str">
-<h2><span class="section-number">6.6. </span>Les chaînes de caractères <code class="docutils literal notranslate"><span class="pre">str</span></code><a class="headerlink" href="#les-chaines-de-caracteres-str" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">7.6. </span>Les chaînes de caractères <code class="docutils literal notranslate"><span class="pre">str</span></code><a class="headerlink" href="#les-chaines-de-caracteres-str" title="Permalink to this heading">#</a></h2>
 <p>Leur importance pratique mériterait presque un chapitre dédié.
 Bien relire cette section plusieurs fois.</p>
 <p><strong><code class="docutils literal notranslate"><span class="pre">str</span></code> (string) ou chaîne de caractères :</strong> type de donnée <em>non mutable</em> composé d’une suite ordonnée de caractères  (<em>séquence</em>)</p>
@@ -1627,7 +1628,7 @@ Bien relire cette section plusieurs fois.</p>
 <li><p>syntaxe : s’écrit indifféremment avec <code class="docutils literal notranslate"><span class="pre">'</span> <span class="pre">'</span></code> et <code class="docutils literal notranslate"><span class="pre">&quot;</span> <span class="pre">&quot;</span></code></p></li>
 </ul>
 <section id="operations">
-<h3><span class="section-number">6.6.1. </span>Opérations<a class="headerlink" href="#operations" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">7.6.1. </span>Opérations<a class="headerlink" href="#operations" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">len()</span></code>, concaténation, répétition</p></li>
 </ul>
@@ -1687,7 +1688,7 @@ abcdef 4397124464
 </div>
 </section>
 <section id="fonctions-methodes">
-<h3><span class="section-number">6.6.2. </span>Fonctions-méthodes<a class="headerlink" href="#fonctions-methodes" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">7.6.2. </span>Fonctions-méthodes<a class="headerlink" href="#fonctions-methodes" title="Permalink to this heading">#</a></h3>
 <p>Ces fonctions-méthodes spécifiques aux <code class="docutils literal notranslate"><span class="pre">str</span></code> sont utiles en pratique.<br />
 Savoir qu’elles existent est suffisant dans le cadre de ce cours.<br />
 Les identifiants sont en général bien explicites.</p>
@@ -1839,7 +1840,7 @@ BONJOUR ! True False
 </div>
 </section>
 <section id="les-caracteres-speciaux-ou-caracteres-sequences-d-echappement">
-<span id="sec-echappement"></span><h3><span class="section-number">6.6.3. </span>Les caractères spéciaux ou caractères/séquences d’échappement<a class="headerlink" href="#les-caracteres-speciaux-ou-caracteres-sequences-d-echappement" title="Permalink to this heading">#</a></h3>
+<span id="sec-echappement"></span><h3><span class="section-number">7.6.3. </span>Les caractères spéciaux ou caractères/séquences d’échappement<a class="headerlink" href="#les-caracteres-speciaux-ou-caracteres-sequences-d-echappement" title="Permalink to this heading">#</a></h3>
 <p><strong>Caractère d’échappement :</strong> “backslash” <code class="docutils literal notranslate"><span class="pre">\</span></code></p>
 <p><strong>Caractères spéciaux ou séquences d’échappement :</strong> l’association du “backslash” <code class="docutils literal notranslate"><span class="pre">\</span></code> et de certains symboles (ou  suite de symboles) a un sens particulier dans une chaîne de caractères.<br />
 Cela permet par exemple d’interpréter différemment les symboles <code class="docutils literal notranslate"><span class="pre">'</span></code> ou <code class="docutils literal notranslate"><span class="pre">&quot;</span></code> ou <code class="docutils literal notranslate"> </code>.</p>
@@ -2040,7 +2041,7 @@ Bonjour &quot;collègue&quot; !
 </section>
 </section>
 <section id="les-ensembles-set-et-frozenset">
-<h2><span class="section-number">6.7. </span>Les ensembles   <code class="docutils literal notranslate"><span class="pre">set</span></code> et <code class="docutils literal notranslate"><span class="pre">frozenset</span></code><a class="headerlink" href="#les-ensembles-set-et-frozenset" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">7.7. </span>Les ensembles   <code class="docutils literal notranslate"><span class="pre">set</span></code> et <code class="docutils literal notranslate"><span class="pre">frozenset</span></code><a class="headerlink" href="#les-ensembles-set-et-frozenset" title="Permalink to this heading">#</a></h2>
 <p><strong><code class="docutils literal notranslate"><span class="pre">set</span></code></strong> (ensemble) : type composé de valeurs <strong>uniques</strong> écrites entre <code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">}</span></code> et séparées par des <code class="docutils literal notranslate"><span class="pre">,</span></code>.</p>
 <blockquote>
 <div><p>{3, “bonjour”, 7, 1.32}</p>
@@ -2151,7 +2152,7 @@ inclusions : True True False False
 </div>
 </section>
 <section id="specifier-des-fonctions-avec-des-types-composes">
-<h2><span class="section-number">6.8. </span>Spécifier des fonctions avec des types composés<a class="headerlink" href="#specifier-des-fonctions-avec-des-types-composes" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">7.8. </span>Spécifier des fonctions avec des types composés<a class="headerlink" href="#specifier-des-fonctions-avec-des-types-composes" title="Permalink to this heading">#</a></h2>
 <p>Les fonctions peuvent manipuler des arguments de type composé.</p>
 <p>On a déjà vu beaucoup d’exemples avec les tableaux.
 Ces derniers ayant été représentés en python par le type (composé) <em>liste</em>, on sait expliciter le <em>type</em> de tels paramètres à l’aide de :</p>
@@ -2164,7 +2165,7 @@ Ces derniers ayant été représentés en python par le type (composé) <em>list
 <p>Depuis python <strong>3.9</strong>, il est possible de paramètrer les types prédéfinis avec des <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">]</span></code> de façon similaire à celle décrite dans la section 2 de cette partie.</p>
 <p>Il n’est donc plus nécessaire de passer par les types “avec majuscule” de <code class="docutils literal notranslate"><span class="pre">typing</span></code>.</p>
 </div><section id="parametres-de-type-compose-predefini">
-<h3><span class="section-number">6.8.1. </span>Paramètres de type composé prédéfini<a class="headerlink" href="#parametres-de-type-compose-predefini" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">7.8.1. </span>Paramètres de type composé prédéfini<a class="headerlink" href="#parametres-de-type-compose-predefini" title="Permalink to this heading">#</a></h3>
 <p>Les types composés prédéfinis de python sont renvoyés par la fonction <code class="docutils literal notranslate"><span class="pre">type()</span></code> (appliquée à une variable).</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">list</span></code></p></li>
@@ -2247,7 +2248,7 @@ ses paramètres formels. On appelle aussi cette homonymie de la <em>surcharge de
 <p>On a par exemple déjà signalé cette caractéristique avec les différents sens du symbole <code class="docutils literal notranslate"><span class="pre">+</span></code> selon qu’il s’applique à des entiers, des flottants, des chaînes de caractères, …</p>
 </section>
 <section id="star-mieux-expliciter-le-type-compose">
-<h3><span class="section-number">6.8.2. </span>(<span class="math notranslate nohighlight">\(\star\)</span>) Mieux expliciter le type composé<a class="headerlink" href="#star-mieux-expliciter-le-type-compose" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">7.8.2. </span>(<span class="math notranslate nohighlight">\(\star\)</span>) Mieux expliciter le type composé<a class="headerlink" href="#star-mieux-expliciter-le-type-compose" title="Permalink to this heading">#</a></h3>
 <p>Comme on l’a fait pour <em>mieux</em> expliciter les tableaux, on peut expliciter “l’intérieur” d’un type composé, cad. le type de ses composants.</p>
 <p>Par exemple, le type d’un tableau 2D de valeurs entières (type composé qui regroupe des valeurs de même type)  a été spécifié (depuis python&gt;3.9) par :</p>
 <blockquote>
@@ -2381,7 +2382,7 @@ pour d’autres constructions plus avancées et très utiles.</p>
 </section>
 </section>
 <section id="synthese">
-<h2><span class="section-number">6.9. </span>Synthèse<a class="headerlink" href="#synthese" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">7.9. </span>Synthèse<a class="headerlink" href="#synthese" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Conteneurs non mutables : <code class="docutils literal notranslate"><span class="pre">str</span></code>, <code class="docutils literal notranslate"><span class="pre">tuple</span></code> (et <code class="docutils literal notranslate"><span class="pre">frozenset</span></code>)</p></li>
 <li><p>Conteneurs  mutables : <code class="docutils literal notranslate"><span class="pre">list</span></code>, <code class="docutils literal notranslate"><span class="pre">dict</span></code>, <code class="docutils literal notranslate"><span class="pre">set</span></code></p></li>
@@ -2399,7 +2400,7 @@ pour d’autres constructions plus avancées et très utiles.</p>
 <li><p>La spécification d’arguments de type composé avec le module <code class="docutils literal notranslate"><span class="pre">typing</span></code> ou plus directement en python&gt;=3.9</p></li>
 </ul>
 <section id="avoir-les-idees-claires">
-<h3><span class="section-number">6.9.1. </span>Avoir les idées claires<a class="headerlink" href="#avoir-les-idees-claires" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">7.9.1. </span>Avoir les idées claires<a class="headerlink" href="#avoir-les-idees-claires" title="Permalink to this heading">#</a></h3>
 <p>Distinguer les  caractéristiques des structures de données :
 tuple, liste, dictionnaire, ensemble, et chaîne de caractères
 – aussi appelés type composé ou conteneur en python :</p>
@@ -2410,7 +2411,7 @@ tuple, liste, dictionnaire, ensemble, et chaîne de caractères
 </ul>
 </section>
 <section id="savoir-faire">
-<h3><span class="section-number">6.9.2. </span>Savoir faire<a class="headerlink" href="#savoir-faire" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">7.9.2. </span>Savoir faire<a class="headerlink" href="#savoir-faire" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Connaitre la syntaxe python de définition et manipulation de ces SD</p></li>
 <li><p>Créer des listes et dictionnaires en compréhension</p></li>
@@ -2457,7 +2458,7 @@ tuple, liste, dictionnaire, ensemble, et chaîne de caractères
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">5. </span>Trier</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>Trier</p>
       </div>
     </a>
     <a class="right-next"
@@ -2465,7 +2466,7 @@ tuple, liste, dictionnaire, ensemble, et chaîne de caractères
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">7. </span>Entrées-sorties simples avec des fichiers</p>
+        <p class="prev-next-title"><span class="section-number">8. </span>Entrées-sorties simples avec des fichiers</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -2485,44 +2486,44 @@ tuple, liste, dictionnaire, ensemble, et chaîne de caractères
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-types-composes-ou-conteneurs-en-python">6.1. Les types composés ou <em>conteneurs</em> en python</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-questions-abordees-dans-ce-chapitre">6.1.1. Les questions abordées dans ce chapitre</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#la-vision-classique">6.1.2. La vision classique</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-conteneurs-python">6.1.3. Les conteneurs python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-types-composes-ou-conteneurs-en-python">7.1. Les types composés ou <em>conteneurs</em> en python</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-questions-abordees-dans-ce-chapitre">7.1.1. Les questions abordées dans ce chapitre</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#la-vision-classique">7.1.2. La vision classique</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-conteneurs-python">7.1.3. Les conteneurs python</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ce-qui-est-commun-aux-conteneurs-python">6.2. Ce qui est commun aux conteneurs python</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operations-communes-aux-conteneurs-python">6.2.1. Opérations communes aux conteneurs python</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conteneurs-iterables-et-sequences">6.2.2. Conteneurs itérables et séquences</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ce-qui-est-commun-aux-conteneurs-python">7.2. Ce qui est commun aux conteneurs python</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operations-communes-aux-conteneurs-python">7.2.1. Opérations communes aux conteneurs python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conteneurs-iterables-et-sequences">7.2.2. Conteneurs itérables et séquences</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-tuple">6.3. Les <code class="docutils literal notranslate"><span class="pre">tuple</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-listes-list">6.4. Les listes <code class="docutils literal notranslate"><span class="pre">list</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creer-une-liste">6.4.1. Créer une liste</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#methodes-sur-des-listes">6.4.2. Méthodes sur des listes</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#affectation-entre-listes">6.4.3. Affectation entre listes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-tuple">7.3. Les <code class="docutils literal notranslate"><span class="pre">tuple</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-listes-list">7.4. Les listes <code class="docutils literal notranslate"><span class="pre">list</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creer-une-liste">7.4.1. Créer une liste</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#methodes-sur-des-listes">7.4.2. Méthodes sur des listes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#affectation-entre-listes">7.4.3. Affectation entre listes</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-dictionnaires-dict">6.5. Les dictionnaires  <code class="docutils literal notranslate"><span class="pre">dict</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tableau-associatif">6.5.1. Tableau associatif</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionnaire-dict-en-python">6.5.2. Dictionnaire <code class="docutils literal notranslate"><span class="pre">dict</span></code> en python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-dictionnaires-dict">7.5. Les dictionnaires  <code class="docutils literal notranslate"><span class="pre">dict</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tableau-associatif">7.5.1. Tableau associatif</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionnaire-dict-en-python">7.5.2. Dictionnaire <code class="docutils literal notranslate"><span class="pre">dict</span></code> en python</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-chaines-de-caracteres-str">6.6. Les chaînes de caractères <code class="docutils literal notranslate"><span class="pre">str</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operations">6.6.1. Opérations</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fonctions-methodes">6.6.2. Fonctions-méthodes</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-caracteres-speciaux-ou-caracteres-sequences-d-echappement">6.6.3. Les caractères spéciaux ou caractères/séquences d’échappement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-chaines-de-caracteres-str">7.6. Les chaînes de caractères <code class="docutils literal notranslate"><span class="pre">str</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operations">7.6.1. Opérations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fonctions-methodes">7.6.2. Fonctions-méthodes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-caracteres-speciaux-ou-caracteres-sequences-d-echappement">7.6.3. Les caractères spéciaux ou caractères/séquences d’échappement</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-ensembles-set-et-frozenset">6.7. Les ensembles   <code class="docutils literal notranslate"><span class="pre">set</span></code> et <code class="docutils literal notranslate"><span class="pre">frozenset</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specifier-des-fonctions-avec-des-types-composes">6.8. Spécifier des fonctions avec des types composés</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parametres-de-type-compose-predefini">6.8.1. Paramètres de type composé prédéfini</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-mieux-expliciter-le-type-compose">6.8.2. (<span class="math notranslate nohighlight">\(\star\)</span>) Mieux expliciter le type composé</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-ensembles-set-et-frozenset">7.7. Les ensembles   <code class="docutils literal notranslate"><span class="pre">set</span></code> et <code class="docutils literal notranslate"><span class="pre">frozenset</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specifier-des-fonctions-avec-des-types-composes">7.8. Spécifier des fonctions avec des types composés</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parametres-de-type-compose-predefini">7.8.1. Paramètres de type composé prédéfini</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-mieux-expliciter-le-type-compose">7.8.2. (<span class="math notranslate nohighlight">\(\star\)</span>) Mieux expliciter le type composé</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#synthese">6.9. Synthèse</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#avoir-les-idees-claires">6.9.1. Avoir les idées claires</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#savoir-faire">6.9.2. Savoir faire</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#synthese">7.9. Synthèse</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#avoir-les-idees-claires">7.9.1. Avoir les idées claires</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#savoir-faire">7.9.2. Savoir faire</a></li>
 </ul>
 </li>
 </ul>
