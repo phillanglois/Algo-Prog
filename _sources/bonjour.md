@@ -65,9 +65,9 @@ Vacances en s9, s16-s17
 
 ## Semaine 8
 
-- Compétences :
+- Compétences : chapitre "rechercher" 
 - Avant le TD : 
-- Avant le CM de jeudi : 
+- Avant le CM de jeudi : reprendre et lire chapitre _Rechercher_ en entier
 
 ## _Semaine 9_ (vacances d'hiver) 
 
