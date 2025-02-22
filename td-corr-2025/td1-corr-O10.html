@@ -1,0 +1,2165 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>21. Feuille 1 : fonctions &#8212; Algo-Prog L1-S2</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.4cbf315f70debaebd550c87a6162cf0f.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'td-corr-2025/td1-corr-O10';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="20. Préalables" href="prealable-td.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <header>
+  
+    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+    </div>
+  
+  </header>
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../bonjour.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Algo-Prog L1-S2 - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Algo-Prog L1-S2 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../bonjour.html">
+                    Bienvenu en Algo-Prog, version 2025 !
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Présentation</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../cm/0-presentation.html">Algo Prog en 2025</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/0a-competences.html">Compétences</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapitres</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../cm/1-fonctions.html">1. Fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/1b-fonctions-exemple.html">2. Un exemple, plein de fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/6-recursivite.html">3. Récursivité</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/8-rechercher.html">4. Rechercher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/4-complexite2025.html">5. Complexité</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/10-trier.html">6. Trier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/5-types_composes.html">7. Les types composés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/3-ES-fichiers.html">8. Entrées-sorties simples avec des fichiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/9-ES-formats.html">9. Les entrées-sorties (E/S) : formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/7-fonctions-avancees.html">10. Affectation et appel de fonction – aspects avancés</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Compléments</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../cm/01-synthese-s1.html">11. Synthèse des acquis du semestre 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/a0-boucles-avancees.html">12. Tableaux et boucles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/11-modules-utiles.html">13. Modules utiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/a1-booleens.html">14. Les booléens en python (&gt;3.6)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/a2-ndarray.html">15. Les ‘ndarray’ : de vrais tableaux en python</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">TD</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../td/prealable-td.html">16. Préalables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../td/td1.html">17. Feuille 1 : fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../td/td2.html">18. Feuille 2 : récursivité</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../td/td3.html">19. Feuille 3 : complexité</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Correction des TD objectif 10</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="prealable-td.html">20. Préalables</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">21. Feuille 1 : fonctions</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/phillanglois/Algo-Prog/main?urlpath=tree/algoprog2024/td-corr-2025/td1-corr-O10.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+<a href="https://github.com/phillanglois/Algo-Prog/issues/new?title=Issue%20on%20page%20%2Ftd-corr-2025/td1-corr-O10.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button"
+   title="Open an issue"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/td-corr-2025/td1-corr-O10.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Feuille 1 : fonctions</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectif-10">21.1. Objectif 10</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-factorielle">21.1.1. Exercice. (factorielle)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-exercice">21.1.2. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-codage-ascii">21.1.3. Exercice (codage ASCII)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exo-suites">21.1.4. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice">21.1.5. Exercice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">21.1.6. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-exercice-tableaux-1d">21.1.7. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice (tableaux 1D)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-exercice-extrait-d-examen-2017-sans-machine">21.1.8. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice (extrait d’examen 2017 sans machine)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-exercice-palindrome">21.1.9. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice (palindrome)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-produit-scalaire">21.1.10. Exercice (produit scalaire)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-exercice-tableau-2d">21.1.11. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice (tableau 2D)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-exercice-matrices">21.1.12. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice (matrices)</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="feuille-1-fonctions">
+<span id="td-td1"></span><h1><span class="section-number">21. </span>Feuille 1 : fonctions<a class="headerlink" href="#feuille-1-fonctions" title="Permalink to this heading">#</a></h1>
+<p><strong>Rappels</strong></p>
+<ul class="simple">
+<li><p>Le symbole <span class="math notranslate nohighlight">\(\blacksquare\)</span> indique les exercices ou questions obligatoires. Commencez par ceux-là.</p></li>
+<li><p>Les symboles <span class="math notranslate nohighlight">\(\star\)</span> et <span class="math notranslate nohighlight">\(\star\star\)</span> indiquent les exercices ou questions de difficulté relative plus importante.</p></li>
+</ul>
+<p><strong>Focus</strong></p>
+<ul class="simple">
+<li><p>Fonctions</p></li>
+</ul>
+<p><strong>Compétences</strong></p>
+<ul class="simple">
+<li><p>utiliser une fonction prédéfinie ou existante</p></li>
+<li><p>définir et écrire la spécification d’une fonction qui réalise un traitement décrit en français, ou qui résout un problème (simple) décrit en français</p></li>
+<li><p>définir et écrire des appels simples (ou des tests unitaires)</p></li>
+<li><p>définir, écrire et utiliser des tests unitaires</p></li>
+<li><p>définir et écrire l’implémentation d’une fonction associée à une spécification</p></li>
+</ul>
+<p><strong>Rappel de quelques consignes</strong></p>
+<p>Dans <em>cet ordre</em> et avec les corrections entre 2 étapes si besoin :</p>
+<ol class="arabic simple">
+<li><p>écriture de la signature de la fonction <em>docstring</em> compris</p></li>
+<li><p>écriture d’au moins un appel simple ou un test unitaire</p></li>
+<li><p>écriture du corps</p></li>
+<li><p>écriture des tests unitaires</p></li>
+<li><p>exécution des tests unitaires</p></li>
+<li><p>écriture des appels voulus</p></li>
+<li><p>exécution des appels voulus</p></li>
+</ol>
+<p><em>Se souvenir</em> :</p>
+<ul class="simple">
+<li><p>Séparer les entrées-sorties des traitements !</p></li>
+<li><p>Réduire au minimum l’utilisation des <code class="docutils literal notranslate"><span class="pre">input()</span></code> (les entrées au clavier) et des <code class="docutils literal notranslate"><span class="pre">print()</span></code> (les sorties à l’écran).</p></li>
+<li><p>Utiliser des identifiants différents pour les paramètres formels et effectifs, respectivement dans la définition et les appels.</p></li>
+</ul>
+<section id="objectif-10">
+<h2><span class="section-number">21.1. </span>Objectif 10<a class="headerlink" href="#objectif-10" title="Permalink to this heading">#</a></h2>
+<section id="exercice-factorielle">
+<span id="exo-fact"></span><h3><span class="section-number">21.1.1. </span>Exercice. (factorielle)<a class="headerlink" href="#exercice-factorielle" title="Permalink to this heading">#</a></h3>
+<p>La valeur de factorielle (de) <span class="math notranslate nohighlight">\(n\)</span>, où <span class="math notranslate nohighlight">\(n\)</span> est un entier positif, est :
+<span class="math notranslate nohighlight">\(n ! = 1 \times 2 \times \cdots \ \times (n-1) \times n\)</span>. On choisit
+<span class="math notranslate nohighlight">\(0 ! = 1\)</span>.</p>
+<ol class="arabic simple" start="2">
+<li><p><span class="math notranslate nohighlight">\(\blacksquare\)</span> Écrire la fonction <code class="docutils literal notranslate"><span class="pre">factorielle()</span></code> qui calcule et retourne <span class="math notranslate nohighlight">\(n!\)</span>.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">factorielle</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    calcule n!</span>
+<span class="sd">    entrée. n : int</span>
+<span class="sd">    retourne int</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="mi">1</span>  
+    <span class="k">if</span> <span class="p">(</span><span class="n">n</span><span class="o">==</span><span class="mi">0</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">res</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">res</span> <span class="o">*</span> <span class="n">i</span>
+    <span class="k">return</span> <span class="n">res</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Tests de la fonction factorielle avec quelques cas de base.</span>
+<span class="sd">Rmq. Ces tests peuvent être regrouper dans une fonction </span>
+<span class="sd">tester_factorielle()</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="k">assert</span> <span class="n">factorielle</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>  <span class="c1"># Cas spécial</span>
+<span class="k">assert</span> <span class="n">factorielle</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
+<span class="k">assert</span> <span class="n">factorielle</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="mi">120</span>
+<span class="k">assert</span> <span class="n">factorielle</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3628800</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tous les tests pour factorielle() sont passés.&quot;</span><span class="p">)</span>    
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tous les tests pour factorielle() sont passés.
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>La fonction <code class="docutils literal notranslate"><span class="pre">factorial()</span></code> du module <code class="docutils literal notranslate"><span class="pre">math</span></code> effectue le même calcul. Utiliser cette fonction pour définir et coder des tests unitaires de votre fonction <code class="docutils literal notranslate"><span class="pre">factorielle()</span></code>.</p></li>
+</ol>
+<p>Des tests avec des valeurs aléatoires sont parfois possibles.
+Ici en faisant confiance à la fonction <code class="docutils literal notranslate"><span class="pre">factorial()</span></code> du module <code class="docutils literal notranslate"><span class="pre">math</span></code> de python.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">factorial</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
+
+<span class="c1"># tests aléatoires : attention aux temps de calcul</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">val</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">factorielle</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="o">==</span> <span class="n">factorial</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Utiliser la fonction <code class="docutils literal notranslate"><span class="pre">factorielle()</span></code> pour écrire des fonctions qui
+calculent les quantités suivantes.</p>
+<ol class="arabic simple">
+<li><p>Le nombre d’arrangements (listes ordonnées) de <span class="math notranslate nohighlight">\(k\)</span> valeurs
+prises dans un ensemble de <span class="math notranslate nohighlight">\(n\)</span> valeurs est :
+<span class="math notranslate nohighlight">\(\mathcal{A}_n^k = {n
+          !}/{(n-k)!}, (k \le n)\)</span>.</p></li>
+<li><p>Le nombre de combinaisons (listes non ordonnées) de <span class="math notranslate nohighlight">\(k\)</span> valeurs
+prises dans un ensemble de <span class="math notranslate nohighlight">\(n\)</span> valeurs est :
+<span class="math notranslate nohighlight">\(\left(_k^n\right) =
+        {\mathcal{A}_n^k}/{k!}\)</span>, <span class="math notranslate nohighlight">\((k \le n)\)</span>.</p></li>
+</ol>
+</li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">arrangements</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">k</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calcule le nombre d&#39;arrangements de k valeurs prises dans un ensemble de n valeurs.</span>
+<span class="sd">    Formellement, A_k^n = n! / (n-k)!.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">k</span> <span class="o">&gt;</span> <span class="n">n</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>  <span class="c1"># Pas d&#39;arrangement possible si k &gt; n</span>
+    <span class="k">return</span> <span class="n">factorielle</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">//</span> <span class="n">factorielle</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="n">k</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">combinaisons</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">k</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calcule le nombre de combinaisons de k valeurs prises dans un ensemble de n valeurs.</span>
+<span class="sd">    Formellement, C_k^n = A_k^n / k! = n! / (k! * (n-k)!).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">k</span> <span class="o">&gt;</span> <span class="n">n</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>  <span class="c1"># Pas de combinaison possible si k &gt; n</span>
+    <span class="k">return</span> <span class="n">arrangements</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span> <span class="o">//</span> <span class="n">factorielle</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">tester_arrangements_et_combinaisons</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Teste les fonctions arrangements() et combinaisons() avec quelques cas de base.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Tests pour arrangements</span>
+    <span class="k">assert</span> <span class="n">arrangements</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">20</span>
+    <span class="k">assert</span> <span class="n">arrangements</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="mi">120</span>
+    <span class="k">assert</span> <span class="n">arrangements</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
+    <span class="k">assert</span> <span class="n">arrangements</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+    
+    <span class="c1"># Tests pour combinaisons</span>
+    <span class="k">assert</span> <span class="n">combinaisons</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">10</span>
+    <span class="k">assert</span> <span class="n">combinaisons</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
+    <span class="k">assert</span> <span class="n">combinaisons</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
+    <span class="k">assert</span> <span class="n">combinaisons</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tous les tests de base pour arrangements() et combinaisons() sont passés.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tester_arrangements_et_combinaisons</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tous les tests de base pour arrangements() et combinaisons() sont passés.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Les tests unitaires peuvent utiliser des fonctions préalablement vérifiées.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="c1"># tests arrangements(n,p)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">assert</span> <span class="n">arrangements</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
+    <span class="k">assert</span> <span class="n">arrangements</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span> <span class="o">==</span> <span class="n">factorielle</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Les tests unitaires peuvent utiliser des propriétés mathématiques constructives.
+Ici : la construction du triangle de Pascal (qui donne les coefficients du développement de <span class="math notranslate nohighlight">\((a + b)^n\)</span> utilise une propriété importante du nombre de combinaison (voir wikipedia si besoin).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># tests C(n,p)</span>
+<span class="c1"># première et dernière &quot;colonne&quot; du triangle de Pascal</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">assert</span> <span class="n">combinaisons</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
+    <span class="k">assert</span> <span class="n">combinaisons</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
+
+<span class="c1"># Construction du triangle de Pascal</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">combinaisons</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">p</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="n">combinaisons</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span> <span class="o">+</span> <span class="n">combinaisons</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">p</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Bonus.</strong> Approximation arbitrairement précise de <span class="math notranslate nohighlight">\(e^x\)</span> pour <span class="math notranslate nohighlight">\(x\)</span> proche de 1.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">e_approx</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;calcule une appoximation de e avec son dével. limité à l ordre n</span>
+<span class="sd">    entrées. x : float, n: int</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">app</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="c1"># on accumule</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">app</span> <span class="o">=</span> <span class="n">app</span> <span class="o">+</span> <span class="mi">1</span><span class="o">/</span><span class="n">factorielle</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">app</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">exp</span>
+<span class="c1"># test approx e en x0 arbitraire et comparaison selon évoltuion de n</span>
+<span class="n">x0</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">e0</span> <span class="o">=</span> <span class="n">exp</span><span class="p">(</span><span class="n">x0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;n , approx_e (&quot;</span><span class="p">,</span> <span class="n">e0</span><span class="p">,</span> <span class="s2">&quot;), err_relative (en %)&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">ordre</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">app_e0</span> <span class="o">=</span> <span class="n">e_approx</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span> <span class="n">ordre</span><span class="p">)</span>
+    <span class="n">diff_rel</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">e0</span><span class="o">-</span><span class="n">app_e0</span><span class="p">)</span><span class="o">/</span><span class="n">e0</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ordre</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">{:2.8f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">app_e0</span><span class="p">),</span> <span class="s2">&quot;</span><span class="si">{:2.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">diff_rel</span><span class="o">*</span><span class="mi">100</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>n , approx_e ( 2.718281828459045 ), err_relative (en %)
+2 2.50000000 8.03
+3 2.66666667 1.90
+4 2.70833333 0.37
+5 2.71666667 0.06
+6 2.71805556 0.01
+7 2.71825397 0.00
+8 2.71827877 0.00
+9 2.71828153 0.00
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="blacksquare-exercice">
+<h3><span class="section-number">21.1.2. </span><span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice<a class="headerlink" href="#blacksquare-exercice" title="Permalink to this heading">#</a></h3>
+<p>Écrire une fonction <code class="docutils literal notranslate"><span class="pre">moy()</span></code> qui calcule et retourne la moyenne de 4 valeurs flottantes de façon adaptée au traitement suivant souhaité.</p>
+<ul class="simple">
+<li><p>Ces 4 valeurs sont entrées au clavier et stockées dans un tableau.</p></li>
+<li><p>La moyenne calculée est affichée à l’écran avec un rappel des 4 valeurs correspondantes.</p></li>
+</ul>
+<p>Accompagner votre développement avec quelques tests unitaires bien choisis.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">moy</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">c</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calcule et retourne la moyenne de quatre valeurs flottantes.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="n">c</span> <span class="o">+</span> <span class="n">d</span><span class="p">)</span> <span class="o">/</span> <span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">tester_moy</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Teste la fonction moy() avec quelques cas de base.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">assert</span> <span class="n">moy</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span> <span class="o">==</span> <span class="mf">1.0</span>  <span class="c1"># Moyenne uniforme</span>
+    <span class="k">assert</span> <span class="n">moy</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">)</span> <span class="o">==</span> <span class="mf">2.5</span>  
+    <span class="k">assert</span> <span class="n">moy</span><span class="p">(</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mf">1.0</span>  <span class="c1"># Moyenne avec valeurs négatives</span>
+    <span class="k">assert</span> <span class="n">moy</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span> <span class="o">==</span> <span class="mf">0.0</span>  <span class="c1"># Moyenne avec zéros</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tous les tests pour moy() sont passés.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tester_moy</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tous les tests pour moy() sont passés.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd"># Cette cellule qui demande des ES au clavier est commentée pour être intégrée au support de cours.</span>
+<span class="sd"># La décommenter pour l&#39;exécuter</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Lit quatre valeurs flottantes au clavier, calcule leur moyenne à l&#39;aide de la fonction moy(),</span>
+<span class="sd">et affiche la moyenne ainsi que les valeurs initiales.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd"># Lecture des quatre valeurs au clavier</span>
+<span class="sd">valeurs = []</span>
+<span class="sd">for i in range(4):</span>
+<span class="sd">    valeur = float(input(f&quot;Entrez la valeur {i + 1} : &quot;))</span>
+<span class="sd">    valeurs.append(valeur)</span>
+
+<span class="sd"># Calcul de la moyenne</span>
+<span class="sd">moyenne = moy(valeurs[0], valeurs[1], valeurs[2], valeurs[3])</span>
+
+<span class="sd"># Affichage des résultats</span>
+<span class="sd">print(&quot;Les valeurs entrées sont : &quot; ,valeurs)</span>
+<span class="sd">print(&quot;La moyenne des valeurs est : &quot; ,moyenne)</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;\n# Cette cellule qui demande des ES au clavier est commentée pour être intégrée au support de cours.\n# La décommenter pour l\&#39;exécuter\n&quot;&quot;&quot;\nLit quatre valeurs flottantes au clavier, calcule leur moyenne à l\&#39;aide de la fonction moy(),\net affiche la moyenne ainsi que les valeurs initiales.\n&quot;&quot;&quot;\n# Lecture des quatre valeurs au clavier\nvaleurs = []\nfor i in range(4):\n    valeur = float(input(f&quot;Entrez la valeur {i + 1} : &quot;))\n    valeurs.append(valeur)\n\n# Calcul de la moyenne\nmoyenne = moy(valeurs[0], valeurs[1], valeurs[2], valeurs[3])\n\n# Affichage des résultats\nprint(&quot;Les valeurs entrées sont : &quot; ,valeurs)\nprint(&quot;La moyenne des valeurs est : &quot; ,moyenne)\n&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exercice-codage-ascii">
+<h3><span class="section-number">21.1.3. </span>Exercice (codage ASCII)<a class="headerlink" href="#exercice-codage-ascii" title="Permalink to this heading">#</a></h3>
+<p>L’ASCII est un codage de caractères qui
+définit 128 codes sur 7 bits. Chaque code correspond à un caractère :
+chiffres, lettres, symboles mathématiques et de ponctuation.</p>
+<p>En Python,
+la fonction <code class="docutils literal notranslate"><span class="pre">ord()</span></code> retourne le code ASCII d’un caractère fourni en
+argument. La fonction <code class="docutils literal notranslate"><span class="pre">chr()</span></code> retourne le caractère associé à un code
+donné.</p>
+<ol class="arabic simple">
+<li><p>Ecrire un programme qui affiche les 128 codes ASCII selon 16 lignes de 8 colonnes.</p></li>
+</ol>
+<p><strong>Remarque.</strong> Etre conscient que cette question nécessite de mélanger des traitements (appels de fonctions) et des entrées-sorties (<code class="docutils literal notranslate"><span class="pre">print()</span></code>).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">128</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">8</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<pre class="output stream literal-block">
+	
+
+
+ 
+!&quot;#$%&amp;'(
+)*+,-./0
+12345678
+9:;&lt;=&gt;?&#64;
+ABCDEFGH
+IJKLMNOP
+QRSTUVWX
+YZ[\]^_`
+abcdefgh
+ijklmnop
+qrstuvwx
+yz{|}~</pre>
+</div>
+</div>
+<p>Une autre solution pour illustrer les codes ascii des majuscules de l’alphabet</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alphabet</span> <span class="o">=</span> <span class="s1">&#39;ABCDEFGHIJKLMNOPQRST&#39;</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">alphabet</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="s2">&quot;-&gt;&quot;</span><span class="p">,</span> <span class="nb">ord</span><span class="p">(</span><span class="n">c</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A -&gt; 65
+B -&gt; 66
+C -&gt; 67
+D -&gt; 68
+E -&gt; 69
+F -&gt; 70
+G -&gt; 71
+H -&gt; 72
+I -&gt; 73
+J -&gt; 74
+K -&gt; 75
+L -&gt; 76
+M -&gt; 77
+N -&gt; 78
+O -&gt; 79
+P -&gt; 80
+Q -&gt; 81
+R -&gt; 82
+S -&gt; 83
+T -&gt; 84
+</pre></div>
+</div>
+</div>
+</div>
+<p>Et une dernière avec tous les codes ascii. (<span class="math notranslate nohighlight">\(\star\)</span>) Que constatez-vous ?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">128</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">10</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;-&gt;&quot;</span><span class="p">,</span> <span class="nb">chr</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="nb">chr</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<pre class="output stream literal-block">0 : 1 -&gt;  2 -&gt;  3 -&gt;  4 -&gt;  5 -&gt;  6 -&gt;  7 -&gt;  8 -&gt;  9 -&gt; 	 10 : 
+
+11 -&gt;  12 -&gt;  13 -&gt;  14 -&gt;  15 -&gt;  16 -&gt;  17 -&gt;  18 -&gt;  19 -&gt;  20 : 
+21 -&gt;  22 -&gt;  23 -&gt;  24 -&gt;  25 -&gt;  26 -&gt;  27 -&gt;  28 -&gt;  29 -&gt;  30 : 
+31 -&gt;  32 -&gt;   33 -&gt; ! 34 -&gt; &quot; 35 -&gt; # 36 -&gt; $ 37 -&gt; % 38 -&gt; &amp; 39 -&gt; ' 40 : (
+41 -&gt; ) 42 -&gt; * 43 -&gt; + 44 -&gt; , 45 -&gt; - 46 -&gt; . 47 -&gt; / 48 -&gt; 0 49 -&gt; 1 50 : 2
+51 -&gt; 3 52 -&gt; 4 53 -&gt; 5 54 -&gt; 6 55 -&gt; 7 56 -&gt; 8 57 -&gt; 9 58 -&gt; : 59 -&gt; ; 60 : &lt;
+61 -&gt; = 62 -&gt; &gt; 63 -&gt; ? 64 -&gt; &#64; 65 -&gt; A 66 -&gt; B 67 -&gt; C 68 -&gt; D 69 -&gt; E 70 : F
+71 -&gt; G 72 -&gt; H 73 -&gt; I 74 -&gt; J 75 -&gt; K 76 -&gt; L 77 -&gt; M 78 -&gt; N 79 -&gt; O 80 : P
+81 -&gt; Q 82 -&gt; R 83 -&gt; S 84 -&gt; T 85 -&gt; U 86 -&gt; V 87 -&gt; W 88 -&gt; X 89 -&gt; Y 90 : Z
+91 -&gt; [ 92 -&gt; \ 93 -&gt; ] 94 -&gt; ^ 95 -&gt; _ 96 -&gt; ` 97 -&gt; a 98 -&gt; b 99 -&gt; c 100 : d
+101 -&gt; e 102 -&gt; f 103 -&gt; g 104 -&gt; h 105 -&gt; i 106 -&gt; j 107 -&gt; k 108 -&gt; l 109 -&gt; m 110 : n
+111 -&gt; o 112 -&gt; p 113 -&gt; q 114 -&gt; r 115 -&gt; s 116 -&gt; t 117 -&gt; u 118 -&gt; v 119 -&gt; w 120 : x
+121 -&gt; y 122 -&gt; z 123 -&gt; { 124 -&gt; | 125 -&gt; } 126 -&gt; ~ 127 -&gt;  </pre>
+</div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Ecrire une autre solution qui ne mélange pas traitements et entrées-sorties.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">ascii_tab</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    On utilise un tableau pour stocker les résultats</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">tab</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39; &#39;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">128</span><span class="p">)]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">128</span><span class="p">):</span>
+        <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">chr</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">tab</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">es_tab</span><span class="p">(</span><span class="n">t</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    On regroupe les ES dans une fonction adaptée</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">assert</span> <span class="n">n</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">128</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">8</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">res</span> <span class="o">=</span> <span class="n">ascii_tab</span><span class="p">()</span>
+<span class="n">es_tab</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">res</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<pre class="output stream literal-block">
+	
+
+
+ 
+!&quot;#$%&amp;'(
+)*+,-./0
+12345678
+9:;&lt;=&gt;?&#64;
+ABCDEFGH
+IJKLMNOP
+QRSTUVWX
+YZ[\]^_`
+abcdefgh
+ijklmnop
+qrstuvwx
+yz{|}~</pre>
+</div>
+</div>
+<p>(*) Bien comprendre les parenthèses de l’appel suivant qui produit le même traitement que le précédent.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">es_tab</span><span class="p">(</span><span class="n">ascii_tab</span><span class="p">()</span> <span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">ascii_tab</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<pre class="output stream literal-block">
+	
+
+
+ 
+!&quot;#$%&amp;'(
+)*+,-./0
+12345678
+9:;&lt;=&gt;?&#64;
+ABCDEFGH
+IJKLMNOP
+QRSTUVWX
+YZ[\]^_`
+abcdefgh
+ijklmnop
+qrstuvwx
+yz{|}~</pre>
+</div>
+</div>
+</section>
+<section id="exo-suites">
+<span id="id1"></span><h3><span class="section-number">21.1.4. </span><span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice<a class="headerlink" href="#exo-suites" title="Permalink to this heading">#</a></h3>
+<p>On rappelle quelques suites et séries numériques classiques.</p>
+<ul class="simple">
+<li><p>La somme des <span class="math notranslate nohighlight">\(n\)</span> premiers entiers :
+<span class="math notranslate nohighlight">\(s_1(n) = 1 + 2 + \cdots + (n-1) + n = \sum_{k=1}^{n} k\)</span> ;</p></li>
+<li><p>La suite de Fibonacci : <span class="math notranslate nohighlight">\(u_{n+1} = u_{n}+ u_{n-1}\)</span> et <span class="math notranslate nohighlight">\(u_0=u_1=1\)</span>.</p></li>
+<li><p>Une suite arithmético-géométrique : <span class="math notranslate nohighlight">\(u_{n+1} = u_n/3 + 2\)</span> avec <span class="math notranslate nohighlight">\(u_0=1\)</span>.</p></li>
+</ul>
+<ul class="simple">
+<li><p>La somme des <span class="math notranslate nohighlight">\(n\)</span> premiers entiers :
+<span class="math notranslate nohighlight">\(s_1(n) = 1 + 2 + \cdots + (n-1) + n = \sum_{k=1}^{n} k\)</span> ;</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p>Écrire des fonctions (en-tête, appel, corps) qui calculent et
+retournent le <span class="math notranslate nohighlight">\(n\)</span>-ième terme de ces suites.</p></li>
+<li><p>Ecrire des tests unitaires adaptés. Justifier vos choix.</p></li>
+<li><p>Pour chacune de ces suites et en utilisant ces fonctions, lire une valeur de <span class="math notranslate nohighlight">\(n\)</span> entrée au clavier, calcule le <span class="math notranslate nohighlight">\(n\)</span>-ième terme de la suite puis l’afficher à l’écran.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">somme1</span><span class="p">(</span><span class="n">n</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Calcule et retourne la somme des n premiers entiers.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="n">i</span>
+    <span class="k">return</span> <span class="n">s</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">tester_somme1</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Teste les fonctions associées aux suites avec quelques cas de base.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Tests pour la somme des n premiers entiers</span>
+    <span class="k">assert</span> <span class="n">somme1</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>   
+    <span class="k">assert</span> <span class="n">somme1</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
+    <span class="k">assert</span> <span class="n">somme1</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="mi">15</span>
+    <span class="k">assert</span> <span class="n">somme1</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">==</span> <span class="mi">55</span>
+    
+<span class="n">tester_somme1</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Utilisation d&#39;une propriété mathématique bien connue et d&#39;aléa</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">factorial</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
+
+<span class="c1"># tests aléatoires : attention aux temps de calcul</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+    <span class="k">assert</span>  <span class="n">somme1</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">==</span> <span class="n">n</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tous les tests pour somme1() sont passés.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tous les tests pour somme1() sont passés.
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>La suite de Fibonacci : <span class="math notranslate nohighlight">\(u_{n+1} = u_{n}+ u_{n-1}\)</span> et <span class="math notranslate nohighlight">\(u_0=u_1=1\)</span>.</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p>Écrire des fonctions (en-tête, appel, corps) qui calculent et
+retournent le <span class="math notranslate nohighlight">\(n\)</span>-ième terme de ces suites.</p></li>
+<li><p>Ecrire des tests unitaires adaptés. Justifier vos choix.</p></li>
+<li><p>Pour chacune de ces suites et en utilisant ces fonctions, lire une valeur de <span class="math notranslate nohighlight">\(n\)</span> entrée au clavier, calcule le <span class="math notranslate nohighlight">\(n\)</span>-ième terme de la suite puis l’afficher à l’écran.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fibo</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Calcule et retourne le n-ième terme de la suite de Fibonacci.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">f_0</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">f_1</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">f_0</span>
+    <span class="k">elif</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">f_1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+            <span class="n">res</span> <span class="o">=</span> <span class="n">f_0</span> <span class="o">+</span> <span class="n">f_1</span>
+            <span class="n">f_0</span> <span class="o">=</span> <span class="n">f_1</span>
+            <span class="n">f_1</span> <span class="o">=</span> <span class="n">res</span>
+
+    <span class="k">return</span> <span class="n">res</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">tester_fibo</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Teste fibo() avec quelques cas de base.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Tests pour la suite de Fibonacci</span>
+    <span class="k">assert</span> <span class="n">fibo</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
+    <span class="k">assert</span> <span class="n">fibo</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
+    <span class="k">assert</span> <span class="n">fibo</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="mi">8</span>
+    <span class="k">assert</span> <span class="n">fibo</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">==</span> <span class="mi">89</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tous les tests pour fibo() sont passés.&quot;</span><span class="p">)</span>
+    
+<span class="n">tester_fibo</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tous les tests pour fibo() sont passés.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd"># ES commentées</span>
+
+<span class="sd">nb = int(input(&quot;suite de Fibonacci pour n = &quot;))</span>
+
+<span class="sd">F = Fibo(nb)</span>
+<span class="sd"> </span>
+<span class="sd">print(&quot;la suite Fibonacci : Fibo(&quot;, nb, &quot;) = &quot;, F)</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;\n# ES commentées\n\nnb = int(input(&quot;suite de Fibonacci pour n = &quot;))\n\nF = Fibo(nb)\n \nprint(&quot;la suite Fibonacci : Fibo(&quot;, nb, &quot;) = &quot;, F)\n&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Une suite arithmético-géométrique : <span class="math notranslate nohighlight">\(u_{n+1} = u_n/3 + 2\)</span> avec <span class="math notranslate nohighlight">\(u_0=1\)</span>.</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p>Écrire des fonctions (en-tête, appel, corps) qui calculent et
+retournent le <span class="math notranslate nohighlight">\(n\)</span>-ième terme de ces suites.</p></li>
+<li><p>Ecrire des tests unitaires adaptés. Justifier vos choix.</p></li>
+<li><p>Pour chacune de ces suites et en utilisant ces fonctions, lire une valeur de <span class="math notranslate nohighlight">\(n\)</span> entrée au clavier, calcule le <span class="math notranslate nohighlight">\(n\)</span>-ième terme de la suite puis l’afficher à l’écran.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">suiteArithmeticoGeometrique</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    calcule u_n = (u_n-1)/3+2</span>
+<span class="sd">    entrée. n : int</span>
+<span class="sd">    retourne float</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">u</span> <span class="o">=</span> <span class="mf">1.0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">u</span> <span class="o">=</span> <span class="n">u</span><span class="o">/</span><span class="mf">3.0</span> <span class="o">+</span> <span class="mf">2.0</span>
+    <span class="k">return</span> <span class="n">u</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd"># ES commentéesnb = int(input(&quot;n = &quot;))</span>
+
+<span class="sd"># appel</span>
+<span class="sd">res = suiteArithmeticoGeometrique(nb)</span>
+
+<span class="sd">print(&quot;u(&quot;, nb, &quot;) = &quot;, res)</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;\n# ES commentéesnb = int(input(&quot;n = &quot;))\n\n# appel\nres = suiteArithmeticoGeometrique(nb)\n\nprint(&quot;u(&quot;, nb, &quot;) = &quot;, res)\n&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exercice">
+<h3><span class="section-number">21.1.5. </span>Exercice<a class="headerlink" href="#exercice" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\blacksquare\)</span> Définir et écrire une fonction <code class="docutils literal notranslate"><span class="pre">est_rectangle()</span></code> qui vérifie si un triangle est rectangle. Aucune hypothèse est effectuée sur les paramètres de ce traitement.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">est_rectangle</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">c</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;vérifie si le triangle de c^tés (a,b,c) est triangle grâce au théorème de Pythagore&#39;&#39;&#39;</span> 
+    <span class="k">assert</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span> <span class="o">*</span> <span class="n">c</span> <span class="o">!=</span> <span class="mi">0</span> <span class="c1"># pas de coté de longuer nulle dans un triangle (non plat)</span>
+    
+    <span class="k">if</span> <span class="n">a</span><span class="o">*</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="o">*</span><span class="n">b</span> <span class="o">==</span> <span class="n">c</span><span class="o">*</span><span class="n">c</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">if</span> <span class="n">b</span><span class="o">*</span><span class="n">b</span> <span class="o">+</span> <span class="n">c</span><span class="o">*</span><span class="n">c</span> <span class="o">==</span> <span class="n">a</span><span class="o">*</span><span class="n">a</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">if</span> <span class="n">a</span><span class="o">*</span><span class="n">a</span> <span class="o">+</span> <span class="n">c</span><span class="o">*</span><span class="n">c</span> <span class="o">==</span> <span class="n">b</span><span class="o">*</span><span class="n">b</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Ecrire des tests unitaires adaptés. Justifier vos choix.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">est_rectangle</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">est_rectangle</span><span class="p">(</span><span class="mf">3.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">)</span>
+
+<span class="c1"># tester des égalités en des valeurs flottantes est compliqué</span>
+<span class="c1"># décommenter le premier assert et conclure sur l&#39;intérêt du second</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span>
+<span class="c1">#assert sqrt(2.0) * sqrt(2.0) == 2.0</span>
+<span class="c1">#assert est_rectangle(1.0, 1.0, sqrt(2.0))</span>
+
+<span class="c1"># pourquoi ?</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="mf">2.0</span><span class="p">)</span> <span class="o">*</span> <span class="n">sqrt</span><span class="p">(</span><span class="mf">2.0</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.0000000000000004
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># une piste ? </span>
+<span class="n">epsilon</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">16</span><span class="p">))</span> <span class="c1"># une valeur petite</span>
+<span class="k">assert</span> <span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="mf">2.0</span><span class="p">)</span> <span class="o">*</span> <span class="n">sqrt</span><span class="p">(</span><span class="mf">2.0</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mf">2.0</span> <span class="o">-</span> <span class="n">epsilon</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="mf">2.0</span><span class="p">)</span> <span class="o">*</span> <span class="n">sqrt</span><span class="p">(</span><span class="mf">2.0</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mf">2.0</span> <span class="o">-</span> <span class="n">epsilon</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<p>Hélas ça reste compliqué pour <code class="docutils literal notranslate"><span class="pre">est_rectangle()</span></code> :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># OK pour sqrt(2.0) mais est_rectangle() demande une égalité ... </span>
+<span class="c1"># Le test suivant ne peut pas passer</span>
+<span class="c1">#assert est_rectangle(1.0, 1.0, sqrt(2.0) - epsilon) or est_rectangle(1.0, 1.0, sqrt(2.0) + epsilon) </span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Conclusion :</p>
+<ul class="simple">
+<li><p>solution 1 : limiter <code class="docutils literal notranslate"><span class="pre">est_rectangle()</span></code> aux <code class="docutils literal notranslate"><span class="pre">int</span></code></p></li>
+<li><p>solution 2 : modifier la version <code class="docutils literal notranslate"><span class="pre">float</span></code> en remplaçant l’égalité de façon similaire au test “d’égalité” sur <code class="docutils literal notranslate"><span class="pre">sqrt(2.0)</span></code>.</p></li>
+</ul>
+</section>
+<section id="id2">
+<h3><span class="section-number">21.1.6. </span><span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<p>Ecrire une fonctions <code class="docutils literal notranslate"><span class="pre">tabup()</span></code> qui vérifie si les <code class="docutils literal notranslate"><span class="pre">n</span></code> valeurs d’un tableau sont rangées par ordre croissant. Ces valeurs sont des entiers.</p>
+<p>Accompagner votre développement avec quelques tests unitaires bien choisis.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">tabup</span><span class="p">(</span><span class="n">tab</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Vérifie si les valeurs du tableau sont rangées en ordre croissant.</span>
+<span class="sd">    Utilise une boucle for.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">assert</span> <span class="n">n</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span>
+    
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>  <span class="c1"># Parcourt le tableau jusqu&#39;à l&#39;avant-dernier élément</span>
+        <span class="k">if</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]:</span>  <span class="c1"># Vérifie si un élément est plus grand que le suivant</span>
+            <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="kc">True</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">tabup_while</span><span class="p">(</span><span class="n">tab</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Vérifie si les valeurs du tableau sont rangées en ordre croissant.</span>
+<span class="sd">    Utilise une boucle while.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">assert</span> <span class="n">n</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span>
+    
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>  <span class="c1"># Tant qu&#39;on n&#39;a pas atteint l&#39;avant-dernier élément</span>
+        <span class="k">if</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]:</span>  <span class="c1"># Si un élément est plus grand que le suivant</span>
+            <span class="k">return</span> <span class="kc">False</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>  <span class="c1"># Passage à l&#39;élément suivant</span>
+    <span class="k">return</span> <span class="kc">True</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">tester_tabup</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Teste les fonctions tabup() et tabup_while() avec plusieurs cas.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Cas où le tableau est trié</span>
+    <span class="k">assert</span> <span class="n">tabup</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>
+    <span class="k">assert</span> <span class="n">tabup_while</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>
+
+    <span class="c1"># Cas où le tableau n&#39;est pas trié</span>
+    <span class="k">assert</span> <span class="n">tabup</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span>
+    <span class="k">assert</span> <span class="n">tabup_while</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span>
+
+    <span class="c1"># Cas avec un seul élément</span>
+    <span class="k">assert</span> <span class="n">tabup</span><span class="p">([</span><span class="mi">10</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>
+    <span class="k">assert</span> <span class="n">tabup_while</span><span class="p">([</span><span class="mi">10</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>
+
+    <span class="c1"># Cas avec un tableau vide</span>
+    <span class="k">assert</span> <span class="n">tabup</span><span class="p">([],</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>
+    <span class="k">assert</span> <span class="n">tabup_while</span><span class="p">([],</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>
+
+    <span class="c1"># Cas où tous les éléments sont identiques</span>
+    <span class="k">assert</span> <span class="n">tabup</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>
+    <span class="k">assert</span> <span class="n">tabup_while</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tous les tests pour tabup() et tabup_while() sont passés.&quot;</span><span class="p">)</span>
+
+<span class="n">tester_tabup</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tous les tests pour tabup() et tabup_while() sont passés.
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Compléments.</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">assert</span></code> peut afficher un message d’erreur “personnalisé” après  <code class="docutils literal notranslate"><span class="pre">AssertionErrror</span></code></p>
+<p>Dé-commenter les cellules suivantes pour observer.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#assert True == False</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#assert True == False, &quot;Pff tu es sûr ?&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tests unitaires</span>
+<span class="k">def</span> <span class="nf">test_tabup</span><span class="p">():</span>
+    <span class="c1"># Cas où le tableau est vide</span>
+    <span class="k">assert</span> <span class="n">tabup</span><span class="p">([],</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>
+    
+    <span class="c1"># Cas où le tableau contient un seul élément</span>
+    <span class="k">assert</span> <span class="n">tabup</span><span class="p">([</span><span class="mi">1</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span><span class="p">,</span> <span class="s2">&quot;Échec: tableau avec un seul élément doit retourner True&quot;</span>
+    
+    <span class="c1"># Cas où le tableau est trié par ordre croissant</span>
+    <span class="k">assert</span> <span class="n">tabup</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span><span class="p">,</span> <span class="s2">&quot;Échec: tableau trié doit retourner True&quot;</span>
+    
+    <span class="c1"># Cas où le tableau n&#39;est pas trié</span>
+    <span class="k">assert</span> <span class="n">tabup</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span><span class="p">,</span> <span class="s2">&quot;Échec: tableau non trié doit retourner False&quot;</span>
+    
+    <span class="c1"># Cas où le tableau contient des éléments égaux</span>
+    <span class="k">assert</span> <span class="n">tabup</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span><span class="p">,</span> <span class="s2">&quot;Échec: tableau avec éléments égaux triés doit retourner True&quot;</span>
+    
+    <span class="c1"># Cas où le tableau contient des valeurs décroissantes</span>
+    <span class="k">assert</span> <span class="n">tabup</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span><span class="p">,</span> <span class="s2">&quot;Échec: tableau décroissant doit retourner False&quot;</span>
+
+<span class="c1"># Exécuter les tests</span>
+<span class="n">test_tabup</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tous les tests avec message ont réussi.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tous les tests avec message ont réussi.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="blacksquare-exercice-tableaux-1d">
+<span id="exo-tablst"></span><h3><span class="section-number">21.1.7. </span><span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice (tableaux 1D)<a class="headerlink" href="#blacksquare-exercice-tableaux-1d" title="Permalink to this heading">#</a></h3>
+<p>Soit <code class="docutils literal notranslate"><span class="pre">t</span></code> un tableau 1D
+d’entiers de taille <code class="docutils literal notranslate"><span class="pre">n</span></code> arbitraire. Voici quelques traitements
+classiques de ces tableaux et les fonctions associées.</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">max_tab()</span></code> qui calcule et retourne la valeur maximale d’un tableau 1D.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_ind_max()</span></code> qui calcule et retourne le plus grand indice de la
+valeur maximale d’un tableau 1D.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min_ind_max()</span></code> : une modification de la fonction précédente qui
+calcule et retourne le plus petit indice de la valeur maximale d’un
+tableau 1D.</p></li>
+</ol>
+<p>Pour chacune de ces fonctions, deux questions.</p>
+<ol class="arabic simple">
+<li><p>Proposer des solutions itératives alternatives (<code class="docutils literal notranslate"><span class="pre">for</span></code> vs.
+<code class="docutils literal notranslate"><span class="pre">while</span></code>) lorsque qu’elles conduisent à des traitements différents.</p></li>
+<li><p>Tests unitaires : expliciter différents tableaux <code class="docutils literal notranslate"><span class="pre">t</span></code> qui
+correspondent, le cas échéant, à des cas particuliers de traitement.
+Les tester pour valider vos solutions.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">max_tab_for</span><span class="p">(</span><span class="n">t</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span><span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    calcule et retourne la valeur maximale de t</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">assert</span> <span class="n">n</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="c1"># pas de tableau vide</span>
+    
+    <span class="n">max_val</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">max_val</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">t</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">num</span> <span class="o">&gt;</span> <span class="n">max_val</span><span class="p">:</span>
+            <span class="n">max_val</span> <span class="o">=</span> <span class="n">num</span>
+    <span class="k">return</span> <span class="n">max_val</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">max_tab_while</span><span class="p">(</span><span class="n">t</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span><span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    calcule et retourne la valeur maximale de t</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">assert</span> <span class="n">n</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="c1"># pas de tableau vide    </span>
+        
+    <span class="n">max_val</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">max_val</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">max_val</span><span class="p">:</span>
+            <span class="n">max_val</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">max_val</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">max_ind_max_for</span><span class="p">(</span><span class="n">t</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span><span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    calcule et retourne le plus grand indice de la</span>
+<span class="sd">    valeur maximale de t</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">assert</span> <span class="n">n</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="c1"># pas de tableau vide</span>
+    
+    <span class="n">max_val</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">max_val</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">max_index</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">max_val</span><span class="p">:</span>  <span class="c1"># Using &gt;= to find the largest index</span>
+            <span class="n">max_val</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">max_index</span> <span class="o">=</span> <span class="n">i</span>
+    <span class="k">return</span> <span class="n">max_index</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">max_ind_max_while</span><span class="p">(</span><span class="n">t</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span><span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    calcule et retourne le plus grand indice de la</span>
+<span class="sd">    valeur maximale de t</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">assert</span> <span class="n">n</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="c1"># pas de tableau vide</span>
+    
+    <span class="n">max_val</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">max_val</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">max_index</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">max_val</span><span class="p">:</span>  <span class="c1"># Using &gt;= to find the largest index</span>
+            <span class="n">max_val</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">max_index</span> <span class="o">=</span> <span class="n">i</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">max_index</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">min_ind_max_for</span><span class="p">(</span><span class="n">t</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span><span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    calcule et retourne le plus petit indice de la valeur maximale de t</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">assert</span> <span class="n">n</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="c1"># pas de tableau vide</span>
+    
+    <span class="n">max_val</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">min_index</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">max_val</span> <span class="ow">or</span> <span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">max_val</span> <span class="ow">and</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">min_index</span><span class="p">):</span>
+            <span class="n">max_val</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">min_index</span> <span class="o">=</span> <span class="n">i</span>
+    <span class="k">return</span> <span class="n">min_index</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">min_ind_max_while</span><span class="p">(</span><span class="n">t</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span><span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    calcule et retourne le plus petit indice de la valeur maximale de t</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">assert</span> <span class="n">n</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="c1"># pas de tableau vide</span>
+    
+    <span class="n">max_val</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">min_index</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">max_val</span> <span class="ow">or</span> <span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">max_val</span> <span class="ow">and</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">min_index</span><span class="p">):</span>
+            <span class="n">max_val</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">min_index</span> <span class="o">=</span> <span class="n">i</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">min_index</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">tester_fonctions</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Teste les fonctions max_tab(), max_ind_max() et min_ind_max() avec différents cas.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Cas normal avec des valeurs différentes</span>
+    <span class="n">t1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+    <span class="k">assert</span> <span class="n">max_tab_for</span><span class="p">(</span><span class="n">t1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t1</span><span class="p">))</span> <span class="o">==</span> <span class="mi">7</span>
+    <span class="k">assert</span> <span class="n">max_ind_max_for</span><span class="p">(</span><span class="n">t1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t1</span><span class="p">))</span> <span class="o">==</span> <span class="mi">4</span>  <span class="c1"># Dernier 7</span>
+    <span class="k">assert</span> <span class="n">min_ind_max_for</span><span class="p">(</span><span class="n">t1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t1</span><span class="p">))</span> <span class="o">==</span> <span class="mi">2</span>  <span class="c1"># Premier 7</span>
+
+    <span class="c1"># Cas où tous les éléments sont identiques</span>
+    <span class="n">t2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+    <span class="k">assert</span> <span class="n">max_tab_for</span><span class="p">(</span><span class="n">t2</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t2</span><span class="p">))</span> <span class="o">==</span> <span class="mi">4</span>
+    <span class="k">assert</span> <span class="n">max_ind_max_for</span><span class="p">(</span><span class="n">t2</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t2</span><span class="p">))</span> <span class="o">==</span> <span class="mi">3</span>  <span class="c1"># Dernier 4</span>
+    <span class="k">assert</span> <span class="n">min_ind_max_for</span><span class="p">(</span><span class="n">t2</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t2</span><span class="p">))</span> <span class="o">==</span> <span class="mi">0</span>  <span class="c1"># Premier 4</span>
+
+    <span class="c1"># Cas avec un seul élément</span>
+    <span class="n">t3</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">]</span>
+    <span class="k">assert</span> <span class="n">max_tab_for</span><span class="p">(</span><span class="n">t3</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t3</span><span class="p">))</span> <span class="o">==</span> <span class="mi">10</span>
+    <span class="k">assert</span> <span class="n">max_ind_max_for</span><span class="p">(</span><span class="n">t3</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t3</span><span class="p">))</span> <span class="o">==</span> <span class="mi">0</span>
+    <span class="k">assert</span> <span class="n">min_ind_max_for</span><span class="p">(</span><span class="n">t3</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t3</span><span class="p">))</span> <span class="o">==</span> <span class="mi">0</span>
+
+    
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tous les tests sur les versions for sont passés avec succès.&quot;</span><span class="p">)</span>
+
+<span class="n">tester_fonctions</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tous les tests sur les versions for sont passés avec succès.
+</pre></div>
+</div>
+</div>
+</div>
+<p>On teste maintenant sur d’autres cas la validité des versions <code class="docutils literal notranslate"><span class="pre">for</span></code> et <code class="docutils literal notranslate"><span class="pre">while</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">test_cases</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>       <span class="c1"># Cas normal avec des valeurs max répétées</span>
+    <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">],</span>  <span class="c1"># Ordre croissant</span>
+    <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span>  <span class="c1"># Ordre décroissant</span>
+    <span class="p">[</span><span class="mi">7</span><span class="p">],</span>                   <span class="c1"># Tableau avec un seul élément</span>
+    <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>          <span class="c1"># Tous les éléments identiques</span>
+<span class="p">]</span>
+
+<span class="k">for</span> <span class="n">test</span> <span class="ow">in</span> <span class="n">test_cases</span><span class="p">:</span>
+    <span class="k">assert</span> <span class="n">max_tab_for</span><span class="p">(</span><span class="n">test</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">test</span><span class="p">))</span> <span class="o">==</span> <span class="n">max_tab_while</span><span class="p">(</span><span class="n">test</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">test</span><span class="p">))</span>
+    <span class="k">assert</span> <span class="n">max_ind_max_for</span><span class="p">(</span><span class="n">test</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">test</span><span class="p">))</span> <span class="o">==</span> <span class="n">max_ind_max_while</span><span class="p">(</span><span class="n">test</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">test</span><span class="p">))</span>
+    <span class="k">assert</span> <span class="n">min_ind_max_for</span><span class="p">(</span><span class="n">test</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">test</span><span class="p">))</span> <span class="o">==</span> <span class="n">min_ind_max_while</span><span class="p">(</span><span class="n">test</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">test</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="blacksquare-exercice-extrait-d-examen-2017-sans-machine">
+<h3><span class="section-number">21.1.8. </span><span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice (extrait d’examen 2017 sans machine)<a class="headerlink" href="#blacksquare-exercice-extrait-d-examen-2017-sans-machine" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Que calcule la fonction <code class="docutils literal notranslate"><span class="pre">m</span></code> suivante ?</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="k">def</span> <span class="nf">m</span><span class="p">(</span><span class="n">s</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">n</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">c</span> <span class="p">:</span> <span class="nb">str</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span> 
+<span class="w">        </span><span class="sd">&#39;&#39;&#39; role : à vous de deviner :) &#39;&#39;&#39;</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span> 
+            <span class="k">if</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">c</span><span class="p">:</span> 
+                <span class="n">res</span> <span class="o">=</span> <span class="n">res</span> <span class="o">+</span> <span class="mi">1</span> 
+        <span class="k">return</span> <span class="n">res</span>
+</pre></div>
+</div>
+<p>La fonction m calcule le nombre d’occurrences d’un caractère donné c dans les n premiers caractères de la chaîne s</p>
+<ol class="arabic simple" start="2">
+<li><p>Quel résultat produit l’exécution du code suivant ?</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">t</span> <span class="o">=</span> <span class="s2">&quot;anticonstitutionnellement&quot;</span> 
+    <span class="n">nba</span> <span class="o">=</span> <span class="n">m</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">),</span> <span class="s1">&#39;a&#39;</span><span class="p">)</span> 
+    <span class="n">nbe</span> <span class="o">=</span> <span class="n">m</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">),</span> <span class="s1">&#39;e&#39;</span><span class="p">)</span> 
+    <span class="n">nbl</span> <span class="o">=</span> <span class="n">m</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">),</span> <span class="s1">&#39;l&#39;</span><span class="p">)</span> 
+    <span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">),</span> <span class="n">nba</span><span class="p">,</span> <span class="n">nbe</span><span class="p">,</span> <span class="n">nbl</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">m</span><span class="p">(</span><span class="n">s</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">n</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">c</span> <span class="p">:</span> <span class="nb">str</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span> 
+<span class="w">        </span><span class="sd">&#39;&#39;&#39; role : à vous de deviner :) &#39;&#39;&#39;</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span> 
+            <span class="k">if</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">c</span><span class="p">:</span> 
+                <span class="n">res</span> <span class="o">=</span> <span class="n">res</span> <span class="o">+</span> <span class="mi">1</span> 
+        <span class="k">return</span> <span class="n">res</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>25 1 3 2</p>
+<ol class="arabic simple" start="3">
+<li><p>Utiliser la fonction <code class="docutils literal notranslate"><span class="pre">m</span></code> pour écrire une fonction <code class="docutils literal notranslate"><span class="pre">mm</span></code> qui identifie
+et retourne la lettre ayant le maximum d’occurrences dans une chaîne
+de caractères de longueur <code class="docutils literal notranslate"><span class="pre">n</span></code>. Si plusieurs lettres conviennent,
+l’algorithme identifiera celle dont l’occurrence est la plus tardive
+dans <code class="docutils literal notranslate"><span class="pre">s</span></code>. Par exemple <code class="docutils literal notranslate"><span class="pre">'o'</span></code> dans <code class="docutils literal notranslate"><span class="pre">'toto'</span></code>.</p></li>
+</ol>
+<p>Accompagner cette fonction de quelques tests unitaires pertinents.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">mm</span><span class="p">(</span><span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    - identifie et retourne la lettre ayant le maximum d&#39;occurrences dans une chaîne</span>
+<span class="sd">    de caractères de longueur `n`</span>
+<span class="sd">    - si plusieurs lettres conviennent, retiourne celle dont l&#39;occurrence est la plus tardive</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">assert</span> <span class="n">n</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    
+    <span class="n">max_occ</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">max_char</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">nbOcc</span> <span class="o">=</span> <span class="n">m</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">nbOcc</span> <span class="o">&gt;=</span> <span class="n">max_occ</span><span class="p">:</span>
+            <span class="n">max_occ</span> <span class="o">=</span> <span class="n">nbOcc</span>
+            <span class="n">max_char</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">max_char</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">tester_mm</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Teste la fonction mm() avec plusieurs cas.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">assert</span> <span class="n">mm</span><span class="p">(</span><span class="s2">&quot;toto&quot;</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;o&quot;</span>  <span class="c1"># &#39;o&#39; et &#39;t&#39; apparaissent 2 fois, mais &#39;o&#39; est plus tardif</span>
+    <span class="k">assert</span> <span class="n">mm</span><span class="p">(</span><span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;a&quot;</span>  <span class="c1"># &#39;a&#39; apparaît 3 fois (plus que &#39;n&#39; et &#39;b&#39;)</span>
+    <span class="k">assert</span> <span class="n">mm</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;l&quot;</span>  <span class="c1"># &#39;l&#39; apparaît 2 fois, et sa dernière apparition est tardive</span>
+    <span class="k">assert</span> <span class="n">mm</span><span class="p">(</span><span class="s2">&quot;mississippi&quot;</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;i&quot;</span>  <span class="c1"># &#39;i&#39; est le plus fréquent et le plus tardif</span>
+    <span class="k">assert</span> <span class="n">mm</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span>  <span class="c1"># Cas vide</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tous les tests pour mm() sont passés.&quot;</span><span class="p">)</span>
+
+<span class="n">tester_mm</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tous les tests pour mm() sont passés.
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Écrire le code qui utilise <code class="docutils literal notranslate"><span class="pre">mm</span></code> et fournit l’affichage suivant.</p></li>
+</ol>
+<blockquote>
+<div><p>t est la lettre qui apparaît le plus ( 5 fois) dans anticonstitutionnellement<br />
+o est la lettre qui apparaît le plus ( 2 fois) dans toto</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t1</span> <span class="o">=</span> <span class="s2">&quot;anticonstitutionnellement&quot;</span>
+<span class="n">t2</span> <span class="o">=</span> <span class="s2">&quot;toto&quot;</span>
+
+<span class="n">lettre1</span> <span class="o">=</span> <span class="n">mm</span><span class="p">(</span><span class="n">t1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t1</span><span class="p">))</span>
+<span class="n">lettre2</span> <span class="o">=</span> <span class="n">mm</span><span class="p">(</span><span class="n">t2</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t2</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">lettre1</span> <span class="p">,</span><span class="s2">&quot;est la lettre qui apparaît le plus (&quot;</span><span class="p">,</span><span class="n">m</span><span class="p">(</span><span class="n">t1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t1</span><span class="p">),</span> <span class="n">lettre1</span><span class="p">),</span><span class="s2">&quot; fois) dans&quot;</span><span class="p">,</span> <span class="n">t1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lettre2</span> <span class="p">,</span><span class="s2">&quot;est la lettre qui apparaît le plus (&quot;</span><span class="p">,</span><span class="n">m</span><span class="p">(</span><span class="n">t2</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t2</span><span class="p">),</span> <span class="n">lettre2</span><span class="p">),</span><span class="s2">&quot; fois) dans&quot;</span><span class="p">,</span> <span class="n">t2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>t est la lettre qui apparaît le plus ( 5  fois) dans anticonstitutionnellement
+o est la lettre qui apparaît le plus ( 2  fois) dans toto
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>Modifier <code class="docutils literal notranslate"><span class="pre">mm</span></code> pour que dans le cas d’une occurrence maximale
+multiple, l’algorithme identifie la lettre de première occurrence.
+Par exemple, <code class="docutils literal notranslate"><span class="pre">'t'</span></code> dans <code class="docutils literal notranslate"><span class="pre">'toto'</span></code>.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">mm</span><span class="p">(</span><span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Identifie et retourne la lettre ayant le maximum d&#39;occurrences dans une chaîne de longueur n.</span>
+<span class="sd">    Si plusieurs lettres ont le même nombre d&#39;occurrences, retourne celle qui apparaît en premier.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">assert</span> <span class="n">n</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+
+    <span class="n">max_occ</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># Nombre maximum d&#39;occurrences trouvées</span>
+    <span class="n">max_char</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>  <span class="c1"># Lettre ayant le maximum d&#39;occurrences</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>  <span class="c1"># Parcours chaque lettre de la chaîne en partant de la fin</span>
+        <span class="n">nbOcc</span> <span class="o">=</span> <span class="n">m</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>  <span class="c1"># Nombre d&#39;occurrences de la lettre s[i]</span>
+        <span class="k">if</span> <span class="n">nbOcc</span> <span class="o">&gt;</span> <span class="n">max_occ</span><span class="p">:</span> <span class="c1"># la première occurence maximale est conservée</span>
+            <span class="n">max_occ</span> <span class="o">=</span> <span class="n">nbOcc</span>
+            <span class="n">max_char</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+                
+
+    <span class="k">return</span> <span class="n">max_char</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">tester_mm</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Teste la fonction mm() avec plusieurs cas.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">assert</span> <span class="n">mm</span><span class="p">(</span><span class="s2">&quot;toto&quot;</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;t&quot;</span>  <span class="c1"># &#39;t&#39; et &#39;o&#39; apparaissent 2 fois, mais &#39;t&#39; est le premier</span>
+    <span class="k">assert</span> <span class="n">mm</span><span class="p">(</span><span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;a&quot;</span>  <span class="c1"># &#39;a&#39; apparaît 3 fois</span>
+    <span class="k">assert</span> <span class="n">mm</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;l&quot;</span>  <span class="c1"># &#39;l&#39; apparaît 2 fois, et le premier &#39;l&#39; est à l&#39;indice 2</span>
+    <span class="k">assert</span> <span class="n">mm</span><span class="p">(</span><span class="s2">&quot;abcabcabc&quot;</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;a&quot;</span>  <span class="c1"># &#39;a&#39;, &#39;b&#39;, &#39;c&#39; sont égaux mais &#39;a&#39; est le premier</span>
+    <span class="k">assert</span> <span class="n">mm</span><span class="p">(</span><span class="s2">&quot;aaaaa&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;a&quot;</span>  <span class="c1"># Seul &#39;a&#39; existe</span>
+    <span class="k">assert</span> <span class="n">mm</span><span class="p">(</span><span class="s2">&quot;abcdef&quot;</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;a&quot;</span>  <span class="c1"># Tous uniques, premier caractère choisi</span>
+    <span class="k">assert</span> <span class="n">mm</span><span class="p">(</span><span class="s2">&quot;mississippi&quot;</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;i&quot;</span>  <span class="c1"># &#39;i&#39; est le plus fréquent et son premier &#39;i&#39; est à l&#39;indice 1</span>
+    <span class="k">assert</span> <span class="n">mm</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span>  <span class="c1"># Cas vide</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tous les tests pour mm() sont passés.&quot;</span><span class="p">)</span>
+
+<span class="n">tester_mm</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tous les tests pour mm() sont passés.
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="6">
+<li><p>Réécrire la fonction <code class="docutils literal notranslate"><span class="pre">mm</span></code> de la
+question  <span class="xref std std-ref">que:mmavecm</span>
+sans utiliser la fonction <code class="docutils literal notranslate"><span class="pre">m</span></code>.
+Vérifier que les tests unitaires écrits plus haut valident cette version.</p></li>
+</ol>
+<p>(exo:palindromeiter)</p>
+</section>
+<section id="blacksquare-exercice-palindrome">
+<h3><span class="section-number">21.1.9. </span><span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice (palindrome)<a class="headerlink" href="#blacksquare-exercice-palindrome" title="Permalink to this heading">#</a></h3>
+<p>Un <em>palindrome</em> est un mot, ou un groupe de mots, dont l’ordre des lettres
+reste le même qu’on le lise de la droite vers la gauche ou inversement.
+Des exemples bien connus sont “été”, “kayak”, “mon nom”, “élu par cette
+crapule”. Ce dernier permet d’illustrer qu’on ne tient pas compte en
+général des accents, trémas, cédilles, ni des espaces. Dans cet exercice
+:</p>
+<ul class="simple">
+<li><p>un mot ou un groupe de mots est représenté par une chaîne de
+caractères (<code class="docutils literal notranslate"><span class="pre">str</span></code>),</p></li>
+<li><p>ces caractères sont sans accent, tréma, ni cédille : “ete”</p></li>
+<li><p>les espaces sont considérés comme des caractères : ainsi “elu par
+cette crapule” n’est pas un palindrome ici.</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p>Ecrire une fonction qui teste si un argument est ou non un
+palindrome et retourne le booléen correspondant.</p></li>
+<li><p>Valider votre fonction avec des tests unitaires.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">est_palindrome</span><span class="p">(</span><span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Vérifie si une chaîne de caractères est un palindrome.</span>
+<span class="sd">    La comparaison prend en compte les espaces et la casse.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">assert</span> <span class="n">n</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span> <span class="o">//</span> <span class="mi">2</span><span class="p">):</span>  <span class="c1"># On compare les caractères symétriques</span>
+        <span class="k">if</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="n">s</span><span class="p">[</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">i</span><span class="p">]:</span>  <span class="c1"># Vérifie si le premier != dernier, deuxième != avant-dernier...</span>
+            <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="kc">True</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">tester_est_palindrome</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Teste la fonction est_palindrome() avec plusieurs cas.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">assert</span> <span class="n">est_palindrome</span><span class="p">(</span><span class="s2">&quot;ete&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>  <span class="c1"># Mot palindrome</span>
+    <span class="k">assert</span> <span class="n">est_palindrome</span><span class="p">(</span><span class="s2">&quot;kayak&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>  <span class="c1"># Mot palindrome</span>
+    <span class="k">assert</span> <span class="n">est_palindrome</span><span class="p">(</span><span class="s2">&quot;mon nom&quot;</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>  <span class="c1"># Prend en compte l&#39;espace</span>
+    <span class="k">assert</span> <span class="n">est_palindrome</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span>  <span class="c1"># Pas un palindrome</span>
+    <span class="k">assert</span> <span class="n">est_palindrome</span><span class="p">(</span><span class="s2">&quot;aa&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>  <span class="c1"># Deux lettres identiques</span>
+    <span class="k">assert</span> <span class="n">est_palindrome</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>  <span class="c1"># Une seule lettre</span>
+    <span class="k">assert</span> <span class="n">est_palindrome</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>  <span class="c1"># Chaîne vide est un palindrome</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tous les tests pour est_palindrome() sont passés.&quot;</span><span class="p">)</span>
+
+<span class="n">tester_est_palindrome</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tous les tests pour est_palindrome() sont passés.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exercice-produit-scalaire">
+<h3><span class="section-number">21.1.10. </span>Exercice (produit scalaire)<a class="headerlink" href="#exercice-produit-scalaire" title="Permalink to this heading">#</a></h3>
+<p>Rappel : le produit scalaire deux vecteurs orthogonaux est nul.</p>
+<p>Ecrire les fonctions qui vérifie l’orthogonalité ou non de vecteurs</p>
+<ol class="arabic simple">
+<li><p>de taille 3,</p></li>
+<li><p>de taille arbitraire <span class="math notranslate nohighlight">\(n\)</span>.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">produit_scalaire_3D</span><span class="p">(</span><span class="n">v1</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">n1</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">v2</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">n2</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calcule le produit scalaire de deux vecteurs de dimension 3.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">v1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">v2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span>
+    
+    <span class="k">return</span> <span class="n">v1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">v2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">v1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">v2</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">v1</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">*</span> <span class="n">v2</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sont_orthogonaux_3D</span><span class="p">(</span><span class="n">v1</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">n1</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">v2</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">n2</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Vérifie si deux vecteurs de dimension 3 sont orthogonaux (produit scalaire nul).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">v1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">v2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span>
+
+    
+    <span class="k">return</span> <span class="n">produit_scalaire_3D</span><span class="p">(</span><span class="n">v1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">v2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">produit_scalaire_nD</span><span class="p">(</span><span class="n">v1</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">n1</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">v2</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">n2</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calcule le produit scalaire de deux vecteurs de dimension n.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">v1</span><span class="p">)</span> <span class="o">==</span> <span class="n">n1</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">v1</span><span class="p">)</span> <span class="o">==</span> <span class="n">n2</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">v1</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">v2</span><span class="p">)</span>
+    
+    <span class="n">produit</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">v1</span><span class="p">)):</span>
+        <span class="n">produit</span> <span class="o">+=</span> <span class="n">v1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">v2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    
+    <span class="k">return</span> <span class="n">produit</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sont_orthogonaux_nD</span><span class="p">(</span><span class="n">v1</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">n1</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">v2</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">n2</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Vérifie si deux vecteurs de dimension n sont orthogonaux.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">v1</span><span class="p">)</span> <span class="o">==</span> <span class="n">n1</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">v1</span><span class="p">)</span> <span class="o">==</span> <span class="n">n2</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">v1</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">v2</span><span class="p">)</span>
+
+    
+    <span class="k">return</span> <span class="n">produit_scalaire_nD</span><span class="p">(</span><span class="n">v1</span><span class="p">,</span> <span class="n">n1</span><span class="p">,</span> <span class="n">v2</span><span class="p">,</span> <span class="n">n2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">tester_orthogonalite</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Teste les fonctions de produit scalaire et d&#39;orthogonalité.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Tests en 3D</span>
+    <span class="k">assert</span> <span class="n">sont_orthogonaux_3D</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="mi">3</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>  <span class="c1"># Orthogonaux</span>
+    <span class="k">assert</span> <span class="n">sont_orthogonaux_3D</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="mi">3</span><span class="p">,</span> <span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>  <span class="c1"># Non orthogonaux</span>
+    <span class="k">assert</span> <span class="n">sont_orthogonaux_3D</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="mi">3</span><span class="p">,[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span>  <span class="c1"># Pas orthogonaux</span>
+
+    <span class="c1"># Tests en nD</span>
+    <span class="k">assert</span> <span class="n">sont_orthogonaux_nD</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="mi">4</span><span class="p">,</span> <span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span>  <span class="c1"># Pas orthogonaux</span>
+    <span class="k">assert</span> <span class="n">sont_orthogonaux_nD</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="mi">4</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>  <span class="c1"># Orthogonaux</span>
+    <span class="k">assert</span> <span class="n">sont_orthogonaux_nD</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="mi">4</span><span class="p">,</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span>  <span class="c1"># Pas orthogonaux</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tous les tests pour l&#39;orthogonalité sont passés.&quot;</span><span class="p">)</span>
+
+<span class="n">tester_orthogonalite</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tous les tests pour l&#39;orthogonalité sont passés.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="blacksquare-exercice-tableau-2d">
+<h3><span class="section-number">21.1.11. </span><span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice (tableau 2D)<a class="headerlink" href="#blacksquare-exercice-tableau-2d" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Écrire une fonction qui, pour les deux paramètres entiers <code class="docutils literal notranslate"><span class="pre">a</span></code> et <code class="docutils literal notranslate"><span class="pre">b</span></code> (<span class="math notranslate nohighlight">\(a  \le b\)</span>), calcule la table de multiplication entre les entiers compris entre <code class="docutils literal notranslate"><span class="pre">a</span></code> et <code class="docutils literal notranslate"><span class="pre">b</span></code> inclus. Le résultat attendu est un tableau 2D : la case <span class="math notranslate nohighlight">\((i,j)\)</span> du tableau contient le résultat de
+<span class="math notranslate nohighlight">\(i \times j\)</span>. La table des multiplications entre 1 et 10 est obtenue pour <span class="math notranslate nohighlight">\(a = 1\)</span> et <span class="math notranslate nohighlight">\(b= 10\)</span>.</p></li>
+<li><p>Utiliser cette fonction pour afficher cette table pour des valeurs de <code class="docutils literal notranslate"><span class="pre">a</span></code> et <code class="docutils literal notranslate"><span class="pre">b</span></code> entrées au clavier.</p></li>
+</ol>
+</section>
+<section id="blacksquare-exercice-matrices">
+<h3><span class="section-number">21.1.12. </span><span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice (matrices)<a class="headerlink" href="#blacksquare-exercice-matrices" title="Permalink to this heading">#</a></h3>
+<p>Ecrire les algorithmes de vérification suivants pour une matrice <span class="math notranslate nohighlight">\(M\)</span>
+donnée, carrée de taille <span class="math notranslate nohighlight">\(n\)</span> et à valeurs flottantes.</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(M\)</span> est diagonale ?</p></li>
+<li><p><span class="math notranslate nohighlight">\(M\)</span> est symétrique ?</p></li>
+<li><p><span class="math notranslate nohighlight">\(M\)</span> est égale à l’identité ?</p></li>
+<li><p><span class="math notranslate nohighlight">\(M\)</span> est l’inverse d’une autre matrice donnée <span class="math notranslate nohighlight">\(N\)</span> ?</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">est_diagonale</span><span class="p">(</span><span class="n">m</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]],</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="k">assert</span> <span class="n">n</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>  <span class="c1"># nb lignes</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span> <span class="c1"># chaque colonne</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">m</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">==</span> <span class="n">n</span>
+            
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">i</span> <span class="o">!=</span> <span class="n">j</span> <span class="ow">and</span> <span class="n">m</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># Vérifie les éléments hors diagonale</span>
+                <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="kc">True</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">est_symetrique</span><span class="p">(</span><span class="n">m</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]],</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="k">assert</span> <span class="n">n</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>  <span class="c1"># nb lignes</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span> <span class="c1"># chaque colonne</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">m</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">==</span> <span class="n">n</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>  <span class="c1"># Parcourt uniquement la moitié supérieure</span>
+            <span class="k">if</span> <span class="n">m</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">!=</span> <span class="n">m</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">i</span><span class="p">]:</span>
+                <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="kc">True</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">est_identite</span><span class="p">(</span><span class="n">m</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]],</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="k">assert</span> <span class="n">n</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>  <span class="c1"># nb lignes</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span> <span class="c1"># chaque colonne</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">m</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">==</span> <span class="n">n</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="n">j</span> <span class="ow">and</span> <span class="n">m</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">i</span> <span class="o">!=</span> <span class="n">j</span> <span class="ow">and</span> <span class="n">m</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">):</span>
+                <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="kc">True</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sont_inverse</span><span class="p">(</span><span class="n">m1</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]],</span> <span class="n">n1</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">m2</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]],</span> <span class="n">n2</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="k">assert</span> <span class="n">n1</span> <span class="o">==</span> <span class="n">n2</span>
+    <span class="k">assert</span> <span class="n">n1</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">m1</span><span class="p">)</span>  <span class="c1"># nb lignes</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n1</span><span class="p">):</span> <span class="c1"># chaque colonne</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">m1</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">==</span> <span class="n">n1</span>
+    <span class="k">assert</span> <span class="n">n2</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">m2</span><span class="p">)</span>  <span class="c1"># nb lignes</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n2</span><span class="p">):</span> <span class="c1"># chaque colonne</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">m2</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">==</span> <span class="n">n2</span>
+    
+    <span class="n">n</span> <span class="o">=</span> <span class="n">n1</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+            <span class="n">res</span> <span class="o">=</span> <span class="mf">0.0</span>
+            <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+                <span class="n">res</span> <span class="o">=</span> <span class="n">res</span> <span class="o">+</span> <span class="n">m1</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">k</span><span class="p">]</span> <span class="o">*</span> <span class="n">m2</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="c1"># (m1*m2)[i][j]</span>
+                
+            <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="n">j</span> <span class="ow">and</span> <span class="n">res</span> <span class="o">!=</span> <span class="mf">1.</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">i</span> <span class="o">!=</span> <span class="n">j</span> <span class="ow">and</span> <span class="n">res</span> <span class="o">!=</span> <span class="mf">0.</span><span class="p">):</span>
+                <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="kc">True</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exemple de matrices</span>
+<span class="n">M1</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">]]</span>  <span class="c1"># Matrice diagonale</span>
+<span class="n">M2</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]]</span>  <span class="c1"># Matrice symétrique</span>
+<span class="n">M3</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]</span>  <span class="c1"># Matrice identité</span>
+<span class="n">M4</span> <span class="o">=</span> <span class="p">[[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">]]</span>               <span class="c1"># Inverse d&#39;une matrice donnée</span>
+<span class="n">N4</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">]]</span>                   <span class="c1"># Matrice donnée</span>
+
+<span class="k">assert</span> <span class="n">est_diagonale</span><span class="p">(</span><span class="n">M1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">est_symetrique</span><span class="p">(</span><span class="n">M2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">est_identite</span><span class="p">(</span><span class="n">M3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">sont_inverse</span><span class="p">(</span><span class="n">M4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">N4</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./td-corr-2025"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="prealable-td.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">20. </span>Préalables</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectif-10">21.1. Objectif 10</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-factorielle">21.1.1. Exercice. (factorielle)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-exercice">21.1.2. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-codage-ascii">21.1.3. Exercice (codage ASCII)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exo-suites">21.1.4. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice">21.1.5. Exercice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">21.1.6. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-exercice-tableaux-1d">21.1.7. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice (tableaux 1D)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-exercice-extrait-d-examen-2017-sans-machine">21.1.8. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice (extrait d’examen 2017 sans machine)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-exercice-palindrome">21.1.9. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice (palindrome)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-produit-scalaire">21.1.10. Exercice (produit scalaire)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-exercice-tableau-2d">21.1.11. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice (tableau 2D)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-exercice-matrices">21.1.12. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice (matrices)</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ph. Langlois
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
