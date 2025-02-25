@@ -1,0 +1,1253 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>22. Feuille 2 : récursivité &#8212; Algo-Prog L1-S2</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.4cbf315f70debaebd550c87a6162cf0f.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'td-corr-2025/td2-corr-O10';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="21. Feuille 1 : fonctions" href="td1-corr-O10.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <header>
+  
+    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+    </div>
+  
+  </header>
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../bonjour.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Algo-Prog L1-S2 - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Algo-Prog L1-S2 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../bonjour.html">
+                    Bienvenu en Algo-Prog, version 2025 !
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Présentation</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../cm/0-presentation.html">Algo Prog en 2025</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/0a-competences.html">Compétences</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapitres</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../cm/1-fonctions.html">1. Fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/1b-fonctions-exemple.html">2. Un exemple, plein de fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/6-recursivite.html">3. Récursivité</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/8-rechercher.html">4. Rechercher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/4-complexite2025.html">5. Complexité</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/10-trier.html">6. Trier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/5-types_composes.html">7. Les types composés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/3-ES-fichiers.html">8. Entrées-sorties simples avec des fichiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/9-ES-formats.html">9. Les entrées-sorties (E/S) : formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/7-fonctions-avancees.html">10. Affectation et appel de fonction – aspects avancés</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Compléments</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../cm/01-synthese-s1.html">11. Synthèse des acquis du semestre 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/a0-boucles-avancees.html">12. Tableaux et boucles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/11-modules-utiles.html">13. Modules utiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/a1-booleens.html">14. Les booléens en python (&gt;3.6)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/a2-ndarray.html">15. Les ‘ndarray’ : de vrais tableaux en python</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">TD</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../td/prealable-td.html">16. Préalables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../td/td1.html">17. Feuille 1 : fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../td/td2.html">18. Feuille 2 : récursivité</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../td/td3.html">19. Feuille 3 : complexité</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Correction des TD objectif 10</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="prealable-corr-td.html">20. Préalables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="td1-corr-O10.html">21. Feuille 1 : fonctions</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">22. Feuille 2 : récursivité</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/phillanglois/Algo-Prog/main?urlpath=tree/algoprog2024/td-corr-2025/td2-corr-O10.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+<a href="https://github.com/phillanglois/Algo-Prog/issues/new?title=Issue%20on%20page%20%2Ftd-corr-2025/td2-corr-O10.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button"
+   title="Open an issue"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/td-corr-2025/td2-corr-O10.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Feuille 2 : récursivité</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectif-10">22.1. Objectif 10</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-exercice">22.1.1. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">22.1.2. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-blacksquare-exercice-si-il-n-y-avait-qu-un-seul-exercice-a-faire-c-est-celui-ci">22.1.3. <span class="math notranslate nohighlight">\(\blacksquare\blacksquare\)</span> Exercice. <strong>Si il n’y avait qu’un seul exercice à faire, c’est celui-ci !</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-exercice-recherche-dichotomique">22.1.4. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice.  (recherche dichotomique)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">22.1.5. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice. (recherche dichotomique)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-palindrome-encore">22.1.6. Exercice. (palindrome … encore)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-produit-scalaire-encore">22.1.7. Exercice. (produit scalaire … encore)</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="feuille-2-recursivite">
+<span id="td-td2-corr"></span><h1><span class="section-number">22. </span>Feuille 2 : récursivité<a class="headerlink" href="#feuille-2-recursivite" title="Permalink to this heading">#</a></h1>
+<ul class="simple">
+<li><p>Le symbole <span class="math notranslate nohighlight">\(\blacksquare\)</span> indique les exercices ou questions
+obligatoires. Commencez pas ceux-là.</p></li>
+<li><p>Les symboles <span class="math notranslate nohighlight">\(\star\)</span> et <span class="math notranslate nohighlight">\(\star\star\)</span> indiquent les exercices ou
+questions de difficulté relative plus importante.</p></li>
+</ul>
+<p><strong>Focus</strong></p>
+<ul class="simple">
+<li><p>récursivité et notions associées : arbre et pile des appels,
+environnements</p></li>
+<li><p>recherche dichotomique</p></li>
+</ul>
+<p><strong>Compétences</strong></p>
+<ul class="simple">
+<li><p>Savoir conduire une approche diviser pour régner et en déduire une
+solution récursive : application à des exemples calculatoires
+simples – comme ceux vus en cours, <em>e.g</em>. factorielles,
+exponentiation entière, exponentiation rapide.</p></li>
+<li><p>Savoir identifier la (ou les) terminaison, la récursion et
+l’initialisation d’un traitement avec un algorithme récursif :
+application à des exemples simples – comme ceux vus en cours, <em>e.g</em>.
+factorielles, exponentiation entière, exponentiation rapide.</p></li>
+<li><p>Savoir exprimer la complexité d’un algorithme récursif</p></li>
+<li><p>Savoir écrire sous la forme d’une fonction de même signature les
+versions itérative et récursive d’un traitement calculatoire simple</p></li>
+<li><p>Construire la pile des appels et son évolution lors d’un traitement
+récursif</p></li>
+</ul>
+<section id="objectif-10">
+<h2><span class="section-number">22.1. </span>Objectif 10<a class="headerlink" href="#objectif-10" title="Permalink to this heading">#</a></h2>
+<section id="blacksquare-exercice">
+<h3><span class="section-number">22.1.1. </span><span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice.<a class="headerlink" href="#blacksquare-exercice" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Écrire puis coder une version itérative de <span class="math notranslate nohighlight">\(u(n)= 2^n\)</span> pour <span class="math notranslate nohighlight">\(n&gt;0\)</span></p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">twopower_it</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span><span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    calcule et retourne 2**n pour n &gt; 0 </span>
+<span class="sd">    version itérative</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">assert</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span>
+    
+    <span class="n">res</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">res</span> <span class="o">*</span> <span class="mi">2</span>
+    <span class="k">return</span> <span class="n">res</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">factorial</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">tu_2_to_n</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="c1"># valeurs de base</span>
+    <span class="k">assert</span> <span class="n">twopower_it</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span>
+    <span class="k">assert</span> <span class="n">twopower_it</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span>
+
+    <span class="c1"># tests aléatoires </span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">twopower_it</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">twopower_it</span><span class="p">(</span><span class="n">val</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">twopower_it</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span> <span class="o">**</span> <span class="n">val</span>
+        
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;twopower_it: tests unitaires OK&quot;</span><span class="p">)</span> 
+        
+<span class="n">tu_2_to_n</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>twopower_it: tests unitaires OK
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Écrire puis coder une version récursive de ce même calcul.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">twopower</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    calcule u(n)=2**n pour n &gt; 0</span>
+<span class="sd">    version récursive</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">assert</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span>
+    
+    <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mi">2</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">twopower</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">tu_2_to_n</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="c1"># valeurs de base</span>
+    <span class="k">assert</span> <span class="n">twopower</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span>
+    <span class="k">assert</span> <span class="n">twopower</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span>
+
+    <span class="c1"># tests aléatoires </span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">twopower</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">twopower_it</span><span class="p">(</span><span class="n">val</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">twopower</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span> <span class="o">**</span> <span class="n">val</span>
+    
+    <span class="c1"># tests aléatoires avec version iterative de référence</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="p">):</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">twopower</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="o">==</span> <span class="n">twopower_it</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;twopower: tests unitaires OK&quot;</span><span class="p">)</span> 
+        
+<span class="n">tu_2_to_n</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>twopower: tests unitaires OK
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Expliciter l’arbre des appels et les calculs associés lors de l’évaluation de <span class="math notranslate nohighlight">\(u(5)\)</span>. Combien d’appels récursifs à <span class="math notranslate nohighlight">\(u\)</span> sont nécessaires ?</p></li>
+</ol>
+<p>u(5) -&gt; u(4) -&gt; u(3) -&gt; u(2) -&gt; u(1) qui termine les 5 appels.</p>
+<ol class="arabic simple" start="4">
+<li><p>Expliciter l’évolution de la pile des appels lors de l’évaluation de <span class="math notranslate nohighlight">\(u(5)\)</span>.</p></li>
+</ol>
+<ol class="arabic simple" start="5">
+<li><p>Compter le nombre d’opérations arithmétiques effectuées dans le calcul itératif de <span class="math notranslate nohighlight">\(u(5)\)</span>.</p></li>
+</ol>
+<p>4 *</p>
+<ol class="arabic simple" start="6">
+<li><p>Faire de même pour le calcul récursif.</p></li>
+</ol>
+<p>1 * par appel excepté celui de terminaison donc 4 *</p>
+<ol class="arabic simple" start="7">
+<li><p>Conclure.</p></li>
+</ol>
+<p>Les traitements itératif et récursif sont identiques.</p>
+</section>
+<section id="id1">
+<h3><span class="section-number">22.1.2. </span><span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice.<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<p>De façon plus générale qu’à l’exercice précédent, on calcule la valeur de <span class="math notranslate nohighlight">\(x^n\)</span> où <span class="math notranslate nohighlight">\(n\)</span> et un entier positif, et
+<span class="math notranslate nohighlight">\(x\)</span> un flottant. On rappelle que <span class="math notranslate nohighlight">\(x^0 = 1.0\)</span>.</p>
+<ol class="arabic simple">
+<li><p>Rappeler et écrire les algorithmes itératif et récursif (naïf) qui calculent <span class="math notranslate nohighlight">\(x^n\)</span>.</p></li>
+</ol>
+<ul class="simple">
+<li><p>Version récursive : voir cours section 3.4.1</p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p>Expliciter l’évolution de la pile des appels lors de l’évaluation de <span class="math notranslate nohighlight">\(x^n\)</span> pour <span class="math notranslate nohighlight">\(n = 8\)</span> et <span class="math notranslate nohighlight">\(n = 9\)</span>.</p></li>
+</ol>
+<ol class="arabic simple" start="3">
+<li><p>Combien de multiplications sont nécessaires à ces calculs pour <span class="math notranslate nohighlight">\(n=2, 4, 8, 16, \dots, 2^p\)</span> ?</p></li>
+</ol>
+<ul class="simple">
+<li><p>n = 2 -&gt;  2 *</p></li>
+<li><p>n = 4 -&gt;  4 *</p></li>
+<li><p>n = 8 -&gt;  8 *</p></li>
+<li><p>n = 16 -&gt; 16 *</p></li>
+<li><p>n = 2<strong>p -&gt; 2</strong>p</p></li>
+</ul>
+<ol class="arabic simple" start="4">
+<li><p>Rappeler le principe de l’exponentiation entière rapide.</p></li>
+</ol>
+<ul class="simple">
+<li><p>Version récursive : voir cours section 3.4.2</p></li>
+</ul>
+<ol class="arabic simple" start="5">
+<li><p>Ecrire les versions itératives et récursives de cet algorithme. On pourra utiliser l’opérateur python <code class="docutils literal notranslate"><span class="pre">divmod</span></code>.</p></li>
+</ol>
+<ol class="arabic simple" start="6">
+<li><p>Dans chacun des cas, combien de multiplications sont nécessaires à ce calcul pour
+<span class="math notranslate nohighlight">\(n=2, 4, 8, 16, \dots, 2^p\)</span> ? Conclure.</p></li>
+</ol>
+<ul class="simple">
+<li><p>n = 2 -&gt;  1 *</p></li>
+<li><p>n = 4 -&gt;  2 *</p></li>
+<li><p>n = 8 -&gt;  3 *</p></li>
+<li><p>n = 16 -&gt; 4 *</p></li>
+<li><p>n = 2**p -&gt; p = log_2(n)</p></li>
+</ul>
+<ol class="arabic simple" start="7">
+<li><p>Compter le nombre d’appels récursifs pour les valeurs suivantes de <span class="math notranslate nohighlight">\(n = 7, 8, 9\)</span> et <span class="math notranslate nohighlight">\(n = 63, 64, 65\)</span>. Conclure.</p></li>
+</ol>
+<ul class="simple">
+<li><p>n = 7 -&gt; 4 appels  (7 - 3 - 1 - 0)</p></li>
+<li><p>n = 8 -&gt; 5 appels  (8 - 4 - 2 - 1 - 0)</p></li>
+<li><p>n = 9 -&gt; 5 appels  (9 - 4 - 2 - 1 - 0)</p></li>
+<li><p>n = 63 -&gt; 7 appels   (63 - 31 - 15 - 7 - 3 - 1 - 0)</p></li>
+<li><p>n = 64 -&gt; 8 appels  (64 - 32 - 16 - 8 - 4 - 2 - 1 - 0)</p></li>
+<li><p>n = 65 -&gt; 8 appels  (65 - 32 - 16 - 8 - 4 - 2 - 1 - 0)</p></li>
+</ul>
+<p>On a <span class="math notranslate nohighlight">\(\log_2(n) = p\)</span>  pour <span class="math notranslate nohighlight">\(n\)</span> tel que <span class="math notranslate nohighlight">\(2^p \le n &lt; 2\)</span>{p+1}$.</p>
+<ol class="arabic simple" start="8">
+<li><p>(<span class="math notranslate nohighlight">\(\star\)</span>) Expliciter l’évolution de la pile des appels lors de l’évaluation de <span class="math notranslate nohighlight">\(x^n\)</span> pour des valeurs de <span class="math notranslate nohighlight">\(n\)</span> que vous choisirez dans la liste précédentes comme significatives des différents cas de traitement.</p></li>
+</ol>
+<p>On note u(n) la fonction <span class="math notranslate nohighlight">\(x^n\)</span>.
+On exhibe la pile des appels pour <span class="math notranslate nohighlight">\(x^7\)</span> et <span class="math notranslate nohighlight">\(x^8\)</span>.
+Celle de <span class="math notranslate nohighlight">\(x^9\)</span> est identique à celle de <span class="math notranslate nohighlight">\(x^8\)</span>.</p>
+</section>
+<section id="blacksquare-blacksquare-exercice-si-il-n-y-avait-qu-un-seul-exercice-a-faire-c-est-celui-ci">
+<h3><span class="section-number">22.1.3. </span><span class="math notranslate nohighlight">\(\blacksquare\blacksquare\)</span> Exercice. <strong>Si il n’y avait qu’un seul exercice à faire, c’est celui-ci !</strong><a class="headerlink" href="#blacksquare-blacksquare-exercice-si-il-n-y-avait-qu-un-seul-exercice-a-faire-c-est-celui-ci" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Donner la forme récursive qui produit le même traitement que celui
+d’une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code> qui (parcourt et) affiche les indices entiers
+successifs de 11 à 1.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">loop_down</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;Boucle for decroissante</span>
+<span class="sd">       affichage de n a 1&#39;&#39;&#39;</span>
+    <span class="c1"># terminaison une fois arrivé à 0</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+        <span class="n">loop_down</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+<span class="c1"># appel principal</span>
+<span class="n">loop_down</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>11
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Même question pour obtenir l’affichage : 1, 2, …, 10, 11.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">loop_up</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;Boucle for croissante</span>
+<span class="sd">       affichage de 1 a n&#39;&#39;&#39;</span>
+    <span class="c1"># terminaison une fois arrivé à 0 aussi !</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">loop_up</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+<span class="c1"># appel principal</span>
+<span class="n">loop_up</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="blacksquare-exercice-recherche-dichotomique">
+<h3><span class="section-number">22.1.4. </span><span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice.  (recherche dichotomique)<a class="headerlink" href="#blacksquare-exercice-recherche-dichotomique" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Écrire un algorithme itératif qui calcule un booléen indiquant si un
+tableau d’entiers <strong>donné trié</strong> par ordre croissant contient une
+valeur donnée. La recherche sera effectuée par dichotomie.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dichotomie_iterative</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">t</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim_t</span><span class="p">:</span> <span class="nb">int</span><span class="p">,):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;recherche dichotomique : version itérative</span>
+<span class="sd">    - val :int cherché</span>
+<span class="sd">    - t : tableau d&#39;int de taille dim_t, trié par ordre croissant</span>
+<span class="sd">    sortie : vrai si val est dans t, faux sinon</span>
+<span class="sd">            </span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">assert</span> <span class="n">dim_t</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">dim_t</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="n">present</span> <span class="o">=</span> <span class="kc">False</span> <span class="c1"># la réponse</span>
+    <span class="n">g</span> <span class="o">=</span> <span class="mi">0</span>          <span class="c1"># indice de gauche du tableau exploré</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">dim_t</span> <span class="o">-</span> <span class="mi">1</span>  <span class="c1"># indice de droite du tableau exploré</span>
+    
+    <span class="k">while</span> <span class="p">(</span><span class="n">present</span> <span class="o">==</span> <span class="kc">False</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">g</span> <span class="o">&lt;=</span> <span class="n">d</span><span class="p">):</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="p">(</span><span class="n">g</span> <span class="o">+</span> <span class="n">d</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span>   <span class="c1"># indice milieu de t[g,d]</span>
+        <span class="k">if</span> <span class="n">t</span><span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="o">==</span> <span class="n">val</span><span class="p">:</span>
+            <span class="n">present</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">elif</span> <span class="n">t</span><span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">val</span><span class="p">:</span> <span class="c1"># val est dans la partie gauche : t[g,m-1]</span>
+            <span class="n">d</span> <span class="o">=</span> <span class="n">m</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>            <span class="c1"># val est dans la partie droite : t[m+1,d]</span>
+            <span class="n">g</span> <span class="o">=</span> <span class="n">m</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">present</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39;tests unitaires appel de recherche dichotomique (itérative)&#39;&#39;&#39;</span>
+
+<span class="n">tab10</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span> <span class="c1"># tab10 est bien rangé par ordre croissant</span>
+
+<span class="c1"># 3 est présent dans tab10</span>
+<span class="k">assert</span> <span class="n">dichotomie_iterative</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">tab10</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab10</span><span class="p">))</span>
+
+<span class="c1"># 13 n&#39;est pas présent dans tab10</span>
+<span class="k">assert</span> <span class="ow">not</span><span class="p">(</span><span class="n">dichotomie_iterative</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="n">tab10</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab10</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Écrire une fonction récursive <code class="docutils literal notranslate"><span class="pre">trouve</span></code> (c’est-à-dire son en-tête,
+puis l’appel puis le corps) qui retourne le booléen précédent en
+appliquant aussi une recherche par dichotomie.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>        
+<span class="k">def</span> <span class="nf">trouve</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">t</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim_t</span><span class="p">:</span> <span class="nb">int</span><span class="p">,)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;recherche dichotomique de val dans t de taille dim_t </span>
+<span class="sd">    encapsulation et appel principal</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">def</span> <span class="nf">dichotomie</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">t</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim_t</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">g</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;recherche dichotomique : version récursive</span>
+<span class="sd">        recherche val dans t[g, d] et retourne True ou False</span>
+<span class="sd">        entrées. val : int, t: tableau d&#39;int de taille n,</span>
+<span class="sd">        g, d : int indices gauche et droite</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="n">g</span> <span class="o">&gt;</span> <span class="n">d</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span> <span class="c1"># t est vide</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="p">(</span><span class="n">g</span> <span class="o">+</span> <span class="n">d</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span> 
+        <span class="k">if</span> <span class="n">t</span><span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="o">==</span> <span class="n">val</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">elif</span> <span class="n">val</span> <span class="o">&lt;</span> <span class="n">t</span><span class="p">[</span><span class="n">m</span><span class="p">]:</span> <span class="c1"># val est dans la partie gauche</span>
+            <span class="n">dim_t</span> <span class="o">=</span> <span class="n">m</span> <span class="o">-</span> <span class="n">g</span> 
+            <span class="k">return</span> <span class="n">dichotomie</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">dim_t</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">m</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>            <span class="c1"># val est dans la partie droite</span>
+            <span class="n">dim_t</span> <span class="o">=</span> <span class="n">d</span> <span class="o">-</span> <span class="n">m</span>
+            <span class="k">return</span> <span class="n">dichotomie</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">dim_t</span><span class="p">,</span> <span class="n">m</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">dichotomie</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">dim_t</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">dim_t</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id2">
+<h3><span class="section-number">22.1.5. </span><span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice. (recherche dichotomique)<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Dérouler l’algorithme de recherche dichotomique (version itérative)
+pour rechercher la valeur 3 dans le tableau [0,1,2,3,4,5,6,7,8,9].</p></li>
+<li><p>Donner une valeur à rechercher qui minimise le nombre d’itérations
+de la recherche.</p></li>
+<li><p>Même question pour celle qui maximise ce nombre.</p></li>
+</ol>
+<p><strong>Réponses.</strong> voir code et traitements de la question suivante.</p>
+<ol class="arabic simple" start="4">
+<li><p>Coder ces traitements et vérifier votre analyse.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dichotomie_iterative</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">t</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim_t</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">aff</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;recherche dichotomique : version itérative avec affichages</span>
+<span class="sd">    - val :int cherché</span>
+<span class="sd">    - t : tableau d&#39;int de taille dim_t, trié par ordre croissant</span>
+<span class="sd">    - aff == True affichera le num de l&#39;itération et l&#39;intervalle de recherche</span>
+<span class="sd">    sortie : vrai si val est dans t, faux sinon</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">assert</span> <span class="n">dim_t</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">dim_t</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+        
+    
+    <span class="n">present</span> <span class="o">=</span> <span class="kc">False</span> <span class="c1"># la réponse</span>
+    <span class="n">g</span> <span class="o">=</span> <span class="mi">0</span>          <span class="c1"># indice de gauche du tableau exploré</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">dim_t</span> <span class="o">-</span> <span class="mi">1</span>  <span class="c1"># indice de droite du tableau exploré</span>
+    <span class="n">nbit</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;nb iter, g, d, m, t[m]&quot;</span><span class="p">)</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">present</span> <span class="o">==</span> <span class="kc">False</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">g</span> <span class="o">&lt;=</span> <span class="n">d</span><span class="p">):</span>
+        <span class="n">nbit</span> <span class="o">=</span> <span class="n">nbit</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="p">(</span><span class="n">g</span> <span class="o">+</span> <span class="n">d</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span>   <span class="c1"># indice milieu de t[g,d]</span>
+        <span class="k">if</span> <span class="n">aff</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  </span><span class="si">{:^4d}</span><span class="s2">  </span><span class="si">{:^4d}{:^3d}{:3d}{:4d}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nbit</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">t</span><span class="p">[</span><span class="n">m</span><span class="p">]))</span>
+        <span class="k">if</span> <span class="n">t</span><span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="o">==</span> <span class="n">val</span><span class="p">:</span>
+            <span class="n">present</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">elif</span> <span class="n">t</span><span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">val</span><span class="p">:</span> <span class="c1"># val est dans la partie gauche : t[g,m-1]</span>
+            <span class="n">d</span> <span class="o">=</span> <span class="n">m</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>            <span class="c1"># val est dans la partie droite : t[m+1,d]</span>
+            <span class="n">g</span> <span class="o">=</span> <span class="n">m</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">present</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39;appel de recherche dichotomique (itérative)&#39;&#39;&#39;</span>
+
+<span class="n">tab10</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span> <span class="c1"># tab10 est bien rangé par ordre croissant</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;tab10 =&quot;</span><span class="p">,</span> <span class="n">tab10</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;nb itérations pour trouver 3 dans tab10&quot;</span><span class="p">)</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">dichotomie_iterative</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">tab10</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab10</span><span class="p">),</span> <span class="kc">True</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;meilleur cas pour tab10: trouver 4&quot;</span><span class="p">)</span>
+<span class="n">best</span> <span class="o">=</span> <span class="n">dichotomie_iterative</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">tab10</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab10</span><span class="p">),</span> <span class="kc">True</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;pire cas pour tab10: trouver 9&quot;</span><span class="p">)</span>
+<span class="n">worst</span> <span class="o">=</span> <span class="n">dichotomie_iterative</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="n">tab10</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab10</span><span class="p">),</span> <span class="kc">True</span><span class="p">)</span>
+              
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tab10 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+nb itérations pour trouver 3 dans tab10
+nb iter, g, d, m, t[m]
+   1     0   9   4   4
+   2     0   3   1   1
+   3     2   3   2   2
+   4     3   3   3   3
+meilleur cas pour tab10: trouver 4
+nb iter, g, d, m, t[m]
+   1     0   9   4   4
+pire cas pour tab10: trouver 9
+nb iter, g, d, m, t[m]
+   1     0   9   4   4
+   2     5   9   7   7
+   3     8   9   8   8
+   4     9   9   9   9
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>Reprendre les questions précédentes sur une version récursive de cette recherche en complétant avec l’évolution de la pile des appels de ce traitement (rechercher la valeur 3 dans le tableau indiqué).</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dichotomie</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">t</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim_t</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">g</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">nb_app</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">aff</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;recherche dichotomique : version récursive</span>
+<span class="sd">    recherche val dans t[g, d] et retourne True ou False</span>
+<span class="sd">    entrées. val : int, t: tableau d&#39;int de taille n,</span>
+<span class="sd">    g, d : int indices gauche et droite</span>
+<span class="sd">    -- specificites questions et affichage</span>
+<span class="sd">    nb_app: nb d&#39;appels -- nécessaire si aff = True </span>
+<span class="sd">    aff: affiche les traces d&#39;appels et les paramètres assciés </span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">nb_app</span> <span class="o">=</span> <span class="n">nb_app</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">g</span> <span class="o">&gt;</span> <span class="n">d</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;terminaison après </span><span class="si">{:3d}</span><span class="s2"> appels et g &gt; d: </span><span class="si">{:3d}</span><span class="s2"> </span><span class="si">{:3d}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nb_app</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">d</span><span class="p">))</span>
+        <span class="k">return</span> <span class="kc">False</span> <span class="c1"># t est vide</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="p">(</span><span class="n">g</span> <span class="o">+</span> <span class="n">d</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span> 
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;appel </span><span class="si">{:^4d}</span><span class="s2">,</span><span class="si">{:^4d}{:^3d}{:3d}{:4d}</span><span class="s2"> (g, d, m, t[m])&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nb_app</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">t</span><span class="p">[</span><span class="n">m</span><span class="p">]))</span>
+    <span class="k">if</span> <span class="n">t</span><span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="o">==</span> <span class="n">val</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;recherche gagnante après </span><span class="si">{:3d}</span><span class="s2"> appels&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nb_app</span><span class="p">))</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">elif</span> <span class="n">val</span> <span class="o">&lt;</span> <span class="n">t</span><span class="p">[</span><span class="n">m</span><span class="p">]:</span> <span class="c1"># val est dans la partie gauche</span>
+        <span class="n">dim_t</span> <span class="o">=</span> <span class="n">m</span> <span class="o">-</span> <span class="n">g</span> 
+        <span class="k">return</span> <span class="n">dichotomie</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">dim_t</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">m</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">nb_app</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>            <span class="c1"># val est dans la partie droite</span>
+        <span class="n">dim_t</span> <span class="o">=</span> <span class="n">d</span> <span class="o">-</span> <span class="n">m</span>
+        <span class="k">return</span> <span class="n">dichotomie</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">dim_t</span><span class="p">,</span> <span class="n">m</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">nb_app</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+        
+<span class="k">def</span> <span class="nf">trouve</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">t</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim_t</span><span class="p">:</span> <span class="nb">int</span><span class="p">,)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;recherche dichotomique de val dans t de taille dim_t </span>
+<span class="sd">    encapsulation et appel principal</span>
+<span class="sd">    --</span>
+<span class="sd">    version avec affichage des traces</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">return</span> <span class="n">dichotomie</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">dim_t</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">dim_t</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39;appel de recherche dichotomique&#39;&#39;&#39;</span>
+
+<span class="n">tab10</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span> <span class="c1"># tab10 est bien rangé par ordre croissant</span>
+
+<span class="c1">#for i in range(len(tab10)):</span>
+<span class="c1">#    print(tab10[i] )</span>
+
+<span class="c1"># 3 est présent dans tab10</span>
+<span class="n">rep_vrai</span> <span class="o">=</span> <span class="n">trouve</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">tab10</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab10</span><span class="p">))</span>
+
+<span class="c1"># 13 n&#39;est pas présent dans tab10</span>
+<span class="n">rep_fausse</span> <span class="o">=</span> <span class="n">trouve</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="n">tab10</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab10</span><span class="p">))</span>
+
+<span class="k">assert</span> <span class="n">rep_vrai</span>
+<span class="k">assert</span> <span class="ow">not</span><span class="p">(</span><span class="n">rep_fausse</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>appel  1  , 0   9   4   4 (g, d, m, t[m])
+appel  2  , 0   3   1   1 (g, d, m, t[m])
+appel  3  , 2   3   2   2 (g, d, m, t[m])
+appel  4  , 3   3   3   3 (g, d, m, t[m])
+recherche gagnante après   4 appels
+appel  1  , 0   9   4   4 (g, d, m, t[m])
+appel  2  , 5   9   7   7 (g, d, m, t[m])
+appel  3  , 8   9   8   8 (g, d, m, t[m])
+appel  4  , 9   9   9   9 (g, d, m, t[m])
+terminaison après   5 appels et g &gt; d:  10   9
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exercice-palindrome-encore">
+<h3><span class="section-number">22.1.6. </span>Exercice. (palindrome … encore)<a class="headerlink" href="#exercice-palindrome-encore" title="Permalink to this heading">#</a></h3>
+<p>Dans l’exercice de la feuille 1, on a défini et donné un algorithme itératif qui vérifie si un mot est ou non un palindrome.</p>
+<ol class="arabic simple">
+<li><p>Donner une version récursive de cette vérification.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">est_palin</span><span class="p">(</span><span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">g</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    verifie si s[g, d[ est ou non un palindrome</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="n">g</span> <span class="o">&lt;</span> <span class="n">d</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">s</span><span class="p">[</span><span class="n">g</span><span class="p">]</span> <span class="o">!=</span> <span class="n">s</span><span class="p">[</span><span class="n">d</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">est_palin</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">g</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">d</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="kc">True</span>
+    
+<span class="k">def</span> <span class="nf">est_palindrome</span><span class="p">(</span><span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    verifie si la str s de longuer n est ou non un palindrome</span>
+<span class="sd">    version recursive</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">==</span> <span class="n">n</span>
+    
+    <span class="k">return</span> <span class="n">est_palin</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Vérifier sa correction avec les tests unitaires de la version itérative.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">tester_est_palindrome</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Teste la fonction est_palindrome() avec plusieurs cas.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">assert</span> <span class="n">est_palindrome</span><span class="p">(</span><span class="s2">&quot;ete&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>  <span class="c1"># Mot palindrome</span>
+    <span class="k">assert</span> <span class="n">est_palindrome</span><span class="p">(</span><span class="s2">&quot;kayak&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>  <span class="c1"># Mot palindrome</span>
+    <span class="k">assert</span> <span class="n">est_palindrome</span><span class="p">(</span><span class="s2">&quot;mon nom&quot;</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>  <span class="c1"># Prend en compte l&#39;espace</span>
+    <span class="k">assert</span> <span class="n">est_palindrome</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span>  <span class="c1"># Pas un palindrome, mot de longueur impaire</span>
+    <span class="k">assert</span> <span class="n">est_palindrome</span><span class="p">(</span><span class="s2">&quot;helllo&quot;</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span>  <span class="c1"># Pas un palindrome, mot de longueur paire</span>
+    <span class="k">assert</span> <span class="n">est_palindrome</span><span class="p">(</span><span class="s2">&quot;aa&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>  <span class="c1"># Deux lettres identiques</span>
+    <span class="k">assert</span> <span class="n">est_palindrome</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>  <span class="c1"># Une seule lettre</span>
+    <span class="k">assert</span> <span class="n">est_palindrome</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>  <span class="c1"># Chaîne vide est un palindrome</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tous les tests pour est_palindrome() sont passés.&quot;</span><span class="p">)</span>
+
+<span class="n">tester_est_palindrome</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tous les tests pour est_palindrome() sont passés.
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Expliciter l’évolution de la pile des appels des vérifications de “kayak” et de “mamama”.</p></li>
+</ol>
+<p>Notons m= “kayak”, f() = est_palin(m, ) et g() = est_palindrome()</p>
+<p>Notons m= “mamama”, f() = est_palin(m, ) et g() = est_palindrome(),</p>
+</section>
+<section id="exercice-produit-scalaire-encore">
+<h3><span class="section-number">22.1.7. </span>Exercice. (produit scalaire … encore)<a class="headerlink" href="#exercice-produit-scalaire-encore" title="Permalink to this heading">#</a></h3>
+<p>Dans l’exercice de la feuille 1, on a écrit un algorithme itératif qui calcule le produit scalaire de deux vecteurs de taille <span class="math notranslate nohighlight">\(n\)</span>.</p>
+<ol class="arabic simple">
+<li><p>Donner une version récursive de ce calcul.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">produit_scalaire</span><span class="p">(</span><span class="n">u1</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="n">n1</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">u2</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="n">n2</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    calcule et retourne le produit scalaire de u1 et u2 vecteurs de longueurs n1 == n2</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">assert</span> <span class="n">n1</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">u1</span><span class="p">)</span> <span class="ow">and</span> <span class="n">n2</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">u2</span><span class="p">)</span> <span class="ow">and</span> <span class="n">n1</span> <span class="o">==</span> <span class="n">n2</span>
+
+    <span class="k">def</span> <span class="nf">ps_rec</span><span class="p">(</span><span class="n">u1</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="n">u2</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        fonction encapsulee qui </span>
+<span class="sd">        calcule récursivement le produit scalaire u1[0, n[ * u2[0, n[ </span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">u1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">u2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">u1</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">u2</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="n">ps_rec</span><span class="p">(</span><span class="n">u1</span><span class="p">,</span> <span class="n">u2</span><span class="p">,</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">ps_rec</span><span class="p">(</span><span class="n">u1</span><span class="p">,</span> <span class="n">u2</span><span class="p">,</span> <span class="n">n1</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tests produit_scalaire()</span>
+<span class="k">assert</span> <span class="n">produit_scalaire</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="mi">3</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mf">0.0</span>  <span class="c1"># vecteurs de base orthogonaux</span>
+<span class="k">assert</span> <span class="n">produit_scalaire</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="mi">3</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mf">1.0</span>  <span class="c1"># vecteurs de base</span>
+<span class="k">assert</span> <span class="n">produit_scalaire</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="mi">3</span><span class="p">,</span> <span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mf">0.0</span>  <span class="c1"># vecteurs orthogonaux</span>
+<span class="k">assert</span> <span class="n">produit_scalaire</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="mi">3</span><span class="p">,[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mf">3.0</span>  <span class="c1"># </span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Comme dans la feuille 1, appliquer cette version récursive pour vérifier si deux vecteurs donnés sont ou non orthogonaux.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sont_orthogonaux</span><span class="p">(</span><span class="n">u1</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="n">n1</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">u2</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="n">n2</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    vérifie si u1 et u2 vecteurs de longueur n1 == n2 sont orthogonaux ou non</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">assert</span> <span class="n">n1</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">u1</span><span class="p">)</span> <span class="ow">and</span> <span class="n">n2</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">u2</span><span class="p">)</span> <span class="ow">and</span> <span class="n">n1</span> <span class="o">==</span> <span class="n">n2</span>
+                     
+    <span class="k">return</span> <span class="n">produit_scalaire</span><span class="p">(</span><span class="n">u1</span><span class="p">,</span> <span class="n">n1</span><span class="p">,</span> <span class="n">u2</span><span class="p">,</span> <span class="n">n2</span><span class="p">)</span> <span class="o">==</span> <span class="mf">0.0</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">tester_orthogonalite</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Teste la fonction d&#39;orthogonalité.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Tests en 3D</span>
+    <span class="k">assert</span> <span class="n">sont_orthogonaux</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="mi">3</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>  <span class="c1"># Orthogonaux</span>
+    <span class="k">assert</span> <span class="n">sont_orthogonaux</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="mi">3</span><span class="p">,</span> <span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>  <span class="c1"># Non orthogonaux</span>
+    <span class="k">assert</span> <span class="n">sont_orthogonaux</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="mi">3</span><span class="p">,[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span>  <span class="c1"># Pas orthogonaux</span>
+
+    <span class="c1"># Tests en nD</span>
+    <span class="k">assert</span> <span class="n">sont_orthogonaux</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="mi">4</span><span class="p">,</span> <span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span>  <span class="c1"># Pas orthogonaux</span>
+    <span class="k">assert</span> <span class="n">sont_orthogonaux</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="mi">4</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>  <span class="c1"># Orthogonaux</span>
+    <span class="k">assert</span> <span class="n">sont_orthogonaux</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="mi">4</span><span class="p">,</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span>  <span class="c1"># Pas orthogonaux</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tous les tests pour l&#39;orthogonalité sont passés.&quot;</span><span class="p">)</span>
+
+<span class="n">tester_orthogonalite</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tous les tests pour l&#39;orthogonalité sont passés.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./td-corr-2025"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="td1-corr-O10.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">21. </span>Feuille 1 : fonctions</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectif-10">22.1. Objectif 10</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-exercice">22.1.1. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">22.1.2. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-blacksquare-exercice-si-il-n-y-avait-qu-un-seul-exercice-a-faire-c-est-celui-ci">22.1.3. <span class="math notranslate nohighlight">\(\blacksquare\blacksquare\)</span> Exercice. <strong>Si il n’y avait qu’un seul exercice à faire, c’est celui-ci !</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-exercice-recherche-dichotomique">22.1.4. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice.  (recherche dichotomique)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">22.1.5. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice. (recherche dichotomique)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-palindrome-encore">22.1.6. Exercice. (palindrome … encore)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-produit-scalaire-encore">22.1.7. Exercice. (produit scalaire … encore)</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ph. Langlois
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
