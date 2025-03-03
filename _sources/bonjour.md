@@ -73,9 +73,11 @@ Vacances en s9, s16-s17
 
 ## Semaine 10
 
-- Compétences :
+- Compétences : chapitres "fonctions, récursivité, rechercher"
 - Avant le TD : 
-- Avant le CM de jeudi : 
+  - tous les exercices des feuilles 1 et 2 selon votre objectif  
+  - arriver en TD avec ses dernières questions avant le CC de vendredi  
+- Avant le CM de jeudi : lire chapitre _Les types composés_ jusqu'à la section 7.4 inclus. 
 
 ## Semaine 11
 
