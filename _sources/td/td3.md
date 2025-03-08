@@ -139,10 +139,12 @@ On reprend [l'exercice précédent](exo:doubleboucle) en introduisant un nombre
 	```
 
 
-Rappel. Il est utile de connaître la valeur de la somme des $n$ premiers
+Rappel. Il est utile de connaitre la valeur de la somme des $n$ premiers
 entiers et son équivalent asymptotique :
 
-$$1+2 +  \dots + n =  \sum_{k=1}^n k = n(n+1)/2  \approx n^2/2 =  \theta(n^2) et donc = \cal{O}(n^2).$$
+$$1+2 +  \dots + n =  \sum_{k=1}^n k = n(n+1)/2  \approx n^2/2.$$
+
+Complexité asymptotique : ainsi cette somme à une tendance asymptotique (polynomiale) quadratique.
 
 
 ### $\blacksquare $ Exercice 
@@ -183,7 +185,7 @@ On s'intéresse à la complexité en temps de la fonction suivante.
 4.  Donner l'expression de cette complexité.
 5.  Combien y a-t-il d'opérations arithmétiques dans l'exécution de
     cette fonction pour un paramètre effectif $N$ donné. ?
-6.  Expliciter sa complexité asymptotique.
+6.  Quelle est sa complexité asymptotique ?
 
 
 ## Objectif 20
@@ -211,8 +213,16 @@ Considérons la fonction `f()` suivante.
     fonction.
 6.  Donner une expression précise de sa complexité quand $n=2^p$.
     Détailler votre réponse.
-7.  En déduire sa complexité asymptotique.
-8.  A quelle famille d'algorithmes appartient ce traitement ?
+7.  Quelle est sa complexité asymptotique ?
+
+
+### Exercice
+
+Effectuer une analyse expérimentale de la
+complexité pour comparer l'efficacité des algorithmes de recherche
+itérative et dichotomique (cas de l'entrée triée). Dégager les
+comportements dans le meilleur cas, dans le pire cas de chacun d'entre eux.
+
 
 ### Exercice -- qui commence en Objectif 10 et finit en Objectif 20
 
@@ -242,7 +252,7 @@ _Note :_ Cet exercice fait appel à la fonction python `append()` qui ajoute une
         de complexité et estimer de la façon la plus précise possible le
         nombre de chaque opération arithmétique exécutée, estimation qui
         sera exprimée comme une fonction de ce paramètre.
-    3.  En déduire la complexité asymptotique de cet algorithme.
+    3.  Quelle est la complexité asymptotique de cet algorithme ?
 2.  Deuxième algorithme.
     1.  Justifier que l'algorithme suivant résout le même problème que
         l'algorithme précédent.
@@ -270,7 +280,7 @@ _Note :_ Cet exercice fait appel à la fonction python `append()` qui ajoute une
         de complexité et estimer de la façon la plus précise possible le
         nombre de chaque opération arithmétique exécutée, estimation qui
         sera exprimée comme une fonction de ce paramètre.
-    3.  En déduire la complexité asymptotique de cet algorithme.
+    3.  Quelle est la complexité asymptotique de cet algorithme.
     4.  Que conclure ?
 
 
@@ -307,17 +317,15 @@ _Note :_ Cet exercice fait appel à la fonction python `append()` qui ajoute une
     3.  En utilisant les indications suivantes, déduire la complexité asymptotique de
         cet algorithme.
         
-        Indications : Il n'est pas difficile de montrer la majoration
-        asymptotique suivante :
+        Indications : On peut montrer les comportements asymptotiques suivants.
 
-        1.  $ \sum_{i=0}^{n}  \sqrt{i} =  \mathcal{O}( n  \sqrt{n})$.
-
-        On peut obtenir les équivalents asymptotiques suivants :
-
-        -   $\sum_{i=0}^{n} \sqrt{i} \sim \frac{2}{3} n \sqrt{n} = \theta(n \sqrt{n})$;
-
-        -   $\sum_{i=0}^{n} [1+ \sum_{j=0}^{\sqrt{i}} (1+\sqrt{i-j^2})]
-                  \sim \frac{\pi}{8} n^2 = \theta(n^2)$.
+        1.  $\sum_{i=0}^{n} \sqrt{i} \sim \frac{2}{3} n \sqrt{n} $;
+        ainsi la tendance asymptotique de cette somme est  semi-linéaire, et plus précisément "en $n^{3/2}$".
+        
+        2.   $\sum_{i=0}^{n} [1+ \sum_{j=0}^{\sqrt{i}} (1+\sqrt{i-j^2})]
+                  \sim \frac{\pi}{8} n^2$ ;
+        ainsi la tendance asymptotique de cette somme est quadratique.
+                  .
     4.  Que conclure ?
 4.  ($\star$) Quatrième algorithme.
     1.  Justifier que l'algorithme suivant résout le même problème que
@@ -347,12 +355,11 @@ _Note :_ Cet exercice fait appel à la fonction python `append()` qui ajoute une
         de complexité et estimer de la façon la plus précise possible le
         nombre de chaque opération arithmétique exécutée, estimation qui
         sera exprimée comme une fonction de ce paramètre.
-    3.  En utilisant un logiciel de calcul formel ou les relations
-        précédentes, en déduire la complexité asymptotique de cet
-        algorithme.
+    3.  ($\star\star$)En utilisant un logiciel de calcul formel (comme  [`SageMath`](https://www.sagemath.org/fr/)) 
+   ou les relations précédentes, en déduire la complexité asymptotique de cet algorithme.
     4.  Que conclure ?
 5.  ($\star$) Cinquième algorithme.
-    1.  Justifier que i) l'algorithme suivant résolve le même problème
+    1.  Justifier que i) l'algorithme suivant résoud le même problème
         que les algorithmes précédents, mais ii) effectue un traitement
         différent de ces derniers.
 
@@ -399,9 +406,3 @@ _Note :_ La question 2 fait appel à la récursivité.
 4.   ($\star$) Qu'en conclure ?
 
 
-### Exercice
-
-Effectuer une analyse expérimentale de la
-complexité pour comparer l'efficacité des algorithmes de recherche
-itérative et dichotomique (cas de l'entrée triée). Dégager les
-comportements dans le meilleur cas, dans le pire cas de chacun d'entre eux.

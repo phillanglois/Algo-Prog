@@ -218,6 +218,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../td/td2.html">18. Feuille 2 : récursivité</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../td/td3.html">19. Feuille 3 : complexité</a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Correction des TD objectif 10</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../td-corr-2025/prealable-corr-td.html">20. Préalables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../td-corr-2025/td1-corr-O10.html">21. Feuille 1 : fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../td-corr-2025/td2-corr-O10.html">22. Feuille 2 : récursivité</a></li>
+</ul>
 
     </div>
 </nav></div>
@@ -464,7 +470,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="les-types-composes">
 <span id="ch-typescomposes"></span><h1><span class="section-number">7. </span>Les types composés<a class="headerlink" href="#les-types-composes" title="Permalink to this heading">#</a></h1>
-<p>Mis à jour : Mar 07, 2025, lecture : 15
+<p>Mis à jour : Mar 08, 2025, lecture : 15
 minutes minimum, PhL.</p>
 <p>Les types composés ou <em>conteneurs</em> de python sont  introduits  dans ce chapitre :</p>
 <ul class="simple">
@@ -1243,7 +1249,7 @@ lst: [&#39;r&#39;, &#39;a&#39;, &#39;n&#39;, &#39;t&#39;, &#39;a&#39;, &#39;n&#3
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
 [3, 1, 2] [3, 1, 2]
-4406244608 4406244608
+4431698560 4431698560
 </pre></div>
 </div>
 </div>
@@ -1279,7 +1285,7 @@ False
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>duplication par affectation de tranche complète : 
 False True
-4406244032 4406244608
+4431847680 4431698560
 </pre></div>
 </div>
 </div>
@@ -1680,9 +1686,9 @@ bnor! 5
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>abc 4348401232
-abc 4348401232
-abcdef 4406525104
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>abc 4373845584
+abc 4373845584
+abcdef 4431900912
 </pre></div>
 </div>
 </div>
@@ -1831,10 +1837,10 @@ BONJOUR ! True False
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4406356720
-4406356720
-4401010608
-4401010608
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4431745712
+4431745712
+4431745968
+4431745968
 </pre></div>
 </div>
 </div>
@@ -2066,7 +2072,7 @@ Bonjour &quot;collègue&quot; !
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;i&#39;, &#39;a&#39;, &#39;u&#39;, &#39;o&#39;, &#39;y&#39;, &#39;e&#39;} 6
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;i&#39;, &#39;a&#39;, &#39;o&#39;, &#39;e&#39;, &#39;y&#39;, &#39;u&#39;} 6
 </pre></div>
 </div>
 </div>
@@ -2080,7 +2086,7 @@ Bonjour &quot;collègue&quot; !
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>frozenset({&#39;b&#39;, &#39;t&#39;, &#39;n&#39;, &#39;a&#39;, &#39;o&#39;, &#39;u&#39;, &#39;e&#39;, &#39;m&#39;, &#39; &#39;, &#39;l&#39;}) 10
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>frozenset({&#39;b&#39;, &#39; &#39;, &#39;m&#39;, &#39;a&#39;, &#39;o&#39;, &#39;t&#39;, &#39;n&#39;, &#39;l&#39;, &#39;e&#39;, &#39;u&#39;}) 10
 </pre></div>
 </div>
 </div>
@@ -2093,8 +2099,8 @@ Bonjour &quot;collègue&quot; !
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>aie : {&#39;i&#39;, &#39;e&#39;, &#39;a&#39;}
-voyelles : {&#39;i&#39;, &#39;a&#39;, &#39;u&#39;, &#39;o&#39;, &#39;y&#39;, &#39;e&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>aie : {&#39;a&#39;, &#39;i&#39;, &#39;e&#39;}
+voyelles : {&#39;i&#39;, &#39;a&#39;, &#39;o&#39;, &#39;e&#39;, &#39;y&#39;, &#39;u&#39;}
 </pre></div>
 </div>
 </div>
@@ -2141,11 +2147,11 @@ False
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>union : {&#39;i&#39;, &#39;a&#39;, &#39;u&#39;, &#39;o&#39;, &#39;y&#39;, &#39;e&#39;}
-autre union : {&#39;b&#39;, &#39;i&#39;, &#39;a&#39;, &#39;u&#39;, &#39;o&#39;, &#39;y&#39;, &#39;f&#39;, &#39;e&#39;}
-intersection : {&#39;i&#39;, &#39;a&#39;, &#39;e&#39;}
-difference :  set() {&#39;b&#39;, &#39;f&#39;}
-difference symétrique:  {&#39;y&#39;, &#39;u&#39;, &#39;o&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>union : {&#39;i&#39;, &#39;a&#39;, &#39;o&#39;, &#39;e&#39;, &#39;y&#39;, &#39;u&#39;}
+autre union : {&#39;i&#39;, &#39;b&#39;, &#39;a&#39;, &#39;o&#39;, &#39;f&#39;, &#39;e&#39;, &#39;y&#39;, &#39;u&#39;}
+intersection : {&#39;a&#39;, &#39;i&#39;, &#39;e&#39;}
+difference :  set() {&#39;f&#39;, &#39;b&#39;}
+difference symétrique:  {&#39;o&#39;, &#39;y&#39;, &#39;u&#39;}
 inclusions : True True False False
 </pre></div>
 </div>
@@ -2286,7 +2292,7 @@ ses paramètres formels. On appelle aussi cette homonymie de la <em>surcharge de
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;1&#39;: &#39;a&#39;, &#39;2&#39;: &#39;b&#39;} 2
-{&#39;2&#39;, &#39;1&#39;} 2
+{&#39;1&#39;, &#39;2&#39;} 2
 </pre></div>
 </div>
 </div>

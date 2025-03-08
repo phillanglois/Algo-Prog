@@ -81,9 +81,9 @@ Vacances en s9, s16-s17
 
 ## Semaine 11
 
-- Compétences :
-- Avant le TD : 
-- Avant le CM de jeudi : 
+- Compétences : chapitre "complexité"
+- Avant le TD : relire chapitre "complexité" et commencer feuille 3 selon ses objectifs
+- Avant le CM de **mardi** : lire chapitre _Les types composés_
 
 ## Semaine 12
 

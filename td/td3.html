@@ -63,6 +63,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'td/td3';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="20. Préalables" href="../td-corr-2025/prealable-corr-td.html" />
     <link rel="prev" title="18. Feuille 2 : récursivité" href="td2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -216,6 +217,12 @@
 <li class="toctree-l1"><a class="reference internal" href="td1.html">17. Feuille 1 : fonctions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="td2.html">18. Feuille 2 : récursivité</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">19. Feuille 3 : complexité</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Correction des TD objectif 10</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../td-corr-2025/prealable-corr-td.html">20. Préalables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../td-corr-2025/td1-corr-O10.html">21. Feuille 1 : fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../td-corr-2025/td2-corr-O10.html">22. Feuille 2 : récursivité</a></li>
 </ul>
 
     </div>
@@ -390,10 +397,10 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectif-20">19.2. Objectif 20</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">19.2.1. Exercice (extrait d’examen)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-qui-commence-en-objectif-10-et-finit-en-objectif-20">19.2.2. Exercice – qui commence en Objectif 10 et finit en Objectif 20</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice">19.2.3. Exercice</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-exercice">19.2.4. (<span class="math notranslate nohighlight">\(\star\)</span>) Exercice</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">19.2.5. Exercice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice">19.2.2. Exercice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-qui-commence-en-objectif-10-et-finit-en-objectif-20">19.2.3. Exercice – qui commence en Objectif 10 et finit en Objectif 20</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">19.2.4. Exercice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-exercice">19.2.5. (<span class="math notranslate nohighlight">\(\star\)</span>) Exercice</a></li>
 </ul>
 </li>
 </ul>
@@ -516,10 +523,11 @@ cet algorithme ?</p>
 </div>
 </li>
 </ol>
-<p>Rappel. Il est utile de connaître la valeur de la somme des <span class="math notranslate nohighlight">\(n\)</span> premiers
+<p>Rappel. Il est utile de connaitre la valeur de la somme des <span class="math notranslate nohighlight">\(n\)</span> premiers
 entiers et son équivalent asymptotique :</p>
 <div class="math notranslate nohighlight">
-\[1+2 +  \dots + n =  \sum_{k=1}^n k = n(n+1)/2  \approx n^2/2 =  \theta(n^2) et donc = \cal{O}(n^2).\]</div>
+\[1+2 +  \dots + n =  \sum_{k=1}^n k = n(n+1)/2  \approx n^2/2.\]</div>
+<p>Complexité asymptotique : ainsi cette somme à une tendance asymptotique (polynomiale) quadratique.</p>
 </section>
 <section id="id2">
 <h3><span class="section-number">19.1.4. </span><span class="math notranslate nohighlight">\(\blacksquare \)</span> Exercice<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
@@ -559,7 +567,7 @@ Veillez bien à répondre aux points suivants : para-mètre et mesure de la comp
 <li><p>Donner l’expression de cette complexité.</p></li>
 <li><p>Combien y a-t-il d’opérations arithmétiques dans l’exécution de
 cette fonction pour un paramètre effectif <span class="math notranslate nohighlight">\(N\)</span> donné. ?</p></li>
-<li><p>Expliciter sa complexité asymptotique.</p></li>
+<li><p>Quelle est sa complexité asymptotique ?</p></li>
 </ol>
 </section>
 </section>
@@ -589,12 +597,18 @@ cette fonction pour un paramètre effectif <span class="math notranslate nohighl
 fonction.</p></li>
 <li><p>Donner une expression précise de sa complexité quand <span class="math notranslate nohighlight">\(n=2^p\)</span>.
 Détailler votre réponse.</p></li>
-<li><p>En déduire sa complexité asymptotique.</p></li>
-<li><p>A quelle famille d’algorithmes appartient ce traitement ?</p></li>
+<li><p>Quelle est sa complexité asymptotique ?</p></li>
 </ol>
 </section>
+<section id="exercice">
+<h3><span class="section-number">19.2.2. </span>Exercice<a class="headerlink" href="#exercice" title="Permalink to this heading">#</a></h3>
+<p>Effectuer une analyse expérimentale de la
+complexité pour comparer l’efficacité des algorithmes de recherche
+itérative et dichotomique (cas de l’entrée triée). Dégager les
+comportements dans le meilleur cas, dans le pire cas de chacun d’entre eux.</p>
+</section>
 <section id="exercice-qui-commence-en-objectif-10-et-finit-en-objectif-20">
-<h3><span class="section-number">19.2.2. </span>Exercice – qui commence en Objectif 10 et finit en Objectif 20<a class="headerlink" href="#exercice-qui-commence-en-objectif-10-et-finit-en-objectif-20" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">19.2.3. </span>Exercice – qui commence en Objectif 10 et finit en Objectif 20<a class="headerlink" href="#exercice-qui-commence-en-objectif-10-et-finit-en-objectif-20" title="Permalink to this heading">#</a></h3>
 <p><em>Note :</em> Cet exercice fait appel à la fonction python <code class="docutils literal notranslate"><span class="pre">append()</span></code> qui ajoute une valeur à une liste.</p>
 <ol class="arabic">
 <li><p>Premier algorithme.</p>
@@ -617,7 +631,7 @@ Détailler votre réponse.</p></li>
 de complexité et estimer de la façon la plus précise possible le
 nombre de chaque opération arithmétique exécutée, estimation qui
 sera exprimée comme une fonction de ce paramètre.</p></li>
-<li><p>En déduire la complexité asymptotique de cet algorithme.</p></li>
+<li><p>Quelle est la complexité asymptotique de cet algorithme ?</p></li>
 </ol>
 </li>
 <li><p>Deuxième algorithme.</p>
@@ -645,7 +659,7 @@ l’algorithme précédent.</p>
 de complexité et estimer de la façon la plus précise possible le
 nombre de chaque opération arithmétique exécutée, estimation qui
 sera exprimée comme une fonction de ce paramètre.</p></li>
-<li><p>En déduire la complexité asymptotique de cet algorithme.</p></li>
+<li><p>Quelle est la complexité asymptotique de cet algorithme.</p></li>
 <li><p>Que conclure ?</p></li>
 </ol>
 </li>
@@ -678,17 +692,15 @@ nombre de chaque opération arithmétique exécutée, estimation qui
 sera exprimée comme une fonction de ce paramètre.</p></li>
 <li><p>En utilisant les indications suivantes, déduire la complexité asymptotique de
 cet algorithme.</p>
-<p>Indications : Il n’est pas difficile de montrer la majoration
-asymptotique suivante :</p>
+<p>Indications : On peut montrer les comportements asymptotiques suivants.</p>
 <ol class="arabic simple">
-<li><p><span class="math notranslate nohighlight">\( \sum_{i=0}^{n}  \sqrt{i} =  \mathcal{O}( n  \sqrt{n})\)</span>.</p></li>
-</ol>
-<p>On peut obtenir les équivalents asymptotiques suivants :</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(\sum_{i=0}^{n} \sqrt{i} \sim \frac{2}{3} n \sqrt{n} = \theta(n \sqrt{n})\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(\sum_{i=0}^{n} \sqrt{i} \sim \frac{2}{3} n \sqrt{n} \)</span>;
+ainsi la tendance asymptotique de cette somme est  semi-linéaire, et plus précisément “en <span class="math notranslate nohighlight">\(n^{3/2}\)</span>”.</p></li>
 <li><p><span class="math notranslate nohighlight">\(\sum_{i=0}^{n} [1+ \sum_{j=0}^{\sqrt{i}} (1+\sqrt{i-j^2})]
-      \sim \frac{\pi}{8} n^2 = \theta(n^2)\)</span>.</p></li>
-</ul>
+     \sim \frac{\pi}{8} n^2\)</span> ;
+ainsi la tendance asymptotique de cette somme est quadratique.
+.</p></li>
+</ol>
 </li>
 <li><p>Que conclure ?</p></li>
 </ol>
@@ -718,15 +730,14 @@ les algorithmes précédents.</p>
 de complexité et estimer de la façon la plus précise possible le
 nombre de chaque opération arithmétique exécutée, estimation qui
 sera exprimée comme une fonction de ce paramètre.</p></li>
-<li><p>En utilisant un logiciel de calcul formel ou les relations
-précédentes, en déduire la complexité asymptotique de cet
-algorithme.</p></li>
+<li><p>(<span class="math notranslate nohighlight">\(\star\star\)</span>)En utilisant un logiciel de calcul formel (comme  <a class="reference external" href="https://www.sagemath.org/fr/"><code class="docutils literal notranslate"><span class="pre">SageMath</span></code></a>)
+ou les relations précédentes, en déduire la complexité asymptotique de cet algorithme.</p></li>
 <li><p>Que conclure ?</p></li>
 </ol>
 </li>
 <li><p>(<span class="math notranslate nohighlight">\(\star\)</span>) Cinquième algorithme.</p>
 <ol class="arabic">
-<li><p>Justifier que i) l’algorithme suivant résolve le même problème
+<li><p>Justifier que i) l’algorithme suivant résoud le même problème
 que les algorithmes précédents, mais ii) effectue un traitement
 différent de ces derniers.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span><span class="p">,</span> <span class="n">floor</span> 
@@ -750,14 +761,14 @@ sera exprimée comme une fonction de ce paramètre.</p></li>
 </li>
 </ol>
 </section>
-<section id="exercice">
-<h3><span class="section-number">19.2.3. </span>Exercice<a class="headerlink" href="#exercice" title="Permalink to this heading">#</a></h3>
+<section id="id4">
+<h3><span class="section-number">19.2.4. </span>Exercice<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
 <p>Effectuer une analyse expérimentale de la
 complexité des cinq algorithmes précédents pour des valeurs de <span class="math notranslate nohighlight">\(n\)</span>
 choisies de façon adaptée entre 10 et 10 000.</p>
 </section>
 <section id="star-exercice">
-<h3><span class="section-number">19.2.4. </span>(<span class="math notranslate nohighlight">\(\star\)</span>) Exercice<a class="headerlink" href="#star-exercice" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">19.2.5. </span>(<span class="math notranslate nohighlight">\(\star\)</span>) Exercice<a class="headerlink" href="#star-exercice" title="Permalink to this heading">#</a></h3>
 <p><em>Note :</em> La question 2 fait appel à la récursivité.</p>
 <ol class="arabic simple">
 <li><p>Rappeler l’algorithme (classique) du produit de deux matrices carrés
@@ -768,13 +779,6 @@ noter sa complexité asymptotique</p></li>
 expérimentale de leurs complexités pour <span class="math notranslate nohighlight">\(n\)</span> variant raisonnablement.</p></li>
 <li><p>(<span class="math notranslate nohighlight">\(\star\)</span>) Qu’en conclure ?</p></li>
 </ol>
-</section>
-<section id="id4">
-<h3><span class="section-number">19.2.5. </span>Exercice<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
-<p>Effectuer une analyse expérimentale de la
-complexité pour comparer l’efficacité des algorithmes de recherche
-itérative et dichotomique (cas de l’entrée triée). Dégager les
-comportements dans le meilleur cas, dans le pire cas de chacun d’entre eux.</p>
 </section>
 </section>
 </section>
@@ -818,6 +822,15 @@ comportements dans le meilleur cas, dans le pire cas de chacun d’entre eux.</p
         <p class="prev-next-title"><span class="section-number">18. </span>Feuille 2 : récursivité</p>
       </div>
     </a>
+    <a class="right-next"
+       href="../td-corr-2025/prealable-corr-td.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">20. </span>Préalables</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -845,10 +858,10 @@ comportements dans le meilleur cas, dans le pire cas de chacun d’entre eux.</p
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectif-20">19.2. Objectif 20</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">19.2.1. Exercice (extrait d’examen)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-qui-commence-en-objectif-10-et-finit-en-objectif-20">19.2.2. Exercice – qui commence en Objectif 10 et finit en Objectif 20</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice">19.2.3. Exercice</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-exercice">19.2.4. (<span class="math notranslate nohighlight">\(\star\)</span>) Exercice</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">19.2.5. Exercice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice">19.2.2. Exercice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-qui-commence-en-objectif-10-et-finit-en-objectif-20">19.2.3. Exercice – qui commence en Objectif 10 et finit en Objectif 20</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">19.2.4. Exercice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-exercice">19.2.5. (<span class="math notranslate nohighlight">\(\star\)</span>) Exercice</a></li>
 </ul>
 </li>
 </ul>
