@@ -149,14 +149,16 @@ Complexité asymptotique : ainsi cette somme à une tendance asymptotique (polyn
 
 ### $\blacksquare $ Exercice 
 
-Effectuer l'analyse de la complexité des fonctions
-suivantes (déjà étudiées dans la feuille 2).
+On rappelle la spécification des fonctions `est_egal()`  et `nb_communs()` d'abord sur des tableaux de dimension 1 (vecteurs) (cf. feuille 2).
 
-1.  La fonction `est_egal()` qui réalise la comparaison entre deux
-    tableaux et retourne le booléen correspondant.
+- La fonction `est_egal()`  compare  deux tableaux de dimension 1 et retourne le booléen correspondant. 
+On convient que deux tableaux sont égaux si leurs tailles sont égales et si leurs valeurs sont égales deux à deux.
+- La fonction `nb_communs()` retourne le nombre de valeurs communes entre deux tableaux de dimension 1. Ici aussi la comparaison s'effectue "deux à deux" (valeurs de même indice).
 
-2.  La fonction `nb_communs()` qui retourne le nombre de valeurs
-    communes entre deux tableaux.
+1. Effectuer l'analyse de la complexité de ces fonctions.
+2. Ces fonctions s'étendent à des tableaux 2D ou de façon plus générale à des tableaux multi-dimensionnels.
+L’égalité entre tableaux multi-dimensionnels suppose l’égalité des dimensions, des tailles deux à deux dans chaque dimension, et des valeurs deux à deux pour toutes les valeurs du tableau.
+Effectuer l'analyse de la complexité de ces fonctions pour des tableaux 2D.
 
 
 ### Exercice (palindrome ... toujours) extrait d'examen

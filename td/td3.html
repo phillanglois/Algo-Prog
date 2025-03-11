@@ -531,13 +531,17 @@ entiers et son équivalent asymptotique :</p>
 </section>
 <section id="id2">
 <h3><span class="section-number">19.1.4. </span><span class="math notranslate nohighlight">\(\blacksquare \)</span> Exercice<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
-<p>Effectuer l’analyse de la complexité des fonctions
-suivantes (déjà étudiées dans la feuille 2).</p>
+<p>On rappelle la spécification des fonctions <code class="docutils literal notranslate"><span class="pre">est_egal()</span></code>  et <code class="docutils literal notranslate"><span class="pre">nb_communs()</span></code> d’abord sur des tableaux de dimension 1 (vecteurs) (cf. feuille 2).</p>
+<ul class="simple">
+<li><p>La fonction <code class="docutils literal notranslate"><span class="pre">est_egal()</span></code>  compare  deux tableaux de dimension 1 et retourne le booléen correspondant.
+On convient que deux tableaux sont égaux si leurs tailles sont égales et si leurs valeurs sont égales deux à deux.</p></li>
+<li><p>La fonction <code class="docutils literal notranslate"><span class="pre">nb_communs()</span></code> retourne le nombre de valeurs communes entre deux tableaux de dimension 1. Ici aussi la comparaison s’effectue “deux à deux” (valeurs de même indice).</p></li>
+</ul>
 <ol class="arabic simple">
-<li><p>La fonction <code class="docutils literal notranslate"><span class="pre">est_egal()</span></code> qui réalise la comparaison entre deux
-tableaux et retourne le booléen correspondant.</p></li>
-<li><p>La fonction <code class="docutils literal notranslate"><span class="pre">nb_communs()</span></code> qui retourne le nombre de valeurs
-communes entre deux tableaux.</p></li>
+<li><p>Effectuer l’analyse de la complexité de ces fonctions.</p></li>
+<li><p>Ces fonctions s’étendent à des tableaux 2D ou de façon plus générale à des tableaux multi-dimensionnels.
+L’égalité entre tableaux multi-dimensionnels suppose l’égalité des dimensions, des tailles deux à deux dans chaque dimension, et des valeurs deux à deux pour toutes les valeurs du tableau.
+Effectuer l’analyse de la complexité de ces fonctions pour des tableaux 2D.</p></li>
 </ol>
 </section>
 <section id="exercice-palindrome-toujours-extrait-d-examen">
