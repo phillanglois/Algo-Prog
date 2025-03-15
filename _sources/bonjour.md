@@ -57,7 +57,7 @@ Vacances en s9, s16-s17
 
 ## Semaine 7
 
-- Compétences : chapitre "récursivité"
+- Compétences :  "récursivité"
 - Avant le TD : 
   - feuille 1 : si besoin, finir tous les exercices avec $\blacksquare$ et préparer questions pour séance de TD
   - reprendre de façon approfondie le  chapitre _Récursivité_
@@ -65,7 +65,7 @@ Vacances en s9, s16-s17
 
 ## Semaine 8
 
-- Compétences : chapitre "rechercher"
+- Compétences :  "rechercher"
 - Avant le TD : reprendre et lire chapitre _Rechercher_ jusqu'à la section 4.3 inclus
 - Avant le CM de jeudi : lire chapitre "complexité" jusqu'à la section 5.5 inclus (en sautant les sections marquées "hors programme")
 
@@ -73,7 +73,7 @@ Vacances en s9, s16-s17
 
 ## Semaine 10
 
-- Compétences : chapitres "fonctions, récursivité, rechercher"
+- Faire le point sur ses compétences : chapitres "fonctions, récursivité, rechercher"
 - Avant le TD : 
   - tous les exercices des feuilles 1 et 2 selon votre objectif  
   - arriver en TD avec ses dernières questions avant le CC de vendredi  
@@ -81,38 +81,48 @@ Vacances en s9, s16-s17
 
 ## Semaine 11
 
-- Compétences : chapitre "complexité"
+- Compétences :  "complexité"
 - Avant le TD : relire chapitre "complexité" et commencer feuille 3 selon ses objectifs
 - Avant le CM de **mardi** : lire chapitre _Les types composés_
 
 ## Semaine 12
 
-- Compétences :
-- Avant le TD : 
-- Avant le CM de jeudi : 
+- Compétences :  "types composés"
+- Avant le TD : bien relire le chapitre "types composés" en entier
+- Avant le CM de mardi : lire chapitre "Trier" jusqu'à section 6.2 comprise
+- Avant le CM de jeudi : lire chapitre "Trier" (sauter section 6.6)
 
 ## Semaine 13
 
-- Compétences :
+- Faire le point sur ses compétences : "types composés"
 - Avant le TD : 
-- Avant le CM de jeudi : 
+- ~~Avant le CM de jeudi~~ : pas de CM cette semaine
 
 ## Semaine 14
 
-- Compétences :
+- Compétences : "types composés" et "entrées-sorties simples"
 - Avant le TD : 
-- Avant le CM de jeudi : 
+- Avant le CM de jeudi : lire les deux chapitres "entrées-sorties simples" (fichiers et formats)
 
 ## Semaine 15
 
-- Compétences :
+- Compétences : tous les chapitres
 - Avant le TD : 
-- Avant le CM de jeudi : 
+- ~~Avant le CM de jeudi~~ : CC2, écrit, 2 heures -- pas de CM cette semaine
 
 ## _Semaines 16 et 17_ (vacances de printemps)
 
 ## Semaine 18
 
-  ## Semaine 19
+- Compétences : tous les chapitres
+- Avant le TD : 
+- Avant le CM de jeudi : 
+
+
+## Semaine 19
+
+- Compétences : tous les chapitres
+- Avant le TD : 
+
 
 <!-- #endregion -->
