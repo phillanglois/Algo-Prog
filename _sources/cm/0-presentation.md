@@ -318,6 +318,33 @@ Des ressources présentées en annexe du support de cours pourront être exploit
 (envir-machine)=
 ## Travailler en python
 
+:::{ATTENTION}
+**Problème entre Windows, votre dossier réseau et jupyter en salles informatique**
+
+*Sous windows :*
+
+- jupyter à accès aux dossiers locaux de la machine sur laquelle vous travaillez
+- mais jupyter n'a pas directement accès à votre "dossier_réseau".
+- Cependant jupyter peut charger un fichier de votre dossier
+- 
+Que faire si on veut retrouver ses notebook d'une séance à une autre en ayant changé de place en salle informatique ou continuer son travail hors des salles info ?
+
+En début de séance : 
+
+1. enregistrer le notebook jupyter de travail sur la machine locale ("Bureau" par exemple)
+2. ouvrir **ce** fichier avec jupyter (via anaconda)
+3. enregistrer régulièrement votre travail
+
+En fin de séance 👍
+
+1. enregistrer votre notebook
+2. fermer et quitter jupyter
+3. par le gestionnaire de fichiers windows, déplacer votre notebook (qui est sur "Bureau) vers votre "dossier_réseau"
+
+Ainsi dans votre "dossier_reseau", votre notebook est enregistré dans l'état où il était sous jupyter.
+A la prochaine séance en salle informatique, reprendre les étapes décrites **à partir de ce notebook**. 
+:::
+
 Il est indispensable :
 
 - d'avoir accès à un environnement de programmation python, si possible assez complet,
@@ -329,6 +356,8 @@ Il y a déjà 3 choix d'OS possibles : windows, linux et mac os ; les 2 premiers
 Ensuite, les [distributions python](#distributions-python-classiques) sont assez variées, et peuvent différer selon les OS .
 
 Il est aisé _pour chacun_ de trouver ce qui correspond à ses contraintes matérielles et ses envies.  
+
+
 
 ### IMPORTANT : De quoi a-t-on *absolument* besoin ?
 

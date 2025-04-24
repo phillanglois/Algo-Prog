@@ -95,22 +95,25 @@ Vacances en s9, s16-s17
 ## Semaine 13
 
 - Faire le point sur ses compétences : "types composés"
-- Avant le TD : 
+- Objectif TD : finir le TP sur les types composés. 
 - ~~Avant le CM de jeudi~~ : pas de CM cette semaine
 
 ## Semaine 14
 
 - Compétences : "types composés" et "entrées-sorties simples"
-- Avant le TD : 
+- Objectif TD : TP "huit reines" 
 - Avant le CM de jeudi : lire les deux chapitres "entrées-sorties simples" (fichiers et formats)
 
 ## Semaine 15
 
 - Compétences : tous les chapitres
-- Avant le TD : 
+- Avant le TD : finir le TP "huit reines"
 - ~~Avant le CM de jeudi~~ : CC2, écrit, 2 heures -- pas de CM cette semaine
 
 ## _Semaines 16 et 17_ (vacances de printemps)
+
+- Compétences : reprendre tous les chapitres et QCM associés
+- TP (semaine 17) : "bin-packing" 
 
 ## Semaine 18
 

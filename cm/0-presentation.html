@@ -445,7 +445,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="algo-prog-en-2025">
 <span id="ch-intro"></span><h1>Algo Prog en 2025<a class="headerlink" href="#algo-prog-en-2025" title="Permalink to this heading">#</a></h1>
-<p>Mis à jour : Mar 08, 2025, lecture : 10 minutes minimum, PhL.</p>
+<p>Mis à jour : Apr 24, 2025, lecture : 11 minutes minimum, PhL.</p>
 <ul class="simple">
 <li><p>Vous : <strong>L1 math-info</strong></p></li>
 <li><p>Moi : <strong>Philippe Langlois</strong></p></li>
@@ -852,6 +852,32 @@ Des ressources présentées en annexe du support de cours pourront être exploit
 </section>
 <section id="travailler-en-python">
 <span id="envir-machine"></span><h2>Travailler en python<a class="headerlink" href="#travailler-en-python" title="Permalink to this heading">#</a></h2>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p><strong>Problème entre Windows, votre dossier réseau et jupyter en salles informatique</strong></p>
+<p><em>Sous windows :</em></p>
+<ul class="simple">
+<li><p>jupyter à accès aux dossiers locaux de la machine sur laquelle vous travaillez</p></li>
+<li><p>mais jupyter n’a pas directement accès à votre “dossier_réseau”.</p></li>
+<li><p>Cependant jupyter peut charger un fichier de votre dossier</p></li>
+<li></li>
+</ul>
+<p>Que faire si on veut retrouver ses notebook d’une séance à une autre en ayant changé de place en salle informatique ou continuer son travail hors des salles info ?</p>
+<p>En début de séance :</p>
+<ol class="arabic simple">
+<li><p>enregistrer le notebook jupyter de travail sur la machine locale (“Bureau” par exemple)</p></li>
+<li><p>ouvrir <strong>ce</strong> fichier avec jupyter (via anaconda)</p></li>
+<li><p>enregistrer régulièrement votre travail</p></li>
+</ol>
+<p>En fin de séance 👍</p>
+<ol class="arabic simple">
+<li><p>enregistrer votre notebook</p></li>
+<li><p>fermer et quitter jupyter</p></li>
+<li><p>par le gestionnaire de fichiers windows, déplacer votre notebook (qui est sur “Bureau) vers votre “dossier_réseau”</p></li>
+</ol>
+<p>Ainsi dans votre “dossier_reseau”, votre notebook est enregistré dans l’état où il était sous jupyter.
+A la prochaine séance en salle informatique, reprendre les étapes décrites <strong>à partir de ce notebook</strong>.</p>
+</div>
 <p>Il est indispensable :</p>
 <ul class="simple">
 <li><p>d’avoir accès à un environnement de programmation python, si possible assez complet,</p></li>

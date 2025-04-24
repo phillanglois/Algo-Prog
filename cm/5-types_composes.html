@@ -470,7 +470,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="les-types-composes">
 <span id="ch-typescomposes"></span><h1><span class="section-number">7. </span>Les types composés<a class="headerlink" href="#les-types-composes" title="Permalink to this heading">#</a></h1>
-<p>Mis à jour : Mar 11, 2025, lecture : 15
+<p>Mis à jour : Apr 24, 2025, lecture : 15
 minutes minimum, PhL.</p>
 <p>Les types composés ou <em>conteneurs</em> de python sont  introduits  dans ce chapitre :</p>
 <ul class="simple">
@@ -1247,7 +1247,7 @@ lst: [&#39;r&#39;, &#39;a&#39;, &#39;n&#39;, &#39;t&#39;, &#39;a&#39;, &#39;n&#3
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
 [3, 1, 2] [3, 1, 2]
-4393223616 4393223616
+4396330048 4396330048
 </pre></div>
 </div>
 </div>
@@ -1272,7 +1272,7 @@ lst: [&#39;r&#39;, &#39;a&#39;, &#39;n&#39;, &#39;t&#39;, &#39;a&#39;, &#39;n&#3
 [3, 1, 2] [3, 1, 2]
 False
 [3, 1, 2] [999, 1, 2]
-4393223616 4393166720
+4396330048 4396320128
 </pre></div>
 </div>
 </div>
@@ -1292,7 +1292,7 @@ False
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>duplication par affectation de tranche complète : 
 False
 [-5, 1, 2] [3, 1, 2]
-4393223616 4388169600
+4396330048 4396528640
 </pre></div>
 </div>
 </div>
@@ -1414,7 +1414,7 @@ non: False
 </ul>
 <p><strong>Parcourir</strong> un dictionnaire</p>
 <ul class="simple">
-<li><p>itération sur les valeurs : <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">cle</span> <span class="pre">in</span> <span class="pre">un_dict</span></code>: appartenance d’une clé</p>
+<li><p>l’itération sur un contain : <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">cle</span> <span class="pre">in</span> <span class="pre">un_dict</span></code>: appartenance d’une clé</p>
 <ul>
 <li><p>permet un parcours “naturel” <em>selon les clés</em> du dictionnaire.</p></li>
 <li><p><strong>méthode privilégiée</strong> pour parcourir tout un dictionnaire</p></li>
@@ -1694,9 +1694,9 @@ bnor! 5
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>abc 4335375952
-abc 4335375952
-abcdef 4393207600
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>abc 4338521680
+abc 4338521680
+abcdef 4396308400
 </pre></div>
 </div>
 </div>
@@ -1845,10 +1845,10 @@ BONJOUR ! True False
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4393274032
-4393274032
-4393151216
-4393151216
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4396424752
+4396424752
+4396305392
+4396305392
 </pre></div>
 </div>
 </div>
@@ -2092,7 +2092,7 @@ Bonjour &quot;collègue&quot; !
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;o&#39;, &#39;a&#39;, &#39;e&#39;, &#39;i&#39;, &#39;y&#39;, &#39;u&#39;} 6
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;o&#39;, &#39;a&#39;, &#39;u&#39;, &#39;y&#39;, &#39;e&#39;, &#39;i&#39;} 6
 </pre></div>
 </div>
 </div>
@@ -2106,7 +2106,7 @@ Bonjour &quot;collègue&quot; !
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>frozenset({&#39;b&#39;, &#39;l&#39;, &#39;o&#39;, &#39;n&#39;, &#39;a&#39;, &#39;m&#39;, &#39;e&#39;, &#39;t&#39;, &#39;u&#39;, &#39; &#39;}) 10
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>frozenset({&#39;l&#39;, &#39;o&#39;, &#39;m&#39;, &#39;a&#39;, &#39;u&#39;, &#39;b&#39;, &#39;n&#39;, &#39;t&#39;, &#39;e&#39;, &#39; &#39;}) 10
 </pre></div>
 </div>
 </div>
@@ -2119,8 +2119,8 @@ Bonjour &quot;collègue&quot; !
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>aie : {&#39;i&#39;, &#39;a&#39;, &#39;e&#39;}
-voyelles : {&#39;o&#39;, &#39;a&#39;, &#39;e&#39;, &#39;i&#39;, &#39;y&#39;, &#39;u&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>aie : {&#39;e&#39;, &#39;a&#39;, &#39;i&#39;}
+voyelles : {&#39;o&#39;, &#39;a&#39;, &#39;u&#39;, &#39;y&#39;, &#39;e&#39;, &#39;i&#39;}
 </pre></div>
 </div>
 </div>
@@ -2167,11 +2167,11 @@ False
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>union : {&#39;o&#39;, &#39;a&#39;, &#39;e&#39;, &#39;i&#39;, &#39;y&#39;, &#39;u&#39;}
-autre union : {&#39;b&#39;, &#39;o&#39;, &#39;a&#39;, &#39;e&#39;, &#39;i&#39;, &#39;f&#39;, &#39;y&#39;, &#39;u&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>union : {&#39;o&#39;, &#39;a&#39;, &#39;u&#39;, &#39;y&#39;, &#39;e&#39;, &#39;i&#39;}
+autre union : {&#39;o&#39;, &#39;a&#39;, &#39;u&#39;, &#39;b&#39;, &#39;f&#39;, &#39;y&#39;, &#39;e&#39;, &#39;i&#39;}
 intersection : {&#39;i&#39;, &#39;a&#39;, &#39;e&#39;}
 difference :  set() {&#39;b&#39;, &#39;f&#39;}
-difference symétrique:  {&#39;o&#39;, &#39;y&#39;, &#39;u&#39;}
+difference symétrique:  {&#39;o&#39;, &#39;u&#39;, &#39;y&#39;}
 inclusions : True True False False
 </pre></div>
 </div>
@@ -2313,7 +2313,7 @@ ses paramètres formels. On appelle aussi cette homonymie de la <em>surcharge de
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;1&#39;: &#39;a&#39;, &#39;2&#39;: &#39;b&#39;} 2
-{&#39;2&#39;, &#39;1&#39;} 2
+{&#39;1&#39;, &#39;2&#39;} 2
 </pre></div>
 </div>
 </div>
