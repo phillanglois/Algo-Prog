@@ -118,8 +118,8 @@ Vacances en s9, s16-s17
 ## Semaine 18
 
 - Compétences : tous les chapitres
-- Avant le TD : 
-- Avant le CM de jeudi : 
+- Avant le TD : avoir fini le TP 8 reines
+- Avant le CM de _mardi_ : lire le chapitre 10 "affectation et appels de fonction : aspects avancés"
 
 
 ## Semaine 19
