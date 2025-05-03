@@ -122,10 +122,11 @@ Vacances en s9, s16-s17
 - Avant le CM de _mardi_ : lire le chapitre 10 "affectation et appels de fonction : aspects avancés"
 
 
-## Semaine 19
+## Semaine 19 (dernière semaine)
 
 - Compétences : tous les chapitres
-- Avant le TD : 
+- Avant le TD : identifier les points à éclaircir et les présenter au chargés de TD
+- TP de la semaine : K plus proches voisins et choipeau de Poudlard   
 
 
 <!-- #endregion -->
