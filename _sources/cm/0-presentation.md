@@ -139,7 +139,8 @@ Excepté ce support de cours, toutes les autres ressources sont sur moodle et so
 - les [notebook jupyter](https://jupyter.org/try)
   - sur votre machine : _la solution à privilégier_
   - en ligne : [google colab](https://colab.research.google.com), [cocalc](https://cocalc.com)
-  - MTU _Utiliser les notebooks Jupyter_
+- MTU [Utiliser les notebooks Jupyter](https://moodle.luniversitenumerique.fr/course/view.php?id=1086)
+_Utiliser les notebooks Jupyter_
   - première séance  de TD
 
 - [python tutor](http://pythontutor.com) 
