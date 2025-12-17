@@ -155,8 +155,8 @@ _Utiliser les notebooks Jupyter_
 
 1. Votre guide : la liste des [compétences par chapitre](ch:competences)
 2. Un environnement python, similaire sur sa machine perso et en salles info
-   1. Installer un environnement python : fortement conseillé en **L1 Informatique**
-   2. Utiliser [http://basthon.fr](basthon) : un environnement python très complet basé sur sur les notebooks jupyter  
+   1. [Installer un environnement python](#travailler-en-python) : **fortement conseillé en L1 Informatique**
+   2. Utiliser [http://basthon.fr](basthon) : un environnement python très complet avec jupyter notebook   
 
 ```{Important}
 On conseille d'installer une distribution récente [Anaconda](https://www.anaconda.com/products/individual)  (python $\ge$ 3.11).  
