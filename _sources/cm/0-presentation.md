@@ -1,5 +1,5 @@
 (ch:intro)=
-# Algo Prog en 2025
+# Algo Prog en 2026
 
 Mis à jour : {sub-ref}`today`, lecture : {sub-ref}`wordcount-minutes` minutes minimum, PhL.
 
@@ -15,12 +15,11 @@ Mis à jour : {sub-ref}`today`, lecture : {sub-ref}`wordcount-minutes` minutes m
 - Les [supports du CM](https://phillanglois.github.io/Algo-Prog/bonjour.html) régulièrement mis à jour.
 - Les autres ressources sont sur l'espace moodle de cet enseignement.
 
-### Version 2025
+### Saison 2026
 
-- 12 séances de CM : **2h/semaine**
-- 15 séances de TD-TP : 3h/semaine ou 6h/dernières semaines  
-- chargés de TD : David Parello (TD1), Benjamin Antunes (TD2), Ph. Langlois (TD3), Laurent Zamo (TD4), Youssef Fahkredine (TD5) 
-- évolution vs. 2024-2025 : disparition des "leçons"
+- 16 séances de CM, 1.5h : 1 séance/semaine, 3 ou 2 les deux premières semaines
+- 13 séances de TD-TP, 3h : 1 séance/semaine 
+- chargés de TD : David Parello (TD1), Nassima Haroune (TD2), Ph. Langlois (TD3), Laurent Zamo (TD4)
 
 
 ### Contrôle de connaissances et dates importantes
@@ -28,7 +27,7 @@ Mis à jour : {sub-ref}`today`, lecture : {sub-ref}`wordcount-minutes` minutes m
 CC : contrôle "dit" continu, CT contrôle "dit" terminal
 
 ```{Warning}
-**Note UE = (TP1 + TP2 + CC + CT)/4**
+**Note UE = 0.25*(CC1+CC2) + 0.5*CT**
 ```
 
 **Dates et détails.** Les dates de ces évaluations sont annoncées en début de [la page d'accueil du cours](ch:bonjour).
@@ -37,8 +36,8 @@ CC : contrôle "dit" continu, CT contrôle "dit" terminal
 
 ### Organisation
 
-- 10 chapitres, 12 semaines, 11 séances de CM, 12 séances de TD ou TP
-- "12ème séance" : écrit mi-parcours, TP de fin de semestre
+- 10 chapitres, 16 séances de CM, 12 séances de TD ou TP
+- "13ème séance" : écrit mi-parcours, TP de fin de semestre
 - Pour chaque chapitre  
   - explicitation des _compétences_ visées : savoirs, savoirs-faire
   - des quizz d'aide à la compréhension et la mémorisation de ces compétences
@@ -152,13 +151,12 @@ _Utiliser les notebooks Jupyter_
 - les quizz en ligne (moodle)
 
 
-## Deux points importants
+## Des points importants
 
 1. Votre guide : la liste des [compétences par chapitre](ch:competences)
 2. Un environnement python, similaire sur sa machine perso et en salles info
-
-
-**Installer un environnement python**
+   1. Installer un environnement python : fortement conseillé en **L1 Informatique**
+   2. Utiliser [http://basthon.fr](basthon) : un environnement python très complet basé sur sur les notebooks jupyter  
 
 ```{Important}
 On conseille d'installer une distribution récente [Anaconda](https://www.anaconda.com/products/individual)  (python $\ge$ 3.11).  

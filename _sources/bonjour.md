@@ -1,6 +1,6 @@
 <!-- #region -->
 (ch:bonjour)=
-# Bienvenu en Algo-Prog, version 2025 !
+# Bienvenu en Algo-Prog, version 2026 !
 
 **Ce support est en évolution tout au long du semestre.**
 
@@ -15,16 +15,15 @@ Cette page contient :
 
 :::{important} Rappels des dates importantes
 
-Démarrages : CM en semaine s3 (celle du lundi 13 janvier 2025), TD en s4
+Démarrages : CM en semaine s3 (celle du lundi 12 janvier 2026), TD en s4
 
 Contrôle de connaissances 
 
-- TP1 individuel sur machine, 2 heures $\to$ vendredi 7 mars 2025 (s10) 
-- CC1 écrit, 2 heures $\to$ jeudi 10 avril 2025 (s15)
-- TP2 individuel sur machine, 3 heures : mercredi 21 mai 2025 (s21)
-- CT écrit 2 heures, date à fixer (s20 ou s21) :
+- CC1 écrit, 2 heures, 23 février 2026 (s9)
+- CC2 individuel sur machine, 2 heures, 17 avril 2026 (s16) 
+- CT individuel sur machine, 3 heures, semaine des examens, 20 mai 2026 (s21), à confirmer
 
-Vacances en s9, s16-s17
+Vacances en s10, s17-18
 :::
 
 :::{note}
@@ -35,98 +34,8 @@ Vacances en s9, s16-s17
 
 ## Semaine 3
 
-- Lire la présentation [Algo Prog en 2025](ch:intro)
+- Lire la présentation [Algo Prog en 2026](ch:intro)
 - S'assurer que son environnement de travail python est conforme à la section "Deux points importants" de [Algo Prog en 2025](ch:intro). Vérifier en particulier que _jupyter notebook_ est opérationnel pour du python en version $\ge$ 3.11.
 - Effectuer la MTU [Utiliser les notebooks Jupyter](https://moodle.luniversitenumerique.fr/course/view.php?id=1086).
-
-## Semaine 4
-
-- Avant la séance de TD : effectuer la MTU [Utiliser les notebooks Jupyter](https://moodle.luniversitenumerique.fr/course/view.php?id=1086).
-- Avant le CM de jeudi : lire les chapitres _Fonctions_ et _Un exemple, plein de fonctions_
-
-## Semaine 5
-
-- Avant le TD : réviser quizz fonctions, avancer feuille 1 selon votre objectif
-- Avant le CM de jeudi : lire chapitre _Récursivité_ jusqu'à section 3.4 inclus
-
-## Semaine 6
-
-- Faire le point sur ses compétences "fonctions"
-- Avant le TD : sur feuille 1, finir tous les exercices $\blacksquare$  selon votre objectif (dernière séance)
-- Avant le CM de jeudi : lire chapitre _Récursivité_ en entier
-
-## Semaine 7
-
-- Compétences :  "récursivité"
-- Avant le TD : 
-  - feuille 1 : si besoin, finir tous les exercices avec $\blacksquare$ et préparer questions pour séance de TD
-  - reprendre de façon approfondie le  chapitre _Récursivité_
-- Avant le CM de jeudi : lire chapitre _Rechercher_ jusqu'à la section 4.2 inclus en entier (recherche séquentielle)
-
-## Semaine 8
-
-- Compétences :  "rechercher"
-- Avant le TD : reprendre et lire chapitre _Rechercher_ jusqu'à la section 4.3 inclus
-- Avant le CM de jeudi : lire chapitre "complexité" jusqu'à la section 5.5 inclus (en sautant les sections marquées "hors programme")
-
-## _Semaine 9_ (vacances d'hiver) 
-
-## Semaine 10
-
-- Faire le point sur ses compétences : chapitres "fonctions, récursivité, rechercher"
-- Avant le TD : 
-  - tous les exercices des feuilles 1 et 2 selon votre objectif  
-  - arriver en TD avec ses dernières questions avant le CC de vendredi  
-- Avant le CM de jeudi : lire chapitre _Les types composés_ jusqu'à la section 7.4 inclus. 
-
-## Semaine 11
-
-- Compétences :  "complexité"
-- Avant le TD : relire chapitre "complexité" et commencer feuille 3 selon ses objectifs
-- Avant le CM de **mardi** : lire chapitre _Les types composés_
-
-## Semaine 12
-
-- Compétences :  "types composés"
-- Avant le TD : bien relire le chapitre "types composés" en entier
-- Avant le CM de mardi : lire chapitre "Trier" jusqu'à section 6.2 comprise
-- Avant le CM de jeudi : lire chapitre "Trier" (sauter section 6.6)
-
-## Semaine 13
-
-- Faire le point sur ses compétences : "types composés"
-- Objectif TD : finir le TP sur les types composés. 
-- ~~Avant le CM de jeudi~~ : pas de CM cette semaine
-
-## Semaine 14
-
-- Compétences : "types composés" et "entrées-sorties simples"
-- Objectif TD : TP "huit reines" 
-- Avant le CM de jeudi : lire les deux chapitres "entrées-sorties simples" (fichiers et formats)
-
-## Semaine 15
-
-- Compétences : tous les chapitres
-- Avant le TD : finir le TP "huit reines"
-- ~~Avant le CM de jeudi~~ : CC2, écrit, 2 heures -- pas de CM cette semaine
-
-## _Semaines 16 et 17_ (vacances de printemps)
-
-- Compétences : reprendre tous les chapitres et QCM associés
-- TP (semaine 17) : "bin-packing" 
-
-## Semaine 18
-
-- Compétences : tous les chapitres
-- Avant le TD : avoir fini le TP 8 reines
-- Avant le CM de _mardi_ : lire le chapitre 10 "affectation et appels de fonction : aspects avancés"
-
-
-## Semaine 19 (dernière semaine)
-
-- Compétences : tous les chapitres
-- Avant le TD : identifier les points à éclaircir et les présenter au chargés de TD
-- TP de la semaine : K plus proches voisins et choipeau de Poudlard   
-
 
 <!-- #endregion -->
