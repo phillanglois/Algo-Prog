@@ -27,7 +27,7 @@ Mis à jour : {sub-ref}`today`, lecture : {sub-ref}`wordcount-minutes` minutes m
 CC : contrôle "dit" continu, CT contrôle "dit" terminal
 
 ```{Warning}
-**Note UE = 0.25*(CC1+CC2) + 0.5*CT**
+**Note UE = 0.25\*(CC1+CC2) + 0.5\*CT**
 ```
 
 **Dates et détails.** Les dates de ces évaluations sont annoncées en début de [la page d'accueil du cours](ch:bonjour).
@@ -62,15 +62,23 @@ Une séance de CM de deux heures = deux séquences d'une heure organisées comme
   
   - les 2/3 du travail de compréhension/mémorisation reposent sur les CM 
 
-- **Morale** : ne manquer aucun CM, être attentif, prendre des notes, poser des questions, **se poser** des questions, demander des pauses pour reprendre une attention maximale  
+Les notes de cours fournies sont trompeuses : comme un film sans le son :(
 
-  - les notes de cours fournies sont trompeuses : comme un film sans le son :(
+:::{important} 
+**Ne manquer aucun CM.**
+:::
 
-- **Méthodologie de travail du CM** : 
-    1. relire le cours le soir de l'amphi (15-20 min) 
-    2. le reprendre en détail 4-5 jours après et en préparant des exercices de TD ou de TP -- en groupe : ça aide !
-    3. faire une auto-évaluation de ce que _vous_ en avez retenu la veille du cours suivant : le chapitre _Compétences_ est utile. 
-    4. identifier les questions à poser en séance de TD ou en CM
+
+:::{admonition} Méthodologie de travail du CM
+:class: tip
+
+1. **la veille de la séance** : lire le cours selon les consignes du [travail hebdomadaire](sec:travailhebdo)
+2. **en séance** : être attentif et actif : prendre des notes, poser des questions, **se poser** des questions, demander des pauses pour reprendre une attention maximale 
+3. **après la séance** : relire le cours le soir de l'amphi (15-20 min) 
+4. le reprendre en détail 4-5 jours après et en préparant des exercices de TD ou de TP -- en groupe : ça aide !
+5. faire une auto-évaluation de ce que _vous_ en avez retenu la veille du cours suivant : le chapitre [Compétences](ch:competences) est utile. 
+6. identifier les questions à poser en séance de TD ou en CM
+:::
 
 **Il est faux de croire** que :
 
@@ -119,9 +127,9 @@ TP : un sujet sur un thème pour maitriser les notions et acquérir du savoir-fa
 
 ### Supports de cours
 
-```{note}
+:::{note}
 Excepté ce support de cours, toutes les autres ressources sont sur moodle et sont mises à jour **très** régulièrement
-```
+:::
 
 - corrections des exercices objectif 10 des TD : au fur et à mesure du semestre
 - sujets des TP : notebook python (versions ipynb, pdf, html)  
@@ -129,9 +137,10 @@ Excepté ce support de cours, toutes les autres ressources sont sur moodle et so
 
 ### Les outils pour comprendre, mieux retenir
 
-```{tip}
+:::{admonition} Conseil
+:class: tip
 **Pratiquer pour maitriser**
-```
+:::
 
 - un environnement python qui fonctionne
 
@@ -158,9 +167,9 @@ _Utiliser les notebooks Jupyter_
    1. [Installer un environnement python](#travailler-en-python) : **fortement conseillé en L1 Informatique**
    2. Utiliser [http://basthon.fr](basthon) : un environnement python très complet avec jupyter notebook   
 
-```{Important}
-On conseille d'installer une distribution récente [Anaconda](https://www.anaconda.com/products/individual)  (python $\ge$ 3.11).  
-```
+:::{Important}
+Installer une distribution récente [Anaconda](https://www.anaconda.com/products/individual)  (python $\ge$ 3.11).  
+:::
 
 Une fois Anaconda installée, vous avez accès à toutes les ressources python nécessaires ce semestre : jupyter, interpréteur python, principaux modules, gestionnaire conda, ... 
 
@@ -181,9 +190,10 @@ On peut s'aider des liens ci-après.
 
 ### Acquis du semestre 1 et prérequis 
 
-```{warning}
-Vérifiez vos acquisitions en début de semestre 2 !
-```
+:::{admonition} Conseil
+:class: tip
+Vérifiez vos acquis en début de semestre 2 !
+:::
 
 - Savoir différencier les _types_ de données :  
   - type scalaire : booléen, entier, réels, caractères  

@@ -32,10 +32,15 @@ Vacances en s10, s17-18
 - les items indiqués d'une ($\star$) correspondent aux activités _objectif 20_
 :::
 
+:::{important}
+Le travail de chaque semaine est mis à jour chaque ... semaine.
+:::
+
+(sec:travailhebdo)=
 ## Semaine 3
 
 - Lire la présentation [Algo Prog en 2026](ch:intro)
-- S'assurer que son environnement de travail python est conforme à la section "Deux points importants" de [Algo Prog en 2025](ch:intro). Vérifier en particulier que _jupyter notebook_ est opérationnel pour du python en version $\ge$ 3.11.
+- S'assurer que son environnement de travail python est conforme à la section "Deux points importants" de [Algo Prog](ch:intro). Vérifier en particulier que _jupyter notebook_ est opérationnel pour du python en version $\ge$ 3.11.
 - Effectuer la MTU [Utiliser les notebooks Jupyter](https://moodle.luniversitenumerique.fr/course/view.php?id=1086).
 
 <!-- #endregion -->
