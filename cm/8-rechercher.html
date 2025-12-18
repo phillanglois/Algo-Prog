@@ -187,7 +187,7 @@
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Présentation</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="0-presentation.html">Algo Prog en 2025</a></li>
+<li class="toctree-l1"><a class="reference internal" href="0-presentation.html">Algo Prog en 2026</a></li>
 <li class="toctree-l1"><a class="reference internal" href="0a-competences.html">Compétences</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapitres</span></p>
@@ -424,6 +424,11 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithme-recursif">4.2.3. Algorithme récursif</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#complements-sur-l-encapsulation-et-la-recursivite-terminale">4.2.4. Compléments sur l’encapsulation et la récursivité terminale</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#autre-ecriture-encapsulation">Autre écriture : encapsulation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#star-recursivite-terminale">(<span class="math notranslate nohighlight">\(\star\)</span>) Récursivité terminale</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recherche-dichotomique-dans-un-tableau-trie">4.3. Recherche dichotomique dans un tableau trié</a><ul class="nav section-nav flex-column">
@@ -460,16 +465,8 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="rechercher">
 <span id="ch-rechercher"></span><h1><span class="section-number">4. </span>Rechercher<a class="headerlink" href="#rechercher" title="Permalink to this heading">#</a></h1>
-<p>Mis à jour : Dec 17, 2025, lecture : 17
+<p>Mis à jour : Dec 18, 2025, lecture : 20
 minutes minimum, PhL.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># pour python&lt;3.9</span>
-<span class="c1">#from typing import list</span>
-</pre></div>
-</div>
-</div>
-</div>
 <section id="objectif-du-chapitre">
 <h2><span class="section-number">4.1. </span>Objectif du chapitre<a class="headerlink" href="#objectif-du-chapitre" title="Permalink to this heading">#</a></h2>
 <p>Ce chapitre présente des versions de deux algorithmes déjà connus pour <em>rechercher si une valeur est présente ou non dans un ensemble de valeurs</em>.
@@ -891,7 +888,8 @@ Attention à l’ordre des tests dans la condition de la ligne 4</p>
 <ol class="arabic simple">
 <li><p>regarder si <code class="docutils literal notranslate"><span class="pre">val</span></code> est en première position du tableau <code class="docutils literal notranslate"><span class="pre">tab</span></code>, cad. en <code class="docutils literal notranslate"><span class="pre">tab[0]</span></code>,</p></li>
 <li><p>si c’est le cas, on a trouvé et on peut répondre : <em>terminaison</em></p></li>
-<li><p>si ce n’est pas le cas, on recommence <em>récursivement</em> en 1. avec la partie restante de <code class="docutils literal notranslate"><span class="pre">tab</span></code>, cad. le sous-tableau “à droite” de la position testée.</p></li>
+<li><p>si ce n’est pas le cas, on doit à nouveau rechercher <code class="docutils literal notranslate"><span class="pre">val</span></code> dans <code class="docutils literal notranslate"><span class="pre">tab</span></code> mais cette fois-ci dans la partie restante de <code class="docutils literal notranslate"><span class="pre">tab</span></code>. C’est le même problème mais sur un tableau de taille réduite : une valeur de moins.
+On recommence donc <em>récursivement</em> en 1. pour le sous-tableau “à droite” de la position testée.</p></li>
 </ol>
 </li>
 </ul>
@@ -965,7 +963,7 @@ On va introduire <code class="docutils literal notranslate"><span class="pre">g<
 </div>
 <ul class="simple">
 <li><p>Ainsi la version récursive à un en-tête <em>similaire</em> à celle des versions itératives : 3 paramètres (la valeur, le nom du tableau et sa taille)</p></li>
-<li><p><strong>Vocabulaire.</strong> Cette fonction <em>encapsule</em> l’appel principal à la fonction récursive</p></li>
+<li><p><strong>Vocabulaire.</strong> Cette fonction non récursive est limitée à l’appel principal à la fonction récursive. On dit parfois qu’elle <em>encapsule</em> cet appel. Nous revenons sur cette notion un peu plus loin.</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1012,6 +1010,80 @@ On ajoute dès maintenant le cas du tableau vide.</p>
 </ul>
 </li>
 </ul>
+</section>
+<section id="complements-sur-l-encapsulation-et-la-recursivite-terminale">
+<h3><span class="section-number">4.2.4. </span>Compléments sur l’encapsulation et la récursivité terminale<a class="headerlink" href="#complements-sur-l-encapsulation-et-la-recursivite-terminale" title="Permalink to this heading">#</a></h3>
+<section id="autre-ecriture-encapsulation">
+<h4>Autre écriture : encapsulation<a class="headerlink" href="#autre-ecriture-encapsulation" title="Permalink to this heading">#</a></h4>
+<p>L’écriture précédente comporte deux fonctions, la première, récursive, et la seconde de signature souhaitée, qui  <em>encapsule</em> l’appel principal à la fonction récursive.</p>
+<p>Python permettant de définir des fonctions locales à d’autres fonctions.
+La cellule suivante organise ce traitement en une seule fonction (celle de l’appel principal) qui <em>encapsule</em> une fonction récursive locale.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rech_seq_rec</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">tab</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;recherche si val est present dans tab (de longueur dim)</span>
+<span class="sd">    - version avec encapsulation de la fonction récursive&#39;&#39;&#39;</span>
+
+    <span class="k">def</span> <span class="nf">aux</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">g</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">tab</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;fonction recursive locale </span>
+<span class="sd">        qui recherche val dans tab[g, dim[&#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="n">g</span> <span class="o">==</span> <span class="n">dim</span><span class="p">:</span> <span class="c1"># fin du traitement séquentiel </span>
+            <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">if</span> <span class="n">t</span><span class="p">[</span><span class="n">g</span><span class="p">]</span> <span class="o">==</span> <span class="n">val</span><span class="p">:</span> <span class="c1"># gagné</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">else</span><span class="p">:</span> <span class="c1"># récursion sur </span>
+            <span class="k">return</span> <span class="n">aux</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">g</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">tab</span><span class="p">,</span> <span class="n">dim</span><span class="p">)</span>
+        
+    <span class="k">return</span> <span class="n">rech_seq_rec_g</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">tab</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>On s’empresse de vérifier que les tests unitaires précédents sont toujours satisfaits – on n’a pas modifié l’identifiant de la fonction mais l’exécution de la cellule précédente cache l’ancienne version de <code class="docutils literal notranslate"><span class="pre">rech_seq_rec</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#  t = [0, 1, 1, 5, 2, 10, 4, 4, 9, 3]</span>
+<span class="k">assert</span> <span class="n">rech_seq_rec</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">True</span>
+<span class="k">assert</span> <span class="n">rech_seq_rec</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">True</span>
+<span class="k">assert</span> <span class="n">rech_seq_rec</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">False</span>
+<span class="c1"># tableau vide</span>
+<span class="k">assert</span> <span class="n">rech_seq_rec</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">[],</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Cette écriture correspond à la notion classique d’<em>encapsulation</em>.</p>
+<ul class="simple">
+<li><p>La fonction locale récursive, arbitrairement “appelée” <code class="docutils literal notranslate"><span class="pre">aux</span></code>,  est une copie de la fonction précédente <code class="docutils literal notranslate"><span class="pre">rech_seq_rec_g()</span></code>.</p></li>
+<li><p>En revanche, cette fonction <code class="docutils literal notranslate"><span class="pre">aux</span></code> est une fonction locale à <code class="docutils literal notranslate"><span class="pre">rech_seq_rec</span></code> : elle n’existe pas à l’extérieur de la fonction <code class="docutils literal notranslate"><span class="pre">rech_seq_rec</span></code>.</p></li>
+<li><p>Ainsi, aucune utilisation maladroite de cette fonction <code class="docutils literal notranslate"><span class="pre">aux</span></code> n’est possible hors de son contexte naturel d’utilisation : celui de la fonction <code class="docutils literal notranslate"><span class="pre">rech_seq_rec</span></code>.</p>
+<ul>
+<li><p>Par exemple ici, le paramètre supplémentaire <code class="docutils literal notranslate"><span class="pre">g</span></code>  est susceptible d‘“utilisation maladroite”.</p></li>
+</ul>
+</li>
+</ul>
+<p>Cette encapsulation du traitement récursif permet d’obtenir, indépendamment du traitement (itératif ou récursif) effectué, une fonction avec une signature réduite aux seuls paramètres <em>logiques</em> nécessaires.<br />
+Ceci permet de séparer le “ce que fait la fonction” (le “quoi”) du “comment elle le fait.”</p>
+</section>
+<section id="star-recursivite-terminale">
+<h4>(<span class="math notranslate nohighlight">\(\star\)</span>) Récursivité terminale<a class="headerlink" href="#star-recursivite-terminale" title="Permalink to this heading">#</a></h4>
+<p>La version récursive <code class="docutils literal notranslate"><span class="pre">rech_seq_rec</span></code>  est une exemple de fonction <em>récursive terminale</em>.
+En effet, l’appel récursif à <code class="docutils literal notranslate"><span class="pre">aux</span></code> est la dernière instruction exécutée par (un appel à) <code class="docutils literal notranslate"><span class="pre">aux</span></code> – et ce donc à chacun des appels récursifs.</p>
+<p>Plus généralement, une fonction <code class="docutils literal notranslate"><span class="pre">f</span></code> est <em>récursive terminale</em> si tout appel récursif de <code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">est</span> <span class="pre">de</span> <span class="pre">la</span> <span class="pre">forme</span> </code>retrn f(..)` – en prenant la syntaxe Python.</p>
+<p>Les fonctions récursives terminales sont intéressantes d’un point de vue efficacité.
+La valeur retournée est directement la valeur obtenue par l’appel récursif, sans aucun calcul ni modification de celle-ci.
+Il n’y a donc pas besoin de stocker dans la pile d’exécution la valeur retournée par l’appel.
+Ce qui supprime la nécessité d’espace mémoire, éventuellement limitant, pour la pile d’exécution du traitement récursif complet.</p>
+<p>On peut aussi montrer qu’une fonction récursive terminale se transforme <em>automatiquement</em>, cad. à l’aide d’un algorithme, en une fonction itérative sans espace mémoire supplémentaire.
+En pratique cette transformation, aussi appelée <em>dé-récursivation</em> est effectué de façon transparente par les compilateurs, en particulier dans les langages fonctionnels.
+Voir par exemple la <a class="reference external" href="http://perso.univ-perp.fr/langlois/images/pdf/ens/L1/s7-sl4.pdf">dernière diapo du cours de 2016</a>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Se convaincre que les fonctions récursives qui calculent la factorielle, la somme de <span class="math notranslate nohighlight">\(n\)</span> entiers, la
+suite de Fibonacci,  ne sont <strong>pas</strong> récursive terminale telles que présentées au chapitre <a class="reference internal" href="6-recursivite.html#ch-recursivite"><span class="std std-ref">Récursivité</span></a>.</p>
+</div>
+<p>Il est cependant possible de ré-écrire le calcul de factorielle et de la somme de <span class="math notranslate nohighlight">\(n\)</span> entiers sous forme récursive terminale.</p>
+</section>
 </section>
 </section>
 <section id="recherche-dichotomique-dans-un-tableau-trie">
@@ -1271,6 +1343,7 @@ Un algorithme <em>diviser pour régner</em> où chaque division réduit la reche
 <p><strong>Exercices</strong></p>
 <ul class="simple">
 <li><p>Instrumenter le code (ajouter des <code class="docutils literal notranslate"><span class="pre">print()</span></code> :) pour exhiber l’évalution de <code class="docutils literal notranslate"><span class="pre">g</span></code>, <code class="docutils literal notranslate"><span class="pre">d</span></code> et <code class="docutils literal notranslate"><span class="pre">m</span></code></p></li>
+<li><p>Ecrire la version encapsulée de <code class="docutils literal notranslate"><span class="pre">dichotomie_recursive(val:</span> <span class="pre">int,</span> <span class="pre">t:</span> <span class="pre">list[int],</span> <span class="pre">dim:</span> <span class="pre">int)</span> <span class="pre">-&gt;</span> <span class="pre">bool:</span></code></p></li>
 <li><p>Effectuer les 2 recherches précédentes sans utiliser <code class="docutils literal notranslate"><span class="pre">dichotomie_recursive</span></code> mais seulement <code class="docutils literal notranslate"><span class="pre">dichotomie</span></code></p></li>
 </ul>
 </section>
@@ -1691,6 +1764,11 @@ Les 2 cas de la terminaison prouvent la correction de l’algorithme étudié.</
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithme-recursif">4.2.3. Algorithme récursif</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#complements-sur-l-encapsulation-et-la-recursivite-terminale">4.2.4. Compléments sur l’encapsulation et la récursivité terminale</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#autre-ecriture-encapsulation">Autre écriture : encapsulation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#star-recursivite-terminale">(<span class="math notranslate nohighlight">\(\star\)</span>) Récursivité terminale</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recherche-dichotomique-dans-un-tableau-trie">4.3. Recherche dichotomique dans un tableau trié</a><ul class="nav section-nav flex-column">

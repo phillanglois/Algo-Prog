@@ -17,7 +17,7 @@ Mis à jour : {sub-ref}`today`, lecture : {sub-ref}`wordcount-minutes` minutes m
 
 ### Saison 2026
 
-- 16 séances de CM, 1.5h : 1 séance/semaine, 3 ou 2 les deux premières semaines
+- 16 séances de CM, 1.5h : 1 séance/semaine, 2 les trois premières semaines
 - 13 séances de TD-TP, 3h : 1 séance/semaine 
 - chargés de TD : David Parello (TD1), Nassima Haroune (TD2), Ph. Langlois (TD3), Laurent Zamo (TD4)
 

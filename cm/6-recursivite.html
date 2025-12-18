@@ -187,7 +187,7 @@
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Présentation</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="0-presentation.html">Algo Prog en 2025</a></li>
+<li class="toctree-l1"><a class="reference internal" href="0-presentation.html">Algo Prog en 2026</a></li>
 <li class="toctree-l1"><a class="reference internal" href="0a-competences.html">Compétences</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapitres</span></p>
@@ -430,7 +430,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#factorielle-forme-recursive">3.3.2. Factorielle : forme récursive</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#premier-essai-qui-plante">Premier essai (qui plante :)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#premier-essai-qui-va-echouer">Premier essai (qui va échouer :)</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#terminaison-pour-arreter-les-appels-recursifs">Terminaison : pour arrêter les appels récursifs !!!!</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#bien-comprendre-les-appels-recursifs">Bien comprendre les appels récursifs !</a></li>
 </ul>
@@ -499,7 +499,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="recursivite">
 <span id="ch-recursivite"></span><h1><span class="section-number">3. </span>Récursivité<a class="headerlink" href="#recursivite" title="Permalink to this heading">#</a></h1>
-<p>Mis à jour : Dec 17, 2025, lecture : 16
+<p>Mis à jour : Dec 18, 2025, lecture : 17
 minutes minimum, PhL.</p>
 <section id="definitions-et-premiers-exemples">
 <h2><span class="section-number">3.1. </span>Définitions et premiers exemples<a class="headerlink" href="#definitions-et-premiers-exemples" title="Permalink to this heading">#</a></h2>
@@ -567,14 +567,22 @@ minutes minimum, PhL.</p>
 </section>
 <section id="inconvenient">
 <h3><span class="section-number">3.2.2. </span>Inconvénient<a class="headerlink" href="#inconvenient" title="Permalink to this heading">#</a></h3>
-<p>L’<em>exécution</em> de la solution récursive est plus compliquée</p>
+<p>L’<em>exécution</em> de la solution récursive :</p>
 <ul class="simple">
-<li><p>gestion d’une pile d’appels de fonctions : la pile d’exécution</p></li>
+<li><p>est plus compliquée à appréhender – en début d’apprentissage,</p></li>
+<li><p>mais surtout, nécessite en général plus de ressources en <em>mémoire</em> : gestion d’une pile d’appels de fonctions, aussi appelée <em>pile d’exécution.</em></p>
+<ul>
+<li><p>L’exécution de la solution récursive peut provoquer des débordements de la mémoire : pile d’exécution saturée.</p></li>
 </ul>
-<p>L’exécution de la solution récursive peut provoquer des débordements de la mémoire</p>
+</li>
+</ul>
 </section>
 <section id="paradigme-diviser-pour-regner">
 <h3><span class="section-number">3.2.3. </span>Paradigme <strong>diviser pour régner</strong><a class="headerlink" href="#paradigme-diviser-pour-regner" title="Permalink to this heading">#</a></h3>
+<p>Les exemples précédents de fonction récursive (factorielle, somme d’entiers, suite de Fibonacci, tours de Hanoï) exhibent la relation entre le calcul (la résolution du problème) pour le paramètre <span class="math notranslate nohighlight">\(n\)</span> et le calcul pour le paramètre <span class="math notranslate nohighlight">\(n-1\)</span> (et aussi <span class="math notranslate nohighlight">\(n-2\)</span> pour la suite de Fibonacci).</p>
+<p>On verra que le paramètre <span class="math notranslate nohighlight">\(n\)</span> caractérise souvent <em>la taille</em> du problème à résoudre : c’est déjà clair pour les tours de Hanoï.</p>
+<p>Dans certains cas, on peut profiter d’une réduction <em>plus rapide</em> de la valeur du paramètre de la fonction récursive (<em>ie.</em> de la taille du problème à résoudre) : en faisant apparaitre à la place de la soustraction <span class="math notranslate nohighlight">\(n \to n-1\)</span>, une division par un entier supérieur à 1 : <span class="math notranslate nohighlight">\(n \to n/2\)</span> par exemple.</p>
+<p>Cette “division récurrente” caractérise la résolution d’un problème selon le paradigme <em>diviser pour régner</em>.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <ul class="simple">
@@ -586,7 +594,7 @@ minutes minimum, PhL.</p>
 <ol class="arabic simple">
 <li><p>Par “récursivement”, on entend <em>répéter</em> la division de chaque sous-problème</p>
 <ul class="simple">
-<li><p>“taille moindre” : la <span class="math notranslate nohighlight">\(n\)</span> taille est réduite par <em>division</em> par un entier supérieur ou égal à 2, <em>ie.</em> <span class="math notranslate nohighlight">\(n \to n/2\)</span> ou <span class="math notranslate nohighlight">\(n \to n/3\)</span> ou …</p></li>
+<li><p>“taille moindre” : la <span class="math notranslate nohighlight">\(n\)</span> taille est réduite par <em>division</em> par un entier supérieur à 1, <em>ie.</em> <span class="math notranslate nohighlight">\(n \to n/2\)</span> ou <span class="math notranslate nohighlight">\(n \to n/3\)</span> ou …</p></li>
 <li><p>“problèmes indépendants” : la solution d’un sous-problème issu d’une division ne dépend pas des autres sous-problèmes.</p></li>
 </ul>
 </li>
@@ -624,8 +632,7 @@ minutes minimum, PhL.</p>
 </ul>
 <p><span class="math notranslate nohighlight">\(n ! = n \times (n-1) ! \textbf{ avec }  0! = 1\)</span></p>
 <p>Remarque : ces définitions ont un sens pour <span class="math notranslate nohighlight">\(n&gt;0\)</span>. La valeur de <span class="math notranslate nohighlight">\(0!\)</span> doit être définie de façon supplémentaire.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
+<div class="warning::: docutils">
 <p>Bien différencier en quoi ces 2 écritures sont différentes.</p>
 </div>
 <section id="factorielle-forme-iterative">
@@ -702,10 +709,7 @@ minutes minimum, PhL.</p>
 </pre></div>
 </div>
 </div>
-</details><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-</section>
+</details></section>
 </section>
 <section id="factorielle-forme-recursive">
 <h3><span class="section-number">3.3.2. </span>Factorielle : forme récursive<a class="headerlink" href="#factorielle-forme-recursive" title="Permalink to this heading">#</a></h3>
@@ -713,8 +717,8 @@ minutes minimum, PhL.</p>
 <span class="math notranslate nohighlight">\(n ! = n \times (n-1) !\)</span></p>
 <p>Oui, oui ! On a oublié de définir <span class="math notranslate nohighlight">\(0 !\)</span>.</p>
 <p>On l’écrit quand même …</p>
-<section id="premier-essai-qui-plante">
-<h4>Premier essai (qui plante :)<a class="headerlink" href="#premier-essai-qui-plante" title="Permalink to this heading">#</a></h4>
+<section id="premier-essai-qui-va-echouer">
+<h4>Premier essai (qui va échouer :)<a class="headerlink" href="#premier-essai-qui-va-echouer" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">n</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
@@ -774,11 +778,15 @@ minutes minimum, PhL.</p>
 </div>
 </div>
 </div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<p>Traduction : “profondeur de récursions maximale dépassée”.
+Ce qui indique que la pile des appels dépasse l’espace mémoire qui lui est dédiée.
+Le nombre d’appels récursifs est trop important.</p>
+<p>Ici ce nombre est infini car notre code n’indique aucune <em>terminaison</em> des appels récursifs.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
 <p>INFO: python limite à 1000 le nombre  d’appels récursifs</p>
-<p>Heureusement … ce qui nous sauve ici !</p>
 </div>
+<p>Heureusement … ce qui nous sauve ici !</p>
 </section>
 <section id="terminaison-pour-arreter-les-appels-recursifs">
 <h4>Terminaison : pour arrêter les appels récursifs !!!!<a class="headerlink" href="#terminaison-pour-arreter-les-appels-recursifs" title="Permalink to this heading">#</a></h4>
@@ -980,8 +988,8 @@ Pour cela, on décortique bien la fonction.</p></li>
 </div>
 </div>
 </div>
-<div class="admonition-conseil admonition">
-<p class="admonition-title">Conseil</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
 <p>Bien regarder le moment où on effectue la <strong>première</strong> multiplication</p>
 </div>
 <p>Exercice :</p>
@@ -1052,7 +1060,7 @@ Le cacul rapide de l’exponentiation entière s’appuie sur l’écriture suiv
 </ul>
 <p>On passe de la puissance <span class="math notranslate nohighlight">\(2p\)</span> ou <span class="math notranslate nohighlight">\(2p+1\)</span> à la puissance <span class="math notranslate nohighlight">\(p\)</span>.
 On <em>divise</em> donc successivement par 2 les tailles des calculs à effectuer.
-<em>L’exponentiation rapide</em> est bien un exemple de résolution selon une analyse <em>diviser</em> pour régner.</p>
+<em>L’exponentiation rapide</em> est bien un exemple de résolution <em>diviser pour régner</em>.</p>
 <p>On a bien sûr besoin de la terminaison de cette écriture récursive :
 <span class="math notranslate nohighlight">\(x^0 = 1\)</span>.</p>
 <div class="cell docutils container">
@@ -1090,7 +1098,7 @@ On <em>divise</em> donc successivement par 2 les tailles des calculs à effectue
 <p><strong>Rmq.</strong></p>
 <ul class="simple">
 <li><p>L’écriture précédente s’appuie sur la division entière de python (<code class="docutils literal notranslate"><span class="pre">//</span></code>). On peut calculer <code class="docutils literal notranslate"><span class="pre">r</span></code> sans ce soucier de sa parité : <code class="docutils literal notranslate"><span class="pre">n//2</span></code> sera toujours le quotient de la division euclidienne de <code class="docutils literal notranslate"><span class="pre">n</span></code> par <code class="docutils literal notranslate"><span class="pre">2</span></code> avec reste nul (cas pair) ou non (cas impair).</p></li>
-<li><p>L’écriture suivante est bien sûr possible et conduit au <em>même</em> traitement.</p></li>
+<li><p>L’écriture suivante conduit au <em>même</em> traitement.</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1221,10 +1229,10 @@ Ce module complète (et utilise) le module <em>time</em> déjà décrit dans le
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>715 ns ± 6.75 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>709 ns ± 3.4 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>371 ns ± 1.84 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>367 ns ± 0.443 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1239,8 +1247,8 @@ Ce module complète (et utilise) le module <em>time</em> déjà décrit dans le
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>709 ns ± 12.4 ns per loop (mean ± std. dev. of 7 runs, 100 loops each)
-370 ns ± 11.5 ns per loop (mean ± std. dev. of 7 runs, 100 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>717 ns ± 20.9 ns per loop (mean ± std. dev. of 7 runs, 100 loops each)
+369 ns ± 10.6 ns per loop (mean ± std. dev. of 7 runs, 100 loops each)
 </pre></div>
 </div>
 </div>
@@ -1254,10 +1262,10 @@ Ce module complète (et utilise) le module <em>time</em> déjà décrit dans le
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>715 ns ± 6.47 ns per loop (mean ± std. dev. of 5 runs, 1,000,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>709 ns ± 2.06 ns per loop (mean ± std. dev. of 5 runs, 1,000,000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>380 ns ± 4 ns per loop (mean ± std. dev. of 5 runs, 1,000,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>367 ns ± 0.647 ns per loop (mean ± std. dev. of 5 runs, 1,000,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1273,9 +1281,9 @@ Ce module complète (et utilise) le module <em>time</em> déjà décrit dans le
 <h2><span class="section-number">3.5. </span>Fibonacci ou l’inefficacité de la récursion<a class="headerlink" href="#fibonacci-ou-l-inefficacite-de-la-recursion" title="Permalink to this heading">#</a></h2>
 <p>La suite de Fibonaci est définie par une récurrence <em>d’ordre 2</em> :</p>
 <div class="math notranslate nohighlight">
-\[F(n+1) = F(n) + F(n-1).\]</div>
+\[f(n+1) = f(n) + f(n-1).\]</div>
 <p>Ce qui nécessite de connaître 2 valeurs de départ :
-$<span class="math notranslate nohighlight">\(F(0) = F(1) = 1.\)</span>$</p>
+$<span class="math notranslate nohighlight">\(f(0) = f(1) = 1.\)</span>$</p>
 <section id="solution-recursive">
 <h3><span class="section-number">3.5.1. </span>Solution récursive<a class="headerlink" href="#solution-recursive" title="Permalink to this heading">#</a></h3>
 <p>L’expression est naturellement récursive donc …</p>
@@ -1353,10 +1361,10 @@ $<span class="math notranslate nohighlight">\(F(0) = F(1) = 1.\)</span>$</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>66.1 µs ± 516 ns per loop (mean ± std. dev. of 5 runs, 10,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>65.5 µs ± 41.3 ns per loop (mean ± std. dev. of 5 runs, 10,000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>321 ns ± 3.09 ns per loop (mean ± std. dev. of 5 runs, 1,000,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>317 ns ± 0.558 ns per loop (mean ± std. dev. of 5 runs, 1,000,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1364,7 +1372,7 @@ $<span class="math notranslate nohighlight">\(F(0) = F(1) = 1.\)</span>$</p>
 <p>On observe ici un temps de calcul environ 300 fois supérieur avec la version récursive.
 Pourtant <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">=</span> <span class="pre">15</span></code> n’est pas une très grande valeur <em>a priori</em>.
 Vous observerez que ce comportement se dégrade de plus de plus significativement quand <code class="docutils literal notranslate"><span class="pre">n</span></code> augmente …</p>
-<p><strong>Rmq.</strong> On remarque que <code class="docutils literal notranslate"><span class="pre">timeit</span></code> a automatiquement adapté sa mesure au temps d’exécution de chacune des versions : la version itérative est mesurée sur une exécution 1000 fois plus importante que la version récursive.</p>
+<p>Au passage, on remarque que <code class="docutils literal notranslate"><span class="pre">timeit</span></code> a automatiquement adapté sa mesure au temps d’exécution de chacune des versions : la version itérative est mesurée sur une exécution 1000 fois plus importante que la version récursive.</p>
 <p>Pour d’abord expliquer pourquoi cette solution récursive est inefficace en pratique, étudions maintenant plus en détail comment s’exécute un appel récursif.</p>
 </section>
 </section>
@@ -1398,7 +1406,7 @@ Chaque environnement est donc conservé dans une structure de donnée adaptée �
 <h3><span class="section-number">3.6.2. </span>Pile d’exécution<a class="headerlink" href="#pile-d-execution" title="Permalink to this heading">#</a></h3>
 <p>La <strong>pile d’exécution</strong> est la mémoire associée nécessaire au stockage des paramètres d’appel, des adresses de retour, des variables locales.</p>
 <p>Elle est gérée par le langage de programmation : une pile LIFO (<em>last in, first out</em>) de taille préfixée.
-Mais il y a un risque de débordement mémoire si les appels imbriqués trop nombreux – sans libération de la place occupée.</p>
+Comme nous l’avons déjà observé, il y a un risque de débordement mémoire si les appels imbriqués – sans libération de la place occupée – sont trop nombreux.</p>
 <ul class="simple">
 <li><p>En python : 1000 appels au maximum ou trop volumineux</p></li>
 </ul>
@@ -1417,7 +1425,7 @@ Mais il y a un risque de débordement mémoire si les appels imbriqués trop nom
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>En pratique : <code class="docutils literal notranslate"><span class="pre">stack</span> <span class="pre">overflow</span> <span class="pre">!</span></code> est le message classique quand … ça ne va pas !</p>
+<p>En pratique : <code class="docutils literal notranslate"><span class="pre">stack</span> <span class="pre">overflow</span> <span class="pre">!</span></code> est un message classique quand … ça ne va pas !</p>
 <p><em>stack</em> se traduit “pile” en français.</p>
 </div>
 <p>Pour cette année, on va introduire deux vues plus simples de cette pile d’exécution qui aident à mieux comprendre l’exécution d’un traitement récursif.</p>
@@ -1425,7 +1433,8 @@ Mais il y a un risque de débordement mémoire si les appels imbriqués trop nom
 <li><p>La pile des appels récursifs</p></li>
 <li><p>L’arbre des appels récursifs</p></li>
 </ul>
-<p>Ces “vues plus simples”, aussi appelées des <em>abstractions algorithmiques</em>, représentent la logique de fonctionnement de la pile d’exécution. Elles permettent de ne pas avoir à détailler pas toutes les caractéristiques de l’environnement de chaque appel.</p>
+<p>Ces “vues plus simples” sont des <em>abstractions algorithmiques</em> qui représentent la logique de fonctionnement de la pile d’exécution.
+Elles permettent de ne pas avoir à détailler pas toutes les caractéristiques de l’environnement de chaque appel.</p>
 </section>
 <section id="pile-des-appels">
 <h3><span class="section-number">3.6.3. </span>Pile des appels<a class="headerlink" href="#pile-des-appels" title="Permalink to this heading">#</a></h3>
@@ -1764,33 +1773,35 @@ Si on déplace <em>l’empilement complet avec les 3 disques supérieurs</em> de
 <li><p>déplacer le disque qui reste sur A vers C = <code class="docutils literal notranslate"><span class="pre">Hanoi(1,</span> <span class="pre">A,</span> <span class="pre">C,</span> <span class="pre">B)</span></code> … oui: B ne sert à rien</p></li>
 <li><p>déplacer un empilement complet de 3 disques de B vers C (en utilisant A) = <code class="docutils literal notranslate"><span class="pre">Hanoi(3,</span> <span class="pre">B,</span> <span class="pre">C,</span> <span class="pre">A)</span></code></p></li>
 </ul>
-<div class="alert alert-success">
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>On tient la récursion ! 3 appels à <code class="docutils literal notranslate"><span class="pre">Hanoi</span></code> pour calculer <code class="docutils literal notranslate"><span class="pre">Hanoi</span></code> !!</p>
-</div><p><strong>Avec un graphique</strong></p>
+</div>
+<p><strong>Avec un graphique</strong></p>
 <ul class="simple">
-<li><p>On part de là : avec un empilement de 4 disques sur A à déplacer vers C
-<img alt="hanoi_rec0" src="../_images/hanoi_rec0.png" /></p></li>
+<li><p>On part de là : avec un empilement de 4 disques sur A à déplacer vers C</p></li>
 </ul>
+<p><img alt="hanoi_rec0" src="../_images/hanoi_rec0.png" /></p>
 <ul class="simple">
-<li><p>On identifie un empilement de taille inférieure : 3 disques regroupés en rose
-<img alt="hanoi_rec1" src="../_images/hanoi_rec1.png" /></p></li>
+<li><p>On identifie un empilement de taille inférieure : 3 disques regroupés en rose</p></li>
 </ul>
+<p><img alt="hanoi_rec1" src="../_images/hanoi_rec1.png" /></p>
 <ul class="simple">
-<li><p>On suppose qu’on est capable de déplacer <em>correctement</em> l’empilement rose de A vers B (en utilisant C)
-<img alt="hanoi_rec2" src="../_images/hanoi_rec2.png" /></p></li>
+<li><p>On suppose qu’on est capable de déplacer <em>correctement</em> l’empilement rose de A vers B (en utilisant C)</p></li>
 </ul>
+<p><img alt="hanoi_rec2" src="../_images/hanoi_rec2.png" /></p>
 <ul class="simple">
-<li><p>On déplace le dernier disque restant sur A vers C : il est à sa bonne place
-<img alt="hanoi_rec3" src="../_images/hanoi_rec3.png" /></p></li>
+<li><p>On déplace le dernier disque restant sur A vers C : il est à sa bonne place</p></li>
 </ul>
+<p><img alt="hanoi_rec3" src="../_images/hanoi_rec3.png" /></p>
 <ul class="simple">
-<li><p>Comme deux étapes avant, on suppose qu’on est capable de déplacer <em>correctement</em> l’empilement rose de B vers C (en utilisant A). L’empilement rose est bien placé maintenant
-<img alt="hanoi_rec4" src="../_images/hanoi_rec4.png" /></p></li>
+<li><p>Comme deux étapes avant, on suppose qu’on est capable de déplacer <em>correctement</em> l’empilement rose de B vers C (en utilisant A). L’empilement rose est bien placé maintenant</p></li>
 </ul>
+<p><img alt="hanoi_rec4" src="../_images/hanoi_rec4.png" /></p>
 <ul class="simple">
-<li><p>et le problème initial est bien résolu !
-<img alt="hanoi_rec5" src="../_images/hanoi_rec5.png" /></p></li>
+<li><p>et le problème initial est bien résolu !</p></li>
 </ul>
+<p><img alt="hanoi_rec5" src="../_images/hanoi_rec5.png" /></p>
 <p><strong>Terminaison pour la récursion</strong></p>
 <ul class="simple">
 <li><p>on termine quand on sait résoudre le problème car il est suffisamment simple :</p>
@@ -1845,7 +1856,7 @@ On formalisera plus tard cette analyse de la <em>terminaison</em> de la solution
 </div>
 </div>
 </div>
-<p>En effet, les piquets <code class="docutils literal notranslate"><span class="pre">A,</span> <span class="pre">B,</span> <span class="pre">C</span></code> n’existent pas en tant qu’objet (variable) python.
+<p>En effet, les piquets <code class="docutils literal notranslate"><span class="pre">A,</span> <span class="pre">B,</span> <span class="pre">C</span></code>  n’existent pas en tant qu’objet (variable) python.
 On remarque que l’en-tête de la fonction était silencieuse à ce sujet …</p>
 <p>Pour rendre effectif un traitement,</p>
 <ul class="simple">
@@ -1895,9 +1906,11 @@ B --&gt; C
 </div>
 </div>
 </div>
-<div class="alert alert-danger">
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
 <p>ATTENTION : il y a 0 <code class="docutils literal notranslate"><span class="pre">return</span></code> et 1 <code class="docutils literal notranslate"><span class="pre">print</span></code> … et pourtant l’algorithme termine et (semble) donner les déplacements qui résolvent le pb … C’est un biais introduit par la <em>modélisation</em> des piquets par des caractères (difficile de faire autre chose que des <code class="docutils literal notranslate"><span class="pre">print</span></code> sur des caractères). Vous reprendrez cette résolution lorsque vous saurez représenter les empilements de disques par … des piles.</p>
-</div><div class="cell docutils container">
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39; appels simples pour se convaincre que ça marche et ...&#39;&#39;&#39;</span>
 <span class="c1">#hanoi(1, &#39;A&#39;, &#39;C&#39;, &#39;B&#39;)</span>
@@ -2034,6 +2047,7 @@ Ca vous fait penser à quelque chose :) ?
 <ul class="simple">
 <li><p>algorithmes de recherche : version récursive de différentes recherches de complexité linéaire</p></li>
 <li><p>algorithmes de tri : tri fusion, tri rapide : voir chapitre “Trier”</p></li>
+<li><p>ces traitements récursifs seront étudiés dans les chapitres <a class="reference internal" href="8-rechercher.html#ch-rechercher"><span class="std std-ref">Rechercher</span></a> et <a class="reference internal" href="10-trier2025.html#ch-trier"><span class="std std-ref">Trier</span></a>.</p></li>
 </ul>
 </li>
 <li><p>Etablir la complexité d’algos récursifs</p>
@@ -2061,13 +2075,19 @@ Ca vous fait penser à quelque chose :) ?
 </li>
 <li><p><span class="math notranslate nohighlight">\(\star\)</span> Dé-récursifier : récursif -&gt; itératif (quand on peut)</p>
 <ul class="simple">
-<li><p>voir par exemple les slides du cours de 2016 : <a class="reference external" href="http://perso.univ-perp.fr/langlois/images/pdf/ens/L1/s7-sl4.pdf">http://perso.univ-perp.fr/langlois/images/pdf/ens/L1/s7-sl4.pdf</a></p></li>
+<li><p>voir par exemple les <a class="reference external" href="http://perso.univ-perp.fr/langlois/images/pdf/ens/L1/s7-sl4.pdf">diapos du cours de 2016</a></p></li>
 </ul>
 </li>
 </ol>
 </section>
 <section id="complements">
 <h3><span class="section-number">3.8.3. </span>Compléments<a class="headerlink" href="#complements" title="Permalink to this heading">#</a></h3>
+<div class="admonition-pour-approfondir admonition">
+<p class="admonition-title">Pour approfondir.</p>
+<p>L’écosystème de Python est riche de modules utiles : le module <a class="reference external" href="https://github.com/carlsborg/rcviz">rcviz</a> permet de tracer le graphe d’une exécution d’un code python.
+Dans le cas d’une fonction récursive, il suffit d’ajouter le décorateur <code class="docutils literal notranslate"><span class="pre">&#64;viz</span></code> à la définition de la fonction, d’exécuter l’appel de fonction et <code class="docutils literal notranslate"><span class="pre">callgraph.render()</span></code> fournit (sous jupyter) le tracé de l’arbre des appels récursifs. D’autres options existent sur le lien de <a class="reference external" href="https://github.com/carlsborg/rcviz">rcviz</a>.</p>
+<p>En pratique, la bonne nouvelle que <a class="reference external" href="https://baston.fr">basthon</a> permet ce traitement.</p>
+</div>
 <p>Des ressources utiles :</p>
 <ul class="simple">
 <li><p>sur <a class="reference external" href="http://interstices.info">interstices.info</a> : <a class="reference external" href="https://interstices.info/jcms/p_82121/les-tours-de-hanoi-un-probleme-classique-de-recursion">hanoi_interstices</a></p></li>
@@ -2160,7 +2180,7 @@ Ca vous fait penser à quelque chose :) ?
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#factorielle-forme-recursive">3.3.2. Factorielle : forme récursive</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#premier-essai-qui-plante">Premier essai (qui plante :)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#premier-essai-qui-va-echouer">Premier essai (qui va échouer :)</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#terminaison-pour-arreter-les-appels-recursifs">Terminaison : pour arrêter les appels récursifs !!!!</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#bien-comprendre-les-appels-recursifs">Bien comprendre les appels récursifs !</a></li>
 </ul>
