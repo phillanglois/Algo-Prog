@@ -27,7 +27,7 @@ Mis à jour : {sub-ref}`today`, lecture : {sub-ref}`wordcount-minutes` minutes m
 CC : contrôle "dit" continu, CT contrôle "dit" terminal
 
 ```{Warning}
-**Note UE = 0.25\*(CC1+CC2) + 0.5\*CT**
+**Note UE = CC1/4 + CC2/4 + CT/2**
 ```
 
 **Dates et détails.** Les dates de ces évaluations sont annoncées en début de [la page d'accueil du cours](ch:bonjour).
@@ -128,7 +128,9 @@ TP : un sujet sur un thème pour maitriser les notions et acquérir du savoir-fa
 ### Supports de cours
 
 :::{note}
-Excepté ce support de cours, toutes les autres ressources sont sur moodle et sont mises à jour **très** régulièrement
+
+- Excepté ce support de cours, toutes les autres ressources sont sur moodle.
+- Ces supports sont mises à jour **très** régulièrement
 :::
 
 - corrections des exercices objectif 10 des TD : au fur et à mesure du semestre
@@ -240,9 +242,9 @@ Vérifiez vos acquis en début de semestre 2 !
   - applications 
   - notions : itératif vs. récursif, pile/arbre des appels, complexité
 
-```{note} 
+:::{note} 
 La récursion s'appuie sur la notion de _fonction_ présentée dans les aspects plutôt programmation.
-```
+:::
 
 - Rechercher 
   - recherche séquentielle
@@ -257,8 +259,9 @@ La récursion s'appuie sur la notion de _fonction_ présentée dans les aspects 
 
 - Complexité
   - combien _coûte_ un algorithme pour résoudre un pb donné ?  
-  - combien de temps ? combien de place mémoire ?  
-  - tous les problèmes coûtent pareils ?  
+    - combien de temps ? 
+    - combien de place mémoire ?  
+    - tous les algorithmes coûtent pareils ? tout le temps ?
   - notions : complexité en temps, pire cas, complexité asymptotique  
   - exemples d'algos plutôt numériques et leurs complexités
     - différentes évaluations de polynômes 
@@ -305,23 +308,23 @@ La récursion s'appuie sur la notion de _fonction_ présentée dans les aspects 
 
 - Entrées/sorties et fichiers
   - Très pratique pour tester ses développements : 
-  ```{important}
+  :::{important}
   **Bannir les entrées au clavier !** 
   Plus d'`input()` à tours de bras SVP !!!
-  ```
+  :::
 - Modules
   - utilisation de modules existants : `math`
   - exemple d'outils : `numpy`, `matplotlib`, `time` 
   
 
 -   
-```{note}
+:::{note}
 Par manque de temps, les notions suivantes ne sont pas abordés en séance bien que très utiles en pratique.
 Des ressources présentées en annexe du support de cours pourront être exploitées de façon autonome par les étudiants (objectif 20) qui le souhaitent.
 
 - `ndarray` de `numpy`
 - les exceptions en python
-```
+:::
 
 
 (envir-machine)=
@@ -330,7 +333,7 @@ Des ressources présentées en annexe du support de cours pourront être exploit
 :::{ATTENTION}
 **Problème entre Windows, votre dossier réseau et jupyter en salles informatique**
 
-*Sous windows :*
+*Sous windows*
 
 - jupyter à accès aux dossiers locaux de la machine sur laquelle vous travaillez
 - mais jupyter n'a pas directement accès à votre "dossier_réseau".
