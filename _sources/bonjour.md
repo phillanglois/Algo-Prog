@@ -42,5 +42,13 @@ Le travail de chaque semaine est mis à jour chaque ... semaine.
 - Lire la présentation [Algo Prog en 2026](ch:intro)
 - S'assurer que son environnement de travail python est conforme à la section "Deux points importants" de [Algo Prog](ch:intro). Vérifier en particulier que _jupyter notebook_ est opérationnel pour du python en version $\ge$ 3.11.
 - Effectuer la MTU [Utiliser les notebooks Jupyter](https://moodle.luniversitenumerique.fr/course/view.php?id=1086).
+- Lire et travailler le chapitre 1 (fonctions) en s'appuyant sur le chapitre 2 (exemples de fonctions) vu en séance
+
+## Semaine 4
+
+- CM 
+  - Lister questions sur chapitres 1 et 2.
+  - Lire chapitre 3 (récursivité)  jusqu'à 3.3 inclus.
+  
 
 <!-- #endregion -->
