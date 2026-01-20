@@ -49,6 +49,10 @@ Le travail de chaque semaine est mis à jour chaque ... semaine.
 - CM 
   - Lister questions sur chapitres 1 et 2.
   - Lire chapitre 3 (récursivité)  jusqu'à 3.3 inclus.
+- TD : 
+  - compétences sur "fonctions"  
+  - feuille TD1, exercices objectif 10 (au moins), à effectuer dans un notebook jupyter
+
   
 
 <!-- #endregion -->
