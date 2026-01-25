@@ -40,7 +40,7 @@ Le travail de chaque semaine est mis à jour chaque ... semaine.
 
 ## Semaine 5
 
-- CM (2 séances) : chapitre 3 (récursivité)  en entier
+- CM (2 séances) : lire le chapitre 3 (récursivité) en entier
 - TD : avancer feuille 1 selon votre objectif
 
 ## Semaine 4
