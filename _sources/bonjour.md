@@ -38,6 +38,13 @@ Le travail de chaque semaine est mis à jour chaque ... semaine.
 
 (sec:travailhebdo)=
 
+## Semaine 6
+
+- CM : 
+  - lire le chapitre 3 (récursivité) en entier
+  - ($\star$) la version récursive terminale de $n!$ indiquée en amphi a été ajoutée dans la dernière maj en ligne (section 1.3.2.7)
+- TD : **finir** feuille 1 selon votre objectif
+
 ## Semaine 5
 
 - CM (2 séances) : lire le chapitre 3 (récursivité) en entier

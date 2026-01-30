@@ -54,17 +54,17 @@ Dans/avec un notebook jupyter :
 
 ### Avoir les idées claires
 
-- Savoir conduire une approche diviser pour régner et en déduire une solution récursive : application à des exemples calculatoires simples (factorielles, exponentiation entière, exponentiation rapide)
-- Savoir identifier la (ou les) terminaison, la récursion et l'initialisation d'un traitement avec un algorithme récursif : application à des exemples simples (factorielles, exponentiation entière, exponentiation rapide)
-
+- Savoir identifier la (ou les) terminaison, la récursion et l'initialisation d'un traitement avec un algorithme récursif : application à des exemples simples : factorielle, exponentiation entière, suite de Fibonacci, somme des n premiers entiers
+- Savoir conduire une approche diviser pour régner et en déduire une solution récursive : application à l'exponentiation rapide
 
 ### Savoir-faire
 
 - Savoir écrire sous la forme d'une fonction de même signature les versions itérative et récursive d'un traitement calculatoire simple
 - Construire la pile des appels et son évolution lors d'un traitement récursif
+- ($\star$) Savoir écrire la version récursive terminale d'un traitement calculatoire simple
 
 
-## Complexité (2025)
+## Complexité
 
 ### Avoir les idées claires
 

@@ -432,7 +432,11 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#factorielle-forme-recursive">3.3.2. Factorielle : forme récursive</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#premier-essai-qui-va-echouer">Premier essai (qui va échouer :)</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#terminaison-pour-arreter-les-appels-recursifs">Terminaison : pour arrêter les appels récursifs !!!!</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#une-autre-ecriture-avec-un-seul-return">Une autre écriture avec un seul <code class="docutils literal notranslate"><span class="pre">return</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#encore-une-autre-ecriture">Encore une autre écriture</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#et-une-autre">Et une autre …</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#bien-comprendre-les-appels-recursifs">Bien comprendre les appels récursifs !</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#star-une-derniere-version-une-recursion-terminale"><span class="math notranslate nohighlight">\((\star)\)</span> Une dernière version : une récursion terminale</a></li>
 </ul>
 </li>
 </ul>
@@ -499,7 +503,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="recursivite">
 <span id="ch-recursivite"></span><h1><span class="section-number">3. </span>Récursivité<a class="headerlink" href="#recursivite" title="Permalink to this heading">#</a></h1>
-<p>Mis à jour : Dec 23, 2025, lecture : 17
+<p>Mis à jour : Jan 30, 2026, lecture : 19
 minutes minimum, PhL.</p>
 <section id="definitions-et-premiers-exemples">
 <h2><span class="section-number">3.1. </span>Définitions et premiers exemples<a class="headerlink" href="#definitions-et-premiers-exemples" title="Permalink to this heading">#</a></h2>
@@ -609,7 +613,7 @@ minutes minimum, PhL.</p>
 <p>Exemples caractéristiques d’algorithmes <em>diviser pour régner</em> dont on connaît déjà des versions itératives.</p>
 <ul class="simple">
 <li><p>recherche dichotomique dans un ensemble trié</p></li>
-<li><p>exponentiation (dite) rapide :</p>
+<li><p>exponentiation (dite) rapide</p>
 <ul>
 <li><p><span class="math notranslate nohighlight">\(x^{2p} = (x^p)^2\)</span> et</p></li>
 <li><p><span class="math notranslate nohighlight">\(x^{2p+1} = x \times (x^p)^2\)</span></p></li>
@@ -617,6 +621,10 @@ minutes minimum, PhL.</p>
 </li>
 </ul>
 <p>Dans ces 2 exemples, chaque étape découpe en 2 moitiés (ou presque) le problème initial.</p>
+<ul class="simple">
+<li><p>La recherche dichotomique vue au lycée sera étudiée au <a class="reference internal" href="8-rechercher.html#ch-rechercher"><span class="std std-ref">chapitre “Rechercher</span></a>.</p></li>
+<li><p>L’exponentiation rapide sera étudiée dans la <a class="reference internal" href="#sec-exporapide"><span class="std std-ref">section</span></a> un peu plus loin.</p></li>
+</ul>
 <p><strong>Rmq.</strong> La réduction de la taille <em>par division</em> est caractéristique des approches diviser pour régner. Elle permet d’obtenir des complexités meilleures que les solutions récursives où la taille diminue linéairement : <span class="math notranslate nohighlight">\(n \to n-1\)</span> ou <span class="math notranslate nohighlight">\(n \to n-2\)</span> …</p>
 </section>
 </section>
@@ -837,7 +845,9 @@ Le nombre d’appels récursifs est trop important.</p>
 </ul>
 </li>
 </ol>
-<p>Autre écriture avec 1 seul <code class="docutils literal notranslate"><span class="pre">return</span></code> :</p>
+</section>
+<section id="une-autre-ecriture-avec-un-seul-return">
+<h4>Une autre écriture avec un seul <code class="docutils literal notranslate"><span class="pre">return</span></code><a class="headerlink" href="#une-autre-ecriture-avec-un-seul-return" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">n</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
@@ -873,7 +883,10 @@ Le nombre d’appels récursifs est trop important.</p>
 <span class="sd-summary-text">Y-a-t-il une différence entre <strong>les instructions exécutées</strong> par (un appel à) l’une ou l’autre de ces deux écritures : 1 vs. 2 return</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Non ! Et c’est important de le comprendre.</p>
 </div>
-</details><p>Enfin l’écriture <em>équivalente</em> suivante explicite la récursion et la construction.</p>
+</details></section>
+<section id="encore-une-autre-ecriture">
+<h4>Encore une autre écriture<a class="headerlink" href="#encore-une-autre-ecriture" title="Permalink to this heading">#</a></h4>
+<p>L’écriture <em>équivalente</em> suivante explicite la récursion et la construction.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">n</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
@@ -905,7 +918,39 @@ Le nombre d’appels récursifs est trop important.</p>
 </div>
 </div>
 </div>
-<p><strong>Rmq sur la validité de ces 3 écritures récursives.</strong></p>
+</section>
+<section id="et-une-autre">
+<h4>Et une autre …<a class="headerlink" href="#et-une-autre" title="Permalink to this heading">#</a></h4>
+<p>Cette version concise se rapproche vraiment de la définition mathématique de la factorielle.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">n</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Calcul de factorielle n -- version récursive consive</span>
+<span class="sd">    entrée : n &gt;= 0 </span>
+<span class="sd">    sortie n!</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>          <span class="c1"># terminaison</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">f</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># récursion</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;3! =&quot;</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;10! =&quot;</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>  
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3! = 6
+10! = 3628800
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Rmq sur la validité de ces écritures récursives.</strong></p>
 <p>Même dans ces versions récursives, il faut protéger le traitement des appels avec des arguments invalides. Comme précédemment, on ajoute l’assertion :
 <code class="docutils literal notranslate"><span class="pre">assert</span> <span class="pre">n</span> <span class="pre">&gt;=</span> <span class="pre">0</span></code> avant le début du traitement.</p>
 </section>
@@ -990,7 +1035,10 @@ Pour cela, on décortique bien la fonction.</p></li>
 </div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>Bien regarder le moment où on effectue la <strong>première</strong> multiplication</p>
+<ul class="simple">
+<li><p>Bien identifier le moment où on effectue la <strong>première</strong> multiplication</p></li>
+<li><p>Identifier l’ordre des multiplications successives</p></li>
+</ul>
 </div>
 <p>Exercice :</p>
 <ul class="simple">
@@ -1010,10 +1058,105 @@ Pour cela, on décortique bien la fonction.</p></li>
 <p class="sd-card-text">Ces notions seront approfondies plus loin.</p>
 </div>
 </details></section>
+<section id="star-une-derniere-version-une-recursion-terminale">
+<h4><span class="math notranslate nohighlight">\((\star)\)</span> Une dernière version : une récursion terminale<a class="headerlink" href="#star-une-derniere-version-une-recursion-terminale" title="Permalink to this heading">#</a></h4>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Une récursion est dite <em>terminale</em> si l’appel récursif est la dernière instruction exécutée.</p>
+</div>
+<p>Aucune des versions précédentes de notre calcul de <span class="math notranslate nohighlight">\(n!\)</span> ne vérifie cette propriété.</p>
+<p><strong>Question.</strong> Quelle est la dernière instruction exécutée dans les versions précédentes de <code class="docutils literal notranslate"><span class="pre">f()</span></code> ?</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Réponse :</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">La multiplication de <code class="docutils literal notranslate"><span class="pre">n</span></code> par la valeur calculée de <code class="docutils literal notranslate"><span class="pre">f(n-1)</span></code>.</p>
+</div>
+</details><p>Récursion et itération sont deux façons différentes de répéter un traitement.
+Une fonction récursive terminale est très facilement transformable en une itération <code class="docutils literal notranslate"><span class="pre">while</span></code>.
+Cette propriété est intéressante en pratique car la version itérative est plus efficace que la version récursive : elle se dispense de la <a class="reference internal" href="#sec-piledesappels"><span class="std std-ref">pile des appels</span></a>.</p>
+<p>Une version récursive terminale de la factorielle s’obtient en ajoutant <em>un paramètre supplémentaire</em> qui va accumuler les valeurs des produits partiels <span class="math notranslate nohighlight">\(n \times (n-1) \times \dots\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f2</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">acc</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;Calcul de factorielle n -- une version récursive terminale</span>
+<span class="sd">    entrée : n &gt;= 0, acc=1 pour l&#39;appel principal </span>
+<span class="sd">    sortie n!&#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">acc</span>
+    <span class="k">return</span> <span class="n">f2</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">*</span> <span class="n">acc</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>L’appel de <code class="docutils literal notranslate"><span class="pre">f2</span></code> pour calculer <span class="math notranslate nohighlight">\(n!\)</span> nécessite d’initialiser <code class="docutils literal notranslate"><span class="pre">acc</span></code> à 1.</p></li>
+<li><p>L’appel récursif à <code class="docutils literal notranslate"><span class="pre">f2</span></code> est bien la dernière instruction exécutée par un appel à <code class="docutils literal notranslate"><span class="pre">f2</span></code>.</p>
+<ul>
+<li><p>Ce qui suppose bien sûr que <code class="docutils literal notranslate"><span class="pre">n-1</span></code> et <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">*</span> <span class="pre">acc</span></code> aient été évalués.</p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># premiers appel de la f2 avec initialisation de acc</span>
+
+<span class="k">assert</span> <span class="n">f2</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span> <span class="c1"># 0!</span>
+<span class="k">assert</span> <span class="n">f2</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span> <span class="c1"># 1!</span>
+<span class="k">assert</span> <span class="n">f2</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">6</span> <span class="c1"># 3!</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Encapsulation.</strong></p>
+<p>Cette version <code class="docutils literal notranslate"><span class="pre">f2</span></code> possède un paramètre formel supplémentaire <code class="docutils literal notranslate"><span class="pre">acc</span></code>.
+Son en-tête est donc différent de l’en-tête “naturel” d’une fonction factorielle – celui des versions précédentes.</p>
+<p>Il est agréable de retrouver la signature classique de la fonction factorielle (avec un seul paramètre) :</p>
+<ul class="simple">
+<li><p>le traitement récursif terminal est défini comme une fonction auxiliaire</p></li>
+<li><p>dans une fonction <em>réduite</em> à l’appel à la fonction récursive terminale, ie. l’initialiation de <code class="docutils literal notranslate"><span class="pre">acc</span></code>.</p></li>
+</ul>
+<p>Ainsi, on <em>encapsule</em> le traitement récursif terminal dans une fonction <em>de même signature</em> que celle des versions vues jusqu’à présent.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;Calcul de factorielle n -- LA version récursive terminale</span>
+<span class="sd">    entrée : n &gt;= 0</span>
+<span class="sd">    sortie n!&#39;&#39;&#39;</span>
+
+    <span class="k">def</span> <span class="nf">f_aux</span><span class="p">(</span><span class="n">n</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">acc</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;fonction auxiliaire récursive terminale&#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">acc</span>
+        <span class="k">return</span> <span class="n">f_aux</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">*</span> <span class="n">acc</span><span class="p">)</span>
+
+    <span class="c1"># appel de la fonction auxiliaire avec initialisation de acc </span>
+    <span class="k">return</span> <span class="n">f_aux</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># premiers appels de la f, version récursive terminale avec encapsulation-</span>
+
+<span class="k">assert</span> <span class="n">f</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span> <span class="c1"># 0!</span>
+<span class="k">assert</span> <span class="n">f</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span> <span class="c1"># 1!</span>
+<span class="k">assert</span> <span class="n">f</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">6</span> <span class="c1"># 3!</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Exercice.</strong></p>
+<ul class="simple">
+<li><p>L’ordre des multiplications de cette version récursive terminale est-il le même que celui des versions récursives précédentes ?</p></li>
+<li><p>Justifier votre réponse en écrivant un traitement itératif équivalent.</p></li>
+</ul>
+<p>Nous reverrons ces notions d’encapsulation et de récursivité terminale au chapitre <a class="reference internal" href="8-rechercher.html#ch-rechercher"><span class="std std-ref">Rechercher</span></a>.</p>
+</section>
 </section>
 </section>
 <section id="exponentiation-entiere-dite-rapide">
-<h2><span class="section-number">3.4. </span>Exponentiation entière (dite) rapide<a class="headerlink" href="#exponentiation-entiere-dite-rapide" title="Permalink to this heading">#</a></h2>
+<span id="sec-exporapide"></span><h2><span class="section-number">3.4. </span>Exponentiation entière (dite) rapide<a class="headerlink" href="#exponentiation-entiere-dite-rapide" title="Permalink to this heading">#</a></h2>
 <p>Objectif : calculer <span class="math notranslate nohighlight">\(x^n\)</span> où <span class="math notranslate nohighlight">\(x\)</span> est un réel et <span class="math notranslate nohighlight">\(n\)</span> un entier positif.</p>
 <section id="une-premiere-recursion">
 <h3><span class="section-number">3.4.1. </span>Une première récursion<a class="headerlink" href="#une-premiere-recursion" title="Permalink to this heading">#</a></h3>
@@ -1229,10 +1372,10 @@ Ce module complète (et utilise) le module <em>time</em> déjà décrit dans le
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>705 ns ± 1.15 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>711 ns ± 1.61 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>368 ns ± 1.29 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>371 ns ± 0.56 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1247,8 +1390,8 @@ Ce module complète (et utilise) le module <em>time</em> déjà décrit dans le
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>707 ns ± 19.7 ns per loop (mean ± std. dev. of 7 runs, 100 loops each)
-375 ns ± 14.9 ns per loop (mean ± std. dev. of 7 runs, 100 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>705 ns ± 18.9 ns per loop (mean ± std. dev. of 7 runs, 100 loops each)
+373 ns ± 15.1 ns per loop (mean ± std. dev. of 7 runs, 100 loops each)
 </pre></div>
 </div>
 </div>
@@ -1262,10 +1405,10 @@ Ce module complète (et utilise) le module <em>time</em> déjà décrit dans le
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>697 ns ± 3.64 ns per loop (mean ± std. dev. of 5 runs, 1,000,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>707 ns ± 1.64 ns per loop (mean ± std. dev. of 5 runs, 1,000,000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>367 ns ± 0.903 ns per loop (mean ± std. dev. of 5 runs, 1,000,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>369 ns ± 1.73 ns per loop (mean ± std. dev. of 5 runs, 1,000,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1361,10 +1504,10 @@ $<span class="math notranslate nohighlight">\(f(0) = f(1) = 1.\)</span>$</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>65 µs ± 40.5 ns per loop (mean ± std. dev. of 5 runs, 10,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>65.2 µs ± 267 ns per loop (mean ± std. dev. of 5 runs, 10,000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>305 ns ± 2.37 ns per loop (mean ± std. dev. of 5 runs, 1,000,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>309 ns ± 4.25 ns per loop (mean ± std. dev. of 5 runs, 1,000,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1425,20 +1568,20 @@ Comme nous l’avons déjà observé, il y a un risque de débordement mémoire 
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>En pratique : <code class="docutils literal notranslate"><span class="pre">stack</span> <span class="pre">overflow</span> <span class="pre">!</span></code> est un message classique quand … ça ne va pas !</p>
+<p>En pratique : <code class="docutils literal notranslate"><span class="pre">stack</span> <span class="pre">overflow!</span></code> est un message d’erreur classique et désagréable …</p>
 <p><em>stack</em> se traduit “pile” en français.</p>
 </div>
-<p>Pour cette année, on va introduire deux vues plus simples de cette pile d’exécution qui aident à mieux comprendre l’exécution d’un traitement récursif.</p>
+<p id="sec-piledesappels">Pour cette année, on va introduire deux vues plus simples de cette pile d’exécution qui aident à mieux comprendre l’exécution d’un traitement récursif.</p>
 <ul class="simple">
 <li><p>La pile des appels récursifs</p></li>
 <li><p>L’arbre des appels récursifs</p></li>
 </ul>
-<p>Ces “vues plus simples” sont des <em>abstractions algorithmiques</em> qui représentent la logique de fonctionnement de la pile d’exécution.
+<p>Ces “vues plus simples” sont des <em>abstractions algorithmiques</em> de la pile d’exécution qui représentent la logique de fonctionnement de cette dernière.
 Elles permettent de ne pas avoir à détailler pas toutes les caractéristiques de l’environnement de chaque appel.</p>
 </section>
 <section id="pile-des-appels">
 <h3><span class="section-number">3.6.3. </span>Pile des appels<a class="headerlink" href="#pile-des-appels" title="Permalink to this heading">#</a></h3>
-<p>La <strong>pile des appels</strong> est une <em>abstraction algorithmique</em> qui représente la logique de la pile d’exécution <strong>en se limitant à l’identifiant de chaque appel</strong>.</p>
+<p>La <strong>pile des appels</strong> est une <em>abstraction algorithmique</em> de la pile d’exécution qui représente la logique de la pile d’exécution <strong>en se limitant à l’identifiant de chaque appel</strong>.</p>
 </section>
 <section id="arbre-des-appels-recursifs">
 <h3><span class="section-number">3.6.4. </span>Arbre des appels récursifs<a class="headerlink" href="#arbre-des-appels-recursifs" title="Permalink to this heading">#</a></h3>
@@ -1848,7 +1991,7 @@ On formalisera plus tard cette analyse de la <em>terminaison</em> de la solution
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">31</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">37</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">hanoi0</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
 
 <span class="ne">NameError</span>: name &#39;A&#39; is not defined
@@ -2182,7 +2325,11 @@ Dans le cas d’une fonction récursive, il suffit d’ajouter le décorateur <c
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#factorielle-forme-recursive">3.3.2. Factorielle : forme récursive</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#premier-essai-qui-va-echouer">Premier essai (qui va échouer :)</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#terminaison-pour-arreter-les-appels-recursifs">Terminaison : pour arrêter les appels récursifs !!!!</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#une-autre-ecriture-avec-un-seul-return">Une autre écriture avec un seul <code class="docutils literal notranslate"><span class="pre">return</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#encore-une-autre-ecriture">Encore une autre écriture</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#et-une-autre">Et une autre …</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#bien-comprendre-les-appels-recursifs">Bien comprendre les appels récursifs !</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#star-une-derniere-version-une-recursion-terminale"><span class="math notranslate nohighlight">\((\star)\)</span> Une dernière version : une récursion terminale</a></li>
 </ul>
 </li>
 </ul>

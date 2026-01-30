@@ -465,7 +465,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="rechercher">
 <span id="ch-rechercher"></span><h1><span class="section-number">4. </span>Rechercher<a class="headerlink" href="#rechercher" title="Permalink to this heading">#</a></h1>
-<p>Mis à jour : Dec 23, 2025, lecture : 20
+<p>Mis à jour : Jan 30, 2026, lecture : 20
 minutes minimum, PhL.</p>
 <section id="objectif-du-chapitre">
 <h2><span class="section-number">4.1. </span>Objectif du chapitre<a class="headerlink" href="#objectif-du-chapitre" title="Permalink to this heading">#</a></h2>
@@ -1069,7 +1069,8 @@ Ceci permet de séparer le “ce que fait la fonction” (le “quoi”) du “c
 <h4>(<span class="math notranslate nohighlight">\(\star\)</span>) Récursivité terminale<a class="headerlink" href="#star-recursivite-terminale" title="Permalink to this heading">#</a></h4>
 <p>La version récursive <code class="docutils literal notranslate"><span class="pre">rech_seq_rec</span></code>  est une exemple de fonction <em>récursive terminale</em>.
 En effet, l’appel récursif à <code class="docutils literal notranslate"><span class="pre">aux</span></code> est la dernière instruction exécutée par (un appel à) <code class="docutils literal notranslate"><span class="pre">aux</span></code> – et ce donc à chacun des appels récursifs.</p>
-<p>Plus généralement, une fonction <code class="docutils literal notranslate"><span class="pre">f</span></code> est <em>récursive terminale</em> si tout appel récursif de <code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">est</span> <span class="pre">de</span> <span class="pre">la</span> <span class="pre">forme</span> </code>retrn f(..)` – en prenant la syntaxe Python.</p>
+<p>Plus généralement, une fonction <code class="docutils literal notranslate"><span class="pre">f</span></code> est <em>récursive terminale</em> si tout appel récursif de <code class="docutils literal notranslate"><span class="pre">f</span></code> est de la forme
+<code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">f(..)</span></code> – en prenant la syntaxe Python.</p>
 <p>Les fonctions récursives terminales sont intéressantes d’un point de vue efficacité.
 La valeur retournée est directement la valeur obtenue par l’appel récursif, sans aucun calcul ni modification de celle-ci.
 Il n’y a donc pas besoin de stocker dans la pile d’exécution la valeur retournée par l’appel.
@@ -1079,10 +1080,10 @@ En pratique cette transformation, aussi appelée <em>dé-récursivation</em> est
 Voir par exemple la <a class="reference external" href="http://perso.univ-perp.fr/langlois/images/pdf/ens/L1/s7-sl4.pdf">dernière diapo du cours de 2016</a>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Se convaincre que les fonctions récursives qui calculent la factorielle, la somme de <span class="math notranslate nohighlight">\(n\)</span> entiers, la
-suite de Fibonacci,  ne sont <strong>pas</strong> récursive terminale telles que présentées au chapitre <a class="reference internal" href="6-recursivite.html#ch-recursivite"><span class="std std-ref">Récursivité</span></a>.</p>
+<p>Se convaincre que sauf mention explicite, les fonctions récursives présentées au chapitre <a class="reference internal" href="6-recursivite.html#ch-recursivite"><span class="std std-ref">Récursivité</span></a> qui calculent la factorielle, la somme de <span class="math notranslate nohighlight">\(n\)</span> entiers et la suite de Fibonacci  ne sont <strong>pas</strong> récursives terminales.</p>
 </div>
-<p>Il est cependant possible de ré-écrire le calcul de factorielle et de la somme de <span class="math notranslate nohighlight">\(n\)</span> entiers sous forme récursive terminale.</p>
+<p>Nous avons vu qu’il est cependant possible de ré-écrire sous forme récursive terminale le calcul de factorielle (chapitre <a class="reference internal" href="6-recursivite.html#ch-recursivite"><span class="std std-ref">Récursivité</span></a>).
+Il en est de même pour la somme de <span class="math notranslate nohighlight">\(n\)</span> entiers .</p>
 </section>
 </section>
 </section>

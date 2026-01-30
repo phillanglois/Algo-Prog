@@ -474,7 +474,7 @@ document.write(`
 <p>Rappel : <span class="math notranslate nohighlight">\(n! = n \times (n-1) \times \dots \times 2 \times 1\)</span> et <span class="math notranslate nohighlight">\(0! = 1\)</span>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>La version en ligne de ce notebook ne permet pas une prise ne compte correcte des entrées (<code class="docutils literal notranslate"><span class="pre">input()</span></code>).
+<p>La version en ligne de ce notebook ne permet pas une prise en compte correcte des entrées (<code class="docutils literal notranslate"><span class="pre">input()</span></code>).
 Ces entrées sont donc ponctuellement modifiées : mise en commentaires et initialisation en ligne.</p>
 </div>
 <p><em>Exemple.</em></p>
@@ -644,15 +644,55 @@ Ce qui ne permet pas de continuer les calculs (de <code class="docutils literal 
 <p><strong>Indicateur</strong> : <code class="docutils literal notranslate"><span class="pre">assert</span></code></p>
 <p>Comme avec l’appel, l’exécution de ces tests unitaires déclenche une erreur tant que le corps de la fonction n’est pas écrit (mais simplement remplacé par <code class="docutils literal notranslate"><span class="pre">pass</span></code>).</p>
 <p>Ces tests, qui peuvent être écrits <em>avant</em> le corps, sont donc mis en commentaires (entre <code class="docutils literal notranslate"><span class="pre">'''</span></code>) en attendant.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39;</span>
+<div class="admonition-en-pratique admonition">
+<p class="admonition-title">En pratique</p>
+<p>Dans le <code class="docutils literal notranslate"><span class="pre">notebook</span> <span class="pre">jupyter</span></code> :</p>
+<ul class="simple">
+<li><p>écrire les tests unitaires dans une cellule différente de celle de la signature de la fonction</p></li>
+<li><p>ne pas exécuter cette cellule de tests avant d’avoir fini d’écrire le corps de la fonction (étape suivante)</p></li>
+</ul>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Cellule avec notre fonction réduite à son en-tête</span>
+<span class="k">def</span> <span class="nf">fact</span><span class="p">(</span><span class="n">n</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Autre cellule avec les tests unitaires (mis en commentaires pour ce cours en ligne)</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd"># premières valeurs de factorielle</span>
 <span class="sd">assert fact(0) == 1</span>
 <span class="sd">assert fact(1) == 1</span>
+<span class="sd">assert fact(2) == 2</span>
 
-<span class="sd"># utilisation d&#39;une propriété générale pour un choix arbitraire de valeurs (ici 55..75)</span>
-<span class="sd">for i in range(55,75):</span>
+<span class="sd"># Attention : la factorielle croit très vite et python effectue des calculs entiers sans limitation </span>
+<span class="sd"># Donc le calcul de fact(n) pour des valeurs &quot;élevées&quot; de n est très coûteux en temps.</span>
+<span class="sd"># On se limite donc à 20!</span>
+<span class="sd">assert fact(20) == 2_432_902_008_176_640_000 # environ 2 x 10^18 !</span>
+
+<span class="sd"># utilisation d&#39;une propriété générale pour un choix arbitraire de valeurs (ici entre 1 et 9)</span>
+<span class="sd">for i in range(1,10):</span>
 <span class="sd">    assert fact(i) == i * fact(i-1)</span>
+
+<span class="sd"># utilisation d&#39;une propriété générale pour dix valeurs aléatoires entre 1 et 20</span>
+<span class="sd">from random import randint</span>
+<span class="sd">for _ in range(10):</span>
+<span class="sd">    val = randint(1, 21)</span>
+<span class="sd">    assert fact(val) == val * fact(val - 1)</span>
 <span class="sd">&#39;&#39;&#39;</span>
 </pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;\n# premières valeurs de factorielle\nassert fact(0) == 1\nassert fact(1) == 1\nassert fact(2) == 2\n\n# Attention : la factorielle croit très vite et python effectue des calculs entiers sans limitation \n# Donc le calcul de fact(n) pour des valeurs &quot;élevées&quot; de n est très coûteux en temps.\n# On se limite donc à 20!\nassert fact(20) == 2_432_902_008_176_640_000 # environ 2 x 10^18 !\n\n# utilisation d\&#39;une propriété générale pour un choix arbitraire de valeurs (ici entre 1 et 9)\nfor i in range(1,10):\n    assert fact(i) == i * fact(i-1)\n\n# utilisation d\&#39;une propriété générale pour dix valeurs aléatoires entre 1 et 20\nfrom random import randint\nfor _ in range(10):\n    val = randint(1, 21)\n    assert fact(val) == val * fact(val - 1)\n&#39;
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 <section id="avec-notre-propre-fonction-puis-son-corps">
@@ -663,7 +703,7 @@ Ce qui ne permet pas de continuer les calculs (de <code class="docutils literal 
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># notre fonction enfin complète</span>
 <span class="k">def</span> <span class="nf">fact</span><span class="p">(</span><span class="n">n</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
     <span class="n">res</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
         <span class="n">res</span> <span class="o">=</span> <span class="n">res</span> <span class="o">*</span> <span class="n">i</span>
     <span class="k">return</span> <span class="n">res</span>
 </pre></div>
@@ -672,39 +712,27 @@ Ce qui ne permet pas de continuer les calculs (de <code class="docutils literal 
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#premiers tests unitaires de notre fonction fact()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Cellule avec les tests unitaires (sans commentaires maintenant)</span>
+
+<span class="c1"># premières valeurs de factorielle</span>
 <span class="k">assert</span> <span class="n">fact</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
 <span class="k">assert</span> <span class="n">fact</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
+<span class="k">assert</span> <span class="n">fact</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span>
 
-<span class="c1"># utilisation d&#39;une propriété générale pour un choix arbitraire de valeurs (ici 55..75)</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">55</span><span class="p">,</span><span class="mi">75</span><span class="p">):</span>
+<span class="c1"># Attention : la factorielle croit très vite et python effectue des calculs entiers sans limitation </span>
+<span class="c1"># Donc le calcul de fact(n) pour des valeurs &quot;élevées&quot; de n est très coûteux en temps.</span>
+<span class="c1"># On se limite donc à 20!</span>
+<span class="k">assert</span> <span class="n">fact</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2_432_902_008_176_640_000</span> <span class="c1"># environ 2 x 10^18 !</span>
+
+<span class="c1"># utilisation d&#39;une propriété générale pour un choix arbitraire de valeurs (ici entre 1 et 9)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
     <span class="k">assert</span> <span class="n">fact</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">==</span> <span class="n">i</span> <span class="o">*</span> <span class="n">fact</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#entrées</span>
-<span class="c1">#mon_n = int(input(&quot;n:&quot;))</span>
-<span class="c1">#mon_p = int(input(&quot;p:&quot;))</span>
-<span class="n">mon_n</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">mon_p</span> <span class="o">=</span> <span class="mi">2</span>
 
-<span class="c1">#traitement avec appels de notre fonction fact()</span>
-<span class="n">num</span> <span class="o">=</span> <span class="n">fact</span><span class="p">(</span><span class="n">mon_n</span><span class="p">)</span>
-<span class="n">d1</span> <span class="o">=</span> <span class="n">fact</span><span class="p">(</span><span class="n">mon_p</span><span class="p">)</span>
-<span class="n">d2</span> <span class="o">=</span> <span class="n">fact</span><span class="p">(</span><span class="n">mon_n</span> <span class="o">-</span> <span class="n">mon_p</span><span class="p">)</span>
-
-<span class="n">res</span> <span class="o">=</span> <span class="n">num</span> <span class="o">//</span> <span class="p">(</span><span class="n">d1</span> <span class="o">*</span> <span class="n">d2</span><span class="p">)</span>
-
-<span class="c1"># sortie</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span> 
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+<span class="c1"># utilisation d&#39;une propriété générale pour dix valeurs aléatoires entre 1 et 20</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">val</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">21</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">fact</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="o">==</span> <span class="n">val</span> <span class="o">*</span> <span class="n">fact</span><span class="p">(</span><span class="n">val</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -837,13 +865,27 @@ fact(n: int) -&gt; int
 <h3><span class="section-number">2.10.1. </span>Validation immédiate<a class="headerlink" href="#validation-immediate" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#les tests unitaires ne changent pas </span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Les tests unitaires ne changent pas excepté qu&#39;ils s&#39;appliquent à fact_rec</span>
+
+<span class="c1"># premières valeurs de factorielle</span>
 <span class="k">assert</span> <span class="n">fact_rec</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
 <span class="k">assert</span> <span class="n">fact_rec</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
+<span class="k">assert</span> <span class="n">fact_rec</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span>
 
-<span class="c1"># utilisation d&#39;une propriété générale pour un choix arbitraire de valeurs (ici 55..75)</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">55</span><span class="p">,</span><span class="mi">75</span><span class="p">):</span>
+<span class="c1"># Attention : la factorielle croit très vite et python effectue des calculs entiers sans limitation </span>
+<span class="c1"># Donc le calcul de fact(n) pour des valeurs &quot;élevées&quot; de n est très coûteux en temps.</span>
+<span class="c1"># On se limite donc à 20!</span>
+<span class="k">assert</span> <span class="n">fact_rec</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2_432_902_008_176_640_000</span> <span class="c1"># environ 2 x 10^18 !</span>
+
+<span class="c1"># utilisation d&#39;une propriété générale pour un choix arbitraire de valeurs (ici entre 1 et 9)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
     <span class="k">assert</span> <span class="n">fact_rec</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">==</span> <span class="n">i</span> <span class="o">*</span> <span class="n">fact_rec</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># utilisation d&#39;une propriété générale pour dix valeurs aléatoires entre 1 et 20</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">val</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">21</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">fact_rec</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="o">==</span> <span class="n">val</span> <span class="o">*</span> <span class="n">fact_rec</span><span class="p">(</span><span class="n">val</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -854,8 +896,6 @@ fact(n: int) -&gt; int
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#entrées</span>
-<span class="c1">#mon_n = int(input(&quot;n:&quot;))</span>
-<span class="c1">#mon_p = int(input(&quot;p:&quot;))</span>
 <span class="n">mon_n</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="n">mon_p</span> <span class="o">=</span> <span class="mi">2</span>
 
@@ -924,8 +964,6 @@ Elle peut être appelée dans la définition de la fonction englobante.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#entrées</span>
-<span class="c1">#mon_n = int(input(&quot;n:&quot;))</span>
-<span class="c1">#mon_p = int(input(&quot;p:&quot;))</span>
 <span class="n">mon_n</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="n">mon_p</span> <span class="o">=</span> <span class="mi">2</span>
 
