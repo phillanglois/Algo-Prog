@@ -1333,7 +1333,7 @@ Un algorithme <em>diviser pour régner</em> où chaque division réduit la reche
 </div>
 </div>
 </div>
-<p><strong>Remarque</strong></p>
+<p><strong>Remarques</strong></p>
 <ul class="simple">
 <li><p>Observer et bien comprendre pourquoi le traitement récursif <code class="docutils literal notranslate"><span class="pre">dichotomie</span></code> comporte 4 <code class="docutils literal notranslate"><span class="pre">return</span></code></p>
 <ul>
@@ -1341,6 +1341,7 @@ Un algorithme <em>diviser pour régner</em> où chaque division réduit la reche
 </ul>
 </li>
 <li><p>L’appel du traitement récursif <code class="docutils literal notranslate"><span class="pre">dichotomie</span></code> par  <code class="docutils literal notranslate"><span class="pre">dichotomie_recursive</span></code> (qui, malgré son identifiant, n’est pas une fonction récursive) permet de retrouver une signature similaire à celle de la version itérative.</p></li>
+<li><p>La fonction <code class="docutils literal notranslate"><span class="pre">dichotomie</span></code> est <em>récursive terminale</em> : sauf terminaisons, l’appel récursif est la dernière instruction exécutée de <code class="docutils literal notranslate"><span class="pre">dichotomie</span></code>.</p></li>
 <li><p>L’<em>encapsulation</em> de <code class="docutils literal notranslate"><span class="pre">dichotomie</span></code> dans <code class="docutils literal notranslate"><span class="pre">dichotomie_recursive</span></code> s’obtient de façon plus sure et plus élégante comme suit.</p></li>
 </ul>
 <div class="cell docutils container">
