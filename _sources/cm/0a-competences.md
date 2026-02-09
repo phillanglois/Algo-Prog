@@ -56,6 +56,7 @@ Dans/avec un notebook jupyter :
 
 - Savoir identifier la (ou les) terminaison, la récursion et l'initialisation d'un traitement avec un algorithme récursif : application à des exemples simples : factorielle, exponentiation entière, suite de Fibonacci, somme des n premiers entiers
 - Savoir conduire une approche diviser pour régner et en déduire une solution récursive : application à l'exponentiation rapide
+- ($\star$) Savoir identifier une version récursive terminale 
 
 ### Savoir-faire
 
@@ -82,13 +83,17 @@ Dans/avec un notebook jupyter :
 
 ### Avoir les idées claires
 
-- Connaitre les principes des formes itératives et récursives des algorithmes de recherche fondamentaux : recherche séquentielle, recherche dichotomique.
+- Connaitre les principes des formes itératives et récursives des algorithmes de recherche fondamentaux : recherche séquentielle et recherche dichotomique.
 - Savoir conduire une approche diviser pour régner et en déduire une solution récursive pour le problème de la recherche d'une valeur dans un ensemble ou des problèmes similaires.
 - Savoir identifier la (ou les) terminaison, la récursion et l'initialisation d'une recherche de valeur (ou problème similaire) avec un algorithme récursif
+- Connaitre les complexités des algorithmes de recherche séquentielle et dichotomique
+- ($\star$) Savoir prouver ces complexités
+- Savoir identifier des pires cas et des meilleurs cas des recherches séquentielle et dichotomique
  
 ### Savoir-faire
 
-- Savoir écrire sous la forme d'une fonction de même signature les versions itérative et récursive d'un algorithme de recherche de valeur dans un ensemble
+- Savoir écrire les versions itérative et récursive d'un algorithme de recherche de valeur dans un ensemble 
+- Savoir écrire sous la forme d'une fonction de même signature les versions itérative et récursive des algorithmes de recherche, en particulier avec encapsulation du traitement itératif ou récursif local
 - Savoir écrire des tests unitaires pertinents pour ces traitements  
 
 ## Trier
@@ -98,6 +103,8 @@ Dans/avec un notebook jupyter :
 - Connaitre, reconnaitre et savoir classifier les algorithmes de tri selon leurs caractéristiques : tris en place ou non, par comparaisons ou non, (tris de complexité quadratique/rapide/linéaire) 
 - Comprendre les algorithmes de tri insertion, _quicksort_ et fusion grâce à leur invariant
 - Savoir identifier les pires et meilleurs cas des tris insertion, _quicksort_ et fusion
+- Connaitre les complexités des algorithmes de tris
+- ($\star$) Connaitre le principe de la preuve de ces complexités
 
  
 ### Savoir-faire
