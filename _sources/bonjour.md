@@ -38,18 +38,23 @@ Le travail de chaque semaine est mis à jour chaque ... semaine.
 
 (sec:travailhebdo)=
 
+## Semaine 7
+
+- CM : lire chapitre 4 (rechercher) jusqu'à la section 4.3 inclus
+- TD : feuille 2 (récursivité) selon votre Objectif
+
 ## Semaine 6
 
 - CM : 
   - relire le chapitre 3 (récursivité) en entier
   - ($\star$) la version récursive terminale de $n!$ indiquée en amphi a été ajoutée dans la dernière maj en ligne (section 1.3.2.7)
   - lire le chapitre 4 (rechercher) jusqu'à section 4.2 inclus
-- TD : **finir** feuille 1 selon votre objectif
+- TD : **finir** feuille 1 selon votre Objectif
 
 ## Semaine 5
 
 - CM (2 séances) : lire le chapitre 3 (récursivité) en entier
-- TD : avancer feuille 1 selon votre objectif
+- TD : avancer feuille 1 selon votre Objectif
 
 ## Semaine 4
 
@@ -58,7 +63,7 @@ Le travail de chaque semaine est mis à jour chaque ... semaine.
   - Lire chapitre 3 (récursivité)  jusqu'à 3.3 inclus.
 - TD : 
   - compétences sur "fonctions"  
-  - feuille 1, exercices objectif 10 à effectuer à votre rythme dans un notebook jupyter
+  - feuille 1, exercices Objectif 10 à effectuer à votre rythme dans un notebook jupyter
 
 
 ## Semaine 3
