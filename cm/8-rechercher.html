@@ -424,7 +424,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithme-recursif">4.2.3. Algorithme récursif</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#complements-sur-l-encapsulation-et-la-recursivite-terminale">4.2.4. Compléments sur l’encapsulation et la récursivité terminale</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#encapsulation-et-recursivite-terminale">4.2.4. Encapsulation et récursivité terminale</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#autre-ecriture-encapsulation">Autre écriture : encapsulation</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#star-recursivite-terminale">(<span class="math notranslate nohighlight">\(\star\)</span>) Récursivité terminale</a></li>
 </ul>
@@ -1011,11 +1011,11 @@ On ajoute dès maintenant le cas du tableau vide.</p>
 </li>
 </ul>
 </section>
-<section id="complements-sur-l-encapsulation-et-la-recursivite-terminale">
-<h3><span class="section-number">4.2.4. </span>Compléments sur l’encapsulation et la récursivité terminale<a class="headerlink" href="#complements-sur-l-encapsulation-et-la-recursivite-terminale" title="Permalink to this heading">#</a></h3>
+<section id="encapsulation-et-recursivite-terminale">
+<h3><span class="section-number">4.2.4. </span>Encapsulation et récursivité terminale<a class="headerlink" href="#encapsulation-et-recursivite-terminale" title="Permalink to this heading">#</a></h3>
 <section id="autre-ecriture-encapsulation">
 <h4>Autre écriture : encapsulation<a class="headerlink" href="#autre-ecriture-encapsulation" title="Permalink to this heading">#</a></h4>
-<p>L’écriture précédente comporte deux fonctions, la première, récursive, et la seconde de signature souhaitée, qui  <em>encapsule</em> l’appel principal à la fonction récursive.</p>
+<p>L’écriture précédente comporte deux fonctions, la première, récursive, et la seconde, non récursive mais de signature souhaitée, qui  <em>encapsule</em> l’appel principal à la fonction récursive.</p>
 <p>Python permettant de définir des fonctions locales à d’autres fonctions.
 La cellule suivante organise ce traitement en une seule fonction (celle de l’appel principal) qui <em>encapsule</em> une fonction récursive locale.</p>
 <div class="cell docutils container">
@@ -1069,7 +1069,7 @@ Ceci permet de séparer le “ce que fait la fonction” (le “quoi”) du “c
 <h4>(<span class="math notranslate nohighlight">\(\star\)</span>) Récursivité terminale<a class="headerlink" href="#star-recursivite-terminale" title="Permalink to this heading">#</a></h4>
 <p>La version récursive <code class="docutils literal notranslate"><span class="pre">rech_seq_rec</span></code>  est une exemple de fonction <em>récursive terminale</em>.
 En effet, l’appel récursif à <code class="docutils literal notranslate"><span class="pre">aux</span></code> est la dernière instruction exécutée par (un appel à) <code class="docutils literal notranslate"><span class="pre">aux</span></code> – et ce donc à chacun des appels récursifs.</p>
-<p>Plus généralement, une fonction <code class="docutils literal notranslate"><span class="pre">f</span></code> est <em>récursive terminale</em> si tout appel récursif de <code class="docutils literal notranslate"><span class="pre">f</span></code> est de la forme
+<p>On rappelle qu’une fonction <code class="docutils literal notranslate"><span class="pre">f</span></code> est <em>récursive terminale</em> si tout appel récursif de <code class="docutils literal notranslate"><span class="pre">f</span></code> est de la forme
 <code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">f(..)</span></code> – en prenant la syntaxe Python.</p>
 <p>Les fonctions récursives terminales sont intéressantes d’un point de vue efficacité.
 La valeur retournée est directement la valeur obtenue par l’appel récursif, sans aucun calcul ni modification de celle-ci.
@@ -1078,12 +1078,12 @@ Ce qui supprime la nécessité d’espace mémoire, éventuellement limitant, po
 <p>On peut aussi montrer qu’une fonction récursive terminale se transforme <em>automatiquement</em>, cad. à l’aide d’un algorithme, en une fonction itérative sans espace mémoire supplémentaire.
 En pratique cette transformation, aussi appelée <em>dé-récursivation</em> est effectué de façon transparente par les compilateurs, en particulier dans les langages fonctionnels.
 Voir par exemple la <a class="reference external" href="http://perso.univ-perp.fr/langlois/images/pdf/ens/L1/s7-sl4.pdf">dernière diapo du cours de 2016</a>.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Se convaincre que sauf mention explicite, les fonctions récursives présentées au chapitre <a class="reference internal" href="6-recursivite.html#ch-recursivite"><span class="std std-ref">Récursivité</span></a> qui calculent la factorielle, la somme de <span class="math notranslate nohighlight">\(n\)</span> entiers et la suite de Fibonacci  ne sont <strong>pas</strong> récursives terminales.</p>
-</div>
 <p>Nous avons vu qu’il est cependant possible de ré-écrire sous forme récursive terminale le calcul de factorielle (chapitre <a class="reference internal" href="6-recursivite.html#ch-recursivite"><span class="std std-ref">Récursivité</span></a>).
 Il en est de même pour la somme de <span class="math notranslate nohighlight">\(n\)</span> entiers .</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Se convaincre qu’excepté la ré-écriture précédemment mentionnée, les fonctions récursives présentées au chapitre <a class="reference internal" href="6-recursivite.html#ch-recursivite"><span class="std std-ref">Récursivité</span></a> qui calculent la factorielle, la somme de <span class="math notranslate nohighlight">\(n\)</span> entiers et la suite de Fibonacci  ne sont <strong>pas</strong> récursives terminales.</p>
+</div>
 </section>
 </section>
 </section>
@@ -1346,7 +1346,7 @@ Un algorithme <em>diviser pour régner</em> où chaque division réduit la reche
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dichotomie_recursive2</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">t</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dichotomie_recursive</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">t</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;recherche dichotomique de val dans t de taille dim_t</span>
 <span class="sd">    avec encapsulation du traitement récursif</span>
 <span class="sd">    &#39;&#39;&#39;</span>
@@ -1368,15 +1368,15 @@ Un algorithme <em>diviser pour régner</em> où chaque division réduit la reche
 </div>
 </div>
 </div>
-<p>On vérifie que les tests unitaires s’exécutent toujours avec succès – on ici modifié l’identifiant de la fonction appelée à des fins pédagogiques.</p>
+<p>On vérifie que les tests unitaires s’exécutent toujours avec succès.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
-<span class="k">assert</span> <span class="n">dichotomie_recursive2</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">True</span>
-<span class="k">assert</span> <span class="n">dichotomie_recursive2</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">True</span>
-<span class="k">assert</span> <span class="n">dichotomie_recursive2</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">False</span>
+<span class="k">assert</span> <span class="n">dichotomie_recursive</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">True</span>
+<span class="k">assert</span> <span class="n">dichotomie_recursive</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">True</span>
+<span class="k">assert</span> <span class="n">dichotomie_recursive</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">False</span>
 <span class="c1"># tableau vide</span>
-<span class="k">assert</span> <span class="n">dichotomie_recursive2</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">[],</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span>
+<span class="k">assert</span> <span class="n">dichotomie_recursive</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">[],</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span>
 </pre></div>
 </div>
 </div>
@@ -1804,7 +1804,7 @@ Les 2 cas de la terminaison prouvent la correction de l’algorithme étudié.</
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithme-recursif">4.2.3. Algorithme récursif</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#complements-sur-l-encapsulation-et-la-recursivite-terminale">4.2.4. Compléments sur l’encapsulation et la récursivité terminale</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#encapsulation-et-recursivite-terminale">4.2.4. Encapsulation et récursivité terminale</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#autre-ecriture-encapsulation">Autre écriture : encapsulation</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#star-recursivite-terminale">(<span class="math notranslate nohighlight">\(\star\)</span>) Récursivité terminale</a></li>
 </ul>
