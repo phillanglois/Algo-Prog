@@ -19,7 +19,7 @@ Démarrages : CM en semaine s3 (celle du lundi 12 janvier 2026), TD en s4
 
 Contrôle de connaissances 
 
-- CC1 écrit, 2 heures, 23 février 2026 (s9)
+- CC1 écrit, 2 heures, <s>23 février 2026 (s9)</s>  **9 mars 2026, 14h** (s10)
 - CC2 individuel sur machine, 2 heures, 17 avril 2026 (s16) 
 - CT individuel sur machine, 3 heures, semaine des examens, 20 mai 2026 (s21), à confirmer
 

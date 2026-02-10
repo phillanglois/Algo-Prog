@@ -431,8 +431,9 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-info">18.2.2. Exercice. (Info).</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-exercice-maths">18.2.3. (<span class="math notranslate nohighlight">\(\star\)</span>) Exercice. (Maths)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-exercice-suite-de-syracuse">18.2.4. (<span class="math notranslate nohighlight">\(\star\)</span>) Exercice. (suite de Syracuse)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-exercice-recursivite-terminale">18.2.5. (<span class="math notranslate nohighlight">\(\star\)</span>) Exercice. (récursivité terminale)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-exercice-addition-de-2-entiers">18.2.6. (<span class="math notranslate nohighlight">\(\star\)</span>) Exercice. (addition de 2 entiers)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-exercice-recursivite-terminale-rappels-du-cours">18.2.5. (<span class="math notranslate nohighlight">\(\star\)</span>) Exercice. (récursivité terminale : rappels du cours)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-exercice-recursivite-terminale">18.2.6. (<span class="math notranslate nohighlight">\(\star\)</span>) Exercice. (récursivité terminale)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-exercice-addition-de-2-entiers">18.2.7. (<span class="math notranslate nohighlight">\(\star\)</span>) Exercice. (addition de 2 entiers)</a></li>
 </ul>
 </li>
 </ul>
@@ -458,7 +459,7 @@ questions de difficulté relative plus importante.</p></li>
 <ul class="simple">
 <li><p>récursivité et notions associées : arbre et pile des appels,
 environnements</p></li>
-<li><p>recherche dichotomique</p></li>
+<li><p>recherche séquentielle et dichotomique</p></li>
 </ul>
 <p><strong>Compétences</strong></p>
 <ul class="simple">
@@ -470,11 +471,13 @@ exponentiation entière, exponentiation rapide.</p></li>
 l’initialisation d’un traitement avec un algorithme récursif :
 application à des exemples simples – comme ceux vus en cours, <em>e.g</em>.
 factorielles, exponentiation entière, exponentiation rapide.</p></li>
-<li><p>Savoir exprimer la complexité d’un algorithme récursif</p></li>
 <li><p>Savoir écrire sous la forme d’une fonction de même signature les
 versions itérative et récursive d’un traitement calculatoire simple</p></li>
 <li><p>Construire la pile des appels et son évolution lors d’un traitement
 récursif</p></li>
+<li><p>Savoir exprimer la complexité d’un algorithme récursif</p></li>
+<li><p>(<span class="math notranslate nohighlight">\(\star\)</span>) Savoir identifier une version récursive terminale</p></li>
+<li><p>(<span class="math notranslate nohighlight">\(\star\)</span>) Savoir écrire la version récursive terminale d’un traitement calculatoire simple</p></li>
 </ul>
 <section id="objectif-10">
 <h2><span class="section-number">18.1. </span>Objectif 10<a class="headerlink" href="#objectif-10" title="Permalink to this heading">#</a></h2>
@@ -630,17 +633,26 @@ suite.</p></li>
 <li><p>Coder le calcul avec terminaison de façon itérative.</p></li>
 </ol>
 </section>
-<section id="star-exercice-recursivite-terminale">
-<span id="exo-recterm"></span><h3><span class="section-number">18.2.5. </span>(<span class="math notranslate nohighlight">\(\star\)</span>) Exercice. (récursivité terminale)<a class="headerlink" href="#star-exercice-recursivite-terminale" title="Permalink to this heading">#</a></h3>
-<p>Une fonction récursive est dite <em>récursive terminale</em> lorsque l’appel récursif est la dernière instruction exécutée.</p>
+<section id="star-exercice-recursivite-terminale-rappels-du-cours">
+<span id="exo-recterm"></span><h3><span class="section-number">18.2.5. </span>(<span class="math notranslate nohighlight">\(\star\)</span>) Exercice. (récursivité terminale : rappels du cours)<a class="headerlink" href="#star-exercice-recursivite-terminale-rappels-du-cours" title="Permalink to this heading">#</a></h3>
+<p><em>Rappel.</em> Une fonction récursive est dite <em>récursive terminale</em> lorsque l’appel récursif est la dernière instruction exécutée.</p>
 <ol class="arabic simple">
 <li><p>Donner la liste de telles fonctions récursives terminales qui apparaissent dans les exemples du chapitre. Justifier votre réponse.</p></li>
 <li><p>Donner une version récursive terminale du calcul de <span class="math notranslate nohighlight">\(n!\)</span>. Vous pouvez modifier la signature vue en cours pour cette fonction.</p></li>
 <li><p>Déduire une version récursive terminale du calcul de <span class="math notranslate nohighlight">\(n!\)</span> de même signature que la fonction vue en cours.</p></li>
 </ol>
 </section>
+<section id="star-exercice-recursivite-terminale">
+<span id="exo-sommter"></span><h3><span class="section-number">18.2.6. </span>(<span class="math notranslate nohighlight">\(\star\)</span>) Exercice. (récursivité terminale)<a class="headerlink" href="#star-exercice-recursivite-terminale" title="Permalink to this heading">#</a></h3>
+<p>Ecrire sous forme récursive terminale les traitements suivants.
+Les fonctions auront une signature identique aux versions “non terminales”.</p>
+<ol class="arabic simple">
+<li><p>Calculer la somme des <span class="math notranslate nohighlight">\(n\)</span> premiers entiers – sans utiliser la relation <span class="math notranslate nohighlight">\(n(n+1)/2\)</span>.</p></li>
+<li><p>Calculer le produit scalaire de deux vecteurs de taille <span class="math notranslate nohighlight">\(n\)</span>.</p></li>
+</ol>
+</section>
 <section id="star-exercice-addition-de-2-entiers">
-<span id="exo-addint"></span><h3><span class="section-number">18.2.6. </span>(<span class="math notranslate nohighlight">\(\star\)</span>) Exercice. (addition de 2 entiers)<a class="headerlink" href="#star-exercice-addition-de-2-entiers" title="Permalink to this heading">#</a></h3>
+<span id="exo-addint"></span><h3><span class="section-number">18.2.7. </span>(<span class="math notranslate nohighlight">\(\star\)</span>) Exercice. (addition de 2 entiers)<a class="headerlink" href="#star-exercice-addition-de-2-entiers" title="Permalink to this heading">#</a></h3>
 <p>On souhaite additionner deux entiers de <span class="math notranslate nohighlight">\(p\)</span> chiffres décimaux. On
 dispose pour cela d’une fonction <code class="docutils literal notranslate"><span class="pre">add(c1,c2)</span></code> qui calcule et retourne un
 couple <code class="docutils literal notranslate"><span class="pre">(r,s)</span></code> où :</p>
@@ -754,8 +766,9 @@ pour les deux calculs <span class="math notranslate nohighlight">\(n1+n2\)</span
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-info">18.2.2. Exercice. (Info).</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-exercice-maths">18.2.3. (<span class="math notranslate nohighlight">\(\star\)</span>) Exercice. (Maths)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-exercice-suite-de-syracuse">18.2.4. (<span class="math notranslate nohighlight">\(\star\)</span>) Exercice. (suite de Syracuse)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-exercice-recursivite-terminale">18.2.5. (<span class="math notranslate nohighlight">\(\star\)</span>) Exercice. (récursivité terminale)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-exercice-addition-de-2-entiers">18.2.6. (<span class="math notranslate nohighlight">\(\star\)</span>) Exercice. (addition de 2 entiers)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-exercice-recursivite-terminale-rappels-du-cours">18.2.5. (<span class="math notranslate nohighlight">\(\star\)</span>) Exercice. (récursivité terminale : rappels du cours)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-exercice-recursivite-terminale">18.2.6. (<span class="math notranslate nohighlight">\(\star\)</span>) Exercice. (récursivité terminale)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-exercice-addition-de-2-entiers">18.2.7. (<span class="math notranslate nohighlight">\(\star\)</span>) Exercice. (addition de 2 entiers)</a></li>
 </ul>
 </li>
 </ul>
