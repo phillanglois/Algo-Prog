@@ -38,6 +38,12 @@ Le travail de chaque semaine est mis à jour chaque ... semaine.
 
 (sec:travailhebdo)=
 
+## Semaine 8
+
+- CM de la semaine 7 (déplacé au lundi) : lire chapitre 4 (rechercher) jusqu'à la section 4.3 inclus
+- CM : lire chapitre 5 (complexité) jusqu'à section 5.3 inclus
+- TD : feuille 2 (récursivité) selon votre Objectif
+
 ## Semaine 7
 
 - CM : lire chapitre 4 (rechercher) jusqu'à la section 4.3 inclus
