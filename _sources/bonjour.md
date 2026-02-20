@@ -38,6 +38,24 @@ Le travail de chaque semaine est mis à jour chaque ... semaine.
 
 (sec:travailhebdo)=
 
+## Semaine 10 (vacances d'hiver)
+
+- programme du CC de la rentrée : chapitres 1 et 2 (fonctions), 3 (récursivité), 4 (rechercher), feuilles de TD 1 et 2
+- compléments de révision 
+  
+  - cc1 de 2025 : sujet nb jupyter dispo sur moodle (de même que des rmq sur les erreurs rencontrées). 
+    - Exo 1 : min d'un tableau 1D -> versions itérative, récursive, D&C, pile des appels
+
+  - cc2 de 2025 : sujet sur moodle
+    - exo 2 : Tableaux 2D, itérations et récursion (6 points)
+    - exo 3 : palindrome (** : la q3 est difficile)
+
+
+## Semaine 9
+
+- CM : lire chapitre 5 (complexité) jusqu'à section 5.3 inclus
+- TD : feuille 2 (récursivité) selon votre Objectif
+
 ## Semaine 8
 
 - CM de la semaine 7 (déplacé au lundi) : lire chapitre 4 (rechercher) jusqu'à la section 4.3 inclus
