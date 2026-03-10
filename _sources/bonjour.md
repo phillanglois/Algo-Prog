@@ -38,6 +38,11 @@ Le travail de chaque semaine est mis à jour chaque ... semaine.
 
 (sec:travailhebdo)=
 
+## Semaine 11
+
+- CM : lire chapitre 6 (trier) jusqu'à section 6.3.4 inclus
+- TD : feuille 3 (complexité) selon votre Objectif
+
 ## Semaine 10 (vacances d'hiver)
 
 - programme du CC de la rentrée : chapitres 1 et 2 (fonctions), 3 (récursivité), 4 (rechercher), feuilles de TD 1 et 2
