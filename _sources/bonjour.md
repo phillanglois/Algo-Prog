@@ -38,9 +38,15 @@ Le travail de chaque semaine est mis à jour chaque ... semaine.
 
 (sec:travailhebdo)=
 
+## Semaine 13
+
+- CM : lire chapitre 7 (types composés) jusqu'à la section 7.3 inclus
+- TD : dernière séance sur feuille 3 (complexité) selon votre Objectif
+
 ## Semaine 12
 
 - CM : lire chapitre 6 (trier)
+  - Rmq. le tri fusion n'a pas été traité en CM et sera vu plus tard
 - TD : feuille 3 (complexité) selon votre Objectif
 
 
