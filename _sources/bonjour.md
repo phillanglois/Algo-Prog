@@ -38,6 +38,11 @@ Le travail de chaque semaine est mis à jour chaque ... semaine.
 
 (sec:travailhebdo)=
 
+## Semaine 14
+
+- CM : lire chapitre 7 (types composés) jusqu'à la section 7.6 inclus ; lire aussi la section 7.8
+- TP : le TP1 sur les types composés est disponible sous moodle. Le télécharger et le commencer dès que possible.
+
 ## Semaine 13
 
 - CM : lire chapitre 7 (types composés) jusqu'à la section 7.3 inclus
