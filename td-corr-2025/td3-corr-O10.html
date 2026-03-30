@@ -800,14 +800,15 @@ Effectuer l’analyse de la complexité de ces fonctions pour des tableaux 2D.</
 <li><p>Donc C(n) = 1 + C(n-2)</p></li>
 </ul>
 </li>
-<li><p>l’arrêt de la récursion est qd g &gt;= d, cad un mot de longueur 1 ou 0</p>
+<li><p>l’arrêt de la récursion est qd g &gt;= d, cad un mot de longueur 0</p>
 <ul>
-<li><p>Donc C(1) = C(0) = 1</p></li>
+<li><p>Donc C(0) = 1</p></li>
 </ul>
 </li>
-<li><p>Par simplification, on trouve : C(n) = n/2</p></li>
-<li><p>Complexité linéaire et identique à celle de la version itérative</p></li>
+<li><p>Par simplification, on trouve : C(n) = 1 + 1 + … + 1 = n/2</p></li>
+<li><p>Complexité linéaire et identique (*) à celle de la version itérative</p></li>
 </ul>
+<p>(*) Rmq. En toute rigueur, C(n) = n//2 + 1. Ce décompte dépend de la parité de n. Le “+1” vient de la condition d’arrêt (mot de longueur 0). On aurait pu terminer la récursion avec un appel de moins dès que le mot est de longueur 2 (comparaison de deux caractères) ou de longueur 1 (pas de comparaison nécessaire).</p>
 </div>
 </section>
 <section id="exercice-extrait-d-examen">

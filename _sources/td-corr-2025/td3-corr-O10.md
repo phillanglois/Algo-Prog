@@ -346,10 +346,12 @@ Veillez bien à répondre aux points suivants : para-mètre et mesure de la comp
 - on effectue 1 comp par appel récursif
 - chaque appel récursif réduit la longueur du mot de 2 caractères :  n, n-2, n-4 ..., 2 ou 1
     - Donc C(n) = 1 + C(n-2) 
-- l'arrêt de la récursion est qd g >= d, cad un mot de longueur 1 ou 0
-    - Donc C(1) = C(0) = 1
-- Par simplification, on trouve : C(n) = n/2
-- Complexité linéaire et identique à celle de la version itérative
+- l'arrêt de la récursion est qd g >= d, cad un mot de longueur 0
+    - Donc C(0) = 1
+- Par simplification, on trouve : C(n) = 1 + 1 + ... + 1 = n/2 
+- Complexité linéaire et identique (*) à celle de la version itérative
+
+(*) Rmq. En toute rigueur, C(n) = n//2 + 1. Ce décompte dépend de la parité de n. Le "+1" vient de la condition d'arrêt (mot de longueur 0). On aurait pu terminer la récursion avec un appel de moins dès que le mot est de longueur 2 (comparaison de deux caractères) ou de longueur 1 (pas de comparaison nécessaire).
 :::
 
 ### Exercice (extrait d'examen)
