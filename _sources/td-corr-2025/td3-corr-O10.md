@@ -131,12 +131,14 @@ s'intéresse à cette notion.
     ```
 
     ::: sverbat
+
     i | j | \#add
     :--:|:--:|:--:|
     0 | [0..4[ | 4
-    0 | [1..4[ | 3
-    0 | [2..4[ | 2
-    0 | [3..4[ | 1
+    1 | [1..4[ | 3
+    2 | [2..4[ | 2
+    3 | [3..4[ | 1
+    
     :::    
     
 3.  Même question en remplaçant la ligne 2 par :
@@ -147,11 +149,13 @@ s'intéresse à cette notion.
 
 
     ::: sverbat
+
     i | j | \#add
     :--:|:--:|:--:|
-    0 | [1..4[ | 3
-    0 | [2..4[ | 2
-    0 | [3..4[ | 1
+    1 | [1..4[ | 3
+    2 | [2..4[ | 2
+    3 | [3..4[ | 1
+
     :::
 
 5.  Compter le nombre d'additions dans chacun des deux cas.
@@ -206,10 +210,12 @@ On reprend l'exercice précédent en introduisant un nombre arbitraire  $n$ d'i
 	```
 
     ::: sverbat
-- C(n) = 10
-- complexité constante
-- Si n est multiplié par 10, le nbre d'additions n'est pas modifié
-:::
+
+    - C(n) = 10
+    - complexité constante
+    - Si n est multiplié par 10, le nbre d'additions n'est pas modifié
+
+    :::
 
     b.  on modifie maintenant la ligne 2 :
 
@@ -237,12 +243,14 @@ On reprend l'exercice précédent en introduisant un nombre arbitraire  $n$ d'i
 		for j in range(i,n):
 	```
 
-::: sverbat
-- répétitions (boucle en i) de n, puis n-1, puis n-2 puis n-3 additions (boucle en j)
-- C(n) = 4n -10
-- complexité linéaire
-- Si n est multiplié par 10, le nbre d'additions est (asymptotiquement) multiplié par 10
-::: sverbat
+    ::: sverbat
+
+  - répétitions (boucle en i) de n, puis n-1, puis n-2 puis n-3 additions (boucle en j)
+  - C(n) = 4n -10
+  - complexité linéaire
+  - Si n est multiplié par 10, le nbre d'additions est (asymptotiquement) multiplié par 10
+    :::
+
 	d.  Avec les lignes 1 et 2 suivantes :
 
 	```{code-block} python
@@ -253,12 +261,14 @@ On reprend l'exercice précédent en introduisant un nombre arbitraire  $n$ d'i
 		for j in range(n):
 	```
 
-::: sverbat
--  n répétitions (boucle en i) de n additions (boucle en j)
-- C(n) = n x n = n^2
-- complexité quadratique
-- Si n est multiplié par 10, le nbre d'additions est (asymptotiquement) multiplié par 100
-:::
+    ::: sverbat
+
+  - n répétitions (boucle en i) de n additions (boucle en j)
+  - C(n) = n x n = n^2
+  - complexité quadratique
+  - Si n est multiplié par 10, le nbre d'additions est (asymptotiquement) multiplié par 100
+
+    :::
 
 	e.  ou aussi les lignes 1 et 2 suivantes :
 
@@ -270,18 +280,20 @@ On reprend l'exercice précédent en introduisant un nombre arbitraire  $n$ d'i
 		for j in range(i,n):
     ```
 
-::: sverbat 
-- répétition en i :
-    - i = 0 -> n additions (boucle en j)
-    - i = 1 -> n-1 additions (boucle en j)
-    - i = 1 -> n-2 additions (boucle en j)
-    - ...
-    - i = n-2 -> 2 additions
-    - i = n-1 -> 1 addition
-- Donc C(n) = n + (n-1) + (n-1) + ... + 2 + 1 = n(n+1)/2
-- C(n) quadratique
-- Si n est multiplié par 10, le nbre d'additions est (asymptotiquement) multiplié par 100
-:::
+    ::: sverbat
+
+  - répétition en i :
+      - i = 0 -> n additions (boucle en j)
+      - i = 1 -> n-1 additions (boucle en j)
+      - i = 1 -> n-2 additions (boucle en j)
+      - ...
+      - i = n-2 -> 2 additions
+      - i = n-1 -> 1 addition
+  - Donc C(n) = n + (n-1) + (n-1) + ... + 2 + 1 = n(n+1)/2
+  - C(n) quadratique
+  - Si n est multiplié par 10, le nbre d'additions est (asymptotiquement) multiplié par 100
+
+    :::
 
 ### $\blacksquare $ Exercice 
 
@@ -293,32 +305,34 @@ On convient que deux tableaux sont égaux si leurs tailles sont égales et si le
 
 1. Effectuer l'analyse de la complexité de ces fonctions.
 
+::: sverbat
+
 - param de complexité : n la taille du tableau
 - mesure de complexité : le nombre de comparaisons
 
-::: sverbat
-`est_egal` :
+- `est_egal` :
 
-- C(n) = n dans le pire cas (deux tableaux identiques ou qui diffèrent par leur dernière valeur),
-- complexité linéaire du pire cas
-- meilleur cas : une comparaison
+  - C(n) = n dans le pire cas (deux tableaux identiques ou qui diffèrent par leur dernière valeur),
+  - complexité linéaire du pire cas
+  - meilleur cas : une comparaison
+
+- `nb_communs()`
+
+  - C(n) = n, pire cas = meilleur cas : on doit comparer deux à deux les n valeurs de chaque tableau
+  - complexité linéaire 
+
 :::
 
-::: sverbat
-`nb_communs()`
-
-- C(n) = n, pire cas = meilleur cas : on doit comparer deux à deux les n valeurs de chaque tableau
-- complexité linéaire 
-:::
-
-3. Ces fonctions s'étendent à des tableaux 2D ou de façon plus générale à des tableaux multi-dimensionnels.
+1. Ces fonctions s'étendent à des tableaux 2D ou de façon plus générale à des tableaux multi-dimensionnels.
 L’égalité entre tableaux multi-dimensionnels suppose l’égalité des dimensions, des tailles deux à deux dans chaque dimension, et des valeurs deux à deux pour toutes les valeurs du tableau.
 Effectuer l'analyse de la complexité de ces fonctions pour des tableaux 2D.
 
 ::: sverbat
-- Pour des tableaux 2D, le paramètre de complexité reste `n` le nombre de lignes et le nombre de colonnes 
-- On mesure toujours le nombre de comparaisons
-- L'analyse est similaire à celle des tableau 1D en remplaçant `n` par `n x n`. 
+
+   - Pour des tableaux 2D, le paramètre de complexité reste `n` le nombre de lignes et le nombre de colonnes 
+   - On mesure toujours le nombre de comparaisons
+   - L'analyse est similaire à celle des tableau 1D en remplaçant `n` par `n x n`. 
+
 :::
 
 ### Exercice (palindrome ... toujours) extrait d'examen
@@ -331,16 +345,19 @@ Veillez bien à répondre aux points suivants : para-mètre et mesure de la comp
 
 
 ::: sverbat
+
 - mesure de la complexité : nbre de comparaisons
 - param. de complexité : n = longueur du mot
 - meilleur cas : dépend de l'algorithme, première comparaison : échec -> non palindrome C(n) = 1, constante
 - pire cas : dépend de l'algorithme, on effectue n//2 comparaisons pour conclure que c'est un palindrome ou non (dernière comparaison) : C(n) = n//2, complexité linéaire
 - si est n est doublé, on double le nbre de comparaisons dans le pire cas.
+
 :::
 
 2. Même question pour la version récursive vue dans la feuille 2.
 
 ::: sverbat
+
 - mesure de la complexité : nbre de comparaisons
 - param. de complexité : n = longueur du mot
 - on effectue 1 comp par appel récursif
@@ -352,6 +369,7 @@ Veillez bien à répondre aux points suivants : para-mètre et mesure de la comp
 - Complexité linéaire et identique (*) à celle de la version itérative
 
 (*) Rmq. En toute rigueur, C(n) = n//2 + 1. Ce décompte dépend de la parité de n. Le "+1" vient de la condition d'arrêt (mot de longueur 0). On aurait pu terminer la récursion avec un appel de moins dès que le mot est de longueur 2 (comparaison de deux caractères) ou de longueur 1 (pas de comparaison nécessaire).
+
 :::
 
 ### Exercice (extrait d'examen)
@@ -369,38 +387,37 @@ On s'intéresse à la complexité en temps de la fonction suivante.
 1.  Quel est le paramètre de cette complexité ?
 
     ::: sverbat
-    n
+    - n
     :::
 
 2.  Quelles sont les instructions significatives de cette complexité ?
 
     ::: sverbat
-    l'affectation du corps de boucle (mieux) et les 2 add du membre de
-    droite (moins bien)
+    - l'affectation du corps de boucle (mieux) et les 2 add du membre de droite (moins bien)
     :::
 
 3.  Quelle est une mesure de sa complexité ?
 
     ::: sverbat
-    le nombre d'affectations (mieux que le nbre d'op. arithm)
+    - le nombre d'affectations (mieux que le nbre d'op. arithm)
     :::
 
 4.  Donner l'expression de cette complexité.
 
     ::: sverbat
-    c(n) = n(n-1)/2
+    - c(n) = n(n-1)/2
     :::
 
 5.  Combien y a-t-il d'opérations arithmétiques dans l'exécution de
     cette fonction pour un paramètre effectif $N$ donné. ?
 
     ::: sverbat
-    2 fois plus que d'affectations : N(N-1)
+    - 2 fois plus que d'affectations : N(N-1)
     :::
 
 6.  Expliciter sa complexité asymptotique avec les notations de Landau.
 
     ::: sverbat
-    quadratique, ie Theta(n\^2)
+    - quadratique, ie $\Theta(n\^2)$
     :::
 

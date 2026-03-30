@@ -534,15 +534,15 @@ l’ensemble de ses variables.</p>
 <td class="text-center"><p>[0..4[</p></td>
 <td class="text-center"><p>4</p></td>
 </tr>
-<tr class="row-odd"><td class="text-center"><p>0</p></td>
+<tr class="row-odd"><td class="text-center"><p>1</p></td>
 <td class="text-center"><p>[1..4[</p></td>
 <td class="text-center"><p>3</p></td>
 </tr>
-<tr class="row-even"><td class="text-center"><p>0</p></td>
+<tr class="row-even"><td class="text-center"><p>2</p></td>
 <td class="text-center"><p>[2..4[</p></td>
 <td class="text-center"><p>2</p></td>
 </tr>
-<tr class="row-odd"><td class="text-center"><p>0</p></td>
+<tr class="row-odd"><td class="text-center"><p>3</p></td>
 <td class="text-center"><p>[3..4[</p></td>
 <td class="text-center"><p>1</p></td>
 </tr>
@@ -563,15 +563,15 @@ l’ensemble de ses variables.</p>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-center"><p>0</p></td>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
 <td class="text-center"><p>[1..4[</p></td>
 <td class="text-center"><p>3</p></td>
 </tr>
-<tr class="row-odd"><td class="text-center"><p>0</p></td>
+<tr class="row-odd"><td class="text-center"><p>2</p></td>
 <td class="text-center"><p>[2..4[</p></td>
 <td class="text-center"><p>2</p></td>
 </tr>
-<tr class="row-even"><td class="text-center"><p>0</p></td>
+<tr class="row-even"><td class="text-center"><p>3</p></td>
 <td class="text-center"><p>[3..4[</p></td>
 <td class="text-center"><p>1</p></td>
 </tr>
@@ -630,26 +630,19 @@ cet algorithme ?</p>
 </pre></div>
 </div>
 <div class="sverbat docutils">
-</div>
-</li>
-</ol>
 <ul class="simple">
 <li><p>C(n) = 10</p></li>
 <li><p>complexité constante</p></li>
 <li><p>Si n est multiplié par 10, le nbre d’additions n’est pas modifié</p></li>
 </ul>
-<div class="docutils">
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>b.  on modifie maintenant la ligne 2 :
-
-```{code-block} python
----
-linenos: true
----
-for i in range(4): 
-	for j in range(n):
-```
+</div>
+<p>b.  on modifie maintenant la ligne 2 :</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span> 
+<span class="linenos">2</span>	<span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
 </pre></div>
 </div>
+</li>
+</ol>
 <div class="sverbat docutils">
 <ul class="simple">
 <li><p>4 répétitions (boucle en i) de n additions (boucle en j)</p></li>
@@ -657,7 +650,6 @@ for i in range(4):
 <li><p>complexité linéaire</p></li>
 <li><p>Si n est multiplié par 10, le nbre d’additions est multiplié par 10</p></li>
 </ul>
-</div>
 </div>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>c.  ou aussi :
 
@@ -668,52 +660,41 @@ linenos: true
 for i in range(4): 
 	for j in range(i,n):
 ```
+
+::: sverbat
 </pre></div>
 </div>
-<div class="sverbat docutils">
-<ul class="simple">
+<ul>
 <li><p>répétitions (boucle en i) de n, puis n-1, puis n-2 puis n-3 additions (boucle en j)</p></li>
 <li><p>C(n) = 4n -10</p></li>
 <li><p>complexité linéaire</p></li>
-<li><p>Si n est multiplié par 10, le nbre d’additions est (asymptotiquement) multiplié par 10</p></li>
-</ul>
-<div class="sverbat docutils">
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>d.  Avec les lignes 1 et 2 suivantes :
-
-```{code-block} python
----
-linenos: true
----
-for i in range(n): 
-	for j in range(n):
-```
+<li><p>Si n est multiplié par 10, le nbre d’additions est (asymptotiquement) multiplié par 10</p>
+<div class="docutils">
+<p>d.  Avec les lignes 1 et 2 suivantes :</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span> 
+<span class="linenos">2</span>	<span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
 </pre></div>
 </div>
 <div class="sverbat docutils">
-<ul class="simple">
+</div>
+</div>
+</li>
 <li><p>n répétitions (boucle en i) de n additions (boucle en j)</p></li>
 <li><p>C(n) = n x n = n^2</p></li>
 <li><p>complexité quadratique</p></li>
-<li><p>Si n est multiplié par 10, le nbre d’additions est (asymptotiquement) multiplié par 100</p></li>
-</ul>
-</div>
-</div>
-</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>e.  ou aussi les lignes 1 et 2 suivantes :
-
-```{code-block} python
----
-linenos: true
----
-for i in range(n): 
-	for j in range(i,n):
-```
+<li><p>Si n est multiplié par 10, le nbre d’additions est (asymptotiquement) multiplié par 100</p>
+<div class="docutils">
+<p>e.  ou aussi les lignes 1 et 2 suivantes :</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span> 
+<span class="linenos">2</span>	<span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
 </pre></div>
 </div>
 <div class="sverbat docutils">
-<ul class="simple">
+</div>
+</div>
+</li>
 <li><p>répétition en i :</p>
-<ul>
+<ul class="simple">
 <li><p>i = 0 -&gt; n additions (boucle en j)</p></li>
 <li><p>i = 1 -&gt; n-1 additions (boucle en j)</p></li>
 <li><p>i = 1 -&gt; n-2 additions (boucle en j)</p></li>
@@ -724,9 +705,11 @@ for i in range(n):
 </li>
 <li><p>Donc C(n) = n + (n-1) + (n-1) + … + 2 + 1 = n(n+1)/2</p></li>
 <li><p>C(n) quadratique</p></li>
-<li><p>Si n est multiplié par 10, le nbre d’additions est (asymptotiquement) multiplié par 100</p></li>
-</ul>
+<li><p>Si n est multiplié par 10, le nbre d’additions est (asymptotiquement) multiplié par 100</p>
+<div class="docutils">
 </div>
+</li>
+</ul>
 </section>
 <section id="id2">
 <h3><span class="section-number">23.1.4. </span><span class="math notranslate nohighlight">\(\blacksquare \)</span> Exercice<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
@@ -739,26 +722,26 @@ On convient que deux tableaux sont égaux si leurs tailles sont égales et si le
 <ol class="arabic simple">
 <li><p>Effectuer l’analyse de la complexité de ces fonctions.</p></li>
 </ol>
+<div class="sverbat docutils">
 <ul class="simple">
 <li><p>param de complexité : n la taille du tableau</p></li>
 <li><p>mesure de complexité : le nombre de comparaisons</p></li>
-</ul>
-<div class="sverbat docutils">
-<p><code class="docutils literal notranslate"><span class="pre">est_egal</span></code> :</p>
-<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">est_egal</span></code> :</p>
+<ul>
 <li><p>C(n) = n dans le pire cas (deux tableaux identiques ou qui diffèrent par leur dernière valeur),</p></li>
 <li><p>complexité linéaire du pire cas</p></li>
 <li><p>meilleur cas : une comparaison</p></li>
 </ul>
-</div>
-<div class="sverbat docutils">
-<p><code class="docutils literal notranslate"><span class="pre">nb_communs()</span></code></p>
-<ul class="simple">
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nb_communs()</span></code></p>
+<ul>
 <li><p>C(n) = n, pire cas = meilleur cas : on doit comparer deux à deux les n valeurs de chaque tableau</p></li>
 <li><p>complexité linéaire</p></li>
 </ul>
+</li>
+</ul>
 </div>
-<ol class="arabic simple" start="3">
+<ol class="arabic simple">
 <li><p>Ces fonctions s’étendent à des tableaux 2D ou de façon plus générale à des tableaux multi-dimensionnels.
 L’égalité entre tableaux multi-dimensionnels suppose l’égalité des dimensions, des tailles deux à deux dans chaque dimension, et des valeurs deux à deux pour toutes les valeurs du tableau.
 Effectuer l’analyse de la complexité de ces fonctions pour des tableaux 2D.</p></li>
@@ -825,34 +808,45 @@ Effectuer l’analyse de la complexité de ces fonctions pour des tableaux 2D.</
 <ol class="arabic">
 <li><p>Quel est le paramètre de cette complexité ?</p>
 <div class="sverbat docutils">
-<p>n</p>
+<ul class="simple">
+<li><p>n</p></li>
+</ul>
 </div>
 </li>
 <li><p>Quelles sont les instructions significatives de cette complexité ?</p>
 <div class="sverbat docutils">
-<p>l’affectation du corps de boucle (mieux) et les 2 add du membre de
-droite (moins bien)</p>
+<ul class="simple">
+<li><p>l’affectation du corps de boucle (mieux) et les 2 add du membre de droite (moins bien)</p></li>
+</ul>
 </div>
 </li>
 <li><p>Quelle est une mesure de sa complexité ?</p>
 <div class="sverbat docutils">
-<p>le nombre d’affectations (mieux que le nbre d’op. arithm)</p>
+<ul class="simple">
+<li><p>le nombre d’affectations (mieux que le nbre d’op. arithm)</p></li>
+</ul>
 </div>
 </li>
 <li><p>Donner l’expression de cette complexité.</p>
 <div class="sverbat docutils">
-<p>c(n) = n(n-1)/2</p>
+<ul class="simple">
+<li><p>c(n) = n(n-1)/2</p></li>
+</ul>
 </div>
 </li>
 <li><p>Combien y a-t-il d’opérations arithmétiques dans l’exécution de
 cette fonction pour un paramètre effectif <span class="math notranslate nohighlight">\(N\)</span> donné. ?</p>
 <div class="sverbat docutils">
-<p>2 fois plus que d’affectations : N(N-1)</p>
+<ul class="simple">
+<li><p>2 fois plus que d’affectations : N(N-1)</p></li>
+</ul>
 </div>
 </li>
 <li><p>Expliciter sa complexité asymptotique avec les notations de Landau.</p>
 <div class="sverbat docutils">
-<p>quadratique, ie Theta(n^2)</p>
+<ul class="simple">
+<li><p>quadratique, ie <span class="math notranslate nohighlight">\(\Theta(n\^2)\)</span></p></li>
+</ul>
 </div>
 </li>
 </ol>
