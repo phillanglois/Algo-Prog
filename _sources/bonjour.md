@@ -38,9 +38,36 @@ Le travail de chaque semaine est mis à jour chaque ... semaine.
 
 (sec:travailhebdo)=
 
+## Semaine 19
+
+- Travail de la semaine :
+  - L1 maths-LAS et L1 informatique Objectif 10 : TP4 (knn et Poudlard)
+  - L1 informatique Objectif 20 : lire chapitre 10 (Affectation et appel de fonction : aspects avancés)
+- Planning de la semaine :
+  - L1 maths-LAS : dernière séance de TP mercredi matin
+  - L1 informatique : les étudiants **Objectif 10** du TD3 **et** TD4 -> dernière séance de TP à mercredi 15h30 en C205 
+  - L1 informatique : étudiants **Objectif 20** : CM mercredi 10h en salle M1 
+
+## Semaines 17 et 18 (vacances de printemps)
+
+- CM : pour les étudiants Objectif 20 : lire chapitre 10 (affectation et appels de fonctions : aspects avancés), préparer questions pour la dernière séance de TD de la semaine 19
+- TP : le TP4 (knn et Poudlard) est disponible sous moodle. Le télécharger et le traiter en entier.
+
+
+## Semaine 16
+
+- CM : lire chapitres 8 et 9 (ES simples avec fichiers et ES formatées)
+- TP : le TP3 (bin pack) est disponible sous moodle. Le télécharger et le commencer dès que possible.
+- CC vendredi : les chapitres 1 à 7 inclus, 1h30 sur machine 
+
+## Semaine 15
+
+- CM : Bien lire le chapitre 7 (Types composés) en entier : lire le chapitre 6 (Trier) en entier.
+- TP : le TP2 (8 reines) est disponible sous moodle. Le télécharger et le commencer dès que possible.
+
 ## Semaine 14
 
-- CM : lire chapitre 7 (types composés) jusqu'à la section 7.6 inclus ; lire aussi la section 7.8
+- CM : lire chapitre 7 (Types composés) jusqu'à la section 7.6 inclus ; lire aussi la section 7.8
 - TP : le TP1 sur les types composés est disponible sous moodle. Le télécharger et le commencer dès que possible.
 
 ## Semaine 13

@@ -408,8 +408,7 @@ On s'intéresse à la complexité en temps de la fonction suivante.
     - c(n) = n(n-1)/2
     :::
 
-5.  Combien y a-t-il d'opérations arithmétiques dans l'exécution de
-    cette fonction pour un paramètre effectif $N$ donné. ?
+5.  Combien y a-t-il d'opérations arithmétiques dans l'exécution de cette fonction pour un paramètre effectif $N$ donné. ?
 
     ::: sverbat
     - 2 fois plus que d'affectations : N(N-1)
